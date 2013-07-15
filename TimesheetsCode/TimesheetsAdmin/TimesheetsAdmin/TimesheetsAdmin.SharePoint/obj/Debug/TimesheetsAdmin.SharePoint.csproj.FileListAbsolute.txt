@@ -1,0 +1,8 @@
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb

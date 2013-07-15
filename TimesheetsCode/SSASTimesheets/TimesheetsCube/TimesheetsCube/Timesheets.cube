@@ -1,0 +1,1807 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="de3bbcb1-c710-4593-9137-6f8d91d60756" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheets</ID>
+  <Name>Timesheets</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="48" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5000" scrolltop="-4608" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="13441" y="12277" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactTimesheetDetail" left="6653" top="7400" logicalid="24" controlid="1" masterid="0" hint1="0" hint2="0" width="4577" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000e111000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactTimesheetDetail" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTimesheet" left="20" top="7400" logicalid="25" controlid="2" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800008910000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTimesheet" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="7393" top="0" logicalid="26" controlid="3" masterid="0" hint1="0" hint2="0" width="3096" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000180c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimProject" left="7129" top="14800" logicalid="27" controlid="4" masterid="0" hint1="0" hint2="0" width="3440" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimProject" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClient" left="1475" top="15012" logicalid="28" controlid="5" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimClient" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTypeOfWork" left="13630" top="7902" logicalid="29" controlid="6" masterid="0" hint1="0" hint2="0" width="4180" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000541000009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTypeOfWork" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPerson" left="12969" top="14800" logicalid="30" controlid="7" masterid="0" hint1="0" hint2="0" width="3440" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimPerson" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3953" top="9501" logicalid="31" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTimesheet]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="23" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4253" y="9900" />
+              <point x="6653" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7541" top="12100" logicalid="32" controlid="9" masterid="0" hint1="0" hint2="0" width="1708" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimProject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="4" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8849" y="14800" />
+              <point x="8849" y="13600" />
+              <point x="7841" y="13600" />
+              <point x="7841" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9191" top="12100" logicalid="33" controlid="10" masterid="0" hint1="0" hint2="0" width="5898" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimPerson]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="4" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14689" y="14800" />
+              <point x="14689" y="13600" />
+              <point x="9491" y="13600" />
+              <point x="9491" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8542" top="4501" logicalid="34" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8941" y="5000" />
+              <point x="8941" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10930" top="9500" logicalid="35" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTypeOfWork]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="20" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13630" y="9899" />
+              <point x="12430" y="9899" />
+              <point x="12430" y="9900" />
+              <point x="11230" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4429" top="16610" logicalid="36" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimProject-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="17" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4729" y="17009" />
+              <point x="7129" y="17009" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactBillingRates" left="0" top="0" logicalid="37" controlid="14" masterid="0" hint1="0" hint2="0" width="4516" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000a411000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactBillingRates" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4216" top="-99" logicalid="38" controlid="15" masterid="0" hint1="0" hint2="0" width="3477" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="14" sourceattachpoint="10" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7393" y="300" />
+              <point x="4516" y="300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1958" top="4700" logicalid="39" controlid="16" masterid="0" hint1="0" hint2="0" width="994" height="10812" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="14" sourceattachpoint="2" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2552" y="15012" />
+              <point x="2552" y="10006" />
+              <point x="2258" y="10006" />
+              <point x="2258" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3608" top="4700" logicalid="40" controlid="17" masterid="0" hint1="0" hint2="0" width="10931" height="10600" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimPerson]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="14" sourceattachpoint="2" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14139" y="14800" />
+              <point x="14139" y="9900" />
+              <point x="3908" y="9900" />
+              <point x="3908" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimBillingStatus" left="20223" top="9588" logicalid="41" controlid="18" masterid="0" hint1="0" hint2="0" width="4587" height="4057" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000eb110000d90f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimBillingStatus" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10930" top="9567" logicalid="42" controlid="19" masterid="0" hint1="0" hint2="0" width="9593" height="1183" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimBillingStatus]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="14" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="20223" y="9966" />
+              <point x="15727" y="9966" />
+              <point x="15727" y="10450" />
+              <point x="11230" y="10450" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactProjectBilling" left="0" top="0" logicalid="43" controlid="20" masterid="0" hint1="0" hint2="0" width="4021" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b50f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactProjectBilling" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1603" top="4700" logicalid="44" controlid="21" masterid="0" hint1="0" hint2="0" width="799" height="10812" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactProjectBilling-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="20" sourceattachpoint="0" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2002" y="15012" />
+              <point x="2002" y="10006" />
+              <point x="2010" y="10006" />
+              <point x="2010" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3360" top="4700" logicalid="45" controlid="22" masterid="0" hint1="0" hint2="0" width="4789" height="10600" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactProjectBilling-DimProject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="20" sourceattachpoint="0" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7749" y="14800" />
+              <point x="7749" y="9900" />
+              <point x="3660" y="9900" />
+              <point x="3660" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3721" top="4400" logicalid="46" controlid="23" masterid="0" hint1="0" hint2="0" width="3232" height="3700" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactProjectBilling-FactTimesheetDetail]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="20" sourceattachpoint="14" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6653" y="7700" />
+              <point x="5337" y="7700" />
+              <point x="5337" y="4700" />
+              <point x="4021" y="4700" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5000</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4608</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="ac591482-90a4-4c70-a0ba-15b060230337">
+      <ID>Fact Timesheet Detail</ID>
+      <Name>Fact Timesheet Detail</Name>
+      <DimensionID>Fact Timesheet Detail</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ed4e42c2-a40e-4656-8b7c-9f5fc2af8c6b">
+          <AttributeID>Timesheet Detail ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30937dd9-7735-4535-b286-769d06ece9fb">
+          <AttributeID>Timesheet ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d35d695-ff1e-4f60-9bf6-88e97ff1739e">
+          <AttributeID>Timesheet Detail Project ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="731d51c8-7555-4188-8d24-ccb44fb7d9a6">
+          <AttributeID>Timesheet Detail Person ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e8b4b4a-da5d-41c9-8a82-1b22017f2315">
+          <AttributeID>Timesheet Detail Date ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4af09bc-4c40-4775-8226-cbc068ad365d">
+          <AttributeID>Timesheet Type Of Work ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c441102-fa14-4303-913f-64da93bc4922">
+          <AttributeID>Comments</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f044f078-d493-4377-b6a6-763038be4dde">
+          <AttributeID>Timesheet Detail Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e12e1259-a42a-4698-be81-530fd8891d79">
+          <AttributeID>Timesheet Detail Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="227f02f0-5223-4d28-8485-67aed93c757d">
+          <AttributeID>Timesheet Detail File Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="871ed02f-c4fc-482c-86af-0313e420b32b">
+          <AttributeID>AM Comments</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e67fc2c-e3b3-4371-b440-3f1f06f53018">
+          <AttributeID>Client Comments</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e6a51f0-2dd4-4b10-8a09-3d870b0658a8">
+          <AttributeID>Project Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f3a479a-12c0-4103-b840-3f183fcfaa06">
+          <AttributeID>Project Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d63d306f-ae26-468f-a938-970b2e45b96e">
+          <AttributeID>Project Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6eda60c-80b7-4d89-82a1-89e58f8336f9">
+          <AttributeID>Client Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c246d376-aeba-43c2-9680-57d1fd7c26bd">
+          <AttributeID>Client Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2824697d-3300-45c8-a61c-716f2d615f5c">
+          <AttributeID>Client Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d1ac980-10c5-4e5a-9734-121c1212b3b0">
+          <AttributeID>Person Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5bc9332-e666-487a-83b3-67fd16c67f80">
+          <AttributeID>Person Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="226c4f29-356d-4cd7-9089-6de3899ac461">
+          <AttributeID>Person Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="90c1d527-79b0-44d4-9baf-f7dffcb8055f">
+          <AttributeID>Exclude</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4c434819-2b3e-43eb-8a35-dab857431859">
+          <AttributeID>Billable</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1625fc7-456a-4611-ae57-ef5fcc0dea4d">
+          <AttributeID>Type Of Work Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8385719a-085e-4acc-a363-45e4a930ba77">
+          <AttributeID>Person Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9b48558-b14a-48ad-8d56-fd9e7dc9917b">
+          <AttributeID>Billable 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b9bac14-7702-4501-a61c-ea145ab11884">
+          <AttributeID>Client Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="db5c3fcb-c73f-4e1a-b054-7e4646c0ff6b">
+          <AttributeID>Project Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb5b9108-9f41-4584-af07-889df39e2326">
+          <AttributeID>Timesheet Detail File Name 1</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="c6ebd83a-2503-42ce-8be3-4d370ae570d9">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="c3761985-5430-4092-809a-0b514bb1cb37">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="5bde13b6-4e52-4614-8ac6-153c0240f441">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="23e1e61f-7ac9-4c86-936e-be0541251dc3">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="54d4db61-7e10-4f1e-955a-ed0c3598d87f">
+      <ID>Timesheet</ID>
+      <Name>Timesheet</Name>
+      <DimensionID>Timesheet</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a0807977-7c0d-440c-b13a-3a33f7a1bf56">
+          <AttributeID>Timesheet ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="471d1cf6-5ea3-4dd9-813b-48c07ab1081c">
+          <AttributeID>Timesheet Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="be43801d-9e7b-4057-911f-c7b2a28fcd4d">
+          <AttributeID>Timesheet Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dee0eca6-6a55-4e04-a8dd-396602b5e349">
+          <AttributeID>Timesheet File Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e745bbc4-a696-4f53-9a3a-221c4a567849">
+          <AttributeID>Timesheet From Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a92493a1-edd2-480f-88c4-cd05d98ee621">
+          <AttributeID>Timesheet To Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="765380f7-abe6-4cf6-94ea-a1f109701708">
+          <AttributeID>Timesheet Person</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d1eaef7-de36-4c70-82b6-2db1287a9cbd">
+          <AttributeID>Timesheet Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6667c5ce-6903-4ed5-8e2a-b6c00c7a00e6">
+          <AttributeID>Overall Status Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ca4be36-f913-4dec-bbe9-e35339a83968">
+          <AttributeID>Overall Status Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7fe9bea4-e168-4857-b6ba-7fea9978a630">
+          <AttributeID>Overall Status Source Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2e3fe0d0-9fa3-4ab4-b042-a533b8df211c">
+      <ID>Project</ID>
+      <Name>Project</Name>
+      <DimensionID>Project</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eb8a1649-e94d-4de6-b503-314a3c4b0385">
+          <AttributeID>Project ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="116aba4d-fef6-4322-b3fe-781c2fb4af3d">
+          <AttributeID>Project Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7663556-55aa-4fa5-90ba-a0b1a8cd6c9d">
+          <AttributeID>Client ID</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="9a766414-eb62-4c51-86d6-48607e6cd662">
+          <AttributeID>Client Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="33c0d6f6-aa00-4c03-b6a8-4b0d37685778">
+          <AttributeID>Client Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ade87dd7-78c3-4195-a26d-dc24bb558253">
+          <AttributeID>Client Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6f5863d-41c0-45d7-8323-8c8f066462d9">
+          <AttributeID>Project Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca8df54d-cf4e-4dbf-a250-e85681626deb">
+          <AttributeID>Project Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff4b9524-5c86-4e63-a193-d6cf435998ee">
+          <AttributeID>Project Source Key 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="277ee602-ff1d-414a-b4c1-8133d3ccb710">
+          <AttributeID>Project Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ef20c1c-7f2a-45af-9e8d-ec3ffdf0286e">
+          <AttributeID>Project Code 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4315999c-2c70-41ae-bf2e-571b1accd90b">
+          <AttributeID>Project Billing Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="074eadfc-3b91-4879-9399-9cf2d5be4f98">
+          <AttributeID>Active</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d15521ea-fb65-4639-8251-fd1275ee67fa">
+          <AttributeID>Client Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f2a0adb0-3008-4c38-8a35-7bd6b0a85431">
+          <AttributeID>Active Status</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19a93fd5-f026-41f5-bf62-b6bd89064183">
+          <AttributeID>Client ID 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d2b0a5a-d1c8-46b4-929e-f75e104881eb">
+          <AttributeID>Account Manager Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09e7fdbe-56e7-421c-bf3f-a40ca4877fca">
+          <AttributeID>Account Manager</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="74d4a9d0-d0dc-469f-adcc-6ebb74285b37">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="19f8ef1e-2e51-4132-8442-7fe850d8622e">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="7a4dedbc-2cec-405d-80b8-2c35f9e07380">
+          <HierarchyID>Hierarchy 1 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="6ef54db9-4fa2-4ce1-b438-1fbbfe17a5b6">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="56b89f09-b6bc-4681-a1ca-2ca990be880f">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b79d386a-72e6-439e-97aa-de07781ecb8c">
+      <ID>Person</ID>
+      <Name>Person</Name>
+      <DimensionID>Person</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="10b4b61a-4d2a-4f37-a7e2-b4cd9f7d740d">
+          <AttributeID>Person ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0ba91085-ed9c-4f40-857f-21ebb8c5fa47">
+          <AttributeID>Person Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f0b7ad5-2355-482f-b564-60e35034c5aa">
+          <AttributeID>Person Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0ba0bd7-4d28-4edc-b0b6-1010e5dc32dc">
+          <AttributeID>Person Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9d1f71e-07bc-4373-943b-5c9253c89a2e">
+          <AttributeID>Person Role Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d6c96d8-7923-4998-a542-ec371018f9f8">
+          <AttributeID>Person Role Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5622b7ed-839b-46d2-8e02-a67be11218b9">
+          <AttributeID>Is Contractor</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ac1f7250-b3f1-4ceb-b80c-6be6dc385e3c">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="70baf732-705c-44f9-ab42-fdc166544906">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb2a0aca-453e-49b9-8f01-8a7800afe8bd">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0be8fe69-ffe0-45c1-aba0-ba3642f161ec">
+          <AttributeID>DOW In Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9e26ec2-7877-4960-95f1-159c76d4e078">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5a289d7-aba8-4fba-8699-b5887252627b">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0577853d-8efa-4744-a893-060855f98894">
+          <AttributeID>Week Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65fe7c39-b34a-42e6-956c-8ae9e21a3147">
+          <AttributeID>Month Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c06b2582-9df9-45cf-9845-fc20ae11efe2">
+          <AttributeID>Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6f04ae7b-5adb-40bd-b12d-46e2fadcc9e1">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b77466d6-571b-47e8-884b-f684f37a1026">
+          <AttributeID>Quarter Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee32b577-0cec-49f5-82cd-43a1ebe0b864">
+          <AttributeID>Year Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b8a0d07f-d2be-458d-b7dc-903f7fa5aec7">
+          <AttributeID>Year Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b33dd76-61aa-420f-ad4b-6354b2936027">
+          <AttributeID>Standard Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b0c70ce7-fb91-4844-8d50-cefa95e2f3af">
+          <AttributeID>Month Name Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1c21e5eb-ac59-4f1d-b2c4-dd6cb654ef41">
+          <AttributeID>Work Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8531818-bd4a-49dd-92cc-8da7da49d417">
+          <AttributeID>Week Ending Text</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3df7e6c6-4f8a-45df-9d23-a6c4fded7a7e">
+          <AttributeID>Week Ending</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1285869-c40c-4397-a626-960ecb7871bf">
+          <AttributeID>Billing Period Text</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fddc6cdc-7d56-440a-a0b8-ff49c2183a9c">
+          <AttributeID>Week Ending Billing Period</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="893a94d5-6503-4df4-9f8b-d2fca2f07028">
+          <AttributeID>Billing Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6c8993c-0dad-4933-9442-8211c547b9ed">
+          <AttributeID>Contractor Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bc0b17d-f1ae-4a2d-bcae-005e6d3fa27d">
+          <AttributeID>Contractor Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5df6ce09-48d2-420b-af1f-4c6923f4bc10">
+          <AttributeID>Contractor Period</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="33c839cf-a2b9-497a-979d-60515bfb350b">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="e685d083-307b-4afe-8af8-049f6050cd03">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="8cbfb364-82d7-4f7d-9307-1e2a84b53715">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="a92e92c1-251f-474a-9c5d-0520a5f22311">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="1b3b6bff-e351-4323-a9cc-c63070fcd157">
+      <ID>Type Of Work</ID>
+      <Name>Type Of Work</Name>
+      <DimensionID>Type Of Work</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d53d173d-190c-491f-adf7-87e4275eaed1">
+          <AttributeID>Type Of Work ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="abddc257-9f36-472d-b04a-ea4bc3b2d02a">
+          <AttributeID>Type Of Work Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="32e11a0d-46de-4245-9dc0-1117509cc65c">
+          <AttributeID>Type Of Work Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5a97c2b6-1093-4032-8381-00419307be8c">
+          <AttributeID>Type Of Work Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="986b179e-9ba0-4a56-8725-f1a26c54ed61">
+      <ID>Billing Status</ID>
+      <Name>Billing Status</Name>
+      <DimensionID>Billing Status</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="43dc0dca-4edc-4137-8c54-bb43e9a02b5c">
+          <AttributeID>Billing Status ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0c7520e8-9303-4be3-960f-678d5a0f031f">
+          <AttributeID>Billing Status Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e453c00-e713-4d1b-b650-db228a22dac3">
+          <AttributeID>Billing Status Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5a1a9cb7-db9a-476d-ac22-e3a58311d993">
+          <AttributeID>Billing Status Source Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="ff21954c-8276-4746-b2b2-d87caa654723">
+      <ID>Fact Timesheet Detail</ID>
+      <Name>Timesheet Detail</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="3b540101-9464-4ca3-a777-bfd9f12e9037">
+          <ID>Hours</ID>
+          <Name>Raw Hours</Name>
+          <Source dwd:design-time-name="4c7181d8-ce21-45f2-b124-126e835ea50b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1da942c9-5192-4dfc-9fdd-254a58ba9610">
+              <TableID>CUBE_FactTimesheetDetail</TableID>
+              <ColumnID>Hours</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ac0c050e-aeec-419c-8e15-5c32dbaf627c">
+          <ID>Fact Timesheet Detail Count</ID>
+          <Name>Fact Timesheet Detail Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="671a7c2a-c7d7-4538-a661-bbae550abae1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="f33544e3-9b57-4926-a29d-e18a97873378">
+              <TableID>CUBE_FactTimesheetDetail</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3dbcfb30-ee93-4472-9e0e-45282dfa85fd">
+          <ID>Billing Rate</ID>
+          <Name>Billing Rate</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="a45de046-929e-45ae-b21b-f28e0e526db1">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ec584cfa-2c07-4212-ae10-d80bd4768911">
+              <TableID>CUBE_FactTimesheetDetail</TableID>
+              <ColumnID>BillingRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>6073</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="8e6ae485-9ee2-45a0-8a34-6c23034dd26a">
+          <CubeDimensionID>Fact Timesheet Detail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="95ceca50-24f6-4554-82df-b1a38743e800">
+              <AttributeID>Timesheet Detail ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b1dc1b6c-d907-423e-848e-94ec364b6ed1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="68d3b92d-23e5-4fc3-97bd-3408840b88f0">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2423145a-2383-4d02-9d31-e35467f0b4b1">
+          <CubeDimensionID>Timesheet</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e962b383-b6e9-4ca5-a4ca-30a5af051e8f">
+              <AttributeID>Timesheet ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5d6bc298-75d5-4b5c-b2a3-c274bed8294b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3da9f255-baca-4733-b1df-eb42ca91d590">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fe603844-4c30-4322-b2a4-2276b11db779">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="50e3cfee-d49a-487b-b718-0d3c6cf5f2c3">
+              <AttributeID>Project ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4d49fc52-f610-4d20-9db0-abf45bef7f70">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6141dbb7-727f-419d-96fa-bcd9ca8bdd1e">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="08aa6730-7b0a-4372-9540-a843c7806dc3">
+          <CubeDimensionID>Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="00256fed-0429-4927-965c-3a4d021f4140">
+              <AttributeID>Person ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6c7467f2-b7bd-49b7-891e-4735c964f5ff">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5b699edb-388c-4a46-8891-4c8f987c3ea2">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailPersonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8067560c-5326-45d7-a123-7d862668ef61">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="49191e85-aa00-40cc-846a-8950e048918d">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d346a717-59f8-40fe-85f1-1ac9d55106de">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e555f6dd-3d7f-4eb7-bc6e-68662b55c008">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailDateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a7c199f4-ac5c-4221-aa31-f5f53c49de15">
+          <CubeDimensionID>Type Of Work</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="de9e51f1-cdba-4d5e-ab62-c52fc6f062a8">
+              <AttributeID>Type Of Work ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2d0d9a59-efe0-43cc-b7e4-49dd2a483841">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a72a5492-b5bc-4599-b239-13e09c1c9476">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetTypeOfWorkID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0d17f6ca-0c70-4db9-8969-1037dbdb9e4d">
+          <CubeDimensionID>Billing Status</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8494c3dc-f407-44c4-afe3-bda06dfd511c">
+              <AttributeID>Billing Status ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d714e6bf-d514-4368-ac53-7af2c0b53079">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7af9e7b2-ac4c-4e9d-aa6c-ce5490660fe7">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>Billable</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="07cba80f-327a-4488-8098-37232f02b33b">
+      <ID>Fact Billing Rates</ID>
+      <Name>Billing Rates</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d6c094ff-b300-44e5-9011-e4b4a5fd81c8">
+          <ID>Rate</ID>
+          <Name>Rate</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="7415aa21-4ee1-4c54-9d43-071439ca5074">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9059a062-bbcc-4f87-a988-d7bd7c1188bb">
+              <TableID>CUBE_FactBillingRates</TableID>
+              <ColumnID>Rate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d04a1be7-8444-4589-846e-6c982a6f18c5">
+          <ID>Fact Billing Rates Count</ID>
+          <Name>Fact Billing Rates Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="a29bdecb-b470-4cad-a631-281143c56dc4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="f28aea6b-dde4-4536-a92b-e353b2e333e9">
+              <TableID>CUBE_FactBillingRates</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1e8f761b-b0c9-4902-a064-98759b9976b5">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fabaa9ef-72c6-40ae-bc8c-d082dd30b05d">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="19519630-441f-4920-9d48-6f48e49f9ea9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7f5c8e02-f53f-4b81-87a1-edfa182a5a73">
+                    <TableID>CUBE_FactBillingRates</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6170d38f-a615-4470-b61d-49fcf4b20797">
+          <CubeDimensionID>Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="14cb540c-e132-45b4-b4d6-0e9124c6e15a">
+              <AttributeID>Person ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="20f005a6-2279-4162-bbc2-740c8e81c5f5">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5a8a5112-84c0-482d-9726-05dd59833a71">
+                    <TableID>CUBE_FactBillingRates</TableID>
+                    <ColumnID>BillingDetailPersonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d67756d3-3a03-435e-bd5f-45e75098acb4">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="37c27aff-3c21-4570-be1a-787fd8314275">
+              <AttributeID>Client ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b99cbdcd-e765-4b3a-8713-922418ba07f9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9e25c291-8494-4ba6-b6c8-a6e5c96e9465">
+                    <TableID>CUBE_FactBillingRates</TableID>
+                    <ColumnID>ProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="51c6de42-2606-4740-8493-2a2014476ea5">
+              <AttributeID>Project ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b96fe68a-855a-4ec8-bc20-ece614e40841">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e360546d-ad29-469a-95d1-355f953f0e5c">
+                    <TableID>CUBE_FactBillingRates</TableID>
+                    <ColumnID>ProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="fba97099-72c6-47d3-a454-fbcac551081f">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9b638cf9-3a0e-4bcf-9a36-f24eca25457b">
+          <ID>Work Day</ID>
+          <Name>Work Day</Name>
+          <Source dwd:design-time-name="9aca1c3d-83fe-4df5-8883-02d1314b333d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e6f4bb2a-d79c-4508-9802-7b9fa242bdf8">
+              <TableID>CUBE_DimDate</TableID>
+              <ColumnID>WorkDay</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="fe211fa8-5934-4b93-9728-7c2928507f70">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d7733fdd-f055-4275-b6e3-6c69c5eb3020">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="27f5d6b8-b0e8-4171-921a-a1a99ba17eb7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f2c90005-6ded-4d0d-a693-a9cfbbc40771">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="62491142-7520-4f0e-85c6-d9513121e14a">
+      <ID>Dim Person</ID>
+      <Name>Person</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="3597ab0c-23e1-4605-8e76-e693ebb124dd">
+          <ID>Billing Percent Target</ID>
+          <Name>Billing Percent Target</Name>
+          <Source dwd:design-time-name="a13039ac-e2d7-425d-b28b-6f9d1461c25c">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fe83eaa1-14cc-476f-9d4c-c716811c2d1f">
+              <TableID>CUBE_DimPerson</TableID>
+              <ColumnID>BillingPercentTarget</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3406d01e-217d-4421-814b-70e9a036906d">
+          <ID>Billing Percent Minimum</ID>
+          <Name>Billing Percent Minimum</Name>
+          <Source dwd:design-time-name="143c0900-073a-4a76-a772-b93690a09080">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b02f2545-0dce-4476-90b2-92bdb06384e4">
+              <TableID>CUBE_DimPerson</TableID>
+              <ColumnID>BillingPercentMinimum</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4a9615d5-15f8-4e09-843c-d2ea99e98b34">
+          <ID>Dim Person Count</ID>
+          <Name>Person Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="9ad19e12-0f0f-4115-8e06-4b5e154d66f4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="3f62aaf7-077a-4c68-9c90-fe4babb20cf5">
+              <TableID>CUBE_DimPerson</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9edcbaa0-7f95-4e3f-9c5c-7f6261978514">
+          <ID>Hourly Cost</ID>
+          <Name>Hourly Cost</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="c2c8df94-5950-4124-b090-b0d07900208d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bf2a8c20-8737-48ff-94f3-c0dc2d935a56">
+              <TableID>CUBE_DimPerson</TableID>
+              <ColumnID>HourlyCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1db1bbaf-776e-41ec-a07f-0894a2fe92a4">
+          <ID>Monthly Cost</ID>
+          <Name>Monthly Cost</Name>
+          <AggregateFunction>Max</AggregateFunction>
+          <Source dwd:design-time-name="d6ac98e2-a3c8-4625-986a-4f95e9cd53c0">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1b180648-1334-4fba-8ab1-710d8d22bc4e">
+              <TableID>CUBE_DimPerson</TableID>
+              <ColumnID>MonthlyCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1d312591-a640-487c-b0af-7bd2919a9a4a">
+          <ID>Is Contractor</ID>
+          <Name>Is Contractor</Name>
+          <Source dwd:design-time-name="a01d5c33-998a-4163-85d3-152d114c94d1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a1ae5f7d-4bde-4fc1-bc24-36ad1ef27679">
+              <TableID>CUBE_DimPerson</TableID>
+              <ColumnID>IsContractor</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="a783afeb-3063-452b-8a9d-368ac91c2a2d">
+          <CubeDimensionID>Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4a7a372-9d81-4508-9cca-47380eb65aec">
+              <AttributeID>Person ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5e116b17-58e6-45b5-ad49-d54e90c2e167">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="29235a2c-78c9-4f77-81c7-3613d5ca95b9">
+                    <TableID>CUBE_DimPerson</TableID>
+                    <ColumnID>PersonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="ef80adbb-305a-4000-b4f6-c93ba4a353fc">
+          <CubeDimensionID>Fact Timesheet Detail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="877e3475-ae4d-4756-a46f-0534d61be9f9">
+              <AttributeID>Timesheet Detail Person ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Person</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Person ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="98b6d4c5-d4bf-438f-8caa-58f646a51978">
+      <ID>Fact Project Billing</ID>
+      <Name>Project Billing</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="4896f4a8-ee27-41bf-9d89-463dd42ea30d">
+          <ID>Consulting Estimate</ID>
+          <Name>Consulting Estimate</Name>
+          <Source dwd:design-time-name="e466b5db-cd37-48c5-a84b-b23227a295e2">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="de508f84-a9cf-4292-93fc-b363caeab05b">
+              <TableID>CUBE_FactProjectBilling</TableID>
+              <ColumnID>ConsultingEstimate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ff5c16d7-5859-4ad0-8b44-81e03f878917">
+          <ID>Software Estimate</ID>
+          <Name>Software Estimate</Name>
+          <Source dwd:design-time-name="ac84d638-2feb-46bb-a43d-53b30e549a47">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="13affaaa-7cb8-485e-acc6-8a06cae8e3ab">
+              <TableID>CUBE_FactProjectBilling</TableID>
+              <ColumnID>SoftwareEstimate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="39557192-b3fa-4351-bd4b-d7c105993845">
+          <ID>VM Estimate</ID>
+          <Name>VM Estimate</Name>
+          <Source dwd:design-time-name="38137286-e179-46c5-a3a7-9ba6a640a77f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6f7fd04f-2de9-4e4b-9abf-bca9c1ce7ee1">
+              <TableID>CUBE_FactProjectBilling</TableID>
+              <ColumnID>VMEstimate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b0820575-47e8-46b2-9033-32d3e35b053f">
+          <ID>Project Cap</ID>
+          <Name>Project Cap</Name>
+          <Source dwd:design-time-name="b1e2ad33-5938-4b06-91d4-85d440bac107">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4bcfc7b6-549e-469e-b4f8-aa66c98d80b5">
+              <TableID>CUBE_FactProjectBilling</TableID>
+              <ColumnID>ProjectCap</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="45cc8cdb-ff86-44eb-ae3c-0010650a9926">
+          <ID>Fact Project Billing Count</ID>
+          <Name>Project Billing Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="96026ccd-e9ec-4930-96c1-c51190ca6356">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="03d695fe-e2db-453a-a205-2e98a0eda355">
+              <TableID>CUBE_FactProjectBilling</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="56be9cb9-4822-4da1-96ef-c727ccd25681">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="075345b2-9300-483a-bf6c-35ff7e04f6ec">
+              <AttributeID>Project ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="40ad9bb0-aa8d-4046-8022-c7804131d54a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="25e97823-6256-4de0-a08c-27f0ebb28846">
+                    <TableID>CUBE_FactProjectBilling</TableID>
+                    <ColumnID>ProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a35f9ce4-db8c-426d-b655-9d2aa384812b">
+          <CubeDimensionID>Fact Timesheet Detail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e477c85c-a4be-4048-bf3a-0729fa2332f1">
+              <AttributeID>Timesheet Detail ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9188952e-b4bc-4307-9782-4a026a2d77d3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="065fd83c-b0e6-4c45-9a29-7c1873cf1994">
+                    <TableID>CUBE_FactProjectBilling</TableID>
+                    <ColumnID>TimesheetDetailID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="4ad20960-b718-437b-a8cb-eb7aab829922">
+      <ID>Dim Date 1</ID>
+      <Name>Billing Periods</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9f2002d9-eadf-4b1b-9fc5-b451287daa35">
+          <ID>Billing Period Text Distinct Count</ID>
+          <Name>Billing Periods Count</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="0be12931-dcf8-46d3-998c-48f9033dc54f">
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f2bb5e62-9f8c-40ad-9bff-20b2712fbb14">
+              <TableID>CUBE_DimDate</TableID>
+              <ColumnID>BillingPeriodText</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="959ef3ba-96b2-4b71-9590-fd926ba4830b">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="22ed2b9f-527b-40db-a89e-387bbc230eb0">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1bca1e15-5367-4d52-98ff-219870e20578">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="42c95b4b-a287-4f33-ab06-ce8296d627eb">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="fa7dd77b-ce32-4880-a925-5954b92279a8">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="3c71f8bf-b89f-4f8f-acac-ee8123c538a3">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;               
+CREATE MEMBER CURRENTCUBE.[Measures].[Hours]
+ AS ([Measures].[Raw Hours] , [Fact Timesheet Detail].[Exclude].[0]), 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';                
+CREATE MEMBER CURRENTCUBE.[Measures].[Work Days]
+ AS CASE WHEN 
+[Measures].[Hours] = NULL
+THEN NULL ELSE
+
+[Measures].[Work Day]
+
+END, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Dim Date';                
+CREATE MEMBER CURRENTCUBE.[Measures].[Work Hours]
+ AS [Measures].[Work Days] * 8, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Dim Date';                
+CREATE MEMBER CURRENTCUBE.[Measures].[Hours Delta]
+ AS [Measures].[Hours] - [Measures].[Work Hours], 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Dim Date';                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Invoice Amount]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[B]) = NULL 
+THEN NULL ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
+ OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
+ THEN 333
+WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
+WHEN [Measures].[Hours] IS NULL THEN NULL
+else
+ [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[B]))
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';     
+CREATE MEMBER CURRENTCUBE.[Measures].[Project Dev Amount]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]) = NULL 
+THEN NULL ELSE
+
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN measures.[product hours] is null then null 
+ else
+ [Measures].[Billing Rate]
+ END
+  *[Measures].[Product Hours]   
+ )
+ END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Product Dev' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';     
+CREATE MEMBER CURRENTCUBE.[Measures].[Cap Contribution All Time]
+ AS [Measures].[Invoice All Time] + [Measures].[Project Dev All Time], 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cap' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';   
+CREATE MEMBER CURRENTCUBE.[Measures].[Unfiltered Invoice All Time]
+ AS SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+  * [Date].[BillingPeriod].[All]
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN 
+[Measures].[Hours] IS NULL THEN NULL
+else
+ [Measures].[Billing Rate] END * 
+  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[B] 
+ )
+  ), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Internal' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail'  ;        
+CREATE MEMBER CURRENTCUBE.[Measures].[Invoice All Time]
+ AS CASE WHEN ([Measures].[Hours] = NULL 
+AND
+ ([Measures].[Project Cap] &gt; [Measures].[Unfiltered Invoice All Time] OR
+[Measures].[Project Cap] = 0
+) )
+OR 
+  NOT ([Project].[Status].Level IS [Project].[Status].[Project]
+ OR [Project].[Name].Level is [Project].[Name].[Project Name]
+ )  
+THEN NULL ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+  * [Date].[BillingPeriod].[All]
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN 
+[Measures].[Hours] IS NULL THEN NULL
+else
+ [Measures].[Billing Rate] END * 
+  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[B] 
+ )
+  )
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';     
+CREATE MEMBER CURRENTCUBE.[Measures].[Project Dev All Time]
+ AS CASE WHEN ([Measures].[Hours]) = NULL 
+OR 
+    NOT ([Project].[Status].Level IS [Project].[Status].[Project]
+ OR [Project].[Name].Level is [Project].[Name].[Project Name]
+ )
+THEN NULL ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+  * [Date].[BillingPeriod].[All]
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN 
+[Measures].[Hours] IS NULL THEN NULL
+else
+ [Measures].[Billing Rate] END * 
+  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[PROD] 
+ )
+  )
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Product Dev' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';     
+CREATE MEMBER CURRENTCUBE.[Measures].[Cap Contribution Amount]
+ AS [Measures].[Invoice Amount] + [Measures].[Project Dev Amount], 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cap' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';               
+CREATE MEMBER CURRENTCUBE.[Measures].[Unbillable Amount]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL 
+ 
+THEN NULL ELSE
+SUM( 
+ {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
+ OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
+ 
+
+ THEN 333
+WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
+else
+ [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
+
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';        
+CREATE MEMBER CURRENTCUBE.[Measures].[Unbillable Amount All Time]
+ AS CASE WHEN ([Measures].[Hours] ) = NULL 
+ OR 
+  NOT [Project].[Status].Level IS [Project].[Status].[Project]
+THEN NULL ELSE
+SUM( 
+ {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+  * [Date].[BillingPeriod].[All]
+} , 
+ 
+ [Measures].[Billing Rate]  * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
+
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';        
+CREATE MEMBER CURRENTCUBE.[Measures].[Unallocated Amount]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]) = NULL 
+ 
+THEN NULL ELSE
+SUM( 
+ {
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+
+} , 
+ 
+ [Measures].[Billing Rate]  * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]))
+
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';        
+CREATE MEMBER CURRENTCUBE.[Measures].[Unbillable Amount - Billable Project]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL 
+ 
+THEN NULL ELSE
+SUM( 
+ {
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
+
+} ,
+[Measures].[Billing Rate] ) END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]
+,[Project].[Project Billing Status].&amp;[Billable]), 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';           
+CREATE MEMBER CURRENTCUBE.[Measures].[Billable Hours]
+ AS CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[B]) = NULL 
+/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
+THEN NULL
+ ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
+} , 
+ ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[B]))
+END, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';           
+CREATE MEMBER CURRENTCUBE.[Measures].[Unbillable Hours]
+ AS CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL THEN NULL ELSE
+
+SUM( 
+ {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
+  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
+} , 
+
+ ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
+
+END, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';      
+CREATE MEMBER CURRENTCUBE.[Measures].[Product Hours]
+ AS CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]) = NULL 
+/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
+THEN NULL
+ ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
+} , 
+ ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]))
+END, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Product Dev' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';         
+CREATE MEMBER CURRENTCUBE.[Measures].[Unallocated Hours]
+ AS CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]) = NULL 
+/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
+THEN NULL
+ ELSE
+SUM( 
+ {
+ --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
+ EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
+} , 
+ ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]))
+END, 
+FORMAT_STRING = "Standard", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';             
+CREATE MEMBER CURRENTCUBE.[Measures].[Non Billing Amount]
+ AS CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[NB]) = NULL THEN NULL ELSE
+SUM( 
+ {EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
+/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
+*/} , 
+ CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
+ OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
+ 
+
+ THEN 333
+WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
+else
+ [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[NB]))
+
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';        
+CREATE MEMBER CURRENTCUBE.[Measures].[Project Cap - logged projects]
+ AS CASE WHEN ([Measures].[Hours] = NULL AND
+ ([Measures].[Project Cap] &gt; [Measures].[Invoice All Time] OR
+[Measures].[Project Cap] = 0
+) )
+OR 
+    NOT ([Project].[Status].Level IS [Project].[Status].[Project]
+ OR [Project].[Name].Level is [Project].[Name].[Project Name]
+ )
+
+THEN NULL ELSE [Measures].[Project Cap]
+END, 
+FORMAT_STRING = "Currency", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Project Billing';                 
+CREATE MEMBER CURRENTCUBE.[Measures].[InvoiceX]
+ AS SUM( 
+ {EXISTING  [Project].[Source Key].[Client Source Key].&amp;[DPME].Children}  
+ , 
+ 
+ [Measures].[Invoice Amount] ), 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';                 
+CREATE MEMBER CURRENTCUBE.[Measures].[CountX]
+ AS COUNT(FILTER(EXISTING  [Project].[Source Key].[Client Source Key].&amp;[DPME].Children, Measures.Rate &gt; 0) ), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';                  
+CREATE MEMBER CURRENTCUBE.[Measures].[Invoice Amount incl VAT]
+ AS [Measures].[Invoice Amount] * 1.14, 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';          
+CREATE MEMBER CURRENTCUBE.[Measures].[Billability]
+ AS ([Measures].[Billable Hours]  + [Measures].[Product Hours])/ ([Measures].[Work Hours] 
+* COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
+), 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1 ,  DISPLAY_FOLDER = 'Invoices' ,  ASSOCIATED_MEASURE_GROUP = 'Timesheet Detail';          
+CREATE MEMBER CURRENTCUBE.[Measures].[Billability Target]
+ AS CASE WHEN [Measures].[Billability] = nuLL THEN NULL
+ELSE [Measures].[Billing Percent Target] / 100 
+/  COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
+END, 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Person';          
+CREATE MEMBER CURRENTCUBE.[Measures].[Billability Minimum]
+ AS CASE WHEN [Measures].[Billability] = nuLL THEN NULL
+ELSE [Measures].[Billing Percent Minimum] / 100
+/  COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
+END, 
+FORMAT_STRING = "Percent", 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Person';       
+CREATE MEMBER CURRENTCUBE.[Measures].[Person Period Cost ROOT]
+ AS CASE WHEN measures.[Is Contractor] = 1
+THEN [Hourly Cost] * [Measures].[Raw Hours]
+ELSE /*[Monthly Cost] * [Billing Periods Count]
+*/SUM(
+	NONEMPTYCROSSJOIN(
+		{EXISTING DESCENDANTS([Date].[BillingPeriod].[All],
+			[Date].[BillingPeriod].[Billing Period]
+			)* [Raw hours]}
+		),
+Measures.[Monthly Cost] )
+
+END, 
+VISIBLE = 0 ,  ASSOCIATED_MEASURE_GROUP = 'Person';       
+CREATE MEMBER CURRENTCUBE.[Measures].[Person Period Cost]
+ AS CASE WHEN measures.[Is Contractor] = 1
+AND [Measures].[Raw Hours] &gt; 0
+THEN [Hourly Cost] * [Measures].[Raw Hours]
+WHEN [Measures].[Raw Hours] &gt; 0 THEN /*[Monthly Cost] * [Billing Periods Count]
+*/[Billing Periods Count] *
+Measures.[Monthly Cost] 
+
+END, 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Person';       
+CREATE MEMBER CURRENTCUBE.[Measures].[Person Avg Hourly Cost]
+ AS CASE WHEN Measures.[Person Period Cost] &gt; 0 THEN 
+
+Measures.[Person Period Cost] 
+/ Measures.[Billable Hours]
+END, 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Person';       
+CREATE MEMBER CURRENTCUBE.[Measures].[Base Hourly Cost]
+ AS CASE WHEN [Hourly Cost] &gt; 0 
+THEN [Hourly Cost] 
+END, 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Person'; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="035a9d78-e0ef-4875-8ec8-b7d99c7bdb96">
+      <ID>KPI</ID>
+      <Name>Billing</Name>
+      <AssociatedMeasureGroupID>Fact Timesheet Detail</AssociatedMeasureGroupID>
+      <Value>[Measures].[Billability] </Value>
+      <Goal>[Measures].[Billing Percent Target]</Goal>
+      <Status>CASE WHEN [Measures].[Billability]  = NULL THEN NULL
+
+ WHEN KpiVAlue("Billing") * 100 &lt; [Measures].[Billing Percent Minimum] THEN -1
+WHEN KpiVAlue("Billing") * 100 &lt; [Measures].[Billing Percent Target] THEN 0
+ELSE 1 
+END</Status>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Shapes</StatusGraphic>
+    </Kpi>
+  </Kpis>
+</Cube>

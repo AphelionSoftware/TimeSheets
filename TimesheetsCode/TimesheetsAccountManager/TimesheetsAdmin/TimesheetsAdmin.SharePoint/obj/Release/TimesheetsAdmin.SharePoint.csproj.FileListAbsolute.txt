@@ -1,0 +1,10 @@
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb

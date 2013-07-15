@@ -1,0 +1,33 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c4150139-2c83-4056-a9c1-8fa8f6f624ef" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheets</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Timesheet Detail</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="003300e4-20c2-4bfd-902b-d4f7d120500a">
+          <ID>Fact Timesheet Detail</ID>
+          <Name>Fact Timesheet Detail</Name>
+          <CreatedTimestamp>2012-01-12T12:43:31.51Z</CreatedTimestamp>
+          <LastSchemaUpdate>2012-01-16T12:57:27.403333Z</LastSchemaUpdate>
+          <LastProcessed>2012-01-16T13:00:14.746667Z</LastProcessed>
+          <State>Processed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="505c55bd-3739-4540-b6cc-2980a1bf2652">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="87a02760-f8d0-4613-86a2-8299379891ab">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="588a3f85-e100-40f2-831c-1f42ff3c9277" />
+          </ProactiveCaching>
+          <EstimatedSize>2512</EstimatedSize>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

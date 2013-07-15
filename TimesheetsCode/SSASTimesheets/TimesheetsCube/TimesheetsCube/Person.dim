@@ -1,0 +1,231 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0388c058-7193-47d3-aa13-3c6df61f455f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Person</ID>
+  <Name>Person</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-8877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6826" y="12277" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPerson" left="-377" top="-4551" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3440" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimPerson" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1091</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8877</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-377</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-4551</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8f23b3cd-d15d-4dc3-9d5e-b88d5183ed22">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="2f992548-60b8-4676-9e84-a0fd3a89689e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="a87de9ed-81ef-4e57-b358-5366b19e5b5f">
+      <ID>Person ID</ID>
+      <Name>Person ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>16</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25d4a175-b320-4f35-9380-2039cf147be2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e1d2365f-728c-4315-8f7e-da634153d4b5">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d3837295-a40c-4727-96b7-b02f62562dfe">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d512223a-61b7-419a-b46d-18d2d3752f7d">
+          <TableID>CUBE_DimPerson</TableID>
+          <ColumnID>PersonID</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f635beeb-f858-4c37-8c4f-0c75a5e587c8">
+          <AttributeID>Person Name</AttributeID>
+          <Name>Person Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="936e8c80-b41e-4888-925a-ad5dbafc06ab">
+          <AttributeID>Person Code</AttributeID>
+          <Name>Person Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="474f5ffd-7e37-4f13-8ca3-01293ff38108">
+          <AttributeID>Person Source Key</AttributeID>
+          <Name>Person Source Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="25c3ff88-a6de-47e3-b06f-25e37d46ff23">
+          <AttributeID>Person Role Code</AttributeID>
+          <Name>Person Role Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38a88488-9c4e-4398-9926-cf3a1360718f">
+          <AttributeID>Person Role Name</AttributeID>
+          <Name>Person Role Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="84395229-8a67-4625-9c79-a88245c45bbe">
+          <AttributeID>Is Contractor</AttributeID>
+          <Name>Is Contractor</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fb30d6af-a336-44c7-85b4-79289ba1a51e">
+      <ID>Person Name</ID>
+      <Name>Person Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fd6cfe94-28f0-4c2b-983b-85ac659c65c0">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9000f768-03ca-4bc3-ab8e-ad39010a8355">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7f42d521-7761-4a2a-9e72-645b959ae90d">
+      <ID>Person Code</ID>
+      <Name>Person Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6dcd76e8-253d-4152-8ea3-4b1863cca742">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00aa87aa-6fef-470c-9033-67f3000a36d2">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="28ce23c9-b09d-40ec-885b-112833da5b47">
+      <ID>Person Source Key</ID>
+      <Name>Person Source Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="66395315-1342-4aa4-8d22-44c17998565e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="083c8764-46b6-4aac-8a0f-47a087435acc">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="77d29006-9fb4-491b-91d4-b09e3f930ec9">
+      <ID>Person Role Code</ID>
+      <Name>Person Role Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8e1ac314-d10a-4437-906b-aaebe6fc8f9a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53b8c9a6-c36b-4021-bb51-6e9eef674ccf">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonRoleCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd6849fe-9adc-4b43-937f-f2a61e88f332">
+      <ID>Person Role Name</ID>
+      <Name>Person Role Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c7de042-f3eb-4006-a7c8-0048c69df138">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f33da636-d641-4224-8a2c-dd01cd317893">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonRoleName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d0ae1a4f-8995-4fe7-bd1c-349606a584da">
+      <ID>Is Contractor</ID>
+      <Name>Is Contractor</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="35b63c6d-ee9c-41cf-bdf4-c7e86ea09b53">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a1651cf2-1a7c-44e9-9fdc-c54d6963edfe">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>IsContractor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

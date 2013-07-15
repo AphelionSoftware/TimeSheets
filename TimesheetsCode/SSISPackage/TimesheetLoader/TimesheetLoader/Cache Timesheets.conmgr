@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Cache Timesheets"
+  DTS:DTSID="{FF975062-5AD7-4051-BC3E-D95BF97C46F0}"
+  DTS:CreationName="ADO.NET:SQL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=TWIST;Initial Catalog=TimeSheets_Dev_Leo;Integrated Security=True;Connect Timeout=30;Application Name=SSIS-TimesheetLoaderRawFile-{FF975062-5AD7-4051-BC3E-D95BF97C46F0}Timesheets;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

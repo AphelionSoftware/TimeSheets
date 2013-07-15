@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>TimesheetsCubeWriteback</Database>
+    <Server>localhost\sql2k8r2</Server>
+    <ConnectionString>DataSource=localhost\sql2k8r2;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>BVMHtL8mNqGQiU0T2AvhQQ==2012/01/21 08:35:44 AM2012/01/21 08:34:21 AM</TimeStamp>
+        <ID>
+          <String>PW Timesheets</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>YcXLro2JM2rKkYR2q7pcjg==2012/01/21 08:34:13 AM2012/01/21 08:34:22 AM</TimeStamp>
+        <ID>
+          <String>Timesheets</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DCXccua+kQJrMsa5UJ3r7A==2012/01/21 08:34:15 AM2012/01/21 08:34:19 AM</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>GTcObf4qI1cD5+686xtbwA==2012/01/21 08:34:15 AM2012/01/21 08:34:20 AM</TimeStamp>
+        <ID>
+          <String>Fact Timesheet Detail</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QNvT/ZmHcDIVPQKUqfD0oA==2012/01/21 08:34:14 AM2012/01/21 08:34:20 AM</TimeStamp>
+        <ID>
+          <String>Person</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>PoIfBqELD9RPvAW57MxReA==2012/01/21 08:34:14 AM2012/01/21 08:34:20 AM</TimeStamp>
+        <ID>
+          <String>Project</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>XQq+r/CZCoAAzhzpGQ4oQg==2012/01/21 08:37:57 AM2012/01/21 08:34:21 AM</TimeStamp>
+        <ID>
+          <String>Timesheet</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3cbyUuFeURh5E0qktC2LyA==2012/01/21 08:34:15 AM2012/01/21 08:34:23 AM</TimeStamp>
+        <ID>
+          <String>Type Of Work</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>KvbsBxM8ubmJ7i9uGoCV3Q==2012/01/21 08:36:05 AM2012/01/21 08:34:21 AM8SciHsEnQ5fw2XsukY+SkQ==2012/01/21 08:36:04 AM2012/01/21 08:34:22 AM</TimeStamp>
+        <ID>
+          <String>Timesheets</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>al51OuvU6flcBer89m50SQ==2012/01/21 08:34:19 AM2012/01/21 08:34:17 AM</TimeStamp>
+      <ID>
+        <String>TimesheetsCubeWriteback</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2012-01-21T06:38:04.88Z</LastDeployed>
+</DeploymentSnapshot>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e962658a-67db-4f6e-98c2-6d7a14602c56" solutionId="e962658a-67db-4f6e-98c2-6d7a14602c56" resetWebServer="false" sharePointProductVersion="15.0" name="TimesheetsAdmin.SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="4234eea4-01b4-46e2-92c5-224c3abe7efe" />
+  </features>
+</package>

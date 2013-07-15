@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PWTimesheetsDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PWTimesheetsDataStore">
+    <EntitySet Name="BillingDetails" EntityType="PWTimesheetsDataStore.BillingDetail" store:Type="Tables" Schema="dbo" Table="BillingDetail" />
+    <EntitySet Name="BillingStatusSet" EntityType="PWTimesheetsDataStore.BillingStatus" store:Type="Tables" Schema="dbo" Table="BillingStatus" />
+    <EntitySet Name="Clients" EntityType="PWTimesheetsDataStore.Client" store:Type="Tables" Schema="dbo" Table="Client" />
+    <EntitySet Name="DimDates" EntityType="PWTimesheetsDataStore.DimDate" store:Type="Tables" Schema="dbo" Table="DimDate" />
+    <EntitySet Name="People" EntityType="PWTimesheetsDataStore.Person" store:Type="Tables" Schema="dbo" Table="Person" />
+    <EntitySet Name="Projects" EntityType="PWTimesheetsDataStore.Project" store:Type="Tables" Schema="dbo" Table="Project" />
+    <EntitySet Name="Timesheets" EntityType="PWTimesheetsDataStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
+    <EntitySet Name="TimesheetDetails" EntityType="PWTimesheetsDataStore.TimesheetDetail" store:Type="Tables" Schema="dbo" Table="TimesheetDetail" />
+    <EntitySet Name="TypeOfWorks" EntityType="PWTimesheetsDataStore.TypeOfWork" store:Type="Tables" Schema="dbo" Table="TypeOfWork" />
+    <EntitySet Name="RoleTypes" EntityType="PWTimesheetsDataStore.RoleType" store:Type="Tables" Schema="dbo" Table="RoleType" />
+    <EntitySet Name="ClientRoles" EntityType="PWTimesheetsDataStore.ClientRole" store:Type="Tables" Schema="dbo" Table="ClientRole" />
+    <EntitySet Name="SystemRoles" EntityType="PWTimesheetsDataStore.SystemRole" store:Type="Tables" Schema="dbo" Table="SystemRole" />
+    <EntitySet Name="ActiveTypes" EntityType="PWTimesheetsDataStore.ActiveType" store:Type="Tables" Schema="dbo" Table="ActiveType" />
+    <AssociationSet Name="FK_BillingDetail_Client" Association="PWTimesheetsDataStore.FK_BillingDetail_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Person" Association="PWTimesheetsDataStore.FK_BillingDetail_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="BillingStatus_Project" Association="PWTimesheetsDataStore.BillingStatus_Project">
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Client" Association="PWTimesheetsDataStore.FK_Project_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Person" Association="PWTimesheetsDataStore.FK_Project_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_DimDate" Association="PWTimesheetsDataStore.FK_TimesheetDetail_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Person" Association="PWTimesheetsDataStore.FK_TimesheetDetail_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Project" Association="PWTimesheetsDataStore.FK_TimesheetDetail_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Timesheet" Association="PWTimesheetsDataStore.FK_TimesheetDetail_Timesheet">
+      <End Role="Timesheet" EntitySet="Timesheets" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_TypeOfWork" Association="PWTimesheetsDataStore.FK_TimesheetDetail_TypeOfWork">
+      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="BillingStatus_TimesheetDetail" Association="PWTimesheetsDataStore.BillingStatus_TimesheetDetail">
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Role1" Association="PWTimesheetsDataStore.FK_BillingDetail_Role1">
+      <End Role="ClientRole" EntitySet="ClientRoles" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Role1" Association="PWTimesheetsDataStore.FK_Person_Role1">
+      <End Role="SystemRole" EntitySet="SystemRoles" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_Person" Association="PWTimesheetsDataStore.FK_Client_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_DimDate" Association="PWTimesheetsDataStore.FK_Timesheet_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_ActiveType" Association="PWTimesheetsDataStore.FK_BillingDetail_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingStatus_ActiveType" Association="PWTimesheetsDataStore.FK_BillingStatus_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ActiveType" Association="PWTimesheetsDataStore.FK_Client_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientRole_ActiveType" Association="PWTimesheetsDataStore.FK_ClientRole_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="ClientRole" EntitySet="ClientRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_ActiveType" Association="PWTimesheetsDataStore.FK_Person_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_ActiveType" Association="PWTimesheetsDataStore.FK_Project_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleType_ActiveType" Association="PWTimesheetsDataStore.FK_RoleType_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="RoleType" EntitySet="RoleTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemRole_ActiveType" Association="PWTimesheetsDataStore.FK_SystemRole_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="SystemRole" EntitySet="SystemRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_ActiveType" Association="PWTimesheetsDataStore.FK_Timesheet_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_ActiveType" Association="PWTimesheetsDataStore.FK_TimesheetDetail_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypeOfWork_ActiveType" Association="PWTimesheetsDataStore.FK_TypeOfWork_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_DimDate" Association="PWTimesheetsDataStore.FK_BillingDetail_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BillingDetail">
+    <Key>
+      <PropertyRef Name="BillingDetailID" />
+    </Key>
+    <Property Name="BillingDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BillingDetailSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="Rate" Type="money" Nullable="false" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="BillingDetailClientID" Type="int" Nullable="false" />
+    <Property Name="BillingDetailPersonID" Type="int" Nullable="false" />
+    <Property Name="BillingDetailClientRoleID" Type="int" />
+    <Property Name="Active" Type="int" Nullable="false" />
+    <Property Name="BillingDetailDateID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BillingStatus">
+    <Key>
+      <PropertyRef Name="BillingStatusID" />
+    </Key>
+    <Property Name="BillingStatusName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="BillingStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BillingStatusSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="BillingStatusCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ClientID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="ClientCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="AccountManagerPersonID" Type="int" Nullable="false" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DimDate">
+    <Key>
+      <PropertyRef Name="DateID" />
+    </Key>
+    <Property Name="StandardDate" Type="varchar" MaxLength="10" />
+    <Property Name="DateID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="DaySuffix" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="DayOfWeek" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="DOWInMonth" Type="int" Nullable="false" />
+    <Property Name="DayOfYear" Type="int" Nullable="false" />
+    <Property Name="WeekOfYear" Type="int" Nullable="false" />
+    <Property Name="WeekOfMonth" Type="int" Nullable="false" />
+    <Property Name="MonthNumber" Type="int" Nullable="false" />
+    <Property Name="MonthName" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="Quarter" Type="int" Nullable="false" />
+    <Property Name="QuarterName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="YearName" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="YearNumber" Type="int" Nullable="false" />
+    <Property Name="IsPublicHoliday" Type="bit" />
+    <Property Name="HolidayText" Type="varchar" MaxLength="50" />
+    <Property Name="DateSK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="PersonID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="PersonCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="BillingPercentTarget" Type="int" Nullable="false" />
+    <Property Name="BillingPercentMinimum" Type="int" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="StartDate" Type="date" Nullable="false" />
+    <Property Name="HourlyCost" Type="int" />
+    <Property Name="MonthlyCost" Type="money" />
+    <Property Name="IsContractor" Type="int" Nullable="false" />
+    <Property Name="Billable" Type="int" Nullable="false" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ADUsername" Type="varchar" MaxLength="255" />
+    <Property Name="PersonSystemRoleID" Type="int" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ProjectSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="ProjectCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="ProjectFirstPersonName" Type="varchar" MaxLength="50" />
+    <Property Name="ProjectFirstFilename" Type="varchar" MaxLength="255" />
+    <Property Name="ConsultingEstimate" Type="money" />
+    <Property Name="SoftwareEstimate" Type="money" />
+    <Property Name="VMEstimate" Type="money" />
+    <Property Name="ProjectCap" Type="money" />
+    <Property Name="AdminProject" Type="int" Nullable="false" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Billable" Type="int" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="AccountManagerPersonID" Type="int" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Timesheet">
+    <Key>
+      <PropertyRef Name="TimesheetID" />
+    </Key>
+    <Property Name="TimesheetID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="TimesheetName" Type="varchar" MaxLength="255" />
+    <Property Name="TimesheetCode" Type="varchar" MaxLength="255" />
+    <Property Name="TimesheetFileName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetFromDateID" Type="int" Nullable="false" />
+    <Property Name="TimesheetToDateID" Type="int" Nullable="false" />
+    <Property Name="TimesheetPerson" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDate" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="OverallStatusID" Type="int" Nullable="false" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDateID" Type="int" Nullable="false" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimesheetDetail">
+    <Key>
+      <PropertyRef Name="TimesheetDetailID" />
+    </Key>
+    <Property Name="TimesheetDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetDetailSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="TimesheetDetailName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDetailCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDetailFileName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="Hours" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="ClientComments" Type="varchar(max)" />
+    <Property Name="AMComments" Type="varchar(max)" />
+    <Property Name="Exclude" Type="int" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDetailDateID" Type="int" Nullable="false" />
+    <Property Name="TimesheetDetailPersonID" Type="int" Nullable="false" />
+    <Property Name="TimesheetDetailProjectID" Type="int" Nullable="false" />
+    <Property Name="TimesheetID" Type="int" Nullable="false" />
+    <Property Name="TimesheetTypeOfWorkID" Type="int" Nullable="false" />
+    <Property Name="Billable" Type="int" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeOfWork">
+    <Key>
+      <PropertyRef Name="TypeOfWorkID" />
+    </Key>
+    <Property Name="TypeOfWorkID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TypeOfWorkName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TypeOfWorkSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="TypeOfWorkCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoleType">
+    <Key>
+      <PropertyRef Name="RoleTypeID" />
+    </Key>
+    <Property Name="RoleTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleTypeName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="RoleTypeSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="RoleTypeCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientRole">
+    <Key>
+      <PropertyRef Name="ClientRoleID" />
+    </Key>
+    <Property Name="ClientRoleName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ClientRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientRoleSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="ClientRoleCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SystemRole">
+    <Key>
+      <PropertyRef Name="SystemRoleID" />
+    </Key>
+    <Property Name="SystemRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SystemRoleName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="SystemRoleSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="SystemRoleCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActiveType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BillingDetail_Client">
+    <End Role="Client" Type="PWTimesheetsDataStore.Client" Multiplicity="1" />
+    <End Role="BillingDetail" Type="PWTimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Person">
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="1" />
+    <End Role="BillingDetail" Type="PWTimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BillingStatus_Project">
+    <End Role="BillingStatus" Type="PWTimesheetsDataStore.BillingStatus" Multiplicity="1" />
+    <End Role="Project" Type="PWTimesheetsDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillingStatus">
+        <PropertyRef Name="BillingStatusID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Billable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Client">
+    <End Role="Client" Type="PWTimesheetsDataStore.Client" Multiplicity="1" />
+    <End Role="Project" Type="PWTimesheetsDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Person">
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="0..1" />
+    <End Role="Project" Type="PWTimesheetsDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_DimDate">
+    <End Role="DimDate" Type="PWTimesheetsDataStore.DimDate" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Person">
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Project">
+    <End Role="Project" Type="PWTimesheetsDataStore.Project" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Timesheet">
+    <End Role="Timesheet" Type="PWTimesheetsDataStore.Timesheet" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Timesheet">
+        <PropertyRef Name="TimesheetID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_TypeOfWork">
+    <End Role="TypeOfWork" Type="PWTimesheetsDataStore.TypeOfWork" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfWork">
+        <PropertyRef Name="TypeOfWorkID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetTypeOfWorkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BillingStatus_TimesheetDetail">
+    <End Role="BillingStatus" Type="PWTimesheetsDataStore.BillingStatus" Multiplicity="0..1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillingStatus">
+        <PropertyRef Name="BillingStatusID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Billable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Role1">
+    <End Role="ClientRole" Type="PWTimesheetsDataStore.ClientRole" Multiplicity="0..1" />
+    <End Role="BillingDetail" Type="PWTimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientRole">
+        <PropertyRef Name="ClientRoleID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Role1">
+    <End Role="SystemRole" Type="PWTimesheetsDataStore.SystemRole" Multiplicity="0..1" />
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemRole">
+        <PropertyRef Name="SystemRoleID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="PersonSystemRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_Person">
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="1" />
+    <End Role="Client" Type="PWTimesheetsDataStore.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Timesheet_DimDate">
+    <End Role="DimDate" Type="PWTimesheetsDataStore.DimDate" Multiplicity="1" />
+    <End Role="Timesheet" Type="PWTimesheetsDataStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="BillingDetail" Type="PWTimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingStatus_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="BillingStatus" Type="PWTimesheetsDataStore.BillingStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillingStatus">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="Client" Type="PWTimesheetsDataStore.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientRole_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ClientRole" Type="PWTimesheetsDataStore.ClientRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ClientRole">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="Person" Type="PWTimesheetsDataStore.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="Project" Type="PWTimesheetsDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleType_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="RoleType" Type="PWTimesheetsDataStore.RoleType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RoleType">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemRole_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="SystemRole" Type="PWTimesheetsDataStore.SystemRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SystemRole">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Timesheet_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="Timesheet" Type="PWTimesheetsDataStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="PWTimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypeOfWork_ActiveType">
+    <End Role="ActiveType" Type="PWTimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="TypeOfWork" Type="PWTimesheetsDataStore.TypeOfWork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TypeOfWork">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_DimDate">
+    <End Role="DimDate" Type="PWTimesheetsDataStore.DimDate" Multiplicity="1" />
+    <End Role="BillingDetail" Type="PWTimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

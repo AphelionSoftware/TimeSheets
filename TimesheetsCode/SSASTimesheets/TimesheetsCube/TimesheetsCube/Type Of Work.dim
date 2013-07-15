@@ -1,0 +1,142 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b4503ee2-b194-4ae0-ad8e-de29cd8b4177" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Type Of Work</ID>
+  <Name>Type Of Work</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="274839d4-b0a1-48af-a188-ecf31d996fe2">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="44337607-b7c1-4613-ab61-0151fad1de43">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="ebb4a730-9ec4-4eb7-9c1d-66e121fa8cb9">
+      <ID>Type Of Work ID</ID>
+      <Name>Type Of Work ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>46</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99062481-4e2f-4490-b169-62e183dc1d28">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="340d8ee2-096f-416a-a660-247a8b09cc14">
+            <TableID>CUBE_DimTypeOfWork</TableID>
+            <ColumnID>TypeOfWorkID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="106b173e-abdf-4451-ae84-30d1f53525bf">
+          <AttributeID>Type Of Work Source Key</AttributeID>
+          <Name>Type Of Work Source Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="33005bcd-c593-4852-a3c5-f639b61e3d0d">
+          <AttributeID>Type Of Work Name</AttributeID>
+          <Name>Type Of Work Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4ef30fc2-d792-43a5-b11a-b32fff68bc9d">
+          <AttributeID>Type Of Work Code</AttributeID>
+          <Name>Type Of Work Code</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="70ced986-7b15-44ad-97cb-9de8ef2b59a3">
+      <ID>Type Of Work Source Key</ID>
+      <Name>Type Of Work Source Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dfa2f8b8-ea41-456d-aa9a-677b45a88b92">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a529315-7382-48e3-b0ea-5ee574b12e6b">
+            <TableID>CUBE_DimTypeOfWork</TableID>
+            <ColumnID>TypeOfWorkSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c6341dc7-2d8c-4eef-ba6a-9a2896414370">
+      <ID>Type Of Work Name</ID>
+      <Name>Type Of Work Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ceb6782d-34f0-4181-aa0e-dd67e303bab6">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1d74cef0-0d96-45dd-a9e4-93eff9aed15e">
+            <TableID>CUBE_DimTypeOfWork</TableID>
+            <ColumnID>TypeOfWorkName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ccb00bd-608f-4de9-9c04-6d3436c02642">
+      <ID>Type Of Work Code</ID>
+      <Name>Type Of Work Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c1159d43-a350-45f0-ae1d-9c7edf314d5e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1400ea59-4c71-4407-88b6-cf49866d1667">
+            <TableID>CUBE_DimTypeOfWork</TableID>
+            <ColumnID>TypeOfWorkCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

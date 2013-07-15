@@ -1,0 +1,203 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9dbf2e03-bc3b-4354-b400-7aaaa3021464" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PW Timesheets</ID>
+  <Name>PW Timesheets</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="5" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-15097" scrolltop="-2504" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="38761" y="17119" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="BillingDetail" left="7095" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3995" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000800009b0f0000ea120000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_BillingDetail" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="BillingStatus" left="20" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="4075" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000eb0f00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_BillingStatus" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="Client" left="2365" top="6439" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dbo_Client" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-15097</DiagramViewPortLeft>
+            <DiagramViewPortTop>-2504</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>PW Timesheets</DataSourceID>
+  <Schema>
+    <xs:schema id="PW_x0020_Timesheets" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="PW_x0020_Timesheets" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a0f771ba-64e7-4448-8a57-edbb4ea54b02">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_BillingDetail" msprop:design-time-name="939a6781-05fe-42ea-bc0e-5e6efbd9ac43" msprop:FriendlyName="BillingDetail" msprop:DbSchemaName="dbo" msprop:DbTableName="BillingDetail" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="BillingDetailID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="df2770c9-c7d1-4783-86c5-5efc10b56ed1" msprop:DbColumnName="BillingDetailID" msprop:FriendlyName="BillingDetailID" type="xs:int" />
+                  <xs:element name="BillingDetailSourceKey" msprop:design-time-name="83f89553-2d04-4022-95e8-1e848a762776" msprop:DbColumnName="BillingDetailSourceKey" msprop:FriendlyName="BillingDetailSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:design-time-name="48cef41c-2706-4096-860c-93c2eb887cc5" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:design-time-name="2a70163a-9043-4127-a59c-fa9df69f299c" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="BillingDetailDateID" msprop:design-time-name="20826f64-e331-46d2-b56f-0efb48c142eb" msprop:DbColumnName="BillingDetailDateID" msprop:FriendlyName="BillingDetailDateID" type="xs:int" />
+                  <xs:element name="BillingDetailClientID" msprop:design-time-name="550641ae-a396-40ea-8211-dbbf22ed05d7" msprop:DbColumnName="BillingDetailClientID" msprop:FriendlyName="BillingDetailClientID" type="xs:int" />
+                  <xs:element name="BillingDetailPersonID" msprop:design-time-name="4a5a0c2e-b656-4283-9d2d-f39cc2ad6ff9" msprop:DbColumnName="BillingDetailPersonID" msprop:FriendlyName="BillingDetailPersonID" type="xs:int" />
+                  <xs:element name="Rate" msprop:design-time-name="dfe735c8-243c-4d4d-9c5d-913666e61b65" msprop:DbColumnName="Rate" msprop:FriendlyName="Rate" type="xs:decimal" />
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:design-time-name="e03ac106-5529-406e-b472-bd337b9a16b1" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_BillingStatus" msprop:design-time-name="19f93b75-4fd2-4ede-be9c-e9d0b6d4be74" msprop:FriendlyName="BillingStatus" msprop:DbSchemaName="dbo" msprop:DbTableName="BillingStatus" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="BillingStatusID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="241496e8-8d70-4246-8d36-a7815c5716d3" msprop:DbColumnName="BillingStatusID" msprop:FriendlyName="BillingStatusID" type="xs:int" minOccurs="0" />
+                  <xs:element name="BillingStatusSourceKey" msprop:design-time-name="c385655d-be61-4b01-af4f-ec16fe083a0a" msprop:DbColumnName="BillingStatusSourceKey" msprop:FriendlyName="BillingStatusSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:design-time-name="28c49db8-c8df-42af-b3d7-9e122115337f" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Active" msprop:design-time-name="4e58b4ca-6c4e-495e-8024-fad760f16cbb" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" minOccurs="0" />
+                  <xs:element name="BillingStatusName" msprop:design-time-name="f47110e2-5cc4-4e8c-83c3-5c920be5aa62" msprop:DbColumnName="BillingStatusName" msprop:FriendlyName="BillingStatusName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BillingStatusCode" msprop:design-time-name="8f90b5a2-21be-4225-961e-cddaf7354ab1" msprop:DbColumnName="BillingStatusCode" msprop:FriendlyName="BillingStatusCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:design-time-name="f57114a2-aea7-4d8a-9ece-90be922f96dd" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                  <xs:element name="BillingStatusShort" msdata:ReadOnly="true" msprop:design-time-name="35ae4c9e-ade9-44b8-9821-5ff053f23a0a" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="BillingStatusShort" msprop:ComputedColumnExpression="left(BillingStatusName,2)" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Client" msprop:design-time-name="4a777939-104f-40e8-a3f7-6073e9450cc9" msprop:IsLogical="True" msprop:FriendlyName="Client" msprop:DbTableName="Client" msprop:TableType="View" msprop:QueryDefinition="SELECT     ClientID, ClientSourceKey, LoadDate, Active, ClientName, ClientCode, LoadDateID&#xD;&#xA;FROM         Client" msprop:QueryBuilder="SpecificQueryBuilder">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ClientID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="c5f66169-46f0-4f7c-9613-97539efaaad0" msprop:DbColumnName="ClientID" msprop:FriendlyName="ClientID" type="xs:int" minOccurs="0" />
+                  <xs:element name="ClientSourceKey" msprop:design-time-name="e1f2f58c-4393-4e89-9173-b144eea2b721" msprop:DbColumnName="ClientSourceKey" msprop:FriendlyName="ClientSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:design-time-name="0f1e0bd2-12f5-4714-807d-f6772a6d585c" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Active" msprop:design-time-name="7dc1241a-71c5-4ead-b098-3d0f5b759003" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" minOccurs="0" />
+                  <xs:element name="ClientName" msprop:design-time-name="3ccf5095-b212-4473-9115-0627534d7be2" msprop:DbColumnName="ClientName" msprop:FriendlyName="ClientName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ClientCode" msprop:design-time-name="b4d0a82d-6223-49f5-993c-7662313cce13" msprop:DbColumnName="ClientCode" msprop:FriendlyName="ClientCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:design-time-name="c441b806-c905-46e6-a655-77415e26f88b" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_BillingDetail" />
+          <xs:field xpath="BillingDetailID" />
+        </xs:unique>
+        <xs:unique name="dbo_BillingStatus_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_BillingStatus" />
+          <xs:field xpath="BillingStatusID" />
+        </xs:unique>
+        <xs:unique name="dbo_Client_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Client" />
+          <xs:field xpath="ClientID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <PW_x0020_Timesheets xmlns="" />
+  </Schema>
+</DataSourceView>

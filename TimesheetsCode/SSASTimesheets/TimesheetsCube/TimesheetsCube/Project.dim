@@ -1,0 +1,766 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c9927f06-d901-4ddf-a823-e33dedfa489e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Project</ID>
+  <Name>Project</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="3194" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9790" y="16351" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClient" left="113" top="0" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimClient" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimProject" left="20" top="6395" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="8123" height="7727" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000bb1f00002f1e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimProject" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="241" top="3496" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="840" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimProject-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="1" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="640" y="3995" />
+              <point x="640" y="5195" />
+              <point x="781" y="5195" />
+              <point x="781" y="6395" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-879</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>3194</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="146">
+            <Shape Id="Project ID" Expanded="true">
+              <Attributes>
+                <Attribute Id="Project ID" />
+                <Attribute Id="Active" />
+                <Attribute Id="Project Code 1" />
+                <Attribute Id="Project Name 1" />
+                <Attribute Id="Project Source Key 1" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Client ID 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client ID 1" />
+              </Attributes>
+              <Position x="207" y="20" />
+            </Shape>
+            <Shape Id="Client Name 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client Name 1" />
+              </Attributes>
+              <Position x="395" y="20" />
+            </Shape>
+            <Shape Id="Active Status" Expanded="false">
+              <Attributes>
+                <Attribute Id="Active Status" />
+              </Attributes>
+              <Position x="582" y="20" />
+            </Shape>
+            <Shape Id="Project Billing Status" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Billing Status" />
+              </Attributes>
+              <Position x="770" y="20" />
+            </Shape>
+            <Shape Id="Project Code" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Code" />
+              </Attributes>
+              <Position x="207" y="68" />
+            </Shape>
+            <Shape Id="Client Code" Expanded="true">
+              <Attributes>
+                <Attribute Id="Client Code" />
+              </Attributes>
+              <Position x="395" y="68" />
+            </Shape>
+            <Shape Id="Project Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Name" />
+              </Attributes>
+              <Position x="207" y="116" />
+            </Shape>
+            <Shape Id="Client Name" Expanded="true">
+              <Attributes>
+                <Attribute Id="Client Name" />
+              </Attributes>
+              <Position x="395" y="116" />
+            </Shape>
+            <Shape Id="Project Source Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Source Key" />
+              </Attributes>
+              <Position x="207" y="164" />
+            </Shape>
+            <Shape Id="Client Source Key" Expanded="true">
+              <Attributes>
+                <Attribute Id="Client Source Key" />
+              </Attributes>
+              <Position x="395" y="164" />
+            </Shape>
+            <Shape Id="Client ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client ID" />
+              </Attributes>
+              <Position x="207" y="212" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="91097d8c-d194-4338-a047-af57e0ed41b6">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="fdc15e69-4de2-4143-ac33-4289519e03d3">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="34b84f0c-2208-45eb-8372-0b928a0bf7bb">
+      <ID>Project ID</ID>
+      <Name>Project ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ea653168-2fb7-4cc1-96f4-c527635657f0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="298f6f48-e591-46dc-a2c2-d5fe179592ae">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bd092413-171e-4bff-b8b9-bc2c27cdc2d1">
+          <AttributeID>Client ID</AttributeID>
+          <Name>Client ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="11aa2088-fc5f-4e81-b44d-7bd7b0323547">
+          <AttributeID>Active</AttributeID>
+          <Name>Active</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="70e3d477-bb2a-4e73-afaa-f383e6e1cebd">
+          <AttributeID>Project Name 1</AttributeID>
+          <Name>Project Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="082ae19c-c517-43d0-afe5-49354ac44405">
+          <AttributeID>Project Source Key</AttributeID>
+          <Name>Client Project Source Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9c7f0fdf-efe2-4887-a359-eb9a41d482e6">
+          <AttributeID>Project Name</AttributeID>
+          <Name>Client Project Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5cd7b33c-9106-43f6-853f-1dc85eb47945">
+          <AttributeID>Project Code</AttributeID>
+          <Name>Client Project Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2938ecf-a25d-4f7f-9f8e-c1505a9b8987">
+          <AttributeID>Project Code 1</AttributeID>
+          <Name>Project Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6a554d91-73bc-42e3-a160-5a95d0780610">
+          <AttributeID>Project Source Key 1</AttributeID>
+          <Name>Project Source Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a17dbe8c-9181-44f9-8e75-db1d3f3b34c4">
+          <AttributeID>Client ID 1</AttributeID>
+          <Name>Active Client Project</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6ec3eec3-8706-49ad-a416-353e510c38d4">
+          <AttributeID>Account Manager Email</AttributeID>
+          <Name>Account Manager Email</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e8f2b90d-2c85-430f-87e4-93420ae8396a">
+          <AttributeID>Account Manager</AttributeID>
+          <Name>Account Manager</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b491072-dad0-4901-9c34-648a23b02dab">
+      <ID>Project Source Key</ID>
+      <Name>Client Project Source Key</Name>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0b69635b-867e-4e40-9077-764912b41cd7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f18da767-bdc0-48b8-aca7-0675dcfa7d98">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="31211115-b98d-43d4-b29b-fffeba9d6c76">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66babafb-3595-40f1-b1e4-cac936e1234c">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="43f6f7a3-e081-4eb2-a1b5-6ee934209e17">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="59096ede-5d94-4a95-9257-81b5affa64bd">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectSourceKey</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8f55711a-ab27-4fec-a889-f73585151199">
+          <AttributeID>Client Source Key</AttributeID>
+          <Name>Client Source Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="91cf45c9-8f4e-4a43-bc61-e6571a6736d6">
+      <ID>Client ID</ID>
+      <Name>Client ID</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6319f91-248e-4718-8305-da160e0cbd13">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0416ec33-76a7-47b3-a096-eba88d800420">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ddb85fe7-8e76-456e-9f36-0de333261c64">
+      <ID>Client Source Key</ID>
+      <Name>Client Source Key</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e495f58-002a-4486-8df8-d84d7fe7b5e0">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2424c998-5977-4713-acb6-ade2c624a0cc">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f9cf2087-823e-44d0-943a-4b9cbe9b1a16">
+      <ID>Client Name</ID>
+      <Name>Client Name</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="79c1117f-b1e2-445d-b859-09a105747541">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="782553dc-3f45-4933-9c0f-3ff140ed34a7">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="081b7a98-ba88-481a-9ac2-efe28c4ae629">
+      <ID>Client Code</ID>
+      <Name>Client Code</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="881f268b-cafa-4917-945c-440cc29acba1">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f6405242-0ed3-421f-b64e-419c54200116">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7210932e-ef17-4588-bd70-1277e6e3d728">
+      <ID>Project Name</ID>
+      <Name>Client Project Name</Name>
+      <EstimatedCount>199</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc9b8a96-c411-4d1b-85e0-0f411476e72d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64cee73a-93b8-48d5-bde3-a609532586d0">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="283b9332-2dd6-42e9-8d72-1b41d0159df5">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d824f3ee-6ed0-4e71-b3f2-6694abd5272e">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a3de8c96-2346-4bdb-aca5-817bcc6e3b89">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ea6297c9-2a80-4bcf-a2b0-3d53b54371c1">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="91d6ab70-6420-4f7d-bf77-72f1b02171ef">
+          <AttributeID>Client Name</AttributeID>
+          <Name>Client Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69d71861-4e7d-4d94-a9ac-7179b9e2af87">
+      <ID>Project Code</ID>
+      <Name>Client Project Code</Name>
+      <EstimatedCount>179</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c019ce90-b455-4ce7-90ec-344cd25ff09b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e70495f3-459c-4f4c-b06c-89d1e688147a">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b0b8d5d6-c7c5-4256-9398-85330d0257a9">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68d254af-c320-45cc-9539-cb397d7f76f7">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="361794b2-4008-4c7f-b449-1107b2c6c7a8">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="17fd379e-2896-48b6-ae4b-44d32d187fd0">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4bfd780c-beb3-4022-be79-610912340170">
+          <AttributeID>Client Code</AttributeID>
+          <Name>Client Code</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="48c87843-8788-440f-844d-b3e50f87221d">
+      <ID>Project Source Key 1</ID>
+      <Name>Project Source Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04bb2686-c7aa-43f6-970a-f448a588b74e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e992b1e4-912f-49ea-92ff-034a7a21c705">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d01662b3-d022-471a-a638-6dc32ba05b1c">
+      <ID>Project Name 1</ID>
+      <Name>Project Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="44ae93d8-8183-47ff-8d5c-50a3ad510fdf">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eedf067a-311c-4bac-9b00-899b097f2d3e">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e8aa7091-a950-472b-bf0b-68cdb8f3c6ce">
+      <ID>Project Code 1</ID>
+      <Name>Project Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a2406c83-feff-48ad-ac30-a7ef8f24ca44">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="999a8cf3-73da-4d4d-a630-1326674d8293">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="75faee69-ba05-4231-a0c4-fad7c3fdfbad">
+      <ID>Project Billing Status</ID>
+      <Name>Project Billing Status</Name>
+      <EstimatedCount>4</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1e36f0d9-94ea-4129-8cd7-d2b0372645b9">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14cb8eb5-3c69-4f1f-9416-93662a4c5fd1">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectBillingStatus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f18f075-0772-475a-8028-36f8fe5c980e">
+      <ID>Active</ID>
+      <Name>Active</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f135291-4aac-4dd2-87bf-167ca245983a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7212fa35-8c2d-4bb7-afa0-e5460abeb125">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>Active</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8ad6fec-af2f-4353-8cd3-1f61b6f82ae0">
+      <ID>Client Name 1</ID>
+      <Name>Active Client</Name>
+      <EstimatedCount>68</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da12b4a6-fe1a-461b-b699-d5eb5bf4f96b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87c4b0a2-d703-47a3-8b6a-99b5b2f7fdef">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>Billable</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="8798d87d-b6e1-4deb-8788-5b1a68bab29d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af6dc73d-dd4c-453b-bb47-f8d1b3e6789d">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>Active</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="dbebfad2-c5ce-45e6-bc73-c12cd0ad3ab8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9e0b9d2-5048-43a1-a032-1ce99ef46b69">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8b84a6dc-f257-4622-9b2a-57e746b7b319">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e0683a08-7168-42be-8bd0-ad613e9f6e57">
+          <TableID>CUBE_DimClient</TableID>
+          <ColumnID>ClientName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a29cae10-c4d7-4141-8b8f-ec19755748dc">
+          <AttributeID>Active Status</AttributeID>
+          <Name>Active Status</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="05110ad9-33c7-402d-85ee-df3b108433de">
+      <ID>Active Status</ID>
+      <Name>Active Status</Name>
+      <EstimatedCount>6</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="376e7789-6091-464e-b0ce-b801aea3fcb2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8a1c13b3-a194-426c-bf54-b59f0e86ab71">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>Billable</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3892b8e7-e817-4af5-95d3-ca763a2792f6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62b6a2b1-90ae-4bd8-8d24-9ae81f8d42cc">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>Active</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="48a816c0-94ed-49a4-bf94-71fe034e7f91">
+        <DataType>WChar</DataType>
+        <DataSize>8</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2ceab98d-4ea3-483d-908e-ea599a0cb849">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ActiveStatus</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c28e991e-d39f-49ff-b005-86f5b2b86acc">
+          <AttributeID>Project Billing Status</AttributeID>
+          <Name>Project Billing Status</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0244a235-ebdc-4eb6-ac95-3181110e80ad">
+      <ID>Client ID 1</ID>
+      <Name>Active Client Project</Name>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="abd41d4d-75f7-47d7-8d39-8ec5c2f7a907">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4fdfd47-486c-4f56-a8a3-911035c9672d">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3383199d-0164-4808-8019-1661e241c7ce">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="6d9f4e44-7307-46ed-8d3c-130d1bad2c3a">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5b1cfb89-9b93-4d27-bbf4-94eecafd354a">
+          <AttributeID>Client Name 1</AttributeID>
+          <Name>Active Client</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="22dcc83b-bad3-4b68-8fd0-3430a1084739">
+      <ID>Account Manager Email</ID>
+      <Name>Account Manager Email</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4da1a3c1-23cd-48de-b8b4-55007c92caff">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="218f34d8-cd7e-426b-8c77-02cdb367d51e">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>AccountManagerEmail</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="636ce2b8-e71f-4b31-a553-594e9e06bba0">
+      <ID>Account Manager</ID>
+      <Name>Account Manager</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dfdaa69c-723e-4eff-8174-a0b98d9b461f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="81511f21-b53c-42e9-aef9-15aa2b0473a8">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>AccountManager</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="81bb704f-b314-42fd-9703-40c5873983a6">
+      <ID>Hierarchy</ID>
+      <Name>ID</Name>
+      <Levels>
+        <Level dwd:design-time-name="259f1ddf-0be7-4ebf-8f84-abff923e359f">
+          <ID>Client ID</ID>
+          <Name>Client ID</Name>
+          <SourceAttributeID>Client ID</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="05272a91-bf04-45c5-90a4-c12280415223">
+          <ID>Project ID</ID>
+          <Name>Project ID</Name>
+          <SourceAttributeID>Project ID</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="c6552776-df19-4cfa-bcbc-2d443dff5282">
+      <ID>Hierarchy 1</ID>
+      <Name>Code</Name>
+      <Levels>
+        <Level dwd:design-time-name="d58abff8-64b2-4563-9f81-86030883ce00">
+          <ID>Client Code</ID>
+          <Name>Client Code</Name>
+          <SourceAttributeID>Client Code</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="8c464057-cf6d-477a-91b1-ff6135406add">
+          <ID>Project Code</ID>
+          <Name>Project Code</Name>
+          <SourceAttributeID>Project Code</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="fa797a52-1c91-40bf-a317-d4c6d6df8fb3">
+      <ID>Hierarchy 1 1</ID>
+      <Name>Name</Name>
+      <Levels>
+        <Level dwd:design-time-name="7e3f5b0f-7083-44bd-baf7-ee7bf8763bc4">
+          <ID>Client Name</ID>
+          <Name>Client Name</Name>
+          <SourceAttributeID>Client Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="87ea066e-b756-4192-8b2e-bbf12d0350bb">
+          <ID>Project Name</ID>
+          <Name>Project Name</Name>
+          <SourceAttributeID>Project Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="1bfe114b-fe3c-49ca-8c3e-87e4691eb7e8">
+      <ID>Hierarchy 2</ID>
+      <Name>Source Key</Name>
+      <Levels>
+        <Level dwd:design-time-name="3dabb552-98d0-4163-b5b8-49185a5f1418">
+          <ID>Client Source Key</ID>
+          <Name>Client Source Key</Name>
+          <SourceAttributeID>Client Source Key</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="2e2a9194-da5c-4296-82b7-4d4484c023b4">
+          <ID>Project Source Key</ID>
+          <Name>Project Source Key</Name>
+          <SourceAttributeID>Project Source Key</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="8ff7e82d-df9b-4e07-855a-928f853fd285">
+      <ID>Hierarchy 3</ID>
+      <Name>Status</Name>
+      <Levels>
+        <Level dwd:design-time-name="6bba80cc-c2bf-4d49-89bc-560f8e110d4a">
+          <ID>Project Billing Status</ID>
+          <Name>Billing Status</Name>
+          <SourceAttributeID>Project Billing Status</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="304d71ff-b877-40bb-a237-508959a9297a">
+          <ID>Active Status</ID>
+          <Name>Active</Name>
+          <SourceAttributeID>Active Status</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f211e0a4-9619-4e36-80da-3170705ef5fd">
+          <ID>Active Client</ID>
+          <Name>Client</Name>
+          <SourceAttributeID>Client Name 1</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="7c6f030f-597d-43f9-82ae-29c165e3e93e">
+          <ID>Active Client Project</ID>
+          <Name>Project</Name>
+          <SourceAttributeID>Client ID 1</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "TimesheetsCube", "TimesheetsCube\TimesheetsCube.dwproj", "{F6D71B6E-63FB-449D-9187-AC506567F5DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6D71B6E-63FB-449D-9187-AC506567F5DA}.Development|Default.ActiveCfg = Development
+		{F6D71B6E-63FB-449D-9187-AC506567F5DA}.Development|Default.Build.0 = Development
+		{F6D71B6E-63FB-449D-9187-AC506567F5DA}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

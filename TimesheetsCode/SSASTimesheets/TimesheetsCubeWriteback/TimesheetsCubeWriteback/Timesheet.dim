@@ -1,0 +1,394 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6e6dc25c-a6f6-407e-a952-ecd839d7d863" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheet</ID>
+  <Name>Timesheet</Name>
+  <CreatedTimestamp>2012-01-12T12:42:40.653333Z</CreatedTimestamp>
+  <LastSchemaUpdate>2012-01-12T18:56:48.41Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1799" scrolltop="-4564" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7885" y="14129" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="DimTimesheet" left="0" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4286" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000be10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTimesheet" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1799</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4564</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2012-01-16T12:38:24.006667Z</LastProcessed>
+  <State>Processed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a1d68171-9765-4926-80f1-3f95a6ad606a">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="67748a47-c870-4de7-8edc-a1b7fd77e43e">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <WriteEnabled>true</WriteEnabled>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <UnknownMemberName>Unknown</UnknownMemberName>
+  <Attributes>
+    <Attribute dwd:design-time-name="b78c07bd-94a4-458b-8bf0-4cb78072bb47">
+      <ID>Timesheet ID</ID>
+      <Name>Timesheet ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a9c97aa5-0ac0-4c3a-9d8c-e06170f25eff">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07ac6ea2-2fc9-4841-8687-853ba3350d5e">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0791c351-8384-4f58-b6a3-9494fa7c5b0c">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="42faac5c-526e-4229-b0b6-b48066829445">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetID</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5db10b66-97b3-4268-9885-70c674441c2b">
+          <AttributeID>Timesheet Name</AttributeID>
+          <Name>Timesheet Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="01144aa1-0c3b-48ea-92ed-98ae7bd9a748">
+          <AttributeID>Timesheet Code</AttributeID>
+          <Name>Timesheet Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e41ff8dc-9c55-47d2-a056-7b2c2a92ac69">
+          <AttributeID>Timesheet File Name</AttributeID>
+          <Name>Timesheet File Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7fa3ecd0-e50f-473d-8d88-c1e9140037ea">
+          <AttributeID>Timesheet From Date ID</AttributeID>
+          <Name>Timesheet From Date ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2d6eec42-20dd-4936-abf6-9c91e6435320">
+          <AttributeID>Timesheet To Date ID</AttributeID>
+          <Name>Timesheet To Date ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="89293f63-626d-4727-a082-f30da15d4517">
+          <AttributeID>Timesheet Person</AttributeID>
+          <Name>Timesheet Person</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a9fbe8e6-5f2d-4b72-a409-33869aa81108">
+          <AttributeID>Timesheet Date</AttributeID>
+          <Name>Timesheet Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e5c1b4fa-9f40-406f-8b81-8893a9e2bada">
+          <AttributeID>Overall Status Name</AttributeID>
+          <Name>Overall Status Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cc08bb4f-df46-40d0-90e8-47021f7b1d71">
+          <AttributeID>Overall Status Code</AttributeID>
+          <Name>Overall Status Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="199cd3a3-5f9a-487c-afb8-86b2eb3177d1">
+          <AttributeID>Overall Status Source Key</AttributeID>
+          <Name>Overall Status Source Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9656e4eb-8953-4f38-9269-77ea4695fd7a">
+      <ID>Timesheet Name</ID>
+      <Name>Timesheet Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ed371013-d298-422a-a9de-5df72789cddc">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a555839a-a427-4ab8-aeaa-62e70c5e891d">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cd613fda-4536-4014-abc4-98faef4f08a5">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="699852c8-b180-413b-bee5-5a84503ba038">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetName</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2e5d979c-4551-410d-8353-266783061f79">
+      <ID>Timesheet Code</ID>
+      <Name>Timesheet Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a7d32f9-4ebf-4d00-83f1-0dd836d53364">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="193bd758-aab6-47b8-9f7e-8f89690e9a0e">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ad9b145d-141c-47de-8402-8ff2cc53fe5e">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f815fecf-9ced-4423-8ce1-7e86ce0b04fc">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2c6f4b71-cea5-470b-a496-b4a22b613049">
+      <ID>Timesheet File Name</ID>
+      <Name>Timesheet File Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46aa1063-94d7-4506-b4e8-4383e94d56d9">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49e5490f-9906-4182-a75f-199cdf87b786">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetFileName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d67abd34-b33e-43a7-b6a1-917ec778cfd6">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="78b6a69f-f21a-4e9c-b922-2d601e1636b4">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetFileName</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="412d1c81-18d2-4a7d-9a9b-254256dc70ef">
+      <ID>Timesheet From Date ID</ID>
+      <Name>Timesheet From Date ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d2e06113-cde2-4e13-b876-60656d5abbf0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d76e3e25-cc4e-402b-848e-5b7ecf048d6c">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetFromDateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5eb7fe3f-2428-4226-a6c6-0aeb192ccef3">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fcbfb72f-e9a9-4c76-bf15-e7e07fde9460">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetFromDateID</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fdb4dfbc-ebf2-4974-affd-4368efaeaee5">
+      <ID>Timesheet To Date ID</ID>
+      <Name>Timesheet To Date ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3b0ee720-be34-4bfa-bb09-cbc903d3a816">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0440cba-295a-46ac-952c-9b172f018f6e">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetToDateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6c5c6d53-be52-4ad2-864e-64c04b2a06d2">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="07d32b0b-e0b4-4cca-9958-98ea45acbe87">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetToDateID</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69cb15bd-a86f-4ac8-b43a-0b1ad17087d5">
+      <ID>Timesheet Person</ID>
+      <Name>Timesheet Person</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="296a3854-8a1a-41ab-838f-960d34317303">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d80c02b2-b3b0-4061-acdc-e6317f7789d6">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetPerson</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6f5cee26-f994-4c43-be70-8496d32b296c">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7553adae-e055-4733-9897-bc4b4d93518e">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetPerson</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dcbb104f-fde1-459d-806b-ecec39ad138c">
+      <ID>Timesheet Date</ID>
+      <Name>Timesheet Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2fce2ad9-6e07-4b13-aa89-e52aa83d8f83">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b487438-5ef6-4c6d-adbd-522a3254e4d1">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>TimesheetDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f8273666-27a8-4ac3-b3d0-f5c3bcfa61ae">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d8b8b25d-e2e6-4c92-986b-861abbf7b111">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>TimesheetDate</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0974eac2-e3d5-4c7e-ac4d-bf7c681a9115">
+      <ID>Overall Status Name</ID>
+      <Name>Overall Status Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9db1a00c-d7a4-4eb8-922a-811416fcafa3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ba1ca576-5465-48c1-914a-53a976a3708d">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>OverallStatusName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="100cb781-2ae6-4be5-bf08-49326fb1d310">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b3929147-92cd-4689-a22d-f7d232d86edd">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>OverallStatusName</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4abeb86c-9caa-4c83-bcd0-8549e1ed8715">
+      <ID>Overall Status Code</ID>
+      <Name>Overall Status Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6548ef6-ecb7-4b39-be95-b0974a137c25">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b0055dd-4c1a-4841-bbdc-17da2644c6ca">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>OverallStatusCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9fe688af-6ffa-467c-84c3-680fa6f646e0">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="11ca71fe-e508-47ce-8d06-71e7b5f3fc44">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>OverallStatusCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="47515cb4-79d5-4349-9a19-4206eabe0fa2">
+      <ID>Overall Status Source Key</ID>
+      <Name>Overall Status Source Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="34a0faf4-b1b7-4435-b192-b691be319f91">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f0b7f720-ef58-4cc5-80dc-3c9733bba84a">
+            <TableID>CUBE_DimTimesheet</TableID>
+            <ColumnID>OverallStatusSourceKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="13357d43-d385-4a41-97c4-af3d8591c1bf">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e21a1d86-6828-40f7-a19d-686ba4ab8b06">
+          <TableID>CUBE_DimTimesheet</TableID>
+          <ColumnID>OverallStatusSourceKey</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+    </Attribute>
+  </Attributes>
+  <ProactiveCaching dwd:design-time-name="5a5367a7-a227-42f4-98cc-46f240500ba3">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="d74201eb-b7d9-4d47-81a9-49dd16ecf35e" />
+  </ProactiveCaching>
+</Dimension>

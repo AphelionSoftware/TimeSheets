@@ -1,0 +1,181 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="134cbb1c-644c-4fbb-beee-049614d41fcb" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheets</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Timesheet Detail</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="636c1581-c69e-4491-ae85-34da4c598692">
+          <ID>Fact Timesheet Detail</ID>
+          <Name>Fact Timesheet Detail</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c2e246a1-60fb-4dbc-8a79-7b08b5d5ead1">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>6073</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation</ID>
+              <Name>Aggregation</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Project</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Project ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Type Of Work</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Type Of Work Code</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Project</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Account Manager</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Type Of Work</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Type Of Work Code</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Billing Rates</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8e924cda-9593-4d8a-a4ff-bcfcefe1d9d7">
+          <ID>Fact Billing Rates</ID>
+          <Name>Fact Billing Rates</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a4be6de1-82b0-4826-aae0-18daebc8974d">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_FactBillingRates</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Date</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="795f0281-01da-416d-8f4f-9d5ddd8f30b7">
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8230a42f-bdb4-490b-9e18-b1724a92ad66">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_DimDate</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Person</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="18aeeda8-4d83-44ad-a3c8-c46b7e8f2ed3">
+          <ID>Dim Person</ID>
+          <Name>Dim Person</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="dafc6ed5-d499-4f78-829b-1a12800ffafa">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_DimPerson</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Project Billing</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f04fab5a-bd11-4f36-9660-ea65847e6ae7">
+          <ID>Fact Project Billing</ID>
+          <Name>Fact Project Billing</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9bf06598-25e1-494e-893e-99394b1823c2">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_FactProjectBilling</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Date 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="44278ebe-38c4-45ad-8302-52a333bfac07">
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="58f5bb18-8b12-4048-843e-9346942d606d">
+            <DataSourceViewID>Timesheets</DataSourceViewID>
+            <TableID>CUBE_DimDate</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,1290 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7906a61b-ab19-42a3-9782-83962cf3deea" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheets</ID>
+  <Name>Timesheets</Name>
+  <CreatedTimestamp>2012-01-12T12:43:31.51Z</CreatedTimestamp>
+  <LastSchemaUpdate>2012-01-16T12:57:27.393333Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="5811" scrolltop="-4608" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="5080" y="21749" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactTimesheetDetail" left="6653" top="7400" logicalid="14" controlid="1" masterid="0" hint1="0" hint2="0" width="4577" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000e111000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactTimesheetDetail" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTimesheet" left="20" top="7400" logicalid="15" controlid="2" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800008910000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTimesheet" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="7393" top="0" logicalid="16" controlid="3" masterid="0" hint1="0" hint2="0" width="3096" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000180c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimProject" left="7129" top="14800" logicalid="17" controlid="4" masterid="0" hint1="0" hint2="0" width="3440" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimProject" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClient" left="1475" top="15012" logicalid="18" controlid="5" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimClient" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTypeOfWork" left="13630" top="7902" logicalid="19" controlid="6" masterid="0" hint1="0" hint2="0" width="4180" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000541000009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTypeOfWork" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPerson" left="12969" top="14800" logicalid="20" controlid="7" masterid="0" hint1="0" hint2="0" width="3440" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimPerson" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3953" top="9501" logicalid="21" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTimesheet]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="23" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4253" y="9900" />
+              <point x="6653" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7541" top="12100" logicalid="22" controlid="9" masterid="0" hint1="0" hint2="0" width="1708" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimProject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="4" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8849" y="14800" />
+              <point x="8849" y="13600" />
+              <point x="7841" y="13600" />
+              <point x="7841" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9191" top="12100" logicalid="23" controlid="10" masterid="0" hint1="0" hint2="0" width="5898" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimPerson]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="4" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14689" y="14800" />
+              <point x="14689" y="13600" />
+              <point x="9491" y="13600" />
+              <point x="9491" y="12400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8542" top="4501" logicalid="24" controlid="11" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8941" y="5000" />
+              <point x="8941" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10930" top="9500" logicalid="25" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTypeOfWork]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="20" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13630" y="9899" />
+              <point x="12430" y="9899" />
+              <point x="12430" y="9900" />
+              <point x="11230" y="9900" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4429" top="16610" logicalid="26" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimProject-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="17" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4729" y="17009" />
+              <point x="7129" y="17009" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>5811</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4608</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>2012-01-16T13:00:14.75Z</LastProcessed>
+  <State>Processed</State>
+  <Language>1033</Language>
+  <Collation>Latin1_General_CI_AS</Collation>
+  <Dimensions>
+    <Dimension dwd:design-time-name="b2580121-3837-4e20-8a28-1599d4780cc3">
+      <ID>Fact Timesheet Detail</ID>
+      <Name>Fact Timesheet Detail</Name>
+      <DimensionID>Fact Timesheet Detail</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e1ed6bd0-ee72-45f0-804c-8cfa210c60de">
+          <AttributeID>Timesheet Detail ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46c576c0-654e-4241-bad7-8210c697794a">
+          <AttributeID>Timesheet ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="862d85b6-b16e-4f46-8dfb-d7896aa2d842">
+          <AttributeID>Timesheet Detail Project ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="adf718d4-e08a-4e4b-8431-2e99251dcb59">
+          <AttributeID>Timesheet Detail Person ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="f53b555e-856f-48b3-bf91-4710298d7b5c">
+          <AttributeID>Timesheet Detail Date ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="3dffee2b-8aa3-4e4d-9a43-aedc415a4db3">
+          <AttributeID>Timesheet Type Of Work ID</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d929795-3b13-48d3-89aa-31e578a0550f">
+          <AttributeID>Comments</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1887a999-3b94-4016-b548-18e93467a3b6">
+          <AttributeID>Timesheet Detail Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="84c72019-1161-4e4e-9d48-5c08dbe6c9ed">
+          <AttributeID>Timesheet Detail Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eca50c44-a522-41f3-b719-29f32ec11ea6">
+          <AttributeID>Timesheet Detail File Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ec96b8cb-7bc4-4a82-8a27-af5e1db250f4">
+      <ID>Timesheet</ID>
+      <Name>Timesheet</Name>
+      <DimensionID>Timesheet</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5db156a1-f5a9-496b-b4bb-0d01abee504f">
+          <AttributeID>Timesheet ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3237231c-928d-4659-a9cc-de71d6e06d05">
+          <AttributeID>Timesheet Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ffbc661e-3cce-48bb-a4b5-2d3e102d946d">
+          <AttributeID>Timesheet Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb214e88-40da-4484-9525-59c133dceb75">
+          <AttributeID>Timesheet File Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e191936-05ba-4cd6-aabe-2e33e216a082">
+          <AttributeID>Timesheet From Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d90f180-dead-4769-a662-c8f135aaf838">
+          <AttributeID>Timesheet To Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dca4cbd8-9520-40f3-9b39-9520a095d97e">
+          <AttributeID>Timesheet Person</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66fc2ad6-2ee6-4d4f-9c53-e8c00ad75d35">
+          <AttributeID>Timesheet Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4707ad43-4abd-4ffb-ad5f-21a901c1ce31">
+          <AttributeID>Overall Status Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5b7a40ab-d0e3-430e-b6c4-3423df864c97">
+          <AttributeID>Overall Status Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93ebd387-2a55-4801-808a-87291b6018cf">
+          <AttributeID>Overall Status Source Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="236b87d2-3575-4948-92f6-1c91fa4dd834">
+      <ID>Project</ID>
+      <Name>Project</Name>
+      <DimensionID>Project</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="80693efe-e616-4d77-ad48-39eb7731c5af">
+          <AttributeID>Project ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2546593-bfa3-4ac2-a6aa-ea5eec57b5f1">
+          <AttributeID>Project Source Key</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d02f699-1040-4b51-9584-4e17ccd9db3c">
+          <AttributeID>Client ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb8f1737-5948-49f8-b4b5-9cdede76bd4b">
+          <AttributeID>Client Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc5bb229-3b45-46cf-bf59-d93d112f7497">
+          <AttributeID>Client Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b9f562e-34f1-4546-b19e-d28d88f50dd2">
+          <AttributeID>Client Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e211ae8e-1f2b-4911-acee-bec2cdc2791b">
+          <AttributeID>Project Name</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2216a97-4ce0-4f3d-8c3b-ce8da76a2f63">
+          <AttributeID>Project Code</AttributeID>
+          <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+        </Attribute>
+        <Attribute dwd:design-time-name="e7030901-a07c-41da-b559-f72718797c40">
+          <AttributeID>Project Source Key 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="129b1ae1-b038-4c2d-8b75-0978c11c67c7">
+          <AttributeID>Project Name 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f0b663d0-790b-4f63-b515-ab4ed024b9b5">
+          <AttributeID>Project Code 1</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3bea5145-2fe6-4ce8-8a9c-4675d7a5bbec">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="7a40bd0c-b803-4bb3-8fe0-c170c9de291f">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="08251239-5671-4dd7-856e-e79686195c43">
+          <HierarchyID>Hierarchy 1 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="da036d39-41e2-44d9-afe2-cd821f124623">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="0f7ac6e2-014f-4e88-9ca0-8fdba1d5b96d">
+      <ID>Person</ID>
+      <Name>Person</Name>
+      <DimensionID>Person</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bc85e5a8-ec6f-4940-8199-694bc99e074c">
+          <AttributeID>Person ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e79a85a-0ced-4f60-a196-fea575669c14">
+          <AttributeID>Person Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="170912fe-05cf-4d16-bb94-ae38f936b229">
+          <AttributeID>Person Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9aaf1f2c-6bb9-4584-b960-52e997e6806f">
+          <AttributeID>Person Source Key</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14506129-f53a-4b72-aac4-8f14a0814d83">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="311bc80f-ecff-447d-9a11-2e05cdfc74b1">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a9f67785-bb7d-45ce-a730-c47522384deb">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5be20cd1-03e8-43d9-bae9-221bd5d7394e">
+          <AttributeID>DOW In Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8cd9fee-2041-4bad-8f2d-ed1190fb7738">
+          <AttributeID>Day Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f9db675-3d3e-4067-a02a-42191b37dd86">
+          <AttributeID>Week Of Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="51568792-80ac-4049-984a-d7fc0fffe1d0">
+          <AttributeID>Week Of Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9f14b32-574d-4ff8-91f2-f76746280d9b">
+          <AttributeID>Month Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f11be8c-290a-4fbe-a963-d1682fbddc15">
+          <AttributeID>Month Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73bc7045-0de5-47d6-8845-69b0f206d5c3">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="982c8ab1-ed11-4d53-ae5f-09ebe77f48f2">
+          <AttributeID>Quarter Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="10ddc76f-a4f5-4d11-adf6-26c91be8dca5">
+          <AttributeID>Year Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de4df1a5-5015-42b3-82c3-1b69b214761f">
+          <AttributeID>Year Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66d46350-6842-4963-a490-d94d932e790d">
+          <AttributeID>Standard Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92526ea0-31ad-4567-a803-daf741ddc00a">
+          <AttributeID>Month Name Year</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="381efb44-3307-44c4-a788-1bf0a633e576">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="4872ef86-8a7a-4b77-bd9b-6d998b370d99">
+      <ID>Type Of Work</ID>
+      <Name>Type Of Work</Name>
+      <DimensionID>Type Of Work</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="96989e88-e172-4719-ac32-cf32cced7cdc">
+          <AttributeID>Type Of Work ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb23d337-9f23-4d8e-95ee-af11781e6582">
+          <AttributeID>Type Of Work Source Key</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7757de6e-003d-4c08-9081-5f5f0ee6543d">
+          <AttributeID>Type Of Work Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ce62b49-f6db-4008-878c-1897432c52ae">
+          <AttributeID>Type Of Work Code</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="f80a9376-dde1-46d1-9ad9-9766c92fde3d">
+      <ID>Fact Timesheet Detail</ID>
+      <Name>Timesheet Detail</Name>
+      <CreatedTimestamp>2012-01-12T12:43:31.51Z</CreatedTimestamp>
+      <LastSchemaUpdate>2012-01-16T12:57:27.396667Z</LastSchemaUpdate>
+      <LastProcessed>2012-01-16T13:00:14.746667Z</LastProcessed>
+      <State>Processed</State>
+      <Measures>
+        <Measure dwd:design-time-name="59643cf8-7208-4ebd-8502-65c3de8d9241">
+          <ID>Hours</ID>
+          <Name>Hours</Name>
+          <DataType>Double</DataType>
+          <Source dwd:design-time-name="0ea958d9-cf98-4bac-998a-47ca77b09018">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="936859dc-88fa-42b3-a6e9-c3c034b3273d">
+              <TableID>CUBE_FactTimesheetDetail</TableID>
+              <ColumnID>Hours</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c3f03ca1-70dc-47d7-8969-35fdc0d48f6e">
+          <ID>Fact Timesheet Detail Count</ID>
+          <Name>Fact Timesheet Detail Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="69cbdae1-2181-4c77-8bcf-cce02433a405">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="ce337545-bc2d-41bb-af3d-91ee68d90288">
+              <TableID>CUBE_FactTimesheetDetail</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedSize>2512</EstimatedSize>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="20edff0f-97f9-4215-b32a-04797cc20824">
+          <CubeDimensionID>Fact Timesheet Detail</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="745e8541-573e-4350-a02b-0fda0502e8f3">
+              <AttributeID>Timesheet Detail ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0b9abcb3-b096-41b3-9f88-fbb890f6b090">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="899bcbf8-724b-48cb-8cf6-cf8e956bb69b">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="b7ba1e4d-e4a2-472a-b818-43ada99a7174">
+              <AttributeID>Timesheet ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="90a1fa86-c09b-4622-a5de-f56332bfb049">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="522ea23f-af0c-442c-8171-c8e53c889899">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="2993c8ea-0042-48d2-b96c-44d5c1a5eeda">
+              <AttributeID>Timesheet Detail Project ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="90a1be20-4aec-4786-a6f2-21c152d70b9d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="58ad43ef-c9f0-4ac5-8359-6e1d45e9139a">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8eb7fe1f-b5e4-452a-9312-d681ca9a5e36">
+              <AttributeID>Timesheet Detail Person ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ac91a531-ba07-4327-91e1-9bc7191a6de4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a3e4a15b-7236-4de0-8983-98c19ed12372">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailPersonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="23198c23-4d5b-4f35-8c2c-c6d139585d83">
+              <AttributeID>Timesheet Detail Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d29833f7-1ecc-4f7f-b8ff-43f6d4e3d124">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2035474c-4e85-42ba-8cd3-264a6b90921a">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailDateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b2e87cea-e029-4acc-aee1-bd6f36aa8399">
+              <AttributeID>Timesheet Type Of Work ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7c156967-7826-490a-b3ed-b1d08e47f4cc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f7826f92-9c15-415a-8825-8ebae0ae855e">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetTypeOfWorkID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="138d7a77-de17-4423-b33a-4bc90bbdd1db">
+              <AttributeID>Comments</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="554fc6b2-2b57-4da8-ac5f-57907f978b55">
+                  <DataType>WChar</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d0bc2bf-ba98-49ed-8c7e-a9d22157a240">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>Comments</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="f341744c-b3e6-42fa-a699-2a8ac7490b4a">
+              <AttributeID>Timesheet Detail Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="099831bb-84ff-4a65-bde6-a95a9c99ba48">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4851bb4d-af5c-491f-a94b-2c55da855f7d">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8a3e8e91-efbb-441b-941b-c20fd91451f1">
+              <AttributeID>Timesheet Detail Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="841f0edf-9ef4-4bd6-93e8-c535268d7a3c">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1562be80-add2-40d7-be35-03475bf165f9">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="5e444da2-ee0f-4c43-a263-0ca2a024ee46">
+              <AttributeID>Timesheet Detail File Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0209e304-6c08-49f9-9438-9900f1c34002">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e05ad676-d26d-47dc-8b55-6531276d1854">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailFileName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="28814b48-852c-444d-9686-9f449464d95d">
+          <CubeDimensionID>Timesheet</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1f28f4a8-62f5-4f61-906b-05a650e832be">
+              <AttributeID>Timesheet ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8367f87d-6969-4a0e-900f-556b03da1229">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c6e6066e-2e89-4390-935a-05ba7af472de">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="44c22425-101c-44ac-a925-92399177ab4b">
+              <AttributeID>Timesheet Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f2e367b2-7882-40ac-99a2-ce116f0344c4">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d41891b1-b60f-491a-97aa-0ceebc13819c">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="84c3f3c5-3b9d-45f9-8354-9c5ec5437e2e">
+              <AttributeID>Timesheet Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="187d7fc7-6151-4f54-8258-01e9431c4e1a">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b3d985b2-3f7a-4f60-a2b9-d27f23944057">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="97b4a7a0-704a-48d9-98a1-51f8ade02b49">
+              <AttributeID>Timesheet File Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e67154c3-686b-4884-b32c-424926f0614b">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="71bdfc68-2318-466f-a316-acff420afe11">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetFileName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="621be399-1396-42e4-a5c9-22929b1b6794">
+              <AttributeID>Timesheet From Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b551475d-82bf-4aca-ad23-163ce3eb32a9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="482e8f5b-1be6-4cbf-becf-fb23755e0b21">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetFromDateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="d61d7aca-256d-491e-8b4b-fa13b429ba4f">
+              <AttributeID>Timesheet To Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="69812c39-4fd6-4b88-9bf8-5fdadd9bb5c1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9c72a892-462e-4eab-9bf1-5d616d378a96">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetToDateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="247302cf-5de3-479e-b50a-4d4c7c17f328">
+              <AttributeID>Timesheet Person</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5f59dd3d-b19c-45b7-af38-6da173d2eb13">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="19b777c0-cf38-42fb-8c71-f1e80e3790f0">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetPerson</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="e95f93ae-11c1-4318-9ccd-e105c3eafc9f">
+              <AttributeID>Timesheet Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b71f1a26-db5f-4f8a-9264-2277ebe2fd63">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c8824ed6-ed0b-4c25-973d-30a5fbe7910e">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>TimesheetDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1737d007-34c9-48df-bd2a-e4974cf41dad">
+              <AttributeID>Overall Status Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="859b32d2-50f1-446c-bf34-bd3d3d9c2acb">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eca125e1-ef15-4722-a95d-71580bba01b9">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>OverallStatusName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="97f668cd-2e0a-4425-87a9-9385d6384ffc">
+              <AttributeID>Overall Status Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="033cb940-9783-4d50-8eca-8b962ee67559">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7796da78-e563-412b-bf88-33e2a3df2894">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>OverallStatusCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8248bf5b-2329-497d-ba14-97acf3593782">
+              <AttributeID>Overall Status Source Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a2523728-8230-46fb-a5ec-b8b90ef37ae9">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="358218ef-ef3e-400c-9357-c5c9e4bca3dc">
+                    <TableID>CUBE_DimTimesheet</TableID>
+                    <ColumnID>OverallStatusSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="81351a38-c205-4465-872f-a4a7a8996d9e">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7ef6dc10-1e71-4be4-82bb-3ff8ee6156b9">
+              <AttributeID>Project ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d2942583-2f3e-4404-8104-97cea6444d71">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="02c37c57-661c-4c7a-900d-83470487f84f">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailProjectID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="862069b4-ef75-4872-8956-ce7da1c941da">
+              <AttributeID>Project Source Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9c753369-819e-41cb-9717-2e2f2fe59e99">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="22bbc55b-34c8-49aa-aa71-7e2665594514">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ClientID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="cf98b33d-cc10-4596-a32d-61f00e97f681">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b47c9cf6-9fa1-4441-86fb-8cb31492274b">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="f33168ce-068e-4212-ac7e-0b2efaef6005">
+              <AttributeID>Client ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="72c5f1cc-3f09-4321-9e79-f85241206ab0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0636899d-2f19-4795-97b8-891b4d2c0e2e">
+                    <TableID>CUBE_DimClient</TableID>
+                    <ColumnID>ClientID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="823bdc09-1a4d-4cd2-a06f-07c972c72963">
+              <AttributeID>Client Source Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2c6977bf-0d8a-4f51-800c-d719d6eb21ba">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5dada04e-f6a3-435b-9d8e-1845fe7e8521">
+                    <TableID>CUBE_DimClient</TableID>
+                    <ColumnID>ClientSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="7bae9f20-8411-49ed-918c-d9d23d07be09">
+              <AttributeID>Client Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="72a82e74-3bd8-4923-9007-edccd3f886fc">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e963a093-76a3-4609-aa05-38c088fd40aa">
+                    <TableID>CUBE_DimClient</TableID>
+                    <ColumnID>ClientName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="56de66ae-1164-43ac-bc58-73c21ac68360">
+              <AttributeID>Client Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a55383f3-1ff7-4ff6-8d40-13033983396e">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3c2cfc1e-c769-41f3-bc11-9038db7859ea">
+                    <TableID>CUBE_DimClient</TableID>
+                    <ColumnID>ClientCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="8343ead3-394b-4667-bc0a-e042fd24bf51">
+              <AttributeID>Project Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a99b2c35-6887-44fe-86e4-8c86eacf1882">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ab0e78e2-072c-4244-8bd4-d604a5a1dbd6">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ClientID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="ba777e6a-8565-4169-a58f-408cfa4f8a53">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3b3540f6-1a76-4bd3-9220-891f379f374d">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1725379b-7d4e-43e5-8d7c-937a9e7e0002">
+              <AttributeID>Project Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5072021b-e9e4-46e1-bc04-5be7933d2511">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="49f96d41-8bab-47bd-b815-3f0e8ca760e4">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ClientID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="a656d9a3-40e1-4914-a6fe-2b4604296fdb">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3b223f65-9ead-4f85-8a5e-77563f454286">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="12c0be66-6c22-4b1b-9b00-73f051a0cca5">
+              <AttributeID>Project Source Key 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="10ee4e07-a873-4483-a822-d3e5698d5261">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ec328154-4be2-46d4-85ad-98f92d8b9580">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="579c777a-8168-4714-b577-74bf88b6e7d1">
+              <AttributeID>Project Name 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a9120264-8b21-4a2d-846d-9f7f84ff2ec2">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9d4ee91e-6b11-4bec-a8dc-c0e2f815e406">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c2f51dd7-94f8-4aac-a168-c3aea13bed39">
+              <AttributeID>Project Code 1</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b20162b-05a3-4b2f-a4bb-3346129e8b7e">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2ba4659f-1e47-429a-9eca-f8cfe3730c72">
+                    <TableID>CUBE_DimProject</TableID>
+                    <ColumnID>ProjectCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2da5500e-5f3e-4540-8a4c-d9be79795804">
+          <CubeDimensionID>Person</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7a692232-a68e-4cd6-89dd-185d22f9afd2">
+              <AttributeID>Person ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fe888eb9-a25d-44db-ab85-f151ed4931dd">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5ee1f498-0915-4c9f-99c1-a029ace638ba">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailPersonID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="8a96921c-5bdb-4461-a8f3-0de06e10d6d9">
+              <AttributeID>Person Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="62eb980d-6074-4d45-a212-b5671bbdb557">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="98ada09e-da57-47c4-94f7-05f9b781051b">
+                    <TableID>CUBE_DimPerson</TableID>
+                    <ColumnID>PersonName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b2d4cc24-1a15-4b2a-9ad0-6e9b587ca3a8">
+              <AttributeID>Person Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1898f03d-1eb6-4879-b6fb-a1554084b7cf">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="907fc3c9-576d-4a13-8587-bd7bdc377ae1">
+                    <TableID>CUBE_DimPerson</TableID>
+                    <ColumnID>PersonCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="85b163cd-8162-4a55-9add-370966204d20">
+              <AttributeID>Person Source Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d5ac05f7-6747-4dcb-82f6-c0b691726317">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="683eb378-03ee-4851-8bd5-353add00f3c2">
+                    <TableID>CUBE_DimPerson</TableID>
+                    <ColumnID>PersonSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2f01964d-a4bc-4b7a-a363-64216cf92346">
+          <CubeDimensionID>Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1b493639-3cec-4399-b7f2-336335bd8293">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bf115d10-376a-4bd0-9287-83550c6ade20">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="32493330-df6a-4894-b2cd-fae97e428c5c">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetDetailDateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="3165db0f-1356-4770-806a-0168c1b1a54c">
+              <AttributeID>Day Of Week</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b05b2a0f-2f4b-4cef-beee-5186cad8c2e8">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9afd67d6-2522-4436-b4fe-ec825f78c291">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>DayOfWeek</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c989b467-c8f7-4673-beca-4597e76f1031">
+              <AttributeID>DOW In Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cc004ba7-fd5c-4ac9-940f-9dbfc253e311">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ba0de5b5-ee2f-4653-a34a-dc89d168d760">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>DOWInMonth</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="e0cf1a06-6ca5-43cc-bb00-f8c511b82f9a">
+              <AttributeID>Day Of Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2f344240-c4da-4a43-a789-808f0ed5ac90">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="75cdc0cc-763e-4339-9835-602a8bc452fa">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>DayOfYear</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="39be5b8d-f45f-4c08-bab1-1171b8490de0">
+              <AttributeID>Week Of Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="95a8ad11-5e72-46d8-8f07-dd4c0b732dda">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="abb51b03-a487-4be6-ae71-ae41220840a5">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>WeekOfYear</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="5e278e24-7a5b-49fa-a4ff-d00b40609def">
+              <AttributeID>Week Of Month</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bb3ac1b3-9721-4500-a5f9-e7c29e292aa0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="381bed0a-3fca-4477-ad52-eb88e9514d02">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>WeekOfMonth</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b9d46074-3032-4617-a16a-99c0107b1e8c">
+              <AttributeID>Month Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d9f7b888-2814-441f-bd9d-46b1ae648f41">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b1de5adc-eadd-4278-a7b4-6cf561188e70">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>MonthNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="d96b90a1-c659-48a6-8798-588cb3e4ae66">
+              <AttributeID>Month Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e0860fb2-330e-4092-975c-cf580955e27c">
+                  <DataType>WChar</DataType>
+                  <DataSize>9</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0c05156d-2eac-4e4e-9f2b-930a4bf964e5">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>MonthName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c7edc720-1e61-4234-ac35-124e78cc7bed">
+              <AttributeID>Quarter</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="11a86f7b-8752-429f-8bf3-2e03059ee925">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="21805331-577c-48b6-bbb8-abc20fb2f94d">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>Quarter</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="27e681c5-be13-49d0-b076-f178a9cb35e0">
+              <AttributeID>Quarter Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="898b8ca2-8c41-486f-9043-6dc0561f3e83">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="79d0d8db-10f1-4c8b-9dbf-28f0a165c02c">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>QuarterName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1c6422d9-dbf8-4830-b42e-aa4e71405c53">
+              <AttributeID>Year Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b43fb732-f54d-453c-8a30-059aab084ac4">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3d654721-de20-453c-a9d2-0b8dce3b2d41">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>YearName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="fda994c5-55ec-4d69-8b9c-fdbfd45aea39">
+              <AttributeID>Year Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1f3a620f-2b36-40c7-a918-e09de5e48f5b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="768943e8-6cd6-4827-8c8b-aa1723cf01f8">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>YearNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="b110ae62-e11e-4d5f-91fe-96b608f35bd5">
+              <AttributeID>Standard Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="afa25ea4-d3ca-41b1-a87f-248334175b88">
+                  <DataType>WChar</DataType>
+                  <DataSize>10</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3fcf453f-9cb7-4d05-802e-635889170c52">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>StandardDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="1dad4c53-34c0-4458-9075-6b72547fdfae">
+              <AttributeID>Month Name Year</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e7d16875-6bcf-44e8-b5b2-bc5f9001ac20">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="015e21c4-03a0-4029-bf53-62de7721f45e">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>YearNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="4ba427e7-a693-4176-8043-69b940b9e215">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dd188a15-14cc-4c15-85aa-e1c7cdd7dd79">
+                    <TableID>CUBE_DimDate</TableID>
+                    <ColumnID>MonthNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="725ec9e2-a182-4750-83fe-2004c6e7b030">
+          <CubeDimensionID>Type Of Work</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="29d3c864-6b7f-4bb1-9657-31667a8486ab">
+              <AttributeID>Type Of Work ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a26ce1e8-fcf8-43b1-ad4f-02cc2df6724a">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fa259623-a0dd-423f-81d6-8af32300f16f">
+                    <TableID>CUBE_FactTimesheetDetail</TableID>
+                    <ColumnID>TimesheetTypeOfWorkID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+            <Attribute dwd:design-time-name="484fb29a-6eba-4ac8-859e-e65e660a4189">
+              <AttributeID>Type Of Work Source Key</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4cfcf8a5-acda-47c4-b95f-8ed0733bc607">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8712168f-07de-49c9-b0dd-6a08f0f4aa78">
+                    <TableID>CUBE_DimTypeOfWork</TableID>
+                    <ColumnID>TypeOfWorkSourceKey</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="c0f34b2c-8ce2-40db-be8e-4f3eeac49417">
+              <AttributeID>Type Of Work Name</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a8b930d6-0dfb-4961-95b3-7447bb0dd25e">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="485929c8-1e26-44c6-9388-9c37180f7c5e">
+                    <TableID>CUBE_DimTypeOfWork</TableID>
+                    <ColumnID>TypeOfWorkName</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+            <Attribute dwd:design-time-name="db055e41-44d4-4782-b3d7-76a3d39be3f1">
+              <AttributeID>Type Of Work Code</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d33fb170-b5d0-40b4-b97d-e7c3a1920ccd">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d2a09456-7d36-4e77-98dc-fac9b7bb50e9">
+                    <TableID>CUBE_DimTypeOfWork</TableID>
+                    <ColumnID>TypeOfWorkCode</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <ProactiveCaching dwd:design-time-name="212db146-2f57-4401-b9a4-cf418977b0c4">
+        <SilenceInterval>-PT1S</SilenceInterval>
+        <Latency>-PT1S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="65d9095b-c6aa-4567-be89-0ee6e9694b0d" />
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="4f9d6efd-da62-4aa9-97ef-b654bca5ba49">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <ProactiveCaching dwd:design-time-name="f68018c3-a3ad-4b8c-804e-0703e611749f">
+    <SilenceInterval>-PT1S</SilenceInterval>
+    <Latency>-PT1S</Latency>
+    <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+    <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+    <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="c8583612-a61b-473f-89ce-380264b54108" />
+  </ProactiveCaching>
+</Cube>

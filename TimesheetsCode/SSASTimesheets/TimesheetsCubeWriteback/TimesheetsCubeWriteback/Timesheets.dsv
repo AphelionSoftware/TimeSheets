@@ -1,0 +1,620 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Timesheets</ID>
+  <Name>Timesheets</Name>
+  <CreatedTimestamp>2012-01-12T12:42:40.64Z</CreatedTimestamp>
+  <LastSchemaUpdate>2012-01-16T12:57:27.306667Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="28" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="28421" scrolltop="-13102" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="14288" y="23072" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClient" left="34870" top="0" logicalid="14" controlid="1" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimClient" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPerson" left="28430" top="0" logicalid="15" controlid="2" masterid="0" hint1="0" hint2="0" width="3440" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000700d00009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimPerson" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimProject" left="21990" top="0" logicalid="16" controlid="3" masterid="0" hint1="0" hint2="0" width="3440" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000700d000043110000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimProject" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTimesheet" left="14757" top="0" logicalid="17" controlid="4" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000800008910000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimTimesheet" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTypeOfWork" left="7577" top="0" logicalid="18" controlid="5" masterid="0" hint1="0" hint2="0" width="4180" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000541000009b0f0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimTypeOfWork" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactTimesheetDetail" left="0" top="0" logicalid="19" controlid="6" masterid="0" hint1="0" hint2="0" width="4577" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000e111000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_FactTimesheetDetail" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="20295" top="4901" logicalid="20" controlid="7" masterid="0" hint1="0" hint2="0" width="3492" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="00080000a40d000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="CUBE_DimDate" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4277" top="-99" logicalid="21" controlid="8" masterid="0" hint1="0" hint2="0" width="10780" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTimesheet]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="6" sourceattachpoint="14" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="14757" y="300" />
+                    <point x="4577" y="300" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4277" top="0" logicalid="22" controlid="9" masterid="0" hint1="0" hint2="0" width="18013" height="959" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimProject]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="6" sourceattachpoint="10" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="21990" y="559" />
+                    <point x="13284" y="559" />
+                    <point x="13284" y="300" />
+                    <point x="4577" y="300" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4277" top="-52" logicalid="23" controlid="10" masterid="0" hint1="0" hint2="0" width="24453" height="1202" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimPerson]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="10" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="28430" y="347" />
+                    <point x="16504" y="347" />
+                    <point x="16504" y="850" />
+                    <point x="4577" y="850" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4277" top="4400" logicalid="24" controlid="11" masterid="0" hint1="0" hint2="0" width="16318" height="1201" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimDate]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="6" sourceattachpoint="10" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="20295" y="5201" />
+                    <point x="12436" y="5201" />
+                    <point x="12436" y="4700" />
+                    <point x="4577" y="4700" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="4277" top="-52" logicalid="25" controlid="12" masterid="0" hint1="0" hint2="0" width="3600" height="2302" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTypeOfWork]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="6" sourceattachpoint="14" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="7577" y="347" />
+                    <point x="6077" y="347" />
+                    <point x="6077" y="1950" />
+                    <point x="4577" y="1950" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="25130" top="-52" logicalid="26" controlid="13" masterid="0" hint1="0" hint2="0" width="10040" height="911" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[DimProject-DimClient]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="10" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="34870" y="347" />
+                    <point x="30150" y="347" />
+                    <point x="30150" y="559" />
+                    <point x="25430" y="559" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+            </DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>28421</DiagramViewPortLeft>
+            <DiagramViewPortTop>-13102</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>75</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>PW Timesheets</DataSourceID>
+  <Schema>
+    <xs:schema id="Timesheets" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Timesheets" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="CUBE_DimClient" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimClient" msprop:FriendlyName="DimClient" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ClientID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="ClientID" msprop:FriendlyName="ClientID" type="xs:int" />
+                  <xs:element name="ClientSourceKey" msprop:DbColumnName="ClientSourceKey" msprop:FriendlyName="ClientSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="ClientName" msprop:DbColumnName="ClientName" msprop:FriendlyName="ClientName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ClientCode" msprop:DbColumnName="ClientCode" msprop:FriendlyName="ClientCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_DimPerson" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimPerson" msprop:FriendlyName="DimPerson" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PersonID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="PersonID" msprop:FriendlyName="PersonID" type="xs:int" />
+                  <xs:element name="PersonSourceKey" msprop:DbColumnName="PersonSourceKey" msprop:FriendlyName="PersonSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="PersonName" msprop:DbColumnName="PersonName" msprop:FriendlyName="PersonName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PersonCode" msprop:DbColumnName="PersonCode" msprop:FriendlyName="PersonCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_DimProject" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimProject" msprop:FriendlyName="DimProject" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProjectID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="ProjectID" msprop:FriendlyName="ProjectID" type="xs:int" />
+                  <xs:element name="ProjectSourceKey" msprop:DbColumnName="ProjectSourceKey" msprop:FriendlyName="ProjectSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="ProjectName" msprop:DbColumnName="ProjectName" msprop:FriendlyName="ProjectName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectCode" msprop:DbColumnName="ProjectCode" msprop:FriendlyName="ProjectCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ClientID" msprop:DbColumnName="ClientID" msprop:FriendlyName="ClientID" type="xs:int" />
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_DimTimesheet" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimTimesheet" msprop:FriendlyName="DimTimesheet" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimesheetID" msprop:DbColumnName="TimesheetID" msprop:FriendlyName="TimesheetID" type="xs:int" />
+                  <xs:element name="TimesheetSourceKey" msprop:DbColumnName="TimesheetSourceKey" msprop:FriendlyName="TimesheetSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="TimesheetName" msprop:DbColumnName="TimesheetName" msprop:FriendlyName="TimesheetName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetCode" msprop:DbColumnName="TimesheetCode" msprop:FriendlyName="TimesheetCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetFileName" msprop:DbColumnName="TimesheetFileName" msprop:FriendlyName="TimesheetFileName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetFromDateID" msprop:DbColumnName="TimesheetFromDateID" msprop:FriendlyName="TimesheetFromDateID" type="xs:int" />
+                  <xs:element name="TimesheetToDateID" msprop:DbColumnName="TimesheetToDateID" msprop:FriendlyName="TimesheetToDateID" type="xs:int" />
+                  <xs:element name="TimesheetPerson" msprop:DbColumnName="TimesheetPerson" msprop:FriendlyName="TimesheetPerson">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetDate" msprop:DbColumnName="TimesheetDate" msprop:FriendlyName="TimesheetDate">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                  <xs:element name="OverallStatusID" msprop:DbColumnName="OverallStatusID" msprop:FriendlyName="OverallStatusID" type="xs:int" />
+                  <xs:element name="OverallStatusName" msprop:DbColumnName="OverallStatusName" msprop:FriendlyName="OverallStatusName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OverallStatusCode" msprop:DbColumnName="OverallStatusCode" msprop:FriendlyName="OverallStatusCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OverallStatusSourceKey" msprop:DbColumnName="OverallStatusSourceKey" msprop:FriendlyName="OverallStatusSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_DimTypeOfWork" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimTypeOfWork" msprop:FriendlyName="DimTypeOfWork" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TypeOfWorkID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="TypeOfWorkID" msprop:FriendlyName="TypeOfWorkID" type="xs:int" />
+                  <xs:element name="TypeOfWorkSourceKey" msprop:DbColumnName="TypeOfWorkSourceKey" msprop:FriendlyName="TypeOfWorkSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="TypeOfWorkName" msprop:DbColumnName="TypeOfWorkName" msprop:FriendlyName="TypeOfWorkName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TypeOfWorkCode" msprop:DbColumnName="TypeOfWorkCode" msprop:FriendlyName="TypeOfWorkCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_FactTimesheetDetail" msprop:DbSchemaName="CUBE" msprop:DbTableName="FactTimesheetDetail" msprop:FriendlyName="FactTimesheetDetail" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TimesheetDetailID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="TimesheetDetailID" msprop:FriendlyName="TimesheetDetailID" type="xs:int" />
+                  <xs:element name="TimesheetDetailSourceKey" msprop:DbColumnName="TimesheetDetailSourceKey" msprop:FriendlyName="TimesheetDetailSourceKey" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LoadDate" msprop:DbColumnName="LoadDate" msprop:FriendlyName="LoadDate" type="xs:dateTime" />
+                  <xs:element name="Active" msprop:DbColumnName="Active" msprop:FriendlyName="Active" type="xs:int" />
+                  <xs:element name="TimesheetDetailName" msprop:DbColumnName="TimesheetDetailName" msprop:FriendlyName="TimesheetDetailName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetDetailCode" msprop:DbColumnName="TimesheetDetailCode" msprop:FriendlyName="TimesheetDetailCode">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetDetailFileName" msprop:DbColumnName="TimesheetDetailFileName" msprop:FriendlyName="TimesheetDetailFileName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TimesheetDetailDateID" msprop:DbColumnName="TimesheetDetailDateID" msprop:FriendlyName="TimesheetDetailDateID" type="xs:int" />
+                  <xs:element name="TimesheetDetailPersonID" msprop:DbColumnName="TimesheetDetailPersonID" msprop:FriendlyName="TimesheetDetailPersonID" type="xs:int" />
+                  <xs:element name="TimesheetDetailProjectID" msprop:DbColumnName="TimesheetDetailProjectID" msprop:FriendlyName="TimesheetDetailProjectID" type="xs:int" />
+                  <xs:element name="LoadDateID" msdata:ReadOnly="true" msprop:DbColumnName="LoadDateID" msprop:FriendlyName="LoadDateID" type="xs:int" minOccurs="0" />
+                  <xs:element name="Hours" msprop:DbColumnName="Hours" msprop:FriendlyName="Hours" type="xs:decimal" />
+                  <xs:element name="TimesheetID" msprop:DbColumnName="TimesheetID" msprop:FriendlyName="TimesheetID" type="xs:int" />
+                  <xs:element name="TimesheetTypeOfWorkID" msprop:DbColumnName="TimesheetTypeOfWorkID" type="xs:int" minOccurs="0" />
+                  <xs:element name="Comments" msprop:DbColumnName="Comments" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CUBE_DimDate" msprop:DbSchemaName="CUBE" msprop:DbTableName="DimDate" msprop:FriendlyName="DimDate" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateSK" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:DbColumnName="DateSK" msprop:FriendlyName="DateSK" type="xs:int" />
+                  <xs:element name="DateID" msprop:DbColumnName="DateID" msprop:FriendlyName="DateID" type="xs:int" />
+                  <xs:element name="Date" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Day" msprop:DbColumnName="Day" msprop:FriendlyName="Day" type="xs:int" />
+                  <xs:element name="DaySuffix" msprop:DbColumnName="DaySuffix" msprop:FriendlyName="DaySuffix">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DayOfWeek" msprop:DbColumnName="DayOfWeek" msprop:FriendlyName="DayOfWeek">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DOWInMonth" msprop:DbColumnName="DOWInMonth" msprop:FriendlyName="DOWInMonth" type="xs:int" />
+                  <xs:element name="DayOfYear" msprop:DbColumnName="DayOfYear" msprop:FriendlyName="DayOfYear" type="xs:int" />
+                  <xs:element name="WeekOfYear" msprop:DbColumnName="WeekOfYear" msprop:FriendlyName="WeekOfYear" type="xs:int" />
+                  <xs:element name="WeekOfMonth" msprop:DbColumnName="WeekOfMonth" msprop:FriendlyName="WeekOfMonth" type="xs:int" />
+                  <xs:element name="MonthNumber" msprop:DbColumnName="MonthNumber" msprop:FriendlyName="MonthNumber" type="xs:int" />
+                  <xs:element name="MonthName" msprop:DbColumnName="MonthName" msprop:FriendlyName="MonthName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Quarter" msprop:DbColumnName="Quarter" msprop:FriendlyName="Quarter" type="xs:int" />
+                  <xs:element name="QuarterName" msprop:DbColumnName="QuarterName" msprop:FriendlyName="QuarterName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YearName" msprop:DbColumnName="YearName" msprop:FriendlyName="YearName">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="YearNumber" msprop:DbColumnName="YearNumber" msprop:FriendlyName="YearNumber" type="xs:int" />
+                  <xs:element name="StandardDate" msprop:DbColumnName="StandardDate" msprop:FriendlyName="StandardDate" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IsPublicHoliday" msprop:DbColumnName="IsPublicHoliday" msprop:FriendlyName="IsPublicHoliday" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="HolidayText" msprop:DbColumnName="HolidayText" msprop:FriendlyName="HolidayText" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MonthNameYear" msprop:DbColumnName="MonthNameYear" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimClient" />
+          <xs:field xpath="ClientID" />
+        </xs:unique>
+        <xs:unique name="CUBE_DimPerson_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimPerson" />
+          <xs:field xpath="PersonID" />
+        </xs:unique>
+        <xs:unique name="CUBE_DimProject_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimProject" />
+          <xs:field xpath="ProjectID" />
+        </xs:unique>
+        <xs:unique name="CUBE_DimTimesheet_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimTimesheet" />
+          <xs:field xpath="TimesheetID" />
+        </xs:unique>
+        <xs:unique name="CUBE_DimTypeOfWork_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimTypeOfWork" />
+          <xs:field xpath="TypeOfWorkID" />
+        </xs:unique>
+        <xs:unique name="CUBE_FactTimesheetDetail_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_FactTimesheetDetail" />
+          <xs:field xpath="TimesheetDetailID" />
+        </xs:unique>
+        <xs:unique name="CUBE_DimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//CUBE_DimDate" />
+          <xs:field xpath="DateID" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FactTimesheetDetail-DimTimesheet" msdata:parent="CUBE_DimTimesheet" msdata:child="CUBE_FactTimesheetDetail" msdata:parentkey="TimesheetID" msdata:childkey="TimesheetID" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="FactTimesheetDetail-DimProject" msdata:parent="CUBE_DimProject" msdata:child="CUBE_FactTimesheetDetail" msdata:parentkey="ProjectID" msdata:childkey="TimesheetDetailProjectID" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="FactTimesheetDetail-DimPerson" msdata:parent="CUBE_DimPerson" msdata:child="CUBE_FactTimesheetDetail" msdata:parentkey="PersonID" msdata:childkey="TimesheetDetailPersonID" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="FactTimesheetDetail-DimDate" msdata:parent="CUBE_DimDate" msdata:child="CUBE_FactTimesheetDetail" msdata:parentkey="DateID" msdata:childkey="TimesheetDetailDateID" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="FactTimesheetDetail-DimTypeOfWork" msdata:parent="CUBE_DimTypeOfWork" msdata:child="CUBE_FactTimesheetDetail" msdata:parentkey="TypeOfWorkID" msdata:childkey="TimesheetTypeOfWorkID" msprop:Description="" msprop:IsLogical="True" />
+          <msdata:Relationship name="DimProject-DimClient" msdata:parent="CUBE_DimClient" msdata:child="CUBE_DimProject" msdata:parentkey="ClientID" msdata:childkey="ClientID" msprop:Description="" msprop:IsLogical="True" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </Schema>
+</DataSourceView>

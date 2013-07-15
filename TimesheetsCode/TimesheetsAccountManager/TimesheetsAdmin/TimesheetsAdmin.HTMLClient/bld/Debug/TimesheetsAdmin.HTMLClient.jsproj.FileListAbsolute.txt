@@ -1,0 +1,6 @@
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

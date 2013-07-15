@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="TimesheetCapture_IisWebApplication" value="Default Web Site/TimesheetCapture" />
+  <setParameter name="TimesheetsData" value="Data Source=TWIST;Initial Catalog=TimeSheets_Dev_Leo;Integrated Security=True" />
+</parameters>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
+  DTS:ObjectName="TimesheetsCube1"
+  DTS:DTSID="{E587ADD5-5BF3-4702-87D4-0264FCEE65FF}"
+  DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source="+ @[$Project::ServerName]+";Initial Catalog=" +@[$Project::CubeName] +";Provider=MSOLAP.5;Persist Security Info=False;Integrated Security=SSPI;"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=TWIST;Initial Catalog=TimesheetsCube;Provider=MSOLAP.5;Persist Security Info=False;Integrated Security=SSPI;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

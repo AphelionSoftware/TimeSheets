@@ -1,0 +1,14 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="9db1a58d-8fc8-479c-8fac-3459d16bfb50" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>PW Timesheets</ID>
+  <Name>PW Timesheets</Name>
+  <CreatedTimestamp>2012-01-12T12:42:40.64Z</CreatedTimestamp>
+  <LastSchemaUpdate>2012-01-12T18:56:48.316667Z</LastSchemaUpdate>
+  <ConnectionString>Data Source=.\sql2k8r2;Initial Catalog=PWTimesheets;Integrated Security=True</ConnectionString>
+  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+  <ImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </ImpersonationInfo>
+  <ManagedProvider>System.Data.SqlClient</ManagedProvider>
+  <Timeout>PT0S</Timeout>
+</DataSource>

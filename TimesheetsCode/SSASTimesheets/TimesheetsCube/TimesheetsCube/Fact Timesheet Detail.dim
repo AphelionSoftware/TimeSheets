@@ -1,0 +1,1349 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6f8dd973-5688-4aa9-b0c1-92750d6dddd3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Timesheet Detail</ID>
+  <Name>Fact Timesheet Detail</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="40" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4221" scrolltop="-1218" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="12197" y="16034" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactTimesheetDetail" left="20" top="0" logicalid="20" controlid="1" masterid="0" hint1="0" hint2="0" width="4577" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000e111000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactTimesheetDetail" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClient" left="-7940" top="5897" logicalid="21" controlid="2" masterid="0" hint1="0" hint2="0" width="3254" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimClient" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimPerson" left="-3315" top="12061" logicalid="22" controlid="3" masterid="0" hint1="0" hint2="0" width="3413" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000550d0000ea120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimPerson" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimProject" left="-5096" top="252" logicalid="23" controlid="4" masterid="0" hint1="0" hint2="0" width="3440" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000700d000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimProject" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTimesheet" left="4022" top="-6694" logicalid="24" controlid="5" masterid="0" hint1="0" hint2="0" width="4260" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000a410000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTimesheet" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimTypeOfWork" left="7260" top="0" logicalid="25" controlid="6" masterid="0" hint1="0" hint2="0" width="4154" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800003a1000009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimTypeOfWork" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDate" left="0" top="23642" logicalid="26" controlid="7" masterid="0" hint1="0" hint2="0" width="3281" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d10c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FactBillingRates" left="1884" top="5719" logicalid="27" controlid="8" masterid="0" hint1="0" hint2="0" width="3942" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000660f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_FactBillingRates" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3108" top="-2193" logicalid="28" controlid="9" masterid="0" hint1="0" hint2="0" width="1794" height="2493" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTimesheet]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="1" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4502" y="-1694" />
+              <point x="4502" y="-847" />
+              <point x="3408" y="-847" />
+              <point x="3408" y="0" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1956" top="412" logicalid="29" controlid="10" masterid="0" hint1="0" hint2="0" width="2276" height="4588" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimProject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="11" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-1656" y="811" />
+              <point x="-818" y="811" />
+              <point x="-818" y="4700" />
+              <point x="20" y="4700" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-1458" top="4700" logicalid="30" controlid="11" masterid="0" hint1="0" hint2="0" width="2416" height="7861" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimPerson]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="6" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-1059" y="12061" />
+              <point x="-1059" y="8531" />
+              <point x="658" y="8531" />
+              <point x="658" y="5000" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-280" top="2200" logicalid="31" controlid="12" masterid="0" hint1="0" hint2="0" width="3861" height="24342" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="19" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3281" y="26142" />
+              <point x="1651" y="26142" />
+              <point x="1651" y="2500" />
+              <point x="20" y="2500" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4297" top="1100" logicalid="32" controlid="13" masterid="0" hint1="0" hint2="0" width="3263" height="1297" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimTypeOfWork]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="20" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7260" y="1997" />
+              <point x="5929" y="1997" />
+              <point x="5929" y="1400" />
+              <point x="4597" y="1400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-7812" top="4371" logicalid="33" controlid="14" masterid="0" hint1="0" hint2="0" width="5836" height="2026" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DimProject-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="0" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-7413" y="5897" />
+              <point x="-7413" y="5284" />
+              <point x="-2276" y="5284" />
+              <point x="-2276" y="4671" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1241" top="10419" logicalid="34" controlid="15" masterid="0" hint1="0" hint2="0" width="1814" height="13723" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimDate]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="8" sourceattachpoint="4" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1640" y="23642" />
+              <point x="1640" y="17181" />
+              <point x="2755" y="17181" />
+              <point x="2755" y="10719" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-4986" top="5845" logicalid="35" controlid="16" masterid="0" hint1="0" hint2="0" width="7170" height="4324" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimClient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="8" sourceattachpoint="11" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-4686" y="6244" />
+              <point x="-1401" y="6244" />
+              <point x="-1401" y="9869" />
+              <point x="1884" y="9869" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-908" top="10419" logicalid="36" controlid="17" masterid="0" hint1="0" hint2="0" width="3413" height="2142" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactBillingRates-DimPerson]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="8" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-509" y="12061" />
+              <point x="-509" y="11390" />
+              <point x="2205" y="11390" />
+              <point x="2205" y="10719" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimBillingStatus" left="0" top="0" logicalid="37" controlid="18" masterid="0" hint1="0" hint2="0" width="4048" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d00f00009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="CUBE_DimBillingStatus" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3658" top="-700" logicalid="38" controlid="19" masterid="0" hint1="0" hint2="0" width="1090" height="1447" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactTimesheetDetail-DimBillingStatus]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="15" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4048" y="347" />
+              <point x="4448" y="347" />
+              <point x="4448" y="-400" />
+              <point x="3958" y="-400" />
+              <point x="3958" y="0" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4221</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1218</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-7940</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-6694</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="188">
+            <Shape Id="Timesheet Detail ID" Expanded="true">
+              <Attributes>
+                <Attribute Id="Timesheet Detail ID" />
+                <Attribute Id="Timesheet Detail Code" />
+                <Attribute Id="Timesheet Detail Date ID" />
+                <Attribute Id="Timesheet Detail File Name 1" />
+                <Attribute Id="Timesheet Detail Project ID" />
+                <Attribute Id="Timesheet ID" />
+                <Attribute Id="Timesheet Type Of Work ID" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Timesheet Detail File Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Timesheet Detail File Name" />
+              </Attributes>
+              <Position x="260" y="20" />
+            </Shape>
+            <Shape Id="Comments" Expanded="true">
+              <Attributes>
+                <Attribute Id="Comments" />
+                <Attribute Id="AM Comments" />
+                <Attribute Id="Billable" />
+                <Attribute Id="Client Name 1" />
+                <Attribute Id="Client Comments" />
+                <Attribute Id="Exclude" />
+                <Attribute Id="Project Name 1" />
+                <Attribute Id="Timesheet Detail Name" />
+                <Attribute Id="Type Of Work Name" />
+              </Attributes>
+              <Position x="500" y="20" />
+            </Shape>
+            <Shape Id="Person Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Person Name" />
+              </Attributes>
+              <Position x="740" y="20" />
+            </Shape>
+            <Shape Id="Project Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Name" />
+              </Attributes>
+              <Position x="980" y="20" />
+            </Shape>
+            <Shape Id="Client Name" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client Name" />
+              </Attributes>
+              <Position x="1220" y="20" />
+            </Shape>
+            <Shape Id="Person Source Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Person Source Key" />
+              </Attributes>
+              <Position x="740" y="68" />
+            </Shape>
+            <Shape Id="Project Source Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Source Key" />
+              </Attributes>
+              <Position x="980" y="68" />
+            </Shape>
+            <Shape Id="Client Source Key" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client Source Key" />
+              </Attributes>
+              <Position x="1220" y="68" />
+            </Shape>
+            <Shape Id="Person Code" Expanded="false">
+              <Attributes>
+                <Attribute Id="Person Code" />
+              </Attributes>
+              <Position x="740" y="116" />
+            </Shape>
+            <Shape Id="Project Code" Expanded="false">
+              <Attributes>
+                <Attribute Id="Project Code" />
+              </Attributes>
+              <Position x="980" y="116" />
+            </Shape>
+            <Shape Id="Client Code" Expanded="false">
+              <Attributes>
+                <Attribute Id="Client Code" />
+              </Attributes>
+              <Position x="1220" y="116" />
+            </Shape>
+            <Shape Id="Billable 1" Expanded="true">
+              <Attributes>
+                <Attribute Id="Billable 1" />
+              </Attributes>
+              <Position x="740" y="164" />
+            </Shape>
+            <Shape Id="Timesheet Detail Person ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Timesheet Detail Person ID" />
+              </Attributes>
+              <Position x="980" y="164" />
+            </Shape>
+            <Shape Id="Person Name 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="Person Name 1" />
+              </Attributes>
+              <Position x="1220" y="164" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1f15c7c6-eae1-4389-915e-0cf5ec69cbcd">
+    <DataSourceViewID>Timesheets</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="bb7f5071-0d1b-4e09-97f2-d10455c8905f">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <DependsOnDimensionID>Project</DependsOnDimensionID>
+  <Attributes>
+    <Attribute dwd:design-time-name="09bc2588-affb-40d7-a1e6-2dc3861c03c2">
+      <ID>Timesheet Detail ID</ID>
+      <Name>Timesheet Detail ID</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>6073</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6f5e1ce-0098-4311-92cb-8aff4b04d497">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f8167a0-c411-4896-a5bc-62c072bc1ee7">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b4d6e77f-1426-4cb2-8497-fc47397bd906">
+          <AttributeID>Timesheet ID</AttributeID>
+          <Name>Timesheet ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c27ee491-0c98-4372-bb08-4a604a275bf4">
+          <AttributeID>Timesheet Detail Project ID</AttributeID>
+          <Name>Timesheet Detail Project ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="611d8043-3e63-4f30-a581-a71ccfb7dfa9">
+          <AttributeID>Timesheet Detail Date ID</AttributeID>
+          <Name>Timesheet Detail Date ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8a5908f2-c23f-4e95-9628-28670dadb1ce">
+          <AttributeID>Timesheet Type Of Work ID</AttributeID>
+          <Name>Timesheet Type Of Work ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38780c7d-518f-4ade-a571-b54b5d66f7f5">
+          <AttributeID>Timesheet Detail Code</AttributeID>
+          <Name>Timesheet Detail Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="72deb2eb-3eaf-43f6-b096-aa8922c0a2b9">
+          <AttributeID>Timesheet Detail File Name</AttributeID>
+          <Name>File Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="99efd98a-f6b7-4544-afa7-fc8abab08ef2">
+          <AttributeID>Timesheet Detail File Name 1</AttributeID>
+          <Name>Timesheet Detail File Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="814cc35b-ccfa-4c4e-9901-fe56dd2056b9">
+      <ID>Timesheet ID</ID>
+      <Name>Timesheet ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="82f020df-7e44-4972-950b-f2af325cb88a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb920205-bd37-48fb-9431-8ac22f2fa075">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="72900902-4045-421b-83ae-2e6a7e7259c8">
+      <ID>Timesheet Detail Project ID</ID>
+      <Name>Timesheet Detail Project ID</Name>
+      <EstimatedCount>85</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a8153323-8532-4576-9032-1d5c248fab31">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16038d4f-90df-40cd-bf59-46e77bac405f">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2fa3f7e3-ae07-4b35-93ea-c624e21d3244">
+      <ID>Timesheet Detail Person ID</ID>
+      <Name>Timesheet Detail Person ID</Name>
+      <EstimatedCount>16</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5ec0ee87-7990-405e-8e0e-265d45eefd9a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c41b832a-9812-4603-a521-30cb0c5f1613">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailPersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8bfb92dd-e329-4d94-9e5c-a35bca1bfdbe">
+          <AttributeID>Person Name 1</AttributeID>
+          <Name>Person</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d4b9b088-6f2b-44e7-b411-621a1479157e">
+      <ID>Timesheet Detail Date ID</ID>
+      <Name>Timesheet Detail Date ID</Name>
+      <EstimatedCount>465</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46318bfc-0a1d-42e4-83c1-1597e2309089">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fca619e-f040-48de-8219-8eae849cc974">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailDateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8a04346-b8f3-464a-bf27-5c77fd742653">
+      <ID>Timesheet Type Of Work ID</ID>
+      <Name>Timesheet Type Of Work ID</Name>
+      <EstimatedCount>41</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c5a58c7-1525-4bc8-b160-12c1c13d849c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f8cc220-a9e6-4058-b587-815b3cfcad72">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetTypeOfWorkID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b4b8565e-dab2-49ec-a329-cd52056402e9">
+      <ID>Comments</ID>
+      <Name>Comments</Name>
+      <EstimatedCount>6073</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7acc0aa3-615a-4c99-9e2e-b6b78ef2a14d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a6fa35e-87e1-4902-aab8-383afabda158">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="71ac7532-c32a-4694-a0a2-e470b4826e6d">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9d66bcb1-96e1-4a6c-ad2d-6b65ed15559c">
+          <TableID>CUBE_FactTimesheetDetail</TableID>
+          <ColumnID>Comments</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="a312afae-28c9-49b4-b9f3-3a050ddcc3a6">
+          <AttributeID>AM Comments</AttributeID>
+          <Name>AM Comments</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3af75807-29a9-4866-b663-45be32d4c854">
+          <AttributeID>Billable</AttributeID>
+          <Name>Billable</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="118bd6c4-37b2-465d-b0c5-a9ef9a0fcae4">
+          <AttributeID>Client Comments</AttributeID>
+          <Name>Client Comments</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="09fdda9c-679e-4f01-8864-dc901c309cf9">
+          <AttributeID>Exclude</AttributeID>
+          <Name>Exclude</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5f4d6cb3-32df-43a6-b12d-862901e6b2c2">
+          <AttributeID>Timesheet Detail Name</AttributeID>
+          <Name>Timesheet Detail Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="723f5b6a-4f9c-413c-aab7-e8b0f314e7c4">
+          <AttributeID>Type Of Work Name</AttributeID>
+          <Name>Type Of Work Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="be9f579a-9685-4a39-9966-4dd785737145">
+          <AttributeID>Project Name 1</AttributeID>
+          <Name>Project</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="21e2c603-72fa-4cdd-993d-0ae60afdb64f">
+          <AttributeID>Client Name 1</AttributeID>
+          <Name>Client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ea2cd05a-533c-4c9f-8871-d7a8493108cd">
+          <AttributeID>Billable 1</AttributeID>
+          <Name>PersonBillable</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53377cd8-9a66-41a8-ac91-fee79c880990">
+          <AttributeID>Person Code</AttributeID>
+          <Name>Person Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="867bdd8f-e876-4189-8107-07b0bc2d8942">
+          <AttributeID>Person Source Key</AttributeID>
+          <Name>Person Source Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c2971dd0-5b3f-4dbe-9533-c7473b2c083b">
+          <AttributeID>Person Name</AttributeID>
+          <Name>Person Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="71301746-72a7-44b5-8754-3f33ab5d39e4">
+      <ID>Timesheet Detail Name</ID>
+      <Name>Timesheet Detail Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="233469a4-0ce6-4d0b-ae0f-83feb249be9b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0dcc331-05a3-4519-88c3-d929d44784c3">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="691e2e8a-441a-416e-95d4-3e0a8d52915e">
+      <ID>Timesheet Detail Code</ID>
+      <Name>Timesheet Detail Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e03c6a35-0ef7-4d9f-a8da-725a04ef64ab">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aee392d6-1f26-4e8c-9c2a-3f583fde9ac0">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailCode</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="74a11803-4c3f-423b-8170-755b183ccebf">
+      <ID>Timesheet Detail File Name</ID>
+      <Name>File Name</Name>
+      <EstimatedCount>6073</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="50a99b32-3595-4fd6-9748-a7d4480f7d96">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4149580e-1bee-4c9e-afea-c6da31f8ca4e">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e29071c8-5a0b-44f9-9e9e-13c990710969">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bade211e-4da7-43ac-a304-6d06044d9466">
+          <TableID>CUBE_FactTimesheetDetail</TableID>
+          <ColumnID>TimesheetDetailFileName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="de0766d9-4fcc-4286-8156-46882b493b10">
+          <AttributeID>Comments</AttributeID>
+          <Name>Comments</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dfe287dc-d5b5-4f3a-8d5f-4cd9ca585a24">
+      <ID>AM Comments</ID>
+      <Name>AM Comments</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4c935c7f-71be-4ac4-b1f4-b9109c894b06">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="246a15ae-0886-43b3-8e29-793cb21abc46">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>AMComments</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0e117895-fc4e-44b8-afc1-5dbb2084b7ef">
+      <ID>Client Comments</ID>
+      <Name>Client Comments</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b3236b61-b1d8-4817-ba1f-221b2dbcade7">
+          <DataType>WChar</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30225cee-617d-44be-9cbe-5ba48ae3b647">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>ClientComments</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7dec8c41-0c78-4834-8ed0-15eb90683144">
+      <ID>Project Source Key</ID>
+      <Name>Project Source Key</Name>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="71828deb-7567-4835-aee1-6ebea3261aaf">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f8cf2661-05d5-4ab5-b58a-726297a2ca10">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2da34506-b056-4ea5-af6f-d673d8947f4a">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="709403c5-0b30-47f3-b170-383c22dd79a5">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectSourceKey</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c4913abc-64d7-4f09-b55f-33d792cc82e3">
+          <AttributeID>Client Source Key</AttributeID>
+          <Name>Client Source Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="527a570b-df6a-480f-b15c-2416aae0e1ba">
+      <ID>Project Name</ID>
+      <Name>Project Name</Name>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5b05a49a-1e11-472c-bf25-4b905c41a468">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c041a5d-0a52-4b67-9a80-f416f411b06f">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="abf3b3b2-62ba-4e1d-82e4-16bf718cc0ee">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4ba8a048-8310-4a3b-8f1e-75d9e60c2fcf">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="059b69b2-990d-4640-a7ee-72c22725e440">
+          <AttributeID>Client Name</AttributeID>
+          <Name>Client Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ae51deac-64aa-4836-a2dd-d17456df3944">
+      <ID>Project Code</ID>
+      <Name>Project Code</Name>
+      <EstimatedCount>203</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31f1ac05-b767-4bf7-8997-7f443b5910f8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a494eb5c-dacb-4f27-93ba-b592d343ee6f">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="920958c3-ddf5-42a6-a818-6308b7c13272">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="04820e7c-f90c-413b-8966-c3df572a2215">
+          <TableID>CUBE_DimProject</TableID>
+          <ColumnID>ProjectCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1dfceaac-8696-43ec-80fd-bafe0b19ea07">
+          <AttributeID>Client Code</AttributeID>
+          <Name>Client Code</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="28dfbcf9-99a9-48e0-953e-746782f1887d">
+      <ID>Client Source Key</ID>
+      <Name>Client Source Key</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1c4fe985-1f39-45fc-acdf-3bee874baff4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f59231d2-ef6e-4a1e-812d-19613aa87d13">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f71c382f-8742-49c8-a378-3d10cb9d0f62">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="44cd7b9f-207d-4c9d-9b63-93cf68e36250">
+          <TableID>CUBE_DimClient</TableID>
+          <ColumnID>ClientSourceKey</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd416cb5-0544-443f-99a6-b5e6dc01a463">
+      <ID>Client Name</ID>
+      <Name>Client Name</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a95935a-4cb8-43b1-aff2-d9e86e513e48">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fdbb1b2c-4354-4639-b61d-7f22bc6cd16b">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7daa73a8-4fc3-4bc1-bf89-55290e699896">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="6c126ba9-7ad4-45a1-ad30-3124bf981c96">
+          <TableID>CUBE_DimClient</TableID>
+          <ColumnID>ClientName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="671311c3-e61c-45d6-81d9-ba75a9849707">
+      <ID>Client Code</ID>
+      <Name>Client Code</Name>
+      <EstimatedCount>37</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="118c5027-c775-4d96-a8d5-a77b21bb71ec">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3802428a-7db9-445a-b918-c0f7f20486a8">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c900b385-2012-49c9-a504-127d7e0bdb9a">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cd06d1ee-70f6-4ad5-998c-5127d4290fcb">
+          <TableID>CUBE_DimClient</TableID>
+          <ColumnID>ClientCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyDisplayFolder>Internal</AttributeHierarchyDisplayFolder>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="317a7e7c-3da2-4bb6-a410-d85d70d45fe3">
+      <ID>Person Source Key</ID>
+      <Name>Person Source Key</Name>
+      <EstimatedCount>242</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf2acc8c-635f-43a4-8c20-909e206dd0ca">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdbd948b-322d-453a-93a9-3e0da9d3c40e">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="70665e9f-b76d-4ac9-af05-ee74849a93ef">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01b31922-85d7-466b-bd6a-6ffd465069bb">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailPersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="143c884a-015e-44e1-84e4-5272d21bbe27">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="fffc67a6-0527-4e60-8f1a-c9402701143f">
+          <TableID>CUBE_DimPerson</TableID>
+          <ColumnID>PersonSourceKey</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3a36b96a-e182-4d24-bffd-c1a98bc7aba8">
+          <AttributeID>Project Source Key</AttributeID>
+          <Name>Project Source Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6633bd6e-5bcc-47f8-8676-60d9541c2a45">
+      <ID>Person Name</ID>
+      <Name>Person Name</Name>
+      <EstimatedCount>242</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7de6efb3-9701-4346-b4c9-c2621e9c92cd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cab088d3-aec7-4a92-8f83-c685ff162409">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="36943d24-9509-43ed-87ec-f3d2dbd3168e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9e3f613c-d81e-4f7b-a038-48162a1bbe42">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailPersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="325d9ca5-dec2-41b6-abea-b9b7ca341b0d">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8850ea28-143d-4dde-91ae-f53277a8b49a">
+          <TableID>CUBE_DimPerson</TableID>
+          <ColumnID>PersonName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8532b846-3130-4095-8057-c01f725af98f">
+          <AttributeID>Project Name</AttributeID>
+          <Name>Project Name</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="180df4c2-9124-4480-ad75-616b7d248db1">
+      <ID>Person Code</ID>
+      <Name>Person Code</Name>
+      <EstimatedCount>242</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ee3c25b-bf69-43fc-a22e-805774c23648">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7457bb61-bdef-4ea1-881b-110d4fd8b665">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailProjectID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="bf6708f8-9135-444a-9560-cd6e3f956245">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7752baa4-d3a8-41fd-a748-86fcf2ba6f9c">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailPersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="55065a9a-ac4d-4a7b-bf6d-281bb2b61aef">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a85a4017-7d97-4782-983b-5934576c4700">
+          <TableID>CUBE_DimPerson</TableID>
+          <ColumnID>PersonCode</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c0430487-601f-4bb5-bdfb-45f8855bb408">
+          <AttributeID>Project Code</AttributeID>
+          <Name>Project Code</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3ee73df2-e2c4-4cc9-87f5-9391e4a1a169">
+      <ID>Exclude</ID>
+      <Name>Exclude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="18fd9027-ee14-49f5-a639-2d9dcd9ba788">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a0d4c6f-4aa3-4f47-bd84-2a3bc5eb4a9f">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>Exclude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f304e69d-4102-4b39-928c-09979f2f17fc">
+      <ID>Billable</ID>
+      <Name>Billable</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cbc95a32-2ea3-4eee-bda4-fd888e5c1cdf">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48318eb5-c4ab-4c2f-8372-4da27a8e9321">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>Billable</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bdccc891-9d09-49b6-a4d8-a001de4b8048">
+      <ID>Type Of Work Name</ID>
+      <Name>Type Of Work Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ecbb2921-f808-4e76-9c5d-13e346b61955">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9d1b9c0-4ef3-4251-851c-3bc26de73819">
+            <TableID>CUBE_DimTypeOfWork</TableID>
+            <ColumnID>TypeOfWorkName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3903300d-e681-4756-bda2-1901db75501b">
+      <ID>Person Name 1</ID>
+      <Name>Person</Name>
+      <EstimatedCount>16</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="01988a96-d9f1-410e-8f0f-ad4181cc6a1e">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b4188979-95ab-4432-a27a-997f2c3b5088">
+            <TableID>CUBE_DimPerson</TableID>
+            <ColumnID>PersonName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f3077cdf-94a6-4a22-8e8a-ced7cf8f0275">
+      <ID>Billable 1</ID>
+      <Name>PersonBillable</Name>
+      <EstimatedCount>39</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7789545e-e3a3-4817-a87e-3ad68736c8f0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f32fd11-da43-41ae-862f-0ef46511151f">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailPersonID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b39658a1-22e4-4811-b73a-dc97b377b27e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24508c27-2382-45f6-8c38-cb0500a5dd14">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>Billable</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f6db3600-3c27-42b8-bb26-60ca4d4e73ec">
+        <DataType>WChar</DataType>
+        <DataSize>255</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b5e1e64c-fc6e-4dfb-b6f4-e7f084fad0e7">
+          <TableID>CUBE_DimBillingStatus</TableID>
+          <ColumnID>BillingStatusName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0b99b50b-eba8-44a2-85a8-f0bc27bb3461">
+          <AttributeID>Timesheet Detail Person ID</AttributeID>
+          <Name>Timesheet Detail Person ID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7635a8d8-9283-45a9-8b6f-f728fd2abe35">
+      <ID>Client Name 1</ID>
+      <Name>Client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8a31a748-fa75-42c2-8ddd-372010336443">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8fa2205-f051-4034-af23-ba65038b0e09">
+            <TableID>CUBE_DimClient</TableID>
+            <ColumnID>ClientName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a19feef1-02e7-4b4b-b88f-6cb566340888">
+      <ID>Project Name 1</ID>
+      <Name>Project</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="abecd723-4def-4b03-8695-8f528cbdeee4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bb4e1b37-6d30-4c6a-b0ab-f2063f2adcf3">
+            <TableID>CUBE_DimProject</TableID>
+            <ColumnID>ProjectName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9d23029a-9290-4f33-8b7b-96e8a64fefc1">
+      <ID>Timesheet Detail File Name 1</ID>
+      <Name>Timesheet Detail File Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="566c2d79-4e30-4725-882b-d6864c4b762f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b57cdff-c116-49e1-af1f-d3132a3e0cbd">
+            <TableID>CUBE_FactTimesheetDetail</TableID>
+            <ColumnID>TimesheetDetailFileName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="790a523d-46b7-48d1-9795-f05786f33fd7">
+      <ID>Hierarchy</ID>
+      <Name>SourceKey Comments</Name>
+      <Levels>
+        <Level dwd:design-time-name="52606ba0-ae2a-4ebd-b51b-eea7dd19151a">
+          <ID>Client Source Key</ID>
+          <Name>Client Source Key</Name>
+          <SourceAttributeID>Client Source Key</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6d6d03af-61e7-4e0a-875b-fc10694e4c2e">
+          <ID>Project Source Key</ID>
+          <Name>Project Source Key</Name>
+          <SourceAttributeID>Project Source Key</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="67d9f7e6-56f6-4284-9bcf-2773ae406823">
+          <ID>Person Source Key</ID>
+          <Name>Person Source Key</Name>
+          <SourceAttributeID>Person Source Key</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="69cb7a14-6580-4c2c-ac41-a3a3505e21b9">
+          <ID>Comments</ID>
+          <Name>Comments</Name>
+          <SourceAttributeID>Comments</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="00b3b274-e923-48dd-b53b-74c70fc3c311">
+          <ID>Timesheet Detail File Name</ID>
+          <Name>File Name</Name>
+          <SourceAttributeID>Timesheet Detail File Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="c7db357c-d400-44da-afda-e98f21883d7a">
+      <ID>Hierarchy 1</ID>
+      <Name>Name Comments</Name>
+      <Levels>
+        <Level dwd:design-time-name="9058671e-3ce1-4167-80e3-9307df660b46">
+          <ID>Client Name</ID>
+          <Name>Client Name</Name>
+          <SourceAttributeID>Client Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="59c65a07-30cd-4c95-9ca1-dcd3eaf6abaf">
+          <ID>Project Name</ID>
+          <Name>Project Name</Name>
+          <SourceAttributeID>Project Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="bb7a2d4a-3c79-46eb-b943-456614468c1b">
+          <ID>Person Name</ID>
+          <Name>Person Name</Name>
+          <SourceAttributeID>Person Name</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c4e3d07e-50df-4b76-90c5-b4a0de74c2c2">
+          <ID>Comments</ID>
+          <Name>Comments</Name>
+          <SourceAttributeID>Comments</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="8b9b7537-d984-4cf7-b10c-a764e1a5a1ee">
+          <ID>Timesheet Detail File Name</ID>
+          <Name>File Name</Name>
+          <SourceAttributeID>Timesheet Detail File Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="32fe97e5-13e6-40d9-b073-bf2351ed29ff">
+      <ID>Hierarchy 2</ID>
+      <Name>Code Comments</Name>
+      <Levels>
+        <Level dwd:design-time-name="1663694c-4855-4397-baef-d26858a124f3">
+          <ID>Client Code</ID>
+          <Name>Client Code</Name>
+          <SourceAttributeID>Client Code</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="065bdc08-f156-4d7f-a2e7-b977faae0778">
+          <ID>Project Code</ID>
+          <Name>Project Code</Name>
+          <SourceAttributeID>Project Code</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="124ae0ef-3b1d-4e8c-8fbb-166c876ec9b4">
+          <ID>Person Code</ID>
+          <Name>Person Code</Name>
+          <SourceAttributeID>Person Code</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="41ca4820-efb8-4049-b297-22e1e582f520">
+          <ID>Comments</ID>
+          <Name>Comments</Name>
+          <SourceAttributeID>Comments</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6c391784-fa07-43ac-b50d-58f79cdf4f1d">
+          <ID>Timesheet Detail File Name</ID>
+          <Name>File Name</Name>
+          <SourceAttributeID>Timesheet Detail File Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="7c829bf8-23ed-4887-8d99-1c294e7a91fd">
+      <ID>Hierarchy 3</ID>
+      <Name>Person Comments</Name>
+      <Levels>
+        <Level dwd:design-time-name="086bc7cb-2476-4eba-91b2-23a75602d146">
+          <ID>Person</ID>
+          <Name>Person</Name>
+          <SourceAttributeID>Person Name 1</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c22d6842-e510-47de-9133-02ecec2e3542">
+          <ID>PersonBillable</ID>
+          <Name>Billable</Name>
+          <SourceAttributeID>Billable 1</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c3d8105e-bdfd-4f22-a6b1-ae2aad1a7826">
+          <ID>Comments</ID>
+          <Name>Comments</Name>
+          <SourceAttributeID>Comments</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c1f231c4-2261-47ef-a818-7bbdf58c815c">
+          <ID>Timesheet Detail File Name</ID>
+          <Name>File Name</Name>
+          <SourceAttributeID>Timesheet Detail File Name</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

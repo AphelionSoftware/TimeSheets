@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="PWTimesheetsData" StorageEntityContainer="PWTimesheetsDataStore">
+    <EntitySetMapping Name="BillingDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.BillingDetail)">
+        <MappingFragment StoreEntitySet="BillingDetails">
+          <ScalarProperty Name="BillingDetailID" ColumnName="BillingDetailID" />
+          <ScalarProperty Name="BillingDetailSourceKey" ColumnName="BillingDetailSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="BillingDetailClientID" ColumnName="BillingDetailClientID" />
+          <ScalarProperty Name="BillingDetailPersonID" ColumnName="BillingDetailPersonID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="BillingDetailClientRoleID" ColumnName="BillingDetailClientRoleID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="BillingDetailDateID" ColumnName="BillingDetailDateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillingStatusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.BillingStatus)">
+        <MappingFragment StoreEntitySet="BillingStatusSet">
+          <ScalarProperty Name="BillingStatusName" ColumnName="BillingStatusName" />
+          <ScalarProperty Name="BillingStatusID" ColumnName="BillingStatusID" />
+          <ScalarProperty Name="BillingStatusSourceKey" ColumnName="BillingStatusSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="BillingStatusCode" ColumnName="BillingStatusCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientSourceKey" ColumnName="ClientSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="ClientCode" ColumnName="ClientCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="AccountManagerPersonID" ColumnName="AccountManagerPersonID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DimDates">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.DimDate)">
+        <MappingFragment StoreEntitySet="DimDates">
+          <ScalarProperty Name="StandardDate" ColumnName="StandardDate" />
+          <ScalarProperty Name="DateID" ColumnName="DateID" />
+          <ScalarProperty Name="c_Date" ColumnName="Date" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="DaySuffix" ColumnName="DaySuffix" />
+          <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+          <ScalarProperty Name="DOWInMonth" ColumnName="DOWInMonth" />
+          <ScalarProperty Name="DayOfYear" ColumnName="DayOfYear" />
+          <ScalarProperty Name="WeekOfYear" ColumnName="WeekOfYear" />
+          <ScalarProperty Name="WeekOfMonth" ColumnName="WeekOfMonth" />
+          <ScalarProperty Name="MonthNumber" ColumnName="MonthNumber" />
+          <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+          <ScalarProperty Name="Quarter" ColumnName="Quarter" />
+          <ScalarProperty Name="QuarterName" ColumnName="QuarterName" />
+          <ScalarProperty Name="YearName" ColumnName="YearName" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="IsPublicHoliday" ColumnName="IsPublicHoliday" />
+          <ScalarProperty Name="HolidayText" ColumnName="HolidayText" />
+          <ScalarProperty Name="DateSK" ColumnName="DateSK" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Person)">
+        <MappingFragment StoreEntitySet="People">
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="PersonSourceKey" ColumnName="PersonSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="PersonCode" ColumnName="PersonCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="BillingPercentTarget" ColumnName="BillingPercentTarget" />
+          <ScalarProperty Name="BillingPercentMinimum" ColumnName="BillingPercentMinimum" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="HourlyCost" ColumnName="HourlyCost" />
+          <ScalarProperty Name="MonthlyCost" ColumnName="MonthlyCost" />
+          <ScalarProperty Name="IsContractor" ColumnName="IsContractor" />
+          <ScalarProperty Name="Billable" ColumnName="Billable" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="PersonSystemRoleID" ColumnName="PersonSystemRoleID" />
+          <ScalarProperty Name="ADUsername" ColumnName="ADUsername" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Project)">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectSourceKey" ColumnName="ProjectSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="ProjectCode" ColumnName="ProjectCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="ProjectFirstPersonName" ColumnName="ProjectFirstPersonName" />
+          <ScalarProperty Name="ProjectFirstFilename" ColumnName="ProjectFirstFilename" />
+          <ScalarProperty Name="ConsultingEstimate" ColumnName="ConsultingEstimate" />
+          <ScalarProperty Name="SoftwareEstimate" ColumnName="SoftwareEstimate" />
+          <ScalarProperty Name="VMEstimate" ColumnName="VMEstimate" />
+          <ScalarProperty Name="ProjectCap" ColumnName="ProjectCap" />
+          <ScalarProperty Name="AdminProject" ColumnName="AdminProject" />
+          <ScalarProperty Name="Billable" ColumnName="Billable" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="AccountManagerPersonID" ColumnName="AccountManagerPersonID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timesheets">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Timesheet)">
+        <MappingFragment StoreEntitySet="Timesheets">
+          <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
+          <ScalarProperty Name="TimesheetSourceKey" ColumnName="TimesheetSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="TimesheetName" ColumnName="TimesheetName" />
+          <ScalarProperty Name="TimesheetCode" ColumnName="TimesheetCode" />
+          <ScalarProperty Name="TimesheetFileName" ColumnName="TimesheetFileName" />
+          <ScalarProperty Name="TimesheetFromDateID" ColumnName="TimesheetFromDateID" />
+          <ScalarProperty Name="TimesheetToDateID" ColumnName="TimesheetToDateID" />
+          <ScalarProperty Name="TimesheetPerson" ColumnName="TimesheetPerson" />
+          <ScalarProperty Name="TimesheetDate" ColumnName="TimesheetDate" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="OverallStatusID" ColumnName="OverallStatusID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="TimesheetDateID" ColumnName="TimesheetDateID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimesheetDetails">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TimesheetDetail)">
+        <MappingFragment StoreEntitySet="TimesheetDetails">
+          <ScalarProperty Name="TimesheetDetailID" ColumnName="TimesheetDetailID" />
+          <ScalarProperty Name="TimesheetDetailSourceKey" ColumnName="TimesheetDetailSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="TimesheetDetailName" ColumnName="TimesheetDetailName" />
+          <ScalarProperty Name="TimesheetDetailCode" ColumnName="TimesheetDetailCode" />
+          <ScalarProperty Name="TimesheetDetailFileName" ColumnName="TimesheetDetailFileName" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="Hours" ColumnName="Hours" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ClientComments" ColumnName="ClientComments" />
+          <ScalarProperty Name="AMComments" ColumnName="AMComments" />
+          <ScalarProperty Name="Exclude" ColumnName="Exclude" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="TimesheetDetailDateID" ColumnName="TimesheetDetailDateID" />
+          <ScalarProperty Name="TimesheetDetailPersonID" ColumnName="TimesheetDetailPersonID" />
+          <ScalarProperty Name="TimesheetDetailProjectID" ColumnName="TimesheetDetailProjectID" />
+          <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
+          <ScalarProperty Name="TimesheetTypeOfWorkID" ColumnName="TimesheetTypeOfWorkID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Billable" ColumnName="Billable" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfWorks">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TypeOfWork)">
+        <MappingFragment StoreEntitySet="TypeOfWorks">
+          <ScalarProperty Name="TypeOfWorkID" ColumnName="TypeOfWorkID" />
+          <ScalarProperty Name="TypeOfWorkName" ColumnName="TypeOfWorkName" />
+          <ScalarProperty Name="TypeOfWorkSourceKey" ColumnName="TypeOfWorkSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="TypeOfWorkCode" ColumnName="TypeOfWorkCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.RoleType)">
+        <MappingFragment StoreEntitySet="RoleTypes">
+          <ScalarProperty Name="RoleTypeID" ColumnName="RoleTypeID" />
+          <ScalarProperty Name="RoleTypeName" ColumnName="RoleTypeName" />
+          <ScalarProperty Name="RoleTypeSourceKey" ColumnName="RoleTypeSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="RoleTypeCode" ColumnName="RoleTypeCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ClientRole)">
+        <MappingFragment StoreEntitySet="ClientRoles">
+          <ScalarProperty Name="ClientRoleName" ColumnName="ClientRoleName" />
+          <ScalarProperty Name="ClientRoleID" ColumnName="ClientRoleID" />
+          <ScalarProperty Name="ClientRoleSourceKey" ColumnName="ClientRoleSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="ClientRoleCode" ColumnName="ClientRoleCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SystemRole)">
+        <MappingFragment StoreEntitySet="SystemRoles">
+          <ScalarProperty Name="SystemRoleID" ColumnName="SystemRoleID" />
+          <ScalarProperty Name="SystemRoleName" ColumnName="SystemRoleName" />
+          <ScalarProperty Name="SystemRoleSourceKey" ColumnName="SystemRoleSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="SystemRoleCode" ColumnName="SystemRoleCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActiveTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ActiveType)">
+        <MappingFragment StoreEntitySet="ActiveTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

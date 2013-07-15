@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Created:0f94c101-eca2-421b-9ee1-671ad586290e-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetsAdmin" ProductID="{eb079f6e-adf2-4564-9d2c-ecbed61e7de8}" Version="1.0.19.0" SharePointMinVersion="15.0.0.0">
+  <Properties>
+    <Title>TimesheetsAdmin</Title>
+    <StartPage>https://localhost:44303/SharePointLaunch.aspx?{StandardTokens}</StartPage>
+  </Properties>
+  <AppPrincipal>
+    <AutoDeployedWebApplication>
+      <DebugInfo ClientSecret="OxppIkw26NqtaTFfT7BYkMH2RPNZnfBPPEHXbq1yDM4=" AppUrl="https://localhost:44303/" />
+    </AutoDeployedWebApplication>
+  </AppPrincipal>
+  <AppPrerequisites>
+    <AppPrerequisite Type="AutoProvisioning" ID="RemoteWebHost" />
+  </AppPrerequisites>
+  <AppPermissionRequests AllowAppOnlyPolicy="true">
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Manage"></AppPermissionRequest>
+  </AppPermissionRequests>
+</App>

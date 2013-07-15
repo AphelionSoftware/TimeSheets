@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CachePerson"
+  DTS:DTSID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:UseFile="True"
+      DTS:ConnectionString="C:\SSISBuild\Person.caw">
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="PersonSourceKey"
+          DTS:DTSID="{CE89A953-0BCC-40C6-B8EF-5B282F34EF2E}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="PersonID"
+          DTS:DTSID="{1C7BE5FA-4905-4FBA-B5CA-AA2EA682C737}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TimesheetCapture_IisWebApplication" description="IIS Web Application content location" defaultValue="Default Web Site/TimesheetCapture" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Christina\\Dropbox\\TimesheetsCode\\Christina\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Debug\\app\.publish\\$" />
+  </parameter>
+  <parameter name="TimesheetsData" description="Configure the ConnectionString" defaultValue="Data Source=TWIST;Initial Catalog=TimeSheets_Dev_Leo;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/connectionStrings/add[@name='TimesheetsData']/@connectionString" />
+  </parameter>
+</parameters>

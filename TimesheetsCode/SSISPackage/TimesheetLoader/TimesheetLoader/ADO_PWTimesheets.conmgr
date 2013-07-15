@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ADO_PWTimesheets"
+  DTS:DTSID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"Data Source="+ @[$Project::ServerName]+";Initial Catalog=" + @[$Project::DBName] +";Integrated Security=True"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=TWIST;Initial Catalog=TimeSheets_Dev_Leo;Integrated Security=True;Application Name=SSIS-{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}ADO_PWTimesheets;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

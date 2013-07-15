@@ -1,0 +1,3 @@
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb

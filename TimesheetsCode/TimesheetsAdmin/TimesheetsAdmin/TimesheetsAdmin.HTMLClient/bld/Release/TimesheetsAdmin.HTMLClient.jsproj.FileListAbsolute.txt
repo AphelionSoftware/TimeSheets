@@ -1,0 +1,2 @@
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
