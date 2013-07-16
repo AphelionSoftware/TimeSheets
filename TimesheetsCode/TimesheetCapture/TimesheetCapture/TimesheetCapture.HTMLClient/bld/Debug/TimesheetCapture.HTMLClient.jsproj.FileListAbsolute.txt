@@ -6,3 +6,5 @@ C:\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\
 C:\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 C:\Users\Christina\Dropbox\TimesheetsCode\Christina\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 C:\Users\Christina\Dropbox\TimesheetsCode\Christina\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
