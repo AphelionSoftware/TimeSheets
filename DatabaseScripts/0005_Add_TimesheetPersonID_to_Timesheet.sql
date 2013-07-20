@@ -80,3 +80,7 @@ REFERENCES dbo.Person
 	PersonID
 );
 GO
+
+ALTER TABLE Timesheet
+ALTER COLUMN TimesheetPersonID INT NOT NULL;
+GO

@@ -7,8 +7,8 @@
   DTS:CreationDate="1/9/2012 6:51:31 PM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="619"
-  DTS:VersionGUID="{F078A41E-5920-4646-B343-9F8A3DF4FC22}"
+  DTS:VersionBuild="620"
+  DTS:VersionGUID="{9799BCCA-D45C-4334-A023-16B82CA1E0EF}"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:MaxErrorCount="10000"
   DTS:LocaleID="7177"
@@ -491,7 +491,7 @@ AND [BillingPeriodText]
       DTS:DTSID="{BAE9D575-E504-401C-BCBA-896B7ED5A4BC}"
       DTS:CreationName="">
       <DTS:VariableValue
-        DTS:DataType="3">20130703</DTS:VariableValue>
+        DTS:DataType="3">20130720</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:Expression="REPLACE(@[User::DeletionPath] + &quot;\\&quot; +  @[User::FileName]   , &quot;\\\\&quot;, &quot;\\&quot;)"
@@ -2740,13 +2740,13 @@ where [refTable].[ProjectSourceKey] = ?</property>
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
                   name="Derived Column Output"
-                  startId="Package\Keys\DFT_Project\DRC_Copy.Outputs[Derived Column Output]"
-                  endId="Package\Keys\DFT_Project\LKP_Project.Inputs[Lookup Input]" />
+                  startId="Package\Keys\DFT_Project\DRC_Client.Outputs[Derived Column Output]"
+                  endId="Package\Keys\DFT_Project\OLEDEST_Project.Inputs[OLE DB Destination Input]" />
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Derived Column Output]"
                   name="Derived Column Output"
-                  startId="Package\Keys\DFT_Project\DRC_Client.Outputs[Derived Column Output]"
-                  endId="Package\Keys\DFT_Project\OLEDEST_Project.Inputs[OLE DB Destination Input]" />
+                  startId="Package\Keys\DFT_Project\DRC_Copy.Outputs[Derived Column Output]"
+                  endId="Package\Keys\DFT_Project\LKP_Project.Inputs[Lookup Input]" />
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Excel Source Output]"
                   name="Excel Source Output"
@@ -3757,7 +3757,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         <NodeLayout
           Size="143,42"
           Id="Package\Keys\DFT_Consultant\KeySource"
-          TopLeft="591,167" />
+          TopLeft="592,171" />
         <NodeLayout
           Size="154,42"
           Id="Package\Keys\DFT_Consultant\DRC_Copy"
@@ -3765,65 +3765,51 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         <NodeLayout
           Size="156,42"
           Id="Package\Keys\DFT_Consultant\AODEST_Person"
-          TopLeft="664,396" />
+          TopLeft="653,420" />
         <EdgeLayout
           Id="Package\Keys\DFT_Consultant.Paths[Lookup No Match Output]"
-          TopLeft="732,370">
+          TopLeft="731.5,370">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10,26"
+              EndConnector="0,50"
               Start="0,0"
-              End="10,18.5">
+              End="0,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
-                  <mssgle:LineSegment
-                    End="6,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6,13"
-                    Point2="10,13"
-                    Point3="10,17" />
-                  <mssgle:LineSegment
-                    End="10,18.5" />
+                    End="0,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-50.80638671875,18,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,15.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Keys\DFT_Consultant.Paths[Excel Source Output]"
-          TopLeft="662.75,209">
+          TopLeft="663.25,213">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35"
+              EndConnector="0,31"
               Start="0,0"
-              End="0,27.5">
+              End="0,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.5" />
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3857,9 +3843,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3871,7 +3855,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3983,42 +3967,6 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Keys\DFT_Project.Paths[Derived Column Output]"
-          TopLeft="785,430">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31,28"
-              Start="0,0"
-              End="-31,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10"
-                    Point2="0,14"
-                    Point3="-4,14" />
-                  <mssgle:LineSegment
-                    End="-27,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27,14"
-                    Point2="-31,14"
-                    Point3="-31,18" />
-                  <mssgle:LineSegment
-                    End="-31,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
           TopLeft="740,265">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4043,6 +3991,42 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
                     Point3="18.5,62" />
                   <mssgle:LineSegment
                     End="0.5,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
+          TopLeft="785,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,28"
+              Start="0,0"
+              End="-31,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="-4,14" />
+                  <mssgle:LineSegment
+                    End="-27,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,14"
+                    Point2="-31,14"
+                    Point3="-31,18" />
+                  <mssgle:LineSegment
+                    End="-31,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

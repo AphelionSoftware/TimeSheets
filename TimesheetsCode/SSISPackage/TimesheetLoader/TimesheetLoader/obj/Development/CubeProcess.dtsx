@@ -7,8 +7,8 @@
   DTS:CreationDate="1/9/2012 6:51:31 PM"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="557"
-  DTS:VersionGUID="{DDE5948D-F4F3-4F9D-9AB8-BE51D3830791}"
+  DTS:VersionBuild="558"
+  DTS:VersionGUID="{7B8BA41B-957F-4118-B87F-3B2FDF1B721B}"
   DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:MaxErrorCount="10000"
   DTS:LocaleID="7177"
@@ -441,7 +441,7 @@ AND [BillingPeriodText]
       DTS:DTSID="{4BE9BE86-C2A0-4237-B1DD-F786F8D04317}"
       DTS:CreationName="">
       <DTS:VariableValue
-        DTS:DataType="3">20130704</DTS:VariableValue>
+        DTS:DataType="3">20130720</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:Expression="REPLACE(@[User::DeletionPath] + &quot;\\&quot; +  @[User::FileName]   , &quot;\\\\&quot;, &quot;\\&quot;)"
@@ -726,7 +726,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         <DTS:Executable
           DTS:refId="Package\SEQ_Cube_Backup\Back Up Database"
           DTS:ExecutableType="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceBackupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:ThreadHint="1"
+          DTS:ThreadHint="0"
           DTS:TaskContact="Back Up Database Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:Disabled="True"
           DTS:LocaleID="-1"
@@ -773,7 +773,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         <DTS:Executable
           DTS:refId="Package\SEQ_Cube_Backup\Backup Cube"
           DTS:ExecutableType="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-          DTS:ThreadHint="0"
+          DTS:ThreadHint="1"
           DTS:LocaleID="-1"
           DTS:ObjectName="Backup Cube"
           DTS:DTSID="{2c5541eb-273a-4f84-897c-4b824bd18dad}"
