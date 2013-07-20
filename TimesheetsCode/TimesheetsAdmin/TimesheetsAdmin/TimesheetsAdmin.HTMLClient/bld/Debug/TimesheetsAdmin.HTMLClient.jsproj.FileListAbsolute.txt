@@ -2,3 +2,5 @@ D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Timesheets
 D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 D:\Dropbox\Clients\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

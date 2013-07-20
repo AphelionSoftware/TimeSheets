@@ -29,7 +29,8 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
           "__isEntityType": 1,
@@ -2218,13 +2219,12 @@
             {
               "id": "TimesheetDetail/Properties[Comments]",
               "name": "Comments",
-              "propertyType": { "__id": ":String" },
+              "propertyType": { "__id": ":String?" },
               ":@MaxLength":
               {
                 "value": 500
               },
-              ":@AnsiConstraint": { },
-              ":@Required": { }
+              ":@AnsiConstraint": { }
             },
             {
               "id": "TimesheetDetail/Properties[ClientComments]",
@@ -4233,7 +4233,7 @@
           ]
         },
         {
-          "displayName": "Browse Timesheets v 1.1",
+          "displayName": "Timesheets",
           "id": "BrowseTimesheets",
           "name": "BrowseTimesheets",
           "launchMode": "Single",
@@ -4243,7 +4243,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "Browse Timesheets v 1.1",
+            "displayName": "Timesheets",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -4492,6 +4492,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "BrowseTimesheets/Methods[GetVersionInfo]",
+              "name": "GetVersionInfo"
             }
           ],
           "properties":
@@ -4563,6 +4567,12 @@
               "elementType": { "__id": ":DateTime?" },
               "propertyType": { "__id": ":DateTime?" },
               ":@IsParameter": { }
+            },
+            {
+              "id": "BrowseTimesheets/Properties[VersionInfo]",
+              "name": "VersionInfo",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
             }
           ]
         },
@@ -4708,6 +4718,32 @@
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
+                      {
+                        "displayName": "Period Ending:",
+                        "name": "Timesheet_TimesheetDate",
+                        "isHidden": true,
+                        "kind": "Value",
+                        "view": { "__id": ":ValueCustomControl" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "AddEditTimesheet/Properties[Timesheet]" }
+                            },
+                            {
+                              "member": { "__id": "Timesheet/Properties[TimesheetDate]" }
+                            }
+                          ]
+                        },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                            "value": "LeftAligned"
+                          }
+                        ]
+                      },
                       {
                         "displayName": "Timesheet Details",
                         "name": "TimesheetDetails1",
@@ -4941,6 +4977,28 @@
               ":@IsParameter": { }
             },
             {
+              "id": "AddEditTimesheet/Properties[TimesheetDate]",
+              "name": "TimesheetDate",
+              "pageSize": 45,
+              "elementType": { "__id": "DimDate" },
+              "propertyType": { "__id": "CollectionView$DimDate" },
+              "query":
+              {
+                "id": "AddEditTimesheet/Properties[TimesheetDate]/Query",
+                "name": "TimesheetDateQuery",
+                "elementType": { "__id": "DimDate" },
+                "returnType": { "__id": "DimDate*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[TimesheetDate]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditTimesheet/Properties[TimesheetDate]/Query" }
+              }
+            },
+            {
               "id": "AddEditTimesheet/Properties[TimesheetDetails]",
               "name": "TimesheetDetails",
               "pageSize": 15,
@@ -4968,28 +5026,6 @@
               "source":
               {
                 "target": { "__id": "AddEditTimesheet/Properties[TimesheetDetails]/Query" }
-              }
-            },
-            {
-              "id": "AddEditTimesheet/Properties[TimesheetDate]",
-              "name": "TimesheetDate",
-              "pageSize": 45,
-              "elementType": { "__id": "DimDate" },
-              "propertyType": { "__id": "CollectionView$DimDate" },
-              "query":
-              {
-                "id": "AddEditTimesheet/Properties[TimesheetDate]/Query",
-                "name": "TimesheetDateQuery",
-                "elementType": { "__id": "DimDate" },
-                "returnType": { "__id": "DimDate*" },
-                "source":
-                {
-                  "member": { "__id": "TimesheetsData/Members[TimesheetDate]" }
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "AddEditTimesheet/Properties[TimesheetDate]/Query" }
               }
             }
           ]

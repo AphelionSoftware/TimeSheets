@@ -16,6 +16,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.BrowseTimesheets],
         /// <field>
+        /// Called to determine if the GetVersionInfo method can be executed.
+        /// <br/>canExecute(msls.application.BrowseTimesheets screen)
+        /// </field>
+        GetVersionInfo_canExecute: [lightSwitchApplication.BrowseTimesheets],
+        /// <field>
+        /// Called to execute the GetVersionInfo method.
+        /// <br/>execute(msls.application.BrowseTimesheets screen)
+        /// </field>
+        GetVersionInfo_execute: [lightSwitchApplication.BrowseTimesheets],
+        /// <field>
         /// Called after the TimesheetList content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -109,6 +119,11 @@
         /// </field>
         TimesheetDetails_postRender: $parameters,
         /// <field>
+        /// Called to render the Timesheet_TimesheetDate content item.
+        /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Timesheet_TimesheetDate_render: $parameters,
+        /// <field>
         /// Called after the TimesheetDetails1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -119,15 +134,50 @@
         /// </field>
         RowTemplate3_postRender: $parameters,
         /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: $parameters,
+        /// <field>
+        /// Called after the DimDate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DimDate1_postRender: $parameters,
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: $parameters,
+        /// <field>
         /// Called after the Project content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Project_postRender: $parameters,
         /// <field>
+        /// Called after the Group2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group2_postRender: $parameters,
+        /// <field>
+        /// Called after the TypeOfWork content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TypeOfWork_postRender: $parameters,
+        /// <field>
+        /// Called after the Group3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group3_postRender: $parameters,
+        /// <field>
         /// Called after the Hours content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Hours_postRender: $parameters,
+        /// <field>
+        /// Called after the Group4 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group4_postRender: $parameters,
         /// <field>
         /// Called after the Comments content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

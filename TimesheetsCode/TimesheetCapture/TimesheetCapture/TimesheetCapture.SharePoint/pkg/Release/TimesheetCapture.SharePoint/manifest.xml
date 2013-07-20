@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="b124afaf-04e4-44a3-9192-07afa7f58f7f" SharePointProductVersion="15.0">
+  <FeatureManifests>
+    <FeatureManifest Location="TimesheetCapture.SharePoint_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

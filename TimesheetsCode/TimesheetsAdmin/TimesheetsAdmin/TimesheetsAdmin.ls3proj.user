@@ -4,8 +4,8 @@
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
     <StartUpClientProject>TimesheetsAdmin.HTMLClient</StartUpClientProject>
-    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635078534540000000</SchemaManagementLastModelWriteTime>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635098436146064969</SchemaManagementLastModelWriteTime>
     <EncryptedPublishConnectionString />
     <EncryptedPublishSchemaConnectionString />
     <EncryptedClientConnectionString />
@@ -15,7 +15,6 @@
     <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
     <AzureManagementThumbprint />
     <SharePointServerToServerCertificatePassword />
-    <GrantedPermissions>
-    </GrantedPermissions>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
   </PropertyGroup>
 </Project>

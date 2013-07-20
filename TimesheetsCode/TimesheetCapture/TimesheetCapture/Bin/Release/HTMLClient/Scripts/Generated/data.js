@@ -96,9 +96,6 @@ window.myapp = msls.application;
         /// <field name="LoadDate" type="Date">
         /// Gets or sets the loadDate for this billingDetail.
         /// </field>
-        /// <field name="BillingDetailDateID" type="Number">
-        /// Gets or sets the billingDetailDateID for this billingDetail.
-        /// </field>
         /// <field name="Rate" type="Number">
         /// Gets or sets the rate for this billingDetail.
         /// </field>
@@ -128,6 +125,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="ClientRole" type="msls.application.ClientRole">
         /// Gets or sets the clientRole for this billingDetail.
+        /// </field>
+        /// <field name="DimDate" type="msls.application.DimDate">
+        /// Gets or sets the dimDate for this billingDetail.
         /// </field>
         /// <field name="details" type="msls.application.BillingDetail.Details">
         /// Gets the details for this billingDetail.
@@ -375,6 +375,36 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this dimDate.
+        /// </field>
+        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetails for this dimDate.
+        /// </field>
+        /// <field name="ContractorYear" type="Number">
+        /// Gets or sets the contractorYear for this dimDate.
+        /// </field>
+        /// <field name="ContractorMonth" type="Number">
+        /// Gets or sets the contractorMonth for this dimDate.
+        /// </field>
+        /// <field name="ContractorPeriod" type="String">
+        /// Gets or sets the contractorPeriod for this dimDate.
+        /// </field>
+        /// <field name="BillingYear" type="String">
+        /// Gets or sets the billingYear for this dimDate.
+        /// </field>
+        /// <field name="WeekEndingBillingPeriod" type="String">
+        /// Gets or sets the weekEndingBillingPeriod for this dimDate.
+        /// </field>
+        /// <field name="BillingPeriodText" type="String">
+        /// Gets or sets the billingPeriodText for this dimDate.
+        /// </field>
+        /// <field name="BillingPeriod" type="Number">
+        /// Gets or sets the billingPeriod for this dimDate.
+        /// </field>
+        /// <field name="WeekEnding" type="Date">
+        /// Gets or sets the weekEnding for this dimDate.
+        /// </field>
+        /// <field name="WeekEndingText" type="String">
+        /// Gets or sets the weekEndingText for this dimDate.
         /// </field>
         /// <field name="details" type="msls.application.DimDate.Details">
         /// Gets the details for this dimDate.
@@ -662,6 +692,9 @@ window.myapp = msls.application;
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this timesheet.
         /// </field>
+        /// <field name="PeriodEnding" type="Date">
+        /// Gets or sets the periodEnding for this timesheet.
+        /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
         /// </field>
@@ -890,7 +923,6 @@ window.myapp = msls.application;
             { name: "BillingDetailID", type: Number },
             { name: "BillingDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
-            { name: "BillingDetailDateID", type: Number },
             { name: "Rate", type: Number },
             { name: "LoadDateID", type: Number },
             { name: "sys_CreatedOn", type: Date },
@@ -900,7 +932,8 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Client", kind: "reference", type: Client },
             { name: "Person", kind: "reference", type: Person },
-            { name: "ClientRole", kind: "reference", type: ClientRole }
+            { name: "ClientRole", kind: "reference", type: ClientRole },
+            { name: "DimDate", kind: "reference", type: DimDate }
         ]),
 
         BillingStatu: $defineEntity(BillingStatu, [
@@ -977,7 +1010,17 @@ window.myapp = msls.application;
             { name: "Active", type: Number },
             { name: "DateSK", type: Number },
             { name: "Timesheets", kind: "collection", elementType: Timesheet },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
+            { name: "ContractorYear", type: Number },
+            { name: "ContractorMonth", type: Number },
+            { name: "ContractorPeriod", type: String },
+            { name: "BillingYear", type: String },
+            { name: "WeekEndingBillingPeriod", type: String },
+            { name: "BillingPeriodText", type: String },
+            { name: "BillingPeriod", type: Number },
+            { name: "WeekEnding", type: Date },
+            { name: "WeekEndingText", type: String }
         ]),
 
         OverallStatu: $defineEntity(OverallStatu, [
@@ -1067,7 +1110,8 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "DimDate", kind: "reference", type: DimDate },
             { name: "OverallStatus", kind: "reference", type: OverallStatu },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "PeriodEnding", type: Date }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
@@ -1229,10 +1273,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "TimesheetDetailDate", value: function () {
+                name: "TimesheetDetailDate", value: function (PeriodEndDate) {
                     return new $DataServiceQuery({ _entitySet: this.DimDates },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailDate()",
                         {
+                            PeriodEndDate: $toODataString(PeriodEndDate, "DateTime?")
                         });
                 }
             },
@@ -1240,6 +1285,14 @@ window.myapp = msls.application;
                 name: "ProjectSorted", value: function () {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectSorted()",
+                        {
+                        });
+                }
+            },
+            {
+                name: "Query1", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Query1()",
                         {
                         });
                 }

@@ -33,23 +33,47 @@ namespace LightSwitchApplication
     public partial class TimesheetsDataService
     {
         
-           
+        private string strUser = "";
+        public string UserName
+        {
+            get
+            {
+                if (strUser == "")
+                {
+                    switch(Application.User.Name)
+                    {
+                       case "TestUser":
+                          strUser = Environment.UserName;
+                          break;
+                       case "":
+                          strUser = Environment.UserName;
+                          break;
+                        default:
+                          strUser = Application.User.Name.Split('|')[2];
+                          break;
+                    }
 
+
+                }
+                return strUser;
+            }
+        }
 
 
         partial void Timesheets_Inserting(Timesheet entity)
         {
-                  
+            		
 
-            entity.sys_CreatedBy = Environment.UserName;
+
+            entity.sys_CreatedBy = UserName;
             entity.sys_CreatedOn = System.DateTime.Now;
-            entity.sys_ModifiedBy = Environment.UserName;
+            entity.sys_ModifiedBy = UserName;
             entity.sys_ModifiedOn = System.DateTime.Now;
-            entity.TimesheetPerson = Environment.UserName;
-            entity.TimesheetName = Environment.UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetCode = Environment.UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetFileName = Environment.UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetSourceKey = Environment.UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";            
+            entity.TimesheetPerson = UserName;
+            entity.TimesheetName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
+            entity.TimesheetCode = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
+            entity.TimesheetFileName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
+            entity.TimesheetSourceKey = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";            
             entity.LoadDate = System.DateTime.Now;
             entity.TimesheetDate = entity.DimDate.ToString();
             entity.TimesheetFromDateID = (from d in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
@@ -80,7 +104,8 @@ namespace LightSwitchApplication
 
         partial void TimesheetsUser_PreprocessQuery(DateTime? StartDate, DateTime? EndDate, ref IQueryable<Timesheet> query)
         {
-            string TimesheetPerson = Environment.UserName;
+            
+            string TimesheetPerson = UserName;
 
             if (StartDate == null)
             {
@@ -110,11 +135,16 @@ namespace LightSwitchApplication
                 }
             }
 
+           
+
+            
+   
+            
         }
 
         partial void TimesheetDetailDate_PreprocessQuery(DateTime? PeriodEndDate, ref IQueryable<DimDate> query)
         {
-
+            
         }
 
         

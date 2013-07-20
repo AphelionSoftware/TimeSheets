@@ -218,7 +218,7 @@
     <Compile Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserCode\PWTimesheetsDataService.cs" />
+    <Compile Include="UserCode\TimeSheets_Dev_LeoService.cs" />
     <Compile Include="UserCode\Shared\BillingDetail.cs" />
     <Compile Include="UserCode\Shared\BillingStatus.cs" />
   </ItemGroup>

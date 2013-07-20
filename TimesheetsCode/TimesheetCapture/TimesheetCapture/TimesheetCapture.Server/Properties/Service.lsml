@@ -31,6 +31,7 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
+      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <EntityType
@@ -1819,12 +1820,11 @@
       </EntityProperty>
       <EntityProperty
         Name="Comments"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="500" />
           <AnsiConstraint />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -3963,7 +3963,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="7a77347d-416d-49fc-bec3-28651313b7de" />
+        Value="d3e609db-aeca-44d9-a074-ed6a861d9407" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4990,7 +4990,7 @@
         <SsdlProperty
           MaxLength="500"
           Name="Comments"
-          Nullable="False"
+          Nullable="True"
           Type="varchar"
           Property="TimesheetDetail/Properties[Comments]" />
         <SsdlProperty

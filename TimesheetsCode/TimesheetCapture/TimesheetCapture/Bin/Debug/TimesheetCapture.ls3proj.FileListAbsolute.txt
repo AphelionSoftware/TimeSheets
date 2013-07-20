@@ -429,3 +429,6 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\Generated\resources.js
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.LightSwitch.Server.SharePoint.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.SharePoint.Client.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.SharePoint.Client.Runtime.dll

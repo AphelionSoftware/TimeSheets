@@ -27,6 +27,9 @@
         /// <field name="TimesheetEndDate" type="Date">
         /// Gets or sets the timesheetEndDate for this screen.
         /// </field>
+        /// <field name="VersionInfo" type="String">
+        /// Gets or sets the versionInfo for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.BrowseTimesheets.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -49,11 +52,11 @@
         /// <field name="Timesheet" type="msls.application.Timesheet">
         /// Gets or sets the timesheet for this screen.
         /// </field>
-        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetails for this screen.
-        /// </field>
         /// <field name="TimesheetDate" type="msls.VisualCollection" elementType="msls.application.DimDate">
         /// Gets the timesheetDate for this screen.
+        /// </field>
+        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetails for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheet.Details">
         /// Gets the details for this screen.
@@ -86,6 +89,15 @@
         /// <field name="ProjectSorted" type="msls.VisualCollection" elementType="msls.application.Project">
         /// Gets the projectSorted for this screen.
         /// </field>
+        /// <field name="TimesheetID" type="msls.application.Timesheet">
+        /// Gets or sets the timesheetID for this screen.
+        /// </field>
+        /// <field name="PeriodEndDate" type="Date">
+        /// Gets or sets the periodEndDate for this screen.
+        /// </field>
+        /// <field name="TypeOfWorks" type="msls.VisualCollection" elementType="msls.application.TypeOfWork">
+        /// Gets the typeOfWorks for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheetDetail.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -101,16 +113,24 @@
             {
                 name: "Timesheets", kind: "collection", elementType: lightSwitchApplication.Timesheet,
                 createQuery: function (StartDate, EndDate) {
-                    return this.dataWorkspace.TimesheetsData.TimesheetsUser(StartDate, EndDate).expand("ActiveType").expand("DimDate").expand("OverallStatus");
+                    return this.dataWorkspace.TimesheetsData.TimesheetsUser(StartDate, EndDate).orderByDescending("TimesheetDate").expand("ActiveType").expand("DimDate").expand("OverallStatus");
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },
-            { name: "TimesheetEndDate", kind: "local", type: Date }
+            { name: "TimesheetEndDate", kind: "local", type: Date },
+            { name: "VersionInfo", kind: "local", type: String }
         ], [
+            { name: "GetVersionInfo" }
         ]),
 
         AddEditTimesheet: $defineScreen(AddEditTimesheet, [
             { name: "Timesheet", kind: "local", type: lightSwitchApplication.Timesheet },
+            {
+                name: "TimesheetDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDate();
+                }
+            },
             {
                 name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
                 getNavigationProperty: function () {
@@ -120,13 +140,7 @@
                     return null;
                 },
                 appendQuery: function () {
-                    return this.expand("Project");
-                }
-            },
-            {
-                name: "TimesheetDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDate();
+                    return this.expand("DimDate").expand("Project").expand("TypeOfWork");
                 }
             }
         ], [
@@ -142,14 +156,22 @@
             },
             {
                 name: "TimesheetDetailDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate();
+                createQuery: function (PeriodEndDate) {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEndDate);
                 }
             },
             {
                 name: "ProjectSorted", kind: "collection", elementType: lightSwitchApplication.Project,
                 createQuery: function () {
                     return this.dataWorkspace.TimesheetsData.ProjectSorted();
+                }
+            },
+            { name: "TimesheetID", kind: "local", type: lightSwitchApplication.Timesheet },
+            { name: "PeriodEndDate", kind: "local", type: Date },
+            {
+                name: "TypeOfWorks", kind: "collection", elementType: lightSwitchApplication.TypeOfWork,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.TypeOfWorks.orderBy("TypeOfWorkName");
                 }
             }
         ], [
@@ -179,7 +201,7 @@
             return lightSwitchApplication.showScreen("AddEditTimesheet", parameters, options);
         }),
 
-        showAddEditTimesheetDetail: $defineShowScreen(function showAddEditTimesheetDetail(TimesheetDetail, options) {
+        showAddEditTimesheetDetail: $defineShowScreen(function showAddEditTimesheetDetail(TimesheetDetail, PeriodEndDate, options) {
             /// <summary>
             /// Asynchronously navigates forward to the AddEditTimesheetDetail screen.
             /// </summary>
@@ -187,7 +209,7 @@
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            var parameters = Array.prototype.slice.call(arguments, 0, 2);
             return lightSwitchApplication.showScreen("AddEditTimesheetDetail", parameters, options);
         })
 

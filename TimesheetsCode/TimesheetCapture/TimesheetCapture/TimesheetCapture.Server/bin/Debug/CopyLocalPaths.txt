@@ -15,6 +15,9 @@ C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\Microsoft.LightSw
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\Microsoft.LightSwitch.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\Microsoft.LightSwitch.Server.Host.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\Microsoft.LightSwitch.Server.Internal.dll
+C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\Microsoft.LightSwitch.Server.SharePoint.dll
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll

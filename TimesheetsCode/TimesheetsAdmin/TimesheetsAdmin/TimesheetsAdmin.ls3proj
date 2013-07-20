@@ -19,7 +19,7 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
+    <ApplicationServerType>IIS</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetsAdmin</ApplicationName>
     <AssemblyVersion>1.0.20.0</AssemblyVersion>

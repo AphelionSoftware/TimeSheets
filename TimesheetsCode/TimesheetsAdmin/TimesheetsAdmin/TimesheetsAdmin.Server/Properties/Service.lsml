@@ -22,8 +22,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="PWTimesheetsData"
-      EntityContainer="PWTimesheetsData" />
+      Name="TimeSheets_Dev_Leo"
+      EntityContainer="TimeSheets_Dev_Leo" />
   </EntityContainerGroup>
   <EntityType
     Name="BillingDetail">
@@ -652,6 +652,82 @@
         Association="FK_BillingDetail_DimDate"
         FromEnd="DimDate"
         ToEnd="BillingDetail" />
+      <EntityProperty
+        Name="ContractorYear"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ContractorMonth"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ContractorPeriod"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="11" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillingYear"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="4" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WeekEndingBillingPeriod"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillingPeriodText"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="9" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillingPeriod"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WeekEnding"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WeekEndingText"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1251,6 +1327,17 @@
         Association="FK_Timesheet_ActiveType"
         FromEnd="Timesheet"
         ToEnd="ActiveType" />
+      <EntityProperty
+        Name="PeriodEnding"
+        IsReadOnly="True"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1345,10 +1432,12 @@
       </EntityProperty>
       <EntityProperty
         Name="Comments"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
-          <MaxLength />
+          <MaxLength
+            Value="500" />
           <AnsiConstraint />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1734,7 +1823,7 @@
       EntityType="TimesheetDetail" />
   </Association>
   <EntityContainer
-    Name="PWTimesheetsData">
+    Name="TimeSheets_Dev_Leo">
     <EntitySet
       Name="BillingDetails"
       CanDelete="True"
@@ -4234,9 +4323,9 @@
       EntityType="BillingDetail" />
   </Association>
   <DataService
-    Name="PWTimesheetsDataDataService"
+    Name="TimeSheets_Dev_LeoDataService"
     DataProvider="EntityFrameworkDataProvider"
-    EntityContainer="PWTimesheetsData">
+    EntityContainer="TimeSheets_Dev_Leo">
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="DataProviderName"
@@ -4249,7 +4338,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="72dc2a64-c7c8-4a89-a201-6ce4ac8bbab5" />
+        Value="8b8a6d02-8432-43b8-99b1-d09fbf67dff4" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4740,6 +4829,56 @@
           Nullable="False"
           Type="int"
           Property="DimDate/Properties[Active]" />
+        <SsdlProperty
+          Name="ContractorYear"
+          Nullable="True"
+          Type="int"
+          Property="DimDate/Properties[ContractorYear]" />
+        <SsdlProperty
+          Name="ContractorMonth"
+          Nullable="True"
+          Type="int"
+          Property="DimDate/Properties[ContractorMonth]" />
+        <SsdlProperty
+          MaxLength="11"
+          Name="ContractorPeriod"
+          Nullable="True"
+          Type="varchar"
+          Property="DimDate/Properties[ContractorPeriod]" />
+        <SsdlProperty
+          MaxLength="4"
+          Name="BillingYear"
+          Nullable="True"
+          Type="varchar"
+          Property="DimDate/Properties[BillingYear]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="WeekEndingBillingPeriod"
+          Nullable="True"
+          Type="varchar"
+          Property="DimDate/Properties[WeekEndingBillingPeriod]" />
+        <SsdlProperty
+          MaxLength="9"
+          Name="BillingPeriodText"
+          Nullable="True"
+          Type="varchar"
+          Property="DimDate/Properties[BillingPeriodText]" />
+        <SsdlProperty
+          Name="BillingPeriod"
+          Nullable="True"
+          Type="int"
+          Property="DimDate/Properties[BillingPeriod]" />
+        <SsdlProperty
+          Name="WeekEnding"
+          Nullable="True"
+          Type="datetime"
+          Property="DimDate/Properties[WeekEnding]" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="WeekEndingText"
+          Nullable="True"
+          Type="varchar"
+          Property="DimDate/Properties[WeekEndingText]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -5222,6 +5361,12 @@
           Nullable="False"
           Type="nvarchar"
           Property="Timesheet/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          Name="PeriodEnding"
+          Nullable="True"
+          StoreGeneratedPattern="Computed"
+          Type="date"
+          Property="Timesheet/Properties[PeriodEnding]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -5288,9 +5433,10 @@
           Type="decimal"
           Property="TimesheetDetail/Properties[Hours]" />
         <SsdlProperty
+          MaxLength="500"
           Name="Comments"
-          Nullable="True"
-          Type="varchar(max)"
+          Nullable="False"
+          Type="varchar"
           Property="TimesheetDetail/Properties[Comments]" />
         <SsdlProperty
           Name="ClientComments"
@@ -5447,14 +5593,14 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_ActiveType]/Members[BillingDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_ActiveType]/Members[BillingDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5468,14 +5614,14 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_Client" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Client]/Members[Client]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Client]/Members[Client]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ClientID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Client]/Members[BillingDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Client]/Members[BillingDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailClientID" />
@@ -5489,14 +5635,14 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_DimDate" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_DimDate]/Members[DimDate]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_DimDate]/Members[DimDate]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="DateID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_DimDate]/Members[BillingDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_DimDate]/Members[BillingDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailDateID" />
@@ -5510,14 +5656,14 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_Person" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Person]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Person]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Person]/Members[BillingDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Person]/Members[BillingDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailPersonID" />
@@ -5531,14 +5677,14 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_Role" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Role1]/Members[ClientRole]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Role1]/Members[ClientRole]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ClientRoleID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingDetail_Role1]/Members[BillingDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingDetail_Role1]/Members[BillingDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailClientRoleID" />
@@ -5552,14 +5698,14 @@
         <SsdlAssociationSet
           Name="FK_BillingStatus_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingStatus_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingStatus_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_BillingStatus_ActiveType]/Members[BillingStatus]">
+          End="TimeSheets_Dev_Leo/Members[FK_BillingStatus_ActiveType]/Members[BillingStatus]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5573,14 +5719,14 @@
         <SsdlAssociationSet
           Name="FK_Client_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Client_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_Client_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Client_ActiveType]/Members[Client]">
+          End="TimeSheets_Dev_Leo/Members[FK_Client_ActiveType]/Members[Client]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5594,14 +5740,14 @@
         <SsdlAssociationSet
           Name="FK_Client_Person" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Client_Person]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_Client_Person]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Client_Person]/Members[Client]">
+          End="TimeSheets_Dev_Leo/Members[FK_Client_Person]/Members[Client]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="AccountManagerPersonID" />
@@ -5615,14 +5761,14 @@
         <SsdlAssociationSet
           Name="FK_ClientRole_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_ClientRole_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_ClientRole_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_ClientRole_ActiveType]/Members[ClientRole]">
+          End="TimeSheets_Dev_Leo/Members[FK_ClientRole_ActiveType]/Members[ClientRole]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5636,14 +5782,14 @@
         <SsdlAssociationSet
           Name="FK_Person_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Person_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_Person_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Person_ActiveType]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_Person_ActiveType]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5657,14 +5803,14 @@
         <SsdlAssociationSet
           Name="FK_Person_Role" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Person_Role1]/Members[SystemRole]">
+          End="TimeSheets_Dev_Leo/Members[FK_Person_Role1]/Members[SystemRole]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="SystemRoleID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Person_Role1]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_Person_Role1]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonSystemRoleID" />
@@ -5678,14 +5824,14 @@
         <SsdlAssociationSet
           Name="FK_Project_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_ActiveType]/Members[Project]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_ActiveType]/Members[Project]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5699,14 +5845,14 @@
         <SsdlAssociationSet
           Name="FK_Project_BillingStatus" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_BillingStatus]/Members[BillingStatus]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_BillingStatus]/Members[BillingStatus]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingStatusID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_BillingStatus]/Members[Project]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_BillingStatus]/Members[Project]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Billable" />
@@ -5720,14 +5866,14 @@
         <SsdlAssociationSet
           Name="FK_Project_Client" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_Client]/Members[Client]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_Client]/Members[Client]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ClientID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_Client]/Members[Project]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_Client]/Members[Project]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ClientID" />
@@ -5741,14 +5887,14 @@
         <SsdlAssociationSet
           Name="FK_Project_Person" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_Person]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_Person]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Project_Person]/Members[Project]">
+          End="TimeSheets_Dev_Leo/Members[FK_Project_Person]/Members[Project]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="AccountManagerPersonID" />
@@ -5762,14 +5908,14 @@
         <SsdlAssociationSet
           Name="FK_RoleType_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_RoleType_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_RoleType_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_RoleType_ActiveType]/Members[RoleType]">
+          End="TimeSheets_Dev_Leo/Members[FK_RoleType_ActiveType]/Members[RoleType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5783,14 +5929,14 @@
         <SsdlAssociationSet
           Name="FK_SystemRole_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_SystemRole_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_SystemRole_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_SystemRole_ActiveType]/Members[SystemRole]">
+          End="TimeSheets_Dev_Leo/Members[FK_SystemRole_ActiveType]/Members[SystemRole]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5804,14 +5950,14 @@
         <SsdlAssociationSet
           Name="FK_Timesheet_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Timesheet_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_Timesheet_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Timesheet_ActiveType]/Members[Timesheet]">
+          End="TimeSheets_Dev_Leo/Members[FK_Timesheet_ActiveType]/Members[Timesheet]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5825,14 +5971,14 @@
         <SsdlAssociationSet
           Name="FK_Timesheet_DimDate" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Timesheet_DimDate]/Members[DimDate]">
+          End="TimeSheets_Dev_Leo/Members[FK_Timesheet_DimDate]/Members[DimDate]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="DateID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_Timesheet_DimDate]/Members[Timesheet]">
+          End="TimeSheets_Dev_Leo/Members[FK_Timesheet_DimDate]/Members[Timesheet]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetDateID" />
@@ -5846,14 +5992,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_ActiveType]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_ActiveType]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5867,14 +6013,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_BillingStatus" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_BillingStatus]/Members[BillingStatus]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_BillingStatus]/Members[BillingStatus]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingStatusID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_BillingStatus]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_BillingStatus]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Billable" />
@@ -5888,14 +6034,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_DimDate" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_DimDate]/Members[DimDate]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_DimDate]/Members[DimDate]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="DateID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_DimDate]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_DimDate]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetDetailDateID" />
@@ -5909,14 +6055,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_Person" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Person]/Members[Person]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Person]/Members[Person]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Person]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Person]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetDetailPersonID" />
@@ -5930,14 +6076,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_Project" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Project]/Members[Project]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Project]/Members[Project]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ProjectID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Project]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Project]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetDetailProjectID" />
@@ -5951,14 +6097,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_Timesheet" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Timesheet]/Members[Timesheet]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Timesheet]/Members[Timesheet]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_Timesheet]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_Timesheet]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetID" />
@@ -5972,14 +6118,14 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_TypeOfWork" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_TypeOfWork]/Members[TypeOfWork]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_TypeOfWork]/Members[TypeOfWork]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TypeOfWorkID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TimesheetDetail_TypeOfWork]/Members[TimesheetDetail]">
+          End="TimeSheets_Dev_Leo/Members[FK_TimesheetDetail_TypeOfWork]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetTypeOfWorkID" />
@@ -5993,14 +6139,14 @@
         <SsdlAssociationSet
           Name="FK_TypeOfWork_ActiveType" />
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TypeOfWork_ActiveType]/Members[ActiveType]">
+          End="TimeSheets_Dev_Leo/Members[FK_TypeOfWork_ActiveType]/Members[ActiveType]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="ID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="PWTimesheetsData/Members[FK_TypeOfWork_ActiveType]/Members[TypeOfWork]">
+          End="TimeSheets_Dev_Leo/Members[FK_TypeOfWork_ActiveType]/Members[TypeOfWork]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />

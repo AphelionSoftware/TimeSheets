@@ -27,6 +27,9 @@
         /// <field name="TimesheetEndDate" type="Date">
         /// Gets or sets the timesheetEndDate for this screen.
         /// </field>
+        /// <field name="VersionInfo" type="String">
+        /// Gets or sets the versionInfo for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.BrowseTimesheets.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -49,11 +52,11 @@
         /// <field name="Timesheet" type="msls.application.Timesheet">
         /// Gets or sets the timesheet for this screen.
         /// </field>
-        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetails for this screen.
-        /// </field>
         /// <field name="TimesheetDate" type="msls.VisualCollection" elementType="msls.application.DimDate">
         /// Gets the timesheetDate for this screen.
+        /// </field>
+        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetails for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheet.Details">
         /// Gets the details for this screen.
@@ -114,12 +117,20 @@
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },
-            { name: "TimesheetEndDate", kind: "local", type: Date }
+            { name: "TimesheetEndDate", kind: "local", type: Date },
+            { name: "VersionInfo", kind: "local", type: String }
         ], [
+            { name: "GetVersionInfo" }
         ]),
 
         AddEditTimesheet: $defineScreen(AddEditTimesheet, [
             { name: "Timesheet", kind: "local", type: lightSwitchApplication.Timesheet },
+            {
+                name: "TimesheetDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDate();
+                }
+            },
             {
                 name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
                 getNavigationProperty: function () {
@@ -130,12 +141,6 @@
                 },
                 appendQuery: function () {
                     return this.expand("Project");
-                }
-            },
-            {
-                name: "TimesheetDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDate();
                 }
             }
         ], [

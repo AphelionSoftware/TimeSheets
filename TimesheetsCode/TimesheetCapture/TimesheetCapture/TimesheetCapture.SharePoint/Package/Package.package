@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b124afaf-04e4-44a3-9192-07afa7f58f7f" solutionId="b124afaf-04e4-44a3-9192-07afa7f58f7f" resetWebServer="false" sharePointProductVersion="15.0" name="TimesheetCapture.SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="51b999b6-fab4-4734-9872-332c80f5375b" />
+  </features>
+</package>

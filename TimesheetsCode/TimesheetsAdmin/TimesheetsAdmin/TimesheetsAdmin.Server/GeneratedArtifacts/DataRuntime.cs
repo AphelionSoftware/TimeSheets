@@ -30,15 +30,15 @@ namespace LightSwitchApplication
         #region Public Properties
     
         /// <summary>
-        /// Gets the PWTimesheetsData datasource.  This provides members to query and update data in the data source.
+        /// Gets the TimeSheets_Dev_Leo datasource.  This provides members to query and update data in the data source.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.PWTimesheetsDataService PWTimesheetsData
+        public global::LightSwitchApplication.TimeSheets_Dev_LeoService TimeSheets_Dev_Leo
         {
             get
             {
-                return global::LightSwitchApplication.DataWorkspace.DetailsClass.GetValue(this, global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.PWTimesheetsData);
+                return global::LightSwitchApplication.DataWorkspace.DetailsClass.GetValue(this, global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.TimeSheets_Dev_Leo);
             }
         }
         
@@ -55,7 +55,7 @@ namespace LightSwitchApplication
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.PWTimesheetsData;
+                var initializeEntry = global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.TimeSheets_Dev_Leo;
             }
     
             public DetailsClass() : base()
@@ -81,11 +81,11 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService> PWTimesheetsData
+                public global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService> TimeSheets_Dev_Leo
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.PWTimesheetsData) as global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService>;
+                        return base.GetItem(global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties.TimeSheets_Dev_Leo) as global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService>;
                     }
                 }
                 
@@ -98,19 +98,19 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService>.Entry
-                    PWTimesheetsData = new global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService>.Entry(
-                        "PWTimesheetsData",
-                        global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties._PWTimesheetsData_Stub);
-                private static void _PWTimesheetsData_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DataWorkspace.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService>.Data> c, global::LightSwitchApplication.DataWorkspace.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService>.Entry
+                    TimeSheets_Dev_Leo = new global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService>.Entry(
+                        "TimeSheets_Dev_Leo",
+                        global::LightSwitchApplication.DataWorkspace.DetailsClass.PropertySetProperties._TimeSheets_Dev_Leo_Stub);
+                private static void _TimeSheets_Dev_Leo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DataWorkspace.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService>.Data> c, global::LightSwitchApplication.DataWorkspace.DetailsClass d, object sf)
                 {
-                    c(d, ref d._PWTimesheetsData, sf);
+                    c(d, ref d._TimeSheets_Dev_Leo, sf);
                 }
                  
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.PWTimesheetsDataService>.Data _PWTimesheetsData;
+            private global::Microsoft.LightSwitch.Details.Framework.DataWorkspaceDataServiceProperty<global::LightSwitchApplication.DataWorkspace, global::LightSwitchApplication.DataWorkspace.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_LeoService>.Data _TimeSheets_Dev_Leo;
             
         }
     
@@ -122,11 +122,11 @@ namespace LightSwitchApplication
     #region Data Services
     
     /// <summary>
-    /// Provides members to query and update data in the PWTimesheetsData datasource.
+    /// Provides members to query and update data in the TimeSheets_Dev_Leo datasource.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class PWTimesheetsData : global::Microsoft.LightSwitch.Framework.Base.DataService<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass>
+    public class TimeSheets_Dev_Leo : global::Microsoft.LightSwitch.Framework.Base.DataService<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass>
     {
         #region Constructors
     
@@ -134,7 +134,7 @@ namespace LightSwitchApplication
         /// This constructor is used for the internal LightSwitch framework. Use DataWorkspace instead.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public PWTimesheetsData() : base()
+        public TimeSheets_Dev_Leo() : base()
         {
         }
     
@@ -151,7 +151,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.BillingDetails);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.BillingDetails);
             }
         }
         
@@ -164,7 +164,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.BillingStatusSet);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.BillingStatusSet);
             }
         }
         
@@ -177,7 +177,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Clients);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Clients);
             }
         }
         
@@ -190,7 +190,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.DimDates);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.DimDates);
             }
         }
         
@@ -203,7 +203,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.People);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.People);
             }
         }
         
@@ -216,7 +216,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Projects);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Projects);
             }
         }
         
@@ -229,7 +229,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Timesheets);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Timesheets);
             }
         }
         
@@ -242,7 +242,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.TimesheetDetails);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.TimesheetDetails);
             }
         }
         
@@ -255,7 +255,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.TypeOfWorks);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.TypeOfWorks);
             }
         }
         
@@ -268,7 +268,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.RoleTypes);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.RoleTypes);
             }
         }
         
@@ -281,7 +281,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.ClientRoles);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.ClientRoles);
             }
         }
         
@@ -294,7 +294,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.SystemRoles);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.SystemRoles);
             }
         }
         
@@ -307,7 +307,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PWTimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.ActiveTypes);
+                return global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.GetValue(this, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.ActiveTypes);
             }
         }
         
@@ -667,20 +667,20 @@ namespace LightSwitchApplication
         [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.DataServiceDetails<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySet, global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSet>
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.DataServiceDetails<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySet, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSet>
         {
     
             static DetailsClass()
             {
-                var initializeMethodEntry = global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingDetails_Single;
-                var initializePropertyEntry = global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.BillingDetails;
+                var initializeMethodEntry = global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingDetails_Single;
+                var initializePropertyEntry = global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.BillingDetails;
             }
     
             public DetailsClass() : base()
             {
             }
     
-            public new global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -688,7 +688,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -700,258 +700,258 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class MethodSet : global::Microsoft.LightSwitch.Details.Framework.Base.DataServiceMethodSet<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass>
+            public sealed class MethodSet : global::Microsoft.LightSwitch.Details.Framework.Base.DataServiceMethodSet<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass>
             {
     
                 public MethodSet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingDetails_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingDetails_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingDetails_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingDetails_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingStatusSet_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingStatusSet_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingStatusSet_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingStatusSet_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client> Clients_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client> Clients_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Clients_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Clients_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client> Clients_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client> Clients_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Clients_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Clients_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate> DimDates_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate> DimDates_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.DimDates_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.DimDates_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate> DimDates_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate> DimDates_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.DimDates_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.DimDates_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person> People_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.People_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.People_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person> People_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.People_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.People_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project> Projects_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project> Projects_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Projects_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Projects_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project> Projects_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project> Projects_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Projects_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Projects_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Timesheets_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Timesheets_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.Timesheets_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.Timesheets_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.TimesheetDetails_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.TimesheetDetails_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.TimesheetDetails_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.TimesheetDetails_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.TypeOfWorks_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.TypeOfWorks_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.TypeOfWorks_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.TypeOfWorks_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.RoleTypes_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.RoleTypes_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.RoleTypes_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.RoleTypes_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.ClientRoles_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.ClientRoles_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.ClientRoles_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.ClientRoles_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.SystemRoles_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.SystemRoles_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.SystemRoles_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.SystemRoles_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> TimesheetsByDate
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet> TimesheetsByDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.TimesheetsByDate) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.TimesheetsByDate) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.ActiveTypes_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.ActiveTypes_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.ActiveTypes_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.ActiveTypes_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person> PersonSorted
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person> PersonSorted
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.PersonSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.PersonSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate> BillingDate
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate> BillingDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.BillingDate) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.BillingDate) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client> FilteredClient
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client> FilteredClient
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.FilteredClient) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.FilteredClient) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project> ProjectsFilter
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project> ProjectsFilter
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties.ProjectsFilter) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties.ProjectsFilter) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>;
                     }
                 }
                 
@@ -961,114 +961,114 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.DataServicePropertySet<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.DataServicePropertySet<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus> BillingStatusSet
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.BillingStatusSet) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.BillingStatusSet) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client> Clients
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client> Clients
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Clients) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Clients) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate> DimDates
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate> DimDates
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.DimDates) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.DimDates) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person> People
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.People) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.People) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project> Projects
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project> Projects
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Projects) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Projects) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.Timesheets) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.Timesheets) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorks
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.TypeOfWorks) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.TypeOfWorks) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType> RoleTypes
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.RoleTypes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.RoleTypes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRoles
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.ClientRoles) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.ClientRoles) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole> SystemRoles
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.SystemRoles) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.SystemRoles) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveTypes
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties.ActiveTypes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                        return base.GetItem(global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties.ActiveTypes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>;
                     }
                 }
                 
@@ -1081,311 +1081,311 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
-                    BillingDetails_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetails_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._BillingDetails_Single_Stub);
-                private static void _BillingDetails_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._BillingDetails_Single_Stub);
+                private static void _BillingDetails_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingDetails_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
-                    BillingDetails_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetails_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._BillingDetails_SingleOrDefault_Stub);
-                private static void _BillingDetails_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._BillingDetails_SingleOrDefault_Stub);
+                private static void _BillingDetails_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingDetails_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
-                    BillingStatusSet_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
+                    BillingStatusSet_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
                         "BillingStatusSet_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._BillingStatusSet_Single_Stub);
-                private static void _BillingStatusSet_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._BillingStatusSet_Single_Stub);
+                private static void _BillingStatusSet_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingStatusSet_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
-                    BillingStatusSet_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
+                    BillingStatusSet_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
                         "BillingStatusSet_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._BillingStatusSet_SingleOrDefault_Stub);
-                private static void _BillingStatusSet_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._BillingStatusSet_SingleOrDefault_Stub);
+                private static void _BillingStatusSet_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingStatusSet_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry
-                    Clients_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry
+                    Clients_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry(
                         "Clients_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Clients_Single_Stub);
-                private static void _Clients_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Clients_Single_Stub);
+                private static void _Clients_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Clients_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry
-                    Clients_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry
+                    Clients_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry(
                         "Clients_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Clients_SingleOrDefault_Stub);
-                private static void _Clients_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Clients_SingleOrDefault_Stub);
+                private static void _Clients_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Clients_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
-                    DimDates_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
+                    DimDates_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
                         "DimDates_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._DimDates_Single_Stub);
-                private static void _DimDates_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._DimDates_Single_Stub);
+                private static void _DimDates_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._DimDates_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
-                    DimDates_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
+                    DimDates_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
                         "DimDates_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._DimDates_SingleOrDefault_Stub);
-                private static void _DimDates_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._DimDates_SingleOrDefault_Stub);
+                private static void _DimDates_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._DimDates_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    People_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry(
                         "People_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._People_Single_Stub);
-                private static void _People_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._People_Single_Stub);
+                private static void _People_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._People_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    People_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry(
                         "People_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._People_SingleOrDefault_Stub);
-                private static void _People_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._People_SingleOrDefault_Stub);
+                private static void _People_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._People_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry
-                    Projects_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    Projects_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry(
                         "Projects_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Projects_Single_Stub);
-                private static void _Projects_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Projects_Single_Stub);
+                private static void _Projects_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Projects_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry
-                    Projects_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    Projects_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry(
                         "Projects_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Projects_SingleOrDefault_Stub);
-                private static void _Projects_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Projects_SingleOrDefault_Stub);
+                private static void _Projects_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Projects_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
-                    Timesheets_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    Timesheets_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "Timesheets_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Timesheets_Single_Stub);
-                private static void _Timesheets_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Timesheets_Single_Stub);
+                private static void _Timesheets_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Timesheets_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
-                    Timesheets_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    Timesheets_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "Timesheets_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._Timesheets_SingleOrDefault_Stub);
-                private static void _Timesheets_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._Timesheets_SingleOrDefault_Stub);
+                private static void _Timesheets_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Timesheets_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
-                    TimesheetDetails_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
+                    TimesheetDetails_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
                         "TimesheetDetails_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._TimesheetDetails_Single_Stub);
-                private static void _TimesheetDetails_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._TimesheetDetails_Single_Stub);
+                private static void _TimesheetDetails_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TimesheetDetails_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
-                    TimesheetDetails_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
+                    TimesheetDetails_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
                         "TimesheetDetails_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._TimesheetDetails_SingleOrDefault_Stub);
-                private static void _TimesheetDetails_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._TimesheetDetails_SingleOrDefault_Stub);
+                private static void _TimesheetDetails_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TimesheetDetails_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
-                    TypeOfWorks_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
+                    TypeOfWorks_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
                         "TypeOfWorks_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._TypeOfWorks_Single_Stub);
-                private static void _TypeOfWorks_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._TypeOfWorks_Single_Stub);
+                private static void _TypeOfWorks_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TypeOfWorks_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
-                    TypeOfWorks_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
+                    TypeOfWorks_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
                         "TypeOfWorks_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._TypeOfWorks_SingleOrDefault_Stub);
-                private static void _TypeOfWorks_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._TypeOfWorks_SingleOrDefault_Stub);
+                private static void _TypeOfWorks_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TypeOfWorks_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
-                    RoleTypes_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
+                    RoleTypes_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
                         "RoleTypes_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._RoleTypes_Single_Stub);
-                private static void _RoleTypes_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._RoleTypes_Single_Stub);
+                private static void _RoleTypes_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._RoleTypes_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
-                    RoleTypes_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
+                    RoleTypes_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
                         "RoleTypes_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._RoleTypes_SingleOrDefault_Stub);
-                private static void _RoleTypes_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._RoleTypes_SingleOrDefault_Stub);
+                private static void _RoleTypes_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._RoleTypes_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
-                    ClientRoles_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
+                    ClientRoles_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
                         "ClientRoles_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._ClientRoles_Single_Stub);
-                private static void _ClientRoles_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._ClientRoles_Single_Stub);
+                private static void _ClientRoles_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ClientRoles_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
-                    ClientRoles_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
+                    ClientRoles_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
                         "ClientRoles_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._ClientRoles_SingleOrDefault_Stub);
-                private static void _ClientRoles_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._ClientRoles_SingleOrDefault_Stub);
+                private static void _ClientRoles_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ClientRoles_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
-                    SystemRoles_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
+                    SystemRoles_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
                         "SystemRoles_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._SystemRoles_Single_Stub);
-                private static void _SystemRoles_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._SystemRoles_Single_Stub);
+                private static void _SystemRoles_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._SystemRoles_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
-                    SystemRoles_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
+                    SystemRoles_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
                         "SystemRoles_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._SystemRoles_SingleOrDefault_Stub);
-                private static void _SystemRoles_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._SystemRoles_SingleOrDefault_Stub);
+                private static void _SystemRoles_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._SystemRoles_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
-                    TimesheetsByDate = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    TimesheetsByDate = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "TimesheetsByDate",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._TimesheetsByDate_Stub);
-                private static void _TimesheetsByDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._TimesheetsByDate_Stub);
+                private static void _TimesheetsByDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TimesheetsByDate, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
-                    ActiveTypes_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveTypes_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveTypes_Single",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._ActiveTypes_Single_Stub);
-                private static void _ActiveTypes_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._ActiveTypes_Single_Stub);
+                private static void _ActiveTypes_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ActiveTypes_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
-                    ActiveTypes_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveTypes_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveTypes_SingleOrDefault",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._ActiveTypes_SingleOrDefault_Stub);
-                private static void _ActiveTypes_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._ActiveTypes_SingleOrDefault_Stub);
+                private static void _ActiveTypes_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ActiveTypes_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    PersonSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    PersonSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry(
                         "PersonSorted",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._PersonSorted_Stub);
-                private static void _PersonSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._PersonSorted_Stub);
+                private static void _PersonSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._PersonSorted, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
-                    BillingDate = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
+                    BillingDate = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
                         "BillingDate",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._BillingDate_Stub);
-                private static void _BillingDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._BillingDate_Stub);
+                private static void _BillingDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingDate, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry
-                    FilteredClient = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry
+                    FilteredClient = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry(
                         "FilteredClient",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._FilteredClient_Stub);
-                private static void _FilteredClient_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._FilteredClient_Stub);
+                private static void _FilteredClient_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._FilteredClient, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry
-                    ProjectsFilter = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    ProjectsFilter = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry(
                         "ProjectsFilter",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.MethodSetProperties._ProjectsFilter_Stub);
-                private static void _ProjectsFilter_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.MethodSetProperties._ProjectsFilter_Stub);
+                private static void _ProjectsFilter_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ProjectsFilter, sf);
                 }
@@ -1399,131 +1399,131 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
-                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._BillingDetails_Stub);
-                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._BillingDetails_Stub);
+                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingDetails, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
-                    BillingStatusSet = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry
+                    BillingStatusSet = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Entry(
                         "BillingStatusSet",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._BillingStatusSet_Stub);
-                private static void _BillingStatusSet_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._BillingStatusSet_Stub);
+                private static void _BillingStatusSet_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingStatusSet, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry
-                    Clients = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry
+                    Clients = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Entry(
                         "Clients",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._Clients_Stub);
-                private static void _Clients_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._Clients_Stub);
+                private static void _Clients_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Clients, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
-                    DimDates = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
+                    DimDates = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
                         "DimDates",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._DimDates_Stub);
-                private static void _DimDates_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._DimDates_Stub);
+                private static void _DimDates_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._DimDates, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    People = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Entry(
                         "People",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._People_Stub);
-                private static void _People_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._People_Stub);
+                private static void _People_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._People, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry
-                    Projects = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    Projects = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Entry(
                         "Projects",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._Projects_Stub);
-                private static void _Projects_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._Projects_Stub);
+                private static void _Projects_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Projects, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
-                    Timesheets = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    Timesheets = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "Timesheets",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._Timesheets_Stub);
-                private static void _Timesheets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._Timesheets_Stub);
+                private static void _Timesheets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._Timesheets, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
-                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
+                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
                         "TimesheetDetails",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._TimesheetDetails_Stub);
-                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._TimesheetDetails_Stub);
+                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TimesheetDetails, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
-                    TypeOfWorks = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
+                    TypeOfWorks = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
                         "TypeOfWorks",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._TypeOfWorks_Stub);
-                private static void _TypeOfWorks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._TypeOfWorks_Stub);
+                private static void _TypeOfWorks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._TypeOfWorks, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
-                    RoleTypes = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry
+                    RoleTypes = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Entry(
                         "RoleTypes",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._RoleTypes_Stub);
-                private static void _RoleTypes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._RoleTypes_Stub);
+                private static void _RoleTypes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._RoleTypes, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
-                    ClientRoles = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
+                    ClientRoles = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
                         "ClientRoles",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._ClientRoles_Stub);
-                private static void _ClientRoles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._ClientRoles_Stub);
+                private static void _ClientRoles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ClientRoles, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
-                    SystemRoles = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry
+                    SystemRoles = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Entry(
                         "SystemRoles",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._SystemRoles_Stub);
-                private static void _SystemRoles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._SystemRoles_Stub);
+                private static void _SystemRoles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._SystemRoles, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
-                    ActiveTypes = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveTypes = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveTypes",
-                        global::LightSwitchApplication.PWTimesheetsData.DetailsClass.PropertySetProperties._ActiveTypes_Stub);
-                private static void _ActiveTypes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.PWTimesheetsData.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass.PropertySetProperties._ActiveTypes_Stub);
+                private static void _ActiveTypes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass d, object sf)
                 {
                     c(d, ref d._ActiveTypes, sf);
                 }
@@ -1531,136 +1531,136 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data _People;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.BillingStatus>.Data _BillingStatusSet_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data _Clients_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDates_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data _People_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data _People_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.RoleType>.Data _RoleTypes_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRoles_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.SystemRole>.Data _SystemRoles_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _TimesheetsByDate;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _TimesheetsByDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _PersonSorted;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Person>.Data _PersonSorted;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.DimDate>.Data _BillingDate;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.DimDate>.Data _BillingDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Client>.Data _FilteredClient;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Client>.Data _FilteredClient;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.PWTimesheetsData, global::LightSwitchApplication.PWTimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _ProjectsFilter;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimeSheets_Dev_Leo, global::LightSwitchApplication.TimeSheets_Dev_Leo.DetailsClass, global::LightSwitchApplication.Project>.Data _ProjectsFilter;
             
         }
     

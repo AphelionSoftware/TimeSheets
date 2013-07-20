@@ -1,0 +1,776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="BillingDetail">
+    <Key>
+      <PropertyRef Name="BillingDetailID" />
+    </Key>
+    <Property Name="BillingDetailID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillingDetailSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Rate" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="BillingDetailClientID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingDetailPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingDetailClientRoleID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingDetailDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="Client" FromRole="BillingDetail" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_BillingDetail_Person" ToRole="Person" FromRole="BillingDetail" />
+    <NavigationProperty Name="ClientRole" Relationship="LightSwitchApplication.FK_BillingDetail_Role1" ToRole="ClientRole" FromRole="BillingDetail" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_BillingDetail_ActiveType" ToRole="ActiveType" FromRole="BillingDetail" />
+    <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_BillingDetail_DimDate" ToRole="DimDate" FromRole="BillingDetail" />
+  </EntityType>
+  <EntityType Name="BillingStatus">
+    <Key>
+      <PropertyRef Name="BillingStatusID" />
+    </Key>
+    <Property Name="BillingStatusName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingStatusID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BillingStatusSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="BillingStatusCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.BillingStatus_Project" ToRole="Project" FromRole="BillingStatus" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.BillingStatus_TimesheetDetail" ToRole="TimesheetDetail" FromRole="BillingStatus" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_BillingStatus_ActiveType" ToRole="ActiveType" FromRole="BillingStatus" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ClientID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ClientCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="AccountManagerPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="BillingDetail" FromRole="Client" />
+    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_Client" ToRole="Project" FromRole="Client" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_Client_Person" ToRole="Person" FromRole="Client" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Client_ActiveType" ToRole="ActiveType" FromRole="Client" />
+  </EntityType>
+  <EntityType Name="DimDate">
+    <Key>
+      <PropertyRef Name="DateID" />
+    </Key>
+    <Property Name="StandardDate" Type="Edm.String" MaxLength="10" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="DateID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="c_Date" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Day" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DaySuffix" Type="Edm.String" Nullable="false" MaxLength="4" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="DayOfWeek" Type="Edm.String" Nullable="false" MaxLength="9" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="DOWInMonth" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DayOfYear" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="WeekOfYear" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="WeekOfMonth" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="MonthNumber" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="MonthName" Type="Edm.String" Nullable="false" MaxLength="9" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Quarter" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="QuarterName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="YearName" Type="Edm.String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="YearNumber" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="IsPublicHoliday" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="HolidayText" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="DateSK" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ContractorYear" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ContractorMonth" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="ContractorPeriod" Type="Edm.String" MaxLength="11" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingYear" Type="Edm.String" MaxLength="4" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="WeekEndingBillingPeriod" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingPeriodText" Type="Edm.String" MaxLength="9" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingPeriod" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="WeekEnding" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="WeekEndingText" Type="Edm.String" MaxLength="10" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="TimesheetDetail" FromRole="DimDate" />
+    <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="Timesheet" FromRole="DimDate" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_DimDate" ToRole="BillingDetail" FromRole="DimDate" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="PersonID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="PersonCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="BillingPercentTarget" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="BillingPercentMinimum" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Email" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="HourlyCost" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="MonthlyCost" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="IsContractor" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Billable" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="ADUsername" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="PersonSystemRoleID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Person" ToRole="BillingDetail" FromRole="Person" />
+    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_Person" ToRole="Project" FromRole="Person" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Person" ToRole="TimesheetDetail" FromRole="Person" />
+    <NavigationProperty Name="SystemRole" Relationship="LightSwitchApplication.FK_Person_Role1" ToRole="SystemRole" FromRole="Person" />
+    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_Person" ToRole="Client" FromRole="Person" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Person_ActiveType" ToRole="ActiveType" FromRole="Person" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ProjectSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ProjectCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="ProjectFirstPersonName" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ProjectFirstFilename" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ConsultingEstimate" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="SoftwareEstimate" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="VMEstimate" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="ProjectCap" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="AdminProject" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Billable" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ClientID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="AccountManagerPersonID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="BillingStatus" Relationship="LightSwitchApplication.BillingStatus_Project" ToRole="BillingStatus" FromRole="Project" />
+    <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_Project_Client" ToRole="Client" FromRole="Project" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_Project_Person" ToRole="Person" FromRole="Project" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Project" ToRole="TimesheetDetail" FromRole="Project" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Project_ActiveType" ToRole="ActiveType" FromRole="Project" />
+  </EntityType>
+  <EntityType Name="Timesheet">
+    <Key>
+      <PropertyRef Name="TimesheetID" />
+    </Key>
+    <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetName" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetCode" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetFromDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetToDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetPerson" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDate" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="PeriodEnding" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="TimesheetDetail" FromRole="Timesheet" />
+    <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="DimDate" FromRole="Timesheet" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="ActiveType" FromRole="Timesheet" />
+  </EntityType>
+  <EntityType Name="TimesheetDetail">
+    <Key>
+      <PropertyRef Name="TimesheetDetailID" />
+    </Key>
+    <Property Name="TimesheetDetailID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetDetailSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Hours" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
+    <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ClientComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="AMComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Exclude" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="LastUpdateDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailProjectID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetTypeOfWorkID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Billable" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="DimDate" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_TimesheetDetail_Person" ToRole="Person" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="Project" Relationship="LightSwitchApplication.FK_TimesheetDetail_Project" ToRole="Project" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="Timesheet" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="Timesheet" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="TypeOfWork" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TypeOfWork" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="BillingStatus" Relationship="LightSwitchApplication.BillingStatus_TimesheetDetail" ToRole="BillingStatus" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="ActiveType" FromRole="TimesheetDetail" />
+  </EntityType>
+  <EntityType Name="TypeOfWork">
+    <Key>
+      <PropertyRef Name="TypeOfWorkID" />
+    </Key>
+    <Property Name="TypeOfWorkID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeOfWorkName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="TypeOfWorkSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="TypeOfWorkCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TimesheetDetail" FromRole="TypeOfWork" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TypeOfWork_ActiveType" ToRole="ActiveType" FromRole="TypeOfWork" />
+  </EntityType>
+  <EntityType Name="RoleType">
+    <Key>
+      <PropertyRef Name="RoleTypeID" />
+    </Key>
+    <Property Name="RoleTypeID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleTypeName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="RoleTypeSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="RoleTypeCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_RoleType_ActiveType" ToRole="ActiveType" FromRole="RoleType" />
+  </EntityType>
+  <EntityType Name="ClientRole">
+    <Key>
+      <PropertyRef Name="ClientRoleID" />
+    </Key>
+    <Property Name="ClientRoleName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ClientRoleID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientRoleSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ClientRoleCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Role1" ToRole="BillingDetail" FromRole="ClientRole" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_ClientRole_ActiveType" ToRole="ActiveType" FromRole="ClientRole" />
+  </EntityType>
+  <EntityType Name="SystemRole">
+    <Key>
+      <PropertyRef Name="SystemRoleID" />
+    </Key>
+    <Property Name="SystemRoleID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemRoleName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="SystemRoleSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="SystemRoleCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="People" Relationship="LightSwitchApplication.FK_Person_Role1" ToRole="Person" FromRole="SystemRole" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_SystemRole_ActiveType" ToRole="ActiveType" FromRole="SystemRole" />
+  </EntityType>
+  <EntityType Name="ActiveType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Code" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_ActiveType" ToRole="BillingDetail" FromRole="ActiveType" />
+    <NavigationProperty Name="BillingStatus" Relationship="LightSwitchApplication.FK_BillingStatus_ActiveType" ToRole="BillingStatus" FromRole="ActiveType" />
+    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_ActiveType" ToRole="Client" FromRole="ActiveType" />
+    <NavigationProperty Name="ClientRoles" Relationship="LightSwitchApplication.FK_ClientRole_ActiveType" ToRole="ClientRole" FromRole="ActiveType" />
+    <NavigationProperty Name="People" Relationship="LightSwitchApplication.FK_Person_ActiveType" ToRole="Person" FromRole="ActiveType" />
+    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_ActiveType" ToRole="Project" FromRole="ActiveType" />
+    <NavigationProperty Name="RoleTypes" Relationship="LightSwitchApplication.FK_RoleType_ActiveType" ToRole="RoleType" FromRole="ActiveType" />
+    <NavigationProperty Name="SystemRoles" Relationship="LightSwitchApplication.FK_SystemRole_ActiveType" ToRole="SystemRole" FromRole="ActiveType" />
+    <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="Timesheet" FromRole="ActiveType" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="TimesheetDetail" FromRole="ActiveType" />
+    <NavigationProperty Name="TypeOfWorks" Relationship="LightSwitchApplication.FK_TypeOfWork_ActiveType" ToRole="TypeOfWork" FromRole="ActiveType" />
+  </EntityType>
+  <Association Name="FK_BillingDetail_Client">
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="1" />
+    <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Person">
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+    <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BillingStatus_Project">
+    <End Role="BillingStatus" Type="LightSwitchApplication.BillingStatus" Multiplicity="1" />
+    <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillingStatus">
+        <PropertyRef Name="BillingStatusID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Billable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Client">
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="1" />
+    <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Person">
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="0..1" />
+    <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_DimDate">
+    <End Role="DimDate" Type="LightSwitchApplication.DimDate" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Person">
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Project">
+    <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ProjectID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetDetailProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_Timesheet">
+    <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Timesheet">
+        <PropertyRef Name="TimesheetID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_TypeOfWork">
+    <End Role="TypeOfWork" Type="LightSwitchApplication.TypeOfWork" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeOfWork">
+        <PropertyRef Name="TypeOfWorkID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="TimesheetTypeOfWorkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BillingStatus_TimesheetDetail">
+    <End Role="BillingStatus" Type="LightSwitchApplication.BillingStatus" Multiplicity="0..1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillingStatus">
+        <PropertyRef Name="BillingStatusID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Billable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Role1">
+    <End Role="ClientRole" Type="LightSwitchApplication.ClientRole" Multiplicity="0..1" />
+    <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientRole">
+        <PropertyRef Name="ClientRoleID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Role1">
+    <End Role="SystemRole" Type="LightSwitchApplication.SystemRole" Multiplicity="0..1" />
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemRole">
+        <PropertyRef Name="SystemRoleID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="PersonSystemRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_Person">
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Timesheet_DimDate">
+    <End Role="DimDate" Type="LightSwitchApplication.DimDate" Multiplicity="1" />
+    <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingStatus_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="BillingStatus" Type="LightSwitchApplication.BillingStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BillingStatus">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientRole_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="ClientRole" Type="LightSwitchApplication.ClientRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ClientRole">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleType_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="RoleType" Type="LightSwitchApplication.RoleType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RoleType">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SystemRole_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="SystemRole" Type="LightSwitchApplication.SystemRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SystemRole">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Timesheet_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypeOfWork_ActiveType">
+    <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
+    <End Role="TypeOfWork" Type="LightSwitchApplication.TypeOfWork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TypeOfWork">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_DimDate">
+    <End Role="DimDate" Type="LightSwitchApplication.DimDate" Multiplicity="1" />
+    <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TimeSheets_Dev_Leo" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="BillingDetails" EntityType="LightSwitchApplication.BillingDetail" />
+    <EntitySet Name="BillingStatusSet" EntityType="LightSwitchApplication.BillingStatus" />
+    <EntitySet Name="Clients" EntityType="LightSwitchApplication.Client" />
+    <EntitySet Name="DimDates" EntityType="LightSwitchApplication.DimDate" />
+    <EntitySet Name="People" EntityType="LightSwitchApplication.Person" />
+    <EntitySet Name="Projects" EntityType="LightSwitchApplication.Project" />
+    <EntitySet Name="Timesheets" EntityType="LightSwitchApplication.Timesheet" />
+    <EntitySet Name="TimesheetDetails" EntityType="LightSwitchApplication.TimesheetDetail" />
+    <EntitySet Name="TypeOfWorks" EntityType="LightSwitchApplication.TypeOfWork" />
+    <EntitySet Name="RoleTypes" EntityType="LightSwitchApplication.RoleType" />
+    <EntitySet Name="ClientRoles" EntityType="LightSwitchApplication.ClientRole" />
+    <EntitySet Name="SystemRoles" EntityType="LightSwitchApplication.SystemRole" />
+    <EntitySet Name="ActiveTypes" EntityType="LightSwitchApplication.ActiveType" />
+    <AssociationSet Name="FK_BillingDetail_Client" Association="LightSwitchApplication.FK_BillingDetail_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Person" Association="LightSwitchApplication.FK_BillingDetail_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="BillingStatus_Project" Association="LightSwitchApplication.BillingStatus_Project">
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Client" Association="LightSwitchApplication.FK_Project_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Person" Association="LightSwitchApplication.FK_Project_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_DimDate" Association="LightSwitchApplication.FK_TimesheetDetail_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Person" Association="LightSwitchApplication.FK_TimesheetDetail_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Project" Association="LightSwitchApplication.FK_TimesheetDetail_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_Timesheet" Association="LightSwitchApplication.FK_TimesheetDetail_Timesheet">
+      <End Role="Timesheet" EntitySet="Timesheets" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_TypeOfWork" Association="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork">
+      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="BillingStatus_TimesheetDetail" Association="LightSwitchApplication.BillingStatus_TimesheetDetail">
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Role1" Association="LightSwitchApplication.FK_BillingDetail_Role1">
+      <End Role="ClientRole" EntitySet="ClientRoles" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Role1" Association="LightSwitchApplication.FK_Person_Role1">
+      <End Role="SystemRole" EntitySet="SystemRoles" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_Person" Association="LightSwitchApplication.FK_Client_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_DimDate" Association="LightSwitchApplication.FK_Timesheet_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_ActiveType" Association="LightSwitchApplication.FK_BillingDetail_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingStatus_ActiveType" Association="LightSwitchApplication.FK_BillingStatus_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="BillingStatus" EntitySet="BillingStatusSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_ActiveType" Association="LightSwitchApplication.FK_Client_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientRole_ActiveType" Association="LightSwitchApplication.FK_ClientRole_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="ClientRole" EntitySet="ClientRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_ActiveType" Association="LightSwitchApplication.FK_Person_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_ActiveType" Association="LightSwitchApplication.FK_Project_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleType_ActiveType" Association="LightSwitchApplication.FK_RoleType_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="RoleType" EntitySet="RoleTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SystemRole_ActiveType" Association="LightSwitchApplication.FK_SystemRole_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="SystemRole" EntitySet="SystemRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_ActiveType" Association="LightSwitchApplication.FK_Timesheet_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TimesheetDetail_ActiveType" Association="LightSwitchApplication.FK_TimesheetDetail_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TypeOfWork_ActiveType" Association="LightSwitchApplication.FK_TypeOfWork_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_DimDate" Association="LightSwitchApplication.FK_BillingDetail_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

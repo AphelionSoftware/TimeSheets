@@ -188,3 +188,6 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\TimesheetCapture.Server.csprojResolveAssemblyReference.cache
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\Application.Server.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\Application.Server.pdb
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Debug\Microsoft.LightSwitch.Server.SharePoint.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Debug\Microsoft.SharePoint.Client.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll

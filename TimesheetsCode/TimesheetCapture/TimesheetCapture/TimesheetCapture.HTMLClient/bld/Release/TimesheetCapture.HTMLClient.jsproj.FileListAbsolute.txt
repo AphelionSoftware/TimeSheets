@@ -1,2 +1,4 @@
 D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
 D:\Dropbox\PWSAGeneral\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs

@@ -1,0 +1,4 @@
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Debug\TimesheetCapture.SharePoint.pdb
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.pdb
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.csprojResolveAssemblyReference.cache

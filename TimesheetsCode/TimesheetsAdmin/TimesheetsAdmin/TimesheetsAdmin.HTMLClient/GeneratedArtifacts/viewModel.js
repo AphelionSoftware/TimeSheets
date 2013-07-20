@@ -449,7 +449,7 @@
             {
                 name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.TimesheetDetails.filter("Project/Client/ClientCode eq 'Capitec'").orderBy("DimDate/DateID").thenBy("Person/PersonName").expand("DimDate").expand("Person").expand("Project").expand("Timesheet").expand("TypeOfWork");
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.TimesheetDetails.filter("Project/Client/ClientCode eq 'Capitec'").orderBy("DimDate/DateID").thenBy("Person/PersonName").expand("DimDate").expand("Person").expand("Project").expand("Timesheet").expand("TypeOfWork");
                 }
             }
         ], [
@@ -464,7 +464,7 @@
             {
                 name: "Clients", kind: "collection", elementType: lightSwitchApplication.Client,
                 createQuery: function (ClientName) {
-                    return this.dataWorkspace.PWTimesheetsData.FilteredClient(ClientName);
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.FilteredClient(ClientName);
                 }
             },
             { name: "ClientClientName", kind: "local", type: String }
@@ -500,7 +500,7 @@
             {
                 name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.PersonSorted();
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.PersonSorted();
                 }
             }
         ], [
@@ -510,7 +510,7 @@
             {
                 name: "BillingDetails", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
                 }
             }
         ], [
@@ -520,7 +520,7 @@
             {
                 name: "BillingStatus", kind: "collection", elementType: lightSwitchApplication.BillingStatus,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.BillingStatusSet;
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.BillingStatusSet;
                 }
             }
         ], [
@@ -530,7 +530,7 @@
             {
                 name: "People", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.People.filter("ActiveType/ID eq 1").orderBy("PersonName");
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.People.filter("ActiveType/ID eq 1").orderBy("PersonName");
                 }
             }
         ], [
@@ -540,7 +540,7 @@
             {
                 name: "Timesheets", kind: "collection", elementType: lightSwitchApplication.Timesheet,
                 createQuery: function (StartDate, EndDate, TimesheetPerson) {
-                    return this.dataWorkspace.PWTimesheetsData.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },
@@ -553,7 +553,7 @@
             {
                 name: "TypeOfWorks", kind: "collection", elementType: lightSwitchApplication.TypeOfWork,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.TypeOfWorks;
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.TypeOfWorks;
                 }
             }
         ], [
@@ -564,13 +564,13 @@
             {
                 name: "BillingDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.BillingDate();
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.BillingDate();
                 }
             },
             {
                 name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.PersonSorted();
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.PersonSorted();
                 }
             }
         ], [
@@ -612,7 +612,7 @@
             {
                 name: "ClientRoles", kind: "collection", elementType: lightSwitchApplication.ClientRole,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.ClientRoles;
+                    return this.dataWorkspace.TimeSheets_Dev_Leo.ClientRoles;
                 }
             }
         ], [

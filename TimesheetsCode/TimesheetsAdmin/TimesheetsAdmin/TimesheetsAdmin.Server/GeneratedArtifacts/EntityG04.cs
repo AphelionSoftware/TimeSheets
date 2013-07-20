@@ -655,6 +655,222 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> ContractorYear
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorYear_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorYear_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> ContractorMonth
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorMonth_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorMonth_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorMonth_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ContractorPeriod
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorPeriod_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContractorPeriod_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string BillingYear
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingYear_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingYear_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string WeekEndingBillingPeriod
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingBillingPeriod_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingBillingPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingBillingPeriod_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string BillingPeriodText
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriodText_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriodText_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriodText_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> BillingPeriod
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriod_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingPeriod_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> WeekEnding
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEnding_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEnding_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEnding_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string WeekEndingText
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText);
+            }
+            set
+            {
+                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingText_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingText_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void WeekEndingText_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
         {
             get
@@ -993,6 +1209,78 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> ContractorYear
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> ContractorMonth
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> ContractorPeriod
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> BillingYear
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> WeekEndingBillingPeriod
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> BillingPeriodText
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> BillingPeriod
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>> WeekEnding
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> WeekEndingText
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
                 {
                     get
@@ -1047,6 +1335,15 @@ namespace LightSwitchApplication
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
                 new int Active { get; set; }
+                new global::System.Nullable<int> ContractorYear { get; set; }
+                new global::System.Nullable<int> ContractorMonth { get; set; }
+                new string ContractorPeriod { get; set; }
+                new string BillingYear { get; set; }
+                new string WeekEndingBillingPeriod { get; set; }
+                new string BillingPeriodText { get; set; }
+                new global::System.Nullable<int> BillingPeriod { get; set; }
+                new global::System.Nullable<global::System.DateTime> WeekEnding { get; set; }
+                new string WeekEndingText { get; set; }
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
                 new global::System.Collections.IEnumerable Timesheets { get; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
@@ -1944,6 +2241,339 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
+                    ContractorYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "ContractorYear",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_OnValueChanged);
+                private static void _ContractorYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ContractorYear, sf);
+                }
+                private static bool _ContractorYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.ContractorYear_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ContractorYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ContractorYear_Validate(r);
+                }
+                private static global::System.Nullable<int> _ContractorYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ContractorYear;
+                }
+                private static void _ContractorYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.ContractorYear = v;
+                }
+                private static void _ContractorYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.ContractorYear_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
+                    ContractorMonth = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "ContractorMonth",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_OnValueChanged);
+                private static void _ContractorMonth_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ContractorMonth, sf);
+                }
+                private static bool _ContractorMonth_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.ContractorMonth_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ContractorMonth_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ContractorMonth_Validate(r);
+                }
+                private static global::System.Nullable<int> _ContractorMonth_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ContractorMonth;
+                }
+                private static void _ContractorMonth_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.ContractorMonth = v;
+                }
+                private static void _ContractorMonth_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.ContractorMonth_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
+                    ContractorPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                        "ContractorPeriod",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_OnValueChanged);
+                private static void _ContractorPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ContractorPeriod, sf);
+                }
+                private static bool _ContractorPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.ContractorPeriod_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ContractorPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ContractorPeriod_Validate(r);
+                }
+                private static string _ContractorPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ContractorPeriod;
+                }
+                private static void _ContractorPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ContractorPeriod = v;
+                }
+                private static void _ContractorPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.ContractorPeriod_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
+                    BillingYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                        "BillingYear",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_OnValueChanged);
+                private static void _BillingYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingYear, sf);
+                }
+                private static bool _BillingYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.BillingYear_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _BillingYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.BillingYear_Validate(r);
+                }
+                private static string _BillingYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.BillingYear;
+                }
+                private static void _BillingYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.BillingYear = v;
+                }
+                private static void _BillingYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.BillingYear_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
+                    WeekEndingBillingPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                        "WeekEndingBillingPeriod",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_OnValueChanged);
+                private static void _WeekEndingBillingPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._WeekEndingBillingPeriod, sf);
+                }
+                private static bool _WeekEndingBillingPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.WeekEndingBillingPeriod_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _WeekEndingBillingPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.WeekEndingBillingPeriod_Validate(r);
+                }
+                private static string _WeekEndingBillingPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.WeekEndingBillingPeriod;
+                }
+                private static void _WeekEndingBillingPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.WeekEndingBillingPeriod = v;
+                }
+                private static void _WeekEndingBillingPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.WeekEndingBillingPeriod_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
+                    BillingPeriodText = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                        "BillingPeriodText",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_OnValueChanged);
+                private static void _BillingPeriodText_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingPeriodText, sf);
+                }
+                private static bool _BillingPeriodText_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.BillingPeriodText_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _BillingPeriodText_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.BillingPeriodText_Validate(r);
+                }
+                private static string _BillingPeriodText_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.BillingPeriodText;
+                }
+                private static void _BillingPeriodText_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.BillingPeriodText = v;
+                }
+                private static void _BillingPeriodText_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.BillingPeriodText_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
+                    BillingPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "BillingPeriod",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_OnValueChanged);
+                private static void _BillingPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingPeriod, sf);
+                }
+                private static bool _BillingPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.BillingPeriod_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _BillingPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.BillingPeriod_Validate(r);
+                }
+                private static global::System.Nullable<int> _BillingPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.BillingPeriod;
+                }
+                private static void _BillingPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.BillingPeriod = v;
+                }
+                private static void _BillingPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.BillingPeriod_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "WeekEnding",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_OnValueChanged);
+                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._WeekEnding, sf);
+                }
+                private static bool _WeekEnding_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.WeekEnding_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _WeekEnding_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.WeekEnding_Validate(r);
+                }
+                private static global::System.Nullable<global::System.DateTime> _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.WeekEnding;
+                }
+                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                {
+                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _WeekEnding_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.WeekEnding_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
+                    WeekEndingText = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                        "WeekEndingText",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_ComputeIsReadOnly,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_Validate,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_GetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_SetImplementationValue,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_OnValueChanged);
+                private static void _WeekEndingText_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._WeekEndingText, sf);
+                }
+                private static bool _WeekEndingText_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                {
+                    bool result = false;
+                    e.WeekEndingText_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _WeekEndingText_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.WeekEndingText_Validate(r);
+                }
+                private static string _WeekEndingText_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.WeekEndingText;
+                }
+                private static void _WeekEndingText_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.WeekEndingText = v;
+                }
+                private static void _WeekEndingText_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                {
+                    e.WeekEndingText_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
                     TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
                         "TimesheetDetails",
@@ -2076,6 +2706,33 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _Active;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _ContractorYear;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _ContractorMonth;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _ContractorPeriod;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _BillingYear;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingBillingPeriod;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _BillingPeriodText;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _BillingPeriod;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _WeekEnding;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingText;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
