@@ -59,8 +59,8 @@ window.myapp = msls.application;
         /// <field name="OverallStatus" type="msls.EntityCollection" elementType="msls.application.OverallStatu">
         /// Gets the overallStatus for this activeType.
         /// </field>
-        /// <field name="People" type="msls.EntityCollection" elementType="msls.application.Person">
-        /// Gets the people for this activeType.
+        /// <field name="PersonItem" type="msls.EntityCollection" elementType="msls.application.PersonItem">
+        /// Gets the personItem for this activeType.
         /// </field>
         /// <field name="Projects" type="msls.EntityCollection" elementType="msls.application.Project">
         /// Gets the projects for this activeType.
@@ -120,8 +120,8 @@ window.myapp = msls.application;
         /// <field name="Client" type="msls.application.Client">
         /// Gets or sets the client for this billingDetail.
         /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this billingDetail.
+        /// <field name="PersonItem" type="msls.application.PersonItem">
+        /// Gets or sets the personItem for this billingDetail.
         /// </field>
         /// <field name="ClientRole" type="msls.application.ClientRole">
         /// Gets or sets the clientRole for this billingDetail.
@@ -230,8 +230,8 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this client.
         /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this client.
+        /// <field name="PersonItem" type="msls.application.PersonItem">
+        /// Gets or sets the personItem for this client.
         /// </field>
         /// <field name="Projects" type="msls.EntityCollection" elementType="msls.application.Project">
         /// Gets the projects for this client.
@@ -461,90 +461,93 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function Person(entitySet) {
+    function PersonItem(entitySet) {
         /// <summary>
-        /// Represents the Person entity type.
+        /// Represents the PersonItem entity type.
         /// </summary>
         /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this person.
+        /// The entity set that should contain this personItem.
         /// </param>
         /// <field name="PersonID" type="Number">
-        /// Gets or sets the personID for this person.
+        /// Gets or sets the personID for this personItem.
         /// </field>
         /// <field name="PersonSourceKey" type="String">
-        /// Gets or sets the personSourceKey for this person.
+        /// Gets or sets the personSourceKey for this personItem.
         /// </field>
         /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this person.
+        /// Gets or sets the loadDate for this personItem.
         /// </field>
         /// <field name="PersonName" type="String">
-        /// Gets or sets the personName for this person.
+        /// Gets or sets the personName for this personItem.
         /// </field>
         /// <field name="PersonCode" type="String">
-        /// Gets or sets the personCode for this person.
+        /// Gets or sets the personCode for this personItem.
         /// </field>
         /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this person.
+        /// Gets or sets the loadDateID for this personItem.
         /// </field>
         /// <field name="PersonSystemRoleID" type="Number">
-        /// Gets or sets the personSystemRoleID for this person.
+        /// Gets or sets the personSystemRoleID for this personItem.
         /// </field>
         /// <field name="BillingPercentTarget" type="Number">
-        /// Gets or sets the billingPercentTarget for this person.
+        /// Gets or sets the billingPercentTarget for this personItem.
         /// </field>
         /// <field name="BillingPercentMinimum" type="Number">
-        /// Gets or sets the billingPercentMinimum for this person.
+        /// Gets or sets the billingPercentMinimum for this personItem.
         /// </field>
         /// <field name="Email" type="String">
-        /// Gets or sets the email for this person.
+        /// Gets or sets the email for this personItem.
         /// </field>
         /// <field name="StartDate" type="Date">
-        /// Gets or sets the startDate for this person.
+        /// Gets or sets the startDate for this personItem.
         /// </field>
         /// <field name="HourlyCost" type="Number">
-        /// Gets or sets the hourlyCost for this person.
+        /// Gets or sets the hourlyCost for this personItem.
         /// </field>
         /// <field name="MonthlyCost" type="Number">
-        /// Gets or sets the monthlyCost for this person.
+        /// Gets or sets the monthlyCost for this personItem.
         /// </field>
         /// <field name="IsContractor" type="Number">
-        /// Gets or sets the isContractor for this person.
+        /// Gets or sets the isContractor for this personItem.
         /// </field>
         /// <field name="Billable" type="Number">
-        /// Gets or sets the billable for this person.
+        /// Gets or sets the billable for this personItem.
         /// </field>
         /// <field name="ADUsername" type="String">
-        /// Gets or sets the aDUsername for this person.
+        /// Gets or sets the aDUsername for this personItem.
         /// </field>
         /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this person.
+        /// Gets or sets the sys_CreatedOn for this personItem.
         /// </field>
         /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this person.
+        /// Gets or sets the sys_CreatedBy for this personItem.
         /// </field>
         /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this person.
+        /// Gets or sets the sys_ModifiedOn for this personItem.
         /// </field>
         /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this person.
+        /// Gets or sets the sys_ModifiedBy for this personItem.
         /// </field>
         /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this person.
+        /// Gets the billingDetails for this personItem.
         /// </field>
         /// <field name="Clients" type="msls.EntityCollection" elementType="msls.application.Client">
-        /// Gets the clients for this person.
+        /// Gets the clients for this personItem.
         /// </field>
         /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this person.
+        /// Gets or sets the activeType for this personItem.
         /// </field>
         /// <field name="Projects" type="msls.EntityCollection" elementType="msls.application.Project">
-        /// Gets the projects for this person.
+        /// Gets the projects for this personItem.
         /// </field>
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetails for this person.
+        /// Gets the timesheetDetails for this personItem.
         /// </field>
-        /// <field name="details" type="msls.application.Person.Details">
-        /// Gets the details for this person.
+        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheets for this personItem.
+        /// </field>
+        /// <field name="details" type="msls.application.PersonItem.Details">
+        /// Gets the details for this personItem.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -616,8 +619,8 @@ window.myapp = msls.application;
         /// <field name="Client" type="msls.application.Client">
         /// Gets or sets the client for this project.
         /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this project.
+        /// <field name="PersonItem" type="msls.application.PersonItem">
+        /// Gets or sets the personItem for this project.
         /// </field>
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this project.
@@ -695,6 +698,9 @@ window.myapp = msls.application;
         /// <field name="PeriodEnding" type="Date">
         /// Gets or sets the periodEnding for this timesheet.
         /// </field>
+        /// <field name="Person" type="msls.application.PersonItem">
+        /// Gets or sets the person for this timesheet.
+        /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
         /// </field>
@@ -768,8 +774,8 @@ window.myapp = msls.application;
         /// <field name="DimDate" type="msls.application.DimDate">
         /// Gets or sets the dimDate for this timesheetDetail.
         /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this timesheetDetail.
+        /// <field name="PersonItem" type="msls.application.PersonItem">
+        /// Gets or sets the personItem for this timesheetDetail.
         /// </field>
         /// <field name="Project" type="msls.application.Project">
         /// Gets or sets the project for this timesheetDetail.
@@ -863,8 +869,8 @@ window.myapp = msls.application;
         /// <field name="OverallStatus" type="msls.EntitySet">
         /// Gets the OverallStatus entity set.
         /// </field>
-        /// <field name="People" type="msls.EntitySet">
-        /// Gets the People entity set.
+        /// <field name="Person" type="msls.EntitySet">
+        /// Gets the Person entity set.
         /// </field>
         /// <field name="Projects" type="msls.EntitySet">
         /// Gets the Projects entity set.
@@ -912,7 +918,7 @@ window.myapp = msls.application;
             { name: "Clients", kind: "collection", elementType: Client },
             { name: "ClientRoles", kind: "collection", elementType: ClientRole },
             { name: "OverallStatus", kind: "collection", elementType: OverallStatu },
-            { name: "People", kind: "collection", elementType: Person },
+            { name: "PersonItem", kind: "collection", elementType: PersonItem },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "Timesheets", kind: "collection", elementType: Timesheet },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
@@ -931,7 +937,7 @@ window.myapp = msls.application;
             { name: "sys_ModifiedBy", type: String },
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Client", kind: "reference", type: Client },
-            { name: "Person", kind: "reference", type: Person },
+            { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "ClientRole", kind: "reference", type: ClientRole },
             { name: "DimDate", kind: "reference", type: DimDate }
         ]),
@@ -965,7 +971,7 @@ window.myapp = msls.application;
             { name: "sys_ModifiedBy", type: String },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "Person", kind: "reference", type: Person },
+            { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "Projects", kind: "collection", elementType: Project }
         ]),
 
@@ -1038,7 +1044,7 @@ window.myapp = msls.application;
             { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
-        Person: $defineEntity(Person, [
+        PersonItem: $defineEntity(PersonItem, [
             { name: "PersonID", type: Number },
             { name: "PersonSourceKey", type: String },
             { name: "LoadDate", type: Date },
@@ -1063,7 +1069,8 @@ window.myapp = msls.application;
             { name: "Clients", kind: "collection", elementType: Client },
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Projects", kind: "collection", elementType: Project },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
         Project: $defineEntity(Project, [
@@ -1087,7 +1094,7 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "BillingStatu", kind: "reference", type: BillingStatu },
             { name: "Client", kind: "reference", type: Client },
-            { name: "Person", kind: "reference", type: Person },
+            { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
         ]),
 
@@ -1111,7 +1118,8 @@ window.myapp = msls.application;
             { name: "DimDate", kind: "reference", type: DimDate },
             { name: "OverallStatus", kind: "reference", type: OverallStatu },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "PeriodEnding", type: Date }
+            { name: "PeriodEnding", type: Date },
+            { name: "Person", kind: "reference", type: PersonItem }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
@@ -1135,7 +1143,7 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "BillingStatu", kind: "reference", type: BillingStatu },
             { name: "DimDate", kind: "reference", type: DimDate },
-            { name: "Person", kind: "reference", type: Person },
+            { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "Project", kind: "reference", type: Project },
             { name: "Timesheet", kind: "reference", type: Timesheet },
             { name: "TypeOfWork", kind: "reference", type: TypeOfWork }
@@ -1164,7 +1172,7 @@ window.myapp = msls.application;
             { name: "ClientRoles", elementType: ClientRole },
             { name: "DimDates", elementType: DimDate },
             { name: "OverallStatus", elementType: OverallStatu },
-            { name: "People", elementType: Person },
+            { name: "Person", elementType: PersonItem },
             { name: "Projects", elementType: Project },
             { name: "Timesheets", elementType: Timesheet },
             { name: "TimesheetDetails", elementType: TimesheetDetail },
@@ -1220,9 +1228,9 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "People_SingleOrDefault", value: function (PersonID) {
-                    return new $DataServiceQuery({ _entitySet: this.People },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
+                name: "Person_SingleOrDefault", value: function (PersonID) {
+                    return new $DataServiceQuery({ _entitySet: this.Person },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Person(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
                     );
                 }
             },

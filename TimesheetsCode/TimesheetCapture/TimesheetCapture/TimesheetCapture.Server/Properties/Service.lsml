@@ -146,10 +146,10 @@
         FromEnd="ActiveType"
         ToEnd="OverallStatus" />
       <NavigationProperty
-        Name="People"
-        Association="FK_Person_ActiveType"
+        Name="PersonItem"
+        Association="ActiveType_PersonItem"
         FromEnd="ActiveType"
-        ToEnd="Person" />
+        ToEnd="PersonItem" />
       <NavigationProperty
         Name="Projects"
         Association="FK_Project_ActiveType"
@@ -283,10 +283,10 @@
         FromEnd="BillingDetail"
         ToEnd="Client" />
       <NavigationProperty
-        Name="Person"
-        Association="FK_BillingDetail_Person"
+        Name="PersonItem"
+        Association="PersonItem_BillingDetail"
         FromEnd="BillingDetail"
-        ToEnd="Person" />
+        ToEnd="PersonItem" />
       <NavigationProperty
         Name="ClientRole"
         Association="FK_BillingDetail_Role"
@@ -545,10 +545,10 @@
         FromEnd="Client"
         ToEnd="ActiveType" />
       <NavigationProperty
-        Name="Person"
-        Association="FK_Client_Person"
+        Name="PersonItem"
+        Association="PersonItem_Client"
         FromEnd="Client"
-        ToEnd="Person" />
+        ToEnd="PersonItem" />
       <NavigationProperty
         Name="Projects"
         Association="FK_Project_Client"
@@ -1120,7 +1120,7 @@
     </EntityType.Properties>
   </EntityType>
   <EntityType
-    Name="Person">
+    Name="PersonItem">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -1315,29 +1315,43 @@
       </EntityProperty>
       <NavigationProperty
         Name="BillingDetails"
-        Association="FK_BillingDetail_Person"
-        FromEnd="Person"
+        Association="PersonItem_BillingDetail"
+        FromEnd="PersonItem"
         ToEnd="BillingDetail" />
       <NavigationProperty
         Name="Clients"
-        Association="FK_Client_Person"
-        FromEnd="Person"
+        Association="PersonItem_Client"
+        FromEnd="PersonItem"
         ToEnd="Client" />
       <NavigationProperty
         Name="ActiveType"
-        Association="FK_Person_ActiveType"
-        FromEnd="Person"
+        Association="ActiveType_PersonItem"
+        FromEnd="PersonItem"
         ToEnd="ActiveType" />
       <NavigationProperty
         Name="Projects"
-        Association="FK_Project_Person"
-        FromEnd="Person"
+        Association="PersonItem_Project"
+        FromEnd="PersonItem"
         ToEnd="Project" />
       <NavigationProperty
         Name="TimesheetDetails"
-        Association="FK_TimesheetDetail_Person"
-        FromEnd="Person"
+        Association="PersonItem_TimesheetDetail"
+        FromEnd="PersonItem"
         ToEnd="TimesheetDetail" />
+      <NavigationProperty
+        Name="Timesheets"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Person"
+        ToEnd="Timesheet" />
+      <EntityProperty
+        Name="SharepointUserName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1531,10 +1545,10 @@
         FromEnd="Project"
         ToEnd="Client" />
       <NavigationProperty
-        Name="Person"
-        Association="FK_Project_Person"
+        Name="PersonItem"
+        Association="PersonItem_Project"
         FromEnd="Project"
-        ToEnd="Person" />
+        ToEnd="PersonItem" />
       <NavigationProperty
         Name="TimesheetDetails"
         Association="FK_TimesheetDetail_Project"
@@ -1726,6 +1740,11 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Person"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Timesheet"
+        ToEnd="Person" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1918,10 +1937,10 @@
         FromEnd="TimesheetDetail"
         ToEnd="DimDate" />
       <NavigationProperty
-        Name="Person"
-        Association="FK_TimesheetDetail_Person"
+        Name="PersonItem"
+        Association="PersonItem_TimesheetDetail"
         FromEnd="TimesheetDetail"
-        ToEnd="Person" />
+        ToEnd="PersonItem" />
       <NavigationProperty
         Name="Project"
         Association="FK_TimesheetDetail_Project"
@@ -2091,11 +2110,11 @@
       EntityType="BillingDetail" />
   </Association>
   <Association
-    Name="FK_BillingDetail_Person">
+    Name="PersonItem_BillingDetail">
     <AssociationEnd
-      Name="Person"
+      Name="PersonItem"
       Multiplicity="One"
-      EntityType="Person">
+      EntityType="PersonItem">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
@@ -2150,11 +2169,11 @@
       EntityType="Client" />
   </Association>
   <Association
-    Name="FK_Client_Person">
+    Name="PersonItem_Client">
     <AssociationEnd
-      Name="Person"
+      Name="PersonItem"
       Multiplicity="One"
-      EntityType="Person">
+      EntityType="PersonItem">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
@@ -2195,7 +2214,7 @@
       EntityType="OverallStatu" />
   </Association>
   <Association
-    Name="FK_Person_ActiveType">
+    Name="ActiveType_PersonItem">
     <AssociationEnd
       Name="ActiveType"
       Multiplicity="One"
@@ -2205,9 +2224,9 @@
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
-      Name="Person"
+      Name="PersonItem"
       Multiplicity="Many"
-      EntityType="Person" />
+      EntityType="PersonItem" />
   </Association>
   <Association
     Name="FK_Project_ActiveType">
@@ -2255,10 +2274,10 @@
       EntityType="Project" />
   </Association>
   <Association
-    Name="FK_Project_Person">
+    Name="PersonItem_Project">
     <AssociationEnd
-      Name="Person"
-      EntityType="Person">
+      Name="PersonItem"
+      EntityType="PersonItem">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
@@ -2358,11 +2377,11 @@
       EntityType="TimesheetDetail" />
   </Association>
   <Association
-    Name="FK_TimesheetDetail_Person">
+    Name="PersonItem_TimesheetDetail">
     <AssociationEnd
-      Name="Person"
+      Name="PersonItem"
       Multiplicity="One"
-      EntityType="Person">
+      EntityType="PersonItem">
       <AssociationEnd.Attributes>
         <DeleteRule />
       </AssociationEnd.Attributes>
@@ -2481,7 +2500,7 @@
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Person" />
+      EntityType="PersonItem" />
     <EntitySet
       Name="Projects"
       CanDelete="True"
@@ -2528,9 +2547,9 @@
     </AssociationSet>
     <AssociationSet
       Name="FK_BillingDetail_Person"
-      Association="FK_BillingDetail_Person">
+      Association="PersonItem_BillingDetail">
       <AssociationSetEnd
-        Name="Person"
+        Name="PersonItem"
         EntitySet="People" />
       <AssociationSetEnd
         Name="BillingDetail"
@@ -2568,9 +2587,9 @@
     </AssociationSet>
     <AssociationSet
       Name="FK_Client_Person"
-      Association="FK_Client_Person">
+      Association="PersonItem_Client">
       <AssociationSetEnd
-        Name="Person"
+        Name="PersonItem"
         EntitySet="People" />
       <AssociationSetEnd
         Name="Client"
@@ -2598,12 +2617,12 @@
     </AssociationSet>
     <AssociationSet
       Name="FK_Person_ActiveType"
-      Association="FK_Person_ActiveType">
+      Association="ActiveType_PersonItem">
       <AssociationSetEnd
         Name="ActiveType"
         EntitySet="ActiveTypes" />
       <AssociationSetEnd
-        Name="Person"
+        Name="PersonItem"
         EntitySet="People" />
     </AssociationSet>
     <AssociationSet
@@ -2638,9 +2657,9 @@
     </AssociationSet>
     <AssociationSet
       Name="FK_Project_Person"
-      Association="FK_Project_Person">
+      Association="PersonItem_Project">
       <AssociationSetEnd
-        Name="Person"
+        Name="PersonItem"
         EntitySet="People" />
       <AssociationSetEnd
         Name="Project"
@@ -2708,9 +2727,9 @@
     </AssociationSet>
     <AssociationSet
       Name="FK_TimesheetDetail_Person"
-      Association="FK_TimesheetDetail_Person">
+      Association="PersonItem_TimesheetDetail">
       <AssociationSetEnd
-        Name="Person"
+        Name="PersonItem"
         EntitySet="People" />
       <AssociationSetEnd
         Name="TimesheetDetail"
@@ -3320,7 +3339,7 @@
     </QueryOperation>
     <QueryOperation
       Name="People_Single"
-      ReturnType="Person">
+      ReturnType="PersonItem">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -3360,7 +3379,7 @@
     </QueryOperation>
     <QueryOperation
       Name="People_SingleOrDefault"
-      ReturnType="Person">
+      ReturnType="PersonItem">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -3931,6 +3950,16 @@
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
     </QueryOperation>
+    <AssociationSet
+      Name="fk_TimesheetPersonID"
+      Association="fk_TimesheetPersonID">
+      <AssociationSetEnd
+        Name="Person"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Timesheet"
+        EntitySet="Timesheets" />
+    </AssociationSet>
   </EntityContainer>
   <Association
     Name="FK_BillingDetail_DimDate">
@@ -3946,6 +3975,20 @@
       Name="BillingDetail"
       Multiplicity="Many"
       EntityType="BillingDetail" />
+  </Association>
+  <Association
+    Name="fk_TimesheetPersonID">
+    <AssociationEnd
+      Name="Person"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Timesheet"
+      Multiplicity="Many"
+      EntityType="Timesheet" />
   </Association>
   <DataService
     Name="TimesheetsDataDataService"
@@ -3963,7 +4006,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="d3e609db-aeca-44d9-a074-ed6a861d9407" />
+        Value="6e26b3fe-b601-4340-a7e2-47c7e7e5b5ca" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4587,110 +4630,116 @@
           Nullable="False"
           StoreGeneratedPattern="Identity"
           Type="int"
-          Property="Person/Properties[PersonID]" />
+          Property="PersonItem/Properties[PersonID]" />
         <SsdlProperty
           MaxLength="255"
           Name="PersonSourceKey"
           Nullable="True"
           Type="varchar"
-          Property="Person/Properties[PersonSourceKey]" />
+          Property="PersonItem/Properties[PersonSourceKey]" />
         <SsdlProperty
           Name="LoadDate"
           Nullable="False"
           Type="datetime"
-          Property="Person/Properties[LoadDate]" />
+          Property="PersonItem/Properties[LoadDate]" />
         <SsdlProperty
           MaxLength="255"
           Name="PersonName"
           Nullable="False"
           Type="varchar"
-          Property="Person/Properties[PersonName]" />
+          Property="PersonItem/Properties[PersonName]" />
         <SsdlProperty
           MaxLength="255"
           Name="PersonCode"
           Nullable="False"
           Type="varchar"
-          Property="Person/Properties[PersonCode]" />
+          Property="PersonItem/Properties[PersonCode]" />
         <SsdlProperty
           Name="LoadDateID"
           Nullable="True"
           StoreGeneratedPattern="Computed"
           Type="int"
-          Property="Person/Properties[LoadDateID]" />
+          Property="PersonItem/Properties[LoadDateID]" />
         <SsdlProperty
           Name="PersonSystemRoleID"
           Nullable="True"
           Type="int"
-          Property="Person/Properties[PersonSystemRoleID]" />
+          Property="PersonItem/Properties[PersonSystemRoleID]" />
         <SsdlProperty
           Name="BillingPercentTarget"
           Nullable="False"
           Type="int"
-          Property="Person/Properties[BillingPercentTarget]" />
+          Property="PersonItem/Properties[BillingPercentTarget]" />
         <SsdlProperty
           Name="BillingPercentMinimum"
           Nullable="False"
           Type="int"
-          Property="Person/Properties[BillingPercentMinimum]" />
+          Property="PersonItem/Properties[BillingPercentMinimum]" />
         <SsdlProperty
           MaxLength="255"
           Name="Email"
           Nullable="True"
           Type="varchar"
-          Property="Person/Properties[Email]" />
+          Property="PersonItem/Properties[Email]" />
         <SsdlProperty
           Name="StartDate"
           Nullable="False"
           Type="date"
-          Property="Person/Properties[StartDate]" />
+          Property="PersonItem/Properties[StartDate]" />
         <SsdlProperty
           Name="HourlyCost"
           Nullable="True"
           Type="int"
-          Property="Person/Properties[HourlyCost]" />
+          Property="PersonItem/Properties[HourlyCost]" />
         <SsdlProperty
           Name="MonthlyCost"
           Nullable="True"
           Type="money"
-          Property="Person/Properties[MonthlyCost]" />
+          Property="PersonItem/Properties[MonthlyCost]" />
         <SsdlProperty
           Name="IsContractor"
           Nullable="False"
           Type="int"
-          Property="Person/Properties[IsContractor]" />
+          Property="PersonItem/Properties[IsContractor]" />
         <SsdlProperty
           Name="Billable"
           Nullable="False"
           Type="int"
-          Property="Person/Properties[Billable]" />
+          Property="PersonItem/Properties[Billable]" />
         <SsdlProperty
           MaxLength="255"
           Name="ADUsername"
           Nullable="True"
           Type="varchar"
-          Property="Person/Properties[ADUsername]" />
+          Property="PersonItem/Properties[ADUsername]" />
         <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
-          Property="Person/Properties[sys_CreatedOn]" />
+          Property="PersonItem/Properties[sys_CreatedOn]" />
         <SsdlProperty
           MaxLength="255"
           Name="sys_CreatedBy"
           Nullable="False"
           Type="nvarchar"
-          Property="Person/Properties[sys_CreatedBy]" />
+          Property="PersonItem/Properties[sys_CreatedBy]" />
         <SsdlProperty
           Name="sys_ModifiedOn"
           Nullable="False"
           Type="datetime"
-          Property="Person/Properties[sys_ModifiedOn]" />
+          Property="PersonItem/Properties[sys_ModifiedOn]" />
         <SsdlProperty
           MaxLength="255"
           Name="sys_ModifiedBy"
           Nullable="False"
           Type="nvarchar"
-          Property="Person/Properties[sys_ModifiedBy]" />
+          Property="PersonItem/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="SharepointUserName"
+          Nullable="True"
+          Type="varchar"
+          Property="PersonItem/Properties[SharepointUserName]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -4932,6 +4981,11 @@
           Nullable="False"
           Type="int"
           PropertyName="OverallStatusID" />
+        <SsdlForeignKeyProperty
+          Name="TimesheetPersonID"
+          Nullable="True"
+          Type="int"
+          PropertyName="TimesheetPersonID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -5211,7 +5265,7 @@
         <SsdlAssociationSet
           Name="FK_BillingDetail_Person" />
         <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_BillingDetail_Person]/Members[Person]">
+          End="TimesheetsData/Members[FK_BillingDetail_Person]/Members[PersonItem]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
@@ -5295,7 +5349,7 @@
         <SsdlAssociationSet
           Name="FK_Client_Person" />
         <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_Client_Person]/Members[Person]">
+          End="TimesheetsData/Members[FK_Client_Person]/Members[PersonItem]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
@@ -5365,7 +5419,7 @@
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_Person_ActiveType]/Members[Person]">
+          End="TimesheetsData/Members[FK_Person_ActiveType]/Members[PersonItem]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
@@ -5442,7 +5496,7 @@
         <SsdlAssociationSet
           Name="FK_Project_Person" />
         <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_Project_Person]/Members[Person]">
+          End="TimesheetsData/Members[FK_Project_Person]/Members[PersonItem]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
@@ -5589,7 +5643,7 @@
         <SsdlAssociationSet
           Name="FK_TimesheetDetail_Person" />
         <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[Person]">
+          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[PersonItem]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PersonID" />
@@ -5663,6 +5717,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetTypeOfWorkID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="fk_TimesheetPersonID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="fk_TimesheetPersonID" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[fk_TimesheetPersonID]/Members[Person]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[fk_TimesheetPersonID]/Members[Timesheet]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetPersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

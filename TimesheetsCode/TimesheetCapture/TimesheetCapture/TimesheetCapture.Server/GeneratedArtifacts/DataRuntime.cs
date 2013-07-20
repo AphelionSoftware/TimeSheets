@@ -238,7 +238,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Person> People
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.PersonItem> People
         {
             get
             {
@@ -462,7 +462,7 @@ namespace LightSwitchApplication
         /// <param name="PersonID">
         /// The value of the 'PersonID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.Person People_Single(global::System.Nullable<int> PersonID)
+        public global::LightSwitchApplication.PersonItem People_Single(global::System.Nullable<int> PersonID)
         {
             return this.Details.Methods.People_Single.CreateInvocation(PersonID).Execute();
         }
@@ -473,7 +473,7 @@ namespace LightSwitchApplication
         /// <param name="PersonID">
         /// The value of the 'PersonID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.Person People_SingleOrDefault(global::System.Nullable<int> PersonID)
+        public global::LightSwitchApplication.PersonItem People_SingleOrDefault(global::System.Nullable<int> PersonID)
         {
             return this.Details.Methods.People_SingleOrDefault.CreateInvocation(PersonID).Execute();
         }
@@ -775,19 +775,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem> People_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.People_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.People_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem> People_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.People_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.People_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>;
                     }
                 }
                 
@@ -964,11 +964,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person> People
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem> People
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.People) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>;
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.People) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>;
                     }
                 }
                 
@@ -1153,21 +1153,21 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry
+                    People_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry(
                         "People_Single",
                         global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._People_Single_Stub);
-                private static void _People_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                private static void _People_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
                 {
                     c(d, ref d._People_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry
+                    People_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry(
                         "People_SingleOrDefault",
                         global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._People_SingleOrDefault_Stub);
-                private static void _People_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                private static void _People_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
                 {
                     c(d, ref d._People_SingleOrDefault, sf);
                 }
@@ -1381,11 +1381,11 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry
-                    People = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry
+                    People = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Entry(
                         "People",
                         global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties._People_Stub);
-                private static void _People_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                private static void _People_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
                 {
                     c(d, ref d._People, sf);
                 }
@@ -1454,7 +1454,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.OverallStatu>.Data _OverallStatus;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data _People;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects;
@@ -1511,10 +1511,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.OverallStatu>.Data _OverallStatus_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data _People_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Person>.Data _People_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.PersonItem>.Data _People_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects_Single;

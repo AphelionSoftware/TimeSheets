@@ -116,7 +116,7 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Person" />
+        Target="ServiceInterface:PersonItem" />
     </EntityType.Attributes>
   </EntityType>
   <EntityType>
@@ -158,7 +158,7 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_BillingDetail_Person" />
+        Target="ServiceInterface:PersonItem_BillingDetail" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -182,7 +182,7 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_Client_Person" />
+        Target="ServiceInterface:PersonItem_Client" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -200,7 +200,7 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_Person_ActiveType" />
+        Target="ServiceInterface:ActiveType_PersonItem" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -224,7 +224,7 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_Project_Person" />
+        Target="ServiceInterface:PersonItem_Project" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -266,7 +266,7 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_TimesheetDetail_Person" />
+        Target="ServiceInterface:PersonItem_TimesheetDetail" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -2420,6 +2420,12 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_BillingDetail_DimDate" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:fk_TimesheetPersonID" />
     </Association.Attributes>
   </Association>
 </ModelFragment>

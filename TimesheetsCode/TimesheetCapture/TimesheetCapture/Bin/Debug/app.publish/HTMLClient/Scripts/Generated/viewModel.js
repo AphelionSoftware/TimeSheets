@@ -140,7 +140,7 @@
                     return null;
                 },
                 appendQuery: function () {
-                    return this.expand("Project");
+                    return this.expand("DimDate").expand("Project").expand("TypeOfWork");
                 }
             }
         ], [

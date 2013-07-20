@@ -6,33 +6,36 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
 namespace LightSwitchApplication
 {
-   
-    public class BillingPeriod
+
+    public partial class TimesheetsDataService
     {
-        
         public static DateTime WeekEnding()
         {
-            DimDate setting = ( from dimDates in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
-                                     where dimDates.c_Date <= System.DateTime.Now
-                                     orderby dimDates.DateID descending
-                                     select dimDates).FirstOrDefault();
+            DimDate setting = (from dimDates in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
+                               where dimDates.c_Date <= System.DateTime.Now
+                               orderby dimDates.DateID descending
+                               select dimDates).FirstOrDefault();
             return setting != null ? setting.WeekEnding.Value : System.DateTime.Now;
         }
 
-        public static string DayOfWeek()
+        private string strDayOfWeek = "";
+        public string DayOfWeek
         {
-            DateTime WE = BillingPeriod.WeekEnding();
-            DimDate setting = (from dimDates in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
-                               where dimDates.c_Date == WE
-                               orderby dimDates.DateID descending
-                               select dimDates).FirstOrDefault();
-            return setting != null ? setting.DayOfWeek : "Sunday";
+            get
+            {
+                if (strDayOfWeek == "" || strDayOfWeek == null)
+                {
+                    DateTime WE = WeekEnding();
+                    strDayOfWeek = (from dimDates in DataWorkspace.TimesheetsData.DimDates
+                                    where dimDates.c_Date == WE
+                                    orderby dimDates.DateID descending
+                                    select dimDates.DayOfWeek).FirstOrDefault();
+                }
+
+                return strDayOfWeek;
+            }
         }
-    }
-        
-    public partial class TimesheetsDataService
-    {
-        
+
         private string strUser = "";
         public string UserName
         {
@@ -40,17 +43,17 @@ namespace LightSwitchApplication
             {
                 if (strUser == "")
                 {
-                    switch(Application.User.Name)
+                    switch (Application.User.Name)
                     {
-                       case "TestUser":
-                          strUser = Environment.UserName;
-                          break;
-                       case "":
-                          strUser = Environment.UserName;
-                          break;
+                        case "TestUser":
+                            strUser = Environment.UserName;
+                            break;
+                        case "":
+                            strUser = Environment.UserName;
+                            break;
                         default:
-                          strUser = Application.User.Name.Split('|')[2];
-                          break;
+                            strUser = Application.User.Name.Split('|')[2];
+                            break;
                     }
 
 
@@ -59,31 +62,65 @@ namespace LightSwitchApplication
             }
         }
 
+        private string str_tsPerson = "";
+        public string tsPerson
+        {
+            get
+            {
+                if (str_tsPerson == "")
+                {
+                    string strUserName = UserName;
+                    str_tsPerson = (from p in DataWorkspace.TimesheetsData.People
+                                    where p.ADUsername == strUserName || p.SharepointUserName == strUserName
+                                    select p.PersonName).FirstOrDefault();
+
+
+                }
+                return str_tsPerson;
+            }
+        }
+
+        private Int32 int_tsPersonID = 0;
+        public Int32 tsPersonID
+        {
+            get
+            {
+                if (int_tsPersonID == 0)
+                {
+                    string strUserName = UserName;
+                    int_tsPersonID = (from p in DataWorkspace.TimesheetsData.People
+                                      where p.ADUsername == strUserName || p.SharepointUserName == strUserName
+                                      select p.PersonID).FirstOrDefault();
+
+
+                }
+                return int_tsPersonID;
+            }
+        }
 
         partial void Timesheets_Inserting(Timesheet entity)
         {
-            		
-
 
             entity.sys_CreatedBy = UserName;
             entity.sys_CreatedOn = System.DateTime.Now;
             entity.sys_ModifiedBy = UserName;
             entity.sys_ModifiedOn = System.DateTime.Now;
-            entity.TimesheetPerson = UserName;
+            entity.TimesheetPerson = tsPerson.Replace(" ", "");
+            entity.Person = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
             entity.TimesheetName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
             entity.TimesheetCode = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
             entity.TimesheetFileName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetSourceKey = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";            
+            entity.TimesheetSourceKey = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
             entity.LoadDate = System.DateTime.Now;
             entity.TimesheetDate = entity.DimDate.ToString();
-            entity.TimesheetFromDateID = (from d in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
+            entity.TimesheetFromDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                           where d.WeekEnding == entity.DimDate.WeekEnding
-                               orderby d.DateID descending
-                               select d.DateID).FirstOrDefault();
-            entity.TimesheetToDateID = (from d in Application.Current.CreateDataWorkspace().TimesheetsData.DimDates
-                                          where d.WeekEnding == entity.DimDate.WeekEnding
-                               orderby d.DateID ascending
-                               select d.DateID).FirstOrDefault();
+                                          orderby d.DateID descending
+                                          select d.DateID).FirstOrDefault();
+            entity.TimesheetToDateID = (from d in DataWorkspace.TimesheetsData.DimDates
+                                        where d.WeekEnding == entity.DimDate.WeekEnding
+                                        orderby d.DateID ascending
+                                        select d.DateID).FirstOrDefault();
 
         }
 
@@ -94,7 +131,7 @@ namespace LightSwitchApplication
 
         partial void TimesheetDate_PreprocessQuery(ref IQueryable<DimDate> query)
         {
-            string dow = BillingPeriod.DayOfWeek();
+            string dow = DayOfWeek;
             query = (from dimDates in query
                      where dimDates.DayOfWeek == dow
                      where dimDates.c_Date <= System.DateTime.Now
@@ -104,8 +141,7 @@ namespace LightSwitchApplication
 
         partial void TimesheetsUser_PreprocessQuery(DateTime? StartDate, DateTime? EndDate, ref IQueryable<Timesheet> query)
         {
-            
-            string TimesheetPerson = UserName;
+            string TimesheetPerson = tsPerson.Replace(" ", "");
 
             if (StartDate == null)
             {
@@ -135,25 +171,31 @@ namespace LightSwitchApplication
                 }
             }
 
-           
 
-            
-   
-            
         }
 
-        partial void TimesheetDetailDate_PreprocessQuery(DateTime? PeriodEndDate, ref IQueryable<DimDate> query)
+        partial void TimesheetDetails_Inserting(TimesheetDetail entity)
         {
-            
+
+            entity.sys_CreatedBy = UserName;
+            entity.sys_CreatedOn = System.DateTime.Now;
+            entity.sys_ModifiedBy = UserName;
+            entity.sys_ModifiedOn = System.DateTime.Now;
+            entity.PersonItem = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
+            entity.TimesheetDetailName = "N/A";
+            entity.TimesheetDetailCode = tsPerson;
+            entity.TimesheetDetailFileName = "Lightswitch";
+            entity.LoadDate = System.DateTime.Now;
+
         }
+        partial void TimesheetDetails_Updating(TimesheetDetail entity)
+        {
 
-        
+            entity.sys_ModifiedBy = UserName;
+            entity.sys_ModifiedOn = System.DateTime.Now;
+            entity.PersonItem = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
+            entity.LastUpdateDate = System.DateTime.Now;
 
-        
-
-       
-        
-
-       
+        }
     }
 }

@@ -119,9 +119,9 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.OverallStatu();
             }
-            if (type == typeof(global::LightSwitchApplication.Implementation.Person))
+            if (type == typeof(global::LightSwitchApplication.Implementation.PersonItem))
             {
-                return new global::LightSwitchApplication.Implementation.Person();
+                return new global::LightSwitchApplication.Implementation.PersonItem();
             }
             if (type == typeof(global::LightSwitchApplication.Implementation.Project))
             {
@@ -183,9 +183,9 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.OverallStatu();
             }
-            if (typeof(T) == typeof(global::LightSwitchApplication.Person))
+            if (typeof(T) == typeof(global::LightSwitchApplication.PersonItem))
             {
-                return new global::LightSwitchApplication.Implementation.Person();
+                return new global::LightSwitchApplication.Implementation.PersonItem();
             }
             if (typeof(T) == typeof(global::LightSwitchApplication.Project))
             {
@@ -276,9 +276,9 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.OverallStatu);
             }
-            if (typeof(global::LightSwitchApplication.Person) == definitionType)
+            if (typeof(global::LightSwitchApplication.PersonItem) == definitionType)
             {
-                return typeof(global::LightSwitchApplication.Implementation.Person);
+                return typeof(global::LightSwitchApplication.Implementation.PersonItem);
             }
             if (typeof(global::LightSwitchApplication.Project) == definitionType)
             {
@@ -345,11 +345,11 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.ActiveType.DetailsClass.IImplementation.People
+        global::System.Collections.IEnumerable global::LightSwitchApplication.ActiveType.DetailsClass.IImplementation.PersonItem
         {
             get
             {
-                return this.People;
+                return this.PersonItem;
             }
         }
         
@@ -450,18 +450,18 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.Person
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.PersonItem
         {
             get
             {
-                return this.Person;
+                return this.PersonItem;
             }
             set
             {
-                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                this.PersonItem = (global::LightSwitchApplication.Implementation.PersonItem)value;
                 if (this.__host != null)
                 {
-                    this.__host.RaisePropertyChanged("Person");
+                    this.__host.RaisePropertyChanged("PersonItem");
                 }
             }
         }
@@ -518,7 +518,7 @@ namespace LightSwitchApplication.Implementation
         {
             if (this.__host != null)
             {
-                this.__host.RaisePropertyChanged("Person");
+                this.__host.RaisePropertyChanged("PersonItem");
             }
         }
         
@@ -668,18 +668,18 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Client.DetailsClass.IImplementation.Person
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Client.DetailsClass.IImplementation.PersonItem
         {
             get
             {
-                return this.Person;
+                return this.PersonItem;
             }
             set
             {
-                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                this.PersonItem = (global::LightSwitchApplication.Implementation.PersonItem)value;
                 if (this.__host != null)
                 {
-                    this.__host.RaisePropertyChanged("Person");
+                    this.__host.RaisePropertyChanged("PersonItem");
                 }
             }
         }
@@ -704,7 +704,7 @@ namespace LightSwitchApplication.Implementation
         {
             if (this.__host != null)
             {
-                this.__host.RaisePropertyChanged("Person");
+                this.__host.RaisePropertyChanged("PersonItem");
             }
         }
         
@@ -924,11 +924,11 @@ namespace LightSwitchApplication.Implementation
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class Person :
-        global::LightSwitchApplication.Person.DetailsClass.IImplementation
+    public partial class PersonItem :
+        global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.BillingDetails
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.BillingDetails
         {
             get
             {
@@ -936,7 +936,7 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.Clients
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.Clients
         {
             get
             {
@@ -944,7 +944,7 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Person.DetailsClass.IImplementation.ActiveType
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.ActiveType
         {
             get
             {
@@ -960,7 +960,7 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.Projects
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.Projects
         {
             get
             {
@@ -968,11 +968,19 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.TimesheetDetails
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.TimesheetDetails
         {
             get
             {
                 return this.TimesheetDetails;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonItem.DetailsClass.IImplementation.Timesheets
+        {
+            get
+            {
+                return this.Timesheets;
             }
         }
         
@@ -1065,18 +1073,18 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Person
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.PersonItem
         {
             get
             {
-                return this.Person;
+                return this.PersonItem;
             }
             set
             {
-                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                this.PersonItem = (global::LightSwitchApplication.Implementation.PersonItem)value;
                 if (this.__host != null)
                 {
-                    this.__host.RaisePropertyChanged("Person");
+                    this.__host.RaisePropertyChanged("PersonItem");
                 }
             }
         }
@@ -1117,7 +1125,7 @@ namespace LightSwitchApplication.Implementation
         {
             if (this.__host != null)
             {
-                this.__host.RaisePropertyChanged("Person");
+                this.__host.RaisePropertyChanged("PersonItem");
             }
         }
         
@@ -1210,6 +1218,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.Person
+        {
+            get
+            {
+                return this.Person;
+            }
+            set
+            {
+                this.Person = (global::LightSwitchApplication.Implementation.PersonItem)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Person");
+                }
+            }
+        }
+        
         partial void OnActiveChanged()
         {
             if (this.__host != null)
@@ -1231,6 +1255,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("OverallStatus");
+            }
+        }
+        
+        partial void OnTimesheetPersonIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Person");
             }
         }
         
@@ -1315,18 +1347,18 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.Person
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.PersonItem
         {
             get
             {
-                return this.Person;
+                return this.PersonItem;
             }
             set
             {
-                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                this.PersonItem = (global::LightSwitchApplication.Implementation.PersonItem)value;
                 if (this.__host != null)
                 {
-                    this.__host.RaisePropertyChanged("Person");
+                    this.__host.RaisePropertyChanged("PersonItem");
                 }
             }
         }
@@ -1407,7 +1439,7 @@ namespace LightSwitchApplication.Implementation
         {
             if (this.__host != null)
             {
-                this.__host.RaisePropertyChanged("Person");
+                this.__host.RaisePropertyChanged("PersonItem");
             }
         }
         

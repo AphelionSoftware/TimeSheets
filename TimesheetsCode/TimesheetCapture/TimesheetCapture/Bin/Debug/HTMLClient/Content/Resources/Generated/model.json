@@ -29,7 +29,8 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
           "__isEntityType": 1,
@@ -181,13 +182,13 @@
               "toEnd": { "__id": "FK_OverallStatus_ActiveType/Ends[OverallStatus]" }
             },
             {
-              "id": "ActiveType/Properties[People]",
-              "name": "People",
-              "association": { "__id": "FK_Person_ActiveType" },
-              "elementType": { "__id": "Person" },
-              "fromEnd": { "__id": "FK_Person_ActiveType/Ends[ActiveType]" },
-              "propertyType": { "__id": "Person*" },
-              "toEnd": { "__id": "FK_Person_ActiveType/Ends[Person]" }
+              "id": "ActiveType/Properties[PersonItem]",
+              "name": "PersonItem",
+              "association": { "__id": "ActiveType_PersonItem" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "ActiveType_PersonItem/Ends[ActiveType]" },
+              "propertyType": { "__id": "PersonItem*" },
+              "toEnd": { "__id": "ActiveType_PersonItem/Ends[PersonItem]" }
             },
             {
               "id": "ActiveType/Properties[Projects]",
@@ -366,13 +367,13 @@
               "toEnd": { "__id": "FK_BillingDetail_Client/Ends[Client]" }
             },
             {
-              "id": "BillingDetail/Properties[Person]",
-              "name": "Person",
-              "association": { "__id": "FK_BillingDetail_Person" },
-              "elementType": { "__id": "Person" },
-              "fromEnd": { "__id": "FK_BillingDetail_Person/Ends[BillingDetail]" },
-              "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_BillingDetail_Person/Ends[Person]" }
+              "id": "BillingDetail/Properties[PersonItem]",
+              "name": "PersonItem",
+              "association": { "__id": "PersonItem_BillingDetail" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "PersonItem_BillingDetail/Ends[BillingDetail]" },
+              "propertyType": { "__id": "PersonItem" },
+              "toEnd": { "__id": "PersonItem_BillingDetail/Ends[PersonItem]" }
             },
             {
               "id": "BillingDetail/Properties[ClientRole]",
@@ -702,13 +703,13 @@
               "toEnd": { "__id": "FK_Client_ActiveType/Ends[ActiveType]" }
             },
             {
-              "id": "Client/Properties[Person]",
-              "name": "Person",
-              "association": { "__id": "FK_Client_Person" },
-              "elementType": { "__id": "Person" },
-              "fromEnd": { "__id": "FK_Client_Person/Ends[Client]" },
-              "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_Client_Person/Ends[Person]" }
+              "id": "Client/Properties[PersonItem]",
+              "name": "PersonItem",
+              "association": { "__id": "PersonItem_Client" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "PersonItem_Client/Ends[Client]" },
+              "propertyType": { "__id": "PersonItem" },
+              "toEnd": { "__id": "PersonItem_Client/Ends[PersonItem]" }
             },
             {
               "id": "Client/Properties[Projects]",
@@ -1375,21 +1376,21 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Person/Properties[PersonSourceKey]" } },
-          "id": "Person",
-          "name": "Person",
+          ":@SummaryProperty": { "property": { "__id": "PersonItem/Properties[PersonSourceKey]" } },
+          "id": "PersonItem",
+          "name": "PersonItem",
           "methods":
           [
             {
-              "id": "Person/Methods[deleteEntity]",
+              "id": "PersonItem/Methods[deleteEntity]",
               "name": "deleteEntity"
             },
             {
-              "id": "Person/Methods[edit]",
+              "id": "PersonItem/Methods[edit]",
               "name": "edit"
             },
             {
-              "id": "Person/Methods[view]",
+              "id": "PersonItem/Methods[view]",
               "name": "view"
             }
           ],
@@ -1397,7 +1398,7 @@
           [
             {
               "__isKeyProperty": 1,
-              "id": "Person/Properties[PersonID]",
+              "id": "PersonItem/Properties[PersonID]",
               "name": "PersonID",
               "isReadOnly": true,
               "propertyType": { "__id": ":Int32" },
@@ -1406,7 +1407,7 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[PersonSourceKey]",
+              "id": "PersonItem/Properties[PersonSourceKey]",
               "name": "PersonSourceKey",
               "propertyType": { "__id": ":String?" },
               ":@MaxLength":
@@ -1416,7 +1417,7 @@
               ":@AnsiConstraint": { }
             },
             {
-              "id": "Person/Properties[LoadDate]",
+              "id": "PersonItem/Properties[LoadDate]",
               "name": "LoadDate",
               "propertyType": { "__id": ":DateTime" },
               ":@Required": { },
@@ -1429,7 +1430,7 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[PersonName]",
+              "id": "PersonItem/Properties[PersonName]",
               "name": "PersonName",
               "propertyType": { "__id": ":String" },
               ":@Required": { },
@@ -1440,7 +1441,7 @@
               ":@AnsiConstraint": { }
             },
             {
-              "id": "Person/Properties[PersonCode]",
+              "id": "PersonItem/Properties[PersonCode]",
               "name": "PersonCode",
               "propertyType": { "__id": ":String" },
               ":@Required": { },
@@ -1451,34 +1452,34 @@
               ":@AnsiConstraint": { }
             },
             {
-              "id": "Person/Properties[LoadDateID]",
+              "id": "PersonItem/Properties[LoadDateID]",
               "name": "LoadDateID",
               "isReadOnly": true,
               "propertyType": { "__id": ":Int32?" },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[PersonSystemRoleID]",
+              "id": "PersonItem/Properties[PersonSystemRoleID]",
               "name": "PersonSystemRoleID",
               "propertyType": { "__id": ":Int32?" },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[BillingPercentTarget]",
+              "id": "PersonItem/Properties[BillingPercentTarget]",
               "name": "BillingPercentTarget",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[BillingPercentMinimum]",
+              "id": "PersonItem/Properties[BillingPercentMinimum]",
               "name": "BillingPercentMinimum",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[Email]",
+              "id": "PersonItem/Properties[Email]",
               "name": "Email",
               "propertyType": { "__id": ":String?" },
               ":@MaxLength":
@@ -1488,7 +1489,7 @@
               ":@AnsiConstraint": { }
             },
             {
-              "id": "Person/Properties[StartDate]",
+              "id": "PersonItem/Properties[StartDate]",
               "name": "StartDate",
               "propertyType": { "__id": ":Date" },
               ":@Required": { },
@@ -1501,13 +1502,13 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[HourlyCost]",
+              "id": "PersonItem/Properties[HourlyCost]",
               "name": "HourlyCost",
               "propertyType": { "__id": ":Int32?" },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[MonthlyCost]",
+              "id": "PersonItem/Properties[MonthlyCost]",
               "name": "MonthlyCost",
               "propertyType": { "__id": ":Decimal?" },
               ":@DecimalConstraint":
@@ -1518,21 +1519,21 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[IsContractor]",
+              "id": "PersonItem/Properties[IsContractor]",
               "name": "IsContractor",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[Billable]",
+              "id": "PersonItem/Properties[Billable]",
               "name": "Billable",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[ADUsername]",
+              "id": "PersonItem/Properties[ADUsername]",
               "name": "ADUsername",
               "propertyType": { "__id": ":String?" },
               ":@MaxLength":
@@ -1542,7 +1543,7 @@
               ":@AnsiConstraint": { }
             },
             {
-              "id": "Person/Properties[sys_CreatedOn]",
+              "id": "PersonItem/Properties[sys_CreatedOn]",
               "name": "sys_CreatedOn",
               "propertyType": { "__id": ":DateTime" },
               ":@Required": { },
@@ -1555,7 +1556,7 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[sys_CreatedBy]",
+              "id": "PersonItem/Properties[sys_CreatedBy]",
               "name": "sys_CreatedBy",
               "propertyType": { "__id": ":String" },
               ":@Required": { },
@@ -1565,7 +1566,7 @@
               }
             },
             {
-              "id": "Person/Properties[sys_ModifiedOn]",
+              "id": "PersonItem/Properties[sys_ModifiedOn]",
               "name": "sys_ModifiedOn",
               "propertyType": { "__id": ":DateTime" },
               ":@Required": { },
@@ -1578,7 +1579,7 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Person/Properties[sys_ModifiedBy]",
+              "id": "PersonItem/Properties[sys_ModifiedBy]",
               "name": "sys_ModifiedBy",
               "propertyType": { "__id": ":String" },
               ":@Required": { },
@@ -1588,49 +1589,68 @@
               }
             },
             {
-              "id": "Person/Properties[BillingDetails]",
+              "id": "PersonItem/Properties[BillingDetails]",
               "name": "BillingDetails",
-              "association": { "__id": "FK_BillingDetail_Person" },
+              "association": { "__id": "PersonItem_BillingDetail" },
               "elementType": { "__id": "BillingDetail" },
-              "fromEnd": { "__id": "FK_BillingDetail_Person/Ends[Person]" },
+              "fromEnd": { "__id": "PersonItem_BillingDetail/Ends[PersonItem]" },
               "propertyType": { "__id": "BillingDetail*" },
-              "toEnd": { "__id": "FK_BillingDetail_Person/Ends[BillingDetail]" }
+              "toEnd": { "__id": "PersonItem_BillingDetail/Ends[BillingDetail]" }
             },
             {
-              "id": "Person/Properties[Clients]",
+              "id": "PersonItem/Properties[Clients]",
               "name": "Clients",
-              "association": { "__id": "FK_Client_Person" },
+              "association": { "__id": "PersonItem_Client" },
               "elementType": { "__id": "Client" },
-              "fromEnd": { "__id": "FK_Client_Person/Ends[Person]" },
+              "fromEnd": { "__id": "PersonItem_Client/Ends[PersonItem]" },
               "propertyType": { "__id": "Client*" },
-              "toEnd": { "__id": "FK_Client_Person/Ends[Client]" }
+              "toEnd": { "__id": "PersonItem_Client/Ends[Client]" }
             },
             {
-              "id": "Person/Properties[ActiveType]",
+              "id": "PersonItem/Properties[ActiveType]",
               "name": "ActiveType",
-              "association": { "__id": "FK_Person_ActiveType" },
+              "association": { "__id": "ActiveType_PersonItem" },
               "elementType": { "__id": "ActiveType" },
-              "fromEnd": { "__id": "FK_Person_ActiveType/Ends[Person]" },
+              "fromEnd": { "__id": "ActiveType_PersonItem/Ends[PersonItem]" },
               "propertyType": { "__id": "ActiveType" },
-              "toEnd": { "__id": "FK_Person_ActiveType/Ends[ActiveType]" }
+              "toEnd": { "__id": "ActiveType_PersonItem/Ends[ActiveType]" }
             },
             {
-              "id": "Person/Properties[Projects]",
+              "id": "PersonItem/Properties[Projects]",
               "name": "Projects",
-              "association": { "__id": "FK_Project_Person" },
+              "association": { "__id": "PersonItem_Project" },
               "elementType": { "__id": "Project" },
-              "fromEnd": { "__id": "FK_Project_Person/Ends[Person]" },
+              "fromEnd": { "__id": "PersonItem_Project/Ends[PersonItem]" },
               "propertyType": { "__id": "Project*" },
-              "toEnd": { "__id": "FK_Project_Person/Ends[Project]" }
+              "toEnd": { "__id": "PersonItem_Project/Ends[Project]" }
             },
             {
-              "id": "Person/Properties[TimesheetDetails]",
+              "id": "PersonItem/Properties[TimesheetDetails]",
               "name": "TimesheetDetails",
-              "association": { "__id": "FK_TimesheetDetail_Person" },
+              "association": { "__id": "PersonItem_TimesheetDetail" },
               "elementType": { "__id": "TimesheetDetail" },
-              "fromEnd": { "__id": "FK_TimesheetDetail_Person/Ends[Person]" },
+              "fromEnd": { "__id": "PersonItem_TimesheetDetail/Ends[PersonItem]" },
               "propertyType": { "__id": "TimesheetDetail*" },
-              "toEnd": { "__id": "FK_TimesheetDetail_Person/Ends[TimesheetDetail]" }
+              "toEnd": { "__id": "PersonItem_TimesheetDetail/Ends[TimesheetDetail]" }
+            },
+            {
+              "id": "PersonItem/Properties[Timesheets]",
+              "name": "Timesheets",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "elementType": { "__id": "Timesheet" },
+              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" },
+              "propertyType": { "__id": "Timesheet*" },
+              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" }
+            },
+            {
+              "id": "PersonItem/Properties[SharepointUserName]",
+              "name": "SharepointUserName",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
             }
           ]
         },
@@ -1863,13 +1883,13 @@
               "toEnd": { "__id": "FK_Project_Client/Ends[Client]" }
             },
             {
-              "id": "Project/Properties[Person]",
-              "name": "Person",
-              "association": { "__id": "FK_Project_Person" },
-              "elementType": { "__id": "Person" },
-              "fromEnd": { "__id": "FK_Project_Person/Ends[Project]" },
-              "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_Project_Person/Ends[Person]" }
+              "id": "Project/Properties[PersonItem]",
+              "name": "PersonItem",
+              "association": { "__id": "PersonItem_Project" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "PersonItem_Project/Ends[Project]" },
+              "propertyType": { "__id": "PersonItem" },
+              "toEnd": { "__id": "PersonItem_Project/Ends[PersonItem]" }
             },
             {
               "id": "Project/Properties[TimesheetDetails]",
@@ -2105,6 +2125,15 @@
                 "preserveSeconds": true
               },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "Timesheet/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" },
+              "propertyType": { "__id": "PersonItem" },
+              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" }
             }
           ]
         },
@@ -2337,13 +2366,13 @@
               "toEnd": { "__id": "FK_TimesheetDetail_DimDate/Ends[DimDate]" }
             },
             {
-              "id": "TimesheetDetail/Properties[Person]",
-              "name": "Person",
-              "association": { "__id": "FK_TimesheetDetail_Person" },
-              "elementType": { "__id": "Person" },
-              "fromEnd": { "__id": "FK_TimesheetDetail_Person/Ends[TimesheetDetail]" },
-              "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_TimesheetDetail_Person/Ends[Person]" }
+              "id": "TimesheetDetail/Properties[PersonItem]",
+              "name": "PersonItem",
+              "association": { "__id": "PersonItem_TimesheetDetail" },
+              "elementType": { "__id": "PersonItem" },
+              "fromEnd": { "__id": "PersonItem_TimesheetDetail/Ends[TimesheetDetail]" },
+              "propertyType": { "__id": "PersonItem" },
+              "toEnd": { "__id": "PersonItem_TimesheetDetail/Ends[PersonItem]" }
             },
             {
               "id": "TimesheetDetail/Properties[Project]",
@@ -2565,19 +2594,19 @@
           ]
         },
         {
-          "id": "FK_BillingDetail_Person",
-          "name": "FK_BillingDetail_Person",
+          "id": "PersonItem_BillingDetail",
+          "name": "PersonItem_BillingDetail",
           "ends":
           [
             {
-              "id": "FK_BillingDetail_Person/Ends[Person]",
-              "name": "Person",
+              "id": "PersonItem_BillingDetail/Ends[PersonItem]",
+              "name": "PersonItem",
               "multiplicity": "One",
-              "entityType": { "__id": "Person" },
+              "entityType": { "__id": "PersonItem" },
               ":@DeleteRule": { "action": "Unset" }
             },
             {
-              "id": "FK_BillingDetail_Person/Ends[BillingDetail]",
+              "id": "PersonItem_BillingDetail/Ends[BillingDetail]",
               "name": "BillingDetail",
               "multiplicity": "Many",
               "entityType": { "__id": "BillingDetail" }
@@ -2645,19 +2674,19 @@
           ]
         },
         {
-          "id": "FK_Client_Person",
-          "name": "FK_Client_Person",
+          "id": "PersonItem_Client",
+          "name": "PersonItem_Client",
           "ends":
           [
             {
-              "id": "FK_Client_Person/Ends[Person]",
-              "name": "Person",
+              "id": "PersonItem_Client/Ends[PersonItem]",
+              "name": "PersonItem",
               "multiplicity": "One",
-              "entityType": { "__id": "Person" },
+              "entityType": { "__id": "PersonItem" },
               ":@DeleteRule": { "action": "Unset" }
             },
             {
-              "id": "FK_Client_Person/Ends[Client]",
+              "id": "PersonItem_Client/Ends[Client]",
               "name": "Client",
               "multiplicity": "Many",
               "entityType": { "__id": "Client" }
@@ -2705,22 +2734,22 @@
           ]
         },
         {
-          "id": "FK_Person_ActiveType",
-          "name": "FK_Person_ActiveType",
+          "id": "ActiveType_PersonItem",
+          "name": "ActiveType_PersonItem",
           "ends":
           [
             {
-              "id": "FK_Person_ActiveType/Ends[ActiveType]",
+              "id": "ActiveType_PersonItem/Ends[ActiveType]",
               "name": "ActiveType",
               "multiplicity": "One",
               "entityType": { "__id": "ActiveType" },
               ":@DeleteRule": { "action": "Unset" }
             },
             {
-              "id": "FK_Person_ActiveType/Ends[Person]",
-              "name": "Person",
+              "id": "ActiveType_PersonItem/Ends[PersonItem]",
+              "name": "PersonItem",
               "multiplicity": "Many",
-              "entityType": { "__id": "Person" }
+              "entityType": { "__id": "PersonItem" }
             }
           ]
         },
@@ -2785,19 +2814,19 @@
           ]
         },
         {
-          "id": "FK_Project_Person",
-          "name": "FK_Project_Person",
+          "id": "PersonItem_Project",
+          "name": "PersonItem_Project",
           "ends":
           [
             {
-              "id": "FK_Project_Person/Ends[Person]",
-              "name": "Person",
+              "id": "PersonItem_Project/Ends[PersonItem]",
+              "name": "PersonItem",
               "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Person" },
+              "entityType": { "__id": "PersonItem" },
               ":@DeleteRule": { "action": "Unset" }
             },
             {
-              "id": "FK_Project_Person/Ends[Project]",
+              "id": "PersonItem_Project/Ends[Project]",
               "name": "Project",
               "multiplicity": "Many",
               "entityType": { "__id": "Project" }
@@ -2925,19 +2954,19 @@
           ]
         },
         {
-          "id": "FK_TimesheetDetail_Person",
-          "name": "FK_TimesheetDetail_Person",
+          "id": "PersonItem_TimesheetDetail",
+          "name": "PersonItem_TimesheetDetail",
           "ends":
           [
             {
-              "id": "FK_TimesheetDetail_Person/Ends[Person]",
-              "name": "Person",
+              "id": "PersonItem_TimesheetDetail/Ends[PersonItem]",
+              "name": "PersonItem",
               "multiplicity": "One",
-              "entityType": { "__id": "Person" },
+              "entityType": { "__id": "PersonItem" },
               ":@DeleteRule": { "action": "Unset" }
             },
             {
-              "id": "FK_TimesheetDetail_Person/Ends[TimesheetDetail]",
+              "id": "PersonItem_TimesheetDetail/Ends[TimesheetDetail]",
               "name": "TimesheetDetail",
               "multiplicity": "Many",
               "entityType": { "__id": "TimesheetDetail" }
@@ -3072,13 +3101,13 @@
             {
               "id": "TimesheetsData/Members[FK_BillingDetail_Person]",
               "name": "FK_BillingDetail_Person",
-              "association": { "__id": "FK_BillingDetail_Person" },
+              "association": { "__id": "PersonItem_BillingDetail" },
               "ends":
               [
                 {
                   "properties": [ "PersonID" ],
-                  "id": "TimesheetsData/Members[FK_BillingDetail_Person]/Members[Person]",
-                  "name": "Person",
+                  "id": "TimesheetsData/Members[FK_BillingDetail_Person]/Members[PersonItem]",
+                  "name": "PersonItem",
                   "entitySet": { "__id": "TimesheetsData/Members[People]" }
                 },
                 {
@@ -3152,13 +3181,13 @@
             {
               "id": "TimesheetsData/Members[FK_Client_Person]",
               "name": "FK_Client_Person",
-              "association": { "__id": "FK_Client_Person" },
+              "association": { "__id": "PersonItem_Client" },
               "ends":
               [
                 {
                   "properties": [ "PersonID" ],
-                  "id": "TimesheetsData/Members[FK_Client_Person]/Members[Person]",
-                  "name": "Person",
+                  "id": "TimesheetsData/Members[FK_Client_Person]/Members[PersonItem]",
+                  "name": "PersonItem",
                   "entitySet": { "__id": "TimesheetsData/Members[People]" }
                 },
                 {
@@ -3212,7 +3241,7 @@
             {
               "id": "TimesheetsData/Members[FK_Person_ActiveType]",
               "name": "FK_Person_ActiveType",
-              "association": { "__id": "FK_Person_ActiveType" },
+              "association": { "__id": "ActiveType_PersonItem" },
               "ends":
               [
                 {
@@ -3223,8 +3252,8 @@
                 },
                 {
                   "properties": [ "Active" ],
-                  "id": "TimesheetsData/Members[FK_Person_ActiveType]/Members[Person]",
-                  "name": "Person",
+                  "id": "TimesheetsData/Members[FK_Person_ActiveType]/Members[PersonItem]",
+                  "name": "PersonItem",
                   "entitySet": { "__id": "TimesheetsData/Members[People]" }
                 }
               ]
@@ -3292,13 +3321,13 @@
             {
               "id": "TimesheetsData/Members[FK_Project_Person]",
               "name": "FK_Project_Person",
-              "association": { "__id": "FK_Project_Person" },
+              "association": { "__id": "PersonItem_Project" },
               "ends":
               [
                 {
                   "properties": [ "PersonID" ],
-                  "id": "TimesheetsData/Members[FK_Project_Person]/Members[Person]",
-                  "name": "Person",
+                  "id": "TimesheetsData/Members[FK_Project_Person]/Members[PersonItem]",
+                  "name": "PersonItem",
                   "entitySet": { "__id": "TimesheetsData/Members[People]" }
                 },
                 {
@@ -3432,13 +3461,13 @@
             {
               "id": "TimesheetsData/Members[FK_TimesheetDetail_Person]",
               "name": "FK_TimesheetDetail_Person",
-              "association": { "__id": "FK_TimesheetDetail_Person" },
+              "association": { "__id": "PersonItem_TimesheetDetail" },
               "ends":
               [
                 {
                   "properties": [ "PersonID" ],
-                  "id": "TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[Person]",
-                  "name": "Person",
+                  "id": "TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[PersonItem]",
+                  "name": "PersonItem",
                   "entitySet": { "__id": "TimesheetsData/Members[People]" }
                 },
                 {
@@ -3548,6 +3577,26 @@
                   "entitySet": { "__id": "TimesheetsData/Members[BillingDetails]" }
                 }
               ]
+            },
+            {
+              "id": "TimesheetsData/Members[fk_TimesheetPersonID]",
+              "name": "fk_TimesheetPersonID",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "ends":
+              [
+                {
+                  "properties": [ "PersonID" ],
+                  "id": "TimesheetsData/Members[fk_TimesheetPersonID]/Members[Person]",
+                  "name": "Person",
+                  "entitySet": { "__id": "TimesheetsData/Members[People]" }
+                },
+                {
+                  "properties": [ "TimesheetPersonID" ],
+                  "id": "TimesheetsData/Members[fk_TimesheetPersonID]/Members[Timesheet]",
+                  "name": "Timesheet",
+                  "entitySet": { "__id": "TimesheetsData/Members[Timesheets]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -3621,8 +3670,8 @@
               "canDelete": true,
               "canInsert": true,
               "canUpdate": true,
-              "elementType": { "__id": "Person" },
-              "entityType": { "__id": "Person" }
+              "elementType": { "__id": "PersonItem" },
+              "entityType": { "__id": "PersonItem" }
             },
             {
               "id": "TimesheetsData/Members[Projects]",
@@ -3932,9 +3981,9 @@
             {
               "id": "TimesheetsData/Members[People_Single]",
               "name": "People_Single",
-              "elementType": { "__id": "Person" },
+              "elementType": { "__id": "PersonItem" },
               "query": { "__id": "TimesheetsData/Members[People_Single]" },
-              "returnType": { "__id": "Person" },
+              "returnType": { "__id": "PersonItem" },
               "source":
               {
                 "member": { "__id": "TimesheetsData/Members[People]" }
@@ -3951,9 +4000,9 @@
             {
               "id": "TimesheetsData/Members[People_SingleOrDefault]",
               "name": "People_SingleOrDefault",
-              "elementType": { "__id": "Person" },
+              "elementType": { "__id": "PersonItem" },
               "query": { "__id": "TimesheetsData/Members[People_SingleOrDefault]" },
-              "returnType": { "__id": "Person" },
+              "returnType": { "__id": "PersonItem" },
               "source":
               {
                 "member": { "__id": "TimesheetsData/Members[People]" }
@@ -5528,6 +5577,26 @@
           ]
         },
         {
+          "id": "fk_TimesheetPersonID",
+          "name": "fk_TimesheetPersonID",
+          "ends":
+          [
+            {
+              "id": "fk_TimesheetPersonID/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "PersonItem" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "fk_TimesheetPersonID/Ends[Timesheet]",
+              "name": "Timesheet",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Timesheet" }
+            }
+          ]
+        },
+        {
           "id": "TypeOfWork*",
           "name": "TypeOfWork*",
           "kind": "Enumerable",
@@ -5740,55 +5809,55 @@
           ]
         },
         {
-          "id": "Person*",
-          "name": "Person*",
+          "id": "PersonItem*",
+          "name": "PersonItem*",
           "kind": "Enumerable",
-          "elementType": { "__id": "Person" }
+          "elementType": { "__id": "PersonItem" }
         },
         {
-          "id": "CollectionView$Person",
-          "name": "CollectionView$Person",
+          "id": "CollectionView$PersonItem",
+          "name": "CollectionView$PersonItem",
           "kind": "CollectionView",
-          "elementType": { "__id": "Person" },
+          "elementType": { "__id": "PersonItem" },
           "methods":
           [
             {
-              "id": "CollectionView$Person/Methods[addNew]",
+              "id": "CollectionView$PersonItem/Methods[addNew]",
               "name": "addNew",
-              "returnType": { "__id": "Person" }
+              "returnType": { "__id": "PersonItem" }
             },
             {
-              "id": "CollectionView$Person/Methods[addAndEditNew]",
+              "id": "CollectionView$PersonItem/Methods[addAndEditNew]",
               "name": "addAndEditNew",
-              "returnType": { "__id": "Person" }
+              "returnType": { "__id": "PersonItem" }
             },
             {
-              "id": "CollectionView$Person/Methods[editSelected]",
+              "id": "CollectionView$PersonItem/Methods[editSelected]",
               "name": "editSelected"
             },
             {
-              "id": "CollectionView$Person/Methods[deleteSelected]",
+              "id": "CollectionView$PersonItem/Methods[deleteSelected]",
               "name": "deleteSelected"
             },
             {
-              "id": "CollectionView$Person/Methods[removeSelected]",
+              "id": "CollectionView$PersonItem/Methods[removeSelected]",
               "name": "removeSelected"
             },
             {
-              "id": "CollectionView$Person/Methods[refresh]",
+              "id": "CollectionView$PersonItem/Methods[refresh]",
               "name": "refresh"
             },
             {
-              "id": "CollectionView$Person/Methods[viewSelected]",
+              "id": "CollectionView$PersonItem/Methods[viewSelected]",
               "name": "viewSelected"
             }
           ],
           "properties":
           [
             {
-              "id": "CollectionView$Person/Properties[selectedItem]",
+              "id": "CollectionView$PersonItem/Properties[selectedItem]",
               "name": "selectedItem",
-              "propertyType": { "__id": "Person" }
+              "propertyType": { "__id": "PersonItem" }
             }
           ]
         },

@@ -119,7 +119,6 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\bin\System.ServiceModel.DomainServices.Server.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\bin\System.Spatial.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\bin\Microsoft.WindowsAzure.ServiceRuntime.dll
-C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\SharePointLaunch.aspx
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\TimesheetsData.svc
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\HTMLClient\Content\dark-theme.css
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\HTMLClient\Content\jquery.mobile-1.2.0.css

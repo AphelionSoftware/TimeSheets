@@ -21,30 +21,31 @@ using System.Xml.Serialization;
 
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Person", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Person), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_BillingDetail", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Role", "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ClientRole), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingStatus_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingStatu), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Client_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Client_Person", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Person), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Client", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_ClientRole_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ClientRole), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_OverallStatus_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "OverallStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OverallStatu), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Person_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Person), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "ActiveType_PersonItem", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PersonItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.BillingStatu), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Person", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Person), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Project", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.PersonItem), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_OverallStatus", "OverallStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.OverallStatu), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.BillingStatu), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_Person", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Person), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_TimesheetDetail", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_Project", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Project), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_Timesheet", "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Timesheet), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_TypeOfWork", "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TypeOfWork), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.PersonItem), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 
 #endregion
 
@@ -208,18 +209,18 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Person> People
+        public ObjectSet<PersonItem> People
         {
             get
             {
                 if ((_People == null))
                 {
-                    _People = base.CreateObjectSet<Person>("People");
+                    _People = base.CreateObjectSet<PersonItem>("People");
                 }
                 return _People;
             }
         }
-        private ObjectSet<Person> _People;
+        private ObjectSet<PersonItem> _People;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -348,9 +349,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// Deprecated Method for adding a new object to the People EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPeople(Person person)
+        public void AddToPeople(PersonItem personItem)
         {
-            base.AddObject("People", person);
+            base.AddObject("People", personItem);
         }
     
         /// <summary>
@@ -748,18 +749,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Person_ActiveType", "Person")]
-        public EntityCollection<Person> People
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "ActiveType_PersonItem", "PersonItem")]
+        public EntityCollection<PersonItem> PersonItem
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Person>("LightSwitchApplication.FK_Person_ActiveType", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonItem>("LightSwitchApplication.ActiveType_PersonItem", "PersonItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Person>("LightSwitchApplication.FK_Person_ActiveType", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonItem>("LightSwitchApplication.ActiveType_PersonItem", "PersonItem", value);
                 }
             }
         }
@@ -1327,16 +1328,16 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_BillingDetail_Person", "Person")]
-        public Person Person
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_BillingDetail", "PersonItem")]
+        public PersonItem PersonItem
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_BillingDetail_Person", "Person").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_BillingDetail", "PersonItem").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_BillingDetail_Person", "Person").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_BillingDetail", "PersonItem").Value = value;
             }
         }
         /// <summary>
@@ -1344,17 +1345,17 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Person> PersonReference
+        public EntityReference<PersonItem> PersonItemReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_BillingDetail_Person", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_BillingDetail", "PersonItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("LightSwitchApplication.FK_BillingDetail_Person", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_BillingDetail", "PersonItem", value);
                 }
             }
         }
@@ -2243,16 +2244,16 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Client_Person", "Person")]
-        public Person Person
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_Client", "PersonItem")]
+        public PersonItem PersonItem
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Client_Person", "Person").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Client", "PersonItem").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Client_Person", "Person").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Client", "PersonItem").Value = value;
             }
         }
         /// <summary>
@@ -2260,17 +2261,17 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Person> PersonReference
+        public EntityReference<PersonItem> PersonItemReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Client_Person", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Client", "PersonItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("LightSwitchApplication.FK_Client_Person", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Client", "PersonItem", value);
                 }
             }
         }
@@ -3993,15 +3994,15 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Person")]
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="PersonItem")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Person : EntityObject
+    public partial class PersonItem : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Person object.
+        /// Create a new PersonItem object.
         /// </summary>
         /// <param name="personID">Initial value of the PersonID property.</param>
         /// <param name="loadDate">Initial value of the LoadDate property.</param>
@@ -4017,24 +4018,24 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
         /// <param name="active">Initial value of the Active property.</param>
-        public static Person CreatePerson(global::System.Int32 personID, global::System.DateTime loadDate, global::System.String personName, global::System.String personCode, global::System.Int32 billingPercentTarget, global::System.Int32 billingPercentMinimum, global::System.DateTime startDate, global::System.Int32 isContractor, global::System.Int32 billable, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active)
+        public static PersonItem CreatePersonItem(global::System.Int32 personID, global::System.DateTime loadDate, global::System.String personName, global::System.String personCode, global::System.Int32 billingPercentTarget, global::System.Int32 billingPercentMinimum, global::System.DateTime startDate, global::System.Int32 isContractor, global::System.Int32 billable, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active)
         {
-            Person person = new Person();
-            person.PersonID = personID;
-            person.LoadDate = loadDate;
-            person.PersonName = personName;
-            person.PersonCode = personCode;
-            person.BillingPercentTarget = billingPercentTarget;
-            person.BillingPercentMinimum = billingPercentMinimum;
-            person.StartDate = startDate;
-            person.IsContractor = isContractor;
-            person.Billable = billable;
-            person.sys_CreatedOn = sys_CreatedOn;
-            person.sys_CreatedBy = sys_CreatedBy;
-            person.sys_ModifiedOn = sys_ModifiedOn;
-            person.sys_ModifiedBy = sys_ModifiedBy;
-            person.Active = active;
-            return person;
+            PersonItem personItem = new PersonItem();
+            personItem.PersonID = personID;
+            personItem.LoadDate = loadDate;
+            personItem.PersonName = personName;
+            personItem.PersonCode = personCode;
+            personItem.BillingPercentTarget = billingPercentTarget;
+            personItem.BillingPercentMinimum = billingPercentMinimum;
+            personItem.StartDate = startDate;
+            personItem.IsContractor = isContractor;
+            personItem.Billable = billable;
+            personItem.sys_CreatedOn = sys_CreatedOn;
+            personItem.sys_CreatedBy = sys_CreatedBy;
+            personItem.sys_ModifiedOn = sys_ModifiedOn;
+            personItem.sys_ModifiedBy = sys_ModifiedBy;
+            personItem.Active = active;
+            return personItem;
         }
 
         #endregion
@@ -4527,6 +4528,30 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SharepointUserName
+        {
+            get
+            {
+                return _SharepointUserName;
+            }
+            set
+            {
+                OnSharepointUserNameChanging(value);
+                ReportPropertyChanging("SharepointUserName");
+                _SharepointUserName = value;
+                ReportPropertyChanged("SharepointUserName");
+                OnSharepointUserNameChanged();
+            }
+        }
+        private global::System.String _SharepointUserName;
+        partial void OnSharepointUserNameChanging(global::System.String value);
+        partial void OnSharepointUserNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 Active
@@ -4559,18 +4584,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_BillingDetail_Person", "BillingDetail")]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_BillingDetail", "BillingDetail")]
         public EntityCollection<BillingDetail> BillingDetails
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BillingDetail>("LightSwitchApplication.FK_BillingDetail_Person", "BillingDetail");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BillingDetail>("LightSwitchApplication.PersonItem_BillingDetail", "BillingDetail");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BillingDetail>("LightSwitchApplication.FK_BillingDetail_Person", "BillingDetail", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BillingDetail>("LightSwitchApplication.PersonItem_BillingDetail", "BillingDetail", value);
                 }
             }
         }
@@ -4581,18 +4606,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Client_Person", "Client")]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_Client", "Client")]
         public EntityCollection<Client> Clients
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Client>("LightSwitchApplication.FK_Client_Person", "Client");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Client>("LightSwitchApplication.PersonItem_Client", "Client");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Client>("LightSwitchApplication.FK_Client_Person", "Client", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Client>("LightSwitchApplication.PersonItem_Client", "Client", value);
                 }
             }
         }
@@ -4603,16 +4628,16 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Person_ActiveType", "ActiveType")]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "ActiveType_PersonItem", "ActiveType")]
         public ActiveType ActiveType
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.FK_Person_ActiveType", "ActiveType").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.ActiveType_PersonItem", "ActiveType").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.FK_Person_ActiveType", "ActiveType").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.ActiveType_PersonItem", "ActiveType").Value = value;
             }
         }
         /// <summary>
@@ -4624,13 +4649,13 @@ namespace LightSwitchApplication.Implementation
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.FK_Person_ActiveType", "ActiveType");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActiveType>("LightSwitchApplication.ActiveType_PersonItem", "ActiveType");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActiveType>("LightSwitchApplication.FK_Person_ActiveType", "ActiveType", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActiveType>("LightSwitchApplication.ActiveType_PersonItem", "ActiveType", value);
                 }
             }
         }
@@ -4641,18 +4666,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Project_Person", "Project")]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_Project", "Project")]
         public EntityCollection<Project> Projects
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Project>("LightSwitchApplication.FK_Project_Person", "Project");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Project>("LightSwitchApplication.PersonItem_Project", "Project");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Project>("LightSwitchApplication.FK_Project_Person", "Project", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Project>("LightSwitchApplication.PersonItem_Project", "Project", value);
                 }
             }
         }
@@ -4663,18 +4688,40 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_TimesheetDetail_Person", "TimesheetDetail")]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_TimesheetDetail", "TimesheetDetail")]
         public EntityCollection<TimesheetDetail> TimesheetDetails
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimesheetDetail>("LightSwitchApplication.FK_TimesheetDetail_Person", "TimesheetDetail");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TimesheetDetail>("LightSwitchApplication.PersonItem_TimesheetDetail", "TimesheetDetail");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimesheetDetail>("LightSwitchApplication.FK_TimesheetDetail_Person", "TimesheetDetail", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimesheetDetail>("LightSwitchApplication.PersonItem_TimesheetDetail", "TimesheetDetail", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Timesheet")]
+        public EntityCollection<Timesheet> Timesheets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Timesheet>("LightSwitchApplication.fk_TimesheetPersonID", "Timesheet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Timesheet>("LightSwitchApplication.fk_TimesheetPersonID", "Timesheet", value);
                 }
             }
         }
@@ -5362,16 +5409,16 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Project_Person", "Person")]
-        public Person Person
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_Project", "PersonItem")]
+        public PersonItem PersonItem
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Project_Person", "Person").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Project", "PersonItem").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Project_Person", "Person").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Project", "PersonItem").Value = value;
             }
         }
         /// <summary>
@@ -5379,17 +5426,17 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Person> PersonReference
+        public EntityReference<PersonItem> PersonItemReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_Project_Person", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Project", "PersonItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("LightSwitchApplication.FK_Project_Person", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_Project", "PersonItem", value);
                 }
             }
         }
@@ -5929,6 +5976,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _OverallStatusID;
         partial void OnOverallStatusIDChanging(global::System.Int32 value);
         partial void OnOverallStatusIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TimesheetPersonID
+        {
+            get
+            {
+                return _TimesheetPersonID;
+            }
+            set
+            {
+                OnTimesheetPersonIDChanging(value);
+                ReportPropertyChanging("TimesheetPersonID");
+                _TimesheetPersonID = value;
+                ReportPropertyChanged("TimesheetPersonID");
+                OnTimesheetPersonIDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TimesheetPersonID;
+        partial void OnTimesheetPersonIDChanging(Nullable<global::System.Int32> value);
+        partial void OnTimesheetPersonIDChanged();
 
         #endregion
 
@@ -6067,6 +6138,44 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TimesheetDetail>("LightSwitchApplication.FK_TimesheetDetail_Timesheet", "TimesheetDetail", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person")]
+        public PersonItem Person
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.fk_TimesheetPersonID", "Person").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.fk_TimesheetPersonID", "Person").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<PersonItem> PersonReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.fk_TimesheetPersonID", "Person");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonItem>("LightSwitchApplication.fk_TimesheetPersonID", "Person", value);
                 }
             }
         }
@@ -6838,16 +6947,16 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_TimesheetDetail_Person", "Person")]
-        public Person Person
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "PersonItem_TimesheetDetail", "PersonItem")]
+        public PersonItem PersonItem
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_TimesheetDetail_Person", "Person").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_TimesheetDetail", "PersonItem").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_TimesheetDetail_Person", "Person").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_TimesheetDetail", "PersonItem").Value = value;
             }
         }
         /// <summary>
@@ -6855,17 +6964,17 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Person> PersonReference
+        public EntityReference<PersonItem> PersonItemReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.FK_TimesheetDetail_Person", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_TimesheetDetail", "PersonItem");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("LightSwitchApplication.FK_TimesheetDetail_Person", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonItem>("LightSwitchApplication.PersonItem_TimesheetDetail", "PersonItem", value);
                 }
             }
         }

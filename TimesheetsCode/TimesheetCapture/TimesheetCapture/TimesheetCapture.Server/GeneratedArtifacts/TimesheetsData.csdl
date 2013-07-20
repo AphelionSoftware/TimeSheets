@@ -17,7 +17,7 @@
     <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_ActiveType" ToRole="Client" FromRole="ActiveType" />
     <NavigationProperty Name="ClientRoles" Relationship="LightSwitchApplication.FK_ClientRole_ActiveType" ToRole="ClientRole" FromRole="ActiveType" />
     <NavigationProperty Name="OverallStatus" Relationship="LightSwitchApplication.FK_OverallStatus_ActiveType" ToRole="OverallStatus" FromRole="ActiveType" />
-    <NavigationProperty Name="People" Relationship="LightSwitchApplication.FK_Person_ActiveType" ToRole="Person" FromRole="ActiveType" />
+    <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.ActiveType_PersonItem" ToRole="PersonItem" FromRole="ActiveType" />
     <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_ActiveType" ToRole="Project" FromRole="ActiveType" />
     <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="Timesheet" FromRole="ActiveType" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="TimesheetDetail" FromRole="ActiveType" />
@@ -43,7 +43,7 @@
     <Property Name="BillingDetailDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_BillingDetail_ActiveType" ToRole="ActiveType" FromRole="BillingDetail" />
     <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="Client" FromRole="BillingDetail" />
-    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_BillingDetail_Person" ToRole="Person" FromRole="BillingDetail" />
+    <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.PersonItem_BillingDetail" ToRole="PersonItem" FromRole="BillingDetail" />
     <NavigationProperty Name="ClientRole" Relationship="LightSwitchApplication.FK_BillingDetail_Role" ToRole="ClientRole" FromRole="BillingDetail" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_BillingDetail_DimDate" ToRole="DimDate" FromRole="BillingDetail" />
   </EntityType>
@@ -84,7 +84,7 @@
     <Property Name="AccountManagerPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="BillingDetail" FromRole="Client" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Client_ActiveType" ToRole="ActiveType" FromRole="Client" />
-    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_Client_Person" ToRole="Person" FromRole="Client" />
+    <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.PersonItem_Client" ToRole="PersonItem" FromRole="Client" />
     <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_Client" ToRole="Project" FromRole="Client" />
   </EntityType>
   <EntityType Name="ClientRole">
@@ -164,7 +164,7 @@
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_OverallStatus_ActiveType" ToRole="ActiveType" FromRole="OverallStatus" />
     <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.FK_Timesheet_OverallStatus" ToRole="Timesheet" FromRole="OverallStatus" />
   </EntityType>
-  <EntityType Name="Person">
+  <EntityType Name="PersonItem">
     <Key>
       <PropertyRef Name="PersonID" />
     </Key>
@@ -188,12 +188,14 @@
     <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
     <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="SharepointUserName" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Person" ToRole="BillingDetail" FromRole="Person" />
-    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_Person" ToRole="Client" FromRole="Person" />
-    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Person_ActiveType" ToRole="ActiveType" FromRole="Person" />
-    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.FK_Project_Person" ToRole="Project" FromRole="Person" />
-    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Person" ToRole="TimesheetDetail" FromRole="Person" />
+    <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.PersonItem_BillingDetail" ToRole="BillingDetail" FromRole="PersonItem" />
+    <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.PersonItem_Client" ToRole="Client" FromRole="PersonItem" />
+    <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.ActiveType_PersonItem" ToRole="ActiveType" FromRole="PersonItem" />
+    <NavigationProperty Name="Projects" Relationship="LightSwitchApplication.PersonItem_Project" ToRole="Project" FromRole="PersonItem" />
+    <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.PersonItem_TimesheetDetail" ToRole="TimesheetDetail" FromRole="PersonItem" />
+    <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.fk_TimesheetPersonID" ToRole="Timesheet" FromRole="Person" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
@@ -223,7 +225,7 @@
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Project_ActiveType" ToRole="ActiveType" FromRole="Project" />
     <NavigationProperty Name="BillingStatu" Relationship="LightSwitchApplication.FK_Project_BillingStatus" ToRole="BillingStatus" FromRole="Project" />
     <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_Project_Client" ToRole="Client" FromRole="Project" />
-    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_Project_Person" ToRole="Person" FromRole="Project" />
+    <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.PersonItem_Project" ToRole="PersonItem" FromRole="Project" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Project" ToRole="TimesheetDetail" FromRole="Project" />
   </EntityType>
   <EntityType Name="Timesheet">
@@ -249,10 +251,12 @@
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetPersonID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="ActiveType" FromRole="Timesheet" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="DimDate" FromRole="Timesheet" />
     <NavigationProperty Name="OverallStatus" Relationship="LightSwitchApplication.FK_Timesheet_OverallStatus" ToRole="OverallStatus" FromRole="Timesheet" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="TimesheetDetail" FromRole="Timesheet" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.fk_TimesheetPersonID" ToRole="Person" FromRole="Timesheet" />
   </EntityType>
   <EntityType Name="TimesheetDetail">
     <Key>
@@ -285,7 +289,7 @@
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="ActiveType" FromRole="TimesheetDetail" />
     <NavigationProperty Name="BillingStatu" Relationship="LightSwitchApplication.FK_TimesheetDetail_BillingStatus" ToRole="BillingStatus" FromRole="TimesheetDetail" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="DimDate" FromRole="TimesheetDetail" />
-    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.FK_TimesheetDetail_Person" ToRole="Person" FromRole="TimesheetDetail" />
+    <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.PersonItem_TimesheetDetail" ToRole="PersonItem" FromRole="TimesheetDetail" />
     <NavigationProperty Name="Project" Relationship="LightSwitchApplication.FK_TimesheetDetail_Project" ToRole="Project" FromRole="TimesheetDetail" />
     <NavigationProperty Name="Timesheet" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="Timesheet" FromRole="TimesheetDetail" />
     <NavigationProperty Name="TypeOfWork" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TypeOfWork" FromRole="TimesheetDetail" />
@@ -332,11 +336,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_BillingDetail_Person">
-    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+  <Association Name="PersonItem_BillingDetail">
+    <End Role="PersonItem" Type="LightSwitchApplication.PersonItem" Multiplicity="1" />
     <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Person">
+      <Principal Role="PersonItem">
         <PropertyRef Name="PersonID" />
       </Principal>
       <Dependent Role="BillingDetail">
@@ -380,11 +384,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Client_Person">
-    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+  <Association Name="PersonItem_Client">
+    <End Role="PersonItem" Type="LightSwitchApplication.PersonItem" Multiplicity="1" />
     <End Role="Client" Type="LightSwitchApplication.Client" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Person">
+      <Principal Role="PersonItem">
         <PropertyRef Name="PersonID" />
       </Principal>
       <Dependent Role="Client">
@@ -416,14 +420,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Person_ActiveType">
+  <Association Name="ActiveType_PersonItem">
     <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
-    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="*" />
+    <End Role="PersonItem" Type="LightSwitchApplication.PersonItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Person">
+      <Dependent Role="PersonItem">
         <PropertyRef Name="Active" />
       </Dependent>
     </ReferentialConstraint>
@@ -464,11 +468,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Project_Person">
-    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="0..1" />
+  <Association Name="PersonItem_Project">
+    <End Role="PersonItem" Type="LightSwitchApplication.PersonItem" Multiplicity="0..1" />
     <End Role="Project" Type="LightSwitchApplication.Project" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Person">
+      <Principal Role="PersonItem">
         <PropertyRef Name="PersonID" />
       </Principal>
       <Dependent Role="Project">
@@ -548,11 +552,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TimesheetDetail_Person">
-    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+  <Association Name="PersonItem_TimesheetDetail">
+    <End Role="PersonItem" Type="LightSwitchApplication.PersonItem" Multiplicity="1" />
     <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Person">
+      <Principal Role="PersonItem">
         <PropertyRef Name="PersonID" />
       </Principal>
       <Dependent Role="TimesheetDetail">
@@ -620,6 +624,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_TimesheetPersonID">
+    <End Role="Person" Type="LightSwitchApplication.PersonItem" Multiplicity="0..1" />
+    <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="TimesheetsData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="ActiveTypes" EntityType="LightSwitchApplication.ActiveType" />
     <EntitySet Name="BillingDetails" EntityType="LightSwitchApplication.BillingDetail" />
@@ -628,7 +644,7 @@
     <EntitySet Name="ClientRoles" EntityType="LightSwitchApplication.ClientRole" />
     <EntitySet Name="DimDates" EntityType="LightSwitchApplication.DimDate" />
     <EntitySet Name="OverallStatus" EntityType="LightSwitchApplication.OverallStatu" />
-    <EntitySet Name="People" EntityType="LightSwitchApplication.Person" />
+    <EntitySet Name="People" EntityType="LightSwitchApplication.PersonItem" />
     <EntitySet Name="Projects" EntityType="LightSwitchApplication.Project" />
     <EntitySet Name="Timesheets" EntityType="LightSwitchApplication.Timesheet" />
     <EntitySet Name="TimesheetDetails" EntityType="LightSwitchApplication.TimesheetDetail" />
@@ -641,8 +657,8 @@
       <End Role="Client" EntitySet="Clients" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_BillingDetail_Person" Association="LightSwitchApplication.FK_BillingDetail_Person">
-      <End Role="Person" EntitySet="People" />
+    <AssociationSet Name="PersonItem_BillingDetail" Association="LightSwitchApplication.PersonItem_BillingDetail">
+      <End Role="PersonItem" EntitySet="People" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_BillingDetail_Role" Association="LightSwitchApplication.FK_BillingDetail_Role">
@@ -657,8 +673,8 @@
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="Client" EntitySet="Clients" />
     </AssociationSet>
-    <AssociationSet Name="FK_Client_Person" Association="LightSwitchApplication.FK_Client_Person">
-      <End Role="Person" EntitySet="People" />
+    <AssociationSet Name="PersonItem_Client" Association="LightSwitchApplication.PersonItem_Client">
+      <End Role="PersonItem" EntitySet="People" />
       <End Role="Client" EntitySet="Clients" />
     </AssociationSet>
     <AssociationSet Name="FK_ClientRole_ActiveType" Association="LightSwitchApplication.FK_ClientRole_ActiveType">
@@ -669,9 +685,9 @@
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="OverallStatus" EntitySet="OverallStatus" />
     </AssociationSet>
-    <AssociationSet Name="FK_Person_ActiveType" Association="LightSwitchApplication.FK_Person_ActiveType">
+    <AssociationSet Name="ActiveType_PersonItem" Association="LightSwitchApplication.ActiveType_PersonItem">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
-      <End Role="Person" EntitySet="People" />
+      <End Role="PersonItem" EntitySet="People" />
     </AssociationSet>
     <AssociationSet Name="FK_Project_ActiveType" Association="LightSwitchApplication.FK_Project_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
@@ -685,8 +701,8 @@
       <End Role="Client" EntitySet="Clients" />
       <End Role="Project" EntitySet="Projects" />
     </AssociationSet>
-    <AssociationSet Name="FK_Project_Person" Association="LightSwitchApplication.FK_Project_Person">
-      <End Role="Person" EntitySet="People" />
+    <AssociationSet Name="PersonItem_Project" Association="LightSwitchApplication.PersonItem_Project">
+      <End Role="PersonItem" EntitySet="People" />
       <End Role="Project" EntitySet="Projects" />
     </AssociationSet>
     <AssociationSet Name="FK_Timesheet_ActiveType" Association="LightSwitchApplication.FK_Timesheet_ActiveType">
@@ -713,8 +729,8 @@
       <End Role="DimDate" EntitySet="DimDates" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_TimesheetDetail_Person" Association="LightSwitchApplication.FK_TimesheetDetail_Person">
-      <End Role="Person" EntitySet="People" />
+    <AssociationSet Name="PersonItem_TimesheetDetail" Association="LightSwitchApplication.PersonItem_TimesheetDetail">
+      <End Role="PersonItem" EntitySet="People" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_TimesheetDetail_Project" Association="LightSwitchApplication.FK_TimesheetDetail_Project">
@@ -736,6 +752,10 @@
     <AssociationSet Name="FK_BillingDetail_DimDate" Association="LightSwitchApplication.FK_BillingDetail_DimDate">
       <End Role="DimDate" EntitySet="DimDates" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TimesheetPersonID" Association="LightSwitchApplication.fk_TimesheetPersonID">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

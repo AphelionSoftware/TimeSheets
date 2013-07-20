@@ -324,28 +324,28 @@ namespace LightSwitchApplication
         partial void People_CanRead(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Inserting(global::LightSwitchApplication.Person entity);
+        partial void People_Inserting(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Inserted(global::LightSwitchApplication.Person entity);
+        partial void People_Inserted(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Updating(global::LightSwitchApplication.Person entity);
+        partial void People_Updating(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Updated(global::LightSwitchApplication.Person entity);
+        partial void People_Updated(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Deleting(global::LightSwitchApplication.Person entity);
+        partial void People_Deleting(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Deleted(global::LightSwitchApplication.Person entity);
+        partial void People_Deleted(global::LightSwitchApplication.PersonItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Validate(global::LightSwitchApplication.Person entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+        partial void People_Validate(global::LightSwitchApplication.PersonItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter);
+        partial void People_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PersonItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Projects_CanInsert(ref bool result);
@@ -1127,8 +1127,8 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.Person>
-                __PeopleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.Person>(
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.PersonItem>
+                __PeopleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.PersonItem>(
                     "People",
                     global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__People_CanInsert,
                     global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__People_CanUpdate,
@@ -1166,37 +1166,37 @@ namespace LightSwitchApplication
                 d.People_CanRead(ref result);
                 return result;
             }
-            private static void __People_Inserting(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Inserting(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Inserting(e);
             }
-            private static void __People_Inserted(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Inserted(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Inserted(e);
             }
-            private static void __People_Updating(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Updating(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Updating(e);
             }
-            private static void __People_Updated(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Updated(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Updated(e);
             }
-            private static void __People_Deleting(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Deleting(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Deleting(e);
             }
-            private static void __People_Deleted(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e)
+            private static void __People_Deleted(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e)
             {
                 d.People_Deleted(e);
             }
-            private static void __People_Validate(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.Person e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            private static void __People_Validate(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.PersonItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
                 d.People_Validate(e, r);
             }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> __People_Filter(global::LightSwitchApplication.TimesheetsDataService d)
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PersonItem, bool>> __People_Filter(global::LightSwitchApplication.TimesheetsDataService d)
             {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter = null;
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PersonItem, bool>> filter = null;
                 d.People_Filter(ref filter);
                 return filter;
             }

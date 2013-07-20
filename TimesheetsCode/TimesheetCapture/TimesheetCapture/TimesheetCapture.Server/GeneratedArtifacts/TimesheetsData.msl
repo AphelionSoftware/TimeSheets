@@ -144,7 +144,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="People">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Person)">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PersonItem)">
         <MappingFragment StoreEntitySet="People">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="PersonSourceKey" ColumnName="PersonSourceKey" />
@@ -167,6 +167,7 @@
           <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
           <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
           <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SharepointUserName" ColumnName="SharepointUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -219,6 +220,7 @@
           <ScalarProperty Name="TimesheetDateID" ColumnName="TimesheetDateID" />
           <ScalarProperty Name="OverallStatusID" ColumnName="OverallStatusID" />
           <ScalarProperty Name="PeriodEnding" ColumnName="PeriodEnding" />
+          <ScalarProperty Name="TimesheetPersonID" ColumnName="TimesheetPersonID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -58,12 +58,12 @@
         created: [lightSwitchApplication.OverallStatu]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.Person, {
+    msls._addEntryPoints(lightSwitchApplication.PersonItem, {
         /// <field>
-        /// Called when a new person is created.
-        /// <br/>created(msls.application.Person entity)
+        /// Called when a new personItem is created.
+        /// <br/>created(msls.application.PersonItem entity)
         /// </field>
-        created: [lightSwitchApplication.Person]
+        created: [lightSwitchApplication.PersonItem]
     });
 
     msls._addEntryPoints(lightSwitchApplication.Project, {
