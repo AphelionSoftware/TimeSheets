@@ -1634,15 +1634,6 @@
               "toEnd": { "__id": "PersonItem_TimesheetDetail/Ends[TimesheetDetail]" }
             },
             {
-              "id": "PersonItem/Properties[Timesheets]",
-              "name": "Timesheets",
-              "association": { "__id": "fk_TimesheetPersonID" },
-              "elementType": { "__id": "Timesheet" },
-              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" },
-              "propertyType": { "__id": "Timesheet*" },
-              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" }
-            },
-            {
               "id": "PersonItem/Properties[SharepointUserName]",
               "name": "SharepointUserName",
               "propertyType": { "__id": ":String?" },
@@ -1651,6 +1642,15 @@
                 "value": 255
               },
               ":@AnsiConstraint": { }
+            },
+            {
+              "id": "PersonItem/Properties[Timesheets]",
+              "name": "Timesheets",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "elementType": { "__id": "Timesheet" },
+              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" },
+              "propertyType": { "__id": "Timesheet*" },
+              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" }
             }
           ]
         },
@@ -4567,7 +4567,15 @@
                 "sortCriteria":
                 [
                   {
-                    "member": { "__id": "Timesheet/Properties[TimesheetDate]" }
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "Timesheet/Properties[DimDate]" }
+                      },
+                      {
+                        "member": { "__id": "DimDate/Properties[c_Date]" }
+                      }
+                    ]
                   }
                 ]
               },
@@ -5086,6 +5094,26 @@
                             "value": "msls-add"
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Home",
+                        "name": "ShowBrowseTimesheets1",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseTimesheets]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-back"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -5131,6 +5159,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "AddEditTimesheet/Methods[GoHome]",
+              "name": "GoHome"
             }
           ],
           "properties":
@@ -5584,7 +5616,7 @@
             {
               "id": "fk_TimesheetPersonID/Ends[Person]",
               "name": "Person",
-              "multiplicity": "ZeroOrOne",
+              "multiplicity": "One",
               "entityType": { "__id": "PersonItem" },
               ":@DeleteRule": { "action": "Unset" }
             },

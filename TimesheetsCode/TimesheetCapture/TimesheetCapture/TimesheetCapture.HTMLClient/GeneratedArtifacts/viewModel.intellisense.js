@@ -69,16 +69,6 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.AddEditTimesheet],
         /// <field>
-        /// Called to determine if the GoHome method can be executed.
-        /// <br/>canExecute(msls.application.AddEditTimesheet screen)
-        /// </field>
-        GoHome_canExecute: [lightSwitchApplication.AddEditTimesheet],
-        /// <field>
-        /// Called to execute the GoHome method.
-        /// <br/>execute(msls.application.AddEditTimesheet screen)
-        /// </field>
-        GoHome_execute: [lightSwitchApplication.AddEditTimesheet],
-        /// <field>
         /// Called after the Timesheet content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -139,35 +129,30 @@
         /// </field>
         TimesheetDetails1_postRender: $parameters,
         /// <field>
-        /// Called after the RowTemplate3 content item has been rendered.
+        /// Called after the Group1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate3_postRender: $parameters,
+        Group1_postRender: $parameters,
         /// <field>
-        /// Called after the Group content item has been rendered.
+        /// Called after the Group2 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group_postRender: $parameters,
+        Group2_postRender: $parameters,
         /// <field>
         /// Called after the DimDate1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         DimDate1_postRender: $parameters,
         /// <field>
-        /// Called after the Group1 content item has been rendered.
+        /// Called after the Hours content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group1_postRender: $parameters,
+        Hours_postRender: $parameters,
         /// <field>
         /// Called after the Project content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Project_postRender: $parameters,
-        /// <field>
-        /// Called after the Group2 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Group2_postRender: $parameters,
         /// <field>
         /// Called after the TypeOfWork content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -179,20 +164,15 @@
         /// </field>
         Group3_postRender: $parameters,
         /// <field>
-        /// Called after the Hours content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Hours_postRender: $parameters,
-        /// <field>
-        /// Called after the Group4 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Group4_postRender: $parameters,
-        /// <field>
         /// Called after the Comments content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Comments_postRender: $parameters
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditTimesheetDetail, {

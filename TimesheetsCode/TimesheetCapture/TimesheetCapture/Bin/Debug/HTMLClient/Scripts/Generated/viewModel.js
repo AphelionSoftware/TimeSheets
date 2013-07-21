@@ -140,11 +140,10 @@
                     return null;
                 },
                 appendQuery: function () {
-                    return this.expand("DimDate").expand("Project").expand("TypeOfWork");
+                    return this.orderBy("DimDate/c_Date").thenBy("Project/ProjectName").expand("DimDate").expand("Project").expand("TypeOfWork");
                 }
             }
         ], [
-            { name: "GoHome" }
         ]),
 
         AddEditTimesheetDetail: $defineScreen(AddEditTimesheetDetail, [
