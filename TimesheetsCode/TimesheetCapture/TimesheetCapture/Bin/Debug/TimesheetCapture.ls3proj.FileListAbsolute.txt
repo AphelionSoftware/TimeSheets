@@ -432,3 +432,4 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.LightSwitch.Server.SharePoint.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.SharePoint.Client.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\bin\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\SharePointLaunch.aspx

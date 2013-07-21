@@ -29,7 +29,8 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
           "__isEntityType": 1,

@@ -19,8 +19,8 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>IIS</ApplicationServerType>
-    <AuthenticationType>None</AuthenticationType>
+    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
+    <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
     <AssemblyVersion>1.2.15.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>

@@ -4771,7 +4771,7 @@
                     "displayName": "Timesheet Details",
                     "name": "TimesheetDetails",
                     "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
+                    "view": { "__id": ":ColumnsLayout" },
                     "childContentItems":
                     [
                       {
@@ -4812,10 +4812,10 @@
                         "childContentItems":
                         [
                           {
-                            "displayName": "Timesheet Detail",
-                            "name": "RowTemplate3",
+                            "displayName": "Group1",
+                            "name": "Group1",
                             "kind": "Details",
-                            "view": { "__id": ":ColumnsLayout" },
+                            "view": { "__id": ":RowsLayout" },
                             "dataSource":
                             {
                               "links":
@@ -4825,14 +4825,14 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Group",
-                                "name": "Group",
+                                "displayName": "Group2",
+                                "name": "Group2",
                                 "kind": "Group",
                                 "view": { "__id": ":ColumnsLayout" },
                                 "childContentItems":
                                 [
                                   {
-                                    "displayName": "Date",
+                                    "displayName": "Date:",
                                     "name": "DimDate1",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
@@ -4847,29 +4847,30 @@
                                         "value": "Top"
                                       }
                                     ]
-                                  }
-                                ],
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                    "value": "FitToContent"
                                   },
                                   {
-                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                    "value": 100
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Group1",
-                                "name": "Group1",
-                                "kind": "Group",
-                                "view": { "__id": ":ColumnsLayout" },
-                                "childContentItems":
-                                [
+                                    "displayName": "Hours:",
+                                    "name": "Hours",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "TimesheetDetail/Properties[Hours]" }
+                                    },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+                                        "value": "Top"
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                        "value": 0
+                                      }
+                                    ]
+                                  },
                                   {
-                                    "displayName": "Project",
+                                    "displayName": "Project:",
                                     "name": "Project",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
@@ -4884,29 +4885,9 @@
                                         "value": "Top"
                                       }
                                     ]
-                                  }
-                                ],
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                    "value": "FitToContent"
                                   },
                                   {
-                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                    "value": 100
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Group2",
-                                "name": "Group2",
-                                "kind": "Group",
-                                "view": { "__id": ":ColumnsLayout" },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Type Of Work",
+                                    "displayName": "Type Of Work:",
                                     "name": "TypeOfWork",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
@@ -4926,12 +4907,12 @@
                                 "propertySources":
                                 [
                                   {
-                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                    "value": "FitToContent"
+                                    "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+                                    "value": false
                                   },
                                   {
-                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                    "value": 100
+                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                    "value": "FitToContent"
                                   }
                                 ]
                               },
@@ -4943,47 +4924,10 @@
                                 "childContentItems":
                                 [
                                   {
-                                    "displayName": "Hours",
-                                    "name": "Hours",
-                                    "kind": "Value",
-                                    "view": { "__id": ":Text" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "TimesheetDetail/Properties[Hours]" }
-                                    },
-                                    "propertySources":
-                                    [
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
-                                        "value": "Top"
-                                      }
-                                    ]
-                                  }
-                                ],
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                    "value": "FitToContent"
-                                  },
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                    "value": 50
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Group4",
-                                "name": "Group4",
-                                "kind": "Group",
-                                "view": { "__id": ":ColumnsLayout" },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Comments",
+                                    "displayName": "Comments:",
                                     "name": "Comments",
                                     "kind": "Value",
-                                    "view": { "__id": ":Paragraph" },
+                                    "view": { "__id": ":TextArea" },
                                     "dataSource":
                                     {
                                       "member": { "__id": "TimesheetDetail/Properties[Comments]" }
@@ -4991,6 +4935,10 @@
                                     "propertySources":
                                     [
                                       {
+                                        "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+                                        "value": "StretchToContainer"
+                                      },
+                                      {
                                         "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
                                         "value": "Top"
                                       }
@@ -5000,8 +4948,8 @@
                                 "propertySources":
                                 [
                                   {
-                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                    "value": "FitToContent"
+                                    "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+                                    "value": false
                                   }
                                 ]
                               }
@@ -5042,10 +4990,6 @@
                                 }
                               ]
                             }
-                          },
-                          {
-                            "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                            "value": "FitToContent"
                           }
                         ]
                       }
@@ -5094,26 +5038,6 @@
                             "value": "msls-add"
                           }
                         ]
-                      },
-                      {
-                        "displayName": "Home",
-                        "name": "ShowBrowseTimesheets1",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showBrowseTimesheets]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-back"
-                          }
-                        ]
                       }
                     ]
                   }
@@ -5123,7 +5047,16 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Group",
+                    "name": "Group",
+                    "kind": "Popup",
+                    "view": { "__id": ":ColumnsLayout" }
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -5159,10 +5092,6 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
-            },
-            {
-              "id": "AddEditTimesheet/Methods[GoHome]",
-              "name": "GoHome"
             }
           ],
           "properties":
@@ -5219,7 +5148,32 @@
                       "member": { "__id": "Timesheet/Properties[TimesheetDetails]" }
                     }
                   ]
-                }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                      },
+                      {
+                        "member": { "__id": "DimDate/Properties[c_Date]" }
+                      }
+                    ]
+                  },
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                      },
+                      {
+                        "member": { "__id": "Project/Properties[ProjectName]" }
+                      }
+                    ]
+                  }
+                ]
               },
               "source":
               {
@@ -5378,7 +5332,7 @@
                                 "displayName": "Comments",
                                 "name": "Comments",
                                 "kind": "Value",
-                                "view": { "__id": ":TextBox" },
+                                "view": { "__id": ":TextArea" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "TimesheetDetail/Properties[Comments]" }
