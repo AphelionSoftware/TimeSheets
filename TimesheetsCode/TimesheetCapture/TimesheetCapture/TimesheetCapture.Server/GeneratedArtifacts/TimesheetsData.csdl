@@ -251,7 +251,7 @@
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetPersonID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="ActiveType" FromRole="Timesheet" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="DimDate" FromRole="Timesheet" />
     <NavigationProperty Name="OverallStatus" Relationship="LightSwitchApplication.FK_Timesheet_OverallStatus" ToRole="OverallStatus" FromRole="Timesheet" />
@@ -625,7 +625,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_TimesheetPersonID">
-    <End Role="Person" Type="LightSwitchApplication.PersonItem" Multiplicity="0..1" />
+    <End Role="Person" Type="LightSwitchApplication.PersonItem" Multiplicity="1" />
     <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Person">

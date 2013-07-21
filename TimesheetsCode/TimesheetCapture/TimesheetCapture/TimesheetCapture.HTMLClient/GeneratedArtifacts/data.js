@@ -543,11 +543,11 @@ window.myapp = msls.application;
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this personItem.
         /// </field>
-        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
-        /// Gets the timesheets for this personItem.
-        /// </field>
         /// <field name="SharepointUserName" type="String">
         /// Gets or sets the sharepointUserName for this personItem.
+        /// </field>
+        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheets for this personItem.
         /// </field>
         /// <field name="details" type="msls.application.PersonItem.Details">
         /// Gets the details for this personItem.
@@ -1073,8 +1073,8 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "Timesheets", kind: "collection", elementType: Timesheet },
-            { name: "SharepointUserName", type: String }
+            { name: "SharepointUserName", type: String },
+            { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
         Project: $defineEntity(Project, [

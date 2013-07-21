@@ -333,7 +333,7 @@
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="TimesheetDateID" Type="int" Nullable="false" />
     <Property Name="OverallStatusID" Type="int" Nullable="false" />
-    <Property Name="TimesheetPersonID" Type="int" />
+    <Property Name="TimesheetPersonID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TimesheetDetail">
     <Key>
@@ -693,7 +693,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_TimesheetPersonID">
-    <End Role="Person" Type="TimesheetsDataStore.PersonItem" Multiplicity="0..1" />
+    <End Role="Person" Type="TimesheetsDataStore.PersonItem" Multiplicity="1" />
     <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Person">

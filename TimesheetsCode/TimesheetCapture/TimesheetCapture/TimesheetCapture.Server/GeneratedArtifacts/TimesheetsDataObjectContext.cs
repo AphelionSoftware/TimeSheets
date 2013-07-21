@@ -45,7 +45,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_TypeOfWork", "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TypeOfWork), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.PersonItem), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 
 #endregion
 
@@ -5494,7 +5494,8 @@ namespace LightSwitchApplication.Implementation
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDateID">Initial value of the TimesheetDateID property.</param>
         /// <param name="overallStatusID">Initial value of the OverallStatusID property.</param>
-        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID)
+        /// <param name="timesheetPersonID">Initial value of the TimesheetPersonID property.</param>
+        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
         {
             Timesheet timesheet = new Timesheet();
             timesheet.TimesheetID = timesheetID;
@@ -5511,6 +5512,7 @@ namespace LightSwitchApplication.Implementation
             timesheet.Active = active;
             timesheet.TimesheetDateID = timesheetDateID;
             timesheet.OverallStatusID = overallStatusID;
+            timesheet.TimesheetPersonID = timesheetPersonID;
             return timesheet;
         }
 
@@ -5980,9 +5982,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> TimesheetPersonID
+        public global::System.Int32 TimesheetPersonID
         {
             get
             {
@@ -5997,8 +5999,8 @@ namespace LightSwitchApplication.Implementation
                 OnTimesheetPersonIDChanged();
             }
         }
-        private Nullable<global::System.Int32> _TimesheetPersonID;
-        partial void OnTimesheetPersonIDChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _TimesheetPersonID;
+        partial void OnTimesheetPersonIDChanging(global::System.Int32 value);
         partial void OnTimesheetPersonIDChanged();
 
         #endregion

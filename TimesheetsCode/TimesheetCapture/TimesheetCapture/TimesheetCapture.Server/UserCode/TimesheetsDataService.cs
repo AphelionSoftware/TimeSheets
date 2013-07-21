@@ -100,6 +100,7 @@ namespace LightSwitchApplication
 
         partial void Timesheets_Inserting(Timesheet entity)
         {
+            string strTimesheetDate = entity.DimDate.c_Date.ToString("yyyyMMdd");
 
             entity.sys_CreatedBy = UserName;
             entity.sys_CreatedOn = System.DateTime.Now;
@@ -107,12 +108,12 @@ namespace LightSwitchApplication
             entity.sys_ModifiedOn = System.DateTime.Now;
             entity.TimesheetPerson = tsPerson.Replace(" ", "");
             entity.Person = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
-            entity.TimesheetName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetCode = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetFileName = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
-            entity.TimesheetSourceKey = UserName + "_" + entity.DimDate.ToString().Replace("-", "").Replace("/", "") + "_" + "Lightswitch";
+            entity.TimesheetName = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetCode = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetFileName = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetSourceKey = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
             entity.LoadDate = System.DateTime.Now;
-            entity.TimesheetDate = entity.DimDate.ToString();
+            entity.TimesheetDate = strTimesheetDate;
             entity.TimesheetFromDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                           where d.WeekEnding == entity.DimDate.WeekEnding
                                           orderby d.DateID descending
@@ -141,12 +142,12 @@ namespace LightSwitchApplication
 
         partial void TimesheetsUser_PreprocessQuery(DateTime? StartDate, DateTime? EndDate, ref IQueryable<Timesheet> query)
         {
-            string TimesheetPerson = tsPerson.Replace(" ", "");
+            Int32 TimesheetPersonID = tsPersonID;
 
             if (StartDate == null)
             {
                 query = (from Timesheets in query
-                         where Timesheets.TimesheetPerson == TimesheetPerson
+                         where Timesheets.Person.PersonID == TimesheetPersonID
                          orderby Timesheets.PeriodEnding descending
                          select Timesheets);
             }
@@ -154,7 +155,7 @@ namespace LightSwitchApplication
             {
                 DateTime SD = new DateTime(StartDate.Value.Year, StartDate.Value.Month, StartDate.Value.Day, 0, 0, 0);
                 query = (from Timesheets in query
-                         where Timesheets.TimesheetPerson == TimesheetPerson
+                         where Timesheets.Person.PersonID == TimesheetPersonID
                          where Timesheets.PeriodEnding >= SD
                          orderby Timesheets.PeriodEnding descending
                          select Timesheets);
@@ -164,7 +165,7 @@ namespace LightSwitchApplication
                     DateTime ED = new DateTime(EndDate.Value.Year, EndDate.Value.Month, EndDate.Value.Day, 23, 59, 59);
 
                     query = (from Timesheets in query
-                             where Timesheets.TimesheetPerson == TimesheetPerson
+                             where Timesheets.Person.PersonID == TimesheetPersonID
                              where (Timesheets.PeriodEnding >= SD.Date && Timesheets.PeriodEnding <= ED.Date)
                              orderby Timesheets.PeriodEnding descending
                              select Timesheets);

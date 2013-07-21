@@ -1338,11 +1338,6 @@
         Association="PersonItem_TimesheetDetail"
         FromEnd="PersonItem"
         ToEnd="TimesheetDetail" />
-      <NavigationProperty
-        Name="Timesheets"
-        Association="fk_TimesheetPersonID"
-        FromEnd="Person"
-        ToEnd="Timesheet" />
       <EntityProperty
         Name="SharepointUserName"
         PropertyType=":String?">
@@ -1352,6 +1347,11 @@
           <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Timesheets"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Person"
+        ToEnd="Timesheet" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -3980,6 +3980,7 @@
     Name="fk_TimesheetPersonID">
     <AssociationEnd
       Name="Person"
+      Multiplicity="One"
       EntityType="PersonItem">
       <AssociationEnd.Attributes>
         <DeleteRule />
@@ -4006,7 +4007,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="6e26b3fe-b601-4340-a7e2-47c7e7e5b5ca" />
+        Value="84478a87-cbff-4be0-98e2-bf9bd87a0139" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4983,7 +4984,7 @@
           PropertyName="OverallStatusID" />
         <SsdlForeignKeyProperty
           Name="TimesheetPersonID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="TimesheetPersonID" />
       </EntitySetMapping.Attributes>
