@@ -947,6 +947,20 @@
         Association="FK_Person_ActiveType"
         FromEnd="Person"
         ToEnd="ActiveType" />
+      <EntityProperty
+        Name="SharepointUserName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Timesheets"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Person"
+        ToEnd="Timesheet" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1338,6 +1352,11 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Person"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Timesheet"
+        ToEnd="Person" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1432,12 +1451,11 @@
       </EntityProperty>
       <EntityProperty
         Name="Comments"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="500" />
           <AnsiConstraint />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -3559,6 +3577,16 @@
         IsOptional="True"
         ParameterType=":String?" />
     </QueryOperation>
+    <AssociationSet
+      Name="fk_TimesheetPersonID"
+      Association="fk_TimesheetPersonID">
+      <AssociationSetEnd
+        Name="Person"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Timesheet"
+        EntitySet="Timesheets" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -3566,7 +3594,6 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
-      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <Association
@@ -4322,6 +4349,21 @@
       Multiplicity="Many"
       EntityType="BillingDetail" />
   </Association>
+  <Association
+    Name="fk_TimesheetPersonID">
+    <AssociationEnd
+      Name="Person"
+      Multiplicity="One"
+      EntityType="Person">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Timesheet"
+      Multiplicity="Many"
+      EntityType="Timesheet" />
+  </Association>
   <DataService
     Name="TimeSheets_Dev_LeoDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -4991,6 +5033,12 @@
           Nullable="False"
           Type="nvarchar"
           Property="Person/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="SharepointUserName"
+          Nullable="True"
+          Type="varchar"
+          Property="Person/Properties[SharepointUserName]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -5377,6 +5425,11 @@
           Nullable="False"
           Type="int"
           PropertyName="TimesheetDateID" />
+        <SsdlForeignKeyProperty
+          Name="TimesheetPersonID"
+          Nullable="False"
+          Type="int"
+          PropertyName="TimesheetPersonID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -5435,7 +5488,7 @@
         <SsdlProperty
           MaxLength="500"
           Name="Comments"
-          Nullable="False"
+          Nullable="True"
           Type="varchar"
           Property="TimesheetDetail/Properties[Comments]" />
         <SsdlProperty
@@ -6129,6 +6182,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="TimesheetTypeOfWorkID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="fk_TimesheetPersonID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="fk_TimesheetPersonID" />
+        <SsdlAssociationSetEnd
+          End="TimeSheets_Dev_Leo/Members[fk_TimesheetPersonID]/Members[Person]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimeSheets_Dev_Leo/Members[fk_TimesheetPersonID]/Members[Timesheet]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetPersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

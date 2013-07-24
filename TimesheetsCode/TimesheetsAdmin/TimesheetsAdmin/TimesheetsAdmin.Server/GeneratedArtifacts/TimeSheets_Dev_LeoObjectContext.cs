@@ -46,6 +46,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Person), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 
 #endregion
 
@@ -4175,6 +4176,30 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public global::System.String SharepointUserName
+        {
+            get
+            {
+                return _SharepointUserName;
+            }
+            set
+            {
+                OnSharepointUserNameChanging(value);
+                ReportPropertyChanging("SharepointUserName");
+                _SharepointUserName = value;
+                ReportPropertyChanged("SharepointUserName");
+                OnSharepointUserNameChanged();
+            }
+        }
+        private global::System.String _SharepointUserName;
+        partial void OnSharepointUserNameChanging(global::System.String value);
+        partial void OnSharepointUserNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> PersonSystemRoleID
         {
             get
@@ -4383,6 +4408,28 @@ namespace LightSwitchApplication.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActiveType>("LightSwitchApplication.FK_Person_ActiveType", "ActiveType", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Timesheet")]
+        public EntityCollection<Timesheet> Timesheets
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Timesheet>("LightSwitchApplication.fk_TimesheetPersonID", "Timesheet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Timesheet>("LightSwitchApplication.fk_TimesheetPersonID", "Timesheet", value);
                 }
             }
         }
@@ -5887,7 +5934,8 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
         /// <param name="timesheetDateID">Initial value of the TimesheetDateID property.</param>
         /// <param name="active">Initial value of the Active property.</param>
-        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.Int32 overallStatusID, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 timesheetDateID, global::System.Int32 active)
+        /// <param name="timesheetPersonID">Initial value of the TimesheetPersonID property.</param>
+        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.Int32 overallStatusID, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 timesheetDateID, global::System.Int32 active, global::System.Int32 timesheetPersonID)
         {
             Timesheet timesheet = new Timesheet();
             timesheet.TimesheetID = timesheetID;
@@ -5904,6 +5952,7 @@ namespace LightSwitchApplication.Implementation
             timesheet.sys_ModifiedBy = sys_ModifiedBy;
             timesheet.TimesheetDateID = timesheetDateID;
             timesheet.Active = active;
+            timesheet.TimesheetPersonID = timesheetPersonID;
             return timesheet;
         }
 
@@ -6369,6 +6418,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _Active;
         partial void OnActiveChanging(global::System.Int32 value);
         partial void OnActiveChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 TimesheetPersonID
+        {
+            get
+            {
+                return _TimesheetPersonID;
+            }
+            set
+            {
+                OnTimesheetPersonIDChanging(value);
+                ReportPropertyChanging("TimesheetPersonID");
+                _TimesheetPersonID = value;
+                ReportPropertyChanged("TimesheetPersonID");
+                OnTimesheetPersonIDChanged();
+            }
+        }
+        private global::System.Int32 _TimesheetPersonID;
+        partial void OnTimesheetPersonIDChanging(global::System.Int32 value);
+        partial void OnTimesheetPersonIDChanged();
 
         #endregion
 
@@ -6472,6 +6545,44 @@ namespace LightSwitchApplication.Implementation
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person")]
+        public Person Person
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.fk_TimesheetPersonID", "Person").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.fk_TimesheetPersonID", "Person").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Person> PersonReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("LightSwitchApplication.fk_TimesheetPersonID", "Person");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("LightSwitchApplication.fk_TimesheetPersonID", "Person", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -6496,7 +6607,6 @@ namespace LightSwitchApplication.Implementation
         /// <param name="timesheetDetailCode">Initial value of the TimesheetDetailCode property.</param>
         /// <param name="timesheetDetailFileName">Initial value of the TimesheetDetailFileName property.</param>
         /// <param name="hours">Initial value of the Hours property.</param>
-        /// <param name="comments">Initial value of the Comments property.</param>
         /// <param name="exclude">Initial value of the Exclude property.</param>
         /// <param name="lastUpdateDate">Initial value of the LastUpdateDate property.</param>
         /// <param name="sys_CreatedOn">Initial value of the sys_CreatedOn property.</param>
@@ -6509,7 +6619,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="timesheetID">Initial value of the TimesheetID property.</param>
         /// <param name="timesheetTypeOfWorkID">Initial value of the TimesheetTypeOfWorkID property.</param>
         /// <param name="active">Initial value of the Active property.</param>
-        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID, global::System.Int32 active)
+        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID, global::System.Int32 active)
         {
             TimesheetDetail timesheetDetail = new TimesheetDetail();
             timesheetDetail.TimesheetDetailID = timesheetDetailID;
@@ -6518,7 +6628,6 @@ namespace LightSwitchApplication.Implementation
             timesheetDetail.TimesheetDetailCode = timesheetDetailCode;
             timesheetDetail.TimesheetDetailFileName = timesheetDetailFileName;
             timesheetDetail.Hours = hours;
-            timesheetDetail.Comments = comments;
             timesheetDetail.Exclude = exclude;
             timesheetDetail.LastUpdateDate = lastUpdateDate;
             timesheetDetail.sys_CreatedOn = sys_CreatedOn;
@@ -6736,7 +6845,7 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Comments
         {

@@ -122,6 +122,10 @@
       <End Role="DimDate" EntitySet="DimDates" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
     </AssociationSet>
+    <AssociationSet Name="fk_TimesheetPersonID" Association="TimeSheets_Dev_LeoStore.fk_TimesheetPersonID">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="BillingDetail">
     <Key>
@@ -236,6 +240,7 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="ADUsername" Type="varchar" MaxLength="255" />
+    <Property Name="SharepointUserName" Type="varchar" MaxLength="255" />
     <Property Name="PersonSystemRoleID" Type="int" />
     <Property Name="Active" Type="int" Nullable="false" />
   </EntityType>
@@ -288,6 +293,7 @@
     <Property Name="PeriodEnding" Type="date" StoreGeneratedPattern="Computed" />
     <Property Name="TimesheetDateID" Type="int" Nullable="false" />
     <Property Name="Active" Type="int" Nullable="false" />
+    <Property Name="TimesheetPersonID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TimesheetDetail">
     <Key>
@@ -301,7 +307,7 @@
     <Property Name="TimesheetDetailFileName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="Hours" Type="decimal" Nullable="false" Scale="2" />
-    <Property Name="Comments" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Comments" Type="varchar" MaxLength="500" />
     <Property Name="ClientComments" Type="varchar(max)" />
     <Property Name="AMComments" Type="varchar(max)" />
     <Property Name="Exclude" Type="int" Nullable="false" />
@@ -716,6 +722,18 @@
       </Principal>
       <Dependent Role="BillingDetail">
         <PropertyRef Name="BillingDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_TimesheetPersonID">
+    <End Role="Person" Type="TimeSheets_Dev_LeoStore.Person" Multiplicity="1" />
+    <End Role="Timesheet" Type="TimeSheets_Dev_LeoStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetPersonID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

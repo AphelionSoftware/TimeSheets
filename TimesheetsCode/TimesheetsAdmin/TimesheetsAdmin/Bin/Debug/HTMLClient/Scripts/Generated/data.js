@@ -378,6 +378,12 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this person.
         /// </field>
+        /// <field name="SharepointUserName" type="String">
+        /// Gets or sets the sharepointUserName for this person.
+        /// </field>
+        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheets for this person.
+        /// </field>
         /// <field name="details" type="msls.application.Person.Details">
         /// Gets the details for this person.
         /// </field>
@@ -529,6 +535,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="PeriodEnding" type="Date">
         /// Gets or sets the periodEnding for this timesheet.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this timesheet.
         /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
@@ -1064,7 +1073,9 @@ window.myapp = msls.application;
             { name: "SystemRole", kind: "reference", type: SystemRole },
             { name: "ADUsername", type: String },
             { name: "Clients", kind: "collection", elementType: Client },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "SharepointUserName", type: String },
+            { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
         Project: $defineEntity(Project, [
@@ -1112,7 +1123,8 @@ window.myapp = msls.application;
             { name: "sys_ModifiedBy", type: String },
             { name: "DimDate", kind: "reference", type: DimDate },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "PeriodEnding", type: Date }
+            { name: "PeriodEnding", type: Date },
+            { name: "Person", kind: "reference", type: Person }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [

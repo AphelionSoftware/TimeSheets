@@ -128,6 +128,7 @@
     <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
     <Property Name="ADUsername" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="SharepointUserName" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="PersonSystemRoleID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Person" ToRole="BillingDetail" FromRole="Person" />
@@ -136,6 +137,7 @@
     <NavigationProperty Name="SystemRole" Relationship="LightSwitchApplication.FK_Person_Role1" ToRole="SystemRole" FromRole="Person" />
     <NavigationProperty Name="Clients" Relationship="LightSwitchApplication.FK_Client_Person" ToRole="Client" FromRole="Person" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Person_ActiveType" ToRole="ActiveType" FromRole="Person" />
+    <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.fk_TimesheetPersonID" ToRole="Timesheet" FromRole="Person" />
   </EntityType>
   <EntityType Name="Project">
     <Key>
@@ -191,9 +193,11 @@
     <Property Name="PeriodEnding" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="TimesheetDetail" FromRole="Timesheet" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="DimDate" FromRole="Timesheet" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="ActiveType" FromRole="Timesheet" />
+    <NavigationProperty Name="Person" Relationship="LightSwitchApplication.fk_TimesheetPersonID" ToRole="Person" FromRole="Timesheet" />
   </EntityType>
   <EntityType Name="TimesheetDetail">
     <Key>
@@ -207,7 +211,7 @@
     <Property Name="TimesheetDetailFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="Hours" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
-    <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Comments" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="ClientComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="AMComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Exclude" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
@@ -650,6 +654,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_TimesheetPersonID">
+    <End Role="Person" Type="LightSwitchApplication.Person" Multiplicity="1" />
+    <End Role="Timesheet" Type="LightSwitchApplication.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="TimeSheets_Dev_Leo" m:IsDefaultEntityContainer="true">
     <EntitySet Name="BillingDetails" EntityType="LightSwitchApplication.BillingDetail" />
     <EntitySet Name="BillingStatusSet" EntityType="LightSwitchApplication.BillingStatus" />
@@ -771,6 +787,10 @@
     <AssociationSet Name="FK_BillingDetail_DimDate" Association="LightSwitchApplication.FK_BillingDetail_DimDate">
       <End Role="DimDate" EntitySet="DimDates" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TimesheetPersonID" Association="LightSwitchApplication.fk_TimesheetPersonID">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

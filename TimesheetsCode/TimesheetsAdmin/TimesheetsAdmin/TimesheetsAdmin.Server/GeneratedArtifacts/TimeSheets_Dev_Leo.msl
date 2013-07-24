@@ -119,6 +119,7 @@
           <ScalarProperty Name="PersonSystemRoleID" ColumnName="PersonSystemRoleID" />
           <ScalarProperty Name="ADUsername" ColumnName="ADUsername" />
           <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SharepointUserName" ColumnName="SharepointUserName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -171,6 +172,7 @@
           <ScalarProperty Name="TimesheetDateID" ColumnName="TimesheetDateID" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="PeriodEnding" ColumnName="PeriodEnding" />
+          <ScalarProperty Name="TimesheetPersonID" ColumnName="TimesheetPersonID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

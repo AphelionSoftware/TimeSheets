@@ -764,6 +764,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.Timesheets
+        {
+            get
+            {
+                return this.Timesheets;
+            }
+        }
+        
         partial void OnPersonSystemRoleIDChanged()
         {
             if (this.__host != null)
@@ -990,6 +998,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.Person
+        {
+            get
+            {
+                return this.Person;
+            }
+            set
+            {
+                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Person");
+                }
+            }
+        }
+        
         partial void OnTimesheetDateIDChanged()
         {
             if (this.__host != null)
@@ -1003,6 +1027,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("ActiveType");
+            }
+        }
+        
+        partial void OnTimesheetPersonIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Person");
             }
         }
         

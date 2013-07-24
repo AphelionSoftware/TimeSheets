@@ -545,6 +545,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ActiveType_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Person Person
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheet.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person);
+            }
+            set
+            {
+                global::LightSwitchApplication.Timesheet.DetailsClass.SetValue(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Person_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Person_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Person_Changed();
+
         #endregion
     
         #region Details Class
@@ -787,6 +811,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person> Person
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -813,6 +845,7 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation DimDate { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
             }
             #pragma warning restore 109
     
@@ -1553,6 +1586,53 @@ namespace LightSwitchApplication
                     e.ActiveType_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    Person = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                        "Person",
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_Stub,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_Validate,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_GetImplementationValue,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_SetImplementationValue,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_Refresh,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._Person_OnValueChanged);
+                private static void _Person_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.Timesheet.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Person, sf);
+                }
+                private static bool _Person_ComputeIsReadOnly(global::LightSwitchApplication.Timesheet e)
+                {
+                    bool result = false;
+                    e.Person_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Person_Validate(global::LightSwitchApplication.Timesheet e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Person_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Person_GetCoreImplementationValue(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Person;
+                }
+                private static global::LightSwitchApplication.Person _Person_GetImplementationValue(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass>(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person, ref d._Person);
+                }
+                private static void _Person_SetImplementationValue(global::LightSwitchApplication.Timesheet.DetailsClass d, global::LightSwitchApplication.Person v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person, ref d._Person, (i, ev) => i.Person = ev, v);
+                }
+                private static void _Person_Refresh(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.Person, ref d._Person);
+                }
+                private static void _Person_OnValueChanged(global::LightSwitchApplication.Timesheet e)
+                {
+                    e.Person_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1614,6 +1694,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.Person>.Data _Person;
             
         }
     

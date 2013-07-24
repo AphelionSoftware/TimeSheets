@@ -1134,6 +1134,25 @@
               "fromEnd": { "__id": "FK_Person_ActiveType/Ends[Person]" },
               "propertyType": { "__id": "ActiveType" },
               "toEnd": { "__id": "FK_Person_ActiveType/Ends[ActiveType]" }
+            },
+            {
+              "id": "Person/Properties[SharepointUserName]",
+              "name": "SharepointUserName",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Person/Properties[Timesheets]",
+              "name": "Timesheets",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "elementType": { "__id": "Timesheet" },
+              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" },
+              "propertyType": { "__id": "Timesheet*" },
+              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" }
             }
           ]
         },
@@ -1606,6 +1625,15 @@
                 "preserveSeconds": true
               },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "Timesheet/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "elementType": { "__id": "Person" },
+              "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" },
+              "propertyType": { "__id": "Person" },
+              "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" }
             }
           ]
         },
@@ -1719,13 +1747,12 @@
             {
               "id": "TimesheetDetail/Properties[Comments]",
               "name": "Comments",
-              "propertyType": { "__id": ":String" },
+              "propertyType": { "__id": ":String?" },
               ":@MaxLength":
               {
                 "value": 500
               },
-              ":@AnsiConstraint": { },
-              ":@Required": { }
+              ":@AnsiConstraint": { }
             },
             {
               "id": "TimesheetDetail/Properties[ClientComments]",
@@ -2770,6 +2797,26 @@
                   "entitySet": { "__id": "TimeSheets_Dev_Leo/Members[BillingDetails]" }
                 }
               ]
+            },
+            {
+              "id": "TimeSheets_Dev_Leo/Members[fk_TimesheetPersonID]",
+              "name": "fk_TimesheetPersonID",
+              "association": { "__id": "fk_TimesheetPersonID" },
+              "ends":
+              [
+                {
+                  "properties": [ "PersonID" ],
+                  "id": "TimeSheets_Dev_Leo/Members[fk_TimesheetPersonID]/Members[Person]",
+                  "name": "Person",
+                  "entitySet": { "__id": "TimeSheets_Dev_Leo/Members[People]" }
+                },
+                {
+                  "properties": [ "TimesheetPersonID" ],
+                  "id": "TimeSheets_Dev_Leo/Members[fk_TimesheetPersonID]/Members[Timesheet]",
+                  "name": "Timesheet",
+                  "entitySet": { "__id": "TimeSheets_Dev_Leo/Members[Timesheets]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -3510,8 +3557,7 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup",
-          ":@SharePointEnabled": { }
+          "name": "LightSwitchServiceApplicationGroup"
         },
         {
           "displayName": "Home Screen v 0.13",
@@ -9564,6 +9610,26 @@
               "name": "BillingDetail",
               "multiplicity": "Many",
               "entityType": { "__id": "BillingDetail" }
+            }
+          ]
+        },
+        {
+          "id": "fk_TimesheetPersonID",
+          "name": "fk_TimesheetPersonID",
+          "ends":
+          [
+            {
+              "id": "fk_TimesheetPersonID/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "One",
+              "entityType": { "__id": "Person" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "fk_TimesheetPersonID/Ends[Timesheet]",
+              "name": "Timesheet",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Timesheet" }
             }
           ]
         },

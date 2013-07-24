@@ -1003,7 +1003,7 @@
                 <ContentItem
                   Name="Comments"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1575,7 +1575,7 @@
                 <ContentItem
                   Name="Comments"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -6998,6 +6998,12 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_BillingDetail_DimDate" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:fk_TimesheetPersonID" />
     </Association.Attributes>
   </Association>
 </ModelFragment>
