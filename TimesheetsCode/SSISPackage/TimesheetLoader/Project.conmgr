@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Project"
+  DTS:DTSID="{2799E0C4-6905-40F4-888A-556720B02199}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="ProjectSourceKey"
+          DTS:DTSID="{18AD4DE4-5624-4553-A710-B011AD721E41}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="ProjectID"
+          DTS:DTSID="{F7A94BB9-A5E6-4D36-A52C-CF8ABC550CC6}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="ClientID"
+          DTS:DTSID="{BBC96D65-7BA1-45C4-9C1B-81A7EBEAA3B2}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

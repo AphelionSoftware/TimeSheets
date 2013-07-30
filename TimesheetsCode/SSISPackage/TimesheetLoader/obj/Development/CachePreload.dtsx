@@ -1,0 +1,2572 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/29/2013 10:40:51 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="MGS-M6700"
+  DTS:CreatorName="MGS2012\Administrator"
+  DTS:DTSID="{F6E73FEC-6BE9-40B0-A667-7CE91AE50F78}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="7177"
+  DTS:ObjectName="CachePreload"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{8E46BA48-663D-4E46-8DD1-8119EC533E7F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SEQ_Caching"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{FC111198-6760-49C4-85ED-DA97E9425D8D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQ_Caching">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Caching\DFT_Client"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{64084ece-aea1-4949-acc4-e8129ff72b5d}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_Client"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Client"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(ClientSourceKey) ClientSourceKey, ClientID
+FROM dbo.Client</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].ExternalColumns[ClientSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientSourceKey]"
+                          name="ClientSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].ExternalColumns[ClientID]"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientID]"
+                          name="ClientID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].ExternalColumns[ClientSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="ClientSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].ExternalColumns[ClientID]"
+                          dataType="i4"
+                          name="ClientID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ClientSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ClientSourceKey]"
+                          name="ClientSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ClientID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ClientID]"
+                          name="ClientID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Client\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Client\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{598E52B6-CB4A-4795-8682-F502AAA3F9BE}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Cache Client]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Caching\DFT_Client\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\Cache Transform.Inputs[Cache Input].Columns[ClientSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ClientSourceKey"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">ClientSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Client\Cache Transform.Inputs[Cache Input].Columns[ClientID]"
+                          cachedDataType="i4"
+                          cachedName="ClientID"
+                          lineageId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output].Columns[ClientID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">ClientID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Client\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Caching\DFT_Client\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Caching\DFT_Client.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Caching\DFT_Client\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Caching\DFT_Client\ADOSRC_Client.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Caching\DFT_LoadConsultant"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{D928D14F-D7E3-4C6F-BFD8-832EDA08FCB9}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadConsultant"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Consultant"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CAST(UPPER(PersonSourceKey) as varchar(255)) PersonSourceKey
+, PersonID FROM dbo.Person</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          name="PersonID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="PersonSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          dataType="i4"
+                          name="PersonID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          name="PersonID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input].Columns[PersonSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="PersonSourceKey"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input].Columns[PersonID]"
+                          cachedDataType="i4"
+                          cachedName="PersonID"
+                          lineageId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Caching\DFT_LoadConsultant.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Caching\DFT_Project"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{15768a9d-765c-4f63-bedb-964319d31619}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_Project"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Project"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(ProjectSourceKey) ProjectSourceKey, ProjectID, ClientID
+FROM dbo.Project</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ProjectSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectSourceKey]"
+                          name="ProjectSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ProjectID]"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectID]"
+                          name="ProjectID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ClientID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ClientID]"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ClientID]"
+                          name="ClientID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ProjectSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProjectSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ProjectID]"
+                          dataType="i4"
+                          name="ProjectID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].ExternalColumns[ClientID]"
+                          dataType="i4"
+                          name="ClientID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ProjectSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ProjectSourceKey]"
+                          name="ProjectSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ProjectID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ProjectID]"
+                          name="ProjectID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ClientID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ClientID]"
+                          name="ClientID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Project\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{2799E0C4-6905-40F4-888A-556720B02199}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Cache Project]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input].Columns[ClientID]"
+                          cachedDataType="i4"
+                          cachedName="ClientID"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ClientID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">ClientID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input].Columns[ProjectSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProjectSourceKey"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">ProjectSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input].Columns[ProjectID]"
+                          cachedDataType="i4"
+                          cachedName="ProjectID"
+                          lineageId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output].Columns[ProjectID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">ProjectID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Project\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Caching\DFT_Project.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Caching\DFT_Project\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Caching\DFT_Project\ADOSRC_Project.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Caching\DFT_Timesheets"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{398CED42-8FAC-4392-93EF-F72E3C6189F4}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_Timesheets"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Timesheets"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT *  FROM dbo.Timesheet where ACTIVE = 1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetID]"
+                          name="TimesheetID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetSourceKey]"
+                          name="TimesheetSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[LoadDate]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDate]"
+                          name="LoadDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[Active]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[Active]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[Active]"
+                          name="Active"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetName]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetName]"
+                          name="TimesheetName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetCode]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetCode]"
+                          name="TimesheetCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFileName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetFileName]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFileName]"
+                          name="TimesheetFileName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDateID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetDateID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDateID]"
+                          name="TimesheetDateID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFromDateID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetFromDateID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFromDateID]"
+                          name="TimesheetFromDateID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetToDateID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetToDateID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetToDateID]"
+                          name="TimesheetToDateID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetPerson]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetPerson]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetPerson]"
+                          name="TimesheetPerson"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDate]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetDate]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDate]"
+                          name="TimesheetDate"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDateID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[LoadDateID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDateID]"
+                          name="LoadDateID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[OverallStatusID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[OverallStatusID]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[OverallStatusID]"
+                          name="OverallStatusID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedOn]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_CreatedOn]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedOn]"
+                          name="sys_CreatedOn"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedBy]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_CreatedBy]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedBy]"
+                          name="sys_CreatedBy"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedOn]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_ModifiedOn]"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedOn]"
+                          name="sys_ModifiedOn"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedBy]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_ModifiedBy]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedBy]"
+                          name="sys_ModifiedBy"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetID]"
+                          dataType="i4"
+                          name="TimesheetID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[LoadDate]"
+                          dataType="dbTimeStamp"
+                          name="LoadDate" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[Active]"
+                          dataType="i4"
+                          name="Active" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetName]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetName" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetCode]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetCode" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetFileName]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetFileName" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetDateID]"
+                          dataType="i4"
+                          name="TimesheetDateID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetFromDateID]"
+                          dataType="i4"
+                          name="TimesheetFromDateID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetToDateID]"
+                          dataType="i4"
+                          name="TimesheetToDateID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetPerson]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetPerson" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[TimesheetDate]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimesheetDate" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[LoadDateID]"
+                          dataType="i4"
+                          name="LoadDateID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[OverallStatusID]"
+                          dataType="i4"
+                          name="OverallStatusID" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_CreatedOn]"
+                          dataType="dbTimeStamp"
+                          name="sys_CreatedOn" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_CreatedBy]"
+                          dataType="wstr"
+                          length="255"
+                          name="sys_CreatedBy" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_ModifiedOn]"
+                          dataType="dbTimeStamp"
+                          name="sys_ModifiedOn" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].ExternalColumns[sys_ModifiedBy]"
+                          dataType="wstr"
+                          length="255"
+                          name="sys_ModifiedBy" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetID]"
+                          name="TimesheetID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetSourceKey]"
+                          name="TimesheetSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[LoadDate]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[LoadDate]"
+                          name="LoadDate" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[Active]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[Active]"
+                          name="Active" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetName]"
+                          name="TimesheetName" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetCode]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetCode]"
+                          name="TimesheetCode" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetFileName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetFileName]"
+                          name="TimesheetFileName" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetDateID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetDateID]"
+                          name="TimesheetDateID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetFromDateID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetFromDateID]"
+                          name="TimesheetFromDateID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetToDateID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetToDateID]"
+                          name="TimesheetToDateID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetPerson]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetPerson]"
+                          name="TimesheetPerson" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetDate]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[TimesheetDate]"
+                          name="TimesheetDate" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[LoadDateID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[LoadDateID]"
+                          name="LoadDateID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[OverallStatusID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[OverallStatusID]"
+                          name="OverallStatusID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_CreatedOn]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_CreatedOn]"
+                          name="sys_CreatedOn" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_CreatedBy]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_CreatedBy]"
+                          name="sys_CreatedBy" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_ModifiedOn]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_ModifiedOn]"
+                          name="sys_ModifiedOn" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_ModifiedBy]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[sys_ModifiedBy]"
+                          name="sys_ModifiedBy" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{10476081-A5A7-4B4E-BE0F-5F1AA518802A}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[CacheTimesheets]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetID]"
+                          cachedDataType="i4"
+                          cachedName="TimesheetID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetSourceKey"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[LoadDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="LoadDate"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDate]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">LoadDate</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[Active]"
+                          cachedDataType="i4"
+                          cachedName="Active"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[Active]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">Active</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetName"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetName]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetName</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetCode]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetCode"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetCode]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetCode</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetFileName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetFileName"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFileName]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetFileName</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetDateID]"
+                          cachedDataType="i4"
+                          cachedName="TimesheetDateID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDateID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetDateID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetFromDateID]"
+                          cachedDataType="i4"
+                          cachedName="TimesheetFromDateID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetFromDateID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetFromDateID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetToDateID]"
+                          cachedDataType="i4"
+                          cachedName="TimesheetToDateID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetToDateID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetToDateID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetPerson]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetPerson"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetPerson]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetPerson</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[TimesheetDate]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimesheetDate"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[TimesheetDate]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TimesheetDate</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[LoadDateID]"
+                          cachedDataType="i4"
+                          cachedName="LoadDateID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[LoadDateID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">LoadDateID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[OverallStatusID]"
+                          cachedDataType="i4"
+                          cachedName="OverallStatusID"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[OverallStatusID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">OverallStatusID</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[sys_CreatedOn]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="sys_CreatedOn"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedOn]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">sys_CreatedOn</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[sys_CreatedBy]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="sys_CreatedBy"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_CreatedBy]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">sys_CreatedBy</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[sys_ModifiedOn]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="sys_ModifiedOn"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedOn]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">sys_ModifiedOn</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input].Columns[sys_ModifiedBy]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="sys_ModifiedBy"
+                          lineageId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output].Columns[sys_ModifiedBy]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">sys_ModifiedBy</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Caching\DFT_Timesheets.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Caching\DFT_Timesheets\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Caching\DFT_TypeOfWork"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{A3CAD2E0-4566-4C22-B278-F98599C56CC0}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_TypeOfWork"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_TypeOfWork"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(TypeOfWorkSourceKey) TypeOfWorkSourceKey, TypeOfWorkID
+FROM dbo.TypeOfWork</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].ExternalColumns[TypeOfWorkSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkSourceKey]"
+                          name="TypeOfWorkSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].ExternalColumns[TypeOfWorkID]"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkID]"
+                          name="TypeOfWorkID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].ExternalColumns[TypeOfWorkSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="TypeOfWorkSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].ExternalColumns[TypeOfWorkID]"
+                          dataType="i4"
+                          name="TypeOfWorkID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[TypeOfWorkSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[TypeOfWorkSourceKey]"
+                          name="TypeOfWorkSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[TypeOfWorkID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[TypeOfWorkID]"
+                          name="TypeOfWorkID" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{EFBC13BE-BB28-437F-8DF7-F2E8F7F64440}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[Cache TypeOfWork]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Inputs[Cache Input].Columns[TypeOfWorkSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TypeOfWorkSourceKey"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TypeOfWorkSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Inputs[Cache Input].Columns[TypeOfWorkID]"
+                          cachedDataType="i4"
+                          cachedName="TypeOfWorkID"
+                          lineageId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output].Columns[TypeOfWorkID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">TypeOfWorkID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Caching\DFT_TypeOfWork.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SEQ_Doubleload"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:Disabled="True"
+      DTS:DTSID="{87178642-177B-4411-8367-63097A15DF7F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQ_Doubleload">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Doubleload\DFT_LoadConsultant"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{2302077f-8f57-4fbe-bdbd-a0f2b5c58e40}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadConsultant"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Consultant"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CAST(UPPER(PersonSourceKey) as varchar(255)) PersonSourceKey
+, PersonID FROM dbo.Person</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          name="PersonID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="PersonSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          dataType="i4"
+                          name="PersonID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          name="PersonID" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input].Columns[PersonSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="PersonSourceKey"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input].Columns[PersonID]"
+                          cachedDataType="i4"
+                          cachedName="PersonID"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{8daba540-8ba5-44dc-bf4a-7336e7cff780}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadConsultant 1"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant"
+                  componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+                  contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+                  name="ADOSRC_Consultant"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement used by the component to extract data."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CAST(UPPER(PersonSourceKey) as varchar(255)) PersonSourceKey
+, PersonID FROM dbo.Person</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="The Source database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the mode to retrieve external column information"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Connections[IDbConnection]"
+                      connectionManagerID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ADO_PWTimesheets]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output]"
+                      name="ADO NET Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          length="255"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]"
+                          name="PersonID"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          name="PersonSourceKey" />
+                        <externalMetadataColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].ExternalColumns[PersonID]"
+                          dataType="i4"
+                          name="PersonID" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output]"
+                      isErrorOut="true"
+                      name="ADO NET Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonSourceKey]"
+                          name="PersonSourceKey" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[PersonID]"
+                          name="PersonID" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform"
+                  componentClassID="{BF818E79-2C1C-410D-ADEA-B2D1A04FED01}"
+                  contactInfo="Cache Transform;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Writes data to a cache (a .caw file) with the Cache Connection Manager. Reuse the cache between multiple Lookup transforms to reduce database load. Share the cache to reduce memory usage. Note: cache data is stored in clear text and not recommended for sensitive data."
+                  name="Cache Transform"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Connections[CacheConnection]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      description="The connection used to access the cache."
+                      name="CacheConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Inputs[Cache Input]"
+                      hasSideEffects="true"
+                      name="Cache Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Inputs[Cache Input].Columns[PersonSourceKey]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="PersonSourceKey"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonSourceKey]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonSourceKey</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Inputs[Cache Input].Columns[PersonID]"
+                          cachedDataType="i4"
+                          cachedName="PersonID"
+                          lineageId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output].Columns[PersonID]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="The cache column associated with the input column."
+                              name="CacheColumnName">PersonID</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Outputs[Cache Output]"
+                      name="Cache Output"
+                      synchronousInputId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Inputs[Cache Input]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1.Paths[ADO NET Source Output]"
+                  endId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Inputs[Cache Input]"
+                  name="ADO NET Source Output"
+                  startId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant.Outputs[ADO NET Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ_Doubleload.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A62D67AD-BCB8-4DAD-9D60-BDF07DF9B128}"
+          DTS:From="Package\SEQ_Doubleload\DFT_LoadConsultant"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SEQ_Doubleload\DFT_LoadConsultant 1" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{32D1A498-DB95-4AF4-8BE8-41D15451C067}"
+      DTS:EvalOp="1"
+      DTS:Expression="1 == 0"
+      DTS:From="Package\SEQ_Caching"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SEQ_Doubleload" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\SEQ_Caching\DFT_Client"
+          TopLeft="54,151" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\SEQ_Caching\DFT_LoadConsultant"
+          TopLeft="48,24" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\SEQ_Caching\DFT_Project"
+          TopLeft="57,219" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\SEQ_Caching\DFT_TypeOfWork"
+          TopLeft="50,88" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\SEQ_Caching\DFT_Timesheets"
+          TopLeft="80,276" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="283,373"
+          Size="283,416"
+          Id="Package\SEQ_Caching"
+          TopLeft="431,77" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant 1"
+          TopLeft="60,162" />
+        <EdgeLayout
+          Id="Package\SEQ_Doubleload.PrecedenceConstraints[Constraint]"
+          TopLeft="148,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="241,259"
+          Size="241,302"
+          Id="Package\SEQ_Doubleload"
+          TopLeft="841,165" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="714,285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127,31"
+              Start="0,0"
+              End="119.5,31">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.5,0"
+                    Point2="63.5,0"
+                    Point3="63.5,4" />
+                  <mssgle:LineSegment
+                    End="63.5,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63.5,27"
+                    Point2="63.5,31"
+                    Point3="67.5,31" />
+                  <mssgle:LineSegment
+                    End="119.5,31" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="55.5,-22,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SEQ_Caching\DFT_Client">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Caching\DFT_Client\Cache Transform"
+          TopLeft="596,225" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\SEQ_Caching\DFT_Client\ADOSRC_Client"
+          TopLeft="531,121" />
+        <EdgeLayout
+          Id="Package\SEQ_Caching\DFT_Client.Paths[ADO NET Source Output]"
+          TopLeft="606.5,163">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,62"
+              Start="0,0"
+              End="69,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="65,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65,31"
+                    Point2="69,31"
+                    Point3="69,35" />
+                  <mssgle:LineSegment
+                    End="69,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_Caching\DFT_Client\ADOSRC_Client">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SEQ_Caching\DFT_LoadConsultant">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform"
+          TopLeft="438,189" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant"
+          TopLeft="417,102" />
+        <EdgeLayout
+          Id="Package\SEQ_Caching\DFT_LoadConsultant.Paths[ADO NET Source Output]"
+          TopLeft="504.5,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13,45"
+              Start="0,0"
+              End="13,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="9,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,22.5"
+                    Point2="13,22.5"
+                    Point3="13,26.5" />
+                  <mssgle:LineSegment
+                    End="13,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_Caching\DFT_LoadConsultant\ADOSRC_Consultant">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SEQ_Caching\DFT_Project">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Caching\DFT_Project\Cache Transform"
+          TopLeft="598,264" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\SEQ_Caching\DFT_Project\ADOSRC_Project"
+          TopLeft="531,121" />
+        <EdgeLayout
+          Id="Package\SEQ_Caching\DFT_Project.Paths[ADO NET Source Output]"
+          TopLeft="610,163">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.5,101"
+              Start="0,0"
+              End="67.5,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.5"
+                    Point2="0,50.5"
+                    Point3="4,50.5" />
+                  <mssgle:LineSegment
+                    End="63.5,50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63.5,50.5"
+                    Point2="67.5,50.5"
+                    Point3="67.5,54.5" />
+                  <mssgle:LineSegment
+                    End="67.5,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_Caching\DFT_Project\ADOSRC_Project">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SEQ_Caching\DFT_TypeOfWork">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Caching\DFT_TypeOfWork\Cache Transform"
+          TopLeft="596,201" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork"
+          TopLeft="531,121" />
+        <EdgeLayout
+          Id="Package\SEQ_Caching\DFT_TypeOfWork.Paths[ADO NET Source Output]"
+          TopLeft="623,163">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.5,38"
+              Start="0,0"
+              End="52.5,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
+                  <mssgle:LineSegment
+                    End="48.5,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.5,19"
+                    Point2="52.5,19"
+                    Point3="52.5,23" />
+                  <mssgle:LineSegment
+                    End="52.5,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SEQ_Caching\DFT_TypeOfWork\ADOSRC_TypeOfWork">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\SEQ_Doubleload\DFT_LoadConsultant">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform"
+          TopLeft="438,189" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant\ADOSRC_Consultant"
+          TopLeft="417,102" />
+        <EdgeLayout
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant.Paths[ADO NET Source Output]"
+          TopLeft="504.5,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13,45"
+              Start="0,0"
+              End="13,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="9,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,22.5"
+                    Point2="13,22.5"
+                    Point3="13,26.5" />
+                  <mssgle:LineSegment
+                    End="13,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\SEQ_Doubleload\DFT_LoadConsultant 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform"
+          TopLeft="438,189" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant 1\ADOSRC_Consultant"
+          TopLeft="417,102" />
+        <EdgeLayout
+          Id="Package\SEQ_Doubleload\DFT_LoadConsultant 1.Paths[ADO NET Source Output]"
+          TopLeft="504.5,144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13,45"
+              Start="0,0"
+              End="13,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="4,22.5" />
+                  <mssgle:LineSegment
+                    End="9,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9,22.5"
+                    Point2="13,22.5"
+                    Point3="13,26.5" />
+                  <mssgle:LineSegment
+                    End="13,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\SEQ_Caching\DFT_Timesheets">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\SEQ_Caching\DFT_Timesheets\ADOSRC_Timesheets"
+          TopLeft="509,140" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\SEQ_Caching\DFT_Timesheets\Cache Transform"
+          TopLeft="567,216" />
+        <EdgeLayout
+          Id="Package\SEQ_Caching\DFT_Timesheets.Paths[ADO NET Source Output]"
+          TopLeft="598,182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48.5,34"
+              Start="0,0"
+              End="48.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="44.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44.5,17"
+                    Point2="48.5,17"
+                    Point3="48.5,21" />
+                  <mssgle:LineSegment
+                    End="48.5,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CacheTimesheets"
+  DTS:DTSID="{10476081-A5A7-4B4E-BE0F-5F1AA518802A}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TimesheetID"
+          DTS:DTSID="{2625A621-577B-4A9A-A366-1CFB394A4932}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetSourceKey"
+          DTS:DTSID="{3BC37858-31B4-4525-ABBD-93503A4A9213}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="LoadDate"
+          DTS:DTSID="{23348DCE-4D7C-4DD7-AA50-CC4A50AEF70E}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="Active"
+          DTS:DTSID="{EA6AD6B1-A023-437F-B80A-2BE2C444FBB4}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetName"
+          DTS:DTSID="{54A0E5EA-4E8D-42C8-B7C9-96EB5134C453}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetCode"
+          DTS:DTSID="{0787CDFD-AAD9-42C8-AA75-8FE5628D8691}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="TimesheetFileName"
+          DTS:DTSID="{80F0415A-19AE-4A50-B76B-19CD18412EEC}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TimesheetDateID"
+          DTS:DTSID="{0373D2B7-FCBD-4D40-AE80-63773C06D792}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TimesheetFromDateID"
+          DTS:DTSID="{2B17FA9E-852F-439C-9404-53F88990579C}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TimesheetToDateID"
+          DTS:DTSID="{0DACBF12-F008-49C6-B07F-15EEB5EBE38A}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetPerson"
+          DTS:DTSID="{50FDCB1E-5665-4684-A885-3E13C79260F2}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetDate"
+          DTS:DTSID="{D194CE7C-4132-474D-8440-33404F23C5A4}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="LoadDateID"
+          DTS:DTSID="{8C31991F-0F25-479C-B7D5-EBBD1EB8B814}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="OverallStatusID"
+          DTS:DTSID="{B2FA9E44-27C0-4BE5-A04D-822B6628F501}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="sys_CreatedOn"
+          DTS:DTSID="{09F35073-EF45-454B-A955-920613ACA341}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="sys_CreatedBy"
+          DTS:DTSID="{638A4EA3-355C-43B3-A1EF-2D174C18BF76}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="sys_ModifiedOn"
+          DTS:DTSID="{03F02D5F-99DB-4A13-B997-643475CE6A5A}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="sys_ModifiedBy"
+          DTS:DTSID="{BDCB8C7D-3629-4581-B4C2-4F0CE71A09B9}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

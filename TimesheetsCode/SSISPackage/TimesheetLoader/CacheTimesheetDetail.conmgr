@@ -1,0 +1,138 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CacheTimesheetDetail"
+  DTS:DTSID="{D06D16DE-0284-4C9D-BF8F-0A9C50337114}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="TimesheetDetailFileName"
+          DTS:DTSID="{AB2DAA61-9448-4407-BC79-12630AC0C179}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:IndexPosition="2"
+          DTS:ObjectName="TimesheetDetailDateID"
+          DTS:DTSID="{30163BDD-5F51-4ACA-A53A-1298AAA413CA}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:IndexPosition="3"
+          DTS:ObjectName="TimesheetDetailPersonID"
+          DTS:DTSID="{60130C8A-CD34-4299-9AF8-D2A6F1011145}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:IndexPosition="4"
+          DTS:ObjectName="TimesheetDetailProjectID"
+          DTS:DTSID="{60826578-AB27-4E23-98C9-141AAC7874A3}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:IndexPosition="5"
+          DTS:ObjectName="TimesheetID"
+          DTS:DTSID="{1FDA58DC-9E06-4735-BF2C-7875FD31B23E}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:IndexPosition="6"
+          DTS:ObjectName="TimesheetTypeOfWorkID"
+          DTS:DTSID="{9CDCB8EF-90E2-40B1-91AE-A0EC26E98B05}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="2000"
+          DTS:IndexPosition="7"
+          DTS:ObjectName="Comments"
+          DTS:DTSID="{1E1A420B-5947-4AE4-9FD4-C2FF46871CAC}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="sys_CreatedOn"
+          DTS:DTSID="{49043A35-356E-4BE6-B91C-F42A7FBE7091}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="Active"
+          DTS:DTSID="{61CCD2A8-FB8B-4A91-9E55-35BC4C3A3E62}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="sys_ModifiedOn"
+          DTS:DTSID="{FF1C7854-FEEC-45A2-B11C-40F1B43EAC61}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="Billable"
+          DTS:DTSID="{C6042D1B-5C78-4E76-BF56-F07BA3D83F86}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="sys_ModifiedBy"
+          DTS:DTSID="{1814DAB7-1705-4559-8700-F3145EB409F5}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetDetailCode"
+          DTS:DTSID="{0BF4BC6D-EE02-4554-A638-04B7C6202247}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TimesheetDetailID"
+          DTS:DTSID="{1AD20245-1530-4E6A-8975-4ED4E4F92E60}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetDetailName"
+          DTS:DTSID="{F2B081E3-D511-4421-9D26-F6C1E621FFF8}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="131"
+          DTS:Precision="18"
+          DTS:Scale="2"
+          DTS:ObjectName="Hours"
+          DTS:DTSID="{537AA7B6-EC34-4CB7-B7B5-1905E9D80AB6}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="LastUpdateDate"
+          DTS:DTSID="{897977BC-23A5-4C85-9C9F-085C301ECC1E}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="135"
+          DTS:ObjectName="LoadDate"
+          DTS:DTSID="{B763E861-99C6-4E01-833B-2BD401A9FC01}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="LoadDateID"
+          DTS:DTSID="{C6F3BA02-CA20-4F9F-9173-030719BBFF32}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="sys_CreatedBy"
+          DTS:DTSID="{53289C5B-7762-4DA7-86EC-8A2671AAAD26}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:ObjectName="TimesheetDetailSourceKey"
+          DTS:DTSID="{2152FB75-76F2-4762-AB7A-B51F455967CF}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="Exclude"
+          DTS:DTSID="{0F970DF1-7104-4B34-883D-7973B86E7CD3}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

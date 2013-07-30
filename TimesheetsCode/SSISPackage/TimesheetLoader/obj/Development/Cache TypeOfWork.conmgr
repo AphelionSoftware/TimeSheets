@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Cache TypeOfWork"
+  DTS:DTSID="{EFBC13BE-BB28-437F-8DF7-F2E8F7F64440}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="TypeOfWorkSourceKey"
+          DTS:DTSID="{38C87BAF-9F72-4C48-8143-0DFE45D90B6D}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="TypeOfWorkID"
+          DTS:DTSID="{292B3CCD-6C91-4192-8CBE-C92DF30DAD84}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

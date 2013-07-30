@@ -1,0 +1,993 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/9/2012 6:51:31 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="MGS-SSD"
+  DTS:CreatorName="MGS-2010BI\Administrator"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{DCA66F3D-28BA-4884-A225-AB574A1BF949}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="7177"
+  DTS:MaxErrorCount="10000"
+  DTS:ObjectName="CubeProcess"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="553"
+  DTS:VersionGUID="{537AD824-E906-494F-B448-4131E1BBF3B1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TimesheetsCube]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{65233301-0C3C-47AD-83C7-3D465B4F190C}"
+      DTS:ObjectName="TimesheetsCube">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.\SQL2012;Initial Catalog=TimesheetsCube;Provider=MSOLAP.5;Integrated Security=SSPI;Impersonation Level=Impersonate;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7725197E-90BE-48E1-A6A3-62F1C3DBA820}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AllRecordsets">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3F0029A9-45BC-4C4A-823A-AEA50EAD1A9D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_BillingPeriod">
+      <DTS:VariableValue
+        DTS:DataType="8">2012 - 09</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F8102E23-B1EE-42E3-BE52-F55B6F53C6BE}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(   @[User::BillableExportPath] &#xA; + &quot;\\&quot;  + @[User::AM_BillingPeriod]  , &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_BillingPeriodPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\2012 - 09</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DB53F056-A772-403F-BE47-C27A12D19BB5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_DeleteFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\Jody Roberts_2012-10_20121023.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3A378E54-3349-4708-BF3D-E0220179577F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ExportFilename">
+      <DTS:VariableValue
+        DTS:DataType="8">ProjectCaps</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F1A0E825-524A-4536-9A8E-039B5421763D}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(   @[User::BillableExportPath] &#xA; + &quot;\\&quot;  + @[User::AM_ExportFilename]  + &quot;.xlsx&quot;  , &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ExportFilenamePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\ProjectCaps.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BFB01A9E-1390-4A08-8220-291A0B09F2EB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ImportFilename">
+      <DTS:VariableValue
+        DTS:DataType="8">MixTelematics.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{09067403-C07C-45C9-B121-716FE927FC69}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(   @[User::BillableImportPath]  &#xA; + &quot;\\&quot;  +  &#xA;REPLACE( @[User::AM_ImportFilename]  + &quot;.xlsx&quot;  , &quot;.xlsx.xlsx&quot;, &quot;.xlsx&quot;)&#xA;&#xA;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ImportFilenamePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\MixTelematics.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A3BC0BE5-E75A-40E6-8A91-28149A1517E7}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(   @[User::BillableImportPath]  &#xA; + &quot;\\Unmatched\\&quot;  +  &#xA;REPLACE( &quot;Unmatched.xlsx&quot;  + &quot;.xlsx&quot;  , &quot;.xlsx.xlsx&quot;, &quot;.xlsx&quot;)&#xA;&#xA;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ImportFilenamePath_Unmatched">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\Unmatched\Unmatched.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5AB78085-5DF8-4843-89F8-8DAB3EB35B65}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ImportObject">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F82A161D-3B06-4072-A589-D6468EAA7163}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(   @[User::BillableImportPath]  &#xA; + &quot;\\SSISProcessed\\&quot; &#xA;&#xA;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_ImportProcessedPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DC09F353-5A2D-40FB-A547-1DEE1751CBD3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_List">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{80EEFBC3-A94E-4CC5-8D24-83B3C27B4D7A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_Name">
+      <DTS:VariableValue
+        DTS:DataType="8">Mark Stacey</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28FB5E81-D0BF-42AD-9497-6E0765586BE5}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT CAST ( [BillingStatusName] as nvarchar(255)) BillingStatusName&#xA;       ,CAST ( [ClientName] as nvarchar(255)) ClientName&#xA;&#x9;   ,CAST ( [ProjectName] as nvarchar(255)) ProjectName&#xA;      ,[TimesheetDetailID]&#xA;      ,CAST ( [TimesheetDetailSourceKey] as nvarchar(255)) TimesheetDetailSourceKey&#xA;      ,[LoadDate]&#xA;      ,[Active]&#xA;      ,CAST ( [TimesheetDetailFileName] as nvarchar(255)) TimesheetDetailFileName&#xA;      ,[TimesheetDetailDateID]&#xA;      ,[LoadDateID]&#xA;      ,[Hours]&#xA;      ,[TimesheetID]&#xA;      ,CAST ( [Comments] as nvarchar(255)) Comments&#xA;      ,CAST ( [ClientComments] as nvarchar(255)) ClientComments&#xA;      ,CAST ( [AMComments] as nvarchar(255)) AMComments&#xA;      ,[Exclude]&#xA;      ,CAST ( [TypeOfWorkName] as nvarchar(255)) TypeOfWorkName&#xA;      ,CAST ( [AccountManager] as nvarchar(255)) AccountManager&#xA;      ,CAST ( [AMEmail] as nvarchar(255)) AMEmail&#xA;      ,CAST ( [BillingPeriodText] as nvarchar(255)) BillingPeriodText&#xA;  FROM [dbo].[UnallocatedTimesheets]&#xA;WHERE AccountManager = '&quot; +  @[User::AM_Name] + &quot;'&#xA;&#xA;ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateID, Comments&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_SELECT">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT CAST ( [BillingStatusName] as nvarchar(255)) BillingStatusName
+       ,CAST ( [ClientName] as nvarchar(255)) ClientName
+	   ,CAST ( [ProjectName] as nvarchar(255)) ProjectName
+      ,[TimesheetDetailID]
+      ,CAST ( [TimesheetDetailSourceKey] as nvarchar(255)) TimesheetDetailSourceKey
+      ,[LoadDate]
+      ,[Active]
+      ,CAST ( [TimesheetDetailFileName] as nvarchar(255)) TimesheetDetailFileName
+      ,[TimesheetDetailDateID]
+      ,[LoadDateID]
+      ,[Hours]
+      ,[TimesheetID]
+      ,CAST ( [Comments] as nvarchar(255)) Comments
+      ,CAST ( [ClientComments] as nvarchar(255)) ClientComments
+      ,CAST ( [AMComments] as nvarchar(255)) AMComments
+      ,[Exclude]
+      ,CAST ( [TypeOfWorkName] as nvarchar(255)) TypeOfWorkName
+      ,CAST ( [AccountManager] as nvarchar(255)) AccountManager
+      ,CAST ( [AMEmail] as nvarchar(255)) AMEmail
+      ,CAST ( [BillingPeriodText] as nvarchar(255)) BillingPeriodText
+  FROM [dbo].[UnallocatedTimesheets]
+WHERE AccountManager = 'Mark Stacey'
+
+ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateID, Comments
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5C51D72F-E26B-4010-B010-A856F1A99DF7}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(  @[User::Path]   + &quot;\\Temp\\ProjectCaps.xlsx&quot;  , &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="AM_TemplateFilename">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\Temp\ProjectCaps.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{342E176B-66DB-49C5-AB48-5FA90CD075BB}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::Path] + &quot;\\BillabilityExports\\&quot;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BillableExportPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E2F13503-9202-4553-B824-61F2361A28CD}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::Path] + &quot;\\BillabilityImports\\&quot;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BillableImportPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4846479D-453F-4BA1-8CE9-780300160BC9}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::Path] + &quot;\\BillabilityImports\\SSISProcessed\\&quot;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BillableImportPathProcessed">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1C87DC91-5994-475C-A28F-A3EA2A4ECDDE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CAP_Cap">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BE4DC057-DE8B-4BCC-80DB-A39073F629E1}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Cap_Caption">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1F2CC01B-30F4-402D-A7B2-8413C2D411BC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CAP_Delta">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9E6111D6-F8BA-45DC-B76A-C1EC6ADC337D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Cap_email">
+      <DTS:VariableValue
+        DTS:DataType="8">mstacey@pragmaticworks.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A0A88A1F-B773-4A8C-9E13-F32C0194082A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Cap_Invoice">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5711B4FB-40B8-4345-A0CB-BD548933E105}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Cap_Project">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{59F5C2AA-0378-4422-A62D-0598B3A0FA65}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Cap_Recordset">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2FE22A86-BB62-4A5F-A800-211071BE803E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ClientList">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5A453CDD-F9AF-401C-8945-0136A12562E8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ClientName">
+      <DTS:VariableValue
+        DTS:DataType="8">AEL</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E67CEA37-5A5A-4A58-BFEA-3E2A2BFEEDEE}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(  @[User::AM_BillingPeriodPath]  &#xA; + &quot;\\&quot;  + @[User::ClientName]  + &quot;.xlsx&quot; , &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ClientPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\2012 - 09\AEL.xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A43D8BCD-79DB-4760-91B6-A2B9B2E8B678}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;SELECT  [BillingPeriodText]&#xA;      ,CAST( [BillingStatusName] as nvarchar(255)) [BillingStatusName]&#xA;      ,CAST( [ClientName] as nvarchar(255)) [ClientName]&#xA;      ,CAST( [ProjectName] as nvarchar(255)) [ProjectName]&#xA;      ,[TimesheetDetailID]&#xA;      ,CAST( [TimesheetDetailSourceKey] as nvarchar(255))  [TimesheetDetailSourceKey] &#xA;      ,[LoadDate]&#xA;      ,[Active]&#xA;      ,CAST( [TimesheetDetailFileName] as nvarchar(255)) [TimesheetDetailFileName]&#xA;      ,[TimesheetDetailDateID]&#xA;      ,[LoadDateID]&#xA;      ,[Hours]&#xA;      ,[TimesheetID]&#xA;      ,CAST( [Comments] as nvarchar(255)) [Comments]&#xA;      ,CAST( [ClientComments] as nvarchar(255)) [ClientComments]&#xA;      ,CAST( [AMComments] as nvarchar(255)) [AMComments]&#xA;      ,[Exclude]&#xA;      ,CAST( [TypeOfWorkName] as nvarchar(255)) [TypeOfWorkName]&#xA;      ,CAST( [AccountManager] as nvarchar(255)) [AccountManager]&#xA;      ,CAST( [AMEmail] as nvarchar(255)) [AMEmail]&#xA;  FROM [PWTimesheets].[dbo].[AllTimesheetsCurrentBillingPeriod]&#xA;  WHERE ClientName = '&quot;  +  @[User::ClientName]   + &quot;' &#xA;AND [BillingPeriodText]&#xA;  ='&quot;  +  @[User::AM_BillingPeriod]    +  &quot;'&#xA;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ClientSelect">
+      <DTS:VariableValue
+        DTS:DataType="8">SELECT  [BillingPeriodText]
+      ,CAST( [BillingStatusName] as nvarchar(255)) [BillingStatusName]
+      ,CAST( [ClientName] as nvarchar(255)) [ClientName]
+      ,CAST( [ProjectName] as nvarchar(255)) [ProjectName]
+      ,[TimesheetDetailID]
+      ,CAST( [TimesheetDetailSourceKey] as nvarchar(255))  [TimesheetDetailSourceKey] 
+      ,[LoadDate]
+      ,[Active]
+      ,CAST( [TimesheetDetailFileName] as nvarchar(255)) [TimesheetDetailFileName]
+      ,[TimesheetDetailDateID]
+      ,[LoadDateID]
+      ,[Hours]
+      ,[TimesheetID]
+      ,CAST( [Comments] as nvarchar(255)) [Comments]
+      ,CAST( [ClientComments] as nvarchar(255)) [ClientComments]
+      ,CAST( [AMComments] as nvarchar(255)) [AMComments]
+      ,[Exclude]
+      ,CAST( [TypeOfWorkName] as nvarchar(255)) [TypeOfWorkName]
+      ,CAST( [AccountManager] as nvarchar(255)) [AccountManager]
+      ,CAST( [AMEmail] as nvarchar(255)) [AMEmail]
+  FROM [PWTimesheets].[dbo].[AllTimesheetsCurrentBillingPeriod]
+  WHERE ClientName = 'AEL' 
+AND [BillingPeriodText]
+  ='2012 - 09'
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A0D564AA-EBCF-4DB2-BBF1-800D55C3D92A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataRecordSet">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4BE9BE86-C2A0-4237-B1DD-F786F8D04317}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="(Year(GETDATE()) * 10000) + (Month(GETDATE()) * 100) + (Day(GETDATE()))"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DateInt">
+      <DTS:VariableValue
+        DTS:DataType="3">20130707</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1A3476F7-B46B-46F4-B271-26BD8587991F}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::DeletionPath] + &quot;\\&quot; +  @[User::FileName]   , &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DeletionFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\ToDelete\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0D3DFE52-EEEA-4731-83C8-620BBEC8BAC0}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::Path] + &quot;\\ToDelete\\&quot;, &quot;\\\\&quot;, &quot;\\&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DeletionPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\ToDelete\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{36FBF2D3-3A32-45BC-B5E7-F26EB62F103E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;update dbo.TimesheetDetail&#xA;set active = 0 &#xA;where TimesheetDetailFileName = replace('&quot; + @[User::FileName] +&quot;','.xlsx','')&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DeletionTimesheetDetailSQL">
+      <DTS:VariableValue
+        DTS:DataType="8">update dbo.TimesheetDetail
+set active = 0 
+where TimesheetDetailFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx','')</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3D97AF3E-B355-42B7-AFDD-3A6AF415708E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;update dbo.Timesheet &#xA;set active = 0 &#xA;where TimesheetFileName = replace('&quot; + @[User::FileName] +&quot;','.xlsx','')&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DeletionTimesheetSQL">
+      <DTS:VariableValue
+        DTS:DataType="8">update dbo.Timesheet 
+set active = 0 
+where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx','')</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{60F3B3B8-8C3B-4CA1-BCE5-73317B8C5028}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\Errors</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7403C266-CA6F-4E39-9AEB-7F4E30FF2237}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F10D90B3-B291-4E26-8C8B-A30B74BC8CAA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="left(right(REPLACE( @[User::FileName] ,&quot;.xlsx&quot;,&quot;&quot;), 19),8)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileDate">
+      <DTS:VariableValue
+        DTS:DataType="8">20000101</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{75F866E4-3F03-46A7-A213-7658BF5D63E5}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FileName">
+      <DTS:VariableValue
+        DTS:DataType="8">zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A71F1B88-1CBF-4A79-8586-3B2257E2F271}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FinishedPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\SSISProcessed</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DCE7F8DA-A1D7-4084-AD4D-926B1969EBBA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="InProcessPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\InProcess\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FBA3FC2A-27C9-4B2C-996A-C83E03691D7D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MTEmail">
+      <DTS:VariableValue
+        DTS:DataType="8">mstacey@pragmaticworks.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5BAE129F-C4F1-42AA-B76F-29A60C0C5C50}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MTList">
+      <DTS:VariableValue
+        DTS:DataType="8">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;HTML&gt;&lt;HEAD&gt;
+&lt;META content="text/html; charset=unicode" http-equiv=Content-Type&gt;
+&lt;META name=GENERATOR content="MSHTML 9.00.8112.16441"&gt;&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;&amp;nbsp;&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;
+</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B59FEF5A-20C9-4693-A971-55230476913E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MTSubject">
+      <DTS:VariableValue
+        DTS:DataType="8">Missing Timesheets</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0E353AAF-788D-4BB3-A95E-1CFC4C6C0941}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="MTTimesheetName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C657F7B9-B530-4841-B012-6937CC3892AE}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MT_Results">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0A80802E-51F3-4D25-928F-C2AAA599864F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Path">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8E410646-E584-4122-A63B-30EF06683E94}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::InProcessPath] +  @[User::FileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceInProcessPath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\InProcess\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F94EDEEC-9EA8-4091-8133-AD4123E6A11A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::Path] +  @[User::FileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourcePath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\Dropbox\Timesheets\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C1CA72DE-6BC3-4D34-AC2D-499168A5A36C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6DE3000D-A8E2-42D8-8968-56C7A0A5D408}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WPEmail">
+      <DTS:VariableValue
+        DTS:DataType="8">mstacey@pragmaticworks.com</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1F70E82D-2E47-4117-84C1-C1C0C1C9D8AC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WPPersonName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1BA484AC-7539-4EEB-B34C-A90536312E51}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WPProject">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E914CE98-5838-4FF5-8A8C-6CE8F40E1DB2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WPSourceFile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{60D16459-CDE7-4592-8574-3ED6E29414AB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="WP_Results">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2" />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SEQ_Cube_Backup"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{42a3bb44-7c2a-4bbb-a7a6-9c0e6ae17241}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SEQ_Cube_Backup">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Cube_Backup\Back Up Database"
+          DTS:CreationName="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceBackupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Back Up Database Task"
+          DTS:Disabled="True"
+          DTS:DTSID="{fc81bfba-5f64-41a6-89e9-bf9137b1078d}"
+          DTS:ExecutableType="Microsoft.SqlServer.Management.DatabaseMaintenance.DbMaintenanceBackupTask, Microsoft.SqlServer.MaintenancePlanTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Back Up Database"
+          DTS:TaskContact="Back Up Database Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="2" />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{FF975062-5AD7-4051-BC3E-D95BF97C46F0}"
+              SQLTask:DatabaseSelectionType="4"
+              SQLTask:ServerVersion="10"
+              SQLTask:ExtendedLogging="True"
+              SQLTask:LocalConnectionForLogging=""
+              SQLTask:TaskName=""
+              SQLTask:IgnoreDatabasesInNotOnlineState="False"
+              SQLTask:BackupAction="0"
+              SQLTask:BackupIsIncremental="False"
+              SQLTask:BackupFileGroupsFiles=""
+              SQLTask:BackupDeviceType="2"
+              SQLTask:BackupPhisycalDestinationType="2"
+              SQLTask:BackupDestinationType="0"
+              SQLTask:BackupDestinationAutoFolderPath="D:\Dropbox\PWSAGeneral\TimesheetsCode\SSASTimesheets"
+              SQLTask:BackupActionForExistingBackups="0"
+              SQLTask:BackupCreateSubFolder="False"
+              SQLTask:BackupFileExtension=""
+              SQLTask:BackupVerifyIntegrity="False"
+              SQLTask:ExpireDate="2013-03-28T00:00:00"
+              SQLTask:RetainDays="14"
+              SQLTask:InDays="True"
+              SQLTask:UseExpiration="False"
+              SQLTask:BackupCompressionAction="0"
+              SQLTask:CopyOnlyBackup="False"
+              SQLTask:IgnoreReplicaType="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:SelectedDatabases
+                SQLTask:DatabaseName="PWTimesheets" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Cube_Backup\Backup Cube"
+          DTS:CreationName="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Analysis Services Execute DDL Task"
+          DTS:DTSID="{2c5541eb-273a-4f84-897c-4b824bd18dad}"
+          DTS:ExecutableType="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Backup Cube"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="2" />
+          <DTS:ObjectData>
+            <ASDdlData
+              ConnectionName="TimesheetsCube"
+              SourceType="DirectInput"
+              Source="&lt;Backup xmlns=&quot;http://schemas.microsoft.com/analysisservices/2003/engine&quot;&gt;&#xA;  &lt;Object&gt;&#xA;    &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;  &lt;/Object&gt;&#xA;  &lt;File&gt;D:\Dropbox\Clients\TimesheetsCode\SSASTimesheets\TimesheetsCube.abf&lt;/File&gt;&#xA;  &lt;AllowOverwrite&gt;true&lt;/AllowOverwrite&gt;&#xA;&lt;/Backup&gt;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Cube_Backup\Cubes"
+          DTS:CreationName="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Analysis Services Processing Task"
+          DTS:DTSID="{76d0c9e1-6cb7-4bd3-9a4c-8cb09d28b80f}"
+          DTS:ExecutableType="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Cubes"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="2" />
+          <DTS:ObjectData>
+            <ASProcessingData
+              ConnectionName="TimesheetsCube"
+              ProcessingCommands="&lt;Batch xmlns=&quot;http://schemas.microsoft.com/analysisservices/2003/engine&quot;&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;CubeID&gt;Timesheets&lt;/CubeID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;&lt;/Batch&gt;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SEQ_Cube_Backup\Dimensions"
+          DTS:CreationName="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:Description="Analysis Services Processing Task"
+          DTS:DTSID="{3954f8dc-5c13-4f5d-ac5a-a415f95119ea}"
+          DTS:ExecutableType="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Dimensions"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0"
+            DTS:LoggingMode="2" />
+          <DTS:ObjectData>
+            <ASProcessingData
+              ConnectionName="TimesheetsCube"
+              ProcessingCommands="&lt;Batch xmlns=&quot;http://schemas.microsoft.com/analysisservices/2003/engine&quot;&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Billing Status&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Timesheet&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Project&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Person&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Fact Timesheet Detail&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Date&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessFull&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;  &lt;Process xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:ddl2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2&quot; xmlns:ddl2_2=&quot;http://schemas.microsoft.com/analysisservices/2003/engine/2/2&quot; xmlns:ddl100_100=&quot;http://schemas.microsoft.com/analysisservices/2008/engine/100/100&quot; xmlns:ddl200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200&quot; xmlns:ddl200_200=&quot;http://schemas.microsoft.com/analysisservices/2010/engine/200/200&quot; xmlns:ddl300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300&quot; xmlns:ddl300_300=&quot;http://schemas.microsoft.com/analysisservices/2011/engine/300/300&quot;&gt;&#xA;    &lt;Object&gt;&#xA;      &lt;DatabaseID&gt;TimesheetsCube&lt;/DatabaseID&gt;&#xA;      &lt;DimensionID&gt;Type Of Work&lt;/DimensionID&gt;&#xA;    &lt;/Object&gt;&#xA;    &lt;Type&gt;ProcessUpdate&lt;/Type&gt;&#xA;    &lt;WriteBackTableCreation&gt;UseExisting&lt;/WriteBackTableCreation&gt;&#xA;  &lt;/Process&gt;&#xA;&lt;/Batch&gt;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{f7751196-33fa-4fd0-a8ec-2fb69845b0fb}"
+          DTS:From="Package\SEQ_Cube_Backup\Dimensions"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SEQ_Cube_Backup\Cubes" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{69815f6a-0830-4e53-b15a-5cb018ac7904}"
+          DTS:From="Package\SEQ_Cube_Backup\Cubes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SEQ_Cube_Backup\Back Up Database" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{215be437-8797-46ee-808b-20a0aa6d7f1e}"
+          DTS:From="Package\SEQ_Cube_Backup\Cubes"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\SEQ_Cube_Backup\Backup Cube" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\SEQ_Cube_Backup\Back Up Database"
+          TopLeft="5.50000000000006,209.5" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\SEQ_Cube_Backup\Backup Cube"
+          TopLeft="232,209.5" />
+        <NodeLayout
+          Size="109,42"
+          Id="Package\SEQ_Cube_Backup\Cubes"
+          TopLeft="248,107.5" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\SEQ_Cube_Backup\Dimensions"
+          TopLeft="235.5,5.5" />
+        <EdgeLayout
+          Id="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint]"
+          TopLeft="302.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint 1]"
+          TopLeft="285.666666666667,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-197.166666666667,60"
+              Start="0,0"
+              End="-197.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5207956600362" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5207956600362"
+                    Point2="0,24.5207956600362"
+                    Point3="-4,24.5207956600362" />
+                  <mssgle:LineSegment
+                    End="-193.166666666667,24.5207956600362" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-193.166666666667,24.5207956600362"
+                    Point2="-197.166666666667,24.5207956600362"
+                    Point3="-197.166666666667,28.5207956600362" />
+                  <mssgle:LineSegment
+                    End="-197.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SEQ_Cube_Backup.PrecedenceConstraints[Constraint 2]"
+          TopLeft="319.333333333333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.8333333333333,60"
+              Start="0,0"
+              End="-16.8333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5207956600362" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.5207956600362"
+                    Point2="0,24.5207956600362"
+                    Point3="-4,24.5207956600362" />
+                  <mssgle:LineSegment
+                    End="-12.8333333333333,24.5207956600362" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.8333333333333,24.5207956600362"
+                    Point2="-16.8333333333333,24.5207956600362"
+                    Point3="-16.8333333333333,28.5207956600362" />
+                  <mssgle:LineSegment
+                    End="-16.8333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="378,307"
+          Size="378,350"
+          Id="Package\SEQ_Cube_Backup"
+          TopLeft="477,196" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[TimesheetsCube]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

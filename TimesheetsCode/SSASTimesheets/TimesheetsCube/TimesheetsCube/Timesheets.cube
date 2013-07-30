@@ -516,6 +516,12 @@
         <Attribute dwd:design-time-name="bb5b9108-9f41-4584-af07-889df39e2326">
           <AttributeID>Timesheet Detail File Name 1</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="f8b6a66e-3e5f-4fb7-ba38-2f676014dca7">
+          <AttributeID>Timesheet Detail Date ID 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ae61446-234c-4dbc-901c-30b0efe74772">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="c6ebd83a-2503-42ce-8be3-4d370ae570d9">
