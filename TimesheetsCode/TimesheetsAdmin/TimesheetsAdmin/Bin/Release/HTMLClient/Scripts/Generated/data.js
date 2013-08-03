@@ -263,6 +263,33 @@ window.myapp = msls.application;
         /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
         /// Gets the billingDetails for this dimDate.
         /// </field>
+        /// <field name="ContractorYear" type="Number">
+        /// Gets or sets the contractorYear for this dimDate.
+        /// </field>
+        /// <field name="ContractorMonth" type="Number">
+        /// Gets or sets the contractorMonth for this dimDate.
+        /// </field>
+        /// <field name="ContractorPeriod" type="String">
+        /// Gets or sets the contractorPeriod for this dimDate.
+        /// </field>
+        /// <field name="BillingYear" type="String">
+        /// Gets or sets the billingYear for this dimDate.
+        /// </field>
+        /// <field name="WeekEndingBillingPeriod" type="String">
+        /// Gets or sets the weekEndingBillingPeriod for this dimDate.
+        /// </field>
+        /// <field name="BillingPeriodText" type="String">
+        /// Gets or sets the billingPeriodText for this dimDate.
+        /// </field>
+        /// <field name="BillingPeriod" type="Number">
+        /// Gets or sets the billingPeriod for this dimDate.
+        /// </field>
+        /// <field name="WeekEnding" type="Date">
+        /// Gets or sets the weekEnding for this dimDate.
+        /// </field>
+        /// <field name="WeekEndingText" type="String">
+        /// Gets or sets the weekEndingText for this dimDate.
+        /// </field>
         /// <field name="details" type="msls.application.DimDate.Details">
         /// Gets the details for this dimDate.
         /// </field>
@@ -351,6 +378,12 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this person.
         /// </field>
+        /// <field name="SharepointUserName" type="String">
+        /// Gets or sets the sharepointUserName for this person.
+        /// </field>
+        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheets for this person.
+        /// </field>
         /// <field name="details" type="msls.application.Person.Details">
         /// Gets the details for this person.
         /// </field>
@@ -430,6 +463,15 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this project.
         /// </field>
+        /// <field name="MonthlyCap" type="Number">
+        /// Gets or sets the monthlyCap for this project.
+        /// </field>
+        /// <field name="MonthlyCapWarning" type="Number">
+        /// Gets or sets the monthlyCapWarning for this project.
+        /// </field>
+        /// <field name="ProjectCapWarning" type="Number">
+        /// Gets or sets the projectCapWarning for this project.
+        /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
         /// </field>
@@ -499,6 +541,12 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this timesheet.
+        /// </field>
+        /// <field name="PeriodEnding" type="Date">
+        /// Gets or sets the periodEnding for this timesheet.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this timesheet.
         /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
@@ -854,9 +902,9 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function PWTimesheetsData(dataWorkspace) {
+    function TimeSheets_Dev(dataWorkspace) {
         /// <summary>
-        /// Represents the PWTimesheetsData data service.
+        /// Represents the TimeSheets_Dev data service.
         /// </summary>
         /// <param name="dataWorkspace" type="msls.DataWorkspace">
         /// The data workspace that created this data service.
@@ -900,7 +948,7 @@ window.myapp = msls.application;
         /// <field name="ActiveTypes" type="msls.EntitySet">
         /// Gets the ActiveTypes entity set.
         /// </field>
-        /// <field name="details" type="msls.application.PWTimesheetsData.Details">
+        /// <field name="details" type="msls.application.TimeSheets_Dev.Details">
         /// Gets the details for this data service.
         /// </field>
         $DataService.call(this, dataWorkspace);
@@ -909,8 +957,8 @@ window.myapp = msls.application;
         /// <summary>
         /// Represents the data workspace.
         /// </summary>
-        /// <field name="PWTimesheetsData" type="msls.application.PWTimesheetsData">
-        /// Gets the PWTimesheetsData data service.
+        /// <field name="TimeSheets_Dev" type="msls.application.TimeSheets_Dev">
+        /// Gets the TimeSheets_Dev data service.
         /// </field>
         /// <field name="details" type="msls.application.DataWorkspace.Details">
         /// Gets the details for this data workspace.
@@ -997,7 +1045,16 @@ window.myapp = msls.application;
             { name: "sys_ModifiedBy", type: String },
             { name: "Active", type: Number },
             { name: "Timesheets", kind: "collection", elementType: Timesheet },
-            { name: "BillingDetails", kind: "collection", elementType: BillingDetail }
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
+            { name: "ContractorYear", type: Number },
+            { name: "ContractorMonth", type: Number },
+            { name: "ContractorPeriod", type: String },
+            { name: "BillingYear", type: String },
+            { name: "WeekEndingBillingPeriod", type: String },
+            { name: "BillingPeriodText", type: String },
+            { name: "BillingPeriod", type: Number },
+            { name: "WeekEnding", type: Date },
+            { name: "WeekEndingText", type: String }
         ]),
 
         Person: $defineEntity(Person, [
@@ -1025,7 +1082,9 @@ window.myapp = msls.application;
             { name: "SystemRole", kind: "reference", type: SystemRole },
             { name: "ADUsername", type: String },
             { name: "Clients", kind: "collection", elementType: Client },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "SharepointUserName", type: String },
+            { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
         Project: $defineEntity(Project, [
@@ -1050,7 +1109,10 @@ window.myapp = msls.application;
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "MonthlyCap", type: Number },
+            { name: "MonthlyCapWarning", type: Number },
+            { name: "ProjectCapWarning", type: Number }
         ]),
 
         Timesheet: $defineEntity(Timesheet, [
@@ -1072,7 +1134,9 @@ window.myapp = msls.application;
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "DimDate", kind: "reference", type: DimDate },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "PeriodEnding", type: Date },
+            { name: "Person", kind: "reference", type: Person }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
@@ -1183,7 +1247,7 @@ window.myapp = msls.application;
             { name: "TypeOfWorks", kind: "collection", elementType: TypeOfWork }
         ]),
 
-        PWTimesheetsData: $defineDataService(PWTimesheetsData, lightSwitchApplication.rootUri + "/PWTimesheetsData.svc", [
+        TimeSheets_Dev: $defineDataService(TimeSheets_Dev, lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc", [
             { name: "BillingDetails", elementType: BillingDetail },
             { name: "BillingStatusSet", elementType: BillingStatus },
             { name: "Clients", elementType: Client },
@@ -1201,91 +1265,91 @@ window.myapp = msls.application;
             {
                 name: "BillingDetails_SingleOrDefault", value: function (BillingDetailID) {
                     return new $DataServiceQuery({ _entitySet: this.BillingDetails },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/BillingDetails(" + "BillingDetailID=" + $toODataString(BillingDetailID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/BillingDetails(" + "BillingDetailID=" + $toODataString(BillingDetailID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "BillingStatusSet_SingleOrDefault", value: function (BillingStatusID) {
                     return new $DataServiceQuery({ _entitySet: this.BillingStatusSet },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/BillingStatusSet(" + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/BillingStatusSet(" + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "Clients_SingleOrDefault", value: function (ClientID) {
                     return new $DataServiceQuery({ _entitySet: this.Clients },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "DimDates_SingleOrDefault", value: function (DateID) {
                     return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/DimDates(" + "DateID=" + $toODataString(DateID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/DimDates(" + "DateID=" + $toODataString(DateID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "People_SingleOrDefault", value: function (PersonID) {
                     return new $DataServiceQuery({ _entitySet: this.People },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "Projects_SingleOrDefault", value: function (ProjectID) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/Projects(" + "ProjectID=" + $toODataString(ProjectID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/Projects(" + "ProjectID=" + $toODataString(ProjectID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
                     return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "TimesheetDetails_SingleOrDefault", value: function (TimesheetDetailID) {
                     return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/TimesheetDetails(" + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/TimesheetDetails(" + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "TypeOfWorks_SingleOrDefault", value: function (TypeOfWorkID) {
                     return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "RoleTypes_SingleOrDefault", value: function (RoleTypeID) {
                     return new $DataServiceQuery({ _entitySet: this.RoleTypes },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/RoleTypes(" + "RoleTypeID=" + $toODataString(RoleTypeID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/RoleTypes(" + "RoleTypeID=" + $toODataString(RoleTypeID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "ClientRoles_SingleOrDefault", value: function (ClientRoleID) {
                     return new $DataServiceQuery({ _entitySet: this.ClientRoles },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/ClientRoles(" + "ClientRoleID=" + $toODataString(ClientRoleID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/ClientRoles(" + "ClientRoleID=" + $toODataString(ClientRoleID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "SystemRoles_SingleOrDefault", value: function (SystemRoleID) {
                     return new $DataServiceQuery({ _entitySet: this.SystemRoles },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/SystemRoles(" + "SystemRoleID=" + $toODataString(SystemRoleID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/SystemRoles(" + "SystemRoleID=" + $toODataString(SystemRoleID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "TimesheetsByDate", value: function (StartDate, EndDate, TimesheetPerson) {
                     return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/TimesheetsByDate()",
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/TimesheetsByDate()",
                         {
                             StartDate: $toODataString(StartDate, "DateTime?"),
                             EndDate: $toODataString(EndDate, "DateTime?"),
@@ -1296,14 +1360,14 @@ window.myapp = msls.application;
             {
                 name: "ActiveTypes_SingleOrDefault", value: function (ID) {
                     return new $DataServiceQuery({ _entitySet: this.ActiveTypes },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
                     );
                 }
             },
             {
                 name: "PersonSorted", value: function () {
                     return new $DataServiceQuery({ _entitySet: this.People },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/PersonSorted()",
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/PersonSorted()",
                         {
                         });
                 }
@@ -1311,7 +1375,7 @@ window.myapp = msls.application;
             {
                 name: "BillingDate", value: function () {
                     return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/BillingDate()",
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/BillingDate()",
                         {
                         });
                 }
@@ -1319,7 +1383,7 @@ window.myapp = msls.application;
             {
                 name: "FilteredClient", value: function (ClientName) {
                     return new $DataServiceQuery({ _entitySet: this.Clients },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/FilteredClient()",
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/FilteredClient()",
                         {
                             ClientName: $toODataString(ClientName, "String?")
                         });
@@ -1328,7 +1392,7 @@ window.myapp = msls.application;
             {
                 name: "ProjectsFilter", value: function (ClientName, ProjectName) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
-                        lightSwitchApplication.rootUri + "/PWTimesheetsData.svc" + "/ProjectsFilter()",
+                        lightSwitchApplication.rootUri + "/TimeSheets_Dev.svc" + "/ProjectsFilter()",
                         {
                             ClientName: $toODataString(ClientName, "String?"),
                             ProjectName: $toODataString(ProjectName, "String?")
@@ -1338,7 +1402,7 @@ window.myapp = msls.application;
         ]),
 
         DataWorkspace: $defineDataWorkspace(DataWorkspace, [
-            { name: "PWTimesheetsData", type: PWTimesheetsData }
+            { name: "TimeSheets_Dev", type: TimeSheets_Dev }
         ])
 
     });
