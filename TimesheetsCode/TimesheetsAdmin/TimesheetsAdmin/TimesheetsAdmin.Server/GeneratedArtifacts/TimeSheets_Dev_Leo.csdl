@@ -211,7 +211,7 @@
     <Property Name="TimesheetDetailFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="Hours" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
-    <Property Name="Comments" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="ClientComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="AMComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Exclude" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />

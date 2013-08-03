@@ -28,7 +28,7 @@
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressSSLPort>44301</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
@@ -211,14 +211,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="SharePointLaunch.aspx.cs">
+    <Compile Include="SharePointLaunch.aspx.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </None>
-    <None Include="SharePointLaunch.aspx.designer.cs">
+    </Compile>
+    <Compile Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
-    </None>
-    <Compile Include="UserCode\TimeSheets_Dev_LeoService.cs" />
+    </Compile>
+    <Compile Include="UserCode\TimeSheets_DevService.cs" />
     <Compile Include="UserCode\Shared\BillingDetail.cs" />
     <Compile Include="UserCode\Shared\BillingStatus.cs" />
   </ItemGroup>
@@ -228,7 +228,7 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SharePointLaunch.aspx" />
+    <Content Include="SharePointLaunch.aspx" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

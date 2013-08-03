@@ -10,3 +10,7 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
+C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
+C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
+C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
