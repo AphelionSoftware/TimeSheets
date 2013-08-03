@@ -5,3 +5,7 @@ C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\Ti
 C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
 C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb
 C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache

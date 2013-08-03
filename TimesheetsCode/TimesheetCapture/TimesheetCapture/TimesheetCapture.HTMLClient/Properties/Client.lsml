@@ -305,7 +305,7 @@
       <SaveChangesTo
         EntityContainer="TimesheetsData" />
       <DisplayName
-        Value="Timesheets" />
+        Value="Timesheets v.1.2.16" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem

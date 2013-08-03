@@ -4281,7 +4281,7 @@
           ]
         },
         {
-          "displayName": "Timesheets",
+          "displayName": "Timesheets v.1.2.16",
           "id": "BrowseTimesheets",
           "name": "BrowseTimesheets",
           "launchMode": "Single",
@@ -4291,7 +4291,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "Timesheets",
+            "displayName": "Timesheets v.1.2.16",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },

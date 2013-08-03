@@ -77,6 +77,7 @@
     <None Include="Package\Package.package">
       <PackageId>{9d3c8576-eb05-41f3-b917-483b05ba0681}</PackageId>
     </None>
+    <None Include="ServiceConfiguration.cscfg" />
     <None Include="SharePointProjectItem.spdata">
       <SharePointProjectItemId>{00840d14-f9bb-404b-b4cf-87605067a9e9}</SharePointProjectItemId>
     </None>
