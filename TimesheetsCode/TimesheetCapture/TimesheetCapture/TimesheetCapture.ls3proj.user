@@ -13,7 +13,7 @@
     <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
     <AzureManagementThumbprint />
     <SharePointServerToServerCertificatePassword />
-    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635110408524532147</SchemaManagementLastModelWriteTime>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635111632682138289</SchemaManagementLastModelWriteTime>
   </PropertyGroup>
 </Project>
