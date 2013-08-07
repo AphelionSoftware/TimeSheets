@@ -115,5 +115,8 @@
     <Build Include="Security\Config.sql" />
     <Build Include="Security\CUBE.sql" />
     <Build Include="Security\Staging.sql" />
+    <Build Include="..\..\..\DatabaseScripts\0010_Add_GetBillingRateByPersonID.sql">
+      <Link>dbo\Functions\0010_Add_GetBillingRateByPersonID.sql</Link>
+    </Build>
   </ItemGroup>
 </Project>
