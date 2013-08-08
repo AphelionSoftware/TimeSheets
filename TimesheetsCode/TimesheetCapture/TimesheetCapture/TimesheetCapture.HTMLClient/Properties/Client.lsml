@@ -1329,7 +1329,7 @@
                   <ContentItem
                     Name="Comments"
                     Kind="Value"
-                    DataType=":String?"
+                    DataType=":String"
                     View="Microsoft.LightSwitch.MobileWeb:TextArea">
                     <ContentItem.Attributes>
                       <DisplayName
@@ -1770,7 +1770,7 @@
                 <ContentItem
                   Name="Comments"
                   Kind="Value"
-                  DataType=":String?"
+                  DataType=":String"
                   View="Microsoft.LightSwitch.MobileWeb:TextArea">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>

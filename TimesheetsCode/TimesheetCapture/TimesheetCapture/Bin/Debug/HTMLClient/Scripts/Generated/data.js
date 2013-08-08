@@ -628,6 +628,15 @@ window.myapp = msls.application;
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this project.
         /// </field>
+        /// <field name="MonthlyCap" type="Number">
+        /// Gets or sets the monthlyCap for this project.
+        /// </field>
+        /// <field name="MonthlyCapWarning" type="Number">
+        /// Gets or sets the monthlyCapWarning for this project.
+        /// </field>
+        /// <field name="ProjectCapWarning" type="Number">
+        /// Gets or sets the projectCapWarning for this project.
+        /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
         /// </field>
@@ -1099,7 +1108,10 @@ window.myapp = msls.application;
             { name: "BillingStatu", kind: "reference", type: BillingStatu },
             { name: "Client", kind: "reference", type: Client },
             { name: "PersonItem", kind: "reference", type: PersonItem },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "MonthlyCap", type: Number },
+            { name: "MonthlyCapWarning", type: Number },
+            { name: "ProjectCapWarning", type: Number }
         ]),
 
         Timesheet: $defineEntity(Timesheet, [

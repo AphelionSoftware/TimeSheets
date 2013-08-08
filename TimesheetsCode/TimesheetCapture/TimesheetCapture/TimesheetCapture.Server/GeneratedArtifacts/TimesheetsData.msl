@@ -195,6 +195,9 @@
           <ScalarProperty Name="Billable" ColumnName="Billable" />
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
           <ScalarProperty Name="AccountManagerPersonID" ColumnName="AccountManagerPersonID" />
+          <ScalarProperty Name="MonthlyCap" ColumnName="MonthlyCap" />
+          <ScalarProperty Name="MonthlyCapWarning" ColumnName="MonthlyCapWarning" />
+          <ScalarProperty Name="ProjectCapWarning" ColumnName="ProjectCapWarning" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

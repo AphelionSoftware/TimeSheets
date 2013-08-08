@@ -1899,6 +1899,39 @@
               "fromEnd": { "__id": "FK_TimesheetDetail_Project/Ends[Project]" },
               "propertyType": { "__id": "TimesheetDetail*" },
               "toEnd": { "__id": "FK_TimesheetDetail_Project/Ends[TimesheetDetail]" }
+            },
+            {
+              "id": "Project/Properties[MonthlyCap]",
+              "name": "MonthlyCap",
+              "propertyType": { "__id": ":Decimal?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Project/Properties[MonthlyCapWarning]",
+              "name": "MonthlyCapWarning",
+              "propertyType": { "__id": ":Decimal?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Project/Properties[ProjectCapWarning]",
+              "name": "ProjectCapWarning",
+              "propertyType": { "__id": ":Decimal?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -2247,12 +2280,13 @@
             {
               "id": "TimesheetDetail/Properties[Comments]",
               "name": "Comments",
-              "propertyType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String" },
               ":@MaxLength":
               {
                 "value": 500
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Required": { }
             },
             {
               "id": "TimesheetDetail/Properties[ClientComments]",
@@ -4950,6 +4984,14 @@
                                   {
                                     "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
                                     "value": false
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                    "value": 10
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MinHeight]" },
+                                    "value": 10
                                   }
                                 ]
                               }

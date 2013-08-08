@@ -1,1 +1,1 @@
-C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Debug\TimesheetCapture.SharePoint.debugapp
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Debug\TimesheetCapture.SharePoint.debugapp

@@ -1554,6 +1554,36 @@
         Association="FK_TimesheetDetail_Project"
         FromEnd="Project"
         ToEnd="TimesheetDetail" />
+      <EntityProperty
+        Name="MonthlyCap"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MonthlyCapWarning"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProjectCapWarning"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1839,11 +1869,12 @@
       </EntityProperty>
       <EntityProperty
         Name="Comments"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="500" />
           <AnsiConstraint />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -4007,7 +4038,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="84478a87-cbff-4be0-98e2-bf9bd87a0139" />
+        Value="26957277-565f-49e1-8e1d-807d89cabb08" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4848,6 +4879,24 @@
           Nullable="False"
           Type="nvarchar"
           Property="Project/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          Name="MonthlyCap"
+          Nullable="True"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[MonthlyCap]" />
+        <SsdlProperty
+          Name="MonthlyCapWarning"
+          Nullable="True"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[MonthlyCapWarning]" />
+        <SsdlProperty
+          Name="ProjectCapWarning"
+          Nullable="True"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[ProjectCapWarning]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -5045,7 +5094,7 @@
         <SsdlProperty
           MaxLength="500"
           Name="Comments"
-          Nullable="True"
+          Nullable="False"
           Type="varchar"
           Property="TimesheetDetail/Properties[Comments]" />
         <SsdlProperty

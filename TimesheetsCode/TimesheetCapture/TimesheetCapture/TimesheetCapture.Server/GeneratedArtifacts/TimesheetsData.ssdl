@@ -305,6 +305,9 @@
     <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="MonthlyCap" Type="decimal" Scale="2" />
+    <Property Name="MonthlyCapWarning" Type="decimal" Scale="2" />
+    <Property Name="ProjectCapWarning" Type="decimal" Scale="2" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="Billable" Type="int" Nullable="false" />
     <Property Name="ClientID" Type="int" Nullable="false" />
@@ -347,7 +350,7 @@
     <Property Name="TimesheetDetailFileName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="Hours" Type="decimal" Nullable="false" Scale="2" />
-    <Property Name="Comments" Type="varchar" MaxLength="500" />
+    <Property Name="Comments" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="ClientComments" Type="varchar(max)" />
     <Property Name="AMComments" Type="varchar(max)" />
     <Property Name="Exclude" Type="int" Nullable="false" />
