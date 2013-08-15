@@ -4348,7 +4348,7 @@
                         "displayName": "Timesheets",
                         "name": "Timesheet",
                         "kind": "Collection",
-                        "view": { "__id": ":List" },
+                        "view": { "__id": "Wijmo.LightSwitch:CollectionCustomControl" },
                         "dataSource":
                         {
                           "member": { "__id": "BrowseTimesheets/Properties[Timesheets]" }
@@ -4359,42 +4359,36 @@
                             "displayName": "Timesheet",
                             "name": "RowTemplate",
                             "kind": "Details",
-                            "view": { "__id": ":Summary" },
+                            "view": { "__id": ":ColumnsLayout" },
                             "dataSource":
                             {
                               "links":
                               [
                               ]
-                            }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditTimesheet]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTimesheets/Properties[Timesheets]" } },
-                              "arguments":
-                              [
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Period Ending",
+                                "name": "PeriodEnding",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
                                 {
-                                  "parameter": { "__id": "!module/Methods[showAddEditTimesheet]/Parameters[Timesheet]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowseTimesheets/Properties[Timesheets]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$Timesheet/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
+                                  "member": { "__id": "Timesheet/Properties[PeriodEnding]" }
                                 }
-                              ]
-                            }
+                              },
+                              {
+                                "displayName": "Timesheet Name",
+                                "name": "TimesheetName",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Timesheet/Properties[TimesheetName]" }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }

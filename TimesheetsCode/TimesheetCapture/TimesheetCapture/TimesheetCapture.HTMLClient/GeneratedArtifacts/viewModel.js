@@ -113,7 +113,7 @@
             {
                 name: "Timesheets", kind: "collection", elementType: lightSwitchApplication.Timesheet,
                 createQuery: function (StartDate, EndDate) {
-                    return this.dataWorkspace.TimesheetsData.TimesheetsUser(StartDate, EndDate).orderByDescending("DimDate/c_Date").expand("ActiveType").expand("DimDate").expand("OverallStatus");
+                    return this.dataWorkspace.TimesheetsData.TimesheetsUser(StartDate, EndDate).orderByDescending("DimDate/c_Date");
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },
