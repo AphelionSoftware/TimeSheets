@@ -954,6 +954,16 @@
                             "childContentItems":
                             [
                               {
+                                "displayName": "Sales Order Detail ID",
+                                "name": "SalesOrderDetailID",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "SalesOrderDetail/Properties[SalesOrderDetailID]" }
+                                }
+                              },
+                              {
                                 "displayName": "Carrier Tracking Number",
                                 "name": "CarrierTrackingNumber",
                                 "kind": "Value",
@@ -1068,35 +1078,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[Tap]" },
-                                "source":
-                                {
-                                  "target": { "__id": "!module/Methods[showAddEditSalesOrderDetail]" },
-                                  ":@AssociatedCollection": { "collection": { "__id": "ViewSalesOrderDetail/Properties[SalesOrderDetails]" } },
-                                  "arguments":
-                                  [
-                                    {
-                                      "parameter": { "__id": "!module/Methods[showAddEditSalesOrderDetail]/Parameters[SalesOrderDetail]" },
-                                      "value":
-                                      {
-                                        "links":
-                                        [
-                                          {
-                                            "member": { "__id": "ViewSalesOrderDetail/Properties[SalesOrderDetails]" }
-                                          },
-                                          {
-                                            "member": { "__id": "CollectionView$SalesOrderDetail/Properties[selectedItem]" }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
                             ]
                           }
                         ]
@@ -1205,266 +1186,6 @@
               "elementType": { "__id": ":Int32" },
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
-              ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "displayName": "Add Edit Sales Order Detail",
-          "id": "AddEditSalesOrderDetail",
-          "name": "AddEditSalesOrderDetail",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[WijmoGridTestData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "AddEditSalesOrderDetail/Properties[SalesOrderDetail]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Carrier Tracking Number",
-                                "name": "CarrierTrackingNumber",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[CarrierTrackingNumber]" }
-                                }
-                              },
-                              {
-                                "displayName": "Order Qty",
-                                "name": "OrderQty",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[OrderQty]" }
-                                }
-                              },
-                              {
-                                "displayName": "Product ID",
-                                "name": "ProductID",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[ProductID]" }
-                                }
-                              },
-                              {
-                                "displayName": "Special Offer ID",
-                                "name": "SpecialOfferID",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[SpecialOfferID]" }
-                                }
-                              },
-                              {
-                                "displayName": "Unit Price",
-                                "name": "UnitPrice",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[UnitPrice]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Unit Price Discount",
-                                "name": "UnitPriceDiscount",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[UnitPriceDiscount]" }
-                                }
-                              },
-                              {
-                                "displayName": "Line Total",
-                                "name": "LineTotal",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[LineTotal]" }
-                                }
-                              },
-                              {
-                                "displayName": "rowguid",
-                                "name": "rowguid",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[rowguid]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified Date",
-                                "name": "ModifiedDate",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[ModifiedDate]" }
-                                }
-                              },
-                              {
-                                "displayName": "Sales Order Header",
-                                "name": "SalesOrderHeader",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "SalesOrderDetail/Properties[SalesOrderHeader]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Sales Order Header",
-                                    "name": "RowTemplate",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "AddEditSalesOrderDetail/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "AddEditSalesOrderDetail/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "AddEditSalesOrderDetail/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "AddEditSalesOrderDetail/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "AddEditSalesOrderDetail/Properties[SalesOrderDetail]",
-              "name": "SalesOrderDetail",
-              "elementType": { "__id": "SalesOrderDetail" },
-              "propertyType": { "__id": "SalesOrderDetail" },
               ":@IsParameter": { }
             }
           ]
@@ -1593,19 +1314,6 @@
               "id": "!module/Methods[showViewSalesOrderDetail]/Parameters[SalesOrderID]",
               "name": "SalesOrderID",
               "parameterType": { "__id": ":Int32" }
-            }
-          ]
-        },
-        {
-          "id": "!module/Methods[showAddEditSalesOrderDetail]",
-          "name": "showAddEditSalesOrderDetail",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditSalesOrderDetail" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showAddEditSalesOrderDetail]/Parameters[SalesOrderDetail]",
-              "name": "SalesOrderDetail",
-              "parameterType": { "__id": "SalesOrderDetail" }
             }
           ]
         }

@@ -139,6 +139,11 @@
         /// </field>
         RowTemplate_postRender: $parameters,
         /// <field>
+        /// Called after the SalesOrderDetailID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        SalesOrderDetailID_postRender: $parameters,
+        /// <field>
         /// Called after the CarrierTrackingNumber content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
