@@ -144,6 +144,7 @@
                 }
             }
         ], [
+            { name: "GoHome" }
         ]),
 
         AddEditTimesheetDetail: $defineScreen(AddEditTimesheetDetail, [

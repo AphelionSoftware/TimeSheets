@@ -32,9 +32,8 @@ myapp.BrowseTimesheets.Timesheet_render = function (element, contentItem) {
             showSelectionOnRender: false,
             cellClicked: grid.OnCellClicked,
             cellStyleFormatter: grid.OnCellFormat
-
-
         });
+
         //In this line you set the first column to be hidden.
         var cols = table.wijgrid("columns");
         cols[0].option("visible",false);

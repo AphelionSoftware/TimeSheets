@@ -41,21 +41,6 @@
         /// </field>
         RowTemplate_postRender: $parameters,
         /// <field>
-        /// Called after the TimesheetID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetID_postRender: $parameters,
-        /// <field>
-        /// Called after the PeriodEnding content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        PeriodEnding_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetName_postRender: $parameters,
-        /// <field>
         /// Called after the TimesheetsFilter content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -83,6 +68,16 @@
         /// <br/>beforeApplyChanges(msls.application.AddEditTimesheet screen)
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.AddEditTimesheet],
+        /// <field>
+        /// Called to determine if the GoHome method can be executed.
+        /// <br/>canExecute(msls.application.AddEditTimesheet screen)
+        /// </field>
+        GoHome_canExecute: [lightSwitchApplication.AddEditTimesheet],
+        /// <field>
+        /// Called to execute the GoHome method.
+        /// <br/>execute(msls.application.AddEditTimesheet screen)
+        /// </field>
+        GoHome_execute: [lightSwitchApplication.AddEditTimesheet],
         /// <field>
         /// Called after the Timesheet content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

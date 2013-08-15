@@ -4348,7 +4348,7 @@
                         "displayName": "Timesheets",
                         "name": "Timesheet",
                         "kind": "Collection",
-                        "view": { "__id": "Wijmo.LightSwitch:CollectionCustomControl" },
+                        "view": { "__id": ":List" },
                         "dataSource":
                         {
                           "member": { "__id": "BrowseTimesheets/Properties[Timesheets]" }
@@ -4359,46 +4359,13 @@
                             "displayName": "Timesheet",
                             "name": "RowTemplate",
                             "kind": "Details",
-                            "view": { "__id": ":ColumnsLayout" },
+                            "view": { "__id": ":Summary" },
                             "dataSource":
                             {
                               "links":
                               [
                               ]
                             },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Timesheet ID",
-                                "name": "TimesheetID",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Timesheet/Properties[TimesheetID]" }
-                                }
-                              },
-                              {
-                                "displayName": "Period Ending",
-                                "name": "PeriodEnding",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Timesheet/Properties[PeriodEnding]" }
-                                }
-                              },
-                              {
-                                "displayName": "Timesheet Name",
-                                "name": "TimesheetName",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Timesheet/Properties[TimesheetName]" }
-                                }
-                              }
-                            ],
                             "propertySources":
                             [
                               {
@@ -4428,6 +4395,35 @@
                                 }
                               }
                             ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditTimesheet]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTimesheets/Properties[Timesheets]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditTimesheet]/Parameters[Timesheet]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseTimesheets/Properties[Timesheets]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Timesheet/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
                           }
                         ]
                       }
@@ -4831,6 +4827,25 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Go Home",
+                        "name": "GoHome",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "AddEditTimesheet/Methods[GoHome]" }
+                            }
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
@@ -5166,6 +5181,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "AddEditTimesheet/Methods[GoHome]",
+              "name": "GoHome"
             }
           ],
           "properties":
