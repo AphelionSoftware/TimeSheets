@@ -41,6 +41,11 @@
         /// </field>
         RowTemplate_postRender: $parameters,
         /// <field>
+        /// Called after the TimesheetID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetID_postRender: $parameters,
+        /// <field>
         /// Called after the PeriodEnding content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
