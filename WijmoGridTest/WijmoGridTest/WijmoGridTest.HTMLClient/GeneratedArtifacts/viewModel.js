@@ -55,28 +55,6 @@
         $Screen.call(this, dataWorkspace, "ViewSalesOrderDetail", parameters);
     }
 
-    function AddEditSalesOrderDetail(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the AddEditSalesOrderDetail screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="SalesOrderDetail" type="msls.application.SalesOrderDetail">
-        /// Gets or sets the salesOrderDetail for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.AddEditSalesOrderDetail.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "AddEditSalesOrderDetail", parameters);
-    }
-
     msls._addToNamespace("msls.application", {
 
         BrowseSalesOrderHeaders: $defineScreen(BrowseSalesOrderHeaders, [
@@ -97,11 +75,6 @@
                 }
             },
             { name: "SalesOrderID", kind: "local", type: Number }
-        ], [
-        ]),
-
-        AddEditSalesOrderDetail: $defineScreen(AddEditSalesOrderDetail, [
-            { name: "SalesOrderDetail", kind: "local", type: lightSwitchApplication.SalesOrderDetail }
         ], [
         ]),
 
@@ -127,18 +100,6 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("ViewSalesOrderDetail", parameters, options);
-        }),
-
-        showAddEditSalesOrderDetail: $defineShowScreen(function showAddEditSalesOrderDetail(SalesOrderDetail, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the AddEditSalesOrderDetail screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("AddEditSalesOrderDetail", parameters, options);
         })
 
     });
