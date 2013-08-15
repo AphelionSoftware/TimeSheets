@@ -19,8 +19,8 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
-    <AuthenticationType>SharePoint</AuthenticationType>
+    <ApplicationServerType>IIS</ApplicationServerType>
+    <AuthenticationType>None</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
     <AssemblyVersion>1.2.17.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
@@ -185,6 +185,9 @@
     <LightSwitchExtension Include="Microsoft.LightSwitch.Cosmopolitan" />
     <LightSwitchExtension Include="Microsoft.LightSwitch.Extensions">
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Wijmo.LightSwitch">
+      <Server>WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.SERVER</Server>
     </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>

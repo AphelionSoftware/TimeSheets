@@ -232,3 +232,5 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetC
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\TimesheetCapture.Server.csprojResolveAssemblyReference.cache
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\Application.Server.dll
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Debug\Application.Server.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Debug\Wijmo.LightSwitch.Common.dll
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Debug\Wijmo.LightSwitch.Server.dll

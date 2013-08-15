@@ -29,8 +29,7 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup",
-          ":@SharePointEnabled": { }
+          "name": "LightSwitchServiceApplicationGroup"
         },
         {
           "__isEntityType": 1,
@@ -6480,6 +6479,157 @@
           "name": "WebAddress?*",
           "kind": "Enumerable",
           "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress?" }
+        }
+      ]
+    },
+    {
+      "id": "Wijmo.LightSwitch:!module",
+      "name": "Wijmo.LightSwitch",
+      "targetPlatform": "MobileWeb",
+      "globalItems":
+      [
+        {
+          "id": "Wijmo.LightSwitch:CollectionCustomControl",
+          "name": "CollectionCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "childView": { "__id": ":ColumnsLayout" },
+          "properties":
+          [
+            {
+              "id": "Wijmo.LightSwitch:CollectionCustomControl/Properties[C1LicenseProperty]",
+              "name": "C1LicenseProperty",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": ""
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:CollectionCustomControl/Properties[Widget]",
+              "name": "Widget",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "wijgrid"
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:CollectionCustomControl/Properties[WidgetHook]",
+              "name": "WidgetHook",
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": "Wijmo.LightSwitch:ScreenCustomControl",
+          "name": "ScreenCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "ScreenContent",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "properties":
+          [
+            {
+              "id": "Wijmo.LightSwitch:ScreenCustomControl/Properties[C1LicenseProperty]",
+              "name": "C1LicenseProperty",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": ""
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:ScreenCustomControl/Properties[Widget]",
+              "name": "Widget",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "jsongrid"
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:ScreenCustomControl/Properties[WidgetHook]",
+              "name": "WidgetHook",
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": "Wijmo.LightSwitch:ValueCustomControl",
+          "name": "ValueCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "properties":
+          [
+            {
+              "id": "Wijmo.LightSwitch:ValueCustomControl/Properties[C1LicenseProperty]",
+              "name": "C1LicenseProperty",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": ""
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:ValueCustomControl/Properties[Widget]",
+              "name": "Widget",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "htmltext"
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:ValueCustomControl/Properties[WidgetHook]",
+              "name": "WidgetHook",
+              "propertyType": { "__id": ":String" }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Wijmo.LightSwitch:GroupCustomControl",
+          "name": "GroupCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "properties":
+          [
+            {
+              "id": "Wijmo.LightSwitch:GroupCustomControl/Properties[C1LicenseProperty]",
+              "name": "C1LicenseProperty",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": ""
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:GroupCustomControl/Properties[Widget]",
+              "name": "Widget",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "_default"
+              }
+            },
+            {
+              "id": "Wijmo.LightSwitch:GroupCustomControl/Properties[WidgetHook]",
+              "name": "WidgetHook",
+              "propertyType": { "__id": ":String" }
+            }
+          ]
         }
       ]
     },
