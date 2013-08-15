@@ -139,7 +139,7 @@ myapp.ViewSalesOrderDetail.WijmoGrid_render = function (element, contentItem) {
  
                 //Optionally, save changes. This can be done on a Save event as well
  
-                //myapp.activeDataWorkspace.WijmoGridTestData.saveChanges();
+                myapp.activeDataWorkspace.WijmoGridTestData.saveChanges();
  
             });
  
