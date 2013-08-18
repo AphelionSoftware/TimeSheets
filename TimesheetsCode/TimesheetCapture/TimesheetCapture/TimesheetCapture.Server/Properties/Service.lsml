@@ -3967,7 +3967,7 @@
         EntitySet="BillingDetails" />
     </AssociationSet>
     <QueryOperation
-      Name="Query1"
+      Name="TimesheetDetailsQuery"
       ReturnType="TimesheetDetail*">
       <QueryOperation.FilterExpression>
         <QueryFilterExpressionTree />

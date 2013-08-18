@@ -834,14 +834,14 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="TimesheetDetailSourceKey"
+                  Name="TimesheetDetailID"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType=":Int32">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="TimesheetDetail/Properties[TimesheetDetailSourceKey]" />
+                          Member="TimesheetDetail/Properties[TimesheetDetailID]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>

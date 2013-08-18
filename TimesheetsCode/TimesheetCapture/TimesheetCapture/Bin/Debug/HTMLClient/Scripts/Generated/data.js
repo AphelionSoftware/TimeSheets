@@ -1314,9 +1314,9 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Query1", value: function () {
+                name: "TimesheetDetailsQuery", value: function () {
                     return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Query1()",
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailsQuery()",
                         {
                         });
                 }

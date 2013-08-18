@@ -79,7 +79,7 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> Query1()
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsQuery()
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
             query = this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails");

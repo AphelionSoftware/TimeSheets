@@ -119,10 +119,10 @@
         /// </field>
         RowTemplate4_postRender: $parameters,
         /// <field>
-        /// Called after the TimesheetDetailSourceKey content item has been rendered.
+        /// Called after the TimesheetDetailID content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TimesheetDetailSourceKey_postRender: $parameters,
+        TimesheetDetailID_postRender: $parameters,
         /// <field>
         /// Called after the DimDate1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

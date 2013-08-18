@@ -4300,10 +4300,10 @@
               ]
             },
             {
-              "id": "TimesheetsData/Members[Query1]",
-              "name": "Query1",
+              "id": "TimesheetsData/Members[TimesheetDetailsQuery]",
+              "name": "TimesheetDetailsQuery",
               "elementType": { "__id": "TimesheetDetail" },
-              "query": { "__id": "TimesheetsData/Members[Query1]" },
+              "query": { "__id": "TimesheetsData/Members[TimesheetDetailsQuery]" },
               "returnType": { "__id": "TimesheetDetail*" },
               "source":
               {
@@ -4830,13 +4830,13 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Timesheet Detail Source Key",
-                                "name": "TimesheetDetailSourceKey",
+                                "displayName": "Timesheet Detail ID",
+                                "name": "TimesheetDetailID",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "TimesheetDetail/Properties[TimesheetDetailSourceKey]" }
+                                  "member": { "__id": "TimesheetDetail/Properties[TimesheetDetailID]" }
                                 }
                               },
                               {
