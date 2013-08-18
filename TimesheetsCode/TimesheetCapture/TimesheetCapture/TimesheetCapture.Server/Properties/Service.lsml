@@ -1868,12 +1868,11 @@
       </EntityProperty>
       <EntityProperty
         Name="Comments"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="500" />
           <AnsiConstraint />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -4037,7 +4036,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="26957277-565f-49e1-8e1d-807d89cabb08" />
+        Value="86dd77ac-b343-4b07-9e4f-65521a512408" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -5093,7 +5092,7 @@
         <SsdlProperty
           MaxLength="500"
           Name="Comments"
-          Nullable="False"
+          Nullable="True"
           Type="varchar"
           Property="TimesheetDetail/Properties[Comments]" />
         <SsdlProperty

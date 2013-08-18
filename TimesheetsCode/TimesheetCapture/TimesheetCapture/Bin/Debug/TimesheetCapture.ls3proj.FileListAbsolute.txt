@@ -490,8 +490,6 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\msls-1.0.0-vsdoc.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\winjs-1.0.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\winjs-1.0.min.js
-C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\AddEditTimesheet.js
-C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\AddEditTimesheetDetail.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\BrowseTimesheets.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\Timesheet.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\TimesheetDetail.js
@@ -549,3 +547,4 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\README.txt
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\datajs-1.1.0.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\datajs-1.1.0.min.js
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\ViewTimesheet.js

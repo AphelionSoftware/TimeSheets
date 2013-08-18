@@ -6277,7 +6277,6 @@ namespace LightSwitchApplication.Implementation
         /// <param name="timesheetDetailCode">Initial value of the TimesheetDetailCode property.</param>
         /// <param name="timesheetDetailFileName">Initial value of the TimesheetDetailFileName property.</param>
         /// <param name="hours">Initial value of the Hours property.</param>
-        /// <param name="comments">Initial value of the Comments property.</param>
         /// <param name="exclude">Initial value of the Exclude property.</param>
         /// <param name="lastUpdateDate">Initial value of the LastUpdateDate property.</param>
         /// <param name="sys_CreatedOn">Initial value of the sys_CreatedOn property.</param>
@@ -6290,7 +6289,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="timesheetDetailProjectID">Initial value of the TimesheetDetailProjectID property.</param>
         /// <param name="timesheetID">Initial value of the TimesheetID property.</param>
         /// <param name="timesheetTypeOfWorkID">Initial value of the TimesheetTypeOfWorkID property.</param>
-        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID)
+        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID)
         {
             TimesheetDetail timesheetDetail = new TimesheetDetail();
             timesheetDetail.TimesheetDetailID = timesheetDetailID;
@@ -6299,7 +6298,6 @@ namespace LightSwitchApplication.Implementation
             timesheetDetail.TimesheetDetailCode = timesheetDetailCode;
             timesheetDetail.TimesheetDetailFileName = timesheetDetailFileName;
             timesheetDetail.Hours = hours;
-            timesheetDetail.Comments = comments;
             timesheetDetail.Exclude = exclude;
             timesheetDetail.LastUpdateDate = lastUpdateDate;
             timesheetDetail.sys_CreatedOn = sys_CreatedOn;
@@ -6517,7 +6515,7 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Comments
         {

@@ -99,11 +99,10 @@
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
-    <Content Include="UserCode\AddEditTimesheet.js" />
-    <Content Include="UserCode\AddEditTimesheetDetail.js" />
     <Content Include="UserCode\BrowseTimesheets.js" />
     <Content Include="UserCode\Timesheet.js" />
     <Content Include="UserCode\TimesheetDetail.js" />
+    <Content Include="UserCode\ViewTimesheet.js" />
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\TimesheetCapture.Server\TimesheetCapture.Server.csproj">
