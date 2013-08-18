@@ -69,6 +69,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.ViewTimesheet],
         /// <field>
+        /// Called to determine if the SaveChanges method can be executed.
+        /// <br/>canExecute(msls.application.ViewTimesheet screen)
+        /// </field>
+        SaveChanges_canExecute: [lightSwitchApplication.ViewTimesheet],
+        /// <field>
+        /// Called to execute the SaveChanges method.
+        /// <br/>execute(msls.application.ViewTimesheet screen)
+        /// </field>
+        SaveChanges_execute: [lightSwitchApplication.ViewTimesheet],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>

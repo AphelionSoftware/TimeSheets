@@ -4893,6 +4893,33 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Save Changes",
+                        "name": "SaveChanges",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "ViewTimesheet/Methods[SaveChanges]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
+                            "value": false
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-save"
+                          }
+                        ]
+                      }
                     ]
                   }
                 ],
@@ -4944,6 +4971,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "ViewTimesheet/Methods[SaveChanges]",
+              "name": "SaveChanges"
             }
           ],
           "properties":

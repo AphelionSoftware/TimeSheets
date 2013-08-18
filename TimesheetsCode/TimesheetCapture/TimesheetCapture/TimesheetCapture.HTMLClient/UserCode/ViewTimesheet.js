@@ -121,9 +121,16 @@ myapp.ViewTimesheet.TimesheetDetails1_render = function (element, contentItem) {
                 TimesheetDetailsQuery.results.push();
 
                 //Optionally, save changes. This can be done on a Save event as well
-
                 myapp.activeDataWorkspace.TimesheetsData.saveChanges();
+
+                
             });
         }
     };
+};
+
+myapp.ViewTimesheet.SaveChanges_execute = function (screen) {
+
+    
+
 };

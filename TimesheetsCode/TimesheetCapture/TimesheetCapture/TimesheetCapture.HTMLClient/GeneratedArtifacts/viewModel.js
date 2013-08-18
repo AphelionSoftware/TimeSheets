@@ -95,6 +95,7 @@
                 }
             }
         ], [
+            { name: "SaveChanges" }
         ]),
 
         showBrowseTimesheets: $defineShowScreen(function showBrowseTimesheets(TimesheetEndDate, options) {
