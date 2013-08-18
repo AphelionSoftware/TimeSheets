@@ -9,3 +9,8 @@ myapp.AddEditTimesheet.Timesheet_TimesheetDate_render = function (element, conte
     
 };
 
+
+myapp.AddEditTimesheet.GoHome_execute = function (screen) {
+    // Write code here.
+    myapp.navigateHome();
+};

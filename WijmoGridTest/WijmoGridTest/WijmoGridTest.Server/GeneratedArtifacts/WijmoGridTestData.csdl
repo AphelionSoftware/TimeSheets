@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderDetailID" />
+    </Key>
+    <Property Name="SalesOrderDetailID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarrierTrackingNumber" Type="Edm.String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="OrderQty" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ProductID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SpecialOfferID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="UnitPrice" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="UnitPriceDiscount" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="LineTotal" Type="Edm.Decimal" Nullable="false" Precision="38" Scale="6" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="SalesOrderID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="SalesOrderHeader" Relationship="LightSwitchApplication.fk_SalesOrderID" ToRole="SalesOrderHeader" FromRole="SalesOrderDetail" />
+  </EntityType>
+  <EntityType Name="SalesOrderHeader">
+    <Key>
+      <PropertyRef Name="SalesOrderID" />
+    </Key>
+    <Property Name="SalesOrderID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RevisionNumber" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OrderDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="DueDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ShipDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Status" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="OnlineOrderFlag" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SalesOrderNumber" Type="Edm.String" Nullable="false" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="PurchaseOrderNumber" Type="Edm.String" MaxLength="25" ConcurrencyMode="Fixed" />
+    <Property Name="AccountNumber" Type="Edm.String" MaxLength="15" ConcurrencyMode="Fixed" />
+    <Property Name="CustomerID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SalesPersonID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="TerritoryID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="BillToAddressID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ShipToAddressID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ShipMethodID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreditCardID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="CreditCardApprovalCode" Type="Edm.String" MaxLength="15" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CurrencyRateID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="SubTotal" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="TaxAmt" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="Freight" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="TotalDue" Type="Edm.Decimal" Nullable="false" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="Comment" Type="Edm.String" MaxLength="128" ConcurrencyMode="Fixed" />
+    <Property Name="rowguid" Type="Edm.Guid" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="SalesOrderDetails" Relationship="LightSwitchApplication.fk_SalesOrderID" ToRole="SalesOrderDetail" FromRole="SalesOrderHeader" />
+  </EntityType>
+  <Association Name="fk_SalesOrderID">
+    <End Role="SalesOrderHeader" Type="LightSwitchApplication.SalesOrderHeader" Multiplicity="1" />
+    <End Role="SalesOrderDetail" Type="LightSwitchApplication.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrderHeader">
+        <PropertyRef Name="SalesOrderID" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WijmoGridTestData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="SalesOrderDetails" EntityType="LightSwitchApplication.SalesOrderDetail" />
+    <EntitySet Name="SalesOrderHeaders" EntityType="LightSwitchApplication.SalesOrderHeader" />
+    <AssociationSet Name="fk_SalesOrderID" Association="LightSwitchApplication.fk_SalesOrderID">
+      <End Role="SalesOrderHeader" EntitySet="SalesOrderHeaders" />
+      <End Role="SalesOrderDetail" EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -132,10 +132,11 @@ namespace LightSwitchApplication
 
         partial void TimesheetDate_PreprocessQuery(ref IQueryable<DimDate> query)
         {
+            DateTime FilterDate = DateTime.Now.AddDays(7);
             string dow = DayOfWeek;
             query = (from dimDates in query
                      where dimDates.DayOfWeek == dow
-                     where dimDates.c_Date <= System.DateTime.Now
+                     where dimDates.c_Date <= FilterDate
                      orderby dimDates.DateID descending
                      select dimDates);
         }
@@ -163,7 +164,6 @@ namespace LightSwitchApplication
                 if (EndDate != null)
                 {
                     DateTime ED = new DateTime(EndDate.Value.Year, EndDate.Value.Month, EndDate.Value.Day, 23, 59, 59);
-
                     query = (from Timesheets in query
                              where Timesheets.Person.PersonID == TimesheetPersonID
                              where (Timesheets.PeriodEnding >= SD.Date && Timesheets.PeriodEnding <= ED.Date)
