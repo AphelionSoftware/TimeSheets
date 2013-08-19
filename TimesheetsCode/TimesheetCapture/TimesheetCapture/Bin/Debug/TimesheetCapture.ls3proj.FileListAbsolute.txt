@@ -548,3 +548,4 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\datajs-1.1.0.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\datajs-1.1.0.min.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\ViewTimesheet.js
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\SharePointLaunch.aspx

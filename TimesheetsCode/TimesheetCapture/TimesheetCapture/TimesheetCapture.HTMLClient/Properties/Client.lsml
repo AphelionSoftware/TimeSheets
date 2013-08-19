@@ -292,7 +292,7 @@
       <SaveChangesTo
         EntityContainer="TimesheetsData" />
       <DisplayName
-        Value="Timesheets v.1.2.16" />
+        Value="Timesheets v.1.2.17" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -922,7 +922,7 @@
                 <ContentItem
                   Name="Comments"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
