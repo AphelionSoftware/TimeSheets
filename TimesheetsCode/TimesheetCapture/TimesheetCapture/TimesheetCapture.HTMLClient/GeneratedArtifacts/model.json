@@ -4727,7 +4727,7 @@
                         "displayName": "columns",
                         "name": "columns",
                         "kind": "Details",
-                        "view": { "__id": ":RowsLayout" },
+                        "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
                           "member": { "__id": "ViewTimesheet/Properties[Timesheet]" }
@@ -4738,12 +4738,13 @@
                             "displayName": "left",
                             "name": "left",
                             "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
+                            "view": { "__id": ":ColumnsLayout" },
                             "childContentItems":
                             [
                               {
                                 "displayName": "Timesheet ID",
                                 "name": "TimesheetID",
+                                "isHidden": true,
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
@@ -4760,26 +4761,6 @@
                                 {
                                   "member": { "__id": "Timesheet/Properties[PeriodEnding]" }
                                 }
-                              },
-                              {
-                                "displayName": "Timesheet Name",
-                                "name": "TimesheetName",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Timesheet/Properties[TimesheetName]" }
-                                }
-                              },
-                              {
-                                "displayName": "Timesheet Person",
-                                "name": "TimesheetPerson",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Timesheet/Properties[TimesheetPerson]" }
-                                }
                               }
                             ],
                             "propertySources":
@@ -4793,18 +4774,28 @@
                                 "value": 400
                               }
                             ]
+                          },
+                          {
+                            "displayName": "Group",
+                            "name": "Group",
+                            "kind": "Group",
+                            "view": { "__id": ":ColumnsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Timesheet Name",
+                                "name": "TimesheetName",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Timesheet/Properties[TimesheetName]" }
+                                }
+                              }
+                            ]
                           }
                         ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "Timesheet Details",
-                    "name": "TimesheetDetails",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
+                      },
                       {
                         "displayName": "Timesheet Details",
                         "name": "TimesheetDetails1",
@@ -4890,33 +4881,6 @@
                                 }
                               }
                             ]
-                          }
-                        ]
-                      }
-                    ],
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Save Changes",
-                        "name": "SaveChanges",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "ViewTimesheet/Methods[SaveChanges]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
-                            "value": false
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-save"
                           }
                         ]
                       }

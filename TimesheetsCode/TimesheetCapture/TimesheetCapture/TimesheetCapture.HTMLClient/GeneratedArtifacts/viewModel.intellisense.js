@@ -104,20 +104,15 @@
         /// </field>
         PeriodEnding_postRender: $parameters,
         /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: $parameters,
+        /// <field>
         /// Called after the TimesheetName content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TimesheetName_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetPerson content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetPerson_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetails content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetails_postRender: $parameters,
         /// <field>
         /// Called after the TimesheetDetails1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

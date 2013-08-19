@@ -692,6 +692,8 @@
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="TimesheetsData" />
+      <DisplayName
+        Value="Timesheet Details" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -714,7 +716,7 @@
               Name="columns"
               Kind="Details"
               DataType="Timesheet"
-              View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="columns" />
@@ -729,9 +731,11 @@
               </ContentItem.DataSource>
               <ContentItem
                 Name="left"
-                Kind="Group">
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                 <ContentItem
                   Name="TimesheetID"
+                  IsHidden="True"
                   Kind="Value"
                   DataType=":Int32">
                   <ContentItem.DataSource>
@@ -752,32 +756,6 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="Timesheet/Properties[PeriodEnding]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="TimesheetName"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Timesheet/Properties[TimesheetName]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="TimesheetPerson"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Timesheet/Properties[TimesheetPerson]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -805,12 +783,25 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
+              <ContentItem
+                Name="Group"
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                <ContentItem
+                  Name="TimesheetName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[TimesheetName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
             </ContentItem>
-          </ContentItem>
-          <ContentItem
-            Name="TimesheetDetails"
-            Kind="Group"
-            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
             <ContentItem
               Name="TimesheetDetails1"
               Kind="Collection"
@@ -943,43 +934,6 @@
                 </ContentItem>
               </ContentItem>
             </ContentItem>
-            <ContentItem.CommandItems>
-              <ContentItem
-                Name="SaveChanges"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="ViewTimesheet/Methods[SaveChanges]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[HiddenIfDisabled]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="False"
-                          ResultType=":Boolean" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-save"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-            </ContentItem.CommandItems>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
