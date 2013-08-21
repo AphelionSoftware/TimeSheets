@@ -31,6 +31,7 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
+      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <EntityType
@@ -3968,7 +3969,7 @@
         EntitySet="BillingDetails" />
     </AssociationSet>
     <QueryOperation
-      Name="Query1"
+      Name="TimesheetDetailsQuery"
       ReturnType="TimesheetDetail*">
       <QueryOperation.FilterExpression>
         <QueryFilterExpressionTree />
@@ -4037,7 +4038,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="26957277-565f-49e1-8e1d-807d89cabb08" />
+        Value="df9effa2-cad4-42e5-8b6f-c87261190098" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
