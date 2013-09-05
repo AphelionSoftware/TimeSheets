@@ -35,10 +35,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\c1ls-dark-3.0.20132.17.css" />
+    <Content Include="Content\c1ls-dark-3.0.20132.20.css" />
     <Content Include="Content\c1ls-light-3.0.20132.17.css" />
+    <Content Include="Content\c1ls-light-3.0.20132.20.css" />
     <Content Include="Content\dark-theme-1.0.1.css" />
     <Content Include="Content\Images\ajax-loader.gif" />
-    <Content Include="Content\Images\ajax-loader.png" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
     <Content Include="Content\Images\icons-36-black.png" />
@@ -59,12 +60,14 @@
     <Content Include="Content\Images\wijeditor\wijmo-ui-icons_000000_240x112.png" />
     <Content Include="Content\Images\wijeditor\wijmo-ui-icons_ffffff_240x112.png" />
     <Content Include="Content\Images\wijrating\wijmo-ui-rating.png" />
-    <Content Include="Content\jquery.mobile-1.3.1.min.css" />
-    <Content Include="Content\jquery.mobile.structure-1.3.1.css" />
-    <Content Include="Content\jquery.mobile.structure-1.3.1.min.css" />
-    <Content Include="Content\jquery.mobile.theme-1.3.1.css" />
-    <Content Include="Content\jquery.mobile.theme-1.3.1.min.css" />
+    <Content Include="Content\jquery.mobile-1.3.2.css" />
+    <Content Include="Content\jquery.mobile-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.min.css" />
     <Content Include="Content\jquery.wijmo-pro.all.3.20131.7.min.css" />
+    <Content Include="Content\jquery.wijmo-pro.all.3.20132.12.min.css" />
     <Content Include="Content\light-theme-1.0.1.css" />
     <Content Include="Content\msls-1.0.1.css" />
     <Content Include="Content\msls-1.0.1.min.css" />
@@ -78,31 +81,30 @@
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
     <Content Include="Scripts\c1ls-3.0.20132.17.js" />
+    <Content Include="Scripts\c1ls-3.0.20132.20.js" />
     <Content Include="Scripts\datajs-1.1.0.js" />
     <Content Include="Scripts\datajs-1.1.0.min.js" />
-    <Content Include="Scripts\GPL-LICENSE.txt" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
-    <Content Include="Scripts\jquery.mobile-1.3.1.js" />
-    <Content Include="Scripts\jquery.mobile-1.3.1.min.js" />
-    <Content Include="Scripts\jquery.mobile-1.3.1.min.map" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.min.map" />
     <Content Include="Scripts\jquery.wijmo-open.all.3.20131.7.min.js" />
+    <Content Include="Scripts\jquery.wijmo-open.all.3.20132.12.min.js" />
     <Content Include="Scripts\jquery.wijmo-pro.all.3.20131.7.min.js" />
-    <Content Include="Scripts\MIT-LICENSE.txt" />
+    <Content Include="Scripts\jquery.wijmo-pro.all.3.20132.12.min.js" />
     <Content Include="Scripts\msls-1.0.0-vsdoc.js" />
     <Content Include="Scripts\msls-1.0.1-vsdoc.js" />
     <Content Include="Scripts\msls-1.0.1.js" />
     <Content Include="Scripts\msls-1.0.1.min.js" />
-    <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
-    <Content Include="UserCode\BrowseTimesheets.js" />
+    <Content Include="UserCode\EditDetails.js" />
     <Content Include="UserCode\Timesheet.js" />
     <Content Include="UserCode\TimesheetDetail.js" />
-    <Content Include="UserCode\ViewTimesheet.js" />
+    <Content Include="UserCode\ViewTimesheets.js" />
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\TimesheetCapture.Server\TimesheetCapture.Server.csproj">

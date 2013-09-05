@@ -31,7 +31,6 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
-      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <EntityType
@@ -979,12 +978,13 @@
       </EntityProperty>
       <EntityProperty
         Name="WeekEnding"
-        PropertyType=":DateTime?">
+        PropertyType=":Date">
         <EntityProperty.Attributes>
           <DateTimeConstraint
-            Precision="3"
+            Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1762,12 +1762,13 @@
       <EntityProperty
         Name="PeriodEnding"
         IsReadOnly="True"
-        PropertyType=":Date?">
+        PropertyType=":Date">
         <EntityProperty.Attributes>
           <DateTimeConstraint
             Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -4038,7 +4039,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="df9effa2-cad4-42e5-8b6f-c87261190098" />
+        Value="8b4d8ed9-a286-4563-b1f2-599e5a83147a" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -4570,8 +4571,8 @@
           Property="DimDate/Properties[BillingPeriod]" />
         <SsdlProperty
           Name="WeekEnding"
-          Nullable="True"
-          Type="datetime"
+          Nullable="False"
+          Type="date"
           Property="DimDate/Properties[WeekEnding]" />
         <SsdlProperty
           MaxLength="10"
@@ -5012,7 +5013,7 @@
           Property="Timesheet/Properties[sys_ModifiedBy]" />
         <SsdlProperty
           Name="PeriodEnding"
-          Nullable="True"
+          Nullable="False"
           StoreGeneratedPattern="Computed"
           Type="date"
           Property="Timesheet/Properties[PeriodEnding]" />

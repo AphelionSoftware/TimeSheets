@@ -15,7 +15,7 @@ namespace LightSwitchApplication
                                where dimDates.c_Date <= System.DateTime.Now
                                orderby dimDates.DateID descending
                                select dimDates).FirstOrDefault();
-            return setting != null ? setting.WeekEnding.Value : System.DateTime.Now;
+            return setting != null ? setting.WeekEnding : System.DateTime.Now;
         }
 
         private string strDayOfWeek = "";
@@ -141,6 +141,8 @@ namespace LightSwitchApplication
                      select dimDates);
         }
 
+       
+
         partial void TimesheetsUser_PreprocessQuery(DateTime? StartDate, DateTime? EndDate, ref IQueryable<Timesheet> query)
         {
             Int32 TimesheetPersonID = tsPersonID;
@@ -197,6 +199,32 @@ namespace LightSwitchApplication
             entity.PersonItem = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
             entity.LastUpdateDate = System.DateTime.Now;
 
+        }
+
+        partial void Timesheets_Updating(Timesheet entity)
+        {
+            string strTimesheetDate = entity.DimDate.c_Date.ToString("yyyyMMdd");
+
+            entity.sys_CreatedBy = UserName;
+            entity.sys_CreatedOn = System.DateTime.Now;
+            entity.sys_ModifiedBy = UserName;
+            entity.sys_ModifiedOn = System.DateTime.Now;
+            entity.TimesheetPerson = tsPerson.Replace(" ", "");
+            entity.Person = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
+            entity.TimesheetName = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetCode = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetFileName = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.TimesheetSourceKey = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
+            entity.LoadDate = System.DateTime.Now;
+            entity.TimesheetDate = strTimesheetDate;
+            entity.TimesheetFromDateID = (from d in DataWorkspace.TimesheetsData.DimDates
+                                          where d.WeekEnding == entity.DimDate.WeekEnding
+                                          orderby d.DateID descending
+                                          select d.DateID).FirstOrDefault();
+            entity.TimesheetToDateID = (from d in DataWorkspace.TimesheetsData.DimDates
+                                        where d.WeekEnding == entity.DimDate.WeekEnding
+                                        orderby d.DateID ascending
+                                        select d.DateID).FirstOrDefault();
         }
     }
 }
