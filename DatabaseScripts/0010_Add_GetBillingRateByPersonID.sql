@@ -38,3 +38,15 @@ GO
 
 
 
+INSERT INTO DB_Revisions
+(
+	ScriptName,
+	RevisionNumber
+)
+VALUES
+(
+	'0010_Add_GetBillingRateByPersonID', 
+	10
+);
+GO
+

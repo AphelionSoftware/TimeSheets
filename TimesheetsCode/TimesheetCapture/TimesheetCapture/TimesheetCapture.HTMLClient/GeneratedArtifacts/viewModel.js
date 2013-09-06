@@ -86,31 +86,6 @@
         $Screen.call(this, dataWorkspace, "EditTimesheet", parameters);
     }
 
-    function EditDetails(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the EditDetails screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetails for this screen.
-        /// </field>
-        /// <field name="TimesheetID" type="Number">
-        /// Gets or sets the timesheetID for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.EditDetails.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "EditDetails", parameters);
-    }
-
     function AddEditTimesheetDetail(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the AddEditTimesheetDetail screen.
@@ -137,6 +112,31 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "AddEditTimesheetDetail", parameters);
+    }
+
+    function TimesheetDetails(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the TimesheetDetails screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="TimesheetDetailsQuery" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetailsQuery for this screen.
+        /// </field>
+        /// <field name="TimesheetID" type="Number">
+        /// Gets or sets the timesheetID for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.TimesheetDetails.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "TimesheetDetails", parameters);
     }
 
     msls._addToNamespace("msls.application", {
@@ -175,19 +175,6 @@
         ], [
         ]),
 
-        EditDetails: $defineScreen(EditDetails, [
-            {
-                name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
-                createQuery: function (TimesheetID) {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDetails.filter("" + ((TimesheetID === undefined || TimesheetID === null) ? "false" : "(Timesheet/TimesheetID eq " + $toODataString(TimesheetID, "Int32?") + ")") + "").expand("DimDate").expand("Project").expand("TypeOfWork");
-                }
-            },
-            { name: "TimesheetID", kind: "local", type: Number }
-        ], [
-            { name: "AddNew" },
-            { name: "DeleteSelected" }
-        ]),
-
         AddEditTimesheetDetail: $defineScreen(AddEditTimesheetDetail, [
             { name: "TimesheetDetail", kind: "local", type: lightSwitchApplication.TimesheetDetail },
             {
@@ -198,6 +185,18 @@
             },
             { name: "PeriodEndDate", kind: "local", type: Date }
         ], [
+        ]),
+
+        TimesheetDetails: $defineScreen(TimesheetDetails, [
+            {
+                name: "TimesheetDetailsQuery", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
+                createQuery: function (TimesheetID) {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailsQuery().filter("" + ((TimesheetID === undefined || TimesheetID === null) ? "false" : "(Timesheet/TimesheetID eq " + $toODataString(TimesheetID, "Int32?") + ")") + "").expand("DimDate").expand("Project").expand("TypeOfWork");
+                }
+            },
+            { name: "TimesheetID", kind: "local", type: Number }
+        ], [
+            { name: "DeleteSelected" }
         ]),
 
         showManageTimesheets: $defineShowScreen(function showManageTimesheets(options) {
@@ -236,18 +235,6 @@
             return lightSwitchApplication.showScreen("EditTimesheet", parameters, options);
         }),
 
-        showEditDetails: $defineShowScreen(function showEditDetails(TimesheetID, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the EditDetails screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("EditDetails", parameters, options);
-        }),
-
         showAddEditTimesheetDetail: $defineShowScreen(function showAddEditTimesheetDetail(TimesheetDetail, PeriodEndDate, options) {
             /// <summary>
             /// Asynchronously navigates forward to the AddEditTimesheetDetail screen.
@@ -258,6 +245,18 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 2);
             return lightSwitchApplication.showScreen("AddEditTimesheetDetail", parameters, options);
+        }),
+
+        showTimesheetDetails: $defineShowScreen(function showTimesheetDetails(TimesheetID, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the TimesheetDetails screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("TimesheetDetails", parameters, options);
         })
 
     });

@@ -9,7 +9,7 @@ var grid;
 
 // http://bit.ly/c1ls-grid
 //
-myapp.EditTimesheetDetailsQuery.WijmoGrid_render = function (element, contentItem) {
+myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
 
     var table = $("<table/>");
     table.appendTo($(element));
@@ -46,26 +46,26 @@ myapp.EditTimesheetDetailsQuery.WijmoGrid_render = function (element, contentIte
     c1ls.renderControl(contentItem);
 };
 
-myapp.EditTimesheetDetailsQuery.AddNew_canExecute = function (screen) {
+myapp.TimesheetDetails.AddNew_canExecute = function (screen) {
     return screen.TimesheetDetailsQuery.isLoaded;
 };
 
-myapp.EditTimesheetDetailsQuery.AddNew_execute = function (screen) {
+myapp.TimesheetDetails.AddNew_execute = function (screen) {
     screen.TimesheetDetailsQuery.addNew();
     grid.EntityChanged(msls.EntityState.added);
 };
 
-myapp.EditTimesheetDetailsQuery.DeleteSelected_canExecute = function (screen) {
+myapp.TimesheetDetails.DeleteSelected_canExecute = function (screen) {
     $(".msls-footer").removeClass("slideup");
     return screen.TimesheetDetailsQuery.selectedItem != null;
 };
 
-myapp.EditTimesheetDetailsQuery.DeleteSelected_execute = function (screen) {
+myapp.TimesheetDetails.DeleteSelected_execute = function (screen) {
     screen.TimesheetDetailsQuery.deleteSelected();
     grid.EntityChanged(msls.EntityState.deleted);
 };
 
-myapp.EditTimesheetDetailsQuery.BillingStatu_render = function (element, contentItem) {
+myapp.TimesheetDetails.BillingStatu_render = function (element, contentItem) {
     // Write code here.
 };
 

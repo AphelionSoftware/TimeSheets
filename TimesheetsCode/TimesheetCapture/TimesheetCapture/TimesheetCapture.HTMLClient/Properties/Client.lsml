@@ -40,16 +40,6 @@
           ParameterType="Timesheet" />
       </ApplicationMethod>
       <ApplicationMethod
-        Name="showEditDetails">
-        <ApplicationMethod.Attributes>
-          <ShowScreenMethod
-            TargetScreen="EditDetails" />
-        </ApplicationMethod.Attributes>
-        <ApplicationMethodParameter
-          Name="TimesheetID"
-          ParameterType=":Int32" />
-      </ApplicationMethod>
-      <ApplicationMethod
         Name="showAddEditTimesheetDetail">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
@@ -61,6 +51,16 @@
         <ApplicationMethodParameter
           Name="PeriodEndDate"
           ParameterType=":Date" />
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="showTimesheetDetails">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="TimesheetDetails" />
+        </ApplicationMethod.Attributes>
+        <ApplicationMethodParameter
+          Name="TimesheetID"
+          ParameterType=":Int32" />
       </ApplicationMethod>
     </Application.Methods>
   </Application>
@@ -393,19 +393,6 @@
                     </ContentItem.DataSource>
                   </ContentItem>
                 </ContentItem>
-                <ContentItem
-                  Name="PeriodEnding"
-                  Kind="Value"
-                  DataType=":Date">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Timesheet/Properties[PeriodEnding]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
               </ContentItem>
             </ContentItem>
             <ContentItem.CommandItems>
@@ -530,11 +517,21 @@
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showEditDetails]">
+                          Target="!module/Methods[showTimesheetDetails]">
                           <ArgumentExpression
                             Parameter="TimesheetID">
                             <ChainExpression>
@@ -547,16 +544,6 @@
                             </ChainExpression>
                           </ArgumentExpression>
                         </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-search"
-                          ResultType=":String" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -1120,386 +1107,6 @@
     </Screen.Properties>
   </Screen>
   <Screen
-    Name="EditDetails">
-    <Screen.Attributes>
-      <SaveChangesTo
-        EntityContainer="TimesheetsData" />
-    </Screen.Attributes>
-    <Screen.RootContentItem>
-      <ContentItem
-        Name="RootContentItem"
-        Kind="Screen"
-        View="Microsoft.LightSwitch.MobileWeb:Screen">
-        <ContentItem
-          Name="Tabs"
-          Kind="Group"
-          View="Microsoft.LightSwitch.MobileWeb:TabPages">
-          <ContentItem
-            Name="TimesheetDetail List"
-            Kind="Group">
-            <ContentItem
-              Name="WijmoGrid"
-              Kind="Collection"
-              DataType="CollectionView$TimesheetDetail"
-              View="Wijmo.LightSwitch:CollectionCustomControl">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="EditDetails/Properties[TimesheetDetails]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-              <ContentItem
-                Name="RowTemplate"
-                Kind="Details"
-                DataType="TimesheetDetail">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression />
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-                <ContentItem
-                  Name="DimDate"
-                  Kind="Details"
-                  DataType="DimDate">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[DimDate]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate3"
-                    Kind="Details"
-                    DataType="DimDate">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Project"
-                  Kind="Details"
-                  DataType="Project">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[Project]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate5"
-                    Kind="Details"
-                    DataType="Project">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="TypeOfWork"
-                  Kind="Details"
-                  DataType="TypeOfWork">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[TypeOfWork]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate7"
-                    Kind="Details"
-                    DataType="TypeOfWork">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Hours"
-                  Kind="Value"
-                  DataType=":Decimal">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[Hours]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Comments"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[Comments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-              </ContentItem>
-            </ContentItem>
-            <ContentItem.CommandItems>
-              <ContentItem
-                Name="AddNew"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Add" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditTimesheetDetail]">
-                          <CallExpression.Attributes>
-                            <CreateNewEntity
-                              EntityType="TimesheetDetail"
-                              TargetParameter="!module/Methods[showAddEditTimesheetDetail]/Parameters[TimesheetDetail]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[HiddenIfDisabled]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="False"
-                          ResultType=":Boolean" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-add"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="DeleteSelected"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Delete" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="EditDetails/Methods[DeleteSelected]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[HiddenIfDisabled]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="False"
-                          ResultType=":Boolean" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-trash"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="EditTimesheetDetail"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Edit" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditTimesheetDetail]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="EditDetails/Properties[TimesheetDetails]" />
-                          </CallExpression.Attributes>
-                          <ArgumentExpression
-                            Parameter="TimesheetDetail">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="EditDetails/Properties[TimesheetDetails]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-edit"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-            </ContentItem.CommandItems>
-          </ContentItem>
-        </ContentItem>
-        <ContentItem
-          Name="Popups"
-          Kind="Group"
-          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
-        <ContentItem.PropertySources>
-          <ControlPropertySource
-            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
-            <ScreenExpressionTree>
-              <ChainExpression>
-                <ConstantExpression
-                  Value="Edit"
-                  ResultType=":String" />
-              </ChainExpression>
-            </ScreenExpressionTree>
-          </ControlPropertySource>
-        </ContentItem.PropertySources>
-      </ContentItem>
-    </Screen.RootContentItem>
-    <Screen.Methods>
-      <ScreenMethod
-        Name="showTab">
-        <ScreenMethod.Attributes>
-          <DisplayMethodByDefault
-            Display="True" />
-          <Generated />
-        </ScreenMethod.Attributes>
-        <ScreenMethodParameter
-          Name="tabName"
-          ParameterType=":String" />
-      </ScreenMethod>
-      <ScreenMethod
-        Name="showDialog">
-        <ScreenMethod.Attributes>
-          <DisplayMethodByDefault
-            Display="True" />
-          <Generated />
-        </ScreenMethod.Attributes>
-        <ScreenMethodParameter
-          Name="dialogName"
-          ParameterType=":String" />
-      </ScreenMethod>
-      <ScreenMethod
-        Name="AddNew" />
-      <ScreenMethod
-        Name="DeleteSelected" />
-    </Screen.Methods>
-    <Screen.Properties>
-      <ScreenCollectionProperty
-        Name="TimesheetDetails"
-        PageSize="45"
-        PropertyType="CollectionView$TimesheetDetail">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="TimesheetDetailsQuery"
-            ReturnType="TimesheetDetail*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree>
-                <BinaryExpression
-                  NodeType="Equal">
-                  <BinaryExpression.Left>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="TimesheetDetail/Properties[Timesheet]" />
-                      <MemberExpression
-                        Member="TimesheetID" />
-                    </ChainExpression>
-                  </BinaryExpression.Left>
-                  <BinaryExpression.Right>
-                    <ParameterExpression
-                      Parameter="TimesheetID" />
-                  </BinaryExpression.Right>
-                </BinaryExpression>
-              </QueryFilterExpressionTree>
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="TimesheetsData/Members[TimesheetDetails]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-            <ScreenQueryDefinition.Parameters>
-              <QueryParameter
-                Name="TimesheetID"
-                ParameterType=":Int32?" />
-            </ScreenQueryDefinition.Parameters>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="EditDetails/Properties[TimesheetDetails]/Query">
-              <ArgumentExpression
-                Parameter="TimesheetID">
-                <ChainExpression>
-                  <MemberExpression
-                    Member="EditDetails/Properties[TimesheetID]" />
-                </ChainExpression>
-              </ArgumentExpression>
-            </CallExpression>
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenProperty
-        Name="TimesheetID"
-        PropertyType=":Int32">
-        <ScreenProperty.Attributes>
-          <Required />
-          <IsParameter />
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
-    </Screen.Properties>
-  </Screen>
-  <Screen
     Name="AddEditTimesheetDetail">
     <Screen.Attributes>
       <SaveChangesTo
@@ -1542,6 +1149,37 @@
               <ContentItem
                 Name="left"
                 Kind="Group">
+                <ContentItem
+                  Name="DimDate"
+                  Kind="Details"
+                  DataType="DimDate">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="AddEditTimesheetDetail/Properties[TimesheetDetailDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[DimDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="DimDate1"
+                    Kind="Details"
+                    DataType="DimDate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
                 <ContentItem
                   Name="Project"
                   Kind="Details"
@@ -1613,29 +1251,6 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="DimDate"
-                  Kind="Details"
-                  DataType="DimDate">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[DimDate]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="DimDate1"
-                    Kind="Details"
-                    DataType="DimDate">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -1769,6 +1384,302 @@
       <ScreenProperty
         Name="PeriodEndDate"
         PropertyType=":Date">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="TimesheetDetails">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="TimesheetsData" />
+      <DisplayName
+        Value="Timesheet Details" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="TimesheetDetail List"
+            Kind="Group">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Timesheet Details" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="WijmoGrid"
+              Kind="Collection"
+              DataType="CollectionView$TimesheetDetail"
+              View="Wijmo.LightSwitch:CollectionCustomControl">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="TimesheetDetails/Properties[TimesheetDetailsQuery]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="RowTemplate"
+                Kind="Details"
+                DataType="TimesheetDetail">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="DimDate"
+                  Kind="Details"
+                  DataType="DimDate">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[DimDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate3"
+                    Kind="Details"
+                    DataType="DimDate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Project"
+                  Kind="Details"
+                  DataType="Project">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[Project]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate5"
+                    Kind="Details"
+                    DataType="Project">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="TypeOfWork"
+                  Kind="Details"
+                  DataType="TypeOfWork">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[TypeOfWork]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate7"
+                    Kind="Details"
+                    DataType="TypeOfWork">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Hours"
+                  Kind="Value"
+                  DataType=":Decimal">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[Hours]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Comments"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[Comments]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="DeleteSelected"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Delete" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="TimesheetDetails/Methods[DeleteSelected]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[HiddenIfDisabled]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="False"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-trash"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+        <ContentItem.PropertySources>
+          <ControlPropertySource
+            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
+            <ScreenExpressionTree>
+              <ChainExpression>
+                <ConstantExpression
+                  Value="Edit"
+                  ResultType=":String" />
+              </ChainExpression>
+            </ScreenExpressionTree>
+          </ControlPropertySource>
+        </ContentItem.PropertySources>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="DeleteSelected" />
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="TimesheetDetailsQuery"
+        PageSize="45"
+        PropertyType="CollectionView$TimesheetDetail">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="TimesheetDetailsQueryQuery"
+            ReturnType="TimesheetDetail*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="TimesheetDetail/Properties[Timesheet]" />
+                      <MemberExpression
+                        Member="TimesheetID" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="TimesheetID" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="TimesheetsData/Members[TimesheetDetailsQuery]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="TimesheetID"
+                ParameterType=":Int32?" />
+            </ScreenQueryDefinition.Parameters>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="TimesheetDetails/Properties[TimesheetDetailsQuery]/Query">
+              <ArgumentExpression
+                Parameter="TimesheetID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="TimesheetDetails/Properties[TimesheetID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="TimesheetID"
+        PropertyType=":Int32">
         <ScreenProperty.Attributes>
           <Required />
           <IsParameter />

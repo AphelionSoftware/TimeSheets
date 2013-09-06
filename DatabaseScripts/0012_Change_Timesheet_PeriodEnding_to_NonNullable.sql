@@ -272,3 +272,17 @@ GO
 
 ALTER TABLE [dbo].[TimesheetDetail] CHECK CONSTRAINT [FK_TimesheetDetail_Timesheet]
 GO
+
+
+
+INSERT INTO DB_Revisions
+(
+	ScriptName,
+	RevisionNumber
+)
+VALUES
+(
+	'0012_Change_Timesheet_PeriodEnding_to_NonNullable', 
+	12
+);
+GO

@@ -63,7 +63,7 @@ namespace LightSwitchApplication.Implementation
             query = global::System.Linq.Queryable.OrderByDescending(
                 global::System.Linq.Queryable.Where(
                     this.GetQuery<global::LightSwitchApplication.Implementation.DimDate>("DimDates"),
-                    (d) => (d.WeekEnding.HasValue && (PeriodEndDate.HasValue && (d.WeekEnding == PeriodEndDate)))),
+                    (d) => (PeriodEndDate.HasValue && (d.WeekEnding == PeriodEndDate))),
                 (d) => d.c_Date);
             return query;
         }
