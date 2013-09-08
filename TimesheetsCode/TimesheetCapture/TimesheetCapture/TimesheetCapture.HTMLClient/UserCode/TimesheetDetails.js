@@ -46,3 +46,14 @@ myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
     c1ls.renderControl(contentItem);
 };
 
+
+myapp.TimesheetDetails.Refresh_execute = function (screen) {
+    // Write code here.
+    screen.TimesheetDetailsQuery.load();
+};
+
+
+myapp.TimesheetDetails.created = function (screen) {
+    // Write code here.
+
+};

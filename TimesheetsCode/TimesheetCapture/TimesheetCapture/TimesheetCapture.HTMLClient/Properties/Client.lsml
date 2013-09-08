@@ -1332,6 +1332,31 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
+              <ContentItem
+                Name="Refresh"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="TimesheetDetails/Methods[Refresh]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-refresh"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
             </ContentItem.CommandItems>
           </ContentItem>
         </ContentItem>
@@ -1366,6 +1391,8 @@
       </ScreenMethod>
       <ScreenMethod
         Name="Delete" />
+      <ScreenMethod
+        Name="Refresh" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -1514,6 +1541,14 @@
                 Name="TimesheetDetailsQuery_selectedItem_Project"
                 Kind="Details"
                 DataType="Project">
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="EditTimesheetDetails/Properties[ProjectSorted]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -1694,21 +1729,6 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
-              <ContentItem
-                Name="SaveChanges"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="EditTimesheetDetails/Methods[SaveChanges]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
             </ContentItem.CommandItems>
           </ContentItem>
         </ContentItem>
@@ -1759,6 +1779,8 @@
         Name="DeleteSelected" />
       <ScreenMethod
         Name="SaveChanges" />
+      <ScreenMethod
+        Name="Refresh" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -1880,6 +1902,32 @@
           <IsParameter />
         </ScreenProperty.Attributes>
       </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="ProjectSorted"
+        PageSize="45"
+        PropertyType="CollectionView$Project">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="ProjectSortedQuery"
+            ReturnType="Project*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="TimesheetsData/Members[ProjectSorted]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="EditTimesheetDetails/Properties[ProjectSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
 </ModelFragment>

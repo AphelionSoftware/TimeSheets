@@ -136,6 +136,9 @@
         /// <field name="WeekEnding" type="Date">
         /// Gets or sets the weekEnding for this screen.
         /// </field>
+        /// <field name="ProjectSorted" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectSorted for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.EditTimesheetDetails.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -196,7 +199,8 @@
                 }
             }
         ], [
-            { name: "Delete" }
+            { name: "Delete" },
+            { name: "Refresh" }
         ]),
 
         EditTimesheetDetails: $defineScreen(EditTimesheetDetails, [
@@ -213,11 +217,18 @@
                     return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEndDate).filter("" + ((PeriodEndDate === undefined || PeriodEndDate === null) ? "false" : "(WeekEnding eq " + $toODataString(PeriodEndDate, "DateTime?") + ")") + "");
                 }
             },
-            { name: "WeekEnding", kind: "local", type: Date }
+            { name: "WeekEnding", kind: "local", type: Date },
+            {
+                name: "ProjectSorted", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.ProjectSorted();
+                }
+            }
         ], [
             { name: "AddNew" },
             { name: "DeleteSelected" },
-            { name: "SaveChanges" }
+            { name: "SaveChanges" },
+            { name: "Refresh" }
         ]),
 
         showManageTimesheets: $defineShowScreen(function showManageTimesheets(options) {

@@ -5378,6 +5378,26 @@
                             }
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Refresh",
+                        "name": "Refresh",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "TimesheetDetails/Methods[Refresh]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-refresh"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -5420,6 +5440,10 @@
             {
               "id": "TimesheetDetails/Methods[Delete]",
               "name": "Delete"
+            },
+            {
+              "id": "TimesheetDetails/Methods[Refresh]",
+              "name": "Refresh"
             }
           ],
           "properties":
@@ -5607,6 +5631,10 @@
                             "name": "TimesheetDetailsQuery_selectedItem_Project",
                             "kind": "Details",
                             "view": { "__id": ":DetailsModalPicker" },
+                            "choicesSource":
+                            {
+                              "member": { "__id": "EditTimesheetDetails/Properties[ProjectSorted]" }
+                            },
                             "dataSource":
                             {
                               "links":
@@ -5774,22 +5802,6 @@
                             "value": "msls-trash"
                           }
                         ]
-                      },
-                      {
-                        "displayName": "Save Changes",
-                        "name": "SaveChanges",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "EditTimesheetDetails/Methods[SaveChanges]" }
-                            }
-                          }
-                        ]
                       }
                     ]
                   }
@@ -5847,6 +5859,10 @@
             {
               "id": "EditTimesheetDetails/Methods[SaveChanges]",
               "name": "SaveChanges"
+            },
+            {
+              "id": "EditTimesheetDetails/Methods[Refresh]",
+              "name": "Refresh"
             }
           ],
           "properties":
@@ -5985,6 +6001,28 @@
               "propertyType": { "__id": ":Date" },
               ":@Required": { },
               ":@IsParameter": { }
+            },
+            {
+              "id": "EditTimesheetDetails/Properties[ProjectSorted]",
+              "name": "ProjectSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "EditTimesheetDetails/Properties[ProjectSorted]/Query",
+                "name": "ProjectSortedQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[ProjectSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "EditTimesheetDetails/Properties[ProjectSorted]/Query" }
+              }
             }
           ]
         },

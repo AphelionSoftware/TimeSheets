@@ -150,6 +150,16 @@
         /// </field>
         Delete_execute: [lightSwitchApplication.TimesheetDetails],
         /// <field>
+        /// Called to determine if the Refresh method can be executed.
+        /// <br/>canExecute(msls.application.TimesheetDetails screen)
+        /// </field>
+        Refresh_canExecute: [lightSwitchApplication.TimesheetDetails],
+        /// <field>
+        /// Called to execute the Refresh method.
+        /// <br/>execute(msls.application.TimesheetDetails screen)
+        /// </field>
+        Refresh_execute: [lightSwitchApplication.TimesheetDetails],
+        /// <field>
         /// Called after the TimesheetDetail List content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -267,6 +277,16 @@
         /// <br/>execute(msls.application.EditTimesheetDetails screen)
         /// </field>
         SaveChanges_execute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to determine if the Refresh method can be executed.
+        /// <br/>canExecute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        Refresh_canExecute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to execute the Refresh method.
+        /// <br/>execute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        Refresh_execute: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called after the TimesheetDetail List content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
