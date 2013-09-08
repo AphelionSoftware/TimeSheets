@@ -2435,6 +2435,21 @@
               "fromEnd": { "__id": "FK_TimesheetDetail_TypeOfWork/Ends[TimesheetDetail]" },
               "propertyType": { "__id": "TypeOfWork" },
               "toEnd": { "__id": "FK_TimesheetDetail_TypeOfWork/Ends[TypeOfWork]" }
+            },
+            {
+              "id": "TimesheetDetail/Properties[VerCol]",
+              "name": "VerCol",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@Hidden": { },
+              ":@UseForConcurrency": { },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "isFixedLength": true,
+                "value": 8
+              },
+              ":@NotSearchable": { }
             }
           ]
         },

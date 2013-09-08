@@ -6288,13 +6288,14 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_CreatedBy">Initial value of the sys_CreatedBy property.</param>
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
+        /// <param name="verCol">Initial value of the VerCol property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDetailDateID">Initial value of the TimesheetDetailDateID property.</param>
         /// <param name="timesheetDetailPersonID">Initial value of the TimesheetDetailPersonID property.</param>
         /// <param name="timesheetDetailProjectID">Initial value of the TimesheetDetailProjectID property.</param>
         /// <param name="timesheetID">Initial value of the TimesheetID property.</param>
         /// <param name="timesheetTypeOfWorkID">Initial value of the TimesheetTypeOfWorkID property.</param>
-        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID)
+        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Byte[] verCol, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID)
         {
             TimesheetDetail timesheetDetail = new TimesheetDetail();
             timesheetDetail.TimesheetDetailID = timesheetDetailID;
@@ -6310,6 +6311,7 @@ namespace LightSwitchApplication.Implementation
             timesheetDetail.sys_CreatedBy = sys_CreatedBy;
             timesheetDetail.sys_ModifiedOn = sys_ModifiedOn;
             timesheetDetail.sys_ModifiedBy = sys_ModifiedBy;
+            timesheetDetail.VerCol = verCol;
             timesheetDetail.Active = active;
             timesheetDetail.TimesheetDetailDateID = timesheetDetailDateID;
             timesheetDetail.TimesheetDetailPersonID = timesheetDetailPersonID;
@@ -6733,6 +6735,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.String _sys_ModifiedBy;
         partial void Onsys_ModifiedByChanging(global::System.String value);
         partial void Onsys_ModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] VerCol
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_VerCol);
+            }
+            set
+            {
+                OnVerColChanging(value);
+                ReportPropertyChanging("VerCol");
+                _VerCol = value;
+                ReportPropertyChanged("VerCol");
+                OnVerColChanged();
+            }
+        }
+        private global::System.Byte[] _VerCol;
+        partial void OnVerColChanging(global::System.Byte[] value);
+        partial void OnVerColChanged();
     
         /// <summary>
         /// No Metadata Documentation available.

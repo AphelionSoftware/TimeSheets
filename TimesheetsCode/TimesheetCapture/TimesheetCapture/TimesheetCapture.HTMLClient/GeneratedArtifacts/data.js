@@ -798,6 +798,9 @@ window.myapp = msls.application;
         /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
         /// Gets or sets the typeOfWork for this timesheetDetail.
         /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheetDetail.
+        /// </field>
         /// <field name="details" type="msls.application.TimesheetDetail.Details">
         /// Gets the details for this timesheetDetail.
         /// </field>
@@ -1162,7 +1165,8 @@ window.myapp = msls.application;
             { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "Project", kind: "reference", type: Project },
             { name: "Timesheet", kind: "reference", type: Timesheet },
-            { name: "TypeOfWork", kind: "reference", type: TypeOfWork }
+            { name: "TypeOfWork", kind: "reference", type: TypeOfWork },
+            { name: "VerCol", type: Array }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [

@@ -254,6 +254,7 @@
           <ScalarProperty Name="TimesheetDetailProjectID" ColumnName="TimesheetDetailProjectID" />
           <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
           <ScalarProperty Name="TimesheetTypeOfWorkID" ColumnName="TimesheetTypeOfWorkID" />
+          <ScalarProperty Name="VerCol" ColumnName="VerCol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -359,6 +359,7 @@
     <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="VerCol" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="Billable" Type="int" />
     <Property Name="TimesheetDetailDateID" Type="int" Nullable="false" />

@@ -266,29 +266,30 @@
       <PropertyRef Name="TimesheetDetailID" />
     </Key>
     <Property Name="TimesheetDetailID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TimesheetDetailSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
-    <Property Name="Hours" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
-    <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="ClientComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="AMComments" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="Exclude" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="LastUpdateDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
-    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
-    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="Billable" Type="Edm.Int32" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDetailProjectID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetTypeOfWorkID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetDetailSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimesheetDetailName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetDetailCode" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetDetailFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="LoadDateID" Type="Edm.Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Hours" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Comments" Type="Edm.String" Nullable="false" MaxLength="500" Unicode="false" />
+    <Property Name="ClientComments" Type="Edm.String" MaxLength="Max" Unicode="false" />
+    <Property Name="AMComments" Type="Edm.String" MaxLength="Max" Unicode="false" />
+    <Property Name="Exclude" Type="Edm.Int32" Nullable="false" />
+    <Property Name="LastUpdateDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="VerCol" Type="Edm.Binary" Nullable="false" MaxLength="8" FixedLength="true" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Billable" Type="Edm.Int32" />
+    <Property Name="TimesheetDetailDateID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetDetailPersonID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetDetailProjectID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetTypeOfWorkID" Type="Edm.Int32" Nullable="false" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="ActiveType" FromRole="TimesheetDetail" />
     <NavigationProperty Name="BillingStatu" Relationship="LightSwitchApplication.FK_TimesheetDetail_BillingStatus" ToRole="BillingStatus" FromRole="TimesheetDetail" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="DimDate" FromRole="TimesheetDetail" />

@@ -78,6 +78,7 @@ myapp.EditTimesheetDetails.DeleteSelected_execute = function (screen) {
 
 
 myapp.EditTimesheetDetails.created = function (screen) {
+
     /*
     var LSTable = screen.TimesheetDetailsQuery;
     // Can only safely do this if the LSTable is not modified.
@@ -88,7 +89,7 @@ myapp.EditTimesheetDetails.created = function (screen) {
             title: "Cannot refresh"
         });
     }
-    */
+   
 
     // Get the current LSTable ID
 
@@ -138,9 +139,5 @@ myapp.EditTimesheetDetails.created = function (screen) {
     });
 
 };
-
-
-myapp.EditTimesheetDetails.Refresh_execute = function (screen) {
-    // Write code here.
-    screen.TimesheetDetailsQuery.load();
+*/
 };
