@@ -86,6 +86,15 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> GetTimesheet(global::System.Nullable<int> TimesheetID)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
+                (t) => (TimesheetID.HasValue && (t.TimesheetID == TimesheetID)));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods

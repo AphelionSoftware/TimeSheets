@@ -1320,6 +1320,15 @@ window.myapp = msls.application;
                         {
                         });
                 }
+            },
+            {
+                name: "GetTimesheet", value: function (TimesheetID) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/GetTimesheet()",
+                        {
+                            TimesheetID: $toODataString(TimesheetID, "Int32?")
+                        });
+                }
             }
         ]),
 

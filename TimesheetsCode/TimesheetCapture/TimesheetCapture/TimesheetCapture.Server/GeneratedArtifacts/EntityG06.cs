@@ -823,7 +823,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTime> WeekEnding
+        public global::System.DateTime WeekEnding
         {
             get
             {
@@ -1265,11 +1265,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>> WeekEnding
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> WeekEnding
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
@@ -1342,7 +1342,7 @@ namespace LightSwitchApplication
                 new string WeekEndingBillingPeriod { get; set; }
                 new string BillingPeriodText { get; set; }
                 new global::System.Nullable<int> BillingPeriod { get; set; }
-                new global::System.Nullable<global::System.DateTime> WeekEnding { get; set; }
+                new global::System.DateTime WeekEnding { get; set; }
                 new string WeekEndingText { get; set; }
                 new global::System.Collections.IEnumerable Timesheets { get; }
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
@@ -2500,8 +2500,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
+                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
                         "WeekEnding",
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Stub,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_ComputeIsReadOnly,
@@ -2509,7 +2509,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_GetImplementationValue,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_SetImplementationValue,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_OnValueChanged);
-                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
                 {
                     c(d, ref d._WeekEnding, sf);
                 }
@@ -2523,13 +2523,13 @@ namespace LightSwitchApplication
                 {
                     e.WeekEnding_Validate(r);
                 }
-                private static global::System.Nullable<global::System.DateTime> _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.DateTime _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
                 {
                     return d.ImplementationEntity.WeekEnding;
                 }
-                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.TruncateDate(v);
                 }
                 private static void _WeekEnding_OnValueChanged(global::LightSwitchApplication.DimDate e)
                 {
@@ -2729,7 +2729,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _BillingPeriod;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _WeekEnding;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _WeekEnding;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingText;

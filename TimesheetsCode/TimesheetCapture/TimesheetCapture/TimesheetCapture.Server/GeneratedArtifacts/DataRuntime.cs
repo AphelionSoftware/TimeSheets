@@ -615,6 +615,17 @@ namespace LightSwitchApplication
             return this.Details.Methods.TimesheetDetailsQuery.CreateInvocation().Execute();
         }
         
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="TimesheetID">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Timesheet> GetTimesheet(global::System.Nullable<int> TimesheetID)
+        {
+            return this.Details.Methods.GetTimesheet.CreateInvocation(TimesheetID).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -892,6 +903,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TimesheetDetailsQuery) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> GetTimesheet
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.GetTimesheet) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>;
                     }
                 }
                 
@@ -1302,6 +1321,16 @@ namespace LightSwitchApplication
                     c(d, ref d._TimesheetDetailsQuery, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    GetTimesheet = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                        "GetTimesheet",
+                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._GetTimesheet_Stub);
+                private static void _GetTimesheet_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._GetTimesheet, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1554,6 +1583,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetailsQuery;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _GetTimesheet;
             
         }
     

@@ -238,7 +238,7 @@
     <Property Name="WeekEndingBillingPeriod" Type="varchar" MaxLength="20" />
     <Property Name="BillingPeriodText" Type="varchar" MaxLength="9" />
     <Property Name="BillingPeriod" Type="int" />
-    <Property Name="WeekEnding" Type="datetime" />
+    <Property Name="WeekEnding" Type="date" Nullable="false" />
     <Property Name="WeekEndingText" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="OverallStatu">
@@ -332,7 +332,7 @@
     <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="PeriodEnding" Type="date" StoreGeneratedPattern="Computed" />
+    <Property Name="PeriodEnding" Type="date" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="TimesheetDateID" Type="int" Nullable="false" />
     <Property Name="OverallStatusID" Type="int" Nullable="false" />

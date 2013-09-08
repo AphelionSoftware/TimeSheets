@@ -3992,6 +3992,36 @@
         Name="Timesheet"
         EntitySet="Timesheets" />
     </AssociationSet>
+    <QueryOperation
+      Name="GetTimesheet"
+      ReturnType="Timesheet*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TimesheetID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TimesheetID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Timesheets" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TimesheetID"
+        ParameterType=":Int32?" />
+    </QueryOperation>
   </EntityContainer>
   <Association
     Name="FK_BillingDetail_DimDate">
@@ -4039,7 +4069,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="8b4d8ed9-a286-4563-b1f2-599e5a83147a" />
+        Value="0ce88026-e868-45af-8513-bdbbc9fdb9a2" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />

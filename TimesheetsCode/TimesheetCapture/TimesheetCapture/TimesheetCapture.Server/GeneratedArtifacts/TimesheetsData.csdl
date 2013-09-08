@@ -140,7 +140,7 @@
     <Property Name="WeekEndingBillingPeriod" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="BillingPeriodText" Type="Edm.String" MaxLength="9" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="BillingPeriod" Type="Edm.Int32" ConcurrencyMode="Fixed" />
-    <Property Name="WeekEnding" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="WeekEnding" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="WeekEndingText" Type="Edm.String" MaxLength="10" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Timesheets" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="Timesheet" FromRole="DimDate" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="TimesheetDetail" FromRole="DimDate" />
@@ -250,7 +250,7 @@
     <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
     <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
-    <Property Name="PeriodEnding" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="PeriodEnding" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />

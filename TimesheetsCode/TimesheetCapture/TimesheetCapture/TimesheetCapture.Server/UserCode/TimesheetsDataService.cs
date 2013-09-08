@@ -15,11 +15,11 @@ namespace LightSwitchApplication
                                where dimDates.c_Date <= System.DateTime.Now
                                orderby dimDates.DateID descending
                                select dimDates).FirstOrDefault();
-            return new DateTime(setting.WeekEnding.Value.Year, setting.WeekEnding.Value.Month, setting.WeekEnding.Value.Day, 0, 0, 0);
+            return new DateTime(setting.WeekEnding.Year, setting.WeekEnding.Month, setting.WeekEnding.Day, 0, 0, 0);
         }
 
         private string strDayOfWeek = "";
-        public string DayOfWeek
+        public string DayOfWeek 
         {
             get
             {
@@ -189,7 +189,9 @@ namespace LightSwitchApplication
             entity.TimesheetDetailCode = tsPerson;
             entity.TimesheetDetailFileName = "Lightswitch";
             entity.LoadDate = System.DateTime.Now;
-
+            entity.ActiveType = DataWorkspace.TimesheetsData.ActiveTypes_SingleOrDefault(1);
+            entity.Exclude = 0;
+            entity.LastUpdateDate = System.DateTime.Now;
         }
         partial void TimesheetDetails_Updating(TimesheetDetail entity)
         {

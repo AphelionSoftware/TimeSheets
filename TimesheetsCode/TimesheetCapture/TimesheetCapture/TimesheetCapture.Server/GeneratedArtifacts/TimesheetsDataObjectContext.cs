@@ -2713,7 +2713,8 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="dateSK">Initial value of the DateSK property.</param>
-        public static DimDate CreateDimDate(global::System.Int32 dateID, global::System.DateTime c_Date, global::System.Int32 day, global::System.String daySuffix, global::System.String dayOfWeek, global::System.Int32 dOWInMonth, global::System.Int32 dayOfYear, global::System.Int32 weekOfYear, global::System.Int32 weekOfMonth, global::System.Int32 monthNumber, global::System.String monthName, global::System.Int32 quarter, global::System.String quarterName, global::System.String yearName, global::System.Int32 yearNumber, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 dateSK)
+        /// <param name="weekEnding">Initial value of the WeekEnding property.</param>
+        public static DimDate CreateDimDate(global::System.Int32 dateID, global::System.DateTime c_Date, global::System.Int32 day, global::System.String daySuffix, global::System.String dayOfWeek, global::System.Int32 dOWInMonth, global::System.Int32 dayOfYear, global::System.Int32 weekOfYear, global::System.Int32 weekOfMonth, global::System.Int32 monthNumber, global::System.String monthName, global::System.Int32 quarter, global::System.String quarterName, global::System.String yearName, global::System.Int32 yearNumber, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 dateSK, global::System.DateTime weekEnding)
         {
             DimDate dimDate = new DimDate();
             dimDate.DateID = dateID;
@@ -2737,6 +2738,7 @@ namespace LightSwitchApplication.Implementation
             dimDate.sys_ModifiedBy = sys_ModifiedBy;
             dimDate.Active = active;
             dimDate.DateSK = dateSK;
+            dimDate.WeekEnding = weekEnding;
             return dimDate;
         }
 
@@ -3494,9 +3496,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> WeekEnding
+        public global::System.DateTime WeekEnding
         {
             get
             {
@@ -3511,8 +3513,8 @@ namespace LightSwitchApplication.Implementation
                 OnWeekEndingChanged();
             }
         }
-        private Nullable<global::System.DateTime> _WeekEnding;
-        partial void OnWeekEndingChanging(Nullable<global::System.DateTime> value);
+        private global::System.DateTime _WeekEnding;
+        partial void OnWeekEndingChanging(global::System.DateTime value);
         partial void OnWeekEndingChanged();
     
         /// <summary>
@@ -5563,11 +5565,12 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_CreatedBy">Initial value of the sys_CreatedBy property.</param>
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
+        /// <param name="periodEnding">Initial value of the PeriodEnding property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDateID">Initial value of the TimesheetDateID property.</param>
         /// <param name="overallStatusID">Initial value of the OverallStatusID property.</param>
         /// <param name="timesheetPersonID">Initial value of the TimesheetPersonID property.</param>
-        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
+        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.DateTime periodEnding, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
         {
             Timesheet timesheet = new Timesheet();
             timesheet.TimesheetID = timesheetID;
@@ -5581,6 +5584,7 @@ namespace LightSwitchApplication.Implementation
             timesheet.sys_CreatedBy = sys_CreatedBy;
             timesheet.sys_ModifiedOn = sys_ModifiedOn;
             timesheet.sys_ModifiedBy = sys_ModifiedBy;
+            timesheet.PeriodEnding = periodEnding;
             timesheet.Active = active;
             timesheet.TimesheetDateID = timesheetDateID;
             timesheet.OverallStatusID = overallStatusID;
@@ -5958,9 +5962,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> PeriodEnding
+        public global::System.DateTime PeriodEnding
         {
             get
             {
@@ -5975,8 +5979,8 @@ namespace LightSwitchApplication.Implementation
                 OnPeriodEndingChanged();
             }
         }
-        private Nullable<global::System.DateTime> _PeriodEnding;
-        partial void OnPeriodEndingChanging(Nullable<global::System.DateTime> value);
+        private global::System.DateTime _PeriodEnding;
+        partial void OnPeriodEndingChanging(global::System.DateTime value);
         partial void OnPeriodEndingChanged();
     
         /// <summary>

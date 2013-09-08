@@ -9,7 +9,7 @@ var grid;
 
 // http://bit.ly/c1ls-grid
 //
-myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
+myapp.EditTimesheetDetail.WijmoGrid_render = function (element, contentItem) {
 
     var table = $("<table/>");
     table.appendTo($(element));
@@ -23,7 +23,7 @@ myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
             data: grid.Rows(),
 
             // editing
-            allowEditing: false,
+            allowEditing: true,
             afterCellUpdate: grid.OnCellUpdate,
 
             // sorting
@@ -46,3 +46,21 @@ myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
     c1ls.renderControl(contentItem);
 };
 
+myapp.EditTimesheetDetail.AddNew_canExecute = function (screen) {
+    return screen.TimesheetDetailsQuery.isLoaded;
+};
+
+myapp.EditTimesheetDetail.AddNew_execute = function (screen) {
+    screen.TimesheetDetailsQuery.addNew();
+    grid.EntityChanged(msls.EntityState.added);
+};
+
+myapp.EditTimesheetDetail.DeleteSelected_canExecute = function (screen) {
+    $(".msls-footer").removeClass("slideup");
+    return screen.TimesheetDetailsQuery.selectedItem != null;
+};
+
+myapp.EditTimesheetDetail.DeleteSelected_execute = function (screen) {
+    screen.TimesheetDetailsQuery.deleteSelected();
+    grid.EntityChanged(msls.EntityState.deleted);
+};
