@@ -4493,7 +4493,7 @@
                     "commandItems":
                     [
                       {
-                        "displayName": "Show Filter By Date Range",
+                        "displayName": "Filter By Date Range",
                         "name": "ShowFilterByDateRange",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },

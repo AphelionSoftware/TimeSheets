@@ -422,6 +422,10 @@
               <ContentItem
                 Name="ShowFilterByDateRange"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Filter By Date Range" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
