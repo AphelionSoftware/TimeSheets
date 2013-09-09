@@ -29,7 +29,8 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
           "__isEntityType": 1,
@@ -4483,6 +4484,24 @@
                                       }
                                     ]
                                   }
+                                },
+                                {
+                                  "parameter": { "__id": "!module/Methods[showTimesheetDetails]/Parameters[WeekEnding]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ManageTimesheets/Properties[TimesheetsUser]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Timesheet/Properties[selectedItem]" }
+                                      },
+                                      {
+                                        "member": { "__id": "Timesheet/Properties[PeriodEnding]" }
+                                      }
+                                    ]
+                                  }
                                 }
                               ]
                             }
@@ -5334,6 +5353,12 @@
                                 ]
                               }
                             ]
+                          },
+                          {
+                            "displayName": "Group2",
+                            "name": "Group2",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" }
                           }
                         ]
                       }
@@ -5359,37 +5384,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showEditTimesheetDetails]" },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showEditTimesheetDetails]/Parameters[TimesheetID]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "TimesheetDetails/Properties[TimesheetID]" }
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "parameter": { "__id": "!module/Methods[showEditTimesheetDetails]/Parameters[WeekEnding]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "TimesheetDetails/Properties[Timesheet]" }
-                                      },
-                                      {
-                                        "member": { "__id": "Timesheet/Properties[PeriodEnding]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
+                              "target": { "__id": "TimesheetDetails/Methods[EditTimesheetDetail_Tap]" }
                             }
                           }
                         ]
@@ -5397,6 +5392,7 @@
                       {
                         "displayName": "Refresh",
                         "name": "Refresh",
+                        "isHidden": true,
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -5459,6 +5455,10 @@
             {
               "id": "TimesheetDetails/Methods[Refresh]",
               "name": "Refresh"
+            },
+            {
+              "id": "TimesheetDetails/Methods[EditTimesheetDetail_Tap]",
+              "name": "EditTimesheetDetail_Tap"
             }
           ],
           "properties":
@@ -5560,6 +5560,14 @@
                   }
                 ]
               }
+            },
+            {
+              "id": "TimesheetDetails/Properties[WeekEnding]",
+              "name": "WeekEnding",
+              "elementType": { "__id": ":Date" },
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@IsParameter": { }
             }
           ]
         },
@@ -6721,6 +6729,11 @@
               "id": "!module/Methods[showTimesheetDetails]/Parameters[TimesheetID]",
               "name": "TimesheetID",
               "parameterType": { "__id": ":Int32" }
+            },
+            {
+              "id": "!module/Methods[showTimesheetDetails]/Parameters[WeekEnding]",
+              "name": "WeekEnding",
+              "parameterType": { "__id": ":Date" }
             }
           ]
         },

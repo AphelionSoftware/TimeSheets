@@ -105,6 +105,9 @@
         /// <field name="Timesheet" type="msls.application.Timesheet">
         /// Gets the timesheet for this screen.
         /// </field>
+        /// <field name="WeekEnding" type="Date">
+        /// Gets or sets the weekEnding for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.TimesheetDetails.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -197,10 +200,12 @@
                 createQuery: function (TimesheetID) {
                     return this.dataWorkspace.TimesheetsData.Timesheets_SingleOrDefault(TimesheetID);
                 }
-            }
+            },
+            { name: "WeekEnding", kind: "local", type: Date }
         ], [
             { name: "Delete" },
-            { name: "Refresh" }
+            { name: "Refresh" },
+            { name: "EditTimesheetDetail_Tap" }
         ]),
 
         EditTimesheetDetails: $defineScreen(EditTimesheetDetails, [
@@ -267,7 +272,7 @@
             return lightSwitchApplication.showScreen("EditTimesheet", parameters, options);
         }),
 
-        showTimesheetDetails: $defineShowScreen(function showTimesheetDetails(TimesheetID, options) {
+        showTimesheetDetails: $defineShowScreen(function showTimesheetDetails(TimesheetID, WeekEnding, options) {
             /// <summary>
             /// Asynchronously navigates forward to the TimesheetDetails screen.
             /// </summary>
@@ -275,7 +280,7 @@
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            var parameters = Array.prototype.slice.call(arguments, 0, 2);
             return lightSwitchApplication.showScreen("TimesheetDetails", parameters, options);
         }),
 

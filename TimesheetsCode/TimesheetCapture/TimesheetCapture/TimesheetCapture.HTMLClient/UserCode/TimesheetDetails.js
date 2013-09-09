@@ -53,7 +53,13 @@ myapp.TimesheetDetails.Refresh_execute = function (screen) {
 };
 
 
-myapp.TimesheetDetails.created = function (screen) {
-    // Write code here.
+
+
+myapp.TimesheetDetails.EditTimesheetDetail_Tap_execute = function (screen) {
+        myapp.showEditTimesheetDetails(screen.__TimesheetID,screen.__WeekEnding, {
+             afterClosed: function () {
+                 screen.TimesheetDetailsQuery.load(); // manual refresh
+                    }
+        });
 
 };

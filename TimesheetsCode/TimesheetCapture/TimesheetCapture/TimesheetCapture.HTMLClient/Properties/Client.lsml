@@ -48,6 +48,9 @@
         <ApplicationMethodParameter
           Name="TimesheetID"
           ParameterType=":Int32" />
+        <ApplicationMethodParameter
+          Name="WeekEnding"
+          ParameterType=":Date" />
       </ApplicationMethod>
       <ApplicationMethod
         Name="showEditTimesheetDetails">
@@ -410,6 +413,17 @@
                               Member="selectedItem" />
                             <MemberExpression
                               Member="TimesheetID" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                        <ArgumentExpression
+                          Parameter="WeekEnding">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="ManageTimesheets/Properties[TimesheetsUser]" />
+                            <MemberExpression
+                              Member="selectedItem" />
+                            <MemberExpression
+                              Member="PeriodEnding" />
                           </ChainExpression>
                         </ArgumentExpression>
                       </CallExpression>
@@ -1278,6 +1292,9 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
               </ContentItem>
+              <ContentItem
+                Name="Group2"
+                Kind="Group" />
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
@@ -1313,24 +1330,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showEditTimesheetDetails]">
-                          <ArgumentExpression
-                            Parameter="TimesheetID">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="TimesheetDetails/Properties[TimesheetID]" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                          <ArgumentExpression
-                            Parameter="WeekEnding">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="TimesheetDetails/Properties[Timesheet]" />
-                              <MemberExpression
-                                Member="PeriodEnding" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
+                          Target="TimesheetDetails/Methods[EditTimesheetDetail_Tap]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -1338,6 +1338,7 @@
               </ContentItem>
               <ContentItem
                 Name="Refresh"
+                IsHidden="True"
                 Kind="Command">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -1397,6 +1398,8 @@
         Name="Delete" />
       <ScreenMethod
         Name="Refresh" />
+      <ScreenMethod
+        Name="EditTimesheetDetail_Tap" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -1479,6 +1482,14 @@
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="WeekEnding"
+        PropertyType=":Date">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
       </ScreenProperty>
     </Screen.Properties>
   </Screen>

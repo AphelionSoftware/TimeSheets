@@ -551,3 +551,4 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\ViewTimesheets.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\TimesheetDetails.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\EditTimesheetDetails.js
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\SharePointLaunch.aspx

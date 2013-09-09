@@ -160,6 +160,16 @@
         /// </field>
         Refresh_execute: [lightSwitchApplication.TimesheetDetails],
         /// <field>
+        /// Called to determine if the EditTimesheetDetail_Tap method can be executed.
+        /// <br/>canExecute(msls.application.TimesheetDetails screen)
+        /// </field>
+        EditTimesheetDetail_Tap_canExecute: [lightSwitchApplication.TimesheetDetails],
+        /// <field>
+        /// Called to execute the EditTimesheetDetail_Tap method.
+        /// <br/>execute(msls.application.TimesheetDetails screen)
+        /// </field>
+        EditTimesheetDetail_Tap_execute: [lightSwitchApplication.TimesheetDetails],
+        /// <field>
         /// Called after the TimesheetDetail List content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -233,7 +243,12 @@
         /// Called after the Comments content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Comments_postRender: $parameters
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Group2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group2_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.EditTimesheetDetails, {
