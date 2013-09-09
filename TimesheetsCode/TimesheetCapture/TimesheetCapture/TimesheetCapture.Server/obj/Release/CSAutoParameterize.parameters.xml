@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Connection String used in web.config by the application to access the database." defaultValue="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Christina\\Dropbox\\My\ Documents\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
   </parameter>
-  <parameter name="d3e609db-aeca-44d9-a074-ed6a861d9407-Web.config Connection String" description="d3e609db-aeca-44d9-a074-ed6a861d9407 Connection String used in web.config by the application to access the database." defaultValue="Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;User ID=LOrealtest;Password=Denali@2011" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Christina\\Dropbox\\My\ Documents\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='d3e609db-aeca-44d9-a074-ed6a861d9407']/@connectionString" />
+  <parameter name="564c8996-bc57-48ca-acad-e67c91c373c7-Web.config Connection String" description="564c8996-bc57-48ca-acad-e67c91c373c7 Connection String used in web.config by the application to access the database." defaultValue="Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;User ID=LORealTest;Password=Denali@2011" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='564c8996-bc57-48ca-acad-e67c91c373c7']/@connectionString" />
+  </parameter>
+  <parameter name="2c42210f-a6d9-4558-bc5c-4d248a26bd6d-Web.config Connection String" description="2c42210f-a6d9-4558-bc5c-4d248a26bd6d Connection String used in web.config by the application to access the database." defaultValue="Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;Persist Security Info=True;User ID=LORealTest;Password=Denali@2011" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetCapture\\TimesheetCapture\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='2c42210f-a6d9-4558-bc5c-4d248a26bd6d']/@connectionString" />
   </parameter>
 </parameters>

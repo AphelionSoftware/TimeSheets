@@ -1514,104 +1514,119 @@
             Name="TimesheetDetail List"
             Kind="Group">
             <ContentItem
-              Name="Group"
+              Name="Header"
               Kind="Group"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem
-                Name="TimesheetDetailsQuery_selectedItem_DimDate"
-                Kind="Details"
-                DataType="DimDate">
-                <ContentItem.ChoicesSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EditTimesheetDetails/Properties[TimesheetDetailDate]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.ChoicesSource>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="DimDate" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Name="DateGroup"
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                 <ContentItem
-                  Name="DimDate"
+                  Name="TimesheetDetailsQuery_selectedItem_DimDate"
                   Kind="Details"
                   DataType="DimDate">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="EditTimesheetDetails/Properties[TimesheetDetailDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ChainExpression />
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
+                        <MemberExpression
+                          Member="selectedItem" />
+                        <MemberExpression
+                          Member="DimDate" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="DimDate"
+                    Kind="Details"
+                    DataType="DimDate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
               </ContentItem>
               <ContentItem
-                Name="TimesheetDetailsQuery_selectedItem_Project"
-                Kind="Details"
-                DataType="Project">
-                <ContentItem.ChoicesSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EditTimesheetDetails/Properties[ProjectSorted]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.ChoicesSource>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="Project" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Name="ProjectGroup"
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                 <ContentItem
-                  Name="Project"
+                  Name="TimesheetDetailsQuery_selectedItem_Project"
                   Kind="Details"
                   DataType="Project">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="EditTimesheetDetails/Properties[ProjectSorted]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ChainExpression />
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
+                        <MemberExpression
+                          Member="selectedItem" />
+                        <MemberExpression
+                          Member="Project" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Project"
+                    Kind="Details"
+                    DataType="Project">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
               </ContentItem>
               <ContentItem
-                Name="TimesheetDetailsQuery_selectedItem_TypeOfWork"
-                Kind="Details"
-                DataType="TypeOfWork">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
-                      <MemberExpression
-                        Member="selectedItem" />
-                      <MemberExpression
-                        Member="TypeOfWork" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Name="WorkGroup"
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                 <ContentItem
-                  Name="TypeOfWork"
+                  Name="TimesheetDetailsQuery_selectedItem_TypeOfWork"
                   Kind="Details"
                   DataType="TypeOfWork">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ChainExpression />
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="EditTimesheetDetails/Properties[TimesheetDetailsQuery]" />
+                        <MemberExpression
+                          Member="selectedItem" />
+                        <MemberExpression
+                          Member="TypeOfWork" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="TypeOfWork"
+                    Kind="Details"
+                    DataType="TypeOfWork">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
               </ContentItem>
             </ContentItem>

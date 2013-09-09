@@ -35,15 +35,17 @@ myapp.EditTimesheetDetails.WijmoGrid_render = function (element, contentItem) {
             filtering: grid.Filtering,
 
             // selection
-            selectionMode: "singleRow",
+            selectionMode: "multirow", //allow multi-row delete
             showRowHeader: true,
-            showSelectionOnRender: false,
+            showSelectionOnRender: true,
             cellClicked: grid.OnCellClicked,
             cellStyleFormatter: grid.OnCellFormat
         });
+  
     };
 
     c1ls.renderControl(contentItem);
+    
 };
 
 myapp.EditTimesheetDetails.AddNew_canExecute = function (screen) {
@@ -75,3 +77,8 @@ myapp.EditTimesheetDetails.DeleteSelected_execute = function (screen) {
 
 
 
+
+myapp.EditTimesheetDetails.created = function (screen) {
+    // Write code here.
+    window.alert("create event fired");
+};

@@ -308,10 +308,15 @@
         /// </field>
         TimesheetDetail List_postRender: $parameters,
         /// <field>
-        /// Called after the Group content item has been rendered.
+        /// Called after the Header content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group_postRender: $parameters,
+        Header_postRender: $parameters,
+        /// <field>
+        /// Called after the DateGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DateGroup_postRender: $parameters,
         /// <field>
         /// Called after the TimesheetDetailsQuery_selectedItem_DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -323,6 +328,11 @@
         /// </field>
         DimDate_postRender: $parameters,
         /// <field>
+        /// Called after the ProjectGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectGroup_postRender: $parameters,
+        /// <field>
         /// Called after the TimesheetDetailsQuery_selectedItem_Project content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -332,6 +342,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Project_postRender: $parameters,
+        /// <field>
+        /// Called after the WorkGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkGroup_postRender: $parameters,
         /// <field>
         /// Called after the TimesheetDetailsQuery_selectedItem_TypeOfWork content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

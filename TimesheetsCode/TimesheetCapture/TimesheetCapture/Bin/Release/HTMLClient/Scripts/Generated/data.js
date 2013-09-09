@@ -543,6 +543,9 @@ window.myapp = msls.application;
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this personItem.
         /// </field>
+        /// <field name="SharepointUserName" type="String">
+        /// Gets or sets the sharepointUserName for this personItem.
+        /// </field>
         /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
         /// Gets the timesheets for this personItem.
         /// </field>
@@ -624,6 +627,15 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this project.
+        /// </field>
+        /// <field name="MonthlyCap" type="Number">
+        /// Gets or sets the monthlyCap for this project.
+        /// </field>
+        /// <field name="MonthlyCapWarning" type="Number">
+        /// Gets or sets the monthlyCapWarning for this project.
+        /// </field>
+        /// <field name="ProjectCapWarning" type="Number">
+        /// Gets or sets the projectCapWarning for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
@@ -786,6 +798,9 @@ window.myapp = msls.application;
         /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
         /// Gets or sets the typeOfWork for this timesheetDetail.
         /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheetDetail.
+        /// </field>
         /// <field name="details" type="msls.application.TimesheetDetail.Details">
         /// Gets the details for this timesheetDetail.
         /// </field>
@@ -869,8 +884,8 @@ window.myapp = msls.application;
         /// <field name="OverallStatus" type="msls.EntitySet">
         /// Gets the OverallStatus entity set.
         /// </field>
-        /// <field name="Person" type="msls.EntitySet">
-        /// Gets the Person entity set.
+        /// <field name="People" type="msls.EntitySet">
+        /// Gets the People entity set.
         /// </field>
         /// <field name="Projects" type="msls.EntitySet">
         /// Gets the Projects entity set.
@@ -1070,6 +1085,7 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "SharepointUserName", type: String },
             { name: "Timesheets", kind: "collection", elementType: Timesheet }
         ]),
 
@@ -1095,7 +1111,10 @@ window.myapp = msls.application;
             { name: "BillingStatu", kind: "reference", type: BillingStatu },
             { name: "Client", kind: "reference", type: Client },
             { name: "PersonItem", kind: "reference", type: PersonItem },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "MonthlyCap", type: Number },
+            { name: "MonthlyCapWarning", type: Number },
+            { name: "ProjectCapWarning", type: Number }
         ]),
 
         Timesheet: $defineEntity(Timesheet, [
@@ -1146,7 +1165,8 @@ window.myapp = msls.application;
             { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "Project", kind: "reference", type: Project },
             { name: "Timesheet", kind: "reference", type: Timesheet },
-            { name: "TypeOfWork", kind: "reference", type: TypeOfWork }
+            { name: "TypeOfWork", kind: "reference", type: TypeOfWork },
+            { name: "VerCol", type: Array }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [
@@ -1172,7 +1192,7 @@ window.myapp = msls.application;
             { name: "ClientRoles", elementType: ClientRole },
             { name: "DimDates", elementType: DimDate },
             { name: "OverallStatus", elementType: OverallStatu },
-            { name: "Person", elementType: PersonItem },
+            { name: "People", elementType: PersonItem },
             { name: "Projects", elementType: Project },
             { name: "Timesheets", elementType: Timesheet },
             { name: "TimesheetDetails", elementType: TimesheetDetail },
@@ -1228,9 +1248,9 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Person_SingleOrDefault", value: function (PersonID) {
-                    return new $DataServiceQuery({ _entitySet: this.Person },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Person(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
+                name: "People_SingleOrDefault", value: function (PersonID) {
+                    return new $DataServiceQuery({ _entitySet: this.People },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
                     );
                 }
             },
@@ -1298,10 +1318,19 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Query1", value: function () {
+                name: "TimesheetDetailsQuery", value: function () {
                     return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Query1()",
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailsQuery()",
                         {
+                        });
+                }
+            },
+            {
+                name: "GetTimesheet", value: function (TimesheetID) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/GetTimesheet()",
+                        {
+                            TimesheetID: $toODataString(TimesheetID, "Int32?")
                         });
                 }
             }

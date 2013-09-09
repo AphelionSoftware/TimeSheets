@@ -2,3 +2,7 @@ C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\Timeshe
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.csprojResolveAssemblyReference.cache
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.dll
 C:\Users\Christina\Dropbox\My Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Release\TimesheetCapture.SharePoint.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.dll
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.pdb
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.csprojResolveAssemblyReference.cache

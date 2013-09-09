@@ -29,8 +29,7 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup",
-          ":@SharePointEnabled": { }
+          "name": "LightSwitchServiceApplicationGroup"
         },
         {
           "__isEntityType": 1,
@@ -5603,125 +5602,152 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "Group",
-                        "name": "Group",
+                        "displayName": "Header",
+                        "name": "Header",
                         "kind": "Group",
                         "view": { "__id": ":ColumnsLayout" },
                         "childContentItems":
                         [
                           {
-                            "displayName": "Dim Date",
-                            "name": "TimesheetDetailsQuery_selectedItem_DimDate",
-                            "kind": "Details",
-                            "view": { "__id": ":DetailsModalPicker" },
-                            "choicesSource":
-                            {
-                              "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailDate]" }
-                            },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
-                                }
-                              ]
-                            },
+                            "displayName": "Date Group",
+                            "name": "DateGroup",
+                            "kind": "Group",
+                            "view": { "__id": ":ColumnsLayout" },
                             "childContentItems":
                             [
                               {
                                 "displayName": "Dim Date",
-                                "name": "DimDate",
+                                "name": "TimesheetDetailsQuery_selectedItem_DimDate",
                                 "kind": "Details",
-                                "view": { "__id": ":Summary" },
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailDate]" }
+                                },
                                 "dataSource":
                                 {
                                   "links":
                                   [
+                                    {
+                                      "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
+                                    },
+                                    {
+                                      "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                                    }
                                   ]
-                                }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Dim Date",
+                                    "name": "DimDate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           },
                           {
-                            "displayName": "Project",
-                            "name": "TimesheetDetailsQuery_selectedItem_Project",
-                            "kind": "Details",
-                            "view": { "__id": ":DetailsModalPicker" },
-                            "choicesSource":
-                            {
-                              "member": { "__id": "EditTimesheetDetails/Properties[ProjectSorted]" }
-                            },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                                }
-                              ]
-                            },
+                            "displayName": "Project Group",
+                            "name": "ProjectGroup",
+                            "kind": "Group",
+                            "view": { "__id": ":ColumnsLayout" },
                             "childContentItems":
                             [
                               {
                                 "displayName": "Project",
-                                "name": "Project",
+                                "name": "TimesheetDetailsQuery_selectedItem_Project",
                                 "kind": "Details",
-                                "view": { "__id": ":Summary" },
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "EditTimesheetDetails/Properties[ProjectSorted]" }
+                                },
                                 "dataSource":
                                 {
                                   "links":
                                   [
+                                    {
+                                      "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
+                                    },
+                                    {
+                                      "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                                    }
                                   ]
-                                }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Project",
+                                    "name": "Project",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           },
                           {
-                            "displayName": "Type Of Work",
-                            "name": "TimesheetDetailsQuery_selectedItem_TypeOfWork",
-                            "kind": "Details",
-                            "view": { "__id": ":DetailsModalPicker" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
-                                },
-                                {
-                                  "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
-                                },
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[TypeOfWork]" }
-                                }
-                              ]
-                            },
+                            "displayName": "Work Group",
+                            "name": "WorkGroup",
+                            "kind": "Group",
+                            "view": { "__id": ":ColumnsLayout" },
                             "childContentItems":
                             [
                               {
                                 "displayName": "Type Of Work",
-                                "name": "TypeOfWork",
+                                "name": "TimesheetDetailsQuery_selectedItem_TypeOfWork",
                                 "kind": "Details",
-                                "view": { "__id": ":Summary" },
+                                "view": { "__id": ":DetailsModalPicker" },
                                 "dataSource":
                                 {
                                   "links":
                                   [
+                                    {
+                                      "member": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailsQuery]" }
+                                    },
+                                    {
+                                      "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TimesheetDetail/Properties[TypeOfWork]" }
+                                    }
                                   ]
-                                }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Type Of Work",
+                                    "name": "TypeOfWork",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
                               }
                             ]
                           }

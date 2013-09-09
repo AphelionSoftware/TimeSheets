@@ -4084,7 +4084,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="64b19de2-bcd3-4403-a6ea-e05c8094a93a" />
+        Value="bd650321-4305-42c7-8970-a9bdf0d3da9b" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
