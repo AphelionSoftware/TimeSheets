@@ -13,26 +13,26 @@ namespace LightSwitchApplication.Implementation
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class PWTimesheetsDataDataService
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.PWTimesheetsData>
+    public class TimesheetsDataDataService
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.TimesheetsData>
     {
     
-        public PWTimesheetsDataDataService() : base()
+        public TimesheetsDataDataService() : base()
         {
         }
     
         protected override global::Microsoft.LightSwitch.IDataService GetDataService(global::Microsoft.LightSwitch.IDataWorkspace dataWorkspace)
         {
-            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).PWTimesheetsData;
+            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).TimesheetsData;
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class PWTimesheetsDataServiceImplementation
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.PWTimesheetsData>
+    public class TimesheetsDataServiceImplementation
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.TimesheetsData>
     {
-        public PWTimesheetsDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
+        public TimesheetsDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
         {
         }
     
@@ -98,6 +98,19 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.UnallocatedTimesheet> UnallocatedTimesheetsSorted(string ClientName, string PersonName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.UnallocatedTimesheet> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.UnallocatedTimesheet>("UnallocatedTimesheets"),
+                        (u) => (((ClientName == null) || u.ClientName.Contains(ClientName)) && ((PersonName == null) || u.TimesheetDetail.Person.PersonName.Contains(PersonName)))),
+                    (u) => u.TimesheetDetail.Project.ProjectName),
+                (u) => u.TimesheetDetail.DimDate.DateID);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -155,16 +168,28 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.ActiveType();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.OverbudgetTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.OverbudgetTimesheet();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.ProjectsOverCap))
+            {
+                return new global::LightSwitchApplication.Implementation.ProjectsOverCap();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.UnallocatedTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
+            }
     
             return base.CreateObject(type);
         }
     
-        protected override global::LightSwitchApplication.Implementation.PWTimesheetsData CreateObjectContext()
+        protected override global::LightSwitchApplication.Implementation.TimesheetsData CreateObjectContext()
         {
             string assemblyName = global::System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            return new global::LightSwitchApplication.Implementation.PWTimesheetsData(this.GetEntityConnectionString(
-                "PWTimesheetsData",
-                "res://" + assemblyName + "/PWTimesheetsData.csdl|res://" + assemblyName + "/PWTimesheetsData.ssdl|res://" + assemblyName + "/PWTimesheetsData.msl",
+            return new global::LightSwitchApplication.Implementation.TimesheetsData(this.GetEntityConnectionString(
+                "TimesheetsData",
+                "res://" + assemblyName + "/TimesheetsData.csdl|res://" + assemblyName + "/TimesheetsData.ssdl|res://" + assemblyName + "/TimesheetsData.msl",
                 "System.Data.SqlClient",
                 true));
         }
@@ -223,6 +248,18 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.ActiveType();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.OverbudgetTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.OverbudgetTimesheet();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ProjectsOverCap))
+            {
+                return new global::LightSwitchApplication.Implementation.ProjectsOverCap();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.UnallocatedTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
+            }
             return null;
         }
     
@@ -241,18 +278,18 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.IDataService CreateDataService(global::System.Type dataServiceType)
         {
-            if (dataServiceType == typeof(global::LightSwitchApplication.PWTimesheetsDataService))
+            if (dataServiceType == typeof(global::LightSwitchApplication.TimesheetsDataService))
             {
-                return new global::LightSwitchApplication.PWTimesheetsDataService();
+                return new global::LightSwitchApplication.TimesheetsDataService();
             }
             return base.CreateDataService(dataServiceType);
         }
     
         protected override global::Microsoft.LightSwitch.Internal.IDataServiceImplementation CreateDataServiceImplementation<TDataService>(TDataService dataService)
         {
-            if (typeof(TDataService) == typeof(global::LightSwitchApplication.PWTimesheetsDataService))
+            if (typeof(TDataService) == typeof(global::LightSwitchApplication.TimesheetsDataService))
             {
-                return new global::LightSwitchApplication.Implementation.PWTimesheetsDataServiceImplementation(dataService);
+                return new global::LightSwitchApplication.Implementation.TimesheetsDataServiceImplementation(dataService);
             }
             return base.CreateDataServiceImplementation(dataService);
         }
@@ -319,6 +356,18 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ActiveType) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.ActiveType);
+            }
+            if (typeof(global::LightSwitchApplication.OverbudgetTimesheet) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.OverbudgetTimesheet);
+            }
+            if (typeof(global::LightSwitchApplication.ProjectsOverCap) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ProjectsOverCap);
+            }
+            if (typeof(global::LightSwitchApplication.UnallocatedTimesheet) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.UnallocatedTimesheet);
             }
             return null;
         }
@@ -511,6 +560,14 @@ namespace LightSwitchApplication.Implementation
                 {
                     this.__host.RaisePropertyChanged("ActiveType");
                 }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.BillingStatus.DetailsClass.IImplementation.UnallocatedTimesheets
+        {
+            get
+            {
+                return this.UnallocatedTimesheets;
             }
         }
         
@@ -773,6 +830,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.Timesheets
+        {
+            get
+            {
+                return this.Timesheets;
+            }
+        }
+        
         partial void OnPersonSystemRoleIDChanged()
         {
             if (this.__host != null)
@@ -999,6 +1064,30 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.Person
+        {
+            get
+            {
+                return this.Person;
+            }
+            set
+            {
+                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Person");
+                }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.UnallocatedTimesheets
+        {
+            get
+            {
+                return this.UnallocatedTimesheets;
+            }
+        }
+        
         partial void OnTimesheetDateIDChanged()
         {
             if (this.__host != null)
@@ -1012,6 +1101,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("ActiveType");
+            }
+        }
+        
+        partial void OnTimesheetPersonIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Person");
             }
         }
         
@@ -1157,6 +1254,14 @@ namespace LightSwitchApplication.Implementation
                 {
                     this.__host.RaisePropertyChanged("ActiveType");
                 }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.UnallocatedTimesheets
+        {
+            get
+            {
+                return this.UnallocatedTimesheets;
             }
         }
         
@@ -1586,6 +1691,177 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.TypeOfWorks;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class OverbudgetTimesheet :
+        global::LightSwitchApplication.OverbudgetTimesheet.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ProjectsOverCap :
+        global::LightSwitchApplication.ProjectsOverCap.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class UnallocatedTimesheet :
+        global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation
+    {
+    
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation.BillingStatus
+        {
+            get
+            {
+                return this.BillingStatus;
+            }
+            set
+            {
+                this.BillingStatus = (global::LightSwitchApplication.Implementation.BillingStatus)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("BillingStatus");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation.TimesheetDetail
+        {
+            get
+            {
+                return this.TimesheetDetail;
+            }
+            set
+            {
+                this.TimesheetDetail = (global::LightSwitchApplication.Implementation.TimesheetDetail)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("TimesheetDetail");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation.Timesheet
+        {
+            get
+            {
+                return this.Timesheet;
+            }
+            set
+            {
+                this.Timesheet = (global::LightSwitchApplication.Implementation.Timesheet)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Timesheet");
+                }
+            }
+        }
+        
+        partial void OnBillingStatusIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("BillingStatus");
+            }
+        }
+        
+        partial void OnTimesheetDetailIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("TimesheetDetail");
+            }
+        }
+        
+        partial void OnTimesheetIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Timesheet");
             }
         }
         

@@ -208,17 +208,25 @@
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="Wijmo.LightSwitch.Common">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Server">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Server.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharePointLaunch.aspx.cs">
+    <None Include="SharePointLaunch.aspx.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SharePointLaunch.aspx.designer.cs">
+    </None>
+    <None Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserCode\PWTimesheetsDataService.cs" />
+    </None>
+    <Compile Include="UserCode\Shared\Client.cs" />
+    <Compile Include="UserCode\Shared\UnallocatedTimesheet.cs" />
+    <Compile Include="UserCode\TimesheetsDataService.cs" />
     <Compile Include="UserCode\Shared\BillingDetail.cs" />
     <Compile Include="UserCode\Shared\BillingStatus.cs" />
   </ItemGroup>
@@ -228,7 +236,7 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SharePointLaunch.aspx" />
+    <None Include="SharePointLaunch.aspx" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

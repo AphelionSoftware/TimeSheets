@@ -106,4 +106,28 @@
         created: [lightSwitchApplication.ActiveType]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.OverbudgetTimesheet, {
+        /// <field>
+        /// Called when a new overbudgetTimesheet is created.
+        /// <br/>created(msls.application.OverbudgetTimesheet entity)
+        /// </field>
+        created: [lightSwitchApplication.OverbudgetTimesheet]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ProjectsOverCap, {
+        /// <field>
+        /// Called when a new projectsOverCap is created.
+        /// <br/>created(msls.application.ProjectsOverCap entity)
+        /// </field>
+        created: [lightSwitchApplication.ProjectsOverCap]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.UnallocatedTimesheet, {
+        /// <field>
+        /// Called when a new unallocatedTimesheet is created.
+        /// <br/>created(msls.application.UnallocatedTimesheet entity)
+        /// </field>
+        created: [lightSwitchApplication.UnallocatedTimesheet]
+    });
+
 }(msls.application));

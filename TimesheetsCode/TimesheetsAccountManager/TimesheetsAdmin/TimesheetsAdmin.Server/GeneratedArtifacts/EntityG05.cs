@@ -531,6 +531,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string SharepointUserName
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetValue(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.SharepointUserName);
+            }
+            set
+            {
+                global::LightSwitchApplication.Person.DetailsClass.SetValue(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.SharepointUserName, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SharepointUserName_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SharepointUserName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SharepointUserName_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.BillingDetail> BillingDetails
         {
             get
@@ -665,6 +689,29 @@ namespace LightSwitchApplication
         partial void ActiveType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ActiveType_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Timesheet> Timesheets
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetValue(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.Timesheets);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Timesheet> TimesheetsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetQuery(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.Timesheets);
+            }
+        }
 
         #endregion
     
@@ -900,6 +947,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string> SharepointUserName
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.SharepointUserName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
                 {
                     get
@@ -948,6 +1003,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.Timesheets) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -973,12 +1036,14 @@ namespace LightSwitchApplication
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
                 new string ADUsername { get; set; }
+                new string SharepointUserName { get; set; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
                 new global::System.Collections.IEnumerable Projects { get; }
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation SystemRole { get; set; }
                 new global::System.Collections.IEnumerable Clients { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
+                new global::System.Collections.IEnumerable Timesheets { get; }
             }
             #pragma warning restore 109
     
@@ -1684,6 +1749,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>.Entry
+                    SharepointUserName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>.Entry(
+                        "SharepointUserName",
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_Stub,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_Validate,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_GetImplementationValue,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_SetImplementationValue,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._SharepointUserName_OnValueChanged);
+                private static void _SharepointUserName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Person.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>.Data> c, global::LightSwitchApplication.Person.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SharepointUserName, sf);
+                }
+                private static bool _SharepointUserName_ComputeIsReadOnly(global::LightSwitchApplication.Person e)
+                {
+                    bool result = false;
+                    e.SharepointUserName_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _SharepointUserName_Validate(global::LightSwitchApplication.Person e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.SharepointUserName_Validate(r);
+                }
+                private static string _SharepointUserName_GetImplementationValue(global::LightSwitchApplication.Person.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SharepointUserName;
+                }
+                private static void _SharepointUserName_SetImplementationValue(global::LightSwitchApplication.Person.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.SharepointUserName = v;
+                }
+                private static void _SharepointUserName_OnValueChanged(global::LightSwitchApplication.Person e)
+                {
+                    e.SharepointUserName_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
                     BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails",
@@ -1857,6 +1959,26 @@ namespace LightSwitchApplication
                     e.ActiveType_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
+                    Timesheets = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
+                        "Timesheets",
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._Timesheets_Stub,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._Timesheets_GetReferencedEntities,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._Timesheets_GetEntityCollection);
+                private static void _Timesheets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Person.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.Person.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Timesheets, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet> _Timesheets_GetReferencedEntities(global::LightSwitchApplication.Person.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass>(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.Timesheets, ref d._Timesheets);
+                }
+                private static global::System.Collections.IEnumerable _Timesheets_GetEntityCollection(global::LightSwitchApplication.Person.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Timesheets;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1917,6 +2039,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>.Data _ADUsername;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, string>.Data _SharepointUserName;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1933,6 +2058,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets;
             
         }
     
