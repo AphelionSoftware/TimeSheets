@@ -1,15 +1,6 @@
 ﻿/// <reference path="../GeneratedArtifacts/viewModel.js" />
-/// <reference path="../Scripts/c1ls-3.0.20132.20.js" />
 
-if (typeof c1ls === "undefined") {
-    window.location.href = "http://bit.ly/c1ls-nuget";
-}
-
-var grid;
-
-// http://bit.ly/c1ls-grid
-//
-myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
+myapp.BrowseTimesheetsUser.ScreenContent_render = function (element, contentItem) {
 
     var table = $("<table/>");
     table.appendTo($(element));
@@ -44,18 +35,4 @@ myapp.TimesheetDetails.WijmoGrid_render = function (element, contentItem) {
     };
 
     c1ls.renderControl(contentItem);
-};
-
-
-
-
-
-
-myapp.TimesheetDetails.EditTimesheetDetail_Tap_execute = function (screen) {
-        myapp.showEditTimesheetDetails(screen.__TimesheetID,screen.__WeekEnding, {
-             afterClosed: function () {
-                 screen.TimesheetDetailsQuery.load(); // manual refresh
-                    }
-        });
-
 };

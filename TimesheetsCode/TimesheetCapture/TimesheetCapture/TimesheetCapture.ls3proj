@@ -19,7 +19,7 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
+    <ApplicationServerType>IIS</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
     <AssemblyVersion>2.1.22.0</AssemblyVersion>

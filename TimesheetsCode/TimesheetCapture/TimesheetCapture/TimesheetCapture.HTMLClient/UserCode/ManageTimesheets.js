@@ -43,3 +43,31 @@ myapp.ManageTimesheets.WijmoGrid_render = function (element, contentItem) {
 
     c1ls.renderControl(contentItem);
 };
+
+
+
+myapp.ManageTimesheets.ShowTimesheetDetails_Tap_execute = function (screen) {
+    var TimesheetID = screen.TimesheetsUser.selectedItem.TimesheetID;
+    var WeekEnding = screen.TimesheetsUser.selectedItem.DimDate.getC_Date()._value;
+    var Instructions = "Click on the grid to populate the drop-down boxes."
+    myapp.showEditTimesheetDetails(TimesheetID, WeekEnding,Instructions);
+};
+
+
+
+
+
+
+myapp.ManageTimesheets.ShowTimesheetDetails_Tap_canExecute = function (screen) {
+    // Write code here.
+    return screen.ShowDetails;
+};
+
+myapp.ManageTimesheets.created = function (screen) {
+    // Write code here.
+    screen.ShowDetails = false;
+};
+myapp.ManageTimesheets.Timesheet_ItemTap_execute = function (screen) {
+    // Write code here.
+    screen.ShowDetails = true;
+}

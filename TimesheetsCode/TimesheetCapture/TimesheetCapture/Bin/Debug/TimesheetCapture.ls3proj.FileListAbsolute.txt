@@ -549,5 +549,5 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\jquery.wijmo-open.all.3.20132.12.min.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\Scripts\jquery.wijmo-pro.all.3.20132.12.min.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\ViewTimesheets.js
-C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\TimesheetDetails.js
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\EditTimesheetDetails.js
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Debug\HTMLClient\UserCode\ManageTimesheets.js

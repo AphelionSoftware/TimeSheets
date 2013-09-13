@@ -102,7 +102,7 @@
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
     <Content Include="UserCode\EditTimesheetDetails.js" />
-    <Content Include="UserCode\TimesheetDetails.js" />
+    <Content Include="UserCode\ManageTimesheets.js" />
     <Content Include="UserCode\Timesheet.js" />
     <Content Include="UserCode\TimesheetDetail.js" />
     <Content Include="UserCode\ViewTimesheets.js" />

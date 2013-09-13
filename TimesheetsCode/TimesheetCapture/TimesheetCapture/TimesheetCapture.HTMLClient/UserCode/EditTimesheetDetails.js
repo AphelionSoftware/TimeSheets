@@ -80,5 +80,15 @@ myapp.EditTimesheetDetails.DeleteSelected_execute = function (screen) {
 
 myapp.EditTimesheetDetails.created = function (screen) {
     // Write code here.
-    window.alert("create event fired");
+
+
+};
+ 
+myapp.EditTimesheetDetails.Instructions_postRender = function (element, contentItem) {
+    // Write code here.
+    contentItem.dataBind("value", function (value) {
+        
+        $(element).text = "Click on the grid to populate the drop-down boxes.";
+    });
+
 };
