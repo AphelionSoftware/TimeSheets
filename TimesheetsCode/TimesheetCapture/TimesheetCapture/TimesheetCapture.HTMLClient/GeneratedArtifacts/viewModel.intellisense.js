@@ -16,6 +16,36 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.ManageTimesheets],
         /// <field>
+        /// Called to determine if the EditTimesheet_Tap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        EditTimesheet_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the EditTimesheet_Tap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        EditTimesheet_Tap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to determine if the ShowTimesheetDetails_Tap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        ShowTimesheetDetails_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the ShowTimesheetDetails_Tap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        ShowTimesheetDetails_Tap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to determine if the Timesheet_ItemTap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        Timesheet_ItemTap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the Timesheet_ItemTap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        Timesheet_ItemTap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
         /// Called after the TimesheetList content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -35,11 +65,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         DimDate_postRender: $parameters,
-        /// <field>
-        /// Called after the PeriodEnding content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        PeriodEnding_postRender: $parameters,
         /// <field>
         /// Called after the FilterByDateRange content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -133,42 +158,127 @@
         RowTemplate1_postRender: $parameters
     });
 
-    msls._addEntryPoints(lightSwitchApplication.EditDetails, {
+    msls._addEntryPoints(lightSwitchApplication.EditTimesheetDetails, {
         /// <field>
-        /// Called when a new EditDetails screen is created.
-        /// <br/>created(msls.application.EditDetails screen)
+        /// Called when a new EditTimesheetDetails screen is created.
+        /// <br/>created(msls.application.EditTimesheetDetails screen)
         /// </field>
-        created: [lightSwitchApplication.EditDetails],
+        created: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
-        /// Called before changes on an active EditDetails screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.EditDetails screen)
+        /// Called before changes on an active EditTimesheetDetails screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EditTimesheetDetails screen)
         /// </field>
-        beforeApplyChanges: [lightSwitchApplication.EditDetails],
+        beforeApplyChanges: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called to determine if the AddNew method can be executed.
-        /// <br/>canExecute(msls.application.EditDetails screen)
+        /// <br/>canExecute(msls.application.EditTimesheetDetails screen)
         /// </field>
-        AddNew_canExecute: [lightSwitchApplication.EditDetails],
+        AddNew_canExecute: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called to execute the AddNew method.
-        /// <br/>execute(msls.application.EditDetails screen)
+        /// <br/>execute(msls.application.EditTimesheetDetails screen)
         /// </field>
-        AddNew_execute: [lightSwitchApplication.EditDetails],
+        AddNew_execute: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called to determine if the DeleteSelected method can be executed.
-        /// <br/>canExecute(msls.application.EditDetails screen)
+        /// <br/>canExecute(msls.application.EditTimesheetDetails screen)
         /// </field>
-        DeleteSelected_canExecute: [lightSwitchApplication.EditDetails],
+        DeleteSelected_canExecute: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called to execute the DeleteSelected method.
-        /// <br/>execute(msls.application.EditDetails screen)
+        /// <br/>execute(msls.application.EditTimesheetDetails screen)
         /// </field>
-        DeleteSelected_execute: [lightSwitchApplication.EditDetails],
+        DeleteSelected_execute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to determine if the SaveChanges method can be executed.
+        /// <br/>canExecute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        SaveChanges_canExecute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to execute the SaveChanges method.
+        /// <br/>execute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        SaveChanges_execute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to determine if the Refresh method can be executed.
+        /// <br/>canExecute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        Refresh_canExecute: [lightSwitchApplication.EditTimesheetDetails],
+        /// <field>
+        /// Called to execute the Refresh method.
+        /// <br/>execute(msls.application.EditTimesheetDetails screen)
+        /// </field>
+        Refresh_execute: [lightSwitchApplication.EditTimesheetDetails],
         /// <field>
         /// Called after the TimesheetDetail List content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TimesheetDetail List_postRender: $parameters,
+        /// <field>
+        /// Called after the WeekEnding content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WeekEnding_postRender: $parameters,
+        /// <field>
+        /// Called after the Instructions content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Instructions_postRender: $parameters,
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: $parameters,
+        /// <field>
+        /// Called after the Header content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Header_postRender: $parameters,
+        /// <field>
+        /// Called after the DateGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DateGroup_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailsQuery_selectedItem_DimDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailsQuery_selectedItem_DimDate_postRender: $parameters,
+        /// <field>
+        /// Called after the DimDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DimDate_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectGroup_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailsQuery_selectedItem_Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailsQuery_selectedItem_Project_postRender: $parameters,
+        /// <field>
+        /// Called after the Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project_postRender: $parameters,
+        /// <field>
+        /// Called after the WorkGroup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkGroup_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailsQuery_selectedItem_TypeOfWork content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailsQuery_selectedItem_TypeOfWork_postRender: $parameters,
+        /// <field>
+        /// Called after the TypeOfWork content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TypeOfWork_postRender: $parameters,
         /// <field>
         /// Called after the WijmoGrid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -180,36 +290,6 @@
         /// </field>
         RowTemplate_postRender: $parameters,
         /// <field>
-        /// Called after the DimDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        DimDate_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate3 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate3_postRender: $parameters,
-        /// <field>
-        /// Called after the Project content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Project_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate5 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate5_postRender: $parameters,
-        /// <field>
-        /// Called after the TypeOfWork content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TypeOfWork_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate7 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate7_postRender: $parameters,
-        /// <field>
         /// Called after the Hours content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -219,74 +299,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Comments_postRender: $parameters
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.AddEditTimesheetDetail, {
-        /// <field>
-        /// Called when a new AddEditTimesheetDetail screen is created.
-        /// <br/>created(msls.application.AddEditTimesheetDetail screen)
-        /// </field>
-        created: [lightSwitchApplication.AddEditTimesheetDetail],
-        /// <field>
-        /// Called before changes on an active AddEditTimesheetDetail screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.AddEditTimesheetDetail screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.AddEditTimesheetDetail],
-        /// <field>
-        /// Called after the Details content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Details_postRender: $parameters,
-        /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: $parameters,
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: $parameters,
-        /// <field>
-        /// Called after the Project content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Project_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate4 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate4_postRender: $parameters,
-        /// <field>
-        /// Called after the TypeOfWork content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TypeOfWork_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate6 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate6_postRender: $parameters,
-        /// <field>
-        /// Called after the Hours content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Hours_postRender: $parameters,
-        /// <field>
-        /// Called after the Comments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Comments_postRender: $parameters,
-        /// <field>
-        /// Called after the DimDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        DimDate_postRender: $parameters,
-        /// <field>
-        /// Called after the DimDate1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        DimDate1_postRender: $parameters
     });
 
 }(msls.application));

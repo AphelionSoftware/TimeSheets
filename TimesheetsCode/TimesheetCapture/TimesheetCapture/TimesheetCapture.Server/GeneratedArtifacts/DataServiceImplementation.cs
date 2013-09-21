@@ -63,7 +63,7 @@ namespace LightSwitchApplication.Implementation
             query = global::System.Linq.Queryable.OrderByDescending(
                 global::System.Linq.Queryable.Where(
                     this.GetQuery<global::LightSwitchApplication.Implementation.DimDate>("DimDates"),
-                    (d) => (d.WeekEnding.HasValue && (PeriodEndDate.HasValue && (d.WeekEnding == PeriodEndDate)))),
+                    (d) => (PeriodEndDate.HasValue && (d.WeekEnding == PeriodEndDate))),
                 (d) => d.c_Date);
             return query;
         }
@@ -83,6 +83,15 @@ namespace LightSwitchApplication.Implementation
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
             query = this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails");
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> GetTimesheet(global::System.Nullable<int> TimesheetID)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
+                (t) => (TimesheetID.HasValue && (t.TimesheetID == TimesheetID)));
             return query;
         }
     

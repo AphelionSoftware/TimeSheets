@@ -31,6 +31,7 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
+      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <EntityType
@@ -1988,6 +1989,20 @@
         Association="FK_TimesheetDetail_TypeOfWork"
         FromEnd="TimesheetDetail"
         ToEnd="TypeOfWork" />
+      <EntityProperty
+        Name="VerCol"
+        IsReadOnly="True"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="8" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -3992,6 +4007,36 @@
         Name="Timesheet"
         EntitySet="Timesheets" />
     </AssociationSet>
+    <QueryOperation
+      Name="GetTimesheet"
+      ReturnType="Timesheet*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TimesheetID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TimesheetID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Timesheets" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TimesheetID"
+        ParameterType=":Int32?" />
+    </QueryOperation>
   </EntityContainer>
   <Association
     Name="FK_BillingDetail_DimDate">
@@ -4039,7 +4084,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="8b4d8ed9-a286-4563-b1f2-599e5a83147a" />
+        Value="4aabe9a8-c44e-4a5d-8217-43335cd3c8af" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -5140,6 +5185,12 @@
           Nullable="False"
           Type="nvarchar"
           Property="TimesheetDetail/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          Name="VerCol"
+          Nullable="False"
+          StoreGeneratedPattern="Computed"
+          Type="timestamp"
+          Property="TimesheetDetail/Properties[VerCol]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

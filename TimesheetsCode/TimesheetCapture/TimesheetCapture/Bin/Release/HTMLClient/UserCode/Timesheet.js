@@ -2,6 +2,9 @@
 
 myapp.Timesheet.created = function (entity) {
     // Write code here.
+ 
+
+
     entity.LoadDate = "1999/01/01";
     entity.TimesheetDate = "1999/01/01";
     myapp.activeDataWorkspace.TimesheetsData.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {

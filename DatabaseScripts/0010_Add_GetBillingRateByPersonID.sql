@@ -1,4 +1,5 @@
-﻿CREATE FUNCTION [dbo].[GetBillingRateByPersonID]
+﻿/*
+CREATE FUNCTION [dbo].[GetBillingRateByPersonID]
 (
 	@BillingDetailPersonID int,
 	@BillingDetailClientID int
@@ -37,4 +38,16 @@ RETURN
 GO
 
 
+INSERT INTO DB_Revisions
+(
+	ScriptName,
+	RevisionNumber
+)
+VALUES
+(
+	'0010_Add_GetBillingRateByPersonID', 
+	10
+);
+GO
 
+*/

@@ -15,11 +15,11 @@ namespace LightSwitchApplication
                                where dimDates.c_Date <= System.DateTime.Now
                                orderby dimDates.DateID descending
                                select dimDates).FirstOrDefault();
-            return setting != null ? setting.WeekEnding : System.DateTime.Now;
+            return new DateTime(setting.WeekEnding.Year, setting.WeekEnding.Month, setting.WeekEnding.Day, 0, 0, 0);
         }
 
         private string strDayOfWeek = "";
-        public string DayOfWeek
+        public string DayOfWeek 
         {
             get
             {
@@ -116,11 +116,11 @@ namespace LightSwitchApplication
             entity.TimesheetDate = strTimesheetDate;
             entity.TimesheetFromDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                           where d.WeekEnding == entity.DimDate.WeekEnding
-                                          orderby d.DateID descending
+                                          orderby d.DateID ascending
                                           select d.DateID).FirstOrDefault();
             entity.TimesheetToDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                         where d.WeekEnding == entity.DimDate.WeekEnding
-                                        orderby d.DateID ascending
+                                        orderby d.DateID descending
                                         select d.DateID).FirstOrDefault();
 
         }
@@ -189,7 +189,9 @@ namespace LightSwitchApplication
             entity.TimesheetDetailCode = tsPerson;
             entity.TimesheetDetailFileName = "Lightswitch";
             entity.LoadDate = System.DateTime.Now;
-
+            entity.ActiveType = DataWorkspace.TimesheetsData.ActiveTypes_SingleOrDefault(1);
+            entity.Exclude = 0;
+            entity.LastUpdateDate = System.DateTime.Now;
         }
         partial void TimesheetDetails_Updating(TimesheetDetail entity)
         {
@@ -205,8 +207,6 @@ namespace LightSwitchApplication
         {
             string strTimesheetDate = entity.DimDate.c_Date.ToString("yyyyMMdd");
 
-            entity.sys_CreatedBy = UserName;
-            entity.sys_CreatedOn = System.DateTime.Now;
             entity.sys_ModifiedBy = UserName;
             entity.sys_ModifiedOn = System.DateTime.Now;
             entity.TimesheetPerson = tsPerson.Replace(" ", "");
@@ -215,15 +215,14 @@ namespace LightSwitchApplication
             entity.TimesheetCode = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
             entity.TimesheetFileName = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
             entity.TimesheetSourceKey = UserName + "_" + strTimesheetDate + "_" + "Lightswitch";
-            entity.LoadDate = System.DateTime.Now;
             entity.TimesheetDate = strTimesheetDate;
             entity.TimesheetFromDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                           where d.WeekEnding == entity.DimDate.WeekEnding
-                                          orderby d.DateID descending
+                                          orderby d.DateID ascending
                                           select d.DateID).FirstOrDefault();
             entity.TimesheetToDateID = (from d in DataWorkspace.TimesheetsData.DimDates
                                         where d.WeekEnding == entity.DimDate.WeekEnding
-                                        orderby d.DateID ascending
+                                        orderby d.DateID descending
                                         select d.DateID).FirstOrDefault();
         }
     }
