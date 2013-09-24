@@ -118,6 +118,15 @@
         /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
         /// Gets the personSorted for this screen.
         /// </field>
+        /// <field name="UnallocatedTimesheetsSorted" type="msls.VisualCollection" elementType="msls.application.UnallocatedTimesheet">
+        /// Gets the unallocatedTimesheetsSorted for this screen.
+        /// </field>
+        /// <field name="PersonName" type="String">
+        /// Gets or sets the personName for this screen.
+        /// </field>
+        /// <field name="BillingStatusSet" type="msls.VisualCollection" elementType="msls.application.BillingStatus">
+        /// Gets the billingStatusSet for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditClient.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -170,6 +179,9 @@
         /// </field>
         /// <field name="TimesheetTimesheetPerson" type="String">
         /// Gets or sets the timesheetTimesheetPerson for this screen.
+        /// </field>
+        /// <field name="TimesheetsByDate" type="msls.VisualCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheetsByDate for this screen.
         /// </field>
         /// <field name="details" type="msls.application.BrowseTimesheets.Details">
         /// Gets the details for this screen.
@@ -255,6 +267,65 @@
         $Screen.call(this, dataWorkspace, "AddEditTypeOfWork", parameters);
     }
 
+    function UnallocatedTimesheets(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the UnallocatedTimesheets screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="UnallocatedTimesheets1" type="msls.VisualCollection" elementType="msls.application.UnallocatedTimesheet">
+        /// Gets the unallocatedTimesheets1 for this screen.
+        /// </field>
+        /// <field name="UnallocatedTimesheetsSorted" type="msls.VisualCollection" elementType="msls.application.UnallocatedTimesheet">
+        /// Gets the unallocatedTimesheetsSorted for this screen.
+        /// </field>
+        /// <field name="ClientName" type="String">
+        /// Gets or sets the clientName for this screen.
+        /// </field>
+        /// <field name="PersonName" type="String">
+        /// Gets or sets the personName for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.UnallocatedTimesheets.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "UnallocatedTimesheets", parameters);
+    }
+
+    function EditUnallocatedTimesheets(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the EditUnallocatedTimesheets screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="UnallocatedTimesheetsSorted" type="msls.VisualCollection" elementType="msls.application.UnallocatedTimesheet">
+        /// Gets the unallocatedTimesheetsSorted for this screen.
+        /// </field>
+        /// <field name="UnallocatedTimesheetClientName" type="String">
+        /// Gets or sets the unallocatedTimesheetClientName for this screen.
+        /// </field>
+        /// <field name="UnallocatedTimesheetPersonName" type="String">
+        /// Gets or sets the unallocatedTimesheetPersonName for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.EditUnallocatedTimesheets.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "EditUnallocatedTimesheets", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         HomeScreen: $defineScreen(HomeScreen, [
@@ -265,7 +336,7 @@
             {
                 name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.TimesheetDetails.filter("Project/Client/ClientCode eq 'Capitec'").orderBy("DimDate/DateID").thenBy("Person/PersonName").expand("DimDate").expand("Person").expand("Project").expand("Timesheet").expand("TypeOfWork");
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetails.filter("Project/Client/ClientCode eq 'Capitec'").orderBy("DimDate/DateID").thenBy("Person/PersonName").expand("DimDate").expand("Person").expand("Project").expand("Timesheet").expand("TypeOfWork");
                 }
             }
         ], [
@@ -280,7 +351,7 @@
             {
                 name: "Clients", kind: "collection", elementType: lightSwitchApplication.Client,
                 createQuery: function (ClientName) {
-                    return this.dataWorkspace.PWTimesheetsData.FilteredClient(ClientName);
+                    return this.dataWorkspace.TimesheetsData.FilteredClient(ClientName);
                 }
             },
             { name: "ClientClientName", kind: "local", type: String }
@@ -316,7 +387,20 @@
             {
                 name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.PersonSorted();
+                    return this.dataWorkspace.TimesheetsData.PersonSorted();
+                }
+            },
+            {
+                name: "UnallocatedTimesheetsSorted", kind: "collection", elementType: lightSwitchApplication.UnallocatedTimesheet,
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.TimesheetsData.UnallocatedTimesheetsSorted(ClientName, PersonName);
+                }
+            },
+            { name: "PersonName", kind: "local", type: String },
+            {
+                name: "BillingStatusSet", kind: "collection", elementType: lightSwitchApplication.BillingStatus,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.BillingStatusSet;
                 }
             }
         ], [
@@ -326,7 +410,7 @@
             {
                 name: "BillingDetails", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
+                    return this.dataWorkspace.TimesheetsData.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
                 }
             }
         ], [
@@ -336,12 +420,18 @@
             {
                 name: "Timesheets", kind: "collection", elementType: lightSwitchApplication.Timesheet,
                 createQuery: function (StartDate, EndDate, TimesheetPerson) {
-                    return this.dataWorkspace.PWTimesheetsData.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
+                    return this.dataWorkspace.TimesheetsData.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },
             { name: "TimesheetEndDate", kind: "local", type: Date },
-            { name: "TimesheetTimesheetPerson", kind: "local", type: String }
+            { name: "TimesheetTimesheetPerson", kind: "local", type: String },
+            {
+                name: "TimesheetsByDate", kind: "collection", elementType: lightSwitchApplication.Timesheet,
+                createQuery: function (StartDate, EndDate, TimesheetPerson) {
+                    return this.dataWorkspace.TimesheetsData.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
+                }
+            }
         ], [
         ]),
 
@@ -350,13 +440,13 @@
             {
                 name: "BillingDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.BillingDate();
+                    return this.dataWorkspace.TimesheetsData.BillingDate();
                 }
             },
             {
                 name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
-                    return this.dataWorkspace.PWTimesheetsData.PersonSorted();
+                    return this.dataWorkspace.TimesheetsData.PersonSorted();
                 }
             }
         ], [
@@ -382,6 +472,38 @@
         AddEditTypeOfWork: $defineScreen(AddEditTypeOfWork, [
             { name: "TypeOfWork", kind: "local", type: lightSwitchApplication.TypeOfWork }
         ], [
+        ]),
+
+        UnallocatedTimesheets: $defineScreen(UnallocatedTimesheets, [
+            {
+                name: "UnallocatedTimesheets1", kind: "collection", elementType: lightSwitchApplication.UnallocatedTimesheet,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.UnallocatedTimesheets;
+                }
+            },
+            {
+                name: "UnallocatedTimesheetsSorted", kind: "collection", elementType: lightSwitchApplication.UnallocatedTimesheet,
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.TimesheetsData.UnallocatedTimesheetsSorted(ClientName, PersonName).expand("BillingStatus").expand("TimesheetDetail").expand("Timesheet");
+                }
+            },
+            { name: "ClientName", kind: "local", type: String },
+            { name: "PersonName", kind: "local", type: String }
+        ], [
+        ]),
+
+        EditUnallocatedTimesheets: $defineScreen(EditUnallocatedTimesheets, [
+            {
+                name: "UnallocatedTimesheetsSorted", kind: "collection", elementType: lightSwitchApplication.UnallocatedTimesheet,
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.TimesheetsData.UnallocatedTimesheetsSorted(ClientName, PersonName);
+                }
+            },
+            { name: "UnallocatedTimesheetClientName", kind: "local", type: String },
+            { name: "UnallocatedTimesheetPersonName", kind: "local", type: String }
+        ], [
+            { name: "AddNew" },
+            { name: "DeleteSelected" }
         ]),
 
         showHomeScreen: $defineShowScreen(function showHomeScreen(options) {
@@ -502,6 +624,30 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("AddEditTypeOfWork", parameters, options);
+        }),
+
+        showUnallocatedTimesheets: $defineShowScreen(function showUnallocatedTimesheets(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the UnallocatedTimesheets screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("UnallocatedTimesheets", parameters, options);
+        }),
+
+        showEditUnallocatedTimesheets: $defineShowScreen(function showEditUnallocatedTimesheets(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the EditUnallocatedTimesheets screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("EditUnallocatedTimesheets", parameters, options);
         })
 
     });

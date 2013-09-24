@@ -34,7 +34,12 @@
         /// Called after the ShowBrowseBillingDetails content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowBrowseBillingDetails_postRender: $parameters
+        ShowBrowseBillingDetails_postRender: $parameters,
+        /// <field>
+        /// Called after the EditUnallocatedTimesheets content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EditUnallocatedTimesheets_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseTimesheetDetails, {
@@ -312,6 +317,46 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ActiveType1_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheets content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheets_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSortedTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSortedTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName1_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted1_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted1Template content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted1Template_postRender: $parameters,
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: $parameters,
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: $parameters,
         /// <field>
         /// Called after the Projects content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -627,6 +672,252 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TypeOfWorkName_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.UnallocatedTimesheets, {
+        /// <field>
+        /// Called when a new UnallocatedTimesheets screen is created.
+        /// <br/>created(msls.application.UnallocatedTimesheets screen)
+        /// </field>
+        created: [lightSwitchApplication.UnallocatedTimesheets],
+        /// <field>
+        /// Called before changes on an active UnallocatedTimesheets screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.UnallocatedTimesheets screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.UnallocatedTimesheets],
+        /// <field>
+        /// Called after the UnallocatedTimesheetList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetList_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSortedTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSortedTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailDateID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailDateID_postRender: $parameters,
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Grid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Grid_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted1_postRender: $parameters,
+        /// <field>
+        /// Called after the UnallocatedTimesheetsSorted1Template content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheetsSorted1Template_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailSourceKey_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName1_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName1_postRender: $parameters,
+        /// <field>
+        /// Called after the Active content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Active_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailFileName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailFileName_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailDateID1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailDateID1_postRender: $parameters,
+        /// <field>
+        /// Called after the Hours1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours1_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments1_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientComments_postRender: $parameters,
+        /// <field>
+        /// Called after the AMComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AMComments_postRender: $parameters,
+        /// <field>
+        /// Called after the TypeOfWorkName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TypeOfWorkName_postRender: $parameters,
+        /// <field>
+        /// Called after the AccountManager content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AccountManager_postRender: $parameters,
+        /// <field>
+        /// Called after the AMEmail content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AMEmail_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingPeriodText content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingPeriodText_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetail content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetail_postRender: $parameters,
+        /// <field>
+        /// Called after the Timesheet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Timesheet_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.EditUnallocatedTimesheets, {
+        /// <field>
+        /// Called when a new EditUnallocatedTimesheets screen is created.
+        /// <br/>created(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        created: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called before changes on an active EditUnallocatedTimesheets screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called to determine if the AddNew method can be executed.
+        /// <br/>canExecute(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        AddNew_canExecute: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called to execute the AddNew method.
+        /// <br/>execute(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        AddNew_execute: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called to determine if the DeleteSelected method can be executed.
+        /// <br/>canExecute(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        DeleteSelected_canExecute: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called to execute the DeleteSelected method.
+        /// <br/>execute(msls.application.EditUnallocatedTimesheets screen)
+        /// </field>
+        DeleteSelected_execute: [lightSwitchApplication.EditUnallocatedTimesheets],
+        /// <field>
+        /// Called after the UnallocatedTimesheet List content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        UnallocatedTimesheet List_postRender: $parameters,
+        /// <field>
+        /// Called after the WijmoGrid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WijmoGrid_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatusID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatusID_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailDateID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailDateID_postRender: $parameters,
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientComments_postRender: $parameters,
+        /// <field>
+        /// Called after the AMComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AMComments_postRender: $parameters
     });
 
 }(msls.application));
