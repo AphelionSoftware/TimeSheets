@@ -19,10 +19,10 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
-    <AuthenticationType>SharePoint</AuthenticationType>
+    <ApplicationServerType>IIS</ApplicationServerType>
+    <AuthenticationType>None</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
-    <AssemblyVersion>2.2.24.0</AssemblyVersion>
+    <AssemblyVersion>2.2.27.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -52,8 +52,7 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>
-    </RequireSecureConnection>
+    <RequireSecureConnection>False</RequireSecureConnection>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PublishLocation>Publish</PublishLocation>
     <DebugSharePointAuthenticationType>AccessControlService</DebugSharePointAuthenticationType>
@@ -198,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <PublishParameter Include="TimesheetsData">
-      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
+      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
     </PublishParameter>
   </ItemGroup>
   <ItemGroup>

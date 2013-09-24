@@ -13,26 +13,26 @@ namespace LightSwitchApplication.Implementation
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class TimeSheets_DevDataService
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.TimeSheets_Dev>
+    public class Timesheets_DataDataService
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.Timesheets_Data>
     {
     
-        public TimeSheets_DevDataService() : base()
+        public Timesheets_DataDataService() : base()
         {
         }
     
         protected override global::Microsoft.LightSwitch.IDataService GetDataService(global::Microsoft.LightSwitch.IDataWorkspace dataWorkspace)
         {
-            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).TimeSheets_Dev;
+            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).Timesheets_Data;
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class TimeSheets_DevServiceImplementation
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.TimeSheets_Dev>
+    public class Timesheets_DataServiceImplementation
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.Timesheets_Data>
     {
-        public TimeSheets_DevServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
+        public Timesheets_DataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
         {
         }
     
@@ -150,12 +150,12 @@ namespace LightSwitchApplication.Implementation
             return base.CreateObject(type);
         }
     
-        protected override global::LightSwitchApplication.Implementation.TimeSheets_Dev CreateObjectContext()
+        protected override global::LightSwitchApplication.Implementation.Timesheets_Data CreateObjectContext()
         {
             string assemblyName = global::System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            return new global::LightSwitchApplication.Implementation.TimeSheets_Dev(this.GetEntityConnectionString(
-                "TimeSheets_Dev",
-                "res://" + assemblyName + "/TimeSheets_Dev.csdl|res://" + assemblyName + "/TimeSheets_Dev.ssdl|res://" + assemblyName + "/TimeSheets_Dev.msl",
+            return new global::LightSwitchApplication.Implementation.Timesheets_Data(this.GetEntityConnectionString(
+                "Timesheets_Data",
+                "res://" + assemblyName + "/Timesheets_Data.csdl|res://" + assemblyName + "/Timesheets_Data.ssdl|res://" + assemblyName + "/Timesheets_Data.msl",
                 "System.Data.SqlClient",
                 true));
         }
@@ -232,18 +232,18 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.IDataService CreateDataService(global::System.Type dataServiceType)
         {
-            if (dataServiceType == typeof(global::LightSwitchApplication.TimeSheets_DevService))
+            if (dataServiceType == typeof(global::LightSwitchApplication.Timesheets_DataService))
             {
-                return new global::LightSwitchApplication.TimeSheets_DevService();
+                return new global::LightSwitchApplication.Timesheets_DataService();
             }
             return base.CreateDataService(dataServiceType);
         }
     
         protected override global::Microsoft.LightSwitch.Internal.IDataServiceImplementation CreateDataServiceImplementation<TDataService>(TDataService dataService)
         {
-            if (typeof(TDataService) == typeof(global::LightSwitchApplication.TimeSheets_DevService))
+            if (typeof(TDataService) == typeof(global::LightSwitchApplication.Timesheets_DataService))
             {
-                return new global::LightSwitchApplication.Implementation.TimeSheets_DevServiceImplementation(dataService);
+                return new global::LightSwitchApplication.Implementation.Timesheets_DataServiceImplementation(dataService);
             }
             return base.CreateDataServiceImplementation(dataService);
         }

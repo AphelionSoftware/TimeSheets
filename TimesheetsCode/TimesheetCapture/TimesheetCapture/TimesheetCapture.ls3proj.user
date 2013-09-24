@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <EnableENC>False</EnableENC>
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartUpClientProject>TimesheetCapture.HTMLClient</StartUpClientProject>
     <EncryptedPublishConnectionString />
     <EncryptedPublishSchemaConnectionString />
@@ -13,7 +13,7 @@
     <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
     <AzureManagementThumbprint />
     <SharePointServerToServerCertificatePassword />
-    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635146652183202662</SchemaManagementLastModelWriteTime>
+    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635154995972052597</SchemaManagementLastModelWriteTime>
   </PropertyGroup>
 </Project>

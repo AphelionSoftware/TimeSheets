@@ -6,7 +6,7 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
 namespace LightSwitchApplication
 {
-    public partial class TimeSheets_DevService
+    public partial class Timesheets_DataService
     {
         partial void BillingDetails_Inserting(BillingDetail entity)
         {

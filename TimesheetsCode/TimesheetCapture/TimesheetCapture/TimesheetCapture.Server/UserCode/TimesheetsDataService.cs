@@ -187,6 +187,7 @@ namespace LightSwitchApplication
             entity.PersonItem = DataWorkspace.TimesheetsData.People_SingleOrDefault(tsPersonID);
             entity.TimesheetDetailName = "N/A";
             entity.TimesheetDetailCode = tsPerson;
+            entity.TimesheetDetailSourceKey = tsPerson;
             entity.TimesheetDetailFileName = "Lightswitch";
             entity.LoadDate = System.DateTime.Now;
             entity.ActiveType = DataWorkspace.TimesheetsData.ActiveTypes_SingleOrDefault(1);

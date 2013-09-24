@@ -19,10 +19,10 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
-    <AuthenticationType>SharePoint</AuthenticationType>
+    <ApplicationServerType>IIS</ApplicationServerType>
+    <AuthenticationType>None</AuthenticationType>
     <ApplicationName>TimesheetsAdmin</ApplicationName>
-    <AssemblyVersion>2.0.21.0</AssemblyVersion>
+    <AssemblyVersion>2.0.23.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -40,7 +40,7 @@
     <PublishUrl />
     <PublishSite>Default Web Site/TimesheetsAdmin</PublishSite>
     <RemotePublish>False</RemotePublish>
-    <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
+    <UseLightSwitchWebDeploymentProvider>True</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
     <AzureDeploymentLabel>TimesheetsAdmin</AzureDeploymentLabel>
@@ -54,8 +54,7 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>
-    </RequireSecureConnection>
+    <RequireSecureConnection>False</RequireSecureConnection>
     <AllowAllWindowsUsers>true</AllowAllWindowsUsers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

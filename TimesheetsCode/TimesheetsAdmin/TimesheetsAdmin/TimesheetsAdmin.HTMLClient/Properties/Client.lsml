@@ -191,8 +191,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="TimeSheets_Dev"
-      EntityContainer="TimeSheets_Dev" />
+      Name="Timesheets_Data"
+      EntityContainer="Timesheets_Data" />
   </EntityContainerGroup>
   <EntityType>
     <EntityType.Attributes>
@@ -313,7 +313,7 @@
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
-        Target="ServiceInterface:TimeSheets_Dev" />
+        Target="ServiceInterface:Timesheets_Data" />
     </EntityContainer.Attributes>
   </EntityContainer>
   <GlobalAttributeGroup>
@@ -529,7 +529,7 @@
     Name="BrowseTimesheetDetails">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -1021,7 +1021,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[TimesheetDetails]" />
+                  Member="Timesheets_Data/Members[TimesheetDetails]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
             <ScreenQueryDefinition.SortCriteria>
@@ -1057,7 +1057,7 @@
     Name="AddEditTimesheetDetail">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -1482,7 +1482,7 @@
     Name="BrowseClients">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -1794,7 +1794,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[FilteredClient]" />
+                  Member="Timesheets_Data/Members[FilteredClient]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -1827,7 +1827,7 @@
     Name="AddEditClient">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -2607,7 +2607,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[PersonSorted]" />
+                  Member="Timesheets_Data/Members[PersonSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2625,7 +2625,7 @@
     Name="BrowseBillingDetails">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -2923,7 +2923,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[BillingDetails]" />
+                  Member="Timesheets_Data/Members[BillingDetails]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
             <ScreenQueryDefinition.SortCriteria>
@@ -2959,7 +2959,7 @@
     Name="BrowseBillingStatus">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -3204,7 +3204,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[BillingStatusSet]" />
+                  Member="Timesheets_Data/Members[BillingStatusSet]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -3222,7 +3222,7 @@
     Name="BrowsePeople">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -3591,7 +3591,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[People]" />
+                  Member="Timesheets_Data/Members[People]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
             <ScreenQueryDefinition.SortCriteria>
@@ -3617,7 +3617,7 @@
     Name="BrowseTimesheets">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4060,7 +4060,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[TimesheetsByDate]" />
+                  Member="Timesheets_Data/Members[TimesheetsByDate]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -4109,7 +4109,7 @@
     Name="BrowseTypesOfWork">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4347,7 +4347,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[TypeOfWorks]" />
+                  Member="Timesheets_Data/Members[TypeOfWorks]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -4365,7 +4365,7 @@
     Name="AddEditBillingDetail">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4656,7 +4656,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[BillingDate]" />
+                  Member="Timesheets_Data/Members[BillingDate]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -4682,7 +4682,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[PersonSorted]" />
+                  Member="Timesheets_Data/Members[PersonSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -4700,7 +4700,7 @@
     Name="AddEditBillingStatus">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4903,7 +4903,7 @@
     Name="AddEditPerson">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5262,7 +5262,7 @@
     Name="AddEditTimesheet">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5597,7 +5597,7 @@
     Name="AddEditTypeOfWork">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5831,7 +5831,7 @@
     Name="BrowseClientRoles">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -6081,7 +6081,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[ClientRoles]" />
+                  Member="Timesheets_Data/Members[ClientRoles]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -6099,7 +6099,7 @@
     Name="AddEditClientRole">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -6625,7 +6625,7 @@
     Name="BrowseProjects">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -7098,7 +7098,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimeSheets_Dev/Members[Projects]" />
+                  Member="Timesheets_Data/Members[Projects]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -7116,7 +7116,7 @@
     Name="AddEditProject">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimeSheets_Dev" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
