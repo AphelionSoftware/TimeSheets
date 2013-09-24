@@ -224,6 +224,7 @@
           <ScalarProperty Name="OverallStatusID" ColumnName="OverallStatusID" />
           <ScalarProperty Name="PeriodEnding" ColumnName="PeriodEnding" />
           <ScalarProperty Name="TimesheetPersonID" ColumnName="TimesheetPersonID" />
+          <ScalarProperty Name="VerCol" ColumnName="VerCol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

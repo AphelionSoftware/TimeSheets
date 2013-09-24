@@ -236,25 +236,26 @@
       <PropertyRef Name="TimesheetID" />
     </Key>
     <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TimesheetSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetName" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetCode" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetFromDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetToDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetPerson" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDate" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
-    <Property Name="LoadDateID" Type="Edm.Int32" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
-    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
-    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
-    <Property Name="PeriodEnding" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
-    <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="TimesheetPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TimesheetSourceKey" Type="Edm.String" MaxLength="255" Unicode="false" />
+    <Property Name="LoadDate" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimesheetName" Type="Edm.String" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetCode" Type="Edm.String" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetFileName" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetFromDateID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetToDateID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetPerson" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="TimesheetDate" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="LoadDateID" Type="Edm.Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="sys_CreatedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" />
+    <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="PeriodEnding" Type="Edm.DateTime" Nullable="false" Precision="0" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="VerCol" Type="Edm.Binary" Nullable="false" MaxLength="8" FixedLength="true" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="Active" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetDateID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="OverallStatusID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="TimesheetPersonID" Type="Edm.Int32" Nullable="false" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Timesheet_ActiveType" ToRole="ActiveType" FromRole="Timesheet" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_Timesheet_DimDate" ToRole="DimDate" FromRole="Timesheet" />
     <NavigationProperty Name="OverallStatus" Relationship="LightSwitchApplication.FK_Timesheet_OverallStatus" ToRole="OverallStatus" FromRole="Timesheet" />

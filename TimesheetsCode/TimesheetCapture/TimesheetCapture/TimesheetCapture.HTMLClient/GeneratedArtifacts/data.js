@@ -713,6 +713,9 @@ window.myapp = msls.application;
         /// <field name="Person" type="msls.application.PersonItem">
         /// Gets or sets the person for this timesheet.
         /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheet.
+        /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
         /// </field>
@@ -1138,7 +1141,8 @@ window.myapp = msls.application;
             { name: "OverallStatus", kind: "reference", type: OverallStatu },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "PeriodEnding", type: Date },
-            { name: "Person", kind: "reference", type: PersonItem }
+            { name: "Person", kind: "reference", type: PersonItem },
+            { name: "VerCol", type: Array }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [

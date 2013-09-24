@@ -5566,11 +5566,12 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
         /// <param name="periodEnding">Initial value of the PeriodEnding property.</param>
+        /// <param name="verCol">Initial value of the VerCol property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDateID">Initial value of the TimesheetDateID property.</param>
         /// <param name="overallStatusID">Initial value of the OverallStatusID property.</param>
         /// <param name="timesheetPersonID">Initial value of the TimesheetPersonID property.</param>
-        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.DateTime periodEnding, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
+        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.DateTime periodEnding, global::System.Byte[] verCol, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
         {
             Timesheet timesheet = new Timesheet();
             timesheet.TimesheetID = timesheetID;
@@ -5585,6 +5586,7 @@ namespace LightSwitchApplication.Implementation
             timesheet.sys_ModifiedOn = sys_ModifiedOn;
             timesheet.sys_ModifiedBy = sys_ModifiedBy;
             timesheet.PeriodEnding = periodEnding;
+            timesheet.VerCol = verCol;
             timesheet.Active = active;
             timesheet.TimesheetDateID = timesheetDateID;
             timesheet.OverallStatusID = overallStatusID;
@@ -5982,6 +5984,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.DateTime _PeriodEnding;
         partial void OnPeriodEndingChanging(global::System.DateTime value);
         partial void OnPeriodEndingChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] VerCol
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_VerCol);
+            }
+            set
+            {
+                OnVerColChanging(value);
+                ReportPropertyChanging("VerCol");
+                _VerCol = value;
+                ReportPropertyChanged("VerCol");
+                OnVerColChanged();
+            }
+        }
+        private global::System.Byte[] _VerCol;
+        partial void OnVerColChanging(global::System.Byte[] value);
+        partial void OnVerColChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
