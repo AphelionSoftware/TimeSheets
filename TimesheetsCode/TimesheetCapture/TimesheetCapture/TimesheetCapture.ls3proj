@@ -19,10 +19,10 @@
     <SignManifests>false</SignManifests>
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
-    <ApplicationServerType>IIS</ApplicationServerType>
-    <AuthenticationType>None</AuthenticationType>
+    <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
+    <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
-    <AssemblyVersion>2.2.27.0</AssemblyVersion>
+    <AssemblyVersion>2.2.29.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -52,7 +52,8 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>False</RequireSecureConnection>
+    <RequireSecureConnection>
+    </RequireSecureConnection>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PublishLocation>Publish</PublishLocation>
     <DebugSharePointAuthenticationType>AccessControlService</DebugSharePointAuthenticationType>

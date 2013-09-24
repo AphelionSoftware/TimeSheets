@@ -31,6 +31,7 @@
       <AutomaticDisplayName
         Expression="(\p{Ll})(\p{Lu})|_+"
         Replacement="$1 $2" />
+      <SharePointEnabled />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
   <EntityType
@@ -4083,7 +4084,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="e30aeca4-5bd1-425e-9ff3-aa5ae0c9ed20" />
+        Value="29ee8cdb-f446-4db3-9d2e-48753283beb7" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />

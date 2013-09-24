@@ -292,3 +292,4 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Releas
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\HTMLClient\Content\Resources\Generated\model.json
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\HTMLClient\Content\Resources\msls.lang-en-us.resjson
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\HTMLClient\UserCode\ManageTimesheets.js
+C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Bin\Release\SharePointLaunch.aspx
