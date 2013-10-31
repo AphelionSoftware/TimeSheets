@@ -12,8 +12,8 @@ myapp.BillingStatus.created = function (entity) {
     //entity.Active = 1;
     //entity.ActiveType = DataWorkspace.ApplicationData.ActiveTypes_SingleOrDefault(1)
     
-    //entity.details.ActiveType = myapp.activeDataWorkspace.PWTimesheetsData.ActiveTypes_SingleOrDefault(1) ;
-    myapp.activeDataWorkspace.PWTimesheetsData.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
+    //entity.details.ActiveType = myapp.activeDataWorkspace.Timesheets_Data.ActiveTypes_SingleOrDefault(1) ;
+    myapp.activeDataWorkspace.Timesheets_Data.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
         entity.ActiveType = ActiveTypesQuery.results[0];
     });
 };

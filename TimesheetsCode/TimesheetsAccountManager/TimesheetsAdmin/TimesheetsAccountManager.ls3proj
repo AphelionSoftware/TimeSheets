@@ -20,9 +20,9 @@
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
     <ApplicationServerType>IIS</ApplicationServerType>
-    <AuthenticationType>None</AuthenticationType>
+    <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetsAdmin</ApplicationName>
-    <AssemblyVersion>1.0.20.0</AssemblyVersion>
+    <AssemblyVersion>1.1.20.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>

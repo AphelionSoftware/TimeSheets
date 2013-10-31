@@ -9,7 +9,7 @@ myapp.Timesheet.created = function (entity) {
     entity.sys_ModifiedOn = "1999/01/01";
     entity.LoadDate = "1999/01/01";
     entity.Active = 1;
-    myapp.activeDataWorkspace.PWTimesheetsData.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
+    myapp.activeDataWorkspace.Timesheets_Data.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
         entity.ActiveType = ActiveTypesQuery.results[0];
     });
 

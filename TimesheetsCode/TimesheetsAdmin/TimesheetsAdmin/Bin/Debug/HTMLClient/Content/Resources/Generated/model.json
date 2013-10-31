@@ -3608,16 +3608,17 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
-          "displayName": "Home Screen v 2.0.21",
+          "displayName": "Home Screen v 2.0.26",
           "id": "HomeScreen",
           "name": "HomeScreen",
           "launchMode": "Single",
           "rootContentItem":
           {
-            "displayName": "Home Screen v 2.0.21",
+            "displayName": "Home Screen v 2.0.26",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -5046,6 +5047,35 @@
                               ]
                             }
                           }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditProject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "AddEditClient/Properties[Projects]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditProject]/Parameters[Project]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "AddEditClient/Properties[Projects]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Project/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
                         ]
                       }
                     ],
@@ -5061,6 +5091,18 @@
                           {
                             "property": { "__id": ":RootCommand/Properties[Icon]" },
                             "value": "msls-add"
+                          },
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditProject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "AddEditClient/Properties[Projects]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditProject]/Parameters[Project]" }
+                              }
+                            }
                           }
                         ]
                       }
@@ -9565,16 +9607,6 @@
                                 }
                               },
                               {
-                                "displayName": "Load Date",
-                                "name": "LoadDate",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[LoadDate]" }
-                                }
-                              },
-                              {
                                 "displayName": "Project Code",
                                 "name": "ProjectCode",
                                 "kind": "Value",
@@ -9585,66 +9617,6 @@
                                 }
                               },
                               {
-                                "displayName": "Load Date ID",
-                                "name": "LoadDateID",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[LoadDateID]" }
-                                }
-                              },
-                              {
-                                "displayName": "Project First Person Name",
-                                "name": "ProjectFirstPersonName",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[ProjectFirstPersonName]" }
-                                }
-                              },
-                              {
-                                "displayName": "Project First Filename",
-                                "name": "ProjectFirstFilename",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[ProjectFirstFilename]" }
-                                }
-                              },
-                              {
-                                "displayName": "Consulting Estimate",
-                                "name": "ConsultingEstimate",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[ConsultingEstimate]" }
-                                }
-                              },
-                              {
-                                "displayName": "Software Estimate",
-                                "name": "SoftwareEstimate",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[SoftwareEstimate]" }
-                                }
-                              },
-                              {
-                                "displayName": "VMEstimate",
-                                "name": "VMEstimate",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[VMEstimate]" }
-                                }
-                              },
-                              {
                                 "displayName": "Project Cap",
                                 "name": "ProjectCap",
                                 "kind": "Value",
@@ -9652,6 +9624,16 @@
                                 "dataSource":
                                 {
                                   "member": { "__id": "Project/Properties[ProjectCap]" }
+                                }
+                              },
+                              {
+                                "displayName": "Monthly Cap",
+                                "name": "MonthlyCap",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Project/Properties[MonthlyCap]" }
                                 }
                               },
                               {
@@ -9735,7 +9717,7 @@
                                 ]
                               },
                               {
-                                "displayName": "Person",
+                                "displayName": "Account Manager",
                                 "name": "Person",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
@@ -9758,46 +9740,6 @@
                                     }
                                   }
                                 ]
-                              },
-                              {
-                                "displayName": "sys Created On",
-                                "name": "sys_CreatedOn",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[sys_CreatedOn]" }
-                                }
-                              },
-                              {
-                                "displayName": "sys Created By",
-                                "name": "sys_CreatedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[sys_CreatedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "sys Modified On",
-                                "name": "sys_ModifiedOn",
-                                "kind": "Value",
-                                "view": { "__id": ":DateTimePicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[sys_ModifiedOn]" }
-                                }
-                              },
-                              {
-                                "displayName": "sys Modified By",
-                                "name": "sys_ModifiedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[sys_ModifiedBy]" }
-                                }
                               },
                               {
                                 "displayName": "Active Type",
@@ -9823,36 +9765,6 @@
                                     }
                                   }
                                 ]
-                              },
-                              {
-                                "displayName": "Monthly Cap",
-                                "name": "MonthlyCap",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[MonthlyCap]" }
-                                }
-                              },
-                              {
-                                "displayName": "Monthly Cap Warning",
-                                "name": "MonthlyCapWarning",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[MonthlyCapWarning]" }
-                                }
-                              },
-                              {
-                                "displayName": "Project Cap Warning",
-                                "name": "ProjectCapWarning",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Project/Properties[ProjectCapWarning]" }
-                                }
                               }
                             ],
                             "propertySources":

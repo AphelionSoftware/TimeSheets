@@ -8,3 +8,5 @@ C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\Ti
 C:\Users\Christina\Documents\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

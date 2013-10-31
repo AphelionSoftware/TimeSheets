@@ -1030,50 +1030,20 @@
         /// </field>
         ProjectSourceKey_postRender: $parameters,
         /// <field>
-        /// Called after the LoadDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        LoadDate_postRender: $parameters,
-        /// <field>
         /// Called after the ProjectCode content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ProjectCode_postRender: $parameters,
         /// <field>
-        /// Called after the LoadDateID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        LoadDateID_postRender: $parameters,
-        /// <field>
-        /// Called after the ProjectFirstPersonName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectFirstPersonName_postRender: $parameters,
-        /// <field>
-        /// Called after the ProjectFirstFilename content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectFirstFilename_postRender: $parameters,
-        /// <field>
-        /// Called after the ConsultingEstimate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ConsultingEstimate_postRender: $parameters,
-        /// <field>
-        /// Called after the SoftwareEstimate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        SoftwareEstimate_postRender: $parameters,
-        /// <field>
-        /// Called after the VMEstimate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        VMEstimate_postRender: $parameters,
-        /// <field>
         /// Called after the ProjectCap content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ProjectCap_postRender: $parameters,
+        /// <field>
+        /// Called after the MonthlyCap content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        MonthlyCap_postRender: $parameters,
         /// <field>
         /// Called after the AdminProject content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -1115,26 +1085,6 @@
         /// </field>
         RowTemplate2_postRender: $parameters,
         /// <field>
-        /// Called after the sys_CreatedOn content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        sys_CreatedOn_postRender: $parameters,
-        /// <field>
-        /// Called after the sys_CreatedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        sys_CreatedBy_postRender: $parameters,
-        /// <field>
-        /// Called after the sys_ModifiedOn content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        sys_ModifiedOn_postRender: $parameters,
-        /// <field>
-        /// Called after the sys_ModifiedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        sys_ModifiedBy_postRender: $parameters,
-        /// <field>
         /// Called after the ActiveType content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -1143,22 +1093,7 @@
         /// Called after the RowTemplate3 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate3_postRender: $parameters,
-        /// <field>
-        /// Called after the MonthlyCap content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        MonthlyCap_postRender: $parameters,
-        /// <field>
-        /// Called after the MonthlyCapWarning content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        MonthlyCapWarning_postRender: $parameters,
-        /// <field>
-        /// Called after the ProjectCapWarning content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectCapWarning_postRender: $parameters
+        RowTemplate3_postRender: $parameters
     });
 
 }(msls.application));

@@ -217,13 +217,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="SharePointLaunch.aspx.cs">
+    <Compile Include="SharePointLaunch.aspx.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </None>
-    <None Include="SharePointLaunch.aspx.designer.cs">
+    </Compile>
+    <Compile Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
-    </None>
+    </Compile>
     <Compile Include="UserCode\Shared\Client.cs" />
     <Compile Include="UserCode\Shared\UnallocatedTimesheet.cs" />
     <Compile Include="UserCode\TimesheetsDataService.cs" />
@@ -236,7 +236,7 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SharePointLaunch.aspx" />
+    <Content Include="SharePointLaunch.aspx" />
     <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
