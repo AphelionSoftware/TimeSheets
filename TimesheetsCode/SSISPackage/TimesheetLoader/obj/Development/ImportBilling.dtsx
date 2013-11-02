@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{F93D2C57-3FD2-4C2B-9D88-219F6FA3AD6C}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="ImportBilling"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="566"
-  DTS:VersionGUID="{F737C432-21FF-40F6-9A34-0FE2F121B7D4}">
+  DTS:VersionBuild="574"
+  DTS:VersionGUID="{0EA58A37-6FB7-40E7-A5A3-2BD2AC1AB4B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -330,7 +330,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="Cap_email">
       <DTS:VariableValue
-        DTS:DataType="8">mstacey@pragmaticworks.com</DTS:VariableValue>
+        DTS:DataType="8">mark.stacey@aphelion.bi</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -470,7 +470,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130725</DTS:VariableValue>
+        DTS:DataType="3">20131006</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2414,8 +2414,8 @@ where [refTable].[intTimesheetDetailID] = ?</property>
               <DTS:ForEachVariableMappings>
                 <DTS:ForEachVariableMapping
                   DTS:CreationName=""
-                  DTS:DTSID="{CF674444-2EE7-4FB3-A232-3033E80CF598}"
-                  DTS:ObjectName="{CF674444-2EE7-4FB3-A232-3033E80CF598}"
+                  DTS:DTSID="{B4BCFEAD-33BE-4AFE-AAF2-2C3199553FB9}"
+                  DTS:ObjectName="{B4BCFEAD-33BE-4AFE-AAF2-2C3199553FB9}"
                   DTS:ValueIndex="0"
                   DTS:VariableName="User::AM_ImportFilename" />
               </DTS:ForEachVariableMappings>
@@ -2496,8 +2496,8 @@ where [refTable].[intTimesheetDetailID] = ?</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="197,205"
-          Size="197,248"
+          PanelSize="351,205"
+          Size="351,248"
           Id="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles"
           TopLeft="26.5000000000001,69.5" />
         <EdgeLayout
@@ -2506,20 +2506,20 @@ where [refTable].[intTimesheetDetailID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.5,36"
+              EndConnector="134.5,36"
               Start="0,0"
-              End="57.5,28.5">
+              End="134.5,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.5,0" />
+                    End="130.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.5,0"
-                    Point2="57.5,0"
-                    Point3="57.5,4" />
+                    Point1="130.5,0"
+                    Point2="134.5,0"
+                    Point3="134.5,4" />
                   <mssgle:LineSegment
-                    End="57.5,28.5" />
+                    End="134.5,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2530,18 +2530,30 @@ where [refTable].[intTimesheetDetailID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\SEQ_ImportBilling.PrecedenceConstraints[Constraint 1]"
-          TopLeft="122.25,317.5">
+          TopLeft="202,317.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33.5"
+              EndConnector="-82.5000000000001,33.5"
               Start="0,0"
-              End="0,26">
+              End="-82.5000000000001,26">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
+                    End="0,12.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.75"
+                    Point2="0,16.75"
+                    Point3="-4,16.75" />
+                  <mssgle:LineSegment
+                    End="-78.5000000000001,16.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.5000000000001,16.75"
+                    Point2="-82.5000000000001,16.75"
+                    Point3="-82.5000000000001,20.75" />
+                  <mssgle:LineSegment
+                    End="-82.5000000000001,26" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2553,15 +2565,15 @@ where [refTable].[intTimesheetDetailID] = ?</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="262,475"
-          Size="262,518"
+          PanelSize="383,475"
+          Size="383,518"
           Id="Package\Sequence Container\SEQ_ImportBilling"
           TopLeft="5.50000000000003,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="272,579"
-          Size="272,622"
+          PanelSize="394,579"
+          Size="394,622"
           Id="Package\Sequence Container"
           TopLeft="5.50000000000009,211.5" />
       </GraphLayout>
@@ -2729,7 +2741,9 @@ where [refTable].[intTimesheetDetailID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2763,7 +2777,9 @@ where [refTable].[intTimesheetDetailID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2811,7 +2827,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>

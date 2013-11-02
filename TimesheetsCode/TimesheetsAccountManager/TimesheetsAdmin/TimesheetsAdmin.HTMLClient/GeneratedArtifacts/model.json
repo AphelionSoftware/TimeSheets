@@ -4192,7 +4192,8 @@
         },
         {
           "id": "LightSwitchServiceApplicationGroup",
-          "name": "LightSwitchServiceApplicationGroup"
+          "name": "LightSwitchServiceApplicationGroup",
+          ":@SharePointEnabled": { }
         },
         {
           "displayName": "Home Screen v 0.13",

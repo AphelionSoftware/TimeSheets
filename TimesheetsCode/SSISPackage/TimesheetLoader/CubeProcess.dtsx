@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{DCA66F3D-28BA-4884-A225-AB574A1BF949}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="CubeProcess"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="553"
-  DTS:VersionGUID="{537AD824-E906-494F-B448-4131E1BBF3B1}">
+  DTS:VersionBuild="554"
+  DTS:VersionGUID="{4EBCAB24-7F5D-4D3C-9C20-8A4CEA4AA696}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -441,7 +441,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130707</DTS:VariableValue>
+        DTS:DataType="3">20131006</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -774,6 +774,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           DTS:refId="Package\SEQ_Cube_Backup\Backup Cube"
           DTS:CreationName="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
           DTS:Description="Analysis Services Execute DDL Task"
+          DTS:Disabled="True"
           DTS:DTSID="{2c5541eb-273a-4f84-897c-4b824bd18dad}"
           DTS:ExecutableType="Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask, Microsoft.SqlServer.ASTasks, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
           DTS:LocaleID="-1"
@@ -868,7 +869,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="166,42"
           Id="Package\SEQ_Cube_Backup\Back Up Database"
@@ -982,6 +983,13 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           Size="378,350"
           Id="Package\SEQ_Cube_Backup"
           TopLeft="477,196" />
+        <AnnotationLayout
+          Text="Not doing the backup as all data is in SQL Azure"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="284,60"
+          Id="1054fa2d-35e7-48ae-b3a2-37d8a455d48c"
+          TopLeft="945,432" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

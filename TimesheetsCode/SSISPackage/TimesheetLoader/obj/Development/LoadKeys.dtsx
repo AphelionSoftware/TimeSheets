@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{BE5E5252-691E-49B5-8609-574F9CFF3284}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="LoadKeys"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="609"
-  DTS:VersionGUID="{18F4D3D1-6147-4901-B5CC-406DBB983AFB}">
+  DTS:VersionBuild="613"
+  DTS:VersionGUID="{DDA9FBC2-20AF-48EA-8B48-AE46B5EAAFC3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -483,7 +483,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130811</DTS:VariableValue>
+        DTS:DataType="3">20131007</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1042,19 +1042,19 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(ClientSourceKey) ClientSourceKey FROM dbo.Client</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT ClientID, CAST(UPPER(ClientSourceKey) as nvarchar(255)) ClientSourceKey FROM dbo.Client</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT UPPER(ClientSourceKey) ClientSourceKey FROM dbo.Client) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT ClientID, CAST(UPPER(ClientSourceKey) as nvarchar(255)) ClientSourceKey FROM dbo.Client) [refTable]
 where [refTable].[ClientSourceKey] = ?</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the type of connection used to access the reference dataset."
                       name="ConnectionType"
-                      typeConverter="LookupConnectionType">1</property>
+                      typeConverter="LookupConnectionType">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the cache type of the lookup table."
@@ -1080,7 +1080,7 @@ where [refTable].[ClientSourceKey] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClientSourceKey" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClientID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ClientID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ClientSourceKey" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1097,11 +1097,11 @@ where [refTable].[ClientSourceKey] = ?</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Keys\DFT_Client\LKP_Client.Connections[CacheConnection]"
-                      connectionManagerID="{598E52B6-CB4A-4795-8682-F502AAA3F9BE}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[Cache Client]"
+                      refId="Package\Keys\DFT_Client\LKP_Client.Connections[OleDbConnection]"
+                      connectionManagerID="{D5838353-9B04-47AF-B89F-E8C1DBBB6093}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[OLEDB_PWTimesheets]"
                       description="Connection manager used to access lookup data."
-                      name="CacheConnection" />
+                      name="OleDbConnection" />
                   </connections>
                   <inputs>
                     <input
@@ -1136,6 +1136,22 @@ where [refTable].[ClientSourceKey] = ?</property>
                       exclusionGroup="1"
                       name="Lookup Match Output"
                       synchronousInputId="Package\Keys\DFT_Client\LKP_Client.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Keys\DFT_Client\LKP_Client.Outputs[Lookup Match Output].Columns[ClientID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Keys\DFT_Client\LKP_Client.Outputs[Lookup Match Output].Columns[ClientID]"
+                          name="ClientID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">ClientID</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
                       <externalMetadataColumns />
                     </output>
                     <output
@@ -1832,21 +1848,23 @@ where [refTable].[ClientSourceKey] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(PersonSourceKey) PersonSourceKey
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT PersonID,
+CAST(UPPER( PersonSourceKey) as nvarchar(255)) PersonSourceKey
 FROM dbo.Person</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT UPPER(PersonSourceKey) PersonSourceKey
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT PersonID,
+CAST(UPPER( PersonSourceKey) as nvarchar(255)) PersonSourceKey
 FROM dbo.Person) [refTable]
 where [refTable].[PersonSourceKey] = ?</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the type of connection used to access the reference dataset."
                       name="ConnectionType"
-                      typeConverter="LookupConnectionType">1</property>
+                      typeConverter="LookupConnectionType">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the cache type of the lookup table."
@@ -1872,7 +1890,7 @@ where [refTable].[PersonSourceKey] = ?</property>
                     <property
                       dataType="System.String"
                       description="Indicates whether to reference metadata in an XML format."
-                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PersonSourceKey" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PersonID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PersonID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PersonSourceKey" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1889,11 +1907,11 @@ where [refTable].[PersonSourceKey] = ?</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Keys\DFT_Consultant\LKP_Consultant.Connections[CacheConnection]"
-                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      refId="Package\Keys\DFT_Consultant\LKP_Consultant.Connections[OleDbConnection]"
+                      connectionManagerID="{D5838353-9B04-47AF-B89F-E8C1DBBB6093}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[OLEDB_PWTimesheets]"
                       description="Connection manager used to access lookup data."
-                      name="CacheConnection" />
+                      name="OleDbConnection" />
                   </connections>
                   <inputs>
                     <input
@@ -2342,19 +2360,21 @@ where [refTable].[PersonSourceKey] = ?</property>
                       description="Specifies the SQL statement that generates the lookup table."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT UPPER(RTRIM(ProjectSourceKey)) ProjectSourceKey , ClientID FROM dbo.Project</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CAST(UPPER(ProjectSourceKey) as nvarchar(255)) ProjectSourceKey, ProjectID, ClientID
+FROM dbo.Project</property>
                     <property
                       dataType="System.String"
                       description="Specifies a SQL statement that uses parameters to generate the lookup table."
                       expressionType="Notify"
                       name="SqlCommandParam"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT UPPER(RTRIM(ProjectSourceKey)) ProjectSourceKey , ClientID FROM dbo.Project) [refTable]
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (SELECT CAST(UPPER(ProjectSourceKey) as nvarchar(255)) ProjectSourceKey, ProjectID, ClientID
+FROM dbo.Project) [refTable]
 where [refTable].[ProjectSourceKey] = ?</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the type of connection used to access the reference dataset."
                       name="ConnectionType"
-                      typeConverter="LookupConnectionType">1</property>
+                      typeConverter="LookupConnectionType">0</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the cache type of the lookup table."
@@ -2397,11 +2417,11 @@ where [refTable].[ProjectSourceKey] = ?</property>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Keys\DFT_Project\LKP_Project.Connections[CacheConnection]"
-                      connectionManagerID="{2799E0C4-6905-40F4-888A-556720B02199}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[Cache Project]"
+                      refId="Package\Keys\DFT_Project\LKP_Project.Connections[OleDbConnection]"
+                      connectionManagerID="{D5838353-9B04-47AF-B89F-E8C1DBBB6093}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[OLEDB_PWTimesheets]"
                       description="Connection manager used to access lookup data."
-                      name="CacheConnection" />
+                      name="OleDbConnection" />
                   </connections>
                   <inputs>
                     <input
@@ -2737,14 +2757,14 @@ where [refTable].[ProjectSourceKey] = ?</property>
               <paths>
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
-                  endId="Package\Keys\DFT_Project\OLEDEST_Project.Inputs[OLE DB Destination Input]"
-                  name="Derived Column Output"
-                  startId="Package\Keys\DFT_Project\DRC_Client.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Keys\DFT_Project.Paths[Derived Column Output]"
                   endId="Package\Keys\DFT_Project\LKP_Project.Inputs[Lookup Input]"
                   name="Derived Column Output"
                   startId="Package\Keys\DFT_Project\DRC_Copy.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Keys\DFT_Project.Paths[Derived Column Output]"
+                  endId="Package\Keys\DFT_Project\OLEDEST_Project.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Keys\DFT_Project\DRC_Client.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Excel Source Output]"
                   endId="Package\Keys\DFT_Project\DRC_Copy.Inputs[Derived Column Input]"
@@ -3601,7 +3621,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         <NodeLayout
           Size="151,42"
           Id="Package\Keys\DFT_Client\OLEDest_Client"
-          TopLeft="648,387" />
+          TopLeft="649,424" />
         <NodeLayout
           Size="129,42"
           Id="Package\Keys\DFT_Client\DRC_Copy"
@@ -3616,31 +3636,37 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           TopLeft="591,167" />
         <EdgeLayout
           Id="Package\Keys\DFT_Client.Paths[Lookup No Match Output]"
-          TopLeft="742,344">
+          TopLeft="677.5,365">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-18.5,43"
+              EndConnector="47,59"
               Start="0,0"
-              End="-18.5,35.5">
+              End="47,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-14.5,0" />
+                    End="0,25.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-14.5,0"
-                    Point2="-18.5,0"
-                    Point3="-18.5,4" />
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
                   <mssgle:LineSegment
-                    End="-18.5,35.5" />
+                    End="43,29.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43,29.5"
+                    Point2="47,29.5"
+                    Point3="47,33.5" />
+                  <mssgle:LineSegment
+                    End="47,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-74.30638671875,-17.609375,111.6127734375,11.609375"
+              BoundingBox="-32.30638671875,34.5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3663,7 +3689,9 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3697,7 +3725,9 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3759,40 +3789,40 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         <NodeLayout
           Size="156,42"
           Id="Package\Keys\DFT_Consultant\AODEST_Person"
-          TopLeft="664,396" />
+          TopLeft="700,429" />
         <EdgeLayout
           Id="Package\Keys\DFT_Consultant.Paths[Lookup No Match Output]"
           TopLeft="732,370">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10,26"
+              EndConnector="46,59"
               Start="0,0"
-              End="10,18.5">
+              End="46,51.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9" />
+                    End="0,25.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,9"
-                    Point2="0,13"
-                    Point3="4,13" />
+                    Point1="0,25.5"
+                    Point2="0,29.5"
+                    Point3="4,29.5" />
                   <mssgle:LineSegment
-                    End="6,13" />
+                    End="42,29.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="6,13"
-                    Point2="10,13"
-                    Point3="10,17" />
+                    Point1="42,29.5"
+                    Point2="46,29.5"
+                    Point3="46,33.5" />
                   <mssgle:LineSegment
-                    End="10,18.5" />
+                    End="46,51.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-50.80638671875,18,111.6127734375,11.609375"
+              BoundingBox="-32.80638671875,34.5,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3815,7 +3845,9 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3849,7 +3881,9 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3912,6 +3946,102 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           Id="Package\Keys\DFT_Project\DRC_Client"
           TopLeft="719,388" />
         <EdgeLayout
+          Id="Package\Keys\DFT_Project.Paths[Excel Source Output]"
+          TopLeft="665.5,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Keys\DFT_Project.Paths[Derived Column Output]"
+          TopLeft="785,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-31,28"
+              Start="0,0"
+              End="-31,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10"
+                    Point2="0,14"
+                    Point3="-4,14" />
+                  <mssgle:LineSegment
+                    End="-27,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-27,14"
+                    Point2="-31,14"
+                    Point3="-31,18" />
+                  <mssgle:LineSegment
+                    End="-31,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
+          TopLeft="740,265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-7,62"
+              Start="0,0"
+              End="0.5,62">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,58" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,58"
+                    Point2="22.5,62"
+                    Point3="18.5,62" />
+                  <mssgle:LineSegment
+                    End="0.5,62" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Keys\DFT_Project.Paths[Lookup No Match Output]"
           TopLeft="665,348">
           <EdgeLayout.Curve>
@@ -3943,98 +4073,8 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="5.19361328125,25,111.6127734375,11.609375"
+              BoundingBox="4.19361328125,25,111.6127734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Excel Source Output]"
-          TopLeft="665.5,209">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Derived Column Output]"
-          TopLeft="740,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-7,62"
-              Start="0,0"
-              End="0.5,62">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,58" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,58"
-                    Point2="22.5,62"
-                    Point3="18.5,62" />
-                  <mssgle:LineSegment
-                    End="0.5,62" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
-          TopLeft="785,430">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31,28"
-              Start="0,0"
-              End="-31,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10"
-                    Point2="0,14"
-                    Point3="-4,14" />
-                  <mssgle:LineSegment
-                    End="-27,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27,14"
-                    Point2="-31,14"
-                    Point3="-31,18" />
-                  <mssgle:LineSegment
-                    End="-31,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4060,6 +4100,19 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

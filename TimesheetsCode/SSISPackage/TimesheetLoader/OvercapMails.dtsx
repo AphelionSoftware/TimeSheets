@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{BEE3E8B4-C959-4BBD-AE23-40B80488EB83}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="OvercapMails"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="571"
-  DTS:VersionGUID="{E6E71E8F-6E84-4047-A6C9-DF099408B31C}">
+  DTS:VersionBuild="572"
+  DTS:VersionGUID="{F4694E24-5D72-4BF8-A7B1-E09D72DB0B6B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,12 +29,12 @@
           ConnectionString="OutgoingRequiresAuth=False;SMTPConnectionSetting=;SMTPConnectionUsername=;ConnectionRequiresSPA=False;MailAccountType=3;ServerAddress=smtp.gmail.com;UserName=mark.stacey@aphelion.ws;ServerPort=587;RequiresSSLConnection=False;EncryptedConnectionType=2;ServerTimeout=60;RootFolder=;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="5WWmU092ZQ=="
-            IV="CL1wM4y5H14=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="KXKdhTMUCA=="
+            IV="2zgnRwPAtDQ=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>CL1wM4y5H15+QFKZgrkonnJnftxzDGsZK66Yyu8UmfclGOwucQjDP19SQDy2TGD41Hfpy4yu+Q0=</CipherValue>
+              <CipherValue>2zgnRwPAtDQeeeFP3QhhM3ajHmQazmlVs6dZxIDb15n0I/kmKBqbEn+OSNCDsRs7TbX3pFQKtLI=</CipherValue>
             </CipherData>
           </EncryptedData>
         </EmailConnectionManager>
@@ -462,7 +462,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130626</DTS:VariableValue>
+        DTS:DataType="3">20131007</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2317,49 +2317,7 @@ from [Timesheets]</property>
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_OverCap\FL_OverCapMails\TF_Email"
-              DTS:CreationName="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Advanced Email and SMS Task"
-              DTS:DTSID="{f6ccfa8a-362a-4d22-ae34-2cbc1ecdd1e9}"
-              DTS:ExecutableType="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:MaxErrorCount="10000"
-              DTS:ObjectName="TF_Email"
-              DTS:TaskContact="Advanced Email and SMS Task; Pragmatic Works, Inc; Task Factory (c) 2009 - 2012 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:LoggingOptions
-                DTS:FilterKind="0" />
-              <DTS:PropertyExpression
-                DTS:Name="Message">"The project " +  @[User::Cap_Project] + " has a billing amount larger than the project cap.
-The billable amount is " +  (DT_STR, 255, 1252) @[User::Cap_Invoice] + " and the cap is " +  (DT_STR, 255, 1252)   @[User::CAP_Cap] + ".
-
-This is a delta of "  +   @[User::CAP_Delta]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="SendTo">@[User::Cap_email]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="Subject">"The project " +  @[User::Cap_Project] + " has a billing amount larger than the project cap."</DTS:PropertyExpression>
-              <DTS:ObjectData>
-                <AdvancedEmailTask
-                  Message="The project  has a billing amount larger than the project cap.&#xA;The billable amount is  and the cap is .&#xA;&#xA;This is a delta of "
-                  MessageSourceType="Direct_Input"
-                  MessageSource=""
-                  MailConnection="Afrihost"
-                  SendToType="Email"
-                  Subject="The project  has a billing amount larger than the project cap."
-                  SendTo="mstacey@pragmaticworks.com"
-                  SendFrom="mark.stacey@aphelion.bi"
-                  SendToCC="mark.stacey@aphelion.bi;adeleswanepoel@aphelion.bi"
-                  SendToBCC=""
-                  Priority="Normal"
-                  Attachments=""
-                  UsePlainText="False"
-                  PlainTextMessage="" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
+          <DTS:Executables />
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
@@ -2423,15 +2381,11 @@ This is a delta of "  +   @[User::CAP_Delta]</DTS:PropertyExpression>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="143,42"
           Id="Package\SEQ_OverCap\DFT_Overcap 1"
           TopLeft="318,36" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\SEQ_OverCap\FL_OverCapMails\TF_Email"
-          TopLeft="42.5,24.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"

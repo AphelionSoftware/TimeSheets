@@ -326,3 +326,4 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsA
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Bin\Debug\HTMLClient\Scripts\Generated\resources.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Bin\Debug\SharePointLaunch.aspx

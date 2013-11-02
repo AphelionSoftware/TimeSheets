@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{903A8ACE-E552-4773-9428-F39EBF9763F0}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="UnallocatedMails"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="562"
-  DTS:VersionGUID="{D898A993-AD29-4DEB-8A33-D1800FEFA3B6}">
+  DTS:VersionBuild="563"
+  DTS:VersionGUID="{2C6B76BD-C474-4632-8AEE-36C586C8439B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,12 +29,12 @@
           ConnectionString="OutgoingRequiresAuth=False;SMTPConnectionSetting=;SMTPConnectionUsername=;ConnectionRequiresSPA=False;MailAccountType=3;ServerAddress=smtp.gmail.com;UserName=mark.stacey@aphelion.ws;ServerPort=587;RequiresSSLConnection=False;EncryptedConnectionType=2;ServerTimeout=60;RootFolder=;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="3PJTfhsIKA=="
-            IV="pXFvp5azIlA=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="E4u4ldbauQ=="
+            IV="7O0Dwrw39Xw=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>pXFvp5azIlDag6qzQPkkdgveoHzF8Z3eVdwE13gxQQ++cXIMIe+hkvSwajldxGV+rPVGwRDdyb8=</CipherValue>
+              <CipherValue>7O0Dwrw39Xxy6eCDR7NIg0wEPvLK7xc/rfQ6D2smsal0Nz+kixQkdxJ4QYKkoxo+4dd5RlhrIyQ=</CipherValue>
             </CipherData>
           </EncryptedData>
         </EmailConnectionManager>
@@ -451,7 +451,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130626</DTS:VariableValue>
+        DTS:DataType="3">20131007</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -781,46 +781,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_Unallocated\FL_Unallocated\TF_Email"
-              DTS:CreationName="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Advanced Email and SMS Task"
-              DTS:DTSID="{858E3A08-AAD5-49F7-950E-F1CB575CB4A9}"
-              DTS:ExecutableType="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:MaxErrorCount="10000"
-              DTS:ObjectName="TF_Email"
-              DTS:TaskContact="Advanced Email and SMS Task; Pragmatic Works, Inc; Task Factory (c) 2009 - 2012 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:LoggingOptions
-                DTS:FilterKind="0" />
-              <DTS:PropertyExpression
-                DTS:Name="Message">" " + @[User::Cap_Caption]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="SendTo">@[User::Cap_email]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="Subject">" " + @[User::Cap_Caption]</DTS:PropertyExpression>
-              <DTS:ObjectData>
-                <AdvancedEmailTask
-                  Message=" Unallocated timesheets"
-                  MessageSourceType="Direct_Input"
-                  MessageSource=""
-                  MailConnection="Afrihost"
-                  SendToType="Email"
-                  Subject=" Unallocated timesheets"
-                  SendTo="mark.stacey@aphelion.bi"
-                  SendFrom="markgstacey@aphelion.ws"
-                  SendToCC="markgstacey@aphelion.bi;adele.swanepoel@aphelion.bi"
-                  SendToBCC=""
-                  Priority="Normal"
-                  Attachments=""
-                  UsePlainText="False"
-                  PlainTextMessage="" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
+          <DTS:Executables />
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
@@ -860,15 +821,11 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="158,42"
           Id="Package\SEQ_Unallocated\EST_Unallocated"
           TopLeft="5.50000000000001,5.5" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\SEQ_Unallocated\FL_Unallocated\TF_Email"
-          TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"

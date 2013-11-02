@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+<<<<<<< HEAD
+    <Document FullPath="C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\Properties\Service.lsml" Checksum="00769E07D2452EB1C14BEBA910178D15BA35344DBC18F66089F8F20A7B071FCA" />
+=======
+    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\Properties\Service.lsml" Checksum="2532F1E6F3286505EAD8E84D7E9A8A9982C612E1D312E028CD18710BD482488C" />
+>>>>>>> Timesheets Account Manager
+  </Documents>
+</ModelDocumentManifest>

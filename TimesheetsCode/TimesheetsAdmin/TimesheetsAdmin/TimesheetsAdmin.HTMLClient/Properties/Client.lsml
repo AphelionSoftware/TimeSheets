@@ -326,7 +326,7 @@
     Name="HomeScreen">
     <Screen.Attributes>
       <DisplayName
-        Value="Home Screen v 2.0.26" />
+        Value="Home Screen v 2.0.25" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem

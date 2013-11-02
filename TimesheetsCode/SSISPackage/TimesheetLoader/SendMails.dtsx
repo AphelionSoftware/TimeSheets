@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{356A2207-8805-4917-A115-BFB9809D32BE}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="SendMails"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="591"
-  DTS:VersionGUID="{A962AA42-D51E-46FB-8CA4-A2B65F568C7B}">
+  DTS:VersionBuild="595"
+  DTS:VersionGUID="{2BA66BDA-67AC-4D39-849C-9E0FAA717B30}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,15 +29,25 @@
           ConnectionString="OutgoingRequiresAuth=False;SMTPConnectionSetting=;SMTPConnectionUsername=;ConnectionRequiresSPA=False;MailAccountType=3;ServerAddress=smtp.gmail.com;UserName=mark.stacey@aphelion.ws;ServerPort=587;RequiresSSLConnection=False;EncryptedConnectionType=2;ServerTimeout=60;RootFolder=;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="XFLbOW8Uqw=="
-            IV="sPepQlwwung=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="oPjLW1Vl3w=="
+            IV="Ugj6AK11wXo=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>sPepQlwwunhdJS6EUxjweL4QmItNAPWI1PN+O9qR0C6EyMp2jwOBV0vUuC+r8Ze9ktmVUOzhnR0=</CipherValue>
+              <CipherValue>Ugj6AK11wXrO3C5dzJ3mpdL9Lu5r2aTwqJB/DKIga7YZnkhGNxxNkCO3BWoQzFGjB5hMoP3Zhwo=</CipherValue>
             </CipherData>
           </EncryptedData>
         </EmailConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{E0AEE49B-5B22-4AAA-B95E-9D29381DD0A4}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp.gmail.com;UseWindowsAuthentication=False;EnableSsl=True;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -492,7 +502,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20130626</DTS:VariableValue>
+        DTS:DataType="3">20131007</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -731,6 +741,17 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{E3AAB9DA-06EC-40BA-A4FE-0AF193C11A40}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;You logged an incorrect project code : &quot; +  @[User::WPProject] + &quot; in your timesheet file &quot; +  @[User::WPSourceFile]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WPSubject">
+      <DTS:VariableValue
+        DTS:DataType="8">You logged an incorrect project code :  in your timesheet file </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{4F7A08D0-C0AB-481D-857D-924DB420FCFC}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -858,15 +879,14 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           <DTS:Executables>
             <DTS:Executable
               DTS:refId="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets\TF Timer Task"
-              DTS:CreationName="PW.TaskFactory.TimerTask.TimerTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Timer Task"
+              DTS:CreationName="SSIS.ReplacementTask"
+              DTS:Description="Pragmatic Works, Inc; Task Factory (c) 2009 - 2011 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
               DTS:Disabled="True"
               DTS:DTSID="{18f45c54-c664-413e-9e4a-e68fcdfe1512}"
-              DTS:ExecutableType="PW.TaskFactory.TimerTask.TimerTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
+              DTS:ExecutableType="SSIS.ReplacementTask"
               DTS:LocaleID="-1"
               DTS:ObjectName="TF Timer Task"
-              DTS:TaskContact="Pragmatic Works, Inc; Task Factory (c) 2009 - 2011 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
+              DTS:TaskContact="Pragmatic Works, Inc; Task Factory (c) 2009 - 2011 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com">
               <DTS:Variables />
               <DTS:ObjectData>
                 <TimerTask
@@ -971,75 +991,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF Timer Task"
-              DTS:CreationName="PW.TaskFactory.TimerTask.TimerTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Timer Task"
-              DTS:Disabled="True"
-              DTS:DTSID="{79c2178a-dc61-4815-afe4-2db13a52ef20}"
-              DTS:ExecutableType="PW.TaskFactory.TimerTask.TimerTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="TF Timer Task"
-              DTS:TaskContact="Pragmatic Works, Inc; Task Factory (c) 2009 - 2011 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <TimerTask
-                  TimerOption="PauseFor"
-                  TimerHours="0"
-                  TimerMinutes="0"
-                  TimerFrom="timer_task"
-                  TimerSeconds="2"
-                  TimerDateTime="2013/01/05 03:51:45 PM"
-                  TimerVariable="" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF_EmailIncorrectTimesheets_Table"
-              DTS:CreationName="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Advanced Email and SMS Task"
-              DTS:DTSID="{cbc1f309-5140-4a4d-a9ab-0d2e466c0684}"
-              DTS:ExecutableType="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:MaxErrorCount="100000"
-              DTS:ObjectName="TF_EmailIncorrectTimesheets_Table"
-              DTS:TaskContact="Advanced Email and SMS Task; Pragmatic Works, Inc; Task Factory (c) 2009 - 2012 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:LoggingOptions
-                DTS:FilterKind="0" />
-              <DTS:PropertyExpression
-                DTS:Name="Message">@[User::MTList]</DTS:PropertyExpression>
-              <DTS:ObjectData>
-                <AdvancedEmailTask
-                  Message="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0 Transitional//EN&quot;&gt;&#xA;&lt;HTML&gt;&lt;HEAD&gt;&#xA;&lt;META content=&quot;text/html; charset=unicode&quot; http-equiv=Content-Type&gt;&#xA;&lt;META name=GENERATOR content=&quot;MSHTML 9.00.8112.16457&quot;&gt;&lt;/HEAD&gt;&#xA;&lt;BODY&gt;&#xA;&lt;P&gt;&amp;nbsp;&lt;/P&gt;&lt;/BODY&gt;&lt;/HTML&gt;&#xA;"
-                  MessageSourceType="Variable"
-                  MessageSource="MTList"
-                  MailConnection="Afrihost"
-                  SendToType="Email"
-                  Subject="Missing Timesheets Table"
-                  SendTo="mark.stacey@aphelion.bi"
-                  SendFrom="mark.stacey@aphelion.bi"
-                  SendToCC="jennifer.poole@lessfuss.co.za;mark.stacey@aphelion.bi"
-                  SendToBCC=""
-                  Priority="High"
-                  Attachments=""
-                  UsePlainText="False"
-                  PlainTextMessage="Missing Timesheets" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-          <DTS:PrecedenceConstraints>
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table.PrecedenceConstraints[Constraint]"
-              DTS:CreationName=""
-              DTS:DTSID="{f2e3567e-bb2a-4cf4-ba81-95dfdedeb2d0}"
-              DTS:From="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF_EmailIncorrectTimesheets_Table"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Constraint"
-              DTS:To="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF Timer Task" />
-          </DTS:PrecedenceConstraints>
+          <DTS:Executables />
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
@@ -1139,49 +1091,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_OverCap\FL_OverCap\TF_Email"
-              DTS:CreationName="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Advanced Email and SMS Task"
-              DTS:DTSID="{adfeae31-6ec1-4fc4-a4b7-201f54980626}"
-              DTS:ExecutableType="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:MaxErrorCount="10000"
-              DTS:ObjectName="TF_Email"
-              DTS:TaskContact="Advanced Email and SMS Task; Pragmatic Works, Inc; Task Factory (c) 2009 - 2012 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:LoggingOptions
-                DTS:FilterKind="0" />
-              <DTS:PropertyExpression
-                DTS:Name="Message">"The project " +  @[User::Cap_Project] + " has a billing amount larger than the project cap.
-The billable amount is " +  (DT_STR, 255, 1252) @[User::Cap_Invoice] + " and the cap is " +  (DT_STR, 255, 1252)   @[User::CAP_Cap] + ".
-
-This is a delta of "  +   @[User::CAP_Delta]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="SendTo">@[User::Cap_email]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="Subject">"The project " +  @[User::Cap_Project] + " has a billing amount larger than the project cap."</DTS:PropertyExpression>
-              <DTS:ObjectData>
-                <AdvancedEmailTask
-                  Message="The project  has a billing amount larger than the project cap.&#xA;The billable amount is  and the cap is .&#xA;&#xA;This is a delta of "
-                  MessageSourceType="Direct_Input"
-                  MessageSource=""
-                  MailConnection="Afrihost"
-                  SendToType="Email"
-                  Subject="The project  has a billing amount larger than the project cap."
-                  SendTo="mstacey@pragmaticworks.com"
-                  SendFrom="mark.stacey@aphelion.bi"
-                  SendToCC="mark.stacey@aphelion.bi"
-                  SendToBCC=""
-                  Priority="Normal"
-                  Attachments=""
-                  UsePlainText="False"
-                  PlainTextMessage="" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
+          <DTS:Executables />
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
@@ -1294,47 +1204,7 @@ This is a delta of "  +   @[User::CAP_Delta]</DTS:PropertyExpression>
           <DTS:Variables />
           <DTS:LoggingOptions
             DTS:FilterKind="0" />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\SEQ_WrongProjectCode\FL_WrongProjectName\TF_Email"
-              DTS:CreationName="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:Description="TF Advanced Email and SMS Task"
-              DTS:DTSID="{2d3a714b-37b1-4d32-8b6d-a516643eb97c}"
-              DTS:ExecutableType="PW.TaskFactory.AdvancedEmailTask.AdvancedEmailTask, PW.TaskFactory110, Version=1.0.0.0, Culture=neutral, PublicKeyToken=47acf905d0337c39"
-              DTS:LocaleID="-1"
-              DTS:MaxErrorCount="10000"
-              DTS:ObjectName="TF_Email"
-              DTS:TaskContact="Advanced Email and SMS Task; Pragmatic Works, Inc; Task Factory (c) 2009 - 2012 Pragmatic Works, Inc; http://www.pragmaticworks.com;support@pragmaticworks.com"
-              DTS:ThreadHint="0">
-              <DTS:Variables />
-              <DTS:LoggingOptions
-                DTS:FilterKind="0" />
-              <DTS:PropertyExpression
-                DTS:Name="Message">"You logged an incorrect project code : " +  @[User::WPProject] + " in your timesheet file " +  @[User::WPSourceFile] + "
-Please fix this as soon as possible"</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="SendTo">@[User::WPEmail]</DTS:PropertyExpression>
-              <DTS:PropertyExpression
-                DTS:Name="Subject">"You logged an incorrect project code : " +  @[User::WPProject] + " in your timesheet file " +  @[User::WPSourceFile]</DTS:PropertyExpression>
-              <DTS:ObjectData>
-                <AdvancedEmailTask
-                  Message="You logged an incorrect project code :  in your timesheet file &#xA;Please fix this as soon as possible"
-                  MessageSourceType="Direct_Input"
-                  MessageSource=""
-                  MailConnection="Afrihost"
-                  SendToType="Email"
-                  Subject="You logged an incorrect project code :  in your timesheet file "
-                  SendTo="mstacey@pragmaticworks.com"
-                  SendFrom="mark.stacey@aphelion.bi"
-                  SendToCC="jennifer.poole@lessfuss.co.za;mark.stacey@aphelion.bi"
-                  SendToBCC=""
-                  Priority="Normal"
-                  Attachments=""
-                  UsePlainText="False"
-                  PlainTextMessage="" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
+          <DTS:Executables />
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
@@ -1462,36 +1332,6 @@ Please fix this as soon as possible"</DTS:PropertyExpression>
           Size="230,248"
           Id="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets"
           TopLeft="22.0000000000001,107.5" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF Timer Task"
-          TopLeft="57.5,107.5" />
-        <NodeLayout
-          Size="252,42"
-          Id="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table\TF_EmailIncorrectTimesheets_Table"
-          TopLeft="5.5,5.5" />
-        <EdgeLayout
-          Id="Package\SEQ_MissingTimesheets\FLC_IncorrectTimesheets_Table.PrecedenceConstraints[Constraint]"
-          TopLeft="131.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -1576,10 +1416,6 @@ Please fix this as soon as possible"</DTS:PropertyExpression>
           Size="145,42"
           Id="Package\SEQ_OverCap\EST_OverCap"
           TopLeft="5.50000000000001,5.5" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\SEQ_OverCap\FL_OverCap\TF_Email"
-          TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -1620,15 +1456,11 @@ Please fix this as soon as possible"</DTS:PropertyExpression>
           Size="191,42"
           Id="Package\SEQ_WrongProjectCode\EST_WrongProjectCode"
           TopLeft="5.50000000000001,5.5" />
-        <NodeLayout
-          Size="124,42"
-          Id="Package\SEQ_WrongProjectCode\FL_WrongProjectName\TF_Email"
-          TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="150,103"
-          Size="135,146"
+          PanelSize="222,205"
+          Size="222,248"
           Id="Package\SEQ_WrongProjectCode\FL_WrongProjectName"
           TopLeft="33.5,107.5" />
         <EdgeLayout
@@ -1637,14 +1469,26 @@ Please fix this as soon as possible"</DTS:PropertyExpression>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="43.5,60"
               Start="0,0"
-              End="0,52.5">
+              End="43.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="39.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.5,30"
+                    Point2="43.5,30"
+                    Point3="43.5,34" />
+                  <mssgle:LineSegment
+                    End="43.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1656,24 +1500,30 @@ Please fix this as soon as possible"</DTS:PropertyExpression>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="202,309"
-          Size="202,352"
+          PanelSize="260,411"
+          Size="260,454"
           Id="Package\SEQ_WrongProjectCode"
           TopLeft="41.5000000000001,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="142.5,357.5">
+          TopLeft="41.5000000000001,232.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="101,185"
               Start="0,0"
-              End="0,52.5">
+              End="101,177.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="97,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97,0"
+                    Point2="101,0"
+                    Point3="101,4" />
+                  <mssgle:LineSegment
+                    End="101,177.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -4,7 +4,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <ServerName>MGS-m6600\SQL2012</ServerName>
+        <ServerName>.</ServerName>
         <PathOnServer>/SSISDB/Timesheets/TimesheetLoader</PathOnServer>
         <StartObjectID>TimesheetLoaderRawFile.dtsx</StartObjectID>
         <UserIDs />

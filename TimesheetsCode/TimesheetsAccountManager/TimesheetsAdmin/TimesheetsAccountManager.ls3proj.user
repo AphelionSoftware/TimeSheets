@@ -4,8 +4,8 @@
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
     <StartUpClientProject>TimesheetsAdmin.HTMLClient</StartUpClientProject>
-    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635188367939736156</SchemaManagementLastModelWriteTime>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635188377365284515</SchemaManagementLastModelWriteTime>
     <EncryptedPublishConnectionString />
     <EncryptedPublishSchemaConnectionString />
     <EncryptedClientConnectionString />

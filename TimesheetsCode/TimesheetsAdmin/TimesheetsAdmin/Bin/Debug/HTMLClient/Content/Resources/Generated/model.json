@@ -3612,13 +3612,13 @@
           ":@SharePointEnabled": { }
         },
         {
-          "displayName": "Home Screen v 2.0.26",
+          "displayName": "Home Screen v 2.0.25",
           "id": "HomeScreen",
           "name": "HomeScreen",
           "launchMode": "Single",
           "rootContentItem":
           {
-            "displayName": "Home Screen v 2.0.26",
+            "displayName": "Home Screen v 2.0.25",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
