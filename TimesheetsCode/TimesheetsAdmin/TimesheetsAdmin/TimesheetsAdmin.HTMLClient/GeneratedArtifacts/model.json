@@ -518,6 +518,104 @@
               "fromEnd": { "__id": "FK_Client_ActiveType/Ends[Client]" },
               "propertyType": { "__id": "ActiveType" },
               "toEnd": { "__id": "FK_Client_ActiveType/Ends[ActiveType]" }
+            },
+            {
+              "id": "Client/Properties[InvoiceEmailAddress]",
+              "name": "InvoiceEmailAddress",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceBank]",
+              "name": "InvoiceBank",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceBankBranch]",
+              "name": "InvoiceBankBranch",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceBankAccount]",
+              "name": "InvoiceBankAccount",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceVATNumber]",
+              "name": "InvoiceVATNumber",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceCompanyReg]",
+              "name": "InvoiceCompanyReg",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceTelNo]",
+              "name": "InvoiceTelNo",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceContactPerson]",
+              "name": "InvoiceContactPerson",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[InvoiceAddress]",
+              "name": "InvoiceAddress",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Client/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "FK_Invoice_Client" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_Client/Ends[Client]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_Client/Ends[Invoice]" }
             }
           ]
         },
@@ -871,6 +969,33 @@
                 "value": 10
               },
               ":@AnsiConstraint": { }
+            },
+            {
+              "id": "DimDate/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "FK_Invoice_DimDate" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate/Ends[DimDate]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_DimDate/Ends[Invoice]" }
+            },
+            {
+              "id": "DimDate/Properties[Invoices1]",
+              "name": "Invoices1",
+              "association": { "__id": "FK_Invoice_DimDate1" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate1/Ends[DimDate]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_DimDate1/Ends[Invoice]" }
+            },
+            {
+              "id": "DimDate/Properties[Invoices2]",
+              "name": "Invoices2",
+              "association": { "__id": "FK_Invoice_DimDate2" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate2/Ends[DimDate]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_DimDate2/Ends[Invoice]" }
             }
           ]
         },
@@ -1154,6 +1279,24 @@
               "fromEnd": { "__id": "fk_TimesheetPersonID/Ends[Person]" },
               "propertyType": { "__id": "Timesheet*" },
               "toEnd": { "__id": "fk_TimesheetPersonID/Ends[Timesheet]" }
+            },
+            {
+              "id": "Person/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "FK_Invoice_AMPerson" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_AMPerson/Ends[Person]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_AMPerson/Ends[Invoice]" }
+            },
+            {
+              "id": "Person/Properties[InvoiceLines]",
+              "name": "InvoiceLines",
+              "association": { "__id": "FK_InvoiceLine_Person" },
+              "elementType": { "__id": "InvoiceLine" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Person/Ends[Person]" },
+              "propertyType": { "__id": "InvoiceLine*" },
+              "toEnd": { "__id": "FK_InvoiceLine_Person/Ends[InvoiceLine]" }
             }
           ]
         },
@@ -1435,6 +1578,25 @@
                 "scale": 2
               },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "Project/Properties[InvoiceEmailAddress]",
+              "name": "InvoiceEmailAddress",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Project/Properties[InvoiceLines]",
+              "name": "InvoiceLines",
+              "association": { "__id": "FK_InvoiceLine_Project" },
+              "elementType": { "__id": "InvoiceLine" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Project/Ends[Project]" },
+              "propertyType": { "__id": "InvoiceLine*" },
+              "toEnd": { "__id": "FK_InvoiceLine_Project/Ends[InvoiceLine]" }
             }
           ]
         },
@@ -2868,6 +3030,266 @@
                   "entitySet": { "__id": "Timesheets_Data/Members[Timesheets]" }
                 }
               ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_ActiveType]",
+              "name": "FK_Invoice_ActiveType",
+              "association": { "__id": "FK_Invoice_ActiveType" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_ActiveType]/Members[ActiveType]",
+                  "name": "ActiveType",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ActiveTypes]" }
+                },
+                {
+                  "properties": [ "Active" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_ActiveType]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_AMPerson]",
+              "name": "FK_Invoice_AMPerson",
+              "association": { "__id": "FK_Invoice_AMPerson" },
+              "ends":
+              [
+                {
+                  "properties": [ "PersonID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_AMPerson]/Members[Person]",
+                  "name": "Person",
+                  "entitySet": { "__id": "Timesheets_Data/Members[People]" }
+                },
+                {
+                  "properties": [ "InvoiceAMPersonID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_AMPerson]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_Client]",
+              "name": "FK_Invoice_Client",
+              "association": { "__id": "FK_Invoice_Client" },
+              "ends":
+              [
+                {
+                  "properties": [ "ClientID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_Client]/Members[Client]",
+                  "name": "Client",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Clients]" }
+                },
+                {
+                  "properties": [ "InvoiceClientID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_Client]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_DimDate]",
+              "name": "FK_Invoice_DimDate",
+              "association": { "__id": "FK_Invoice_DimDate" },
+              "ends":
+              [
+                {
+                  "properties": [ "DateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate]/Members[DimDate]",
+                  "name": "DimDate",
+                  "entitySet": { "__id": "Timesheets_Data/Members[DimDates]" }
+                },
+                {
+                  "properties": [ "InvoiceDateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_DimDate1]",
+              "name": "FK_Invoice_DimDate1",
+              "association": { "__id": "FK_Invoice_DimDate1" },
+              "ends":
+              [
+                {
+                  "properties": [ "DateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate1]/Members[DimDate]",
+                  "name": "DimDate",
+                  "entitySet": { "__id": "Timesheets_Data/Members[DimDates]" }
+                },
+                {
+                  "properties": [ "InvoiceDueDateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate1]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_DimDate2]",
+              "name": "FK_Invoice_DimDate2",
+              "association": { "__id": "FK_Invoice_DimDate2" },
+              "ends":
+              [
+                {
+                  "properties": [ "DateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate2]/Members[DimDate]",
+                  "name": "DimDate",
+                  "entitySet": { "__id": "Timesheets_Data/Members[DimDates]" }
+                },
+                {
+                  "properties": [ "InvoicePaidDateID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_DimDate2]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_Invoice_InvoiceStatus]",
+              "name": "FK_Invoice_InvoiceStatus",
+              "association": { "__id": "FK_Invoice_InvoiceStatus" },
+              "ends":
+              [
+                {
+                  "properties": [ "InvoiceStatusID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_InvoiceStatus]/Members[InvoiceStatus]",
+                  "name": "InvoiceStatus",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+                },
+                {
+                  "properties": [ "InvoiceStatusID" ],
+                  "id": "Timesheets_Data/Members[FK_Invoice_InvoiceStatus]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceLine_ActiveType]",
+              "name": "FK_InvoiceLine_ActiveType",
+              "association": { "__id": "FK_InvoiceLine_ActiveType" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_ActiveType]/Members[ActiveType]",
+                  "name": "ActiveType",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ActiveTypes]" }
+                },
+                {
+                  "properties": [ "Active" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_ActiveType]/Members[InvoiceLine]",
+                  "name": "InvoiceLine",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceLine_Invoice]",
+              "name": "FK_InvoiceLine_Invoice",
+              "association": { "__id": "FK_InvoiceLine_Invoice" },
+              "ends":
+              [
+                {
+                  "properties": [ "InvoiceID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Invoice]/Members[Invoice]",
+                  "name": "Invoice",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Invoices]" }
+                },
+                {
+                  "properties": [ "InvoiceID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Invoice]/Members[InvoiceLine]",
+                  "name": "InvoiceLine",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceLine_InvoiceLine]",
+              "name": "FK_InvoiceLine_InvoiceLine",
+              "association": { "__id": "FK_InvoiceLine_InvoiceLine" },
+              "ends":
+              [
+                {
+                  "properties": [ "ClientRoleID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_InvoiceLine]/Members[ClientRole]",
+                  "name": "ClientRole",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ClientRoles]" }
+                },
+                {
+                  "properties": [ "InvoiceLineClientRoleID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_InvoiceLine]/Members[InvoiceLine]",
+                  "name": "InvoiceLine",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceLine_Person]",
+              "name": "FK_InvoiceLine_Person",
+              "association": { "__id": "FK_InvoiceLine_Person" },
+              "ends":
+              [
+                {
+                  "properties": [ "PersonID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Person]/Members[Person]",
+                  "name": "Person",
+                  "entitySet": { "__id": "Timesheets_Data/Members[People]" }
+                },
+                {
+                  "properties": [ "InvoiceLinePersonID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Person]/Members[InvoiceLine]",
+                  "name": "InvoiceLine",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceLine_Project]",
+              "name": "FK_InvoiceLine_Project",
+              "association": { "__id": "FK_InvoiceLine_Project" },
+              "ends":
+              [
+                {
+                  "properties": [ "ProjectID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Project]/Members[Project]",
+                  "name": "Project",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Projects]" }
+                },
+                {
+                  "properties": [ "InvoiceLineProjectID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceLine_Project]/Members[InvoiceLine]",
+                  "name": "InvoiceLine",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_InvoiceStatus_ActiveType]",
+              "name": "FK_InvoiceStatus_ActiveType",
+              "association": { "__id": "FK_InvoiceStatus_ActiveType" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceStatus_ActiveType]/Members[ActiveType]",
+                  "name": "ActiveType",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ActiveTypes]" }
+                },
+                {
+                  "properties": [ "Active" ],
+                  "id": "Timesheets_Data/Members[FK_InvoiceStatus_ActiveType]/Members[InvoiceStatus]",
+                  "name": "InvoiceStatus",
+                  "entitySet": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -2988,6 +3410,33 @@
               "canUpdate": true,
               "elementType": { "__id": "ActiveType" },
               "entityType": { "__id": "ActiveType" }
+            },
+            {
+              "id": "Timesheets_Data/Members[Invoices]",
+              "name": "Invoices",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Invoice" },
+              "entityType": { "__id": "Invoice" }
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceLines]",
+              "name": "InvoiceLines",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "InvoiceLine" },
+              "entityType": { "__id": "InvoiceLine" }
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "InvoiceStatu" },
+              "entityType": { "__id": "InvoiceStatu" }
             }
           ],
           "queryOperations":
@@ -3603,6 +4052,256 @@
                   "parameterType": { "__id": ":String?" }
                 }
               ]
+            },
+            {
+              "id": "Timesheets_Data/Members[Invoices_Single]",
+              "name": "Invoices_Single",
+              "elementType": { "__id": "Invoice" },
+              "query": { "__id": "Timesheets_Data/Members[Invoices_Single]" },
+              "returnType": { "__id": "Invoice" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[Invoices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[Invoices_Single]/Parameters[InvoiceID]",
+                  "name": "InvoiceID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[Invoices_SingleOrDefault]",
+              "name": "Invoices_SingleOrDefault",
+              "elementType": { "__id": "Invoice" },
+              "query": { "__id": "Timesheets_Data/Members[Invoices_SingleOrDefault]" },
+              "returnType": { "__id": "Invoice" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[Invoices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[Invoices_SingleOrDefault]/Parameters[InvoiceID]",
+                  "name": "InvoiceID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceLines_Single]",
+              "name": "InvoiceLines_Single",
+              "elementType": { "__id": "InvoiceLine" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceLines_Single]" },
+              "returnType": { "__id": "InvoiceLine" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLines_Single]/Parameters[InvoiceLineID]",
+                  "name": "InvoiceLineID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceLines_SingleOrDefault]",
+              "name": "InvoiceLines_SingleOrDefault",
+              "elementType": { "__id": "InvoiceLine" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceLines_SingleOrDefault]" },
+              "returnType": { "__id": "InvoiceLine" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLines_SingleOrDefault]/Parameters[InvoiceLineID]",
+                  "name": "InvoiceLineID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceStatus_Single]",
+              "name": "InvoiceStatus_Single",
+              "elementType": { "__id": "InvoiceStatu" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceStatus_Single]" },
+              "returnType": { "__id": "InvoiceStatu" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoiceStatus_Single]/Parameters[InvoiceStatusID]",
+                  "name": "InvoiceStatusID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceStatus_SingleOrDefault]",
+              "name": "InvoiceStatus_SingleOrDefault",
+              "elementType": { "__id": "InvoiceStatu" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceStatus_SingleOrDefault]" },
+              "returnType": { "__id": "InvoiceStatu" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoiceStatus_SingleOrDefault]/Parameters[InvoiceStatusID]",
+                  "name": "InvoiceStatusID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoiceStatusSorted]",
+              "name": "InvoiceStatusSorted",
+              "elementType": { "__id": "InvoiceStatu" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceStatusSorted]" },
+              "returnType": { "__id": "InvoiceStatu*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+              },
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "InvoiceStatu/Properties[InvoiceStatusName]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[ClientRolesSorted]",
+              "name": "ClientRolesSorted",
+              "elementType": { "__id": "ClientRole" },
+              "query": { "__id": "Timesheets_Data/Members[ClientRolesSorted]" },
+              "returnType": { "__id": "ClientRole*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[ClientRoles]" }
+              },
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "ClientRole/Properties[ClientRoleName]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[BillingDetailsSorted]",
+              "name": "BillingDetailsSorted",
+              "elementType": { "__id": "BillingDetail" },
+              "query": { "__id": "Timesheets_Data/Members[BillingDetailsSorted]" },
+              "returnType": { "__id": "BillingDetail*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[BillingDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[BillingDetailsSorted]/Parameters[ClientName]",
+                  "name": "ClientName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[BillingDetailsSorted]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "BillingDetail/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "BillingDetail/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[BillingDetailNoRole]",
+              "name": "BillingDetailNoRole",
+              "elementType": { "__id": "BillingDetail" },
+              "query": { "__id": "Timesheets_Data/Members[BillingDetailNoRole]" },
+              "returnType": { "__id": "BillingDetail*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[BillingDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[BillingDetailNoRole]/Parameters[ClientName]",
+                  "name": "ClientName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[BillingDetailNoRole]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "BillingDetail/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "BillingDetail/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -3697,7 +4396,7 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showBrowseBillingDetails]" }
+                              "target": { "__id": "!module/Methods[showBrowseBillingDetailsSorted]" }
                             }
                           }
                         ]
@@ -3714,6 +4413,22 @@
                             "source":
                             {
                               "target": { "__id": "!module/Methods[showBrowseProjects]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Browse Billing Detail No Role",
+                        "name": "ShowBrowseBillingDetailNoRole",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseBillingDetailNoRole]" }
                             }
                           }
                         ]
@@ -3771,6 +4486,22 @@
                             "source":
                             {
                               "target": { "__id": "!module/Methods[showBrowseClientRoles]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Browse Invoice Status",
+                        "name": "ShowBrowseInvoiceStatus",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseInvoiceStatus]" }
                             }
                           }
                         ]
@@ -5367,259 +6098,6 @@
           ]
         },
         {
-          "displayName": "Browse Billing Details",
-          "id": "BrowseBillingDetails",
-          "name": "BrowseBillingDetails",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Billing Detail List",
-                    "name": "BillingDetailList",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Billing Details",
-                        "name": "BillingDetail",
-                        "kind": "Collection",
-                        "view": { "__id": ":List" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "BrowseBillingDetails/Properties[BillingDetails]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Billing Detail",
-                            "name": "RowTemplate",
-                            "kind": "Details",
-                            "view": { "__id": ":Summary" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                              ]
-                            }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetails/Properties[BillingDetails]" } },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "BrowseBillingDetails/Properties[BillingDetails]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$BillingDetail/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    ],
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Add Billing Detail",
-                        "name": "AddBillingDetail",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetails/Properties[BillingDetails]" } },
-                              ":@CreateNewEntity":
-                              {
-                                "targetParameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" }
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Show Home Screen",
-                        "name": "ShowHomeScreen",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showHomeScreen]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-back"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Browse"
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "BrowseBillingDetails/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "BrowseBillingDetails/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "BrowseBillingDetails/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "BrowseBillingDetails/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "BrowseBillingDetails/Properties[BillingDetails]",
-              "name": "BillingDetails",
-              "pageSize": 45,
-              "elementType": { "__id": "BillingDetail" },
-              "propertyType": { "__id": "CollectionView$BillingDetail" },
-              "query":
-              {
-                "id": "BrowseBillingDetails/Properties[BillingDetails]/Query",
-                "name": "BillingDetailsQuery",
-                "elementType": { "__id": "BillingDetail" },
-                "returnType": { "__id": "BillingDetail*" },
-                "filterExpression":
-                {
-                  "nodeType": "Equal",
-                  "left":
-                  {
-                    "links":
-                    [
-                      {
-                        "member": { "__id": "BillingDetail/Properties[ActiveType]" }
-                      },
-                      {
-                        "member": { "__id": "ActiveType/Properties[ID]" }
-                      }
-                    ]
-                  },
-                  "right":
-                  {
-                    "value": 1
-                  }
-                },
-                "source":
-                {
-                  "member": { "__id": "Timesheets_Data/Members[BillingDetails]" }
-                },
-                "sortCriteria":
-                [
-                  {
-                    "links":
-                    [
-                      {
-                        "member": { "__id": "BillingDetail/Properties[Client]" }
-                      },
-                      {
-                        "member": { "__id": "Client/Properties[ClientName]" }
-                      }
-                    ]
-                  },
-                  {
-                    "links":
-                    [
-                      {
-                        "member": { "__id": "BillingDetail/Properties[Person]" }
-                      },
-                      {
-                        "member": { "__id": "Person/Properties[PersonName]" }
-                      }
-                    ]
-                  }
-                ]
-              },
-              "source":
-              {
-                "target": { "__id": "BrowseBillingDetails/Properties[BillingDetails]/Query" }
-              }
-            }
-          ]
-        },
-        {
           "displayName": "Browse Billing Status",
           "id": "BrowseBillingStatus",
           "name": "BrowseBillingStatus",
@@ -6722,6 +7200,10 @@
                                 "name": "ClientRole",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditBillingDetail/Properties[ClientRolesSorted]" }
+                                },
                                 "dataSource":
                                 {
                                   "member": { "__id": "BillingDetail/Properties[ClientRole]" }
@@ -6779,6 +7261,16 @@
                                 "dataSource":
                                 {
                                   "member": { "__id": "BillingDetail/Properties[Rate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Billing Detail Source Key",
+                                "name": "BillingDetailSourceKey",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "BillingDetail/Properties[BillingDetailSourceKey]" }
                                 }
                               }
                             ],
@@ -6920,6 +7412,28 @@
               "source":
               {
                 "target": { "__id": "AddEditBillingDetail/Properties[PersonSorted]/Query" }
+              }
+            },
+            {
+              "id": "AddEditBillingDetail/Properties[ClientRolesSorted]",
+              "name": "ClientRolesSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "ClientRole" },
+              "propertyType": { "__id": "CollectionView$ClientRole" },
+              "query":
+              {
+                "id": "AddEditBillingDetail/Properties[ClientRolesSorted]/Query",
+                "name": "ClientRolesSortedQuery",
+                "elementType": { "__id": "ClientRole" },
+                "returnType": { "__id": "ClientRole*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ClientRolesSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditBillingDetail/Properties[ClientRolesSorted]/Query" }
               }
             }
           ]
@@ -8245,6 +8759,15 @@
               "fromEnd": { "__id": "FK_ClientRole_ActiveType/Ends[ClientRole]" },
               "propertyType": { "__id": "ActiveType" },
               "toEnd": { "__id": "FK_ClientRole_ActiveType/Ends[ActiveType]" }
+            },
+            {
+              "id": "ClientRole/Properties[InvoiceLines]",
+              "name": "InvoiceLines",
+              "association": { "__id": "FK_InvoiceLine_InvoiceLine" },
+              "elementType": { "__id": "InvoiceLine" },
+              "fromEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[ClientRole]" },
+              "propertyType": { "__id": "InvoiceLine*" },
+              "toEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[InvoiceLine]" }
             }
           ]
         },
@@ -8515,6 +9038,30 @@
                                 "targetParameter": { "__id": "!module/Methods[showAddEditClientRole]/Parameters[ClientRole]" }
                               }
                             }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Home Screen",
+                        "name": "ShowHomeScreen",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showHomeScreen]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-back"
                           }
                         ]
                       }
@@ -8587,12 +9134,34 @@
                 "returnType": { "__id": "ClientRole*" },
                 "source":
                 {
-                  "member": { "__id": "Timesheets_Data/Members[ClientRoles]" }
+                  "member": { "__id": "Timesheets_Data/Members[ClientRolesSorted]" }
                 }
               },
               "source":
               {
                 "target": { "__id": "BrowseClientRoles/Properties[ClientRoles]/Query" }
+              }
+            },
+            {
+              "id": "BrowseClientRoles/Properties[ClientRolesSorted]",
+              "name": "ClientRolesSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "ClientRole" },
+              "propertyType": { "__id": "CollectionView$ClientRole" },
+              "query":
+              {
+                "id": "BrowseClientRoles/Properties[ClientRolesSorted]/Query",
+                "name": "ClientRolesSortedQuery",
+                "elementType": { "__id": "ClientRole" },
+                "returnType": { "__id": "ClientRole*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ClientRolesSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseClientRoles/Properties[ClientRolesSorted]/Query" }
               }
             }
           ]
@@ -9110,6 +9679,33 @@
               "fromEnd": { "__id": "FK_TypeOfWork_ActiveType/Ends[ActiveType]" },
               "propertyType": { "__id": "TypeOfWork*" },
               "toEnd": { "__id": "FK_TypeOfWork_ActiveType/Ends[TypeOfWork]" }
+            },
+            {
+              "id": "ActiveType/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "FK_Invoice_ActiveType" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_ActiveType/Ends[ActiveType]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_ActiveType/Ends[Invoice]" }
+            },
+            {
+              "id": "ActiveType/Properties[InvoiceLines]",
+              "name": "InvoiceLines",
+              "association": { "__id": "FK_InvoiceLine_ActiveType" },
+              "elementType": { "__id": "InvoiceLine" },
+              "fromEnd": { "__id": "FK_InvoiceLine_ActiveType/Ends[ActiveType]" },
+              "propertyType": { "__id": "InvoiceLine*" },
+              "toEnd": { "__id": "FK_InvoiceLine_ActiveType/Ends[InvoiceLine]" }
+            },
+            {
+              "id": "ActiveType/Properties[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "association": { "__id": "FK_InvoiceStatus_ActiveType" },
+              "elementType": { "__id": "InvoiceStatu" },
+              "fromEnd": { "__id": "FK_InvoiceStatus_ActiveType/Ends[ActiveType]" },
+              "propertyType": { "__id": "InvoiceStatu*" },
+              "toEnd": { "__id": "FK_InvoiceStatus_ActiveType/Ends[InvoiceStatus]" }
             }
           ]
         },
@@ -9839,6 +10435,2008 @@
               "elementType": { "__id": "Project" },
               "propertyType": { "__id": "Project" },
               ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Invoice/Properties[InvoiceSourceKey]" } },
+          "id": "Invoice",
+          "name": "Invoice",
+          "methods":
+          [
+            {
+              "id": "Invoice/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Invoice/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Invoice/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Invoice/Properties[InvoiceID]",
+              "name": "InvoiceID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceSourceKey]",
+              "name": "InvoiceSourceKey",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Invoice/Properties[LoadDate]",
+              "name": "LoadDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceFileName]",
+              "name": "InvoiceFileName",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Invoice/Properties[LoadDateID]",
+              "name": "LoadDateID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[Comments]",
+              "name": "Comments",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 500
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceEmailAddress]",
+              "name": "InvoiceEmailAddress",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceNumber]",
+              "name": "InvoiceNumber",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Invoice/Properties[sys_CreatedOn]",
+              "name": "sys_CreatedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[sys_CreatedBy]",
+              "name": "sys_CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Invoice/Properties[sys_ModifiedOn]",
+              "name": "sys_ModifiedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Invoice/Properties[sys_ModifiedBy]",
+              "name": "sys_ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "Invoice/Properties[ActiveType]",
+              "name": "ActiveType",
+              "association": { "__id": "FK_Invoice_ActiveType" },
+              "elementType": { "__id": "ActiveType" },
+              "fromEnd": { "__id": "FK_Invoice_ActiveType/Ends[Invoice]" },
+              "propertyType": { "__id": "ActiveType" },
+              "toEnd": { "__id": "FK_Invoice_ActiveType/Ends[ActiveType]" }
+            },
+            {
+              "id": "Invoice/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "FK_Invoice_AMPerson" },
+              "elementType": { "__id": "Person" },
+              "fromEnd": { "__id": "FK_Invoice_AMPerson/Ends[Invoice]" },
+              "propertyType": { "__id": "Person" },
+              "toEnd": { "__id": "FK_Invoice_AMPerson/Ends[Person]" }
+            },
+            {
+              "id": "Invoice/Properties[Client]",
+              "name": "Client",
+              "association": { "__id": "FK_Invoice_Client" },
+              "elementType": { "__id": "Client" },
+              "fromEnd": { "__id": "FK_Invoice_Client/Ends[Invoice]" },
+              "propertyType": { "__id": "Client" },
+              "toEnd": { "__id": "FK_Invoice_Client/Ends[Client]" }
+            },
+            {
+              "id": "Invoice/Properties[DimDate]",
+              "name": "DimDate",
+              "association": { "__id": "FK_Invoice_DimDate" },
+              "elementType": { "__id": "DimDate" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate/Ends[Invoice]" },
+              "propertyType": { "__id": "DimDate" },
+              "toEnd": { "__id": "FK_Invoice_DimDate/Ends[DimDate]" }
+            },
+            {
+              "id": "Invoice/Properties[DimDate1]",
+              "name": "DimDate1",
+              "association": { "__id": "FK_Invoice_DimDate1" },
+              "elementType": { "__id": "DimDate" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate1/Ends[Invoice]" },
+              "propertyType": { "__id": "DimDate" },
+              "toEnd": { "__id": "FK_Invoice_DimDate1/Ends[DimDate]" }
+            },
+            {
+              "id": "Invoice/Properties[DimDate2]",
+              "name": "DimDate2",
+              "association": { "__id": "FK_Invoice_DimDate2" },
+              "elementType": { "__id": "DimDate" },
+              "fromEnd": { "__id": "FK_Invoice_DimDate2/Ends[Invoice]" },
+              "propertyType": { "__id": "DimDate" },
+              "toEnd": { "__id": "FK_Invoice_DimDate2/Ends[DimDate]" }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceStatu]",
+              "name": "InvoiceStatu",
+              "association": { "__id": "FK_Invoice_InvoiceStatus" },
+              "elementType": { "__id": "InvoiceStatu" },
+              "fromEnd": { "__id": "FK_Invoice_InvoiceStatus/Ends[Invoice]" },
+              "propertyType": { "__id": "InvoiceStatu" },
+              "toEnd": { "__id": "FK_Invoice_InvoiceStatus/Ends[InvoiceStatus]" }
+            },
+            {
+              "id": "Invoice/Properties[InvoiceLines]",
+              "name": "InvoiceLines",
+              "association": { "__id": "FK_InvoiceLine_Invoice" },
+              "elementType": { "__id": "InvoiceLine" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Invoice/Ends[Invoice]" },
+              "propertyType": { "__id": "InvoiceLine*" },
+              "toEnd": { "__id": "FK_InvoiceLine_Invoice/Ends[InvoiceLine]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "InvoiceLine/Properties[InvoiceLineDescription]" } },
+          "id": "InvoiceLine",
+          "name": "InvoiceLine",
+          "methods":
+          [
+            {
+              "id": "InvoiceLine/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "InvoiceLine/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "InvoiceLine/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "InvoiceLine/Properties[InvoiceLineID]",
+              "name": "InvoiceLineID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[LoadDate]",
+              "name": "LoadDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[LoadDateID]",
+              "name": "LoadDateID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[InvoiceLineDescription]",
+              "name": "InvoiceLineDescription",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 500
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[InvoiceLineCode]",
+              "name": "InvoiceLineCode",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[InvoiceLineRate]",
+              "name": "InvoiceLineRate",
+              "propertyType": { "__id": ":Decimal" },
+              ":@Required": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 19,
+                "scale": 4
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[InvoiceLineQty]",
+              "name": "InvoiceLineQty",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[InvoiceLineAmount]",
+              "name": "InvoiceLineAmount",
+              "propertyType": { "__id": ":Decimal" },
+              ":@Required": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 19,
+                "scale": 4
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[sys_CreatedOn]",
+              "name": "sys_CreatedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[sys_CreatedBy]",
+              "name": "sys_CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceLine/Properties[sys_ModifiedOn]",
+              "name": "sys_ModifiedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceLine/Properties[sys_ModifiedBy]",
+              "name": "sys_ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceLine/Properties[ActiveType]",
+              "name": "ActiveType",
+              "association": { "__id": "FK_InvoiceLine_ActiveType" },
+              "elementType": { "__id": "ActiveType" },
+              "fromEnd": { "__id": "FK_InvoiceLine_ActiveType/Ends[InvoiceLine]" },
+              "propertyType": { "__id": "ActiveType" },
+              "toEnd": { "__id": "FK_InvoiceLine_ActiveType/Ends[ActiveType]" }
+            },
+            {
+              "id": "InvoiceLine/Properties[Invoice]",
+              "name": "Invoice",
+              "association": { "__id": "FK_InvoiceLine_Invoice" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Invoice/Ends[InvoiceLine]" },
+              "propertyType": { "__id": "Invoice" },
+              "toEnd": { "__id": "FK_InvoiceLine_Invoice/Ends[Invoice]" }
+            },
+            {
+              "id": "InvoiceLine/Properties[ClientRole]",
+              "name": "ClientRole",
+              "association": { "__id": "FK_InvoiceLine_InvoiceLine" },
+              "elementType": { "__id": "ClientRole" },
+              "fromEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[InvoiceLine]" },
+              "propertyType": { "__id": "ClientRole" },
+              "toEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[ClientRole]" }
+            },
+            {
+              "id": "InvoiceLine/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "FK_InvoiceLine_Person" },
+              "elementType": { "__id": "Person" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Person/Ends[InvoiceLine]" },
+              "propertyType": { "__id": "Person" },
+              "toEnd": { "__id": "FK_InvoiceLine_Person/Ends[Person]" }
+            },
+            {
+              "id": "InvoiceLine/Properties[Project]",
+              "name": "Project",
+              "association": { "__id": "FK_InvoiceLine_Project" },
+              "elementType": { "__id": "Project" },
+              "fromEnd": { "__id": "FK_InvoiceLine_Project/Ends[InvoiceLine]" },
+              "propertyType": { "__id": "Project" },
+              "toEnd": { "__id": "FK_InvoiceLine_Project/Ends[Project]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "InvoiceStatu/Properties[InvoiceStatusName]" } },
+          "id": "InvoiceStatu",
+          "name": "InvoiceStatu",
+          "methods":
+          [
+            {
+              "id": "InvoiceStatu/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "InvoiceStatu/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "InvoiceStatu/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "InvoiceStatu/Properties[InvoiceStatusID]",
+              "name": "InvoiceStatusID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[InvoiceStatusName]",
+              "name": "InvoiceStatusName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[InvoiceStatusSourceKey]",
+              "name": "InvoiceStatusSourceKey",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[LoadDate]",
+              "name": "LoadDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[InvoiceStatusCode]",
+              "name": "InvoiceStatusCode",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[LoadDateID]",
+              "name": "LoadDateID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[sys_CreatedOn]",
+              "name": "sys_CreatedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[sys_CreatedBy]",
+              "name": "sys_CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceStatu/Properties[sys_ModifiedOn]",
+              "name": "sys_ModifiedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "InvoiceStatu/Properties[sys_ModifiedBy]",
+              "name": "sys_ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "InvoiceStatu/Properties[Invoices]",
+              "name": "Invoices",
+              "association": { "__id": "FK_Invoice_InvoiceStatus" },
+              "elementType": { "__id": "Invoice" },
+              "fromEnd": { "__id": "FK_Invoice_InvoiceStatus/Ends[InvoiceStatus]" },
+              "propertyType": { "__id": "Invoice*" },
+              "toEnd": { "__id": "FK_Invoice_InvoiceStatus/Ends[Invoice]" }
+            },
+            {
+              "id": "InvoiceStatu/Properties[ActiveType]",
+              "name": "ActiveType",
+              "association": { "__id": "FK_InvoiceStatus_ActiveType" },
+              "elementType": { "__id": "ActiveType" },
+              "fromEnd": { "__id": "FK_InvoiceStatus_ActiveType/Ends[InvoiceStatus]" },
+              "propertyType": { "__id": "ActiveType" },
+              "toEnd": { "__id": "FK_InvoiceStatus_ActiveType/Ends[ActiveType]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_ActiveType",
+          "name": "FK_Invoice_ActiveType",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_ActiveType/Ends[ActiveType]",
+              "name": "ActiveType",
+              "multiplicity": "One",
+              "entityType": { "__id": "ActiveType" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_ActiveType/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_AMPerson",
+          "name": "FK_Invoice_AMPerson",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_AMPerson/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "One",
+              "entityType": { "__id": "Person" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_AMPerson/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_Client",
+          "name": "FK_Invoice_Client",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_Client/Ends[Client]",
+              "name": "Client",
+              "multiplicity": "One",
+              "entityType": { "__id": "Client" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_Client/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_DimDate",
+          "name": "FK_Invoice_DimDate",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_DimDate/Ends[DimDate]",
+              "name": "DimDate",
+              "multiplicity": "One",
+              "entityType": { "__id": "DimDate" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_DimDate/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_DimDate1",
+          "name": "FK_Invoice_DimDate1",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_DimDate1/Ends[DimDate]",
+              "name": "DimDate",
+              "multiplicity": "One",
+              "entityType": { "__id": "DimDate" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_DimDate1/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_DimDate2",
+          "name": "FK_Invoice_DimDate2",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_DimDate2/Ends[DimDate]",
+              "name": "DimDate",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "DimDate" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_DimDate2/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Invoice_InvoiceStatus",
+          "name": "FK_Invoice_InvoiceStatus",
+          "ends":
+          [
+            {
+              "id": "FK_Invoice_InvoiceStatus/Ends[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "multiplicity": "One",
+              "entityType": { "__id": "InvoiceStatu" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Invoice_InvoiceStatus/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Invoice" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceLine_ActiveType",
+          "name": "FK_InvoiceLine_ActiveType",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceLine_ActiveType/Ends[ActiveType]",
+              "name": "ActiveType",
+              "multiplicity": "One",
+              "entityType": { "__id": "ActiveType" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceLine_ActiveType/Ends[InvoiceLine]",
+              "name": "InvoiceLine",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceLine_Invoice",
+          "name": "FK_InvoiceLine_Invoice",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceLine_Invoice/Ends[Invoice]",
+              "name": "Invoice",
+              "multiplicity": "One",
+              "entityType": { "__id": "Invoice" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceLine_Invoice/Ends[InvoiceLine]",
+              "name": "InvoiceLine",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceLine_InvoiceLine",
+          "name": "FK_InvoiceLine_InvoiceLine",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceLine_InvoiceLine/Ends[ClientRole]",
+              "name": "ClientRole",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "ClientRole" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceLine_InvoiceLine/Ends[InvoiceLine]",
+              "name": "InvoiceLine",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceLine_Person",
+          "name": "FK_InvoiceLine_Person",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceLine_Person/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Person" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceLine_Person/Ends[InvoiceLine]",
+              "name": "InvoiceLine",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceLine_Project",
+          "name": "FK_InvoiceLine_Project",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceLine_Project/Ends[Project]",
+              "name": "Project",
+              "multiplicity": "One",
+              "entityType": { "__id": "Project" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceLine_Project/Ends[InvoiceLine]",
+              "name": "InvoiceLine",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "FK_InvoiceStatus_ActiveType",
+          "name": "FK_InvoiceStatus_ActiveType",
+          "ends":
+          [
+            {
+              "id": "FK_InvoiceStatus_ActiveType/Ends[ActiveType]",
+              "name": "ActiveType",
+              "multiplicity": "One",
+              "entityType": { "__id": "ActiveType" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_InvoiceStatus_ActiveType/Ends[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "multiplicity": "Many",
+              "entityType": { "__id": "InvoiceStatu" }
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Invoice Status",
+          "id": "BrowseInvoiceStatus",
+          "name": "BrowseInvoiceStatus",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Invoice Statu List",
+                    "name": "InvoiceStatuList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Invoice Status",
+                        "name": "InvoiceStatu",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatus]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Invoice Statu",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditInvoiceStatu]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatus]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditInvoiceStatu]/Parameters[InvoiceStatu]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatus]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$InvoiceStatu/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Home Screen",
+                        "name": "ShowHomeScreen",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showHomeScreen]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-back"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add Invoice Statu",
+                        "name": "AddInvoiceStatu",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditInvoiceStatu]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatus]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditInvoiceStatu]/Parameters[InvoiceStatu]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Browse"
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseInvoiceStatus/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseInvoiceStatus/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseInvoiceStatus/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseInvoiceStatus/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseInvoiceStatus/Properties[InvoiceStatus]",
+              "name": "InvoiceStatus",
+              "pageSize": 45,
+              "elementType": { "__id": "InvoiceStatu" },
+              "propertyType": { "__id": "CollectionView$InvoiceStatu" },
+              "query":
+              {
+                "id": "BrowseInvoiceStatus/Properties[InvoiceStatus]/Query",
+                "name": "InvoiceStatusQuery",
+                "elementType": { "__id": "InvoiceStatu" },
+                "returnType": { "__id": "InvoiceStatu*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatus]/Query" }
+              }
+            },
+            {
+              "id": "BrowseInvoiceStatus/Properties[InvoiceStatusSorted]",
+              "name": "InvoiceStatusSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "InvoiceStatu" },
+              "propertyType": { "__id": "CollectionView$InvoiceStatu" },
+              "query":
+              {
+                "id": "BrowseInvoiceStatus/Properties[InvoiceStatusSorted]/Query",
+                "name": "InvoiceStatusSortedQuery",
+                "elementType": { "__id": "InvoiceStatu" },
+                "returnType": { "__id": "InvoiceStatu*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[InvoiceStatusSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseInvoiceStatus/Properties[InvoiceStatusSorted]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Add Edit Invoice Statu",
+          "id": "AddEditInvoiceStatu",
+          "name": "AddEditInvoiceStatu",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditInvoiceStatu/Properties[InvoiceStatu]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Invoice Status Source Key",
+                                "name": "InvoiceStatusSourceKey",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "InvoiceStatu/Properties[InvoiceStatusSourceKey]" }
+                                }
+                              },
+                              {
+                                "displayName": "Invoice Status Name",
+                                "name": "InvoiceStatusName",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "InvoiceStatu/Properties[InvoiceStatusName]" }
+                                }
+                              },
+                              {
+                                "displayName": "Invoice Status Code",
+                                "name": "InvoiceStatusCode",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "InvoiceStatu/Properties[InvoiceStatusCode]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditInvoiceStatu/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditInvoiceStatu/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditInvoiceStatu/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditInvoiceStatu/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditInvoiceStatu/Properties[InvoiceStatu]",
+              "name": "InvoiceStatu",
+              "elementType": { "__id": "InvoiceStatu" },
+              "propertyType": { "__id": "InvoiceStatu" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Billing Details Sorted",
+          "id": "BrowseBillingDetailsSorted",
+          "name": "BrowseBillingDetailsSorted",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Billing Detail List",
+                    "name": "BillingDetailList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Billing Details Sorted",
+                        "name": "BillingDetail",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Billing Detail",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$BillingDetail/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Filter",
+                        "name": "ShowFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "BrowseBillingDetailsSorted/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "BrowseBillingDetailsSorted/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "Filter"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add Billing Detail",
+                        "name": "AddBillingDetail",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Home Screen",
+                        "name": "ShowHomeScreen",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showHomeScreen]" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Client Name",
+                        "name": "ClientName1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailClientName]" }
+                        }
+                      },
+                      {
+                        "displayName": "Person Name",
+                        "name": "PersonName1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailPersonName]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Browse"
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseBillingDetailsSorted/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseBillingDetailsSorted/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseBillingDetailsSorted/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseBillingDetailsSorted/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]",
+              "name": "BillingDetailsSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "BillingDetail" },
+              "propertyType": { "__id": "CollectionView$BillingDetail" },
+              "query":
+              {
+                "id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]/Query",
+                "name": "BillingDetailsSortedQuery",
+                "elementType": { "__id": "BillingDetail" },
+                "returnType": { "__id": "BillingDetail*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[BillingDetailsSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailsSorted]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillingDetailsSorted]/Parameters[ClientName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailClientName]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillingDetailsSorted]/Parameters[PersonName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseBillingDetailsSorted/Properties[BillingDetailPersonName]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BrowseBillingDetailsSorted/Properties[BillingDetailClientName]",
+              "name": "BillingDetailClientName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseBillingDetailsSorted/Properties[BillingDetailPersonName]",
+              "name": "BillingDetailPersonName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Billing Detail No Role",
+          "id": "BrowseBillingDetailNoRole",
+          "name": "BrowseBillingDetailNoRole",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Billing Detail List",
+                    "name": "BillingDetailList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Billing Detail No Role",
+                        "name": "BillingDetail",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Billing Detail",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$BillingDetail/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add Billing Detail",
+                        "name": "AddBillingDetail",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Filter",
+                        "name": "ShowFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "BrowseBillingDetailNoRole/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "BrowseBillingDetailNoRole/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "Filter"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Home Screen",
+                        "name": "ShowHomeScreen",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showHomeScreen]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-back"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Client Name",
+                        "name": "ClientName",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailClientName]" }
+                        }
+                      },
+                      {
+                        "displayName": "Person Name",
+                        "name": "PersonName",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailPersonName]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Browse"
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseBillingDetailNoRole/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseBillingDetailNoRole/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseBillingDetailNoRole/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseBillingDetailNoRole/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]",
+              "name": "BillingDetailNoRole",
+              "pageSize": 45,
+              "elementType": { "__id": "BillingDetail" },
+              "propertyType": { "__id": "CollectionView$BillingDetail" },
+              "query":
+              {
+                "id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]/Query",
+                "name": "BillingDetailNoRoleQuery",
+                "elementType": { "__id": "BillingDetail" },
+                "returnType": { "__id": "BillingDetail*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[BillingDetailNoRole]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailNoRole]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillingDetailNoRole]/Parameters[ClientName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailClientName]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillingDetailNoRole]/Parameters[PersonName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseBillingDetailNoRole/Properties[BillingDetailPersonName]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BrowseBillingDetailNoRole/Properties[BillingDetailClientName]",
+              "name": "BillingDetailClientName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseBillingDetailNoRole/Properties[BillingDetailPersonName]",
+              "name": "BillingDetailPersonName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            }
+          ]
+        },
+        {
+          "id": "InvoiceStatu*",
+          "name": "InvoiceStatu*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "InvoiceStatu" }
+        },
+        {
+          "id": "CollectionView$InvoiceStatu",
+          "name": "CollectionView$InvoiceStatu",
+          "kind": "CollectionView",
+          "elementType": { "__id": "InvoiceStatu" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "InvoiceStatu" }
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "InvoiceStatu" }
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$InvoiceStatu/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$InvoiceStatu/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "InvoiceStatu" }
+            }
+          ]
+        },
+        {
+          "id": "InvoiceLine*",
+          "name": "InvoiceLine*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "InvoiceLine" }
+        },
+        {
+          "id": "CollectionView$InvoiceLine",
+          "name": "CollectionView$InvoiceLine",
+          "kind": "CollectionView",
+          "elementType": { "__id": "InvoiceLine" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$InvoiceLine/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "InvoiceLine" }
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "InvoiceLine" }
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$InvoiceLine/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$InvoiceLine/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "InvoiceLine" }
+            }
+          ]
+        },
+        {
+          "id": "Invoice*",
+          "name": "Invoice*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Invoice" }
+        },
+        {
+          "id": "CollectionView$Invoice",
+          "name": "CollectionView$Invoice",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Invoice" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Invoice/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Invoice" }
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Invoice" }
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Invoice/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Invoice/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Invoice" }
             }
           ]
         },
@@ -10584,11 +13182,6 @@
           ]
         },
         {
-          "id": "!module/Methods[showBrowseBillingDetails]",
-          "name": "showBrowseBillingDetails",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseBillingDetails" } }
-        },
-        {
           "id": "!module/Methods[showBrowseBillingStatus]",
           "name": "showBrowseBillingStatus",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseBillingStatus" } }
@@ -10708,6 +13301,34 @@
               "parameterType": { "__id": "Project" }
             }
           ]
+        },
+        {
+          "id": "!module/Methods[showBrowseInvoiceStatus]",
+          "name": "showBrowseInvoiceStatus",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseInvoiceStatus" } }
+        },
+        {
+          "id": "!module/Methods[showAddEditInvoiceStatu]",
+          "name": "showAddEditInvoiceStatu",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditInvoiceStatu" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditInvoiceStatu]/Parameters[InvoiceStatu]",
+              "name": "InvoiceStatu",
+              "parameterType": { "__id": "InvoiceStatu" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseBillingDetailsSorted]",
+          "name": "showBrowseBillingDetailsSorted",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseBillingDetailsSorted" } }
+        },
+        {
+          "id": "!module/Methods[showBrowseBillingDetailNoRole]",
+          "name": "showBrowseBillingDetailNoRole",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseBillingDetailNoRole" } }
         }
       ]
     },

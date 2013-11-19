@@ -6,7 +6,7 @@
     [BillingDetailDateID]       INT            NOT NULL,
     [BillingDetailClientID]     INT            NOT NULL,
     [BillingDetailPersonID]     INT            NOT NULL,
-    [BillingDetailClientRoleID] INT            NULL,
+    [BillingDetailClientRoleID] INT            CONSTRAINT [DF_BillingDetail_ClientRole] DEFAULT ((-1)) NOT NULL,
     [Rate]                      MONEY          NOT NULL,
     [LoadDateID]                AS             (CONVERT([int],CONVERT([varchar](10),[loaddate],(112)),(0))),
     [sys_CreatedOn]             DATETIME       CONSTRAINT [DF__BillingDe__sys_C__16CE6296] DEFAULT (getdate()) NOT NULL,
@@ -20,4 +20,6 @@
     CONSTRAINT [FK_BillingDetail_Person] FOREIGN KEY ([BillingDetailPersonID]) REFERENCES [dbo].[Person] ([PersonID]),
     CONSTRAINT [FK_BillingDetail_Role] FOREIGN KEY ([BillingDetailClientRoleID]) REFERENCES [dbo].[ClientRole] ([ClientRoleID])
 );
+
+
 

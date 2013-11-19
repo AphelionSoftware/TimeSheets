@@ -564,6 +564,7 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\BillingStatus.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\Client.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\ClientRole.js
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\InvoiceStatu.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\Person.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\Project.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\RoleType.js

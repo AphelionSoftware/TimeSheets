@@ -2041,6 +2041,16 @@ window.myapp = msls.application;
                             ProjectName: $toODataString(ProjectName, "String?")
                         });
                 }
+            },
+            {
+                name: "BillingDetailsSorted", value: function (ClientName, PersonName) {
+                    return new $DataServiceQuery({ _entitySet: this.BillingDetails },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingDetailsSorted()",
+                        {
+                            ClientName: $toODataString(ClientName, "String?"),
+                            PersonName: $toODataString(PersonName, "String?")
+                        });
+                }
             }
         ]),
 

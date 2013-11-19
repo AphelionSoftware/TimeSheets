@@ -46,6 +46,11 @@
         /// </field>
         ShowBrowseProjects_postRender: $parameters,
         /// <field>
+        /// Called after the ShowBrowseBillingDetailNoRole content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowBrowseBillingDetailNoRole_postRender: $parameters,
+        /// <field>
         /// Called after the Admin content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -64,7 +69,12 @@
         /// Called after the ShowBrowseRoles content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowBrowseRoles_postRender: $parameters
+        ShowBrowseRoles_postRender: $parameters,
+        /// <field>
+        /// Called after the ShowBrowseInvoiceStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowBrowseInvoiceStatus_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseTimesheetDetails, {
@@ -374,34 +384,6 @@
         BillingDetailsTemplate_postRender: $parameters
     });
 
-    msls._addEntryPoints(lightSwitchApplication.BrowseBillingDetails, {
-        /// <field>
-        /// Called when a new BrowseBillingDetails screen is created.
-        /// <br/>created(msls.application.BrowseBillingDetails screen)
-        /// </field>
-        created: [lightSwitchApplication.BrowseBillingDetails],
-        /// <field>
-        /// Called before changes on an active BrowseBillingDetails screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.BrowseBillingDetails screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.BrowseBillingDetails],
-        /// <field>
-        /// Called after the BillingDetailList content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingDetailList_postRender: $parameters,
-        /// <field>
-        /// Called after the BillingDetail content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingDetail_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate_postRender: $parameters
-    });
-
     msls._addEntryPoints(lightSwitchApplication.BrowseBillingStatus, {
         /// <field>
         /// Called when a new BrowseBillingStatus screen is created.
@@ -604,7 +586,12 @@
         /// Called after the Rate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Rate_postRender: $parameters
+        Rate_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingDetailSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetailSourceKey_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditBillingStatus, {
@@ -1094,6 +1081,163 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate3_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseInvoiceStatus, {
+        /// <field>
+        /// Called when a new BrowseInvoiceStatus screen is created.
+        /// <br/>created(msls.application.BrowseInvoiceStatus screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseInvoiceStatus],
+        /// <field>
+        /// Called before changes on an active BrowseInvoiceStatus screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseInvoiceStatus screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseInvoiceStatus],
+        /// <field>
+        /// Called after the InvoiceStatuList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatuList_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatu content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatu_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditInvoiceStatu, {
+        /// <field>
+        /// Called when a new AddEditInvoiceStatu screen is created.
+        /// <br/>created(msls.application.AddEditInvoiceStatu screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditInvoiceStatu],
+        /// <field>
+        /// Called before changes on an active AddEditInvoiceStatu screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditInvoiceStatu screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditInvoiceStatu],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: $parameters,
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: $parameters,
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatusSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatusSourceKey_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatusName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatusName_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatusCode content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatusCode_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseBillingDetailsSorted, {
+        /// <field>
+        /// Called when a new BrowseBillingDetailsSorted screen is created.
+        /// <br/>created(msls.application.BrowseBillingDetailsSorted screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseBillingDetailsSorted],
+        /// <field>
+        /// Called before changes on an active BrowseBillingDetailsSorted screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseBillingDetailsSorted screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseBillingDetailsSorted],
+        /// <field>
+        /// Called after the BillingDetailList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetailList_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingDetail content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetail_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName1_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName1_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseBillingDetailNoRole, {
+        /// <field>
+        /// Called when a new BrowseBillingDetailNoRole screen is created.
+        /// <br/>created(msls.application.BrowseBillingDetailNoRole screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseBillingDetailNoRole],
+        /// <field>
+        /// Called before changes on an active BrowseBillingDetailNoRole screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseBillingDetailNoRole screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseBillingDetailNoRole],
+        /// <field>
+        /// Called after the BillingDetailList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetailList_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingDetail content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetail_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName_postRender: $parameters
     });
 
 }(msls.application));

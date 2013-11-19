@@ -3,6 +3,7 @@ document.writeln("<script type=\"text/javascript\" src=\"UserCode/BillingDetail.
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/BillingStatus.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Client.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/ClientRole.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"UserCode/InvoiceStatu.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Person.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Project.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/RoleType.js\"></script>");

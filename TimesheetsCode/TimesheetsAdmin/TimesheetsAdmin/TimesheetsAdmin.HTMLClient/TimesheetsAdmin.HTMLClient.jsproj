@@ -80,6 +80,7 @@
     <Content Include="UserCode\BillingStatus.js" />
     <Content Include="UserCode\Client.js" />
     <Content Include="UserCode\ClientRole.js" />
+    <Content Include="UserCode\InvoiceStatu.js" />
     <Content Include="UserCode\Person.js" />
     <Content Include="UserCode\Project.js" />
     <Content Include="UserCode\RoleType.js" />

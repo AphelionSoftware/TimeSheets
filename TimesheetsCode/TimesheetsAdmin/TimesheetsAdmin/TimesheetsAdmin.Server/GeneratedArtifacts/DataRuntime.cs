@@ -311,6 +311,45 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Gets the Invoices entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Invoice> Invoices
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheets_Data.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the InvoiceLines entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.InvoiceLine> InvoiceLines
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheets_Data.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.InvoiceLines);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the InvoiceStatus entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.InvoiceStatu> InvoiceStatus
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheets_Data.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.InvoiceStatus);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -659,6 +698,116 @@ namespace LightSwitchApplication
             return this.Details.Methods.ProjectsFilter.CreateInvocation(ClientName, ProjectName).Execute();
         }
         
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="InvoiceID">
+        /// The value of the 'InvoiceID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Invoice Invoices_Single(global::System.Nullable<int> InvoiceID)
+        {
+            return this.Details.Methods.Invoices_Single.CreateInvocation(InvoiceID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="InvoiceID">
+        /// The value of the 'InvoiceID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Invoice Invoices_SingleOrDefault(global::System.Nullable<int> InvoiceID)
+        {
+            return this.Details.Methods.Invoices_SingleOrDefault.CreateInvocation(InvoiceID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="InvoiceLineID">
+        /// The value of the 'InvoiceLineID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.InvoiceLine InvoiceLines_Single(global::System.Nullable<int> InvoiceLineID)
+        {
+            return this.Details.Methods.InvoiceLines_Single.CreateInvocation(InvoiceLineID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="InvoiceLineID">
+        /// The value of the 'InvoiceLineID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.InvoiceLine InvoiceLines_SingleOrDefault(global::System.Nullable<int> InvoiceLineID)
+        {
+            return this.Details.Methods.InvoiceLines_SingleOrDefault.CreateInvocation(InvoiceLineID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="InvoiceStatusID">
+        /// The value of the 'InvoiceStatusID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.InvoiceStatu InvoiceStatus_Single(global::System.Nullable<int> InvoiceStatusID)
+        {
+            return this.Details.Methods.InvoiceStatus_Single.CreateInvocation(InvoiceStatusID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="InvoiceStatusID">
+        /// The value of the 'InvoiceStatusID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.InvoiceStatu InvoiceStatus_SingleOrDefault(global::System.Nullable<int> InvoiceStatusID)
+        {
+            return this.Details.Methods.InvoiceStatus_SingleOrDefault.CreateInvocation(InvoiceStatusID).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.InvoiceStatu> InvoiceStatusSorted()
+        {
+            return this.Details.Methods.InvoiceStatusSorted.CreateInvocation().Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ClientRole> ClientRolesSorted()
+        {
+            return this.Details.Methods.ClientRolesSorted.CreateInvocation().Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="ClientName">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="PersonName">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.BillingDetail> BillingDetailsSorted(string ClientName, string PersonName)
+        {
+            return this.Details.Methods.BillingDetailsSorted.CreateInvocation(ClientName, PersonName).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="ClientName">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="PersonName">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.BillingDetail> BillingDetailNoRole(string ClientName, string PersonName)
+        {
+            return this.Details.Methods.BillingDetailNoRole.CreateInvocation(ClientName, PersonName).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -955,6 +1104,86 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice> Invoices_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.Invoices_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice> Invoices_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.Invoices_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine> InvoiceLines_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.InvoiceLines_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine> InvoiceLines_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.InvoiceLines_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu> InvoiceStatus_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.InvoiceStatus_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu> InvoiceStatus_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.InvoiceStatus_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu> InvoiceStatusSorted
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.InvoiceStatusSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole> ClientRolesSorted
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.ClientRolesSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetailsSorted
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.BillingDetailsSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetailNoRole
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.BillingDetailNoRole) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1069,6 +1298,30 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.ActiveTypes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice> Invoices
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.Invoices) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine> InvoiceLines
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.InvoiceLines) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu> InvoiceStatus
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties.InvoiceStatus) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>;
                     }
                 }
                 
@@ -1390,6 +1643,106 @@ namespace LightSwitchApplication
                     c(d, ref d._ProjectsFilter, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices_Single",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._Invoices_Single_Stub);
+                private static void _Invoices_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices_SingleOrDefault",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._Invoices_SingleOrDefault_Stub);
+                private static void _Invoices_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry
+                    InvoiceLines_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry(
+                        "InvoiceLines_Single",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._InvoiceLines_Single_Stub);
+                private static void _InvoiceLines_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceLines_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry
+                    InvoiceLines_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry(
+                        "InvoiceLines_SingleOrDefault",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._InvoiceLines_SingleOrDefault_Stub);
+                private static void _InvoiceLines_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceLines_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry
+                    InvoiceStatus_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry(
+                        "InvoiceStatus_Single",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._InvoiceStatus_Single_Stub);
+                private static void _InvoiceStatus_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceStatus_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry
+                    InvoiceStatus_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry(
+                        "InvoiceStatus_SingleOrDefault",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._InvoiceStatus_SingleOrDefault_Stub);
+                private static void _InvoiceStatus_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceStatus_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry
+                    InvoiceStatusSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry(
+                        "InvoiceStatusSorted",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._InvoiceStatusSorted_Stub);
+                private static void _InvoiceStatusSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceStatusSorted, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry
+                    ClientRolesSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole>.Entry(
+                        "ClientRolesSorted",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._ClientRolesSorted_Stub);
+                private static void _ClientRolesSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ClientRolesSorted, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetailsSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                        "BillingDetailsSorted",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._BillingDetailsSorted_Stub);
+                private static void _BillingDetailsSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingDetailsSorted, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetailNoRole = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                        "BillingDetailNoRole",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._BillingDetailNoRole_Stub);
+                private static void _BillingDetailNoRole_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingDetailNoRole, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1528,6 +1881,36 @@ namespace LightSwitchApplication
                     c(d, ref d._ActiveTypes, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties._Invoices_Stub);
+                private static void _Invoices_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry
+                    InvoiceLines = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry(
+                        "InvoiceLines",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties._InvoiceLines_Stub);
+                private static void _InvoiceLines_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceLines, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry
+                    InvoiceStatus = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Entry(
+                        "InvoiceStatus",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.PropertySetProperties._InvoiceStatus_Stub);
+                private static void _InvoiceStatus_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceStatus, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1568,6 +1951,15 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data _InvoiceStatus;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails_Single;
@@ -1661,6 +2053,36 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>.Data _ProjectsFilter;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data _InvoiceStatus_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data _InvoiceStatus_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data _InvoiceStatusSorted;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ClientRole>.Data _ClientRolesSorted;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetailsSorted;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetailNoRole;
             
         }
     

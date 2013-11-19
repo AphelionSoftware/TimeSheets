@@ -2696,6 +2696,48 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ShowFilter"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="BrowseBillingDetails/Methods[showDialog]">
+                          <ArgumentExpression
+                            Parameter="dialogName">
+                            <ConstantExpression
+                              Value="Filter"
+                              ResultType=":String" />
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-filter"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
@@ -2741,7 +2783,46 @@
         <ContentItem
           Name="Popups"
           Kind="Group"
-          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages">
+          <ContentItem
+            Name="Filter"
+            Kind="Group">
+            <ContentItem
+              Name="ClientName"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Client Name" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseBillingDetails/Properties[BillingDetailClientName]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="PersonName"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Person Name" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseBillingDetails/Properties[BillingDetailPersonName]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
         <ContentItem.PropertySources>
           <ControlPropertySource
             Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
@@ -2790,58 +2871,44 @@
             Name="BillingDetailsQuery"
             ReturnType="BillingDetail*">
             <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree>
-                <BinaryExpression
-                  NodeType="Equal">
-                  <BinaryExpression.Left>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="BillingDetail/Properties[ActiveType]" />
-                      <MemberExpression
-                        Member="ID" />
-                    </ChainExpression>
-                  </BinaryExpression.Left>
-                  <BinaryExpression.Right>
-                    <ConstantExpression
-                      Value="1"
-                      ResultType=":Int32" />
-                  </BinaryExpression.Right>
-                </BinaryExpression>
-              </QueryFilterExpressionTree>
+              <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimesheetsData/Members[BillingDetails]" />
+                  Member="TimesheetsData/Members[BillingDetailsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
-            <ScreenQueryDefinition.SortCriteria>
-              <SortCriterion>
-                <ChainExpression>
-                  <MemberExpression
-                    Member="Client" />
-                  <MemberExpression
-                    Member="ClientName" />
-                </ChainExpression>
-              </SortCriterion>
-              <SortCriterion>
-                <ChainExpression>
-                  <MemberExpression
-                    Member="Person" />
-                  <MemberExpression
-                    Member="PersonName" />
-                </ChainExpression>
-              </SortCriterion>
-            </ScreenQueryDefinition.SortCriteria>
           </ScreenQueryDefinition>
         </ScreenCollectionProperty.Query>
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseBillingDetails/Properties[BillingDetails]/Query" />
+              Target="BrowseBillingDetails/Properties[BillingDetails]/Query">
+              <ArgumentExpression
+                Parameter="ClientName">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseBillingDetails/Properties[BillingDetailClientName]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="PersonName">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseBillingDetails/Properties[BillingDetailPersonName]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="BillingDetailClientName"
+        PropertyType=":String?" />
+      <ScreenProperty
+        Name="BillingDetailPersonName"
+        PropertyType=":String?" />
     </Screen.Properties>
   </Screen>
   <Screen

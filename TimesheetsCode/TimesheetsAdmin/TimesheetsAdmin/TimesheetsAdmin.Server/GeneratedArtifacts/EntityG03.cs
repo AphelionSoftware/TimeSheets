@@ -315,6 +315,222 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceEmailAddress
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceEmailAddress);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceEmailAddress, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceEmailAddress_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceEmailAddress_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceEmailAddress_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceBank
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBank);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBank, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBank_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBank_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBank_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceBankBranch
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankBranch);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankBranch, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankBranch_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankBranch_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankBranch_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceBankAccount
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankAccount);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankAccount, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankAccount_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankAccount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceBankAccount_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceVATNumber
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceVATNumber);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceVATNumber, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceVATNumber_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceVATNumber_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceVATNumber_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceCompanyReg
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceCompanyReg);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceCompanyReg, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceCompanyReg_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceCompanyReg_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceCompanyReg_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceTelNo
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceTelNo);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceTelNo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceTelNo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceTelNo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceTelNo_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceContactPerson
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceContactPerson);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceContactPerson, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceContactPerson_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceContactPerson_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceContactPerson_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceAddress
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceAddress);
+            }
+            set
+            {
+                global::LightSwitchApplication.Client.DetailsClass.SetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceAddress, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceAddress_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceAddress_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceAddress_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.BillingDetail> BillingDetails
         {
             get
@@ -403,6 +619,29 @@ namespace LightSwitchApplication
         partial void ActiveType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ActiveType_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetValue(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> InvoicesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Client.DetailsClass.GetQuery(this, global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
 
         #endregion
     
@@ -566,6 +805,78 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceEmailAddress
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceEmailAddress) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceBank
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBank) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceBankBranch
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankBranch) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceBankAccount
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceBankAccount) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceVATNumber
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceVATNumber) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceCompanyReg
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceCompanyReg) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceTelNo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceTelNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceContactPerson
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceContactPerson) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string> InvoiceAddress
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.InvoiceAddress) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
                 {
                     get
@@ -598,6 +909,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice> Invoices
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.Invoices) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -614,10 +933,20 @@ namespace LightSwitchApplication
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
+                new string InvoiceEmailAddress { get; set; }
+                new string InvoiceBank { get; set; }
+                new string InvoiceBankBranch { get; set; }
+                new string InvoiceBankAccount { get; set; }
+                new string InvoiceVATNumber { get; set; }
+                new string InvoiceCompanyReg { get; set; }
+                new string InvoiceTelNo { get; set; }
+                new string InvoiceContactPerson { get; set; }
+                new string InvoiceAddress { get; set; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
                 new global::System.Collections.IEnumerable Projects { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
+                new global::System.Collections.IEnumerable Invoices { get; }
             }
             #pragma warning restore 109
     
@@ -990,6 +1319,339 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceEmailAddress = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceEmailAddress",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceEmailAddress_OnValueChanged);
+                private static void _InvoiceEmailAddress_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceEmailAddress, sf);
+                }
+                private static bool _InvoiceEmailAddress_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceEmailAddress_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceEmailAddress_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceEmailAddress_Validate(r);
+                }
+                private static string _InvoiceEmailAddress_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceEmailAddress;
+                }
+                private static void _InvoiceEmailAddress_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceEmailAddress = v;
+                }
+                private static void _InvoiceEmailAddress_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceEmailAddress_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceBank = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceBank",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBank_OnValueChanged);
+                private static void _InvoiceBank_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceBank, sf);
+                }
+                private static bool _InvoiceBank_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceBank_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceBank_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceBank_Validate(r);
+                }
+                private static string _InvoiceBank_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceBank;
+                }
+                private static void _InvoiceBank_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceBank = v;
+                }
+                private static void _InvoiceBank_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceBank_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceBankBranch = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceBankBranch",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankBranch_OnValueChanged);
+                private static void _InvoiceBankBranch_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceBankBranch, sf);
+                }
+                private static bool _InvoiceBankBranch_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceBankBranch_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceBankBranch_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceBankBranch_Validate(r);
+                }
+                private static string _InvoiceBankBranch_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceBankBranch;
+                }
+                private static void _InvoiceBankBranch_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceBankBranch = v;
+                }
+                private static void _InvoiceBankBranch_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceBankBranch_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceBankAccount = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceBankAccount",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceBankAccount_OnValueChanged);
+                private static void _InvoiceBankAccount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceBankAccount, sf);
+                }
+                private static bool _InvoiceBankAccount_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceBankAccount_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceBankAccount_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceBankAccount_Validate(r);
+                }
+                private static string _InvoiceBankAccount_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceBankAccount;
+                }
+                private static void _InvoiceBankAccount_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceBankAccount = v;
+                }
+                private static void _InvoiceBankAccount_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceBankAccount_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceVATNumber = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceVATNumber",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceVATNumber_OnValueChanged);
+                private static void _InvoiceVATNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceVATNumber, sf);
+                }
+                private static bool _InvoiceVATNumber_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceVATNumber_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceVATNumber_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceVATNumber_Validate(r);
+                }
+                private static string _InvoiceVATNumber_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceVATNumber;
+                }
+                private static void _InvoiceVATNumber_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceVATNumber = v;
+                }
+                private static void _InvoiceVATNumber_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceVATNumber_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceCompanyReg = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceCompanyReg",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceCompanyReg_OnValueChanged);
+                private static void _InvoiceCompanyReg_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceCompanyReg, sf);
+                }
+                private static bool _InvoiceCompanyReg_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceCompanyReg_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceCompanyReg_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceCompanyReg_Validate(r);
+                }
+                private static string _InvoiceCompanyReg_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceCompanyReg;
+                }
+                private static void _InvoiceCompanyReg_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceCompanyReg = v;
+                }
+                private static void _InvoiceCompanyReg_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceCompanyReg_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceTelNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceTelNo",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceTelNo_OnValueChanged);
+                private static void _InvoiceTelNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceTelNo, sf);
+                }
+                private static bool _InvoiceTelNo_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceTelNo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceTelNo_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceTelNo_Validate(r);
+                }
+                private static string _InvoiceTelNo_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceTelNo;
+                }
+                private static void _InvoiceTelNo_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceTelNo = v;
+                }
+                private static void _InvoiceTelNo_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceTelNo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceContactPerson = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceContactPerson",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceContactPerson_OnValueChanged);
+                private static void _InvoiceContactPerson_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceContactPerson, sf);
+                }
+                private static bool _InvoiceContactPerson_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceContactPerson_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceContactPerson_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceContactPerson_Validate(r);
+                }
+                private static string _InvoiceContactPerson_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceContactPerson;
+                }
+                private static void _InvoiceContactPerson_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceContactPerson = v;
+                }
+                private static void _InvoiceContactPerson_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceContactPerson_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry
+                    InvoiceAddress = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Entry(
+                        "InvoiceAddress",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_Validate,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_GetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_SetImplementationValue,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._InvoiceAddress_OnValueChanged);
+                private static void _InvoiceAddress_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceAddress, sf);
+                }
+                private static bool _InvoiceAddress_ComputeIsReadOnly(global::LightSwitchApplication.Client e)
+                {
+                    bool result = false;
+                    e.InvoiceAddress_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceAddress_Validate(global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceAddress_Validate(r);
+                }
+                private static string _InvoiceAddress_GetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceAddress;
+                }
+                private static void _InvoiceAddress_SetImplementationValue(global::LightSwitchApplication.Client.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceAddress = v;
+                }
+                private static void _InvoiceAddress_OnValueChanged(global::LightSwitchApplication.Client e)
+                {
+                    e.InvoiceAddress_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
                     BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails",
@@ -1123,6 +1785,26 @@ namespace LightSwitchApplication
                     e.ActiveType_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices",
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._Invoices_Stub,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._Invoices_GetReferencedEntities,
+                        global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties._Invoices_GetEntityCollection);
+                private static void _Invoices_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.Client.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices_GetReferencedEntities(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.Client.DetailsClass.PropertySetProperties.Invoices, ref d._Invoices);
+                }
+                private static global::System.Collections.IEnumerable _Invoices_GetEntityCollection(global::LightSwitchApplication.Client.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Invoices;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1156,6 +1838,33 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _sys_ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceEmailAddress;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceBank;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceBankBranch;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceBankAccount;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceVATNumber;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceCompanyReg;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceTelNo;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceContactPerson;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, string>.Data _InvoiceAddress;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1166,6 +1875,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Client, global::LightSwitchApplication.Client.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices;
             
         }
     

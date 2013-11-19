@@ -131,6 +131,15 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.BillingDetail> BillingDetailsSorted(string ClientName, string PersonName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.BillingDetail> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.BillingDetail>("BillingDetails"),
+                (b) => (((((b.ActiveType.ID == 1) && (b.Client.ActiveType.ID == 1)) && (b.Person.ActiveType.ID == 1)) && ((ClientName == null) || b.Client.ClientName.Contains(ClientName))) && ((PersonName == null) || b.Person.PersonName.Contains(PersonName))));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods

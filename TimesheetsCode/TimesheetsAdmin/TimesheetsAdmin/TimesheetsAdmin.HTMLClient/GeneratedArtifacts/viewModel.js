@@ -127,28 +127,6 @@
         $Screen.call(this, dataWorkspace, "AddEditClient", parameters);
     }
 
-    function BrowseBillingDetails(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the BrowseBillingDetails screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="BillingDetails" type="msls.VisualCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.BrowseBillingDetails.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "BrowseBillingDetails", parameters);
-    }
-
     function BrowseBillingStatus(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the BrowseBillingStatus screen.
@@ -265,6 +243,9 @@
         /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
         /// Gets the personSorted for this screen.
         /// </field>
+        /// <field name="ClientRolesSorted" type="msls.VisualCollection" elementType="msls.application.ClientRole">
+        /// Gets the clientRolesSorted for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditBillingDetail.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -378,6 +359,9 @@
         /// <field name="ClientRoles" type="msls.VisualCollection" elementType="msls.application.ClientRole">
         /// Gets the clientRoles for this screen.
         /// </field>
+        /// <field name="ClientRolesSorted" type="msls.VisualCollection" elementType="msls.application.ClientRole">
+        /// Gets the clientRolesSorted for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.BrowseClientRoles.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -456,6 +440,109 @@
         $Screen.call(this, dataWorkspace, "AddEditProject", parameters);
     }
 
+    function BrowseInvoiceStatus(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseInvoiceStatus screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="InvoiceStatus" type="msls.VisualCollection" elementType="msls.application.InvoiceStatu">
+        /// Gets the invoiceStatus for this screen.
+        /// </field>
+        /// <field name="InvoiceStatusSorted" type="msls.VisualCollection" elementType="msls.application.InvoiceStatu">
+        /// Gets the invoiceStatusSorted for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseInvoiceStatus.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseInvoiceStatus", parameters);
+    }
+
+    function AddEditInvoiceStatu(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditInvoiceStatu screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="InvoiceStatu" type="msls.application.InvoiceStatu">
+        /// Gets or sets the invoiceStatu for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditInvoiceStatu.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditInvoiceStatu", parameters);
+    }
+
+    function BrowseBillingDetailsSorted(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseBillingDetailsSorted screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="BillingDetailsSorted" type="msls.VisualCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetailsSorted for this screen.
+        /// </field>
+        /// <field name="BillingDetailClientName" type="String">
+        /// Gets or sets the billingDetailClientName for this screen.
+        /// </field>
+        /// <field name="BillingDetailPersonName" type="String">
+        /// Gets or sets the billingDetailPersonName for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseBillingDetailsSorted.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseBillingDetailsSorted", parameters);
+    }
+
+    function BrowseBillingDetailNoRole(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseBillingDetailNoRole screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="BillingDetailNoRole" type="msls.VisualCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetailNoRole for this screen.
+        /// </field>
+        /// <field name="BillingDetailClientName" type="String">
+        /// Gets or sets the billingDetailClientName for this screen.
+        /// </field>
+        /// <field name="BillingDetailPersonName" type="String">
+        /// Gets or sets the billingDetailPersonName for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseBillingDetailNoRole.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseBillingDetailNoRole", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         HomeScreen: $defineScreen(HomeScreen, [
@@ -523,16 +610,6 @@
         ], [
         ]),
 
-        BrowseBillingDetails: $defineScreen(BrowseBillingDetails, [
-            {
-                name: "BillingDetails", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
-                createQuery: function () {
-                    return this.dataWorkspace.Timesheets_Data.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
-                }
-            }
-        ], [
-        ]),
-
         BrowseBillingStatus: $defineScreen(BrowseBillingStatus, [
             {
                 name: "BillingStatus", kind: "collection", elementType: lightSwitchApplication.BillingStatus,
@@ -589,6 +666,12 @@
                 createQuery: function () {
                     return this.dataWorkspace.Timesheets_Data.PersonSorted();
                 }
+            },
+            {
+                name: "ClientRolesSorted", kind: "collection", elementType: lightSwitchApplication.ClientRole,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.ClientRolesSorted();
+                }
             }
         ], [
         ]),
@@ -629,7 +712,13 @@
             {
                 name: "ClientRoles", kind: "collection", elementType: lightSwitchApplication.ClientRole,
                 createQuery: function () {
-                    return this.dataWorkspace.Timesheets_Data.ClientRoles;
+                    return this.dataWorkspace.Timesheets_Data.ClientRolesSorted();
+                }
+            },
+            {
+                name: "ClientRolesSorted", kind: "collection", elementType: lightSwitchApplication.ClientRole,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.ClientRolesSorted();
                 }
             }
         ], [
@@ -664,6 +753,51 @@
 
         AddEditProject: $defineScreen(AddEditProject, [
             { name: "Project", kind: "local", type: lightSwitchApplication.Project }
+        ], [
+        ]),
+
+        BrowseInvoiceStatus: $defineScreen(BrowseInvoiceStatus, [
+            {
+                name: "InvoiceStatus", kind: "collection", elementType: lightSwitchApplication.InvoiceStatu,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.InvoiceStatus.expand("ActiveType");
+                }
+            },
+            {
+                name: "InvoiceStatusSorted", kind: "collection", elementType: lightSwitchApplication.InvoiceStatu,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.InvoiceStatusSorted();
+                }
+            }
+        ], [
+        ]),
+
+        AddEditInvoiceStatu: $defineScreen(AddEditInvoiceStatu, [
+            { name: "InvoiceStatu", kind: "local", type: lightSwitchApplication.InvoiceStatu }
+        ], [
+        ]),
+
+        BrowseBillingDetailsSorted: $defineScreen(BrowseBillingDetailsSorted, [
+            {
+                name: "BillingDetailsSorted", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.Timesheets_Data.BillingDetailsSorted(ClientName, PersonName).expand("Client").expand("Person").expand("ClientRole").expand("ActiveType").expand("DimDate");
+                }
+            },
+            { name: "BillingDetailClientName", kind: "local", type: String },
+            { name: "BillingDetailPersonName", kind: "local", type: String }
+        ], [
+        ]),
+
+        BrowseBillingDetailNoRole: $defineScreen(BrowseBillingDetailNoRole, [
+            {
+                name: "BillingDetailNoRole", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.Timesheets_Data.BillingDetailNoRole(ClientName, PersonName).expand("Client").expand("Person").expand("ClientRole").expand("ActiveType").expand("DimDate");
+                }
+            },
+            { name: "BillingDetailClientName", kind: "local", type: String },
+            { name: "BillingDetailPersonName", kind: "local", type: String }
         ], [
         ]),
 
@@ -725,18 +859,6 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("AddEditClient", parameters, options);
-        }),
-
-        showBrowseBillingDetails: $defineShowScreen(function showBrowseBillingDetails(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the BrowseBillingDetails screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("BrowseBillingDetails", parameters, options);
         }),
 
         showBrowseBillingStatus: $defineShowScreen(function showBrowseBillingStatus(options) {
@@ -893,6 +1015,54 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("AddEditProject", parameters, options);
+        }),
+
+        showBrowseInvoiceStatus: $defineShowScreen(function showBrowseInvoiceStatus(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseInvoiceStatus screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseInvoiceStatus", parameters, options);
+        }),
+
+        showAddEditInvoiceStatu: $defineShowScreen(function showAddEditInvoiceStatu(InvoiceStatu, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditInvoiceStatu screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditInvoiceStatu", parameters, options);
+        }),
+
+        showBrowseBillingDetailsSorted: $defineShowScreen(function showBrowseBillingDetailsSorted(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseBillingDetailsSorted screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseBillingDetailsSorted", parameters, options);
+        }),
+
+        showBrowseBillingDetailNoRole: $defineShowScreen(function showBrowseBillingDetailNoRole(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseBillingDetailNoRole screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseBillingDetailNoRole", parameters, options);
         })
 
     });

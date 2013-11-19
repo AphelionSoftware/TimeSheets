@@ -123,7 +123,7 @@ namespace LightSwitchApplication
             entity.sys_ModifiedOn = System.DateTime.Now;
         }
 
-        
+
         partial void ClientRoles_Inserting(ClientRole entity)
         {
             entity.sys_CreatedBy = /*Application.User.FullName*/"MarkGStacey";

@@ -149,6 +149,12 @@
         /// <field name="BillingDetails" type="msls.VisualCollection" elementType="msls.application.BillingDetail">
         /// Gets the billingDetails for this screen.
         /// </field>
+        /// <field name="BillingDetailClientName" type="String">
+        /// Gets or sets the billingDetailClientName for this screen.
+        /// </field>
+        /// <field name="BillingDetailPersonName" type="String">
+        /// Gets or sets the billingDetailPersonName for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.BrowseBillingDetails.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -468,10 +474,12 @@
         BrowseBillingDetails: $defineScreen(BrowseBillingDetails, [
             {
                 name: "BillingDetails", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.BillingDetails.filter("ActiveType/ID eq 1").orderBy("Client/ClientName").thenBy("Person/PersonName").expand("Client").expand("Person");
+                createQuery: function (ClientName, PersonName) {
+                    return this.dataWorkspace.TimesheetsData.BillingDetailsSorted(ClientName, PersonName).expand("Client").expand("Person");
                 }
-            }
+            },
+            { name: "BillingDetailClientName", kind: "local", type: String },
+            { name: "BillingDetailPersonName", kind: "local", type: String }
         ], [
         ]),
 

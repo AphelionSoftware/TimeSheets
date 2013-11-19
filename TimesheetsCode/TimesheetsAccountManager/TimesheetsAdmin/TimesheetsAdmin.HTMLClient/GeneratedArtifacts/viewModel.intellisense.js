@@ -434,7 +434,22 @@
         /// Called after the RowTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate_postRender: $parameters
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseTimesheets, {
