@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [CUBE]
+    AUTHORIZATION [dbo];
+

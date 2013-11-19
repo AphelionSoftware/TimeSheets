@@ -152,6 +152,8 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsA
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.ServiceModel.DomainServices.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.ServiceModel.PollingDuplex.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.Spatial.dll
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Wijmo.LightSwitch.Common.dll
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Wijmo.LightSwitch.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Microsoft.WindowsAzure.ServiceRuntime.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Microsoft.LightSwitch.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Microsoft.LightSwitch.Server.xml
@@ -159,8 +161,6 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsA
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.ServiceModel.DomainServices.Hosting.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.ServiceModel.DomainServices.Hosting.OData.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\System.ServiceModel.DomainServices.Server.xml
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Release\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Release\Application.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Release\Application.Server.pdb
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Wijmo.LightSwitch.Common.dll
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Release\Wijmo.LightSwitch.Server.dll
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Release\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache

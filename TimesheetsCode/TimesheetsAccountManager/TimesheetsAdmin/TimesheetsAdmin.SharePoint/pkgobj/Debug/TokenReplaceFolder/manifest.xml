@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="e962658a-67db-4f6e-98c2-6d7a14602c56" SharePointProductVersion="15.0">
-  <FeatureManifests>
-    <FeatureManifest Location="TimesheetsAdmin.SharePoint_Feature1\Feature.xml" />
-  </FeatureManifests>
-</Solution>

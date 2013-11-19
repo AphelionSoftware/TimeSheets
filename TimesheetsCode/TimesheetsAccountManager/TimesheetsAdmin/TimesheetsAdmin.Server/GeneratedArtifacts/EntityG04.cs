@@ -935,6 +935,52 @@ namespace LightSwitchApplication
             }
         }
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> InvoicesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices1
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> Invoices1Query
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -1305,6 +1351,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -1347,6 +1409,8 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
                 new global::System.Collections.IEnumerable Timesheets { get; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
+                new global::System.Collections.IEnumerable Invoices { get; }
+                new global::System.Collections.IEnumerable Invoices1 { get; }
             }
             #pragma warning restore 109
     
@@ -2633,6 +2697,46 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.BillingDetails;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_GetReferencedEntities,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_GetEntityCollection);
+                private static void _Invoices_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices, ref d._Invoices);
+                }
+                private static global::System.Collections.IEnumerable _Invoices_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Invoices;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices1 = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices1",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_GetReferencedEntities,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_GetEntityCollection);
+                private static void _Invoices1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices1, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices1_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1, ref d._Invoices1);
+                }
+                private static global::System.Collections.IEnumerable _Invoices1_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Invoices1;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2742,6 +2846,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices1;
             
         }
     

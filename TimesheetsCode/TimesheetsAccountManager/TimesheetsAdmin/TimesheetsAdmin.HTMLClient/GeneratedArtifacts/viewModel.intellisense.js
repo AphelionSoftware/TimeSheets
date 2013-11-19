@@ -920,4 +920,130 @@
         AMComments_postRender: $parameters
     });
 
+    msls._addEntryPoints(lightSwitchApplication.BrowseInvoices, {
+        /// <field>
+        /// Called when a new BrowseInvoices screen is created.
+        /// <br/>created(msls.application.BrowseInvoices screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseInvoices],
+        /// <field>
+        /// Called before changes on an active BrowseInvoices screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseInvoices screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseInvoices],
+        /// <field>
+        /// Called after the InvoiceList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceList_postRender: $parameters,
+        /// <field>
+        /// Called after the Invoice content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Invoice_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatusName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatusName_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditInvoice, {
+        /// <field>
+        /// Called when a new AddEditInvoice screen is created.
+        /// <br/>created(msls.application.AddEditInvoice screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditInvoice],
+        /// <field>
+        /// Called before changes on an active AddEditInvoice screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditInvoice screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditInvoice],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: $parameters,
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: $parameters,
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceSourceKey_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceStatu content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceStatu_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate3_postRender: $parameters,
+        /// <field>
+        /// Called after the DimDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DimDate_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate2_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceLines content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceLines_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceLines1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceLines1_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate5 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate5_postRender: $parameters
+    });
+
 }(msls.application));

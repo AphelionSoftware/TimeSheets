@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8A4D642E-824A-4D58-BD56-648CC30C8F17}") = "TimesheetsInvoices", "TimesheetsInvoices\TimesheetsInvoices.ls3proj", "{34630497-25F7-4FA4-BD78-19C8D72EC316}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{10FA2AF9-8602-4923-A855-0BC1B140790C}.0 = {4593990A-3352-4FD3-AA62-B4F0CE5586FE}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

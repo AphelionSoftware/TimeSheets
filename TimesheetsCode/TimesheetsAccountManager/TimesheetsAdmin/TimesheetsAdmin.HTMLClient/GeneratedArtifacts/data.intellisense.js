@@ -130,4 +130,28 @@
         created: [lightSwitchApplication.UnallocatedTimesheet]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Invoice, {
+        /// <field>
+        /// Called when a new invoice is created.
+        /// <br/>created(msls.application.Invoice entity)
+        /// </field>
+        created: [lightSwitchApplication.Invoice]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.InvoiceLine, {
+        /// <field>
+        /// Called when a new invoiceLine is created.
+        /// <br/>created(msls.application.InvoiceLine entity)
+        /// </field>
+        created: [lightSwitchApplication.InvoiceLine]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.InvoiceStatu, {
+        /// <field>
+        /// Called when a new invoiceStatu is created.
+        /// <br/>created(msls.application.InvoiceStatu entity)
+        /// </field>
+        created: [lightSwitchApplication.InvoiceStatu]
+    });
+
 }(msls.application));

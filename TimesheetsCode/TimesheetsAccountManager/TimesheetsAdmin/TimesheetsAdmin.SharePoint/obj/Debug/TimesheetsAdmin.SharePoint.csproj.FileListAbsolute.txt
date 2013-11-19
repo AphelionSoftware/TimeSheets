@@ -11,6 +11,6 @@ D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Times
 D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
 D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache

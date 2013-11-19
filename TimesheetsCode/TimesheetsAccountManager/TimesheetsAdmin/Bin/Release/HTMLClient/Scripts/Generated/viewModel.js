@@ -317,6 +317,9 @@
         /// <field name="UnallocatedTimesheetPersonName" type="String">
         /// Gets or sets the unallocatedTimesheetPersonName for this screen.
         /// </field>
+        /// <field name="BillingStatusSet" type="msls.VisualCollection" elementType="msls.application.BillingStatus">
+        /// Gets the billingStatusSet for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.EditUnallocatedTimesheets.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -324,6 +327,62 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "EditUnallocatedTimesheets", parameters);
+    }
+
+    function BrowseInvoices(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseInvoices screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Invoices" type="msls.VisualCollection" elementType="msls.application.Invoice">
+        /// Gets the invoices for this screen.
+        /// </field>
+        /// <field name="InvoicesSorted" type="msls.VisualCollection" elementType="msls.application.Invoice">
+        /// Gets the invoicesSorted for this screen.
+        /// </field>
+        /// <field name="PersonName" type="String">
+        /// Gets or sets the personName for this screen.
+        /// </field>
+        /// <field name="InvoiceStatusName" type="String">
+        /// Gets or sets the invoiceStatusName for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseInvoices.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseInvoices", parameters);
+    }
+
+    function AddEditInvoice(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditInvoice screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Invoice" type="msls.application.Invoice">
+        /// Gets or sets the invoice for this screen.
+        /// </field>
+        /// <field name="InvoiceLines" type="msls.VisualCollection" elementType="msls.application.InvoiceLine">
+        /// Gets the invoiceLines for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditInvoice.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditInvoice", parameters);
     }
 
     msls._addToNamespace("msls.application", {
@@ -500,10 +559,51 @@
                 }
             },
             { name: "UnallocatedTimesheetClientName", kind: "local", type: String },
-            { name: "UnallocatedTimesheetPersonName", kind: "local", type: String }
+            { name: "UnallocatedTimesheetPersonName", kind: "local", type: String },
+            {
+                name: "BillingStatusSet", kind: "collection", elementType: lightSwitchApplication.BillingStatus,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.BillingStatusSet;
+                }
+            }
         ], [
             { name: "AddNew" },
             { name: "DeleteSelected" }
+        ]),
+
+        BrowseInvoices: $defineScreen(BrowseInvoices, [
+            {
+                name: "Invoices", kind: "collection", elementType: lightSwitchApplication.Invoice,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.Invoices.expand("ActiveType").expand("Person").expand("DimDate").expand("InvoiceStatu");
+                }
+            },
+            {
+                name: "InvoicesSorted", kind: "collection", elementType: lightSwitchApplication.Invoice,
+                createQuery: function (PersonName, InvoiceStatusName) {
+                    return this.dataWorkspace.TimesheetsData.InvoicesSorted(PersonName, InvoiceStatusName);
+                }
+            },
+            { name: "PersonName", kind: "local", type: String },
+            { name: "InvoiceStatusName", kind: "local", type: String }
+        ], [
+        ]),
+
+        AddEditInvoice: $defineScreen(AddEditInvoice, [
+            { name: "Invoice", kind: "local", type: lightSwitchApplication.Invoice },
+            {
+                name: "InvoiceLines", kind: "collection", elementType: lightSwitchApplication.InvoiceLine,
+                getNavigationProperty: function () {
+                    if (this.owner.Invoice) {
+                        return this.owner.Invoice.details.properties.InvoiceLines;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this.expand("ActiveType").expand("Person");
+                }
+            }
+        ], [
         ]),
 
         showHomeScreen: $defineShowScreen(function showHomeScreen(options) {
@@ -648,6 +748,30 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("EditUnallocatedTimesheets", parameters, options);
+        }),
+
+        showBrowseInvoices: $defineShowScreen(function showBrowseInvoices(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseInvoices screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseInvoices", parameters, options);
+        }),
+
+        showAddEditInvoice: $defineShowScreen(function showAddEditInvoice(Invoice, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditInvoice screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditInvoice", parameters, options);
         })
 
     });

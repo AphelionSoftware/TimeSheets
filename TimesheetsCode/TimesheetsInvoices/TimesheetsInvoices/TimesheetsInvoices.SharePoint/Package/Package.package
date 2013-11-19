@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b936e0a8-6225-4707-a367-4efe3ee77f07" solutionId="b936e0a8-6225-4707-a367-4efe3ee77f07" resetWebServer="false" sharePointProductVersion="15.0" name="TimesheetsInvoices.SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="d842af9a-8144-4520-b46d-3441b2d6b920" />
+  </features>
+</package>
