@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TimesheetLoader", "TimesheetLoader\TimesheetLoader.dtproj", "{2C802F14-0276-4A3B-B2E9-007BED41B664}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C802F14-0276-4A3B-B2E9-007BED41B664}.Development|Default.ActiveCfg = Development
+		{2C802F14-0276-4A3B-B2E9-007BED41B664}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

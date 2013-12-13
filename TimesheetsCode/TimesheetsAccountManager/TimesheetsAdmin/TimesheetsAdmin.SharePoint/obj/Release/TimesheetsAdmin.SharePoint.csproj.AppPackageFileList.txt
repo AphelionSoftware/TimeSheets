@@ -1,1 +1,1 @@
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Publish\1.0.27.0\TimesheetsAdmin.SharePoint.app
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Publish\1.0.32.0\TimesheetsAdmin.SharePoint.app

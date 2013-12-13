@@ -384,9 +384,6 @@
         /// <field name="ClientRole" type="msls.application.ClientRole">
         /// Gets or sets the clientRole for this screen.
         /// </field>
-        /// <field name="BillingDetails" type="msls.VisualCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this screen.
-        /// </field>
         /// <field name="details" type="msls.application.AddEditClientRole.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -408,6 +405,15 @@
         /// </param>
         /// <field name="Projects" type="msls.VisualCollection" elementType="msls.application.Project">
         /// Gets the projects for this screen.
+        /// </field>
+        /// <field name="ProjectsFilter" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectsFilter for this screen.
+        /// </field>
+        /// <field name="ClientName" type="String">
+        /// Gets or sets the clientName for this screen.
+        /// </field>
+        /// <field name="ProjectName" type="String">
+        /// Gets or sets the projectName for this screen.
         /// </field>
         /// <field name="details" type="msls.application.BrowseProjects.Details">
         /// Gets the details for this screen.
@@ -725,19 +731,7 @@
         ]),
 
         AddEditClientRole: $defineScreen(AddEditClientRole, [
-            { name: "ClientRole", kind: "local", type: lightSwitchApplication.ClientRole },
-            {
-                name: "BillingDetails", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
-                getNavigationProperty: function () {
-                    if (this.owner.ClientRole) {
-                        return this.owner.ClientRole.details.properties.BillingDetails;
-                    }
-                    return null;
-                },
-                appendQuery: function () {
-                    return this.expand("Client").expand("Person");
-                }
-            }
+            { name: "ClientRole", kind: "local", type: lightSwitchApplication.ClientRole }
         ], [
         ]),
 
@@ -745,9 +739,17 @@
             {
                 name: "Projects", kind: "collection", elementType: lightSwitchApplication.Project,
                 createQuery: function () {
-                    return this.dataWorkspace.Timesheets_Data.Projects.expand("BillingStatus").expand("Client").expand("Person").expand("ActiveType");
+                    return this.dataWorkspace.Timesheets_Data.Projects;
                 }
-            }
+            },
+            {
+                name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (ClientName, ProjectName) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName).expand("Client");
+                }
+            },
+            { name: "ClientName", kind: "local", type: String },
+            { name: "ProjectName", kind: "local", type: String }
         ], [
         ]),
 
@@ -781,7 +783,7 @@
             {
                 name: "BillingDetailsSorted", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
                 createQuery: function (ClientName, PersonName) {
-                    return this.dataWorkspace.Timesheets_Data.BillingDetailsSorted(ClientName, PersonName).expand("Client").expand("Person").expand("ClientRole").expand("ActiveType").expand("DimDate");
+                    return this.dataWorkspace.Timesheets_Data.BillingDetailsSorted(ClientName, PersonName).expand("Client").expand("Person").expand("ActiveType").expand("DimDate");
                 }
             },
             { name: "BillingDetailClientName", kind: "local", type: String },
@@ -793,7 +795,7 @@
             {
                 name: "BillingDetailNoRole", kind: "collection", elementType: lightSwitchApplication.BillingDetail,
                 createQuery: function (ClientName, PersonName) {
-                    return this.dataWorkspace.Timesheets_Data.BillingDetailNoRole(ClientName, PersonName).expand("Client").expand("Person").expand("ClientRole").expand("ActiveType").expand("DimDate");
+                    return this.dataWorkspace.Timesheets_Data.BillingDetailNoRole(ClientName, PersonName).expand("Client").expand("Person").expand("ActiveType").expand("DimDate");
                 }
             },
             { name: "BillingDetailClientName", kind: "local", type: String },

@@ -315,29 +315,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.BillingDetail> BillingDetails
-        {
-            get
-            {
-                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.BillingDetail> BillingDetailsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.ClientRole.DetailsClass.GetQuery(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
@@ -377,6 +354,29 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.ClientRole.DetailsClass.GetQuery(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.BillingDetail> BillingDetails
+        {
+            get
+            {
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.BillingDetail> BillingDetailsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetQuery(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
             }
         }
 
@@ -542,14 +542,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
                 {
                     get
@@ -563,6 +555,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>;
                     }
                 }
                 
@@ -582,9 +582,9 @@ namespace LightSwitchApplication
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
-                new global::System.Collections.IEnumerable BillingDetails { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::System.Collections.IEnumerable InvoiceLines { get; }
+                new global::System.Collections.IEnumerable BillingDetails { get; }
             }
             #pragma warning restore 109
     
@@ -957,26 +957,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
-                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
-                        "BillingDetails",
-                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_Stub,
-                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetReferencedEntities,
-                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetEntityCollection);
-                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BillingDetails, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> _BillingDetails_GetReferencedEntities(global::LightSwitchApplication.ClientRole.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.BillingDetail, global::LightSwitchApplication.BillingDetail.DetailsClass>(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails, ref d._BillingDetails);
-                }
-                private static global::System.Collections.IEnumerable _BillingDetails_GetEntityCollection(global::LightSwitchApplication.ClientRole.DetailsClass d)
-                {
-                    return d.ImplementationEntity.BillingDetails;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
                     ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
@@ -1043,6 +1023,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.InvoiceLines;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                        "BillingDetails",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetReferencedEntities,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetEntityCollection);
+                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillingDetails, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> _BillingDetails_GetReferencedEntities(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.BillingDetail, global::LightSwitchApplication.BillingDetail.DetailsClass>(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails, ref d._BillingDetails);
+                }
+                private static global::System.Collections.IEnumerable _BillingDetails_GetEntityCollection(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.ImplementationEntity.BillingDetails;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1076,13 +1076,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _sys_ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
             
         }
     

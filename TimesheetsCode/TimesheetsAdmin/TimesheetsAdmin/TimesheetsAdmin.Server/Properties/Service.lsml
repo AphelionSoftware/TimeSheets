@@ -136,11 +136,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="ClientRole"
-        Association="FK_BillingDetail_Role1"
-        FromEnd="BillingDetail"
-        ToEnd="ClientRole" />
-      <NavigationProperty
         Name="ActiveType"
         Association="FK_BillingDetail_ActiveType"
         FromEnd="BillingDetail"
@@ -150,6 +145,11 @@
         Association="FK_BillingDetail_DimDate"
         FromEnd="BillingDetail"
         ToEnd="DimDate" />
+      <NavigationProperty
+        Name="ClientRole"
+        Association="FK_BillingDetail_ClientRole"
+        FromEnd="BillingDetail"
+        ToEnd="ClientRole" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -2998,16 +2998,6 @@
       CanUpdate="True"
       EntityType="SystemRole" />
     <AssociationSet
-      Name="FK_BillingDetail_Role1"
-      Association="FK_BillingDetail_Role1">
-      <AssociationSetEnd
-        Name="ClientRole"
-        EntitySet="ClientRoles" />
-      <AssociationSetEnd
-        Name="BillingDetail"
-        EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet
       Name="FK_Person_Role1"
       Association="FK_Person_Role1">
       <AssociationSetEnd
@@ -3747,6 +3737,22 @@
         Name="ProjectName"
         IsOptional="True"
         ParameterType=":String?" />
+      <QueryOperation.SortCriteria>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="Client" />
+            <MemberExpression
+              Member="ClientName" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="ProjectName" />
+          </ChainExpression>
+        </SortCriterion>
+      </QueryOperation.SortCriteria>
     </QueryOperation>
     <AssociationSet
       Name="fk_TimesheetPersonID"
@@ -4545,6 +4551,16 @@
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_BillingDetail_ClientRole"
+      Association="FK_BillingDetail_ClientRole">
+      <AssociationSetEnd
+        Name="ClientRole"
+        EntitySet="ClientRoles" />
+      <AssociationSetEnd
+        Name="BillingDetail"
+        EntitySet="BillingDetails" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -4795,11 +4811,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="BillingDetails"
-        Association="FK_BillingDetail_Role1"
-        FromEnd="ClientRole"
-        ToEnd="BillingDetail" />
-      <NavigationProperty
         Name="ActiveType"
         Association="FK_ClientRole_ActiveType"
         FromEnd="ClientRole"
@@ -4809,6 +4820,11 @@
         Association="FK_InvoiceLine_InvoiceLine"
         FromEnd="ClientRole"
         ToEnd="InvoiceLine" />
+      <NavigationProperty
+        Name="BillingDetails"
+        Association="FK_BillingDetail_ClientRole"
+        FromEnd="ClientRole"
+        ToEnd="BillingDetail" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4932,20 +4948,6 @@
         ToEnd="ActiveType" />
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="FK_BillingDetail_Role1">
-    <AssociationEnd
-      Name="ClientRole"
-      EntityType="ClientRole">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="BillingDetail"
-      Multiplicity="Many"
-      EntityType="BillingDetail" />
-  </Association>
   <Association
     Name="FK_Person_Role1">
     <AssociationEnd
@@ -5982,6 +5984,21 @@
       Multiplicity="Many"
       EntityType="InvoiceStatu" />
   </Association>
+  <Association
+    Name="FK_BillingDetail_ClientRole">
+    <AssociationEnd
+      Name="ClientRole"
+      Multiplicity="One"
+      EntityType="ClientRole">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="BillingDetail"
+      Multiplicity="Many"
+      EntityType="BillingDetail" />
+  </Association>
   <DataService
     Name="Timesheets_DataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -5998,7 +6015,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="e35ec4c8-9c12-4c19-b9c2-b27e4f5f2364" />
+        Value="6b9f4a3f-2398-42dc-8abf-889fcee6b3eb" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -6122,6 +6139,11 @@
           Type="int"
           PropertyName="BillingDetailClientID" />
         <SsdlForeignKeyProperty
+          Name="BillingDetailClientRoleID"
+          Nullable="False"
+          Type="int"
+          PropertyName="BillingDetailClientRoleID" />
+        <SsdlForeignKeyProperty
           Name="BillingDetailDateID"
           Nullable="False"
           Type="int"
@@ -6131,11 +6153,6 @@
           Nullable="False"
           Type="int"
           PropertyName="BillingDetailPersonID" />
-        <SsdlForeignKeyProperty
-          Name="BillingDetailClientRoleID"
-          Nullable="True"
-          Type="int"
-          PropertyName="BillingDetailClientRoleID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -7665,6 +7682,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_BillingDetail_ClientRole">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_BillingDetail_ClientRole" />
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[ClientRole]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ClientRoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[BillingDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillingDetailClientRoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_BillingDetail_DimDate">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -7702,27 +7740,6 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailPersonID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_BillingDetail_Role1">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_BillingDetail_Role" />
-        <SsdlAssociationSetEnd
-          End="Timesheets_Data/Members[FK_BillingDetail_Role1]/Members[ClientRole]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="ClientRoleID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="Timesheets_Data/Members[FK_BillingDetail_Role1]/Members[BillingDetail]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="BillingDetailClientRoleID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

@@ -17,7 +17,7 @@
     [sys_CreatedBy]       NVARCHAR (255) CONSTRAINT [DF__Timesheet__sys_C__3B0BC30C] DEFAULT ('Unknown') NOT NULL,
     [sys_ModifiedOn]      DATETIME       CONSTRAINT [DF__Timesheet__sys_M__3BFFE745] DEFAULT (getdate()) NOT NULL,
     [sys_ModifiedBy]      NVARCHAR (255) CONSTRAINT [DF__Timesheet__sys_M__3CF40B7E] DEFAULT ('Unknown') NOT NULL,
-    [PeriodEnding]        AS             (CONVERT([date],CONVERT([varchar](8),[TimesheetDateID],(0)),(112))) PERSISTED,
+    [PeriodEnding]        AS             (CONVERT([date],CONVERT([varchar](8),[TimesheetDateID],(0)),(112))) PERSISTED NOT NULL,
     [TimesheetPersonID]   INT            NOT NULL,
     CONSTRAINT [PK_Timesheet] PRIMARY KEY CLUSTERED ([TimesheetID] ASC),
     CONSTRAINT [FK_Timesheet_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
@@ -27,7 +27,8 @@
 );
 
 
+
+
 GO
-CREATE UNIQUE NONCLUSTERED INDEX [IX_Filename_Unique]
-    ON [dbo].[Timesheet]([TimesheetFileName] ASC);
+
 

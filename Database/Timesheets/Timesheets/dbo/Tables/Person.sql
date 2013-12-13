@@ -26,3 +26,10 @@
     CONSTRAINT [FK_Person_Role] FOREIGN KEY ([PersonSystemRoleID]) REFERENCES [dbo].[SystemRole] ([SystemRoleID])
 );
 
+
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Person]
+    ON [dbo].[Person]([PersonSourceKey] ASC);
+

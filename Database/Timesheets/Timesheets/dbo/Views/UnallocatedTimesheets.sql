@@ -4,7 +4,8 @@ CREATE VIEW [dbo].[UnallocatedTimesheets]
 as
 
 select
-bs.BillingStatusName
+bs.BillingStatusID
+,Convert( varchar(255),bs.BillingStatusName) BillingStatusName
 ,c.ClientName
 ,p.ProjectName
  
@@ -27,6 +28,8 @@ bs.BillingStatusName
 	  , ISNULL(AMPerson.PersonName, 'Mark Stacey') AccountManager
 	  , ISNULL(AMPerson.Email, 'mark.stacey@aphelion.bi') AMEmail
 	  ,ddMonth.BillingPeriodText
+	  ,ISNULL(AMPerson.ADUsername, 'MarkGStacey@Aphelion.BI') ADUserName
+	 ,ISNULL(AMPerson.SharepointUserName, 'MarkGStacey@Aphelion.BI') SharePointUserName
 FROM dbo.TimesheetDetail TD
 
 inner join dbo.Project P
@@ -35,7 +38,7 @@ and not p.Billable = 0
 inner join dbo.Client c
 on P.ClientID = c.ClientID
 left join dbo.Person AMPerson
-on p.AccountManagerPersonID = amperson.PersonID
+on ISNULL(p.AccountManagerPersonID, C.AccountManagerPersonID) = amperson.PersonID
 
 inner join dbo.TypeOfWork TOW 
 on td.TimesheetTypeOfWorkID  = TOW.TypeOfWorkID
@@ -51,4 +54,4 @@ inner join cube.DimDate ddMonth
 on dd.BillingYear = ddMonth.BillingYear
 and ddMonth.Date = cast(getdate() as date)
 where billingstatusname = 'Unallocated'
-OR P.ProjectID IN (SELECT CAST (ProjectID as int) ProjectID from ProjectsOverCap)
+--OR P.ProjectID IN (SELECT CAST (ProjectID as int) ProjectID from ProjectsOverCap)

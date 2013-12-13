@@ -30,8 +30,10 @@
     [WeekEndingBillingPeriod] VARCHAR (20)   NULL,
     [BillingPeriodText]       VARCHAR (9)    NULL,
     [BillingPeriod]           INT            NULL,
-    [WeekEnding]              DATETIME       NULL,
+    [WeekEnding]              DATE           NOT NULL,
     [WeekEndingText]          VARCHAR (10)   NULL,
     CONSTRAINT [PK_DimDate] PRIMARY KEY CLUSTERED ([DateID] ASC)
 );
+
+
 

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Cache Timesheets"
+  DTS:DTSID="{FF975062-5AD7-4051-BC3E-D95BF97C46F0}"
+  DTS:CreationName="ADO.NET:SQL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=r51q8t78uk.database.windows.net;User ID=LOrealTest;Initial Catalog=Timesheets;Persist Security Info=True;Connect Timeout=30;Application Name=SSIS-TimesheetLoaderRawFile-{FF975062-5AD7-4051-BC3E-D95BF97C46F0}Timesheets;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1"
+        p4:Salt="5xIIvvXegQ=="
+        p4:IV="xlRfhi9FeSM=" xmlns:p4="www.microsoft.com/SqlServer/SSIS">9PAc5aVLcFndCptOtueswKzOGLLJwvIZA/RdayWPiHp8QZ9V+MxDYkS/XqySnK2kVqmqfV8pxFsG/8palqu/YuxqTV2Q4/uXwdu4MemwWrg6VKEsG5gEaQb3w7XbHej1qelH7bkLscyx0JjzS55Di3qSKKQtbqsdn4uqQYERb+A=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

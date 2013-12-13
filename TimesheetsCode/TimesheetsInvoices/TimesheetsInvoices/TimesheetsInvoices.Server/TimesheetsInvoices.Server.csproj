@@ -220,6 +220,7 @@
     </Compile>
     <Compile Include="UserCode\Shared\Client.cs" />
     <Compile Include="UserCode\Shared\Invoice.cs" />
+    <Compile Include="UserCode\Shared\InvoiceLine.cs" />
     <Compile Include="UserCode\Timesheets20130908DataService.cs" />
   </ItemGroup>
   <ItemGroup>

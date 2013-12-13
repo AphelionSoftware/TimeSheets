@@ -40,9 +40,11 @@ namespace LightSwitchApplication.Implementation
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> TimesheetsByDate(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
-            query = global::System.Linq.Queryable.Where(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
-                (t) => ((((StartDate.HasValue == false) || (StartDate.HasValue && (t.DimDate.c_Date >= StartDate))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (t.DimDate.c_Date <= EndDate)))) && ((TimesheetPerson == null) || t.TimesheetPerson.Contains(TimesheetPerson))));
+            query = global::System.Linq.Queryable.OrderByDescending(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
+                    (t) => ((((StartDate.HasValue == false) || (StartDate.HasValue && (t.DimDate.c_Date >= StartDate))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (t.DimDate.c_Date <= EndDate)))) && ((TimesheetPerson == null) || t.TimesheetPerson.Contains(TimesheetPerson)))),
+                (t) => t.TimesheetDate);
             return query;
         }
     
@@ -127,7 +129,7 @@ namespace LightSwitchApplication.Implementation
                 global::System.Linq.Queryable.Where(
                     this.GetQuery<global::LightSwitchApplication.Implementation.InvoiceLine>("InvoiceLines"),
                     (i) => (((((InvoiceID.HasValue == false) || (InvoiceID.HasValue && (i.Invoice.InvoiceID == InvoiceID))) && ((AM == null) || i.Invoice.Person.PersonName.Contains(AM))) && ((InvoiceLineDescription == null) || i.InvoiceLineDescription.Contains(InvoiceLineDescription))) && ((ProjectName == null) || i.Project.ProjectName.Contains(ProjectName)))),
-                (i) => i.Comments);
+                (i) => i.InvoiceLineDescription);
             return query;
         }
     
@@ -475,22 +477,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ClientRole
-        {
-            get
-            {
-                return this.ClientRole;
-            }
-            set
-            {
-                this.ClientRole = (global::LightSwitchApplication.Implementation.ClientRole)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("ClientRole");
-                }
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ActiveType
         {
             get
@@ -523,6 +509,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ClientRole
+        {
+            get
+            {
+                return this.ClientRole;
+            }
+            set
+            {
+                this.ClientRole = (global::LightSwitchApplication.Implementation.ClientRole)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("ClientRole");
+                }
+            }
+        }
+        
         partial void OnBillingDetailClientIDChanged()
         {
             if (this.__host != null)
@@ -539,14 +541,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        partial void OnBillingDetailClientRoleIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("ClientRole");
-            }
-        }
-        
         partial void OnActiveChanged()
         {
             if (this.__host != null)
@@ -560,6 +554,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("DimDate");
+            }
+        }
+        
+        partial void OnBillingDetailClientRoleIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("ClientRole");
             }
         }
         
@@ -819,6 +821,14 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.Invoices1;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.DimDate.DetailsClass.IImplementation.Invoices2
+        {
+            get
+            {
+                return this.Invoices2;
             }
         }
         
@@ -1589,14 +1599,6 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.BillingDetails
-        {
-            get
-            {
-                return this.BillingDetails;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.ActiveType
         {
             get
@@ -1618,6 +1620,14 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.InvoiceLines;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.BillingDetails
+        {
+            get
+            {
+                return this.BillingDetails;
             }
         }
         
@@ -2147,6 +2157,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Invoice.DetailsClass.IImplementation.DimDate2
+        {
+            get
+            {
+                return this.DimDate2;
+            }
+            set
+            {
+                this.DimDate2 = (global::LightSwitchApplication.Implementation.DimDate)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("DimDate2");
+                }
+            }
+        }
+        
         partial void OnActiveChanged()
         {
             if (this.__host != null)
@@ -2192,6 +2218,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("DueDate");
+            }
+        }
+        
+        partial void OnInvoicePaidDateIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("DimDate2");
             }
         }
         

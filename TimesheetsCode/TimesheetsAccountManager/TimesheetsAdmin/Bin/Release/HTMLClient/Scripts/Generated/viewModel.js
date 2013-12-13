@@ -391,6 +391,28 @@
         $Screen.call(this, dataWorkspace, "AddEditInvoice", parameters);
     }
 
+    function AddEditProject(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditProject screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Project" type="msls.application.Project">
+        /// Gets or sets the project for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditProject.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditProject", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         HomeScreen: $defineScreen(HomeScreen, [
@@ -614,6 +636,11 @@
         ], [
         ]),
 
+        AddEditProject: $defineScreen(AddEditProject, [
+            { name: "Project", kind: "local", type: lightSwitchApplication.Project }
+        ], [
+        ]),
+
         showHomeScreen: $defineShowScreen(function showHomeScreen(options) {
             /// <summary>
             /// Asynchronously navigates forward to the HomeScreen screen.
@@ -780,6 +807,18 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("AddEditInvoice", parameters, options);
+        }),
+
+        showAddEditProject: $defineShowScreen(function showAddEditProject(Project, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditProject screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditProject", parameters, options);
         })
 
     });

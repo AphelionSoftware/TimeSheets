@@ -563,16 +563,6 @@
         /// </field>
         RowTemplate1_postRender: $parameters,
         /// <field>
-        /// Called after the ClientRole content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ClientRole_postRender: $parameters,
-        /// <field>
-        /// Called after the ClientRole1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ClientRole1_postRender: $parameters,
-        /// <field>
         /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -939,17 +929,7 @@
         /// Called after the BillingDetails content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        BillingDetails_postRender: $parameters,
-        /// <field>
-        /// Called after the BillingDetails1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingDetails1_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate_postRender: $parameters
+        BillingDetails_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseProjects, {
@@ -969,15 +949,45 @@
         /// </field>
         ProjectList_postRender: $parameters,
         /// <field>
-        /// Called after the Project content item has been rendered.
+        /// Called after the ProjectsFilter content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Project_postRender: $parameters,
+        ProjectsFilter_postRender: $parameters,
         /// <field>
-        /// Called after the RowTemplate content item has been rendered.
+        /// Called after the ProjectsFilterTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate_postRender: $parameters
+        ProjectsFilterTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName1_postRender: $parameters,
+        /// <field>
+        /// Called after the Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ClientName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName1_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditProject, {

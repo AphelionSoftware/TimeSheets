@@ -339,6 +339,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoiceNumber
+        {
+            get
+            {
+                return global::LightSwitchApplication.Invoice.DetailsClass.GetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceNumber);
+            }
+            set
+            {
+                global::LightSwitchApplication.Invoice.DetailsClass.SetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceNumber, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceNumber_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceNumber_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceNumber_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
@@ -500,6 +524,30 @@ namespace LightSwitchApplication
         partial void DueDate_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void DueDate_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.DimDate DimDate2
+        {
+            get
+            {
+                return global::LightSwitchApplication.Invoice.DetailsClass.GetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2);
+            }
+            set
+            {
+                global::LightSwitchApplication.Invoice.DetailsClass.SetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDate2_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDate2_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDate2_Changed();
 
         #endregion
     
@@ -671,6 +719,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string> InvoiceNumber
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceNumber) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
                 {
                     get
@@ -727,6 +783,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate> DimDate2
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -744,6 +808,7 @@ namespace LightSwitchApplication
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
                 new string InvoiceEmailAddress { get; set; }
+                new string InvoiceNumber { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation DimDate { get; set; }
@@ -751,6 +816,7 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable InvoiceLines { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Client { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation DueDate { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation DimDate2 { get; set; }
             }
             #pragma warning restore 109
     
@@ -1160,6 +1226,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Entry
+                    InvoiceNumber = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Entry(
+                        "InvoiceNumber",
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_Stub,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_Validate,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_GetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_SetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceNumber_OnValueChanged);
+                private static void _InvoiceNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Invoice.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data> c, global::LightSwitchApplication.Invoice.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceNumber, sf);
+                }
+                private static bool _InvoiceNumber_ComputeIsReadOnly(global::LightSwitchApplication.Invoice e)
+                {
+                    bool result = false;
+                    e.InvoiceNumber_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceNumber_Validate(global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceNumber_Validate(r);
+                }
+                private static string _InvoiceNumber_GetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceNumber;
+                }
+                private static void _InvoiceNumber_SetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoiceNumber = v;
+                }
+                private static void _InvoiceNumber_OnValueChanged(global::LightSwitchApplication.Invoice e)
+                {
+                    e.InvoiceNumber_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
                     ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
@@ -1461,6 +1564,53 @@ namespace LightSwitchApplication
                     e.DueDate_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>.Entry
+                    DimDate2 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>.Entry(
+                        "DimDate2",
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_Stub,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_Validate,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_GetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_SetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_Refresh,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._DimDate2_OnValueChanged);
+                private static void _DimDate2_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Invoice.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>.Data> c, global::LightSwitchApplication.Invoice.DetailsClass d, object sf)
+                {
+                    c(d, ref d._DimDate2, sf);
+                }
+                private static bool _DimDate2_ComputeIsReadOnly(global::LightSwitchApplication.Invoice e)
+                {
+                    bool result = false;
+                    e.DimDate2_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _DimDate2_Validate(global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.DimDate2_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _DimDate2_GetCoreImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d)
+                {
+                    return d.ImplementationEntity.DimDate2;
+                }
+                private static global::LightSwitchApplication.DimDate _DimDate2_GetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2, ref d._DimDate2);
+                }
+                private static void _DimDate2_SetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d, global::LightSwitchApplication.DimDate v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2, ref d._DimDate2, (i, ev) => i.DimDate2 = ev, v);
+                }
+                private static void _DimDate2_Refresh(global::LightSwitchApplication.Invoice.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.DimDate2, ref d._DimDate2);
+                }
+                private static void _DimDate2_OnValueChanged(global::LightSwitchApplication.Invoice e)
+                {
+                    e.DimDate2_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1497,6 +1647,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data _InvoiceEmailAddress;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data _InvoiceNumber;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1516,6 +1669,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DueDate;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDate2;
             
         }
     

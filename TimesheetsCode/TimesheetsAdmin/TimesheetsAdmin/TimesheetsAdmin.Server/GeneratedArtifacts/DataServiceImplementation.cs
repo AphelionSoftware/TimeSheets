@@ -83,9 +83,13 @@ namespace LightSwitchApplication.Implementation
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectsFilter(string ClientName, string ProjectName)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
-            query = global::System.Linq.Queryable.Where(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                (p) => (((((ClientName == null) || p.Client.ClientName.Contains(ClientName)) && ((ProjectName == null) || p.ProjectName.Contains(ProjectName))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)));
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                        (p) => (((((ClientName == null) || p.Client.ClientName.Contains(ClientName)) && ((ProjectName == null) || p.ProjectName.Contains(ProjectName))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1))),
+                    (p) => p.Client.ClientName),
+                (p) => p.ProjectName);
             return query;
         }
     
@@ -436,22 +440,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ClientRole
-        {
-            get
-            {
-                return this.ClientRole;
-            }
-            set
-            {
-                this.ClientRole = (global::LightSwitchApplication.Implementation.ClientRole)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("ClientRole");
-                }
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ActiveType
         {
             get
@@ -484,6 +472,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.BillingDetail.DetailsClass.IImplementation.ClientRole
+        {
+            get
+            {
+                return this.ClientRole;
+            }
+            set
+            {
+                this.ClientRole = (global::LightSwitchApplication.Implementation.ClientRole)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("ClientRole");
+                }
+            }
+        }
+        
         partial void OnBillingDetailClientIDChanged()
         {
             if (this.__host != null)
@@ -500,14 +504,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        partial void OnBillingDetailClientRoleIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("ClientRole");
-            }
-        }
-        
         partial void OnActiveChanged()
         {
             if (this.__host != null)
@@ -521,6 +517,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("DimDate");
+            }
+        }
+        
+        partial void OnBillingDetailClientRoleIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("ClientRole");
             }
         }
         
@@ -1534,14 +1538,6 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.BillingDetails
-        {
-            get
-            {
-                return this.BillingDetails;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.ActiveType
         {
             get
@@ -1563,6 +1559,14 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.InvoiceLines;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation.BillingDetails
+        {
+            get
+            {
+                return this.BillingDetails;
             }
         }
         

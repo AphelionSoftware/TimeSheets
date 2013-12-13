@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Created:0f94c101-eca2-421b-9ee1-671ad586290e-->
-<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetsInvoices" ProductID="{E45CB7EF-36A8-41D8-A55F-293EE65198A3}" Version="1.0.13.0" SharePointMinVersion="15.0.0.0">
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetsInvoices" ProductID="{E45CB7EF-36A8-41D8-A55F-293EE65198A3}" Version="1.0.16.0" SharePointMinVersion="15.0.0.0">
   <Properties>
     <Title>TimesheetsInvoices</Title>
     <StartPage>~remoteAppUrl/SharePointLaunch.aspx?{StandardTokens}</StartPage>

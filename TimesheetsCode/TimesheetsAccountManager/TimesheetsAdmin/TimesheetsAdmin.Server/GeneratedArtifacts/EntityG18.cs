@@ -147,30 +147,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return global::LightSwitchApplication.InvoiceLine.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.Comments);
-            }
-            set
-            {
-                global::LightSwitchApplication.InvoiceLine.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.Comments, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Comments_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Comments_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Comments_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string InvoiceLineDescription
         {
             get
@@ -608,14 +584,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string> Comments
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.Comments) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string> InvoiceLineDescription
                 {
                     get
@@ -737,7 +705,6 @@ namespace LightSwitchApplication
                 new int InvoiceLineID { get; }
                 new global::System.DateTime LoadDate { get; set; }
                 new global::System.Nullable<int> LoadDateID { get; }
-                new string Comments { get; set; }
                 new string InvoiceLineDescription { get; set; }
                 new string InvoiceLineCode { get; set; }
                 new decimal InvoiceLineRate { get; set; }
@@ -862,43 +829,6 @@ namespace LightSwitchApplication
                 private static void _LoadDateID_OnValueChanged(global::LightSwitchApplication.InvoiceLine e)
                 {
                     e.LoadDateID_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Entry
-                    Comments = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Entry(
-                        "Comments",
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_Stub,
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_ComputeIsReadOnly,
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_Validate,
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_GetImplementationValue,
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_SetImplementationValue,
-                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._Comments_OnValueChanged);
-                private static void _Comments_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceLine.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceLine.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Comments, sf);
-                }
-                private static bool _Comments_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceLine e)
-                {
-                    bool result = false;
-                    e.Comments_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Comments_Validate(global::LightSwitchApplication.InvoiceLine e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Comments_Validate(r);
-                }
-                private static string _Comments_GetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Comments;
-                }
-                private static void _Comments_SetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Comments = v;
-                }
-                private static void _Comments_OnValueChanged(global::LightSwitchApplication.InvoiceLine e)
-                {
-                    e.Comments_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1479,9 +1409,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<int>>.Data _LoadDateID;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Data _Comments;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Data _InvoiceLineDescription;

@@ -53,14 +53,14 @@ window.myapp = msls.application;
         /// <field name="sys_ModifiedBy" type="String">
         /// Gets or sets the sys_ModifiedBy for this billingDetail.
         /// </field>
-        /// <field name="ClientRole" type="msls.application.ClientRole">
-        /// Gets or sets the clientRole for this billingDetail.
-        /// </field>
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this billingDetail.
         /// </field>
         /// <field name="DimDate" type="msls.application.DimDate">
         /// Gets or sets the dimDate for this billingDetail.
+        /// </field>
+        /// <field name="ClientRole" type="msls.application.ClientRole">
+        /// Gets or sets the clientRole for this billingDetail.
         /// </field>
         /// <field name="details" type="msls.application.BillingDetail.Details">
         /// Gets the details for this billingDetail.
@@ -825,14 +825,14 @@ window.myapp = msls.application;
         /// <field name="sys_ModifiedBy" type="String">
         /// Gets or sets the sys_ModifiedBy for this clientRole.
         /// </field>
-        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this clientRole.
-        /// </field>
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this clientRole.
         /// </field>
         /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
         /// Gets the invoiceLines for this clientRole.
+        /// </field>
+        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetails for this clientRole.
         /// </field>
         /// <field name="details" type="msls.application.ClientRole.Details">
         /// Gets the details for this clientRole.
@@ -1241,9 +1241,9 @@ window.myapp = msls.application;
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
-            { name: "ClientRole", kind: "reference", type: ClientRole },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "DimDate", kind: "reference", type: DimDate }
+            { name: "DimDate", kind: "reference", type: DimDate },
+            { name: "ClientRole", kind: "reference", type: ClientRole }
         ]),
 
         BillingStatus: $defineEntity(BillingStatus, [
@@ -1485,9 +1485,9 @@ window.myapp = msls.application;
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
-            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine }
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail }
         ]),
 
         SystemRole: $defineEntity(SystemRole, [

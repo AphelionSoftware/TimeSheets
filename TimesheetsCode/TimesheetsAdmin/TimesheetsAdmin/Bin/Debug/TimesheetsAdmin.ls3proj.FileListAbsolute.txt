@@ -517,6 +517,7 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\bin\System.ServiceModel.DomainServices.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\bin\System.Spatial.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\bin\Microsoft.WindowsAzure.ServiceRuntime.dll
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\SharePointLaunch.aspx
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\Timesheets_Data.svc
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\dark-theme.css
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\jquery.mobile-1.2.0.css
@@ -578,4 +579,3 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Scripts\Generated\resources.js
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\SharePointLaunch.aspx

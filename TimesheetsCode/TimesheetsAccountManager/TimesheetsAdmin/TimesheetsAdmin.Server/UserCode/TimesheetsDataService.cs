@@ -220,5 +220,10 @@ namespace LightSwitchApplication
                         || Environment.UserName.Contains("markgstacey"));
 
         }
+
+        partial void UnallocatedTimesheetsSorted_CanExecute(ref bool result)
+        {
+
+        }
     }
 }

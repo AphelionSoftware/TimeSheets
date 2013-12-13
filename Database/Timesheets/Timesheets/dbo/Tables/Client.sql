@@ -11,10 +11,21 @@
     [sys_ModifiedOn]         DATETIME       DEFAULT (getdate()) NOT NULL,
     [sys_ModifiedBy]         NVARCHAR (255) DEFAULT ('Unknown') NOT NULL,
     [AccountManagerPersonID] INT            CONSTRAINT [DF_Client_AccountManagerPersonID] DEFAULT ((1)) NOT NULL,
+    [InvoiceEmailAddress]    VARCHAR (255)  NULL,
+    [InvoiceBank]            VARCHAR (255)  NULL,
+    [InvoiceBankBranch]      VARCHAR (255)  NULL,
+    [InvoiceBankAccount]     VARCHAR (255)  NULL,
+    [InvoiceVATNumber]       VARCHAR (255)  NULL,
+    [InvoiceCompanyReg]      VARCHAR (255)  NULL,
+    [InvoiceTelNo]           VARCHAR (255)  NULL,
+    [InvoiceContactPerson]   VARCHAR (255)  NULL,
+    [InvoiceAddress]         VARCHAR (MAX)  NULL,
     CONSTRAINT [PK_Client] PRIMARY KEY CLUSTERED ([ClientID] ASC),
     CONSTRAINT [FK_Client_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
     CONSTRAINT [FK_Client_Person] FOREIGN KEY ([AccountManagerPersonID]) REFERENCES [dbo].[Person] ([PersonID])
 );
+
+
 
 
 GO

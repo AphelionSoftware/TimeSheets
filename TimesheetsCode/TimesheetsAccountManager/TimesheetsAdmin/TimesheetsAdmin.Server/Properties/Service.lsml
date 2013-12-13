@@ -136,11 +136,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="ClientRole"
-        Association="FK_BillingDetail_Role1"
-        FromEnd="BillingDetail"
-        ToEnd="ClientRole" />
-      <NavigationProperty
         Name="ActiveType"
         Association="FK_BillingDetail_ActiveType"
         FromEnd="BillingDetail"
@@ -150,6 +145,11 @@
         Association="FK_BillingDetail_DimDate"
         FromEnd="BillingDetail"
         ToEnd="DimDate" />
+      <NavigationProperty
+        Name="ClientRole"
+        Association="FK_BillingDetail_ClientRole"
+        FromEnd="BillingDetail"
+        ToEnd="ClientRole" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -426,6 +426,77 @@
         Association="FK_Invoice_Client"
         FromEnd="Client"
         ToEnd="Invoice" />
+      <EntityProperty
+        Name="InvoiceBank"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceBankBranch"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceBankAccount"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceVATNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceCompanyReg"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceTelNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceContactPerson"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -730,12 +801,13 @@
       </EntityProperty>
       <EntityProperty
         Name="WeekEnding"
-        PropertyType=":DateTime?">
+        PropertyType=":Date">
         <EntityProperty.Attributes>
           <DateTimeConstraint
-            Precision="3"
+            Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -755,6 +827,11 @@
       <NavigationProperty
         Name="Invoices1"
         Association="FK_Invoice_DimDate1"
+        FromEnd="DimDate"
+        ToEnd="Invoice" />
+      <NavigationProperty
+        Name="Invoices2"
+        Association="FK_Invoice_DimDate2"
         FromEnd="DimDate"
         ToEnd="Invoice" />
     </EntityType.Properties>
@@ -1246,6 +1323,17 @@
         Association="FK_InvoiceLine_Project"
         FromEnd="Project"
         ToEnd="InvoiceLine" />
+      <EntityProperty
+        Name="CommPercent"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1427,12 +1515,13 @@
       <EntityProperty
         Name="PeriodEnding"
         IsReadOnly="True"
-        PropertyType=":Date?">
+        PropertyType=":Date">
         <EntityProperty.Attributes>
           <DateTimeConstraint
             Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -1662,6 +1751,20 @@
         Association="UnallocatedTimesheet_TimesheetDetail"
         FromEnd="TimesheetDetail"
         ToEnd="UnallocatedTimesheet" />
+      <EntityProperty
+        Name="VerCol"
+        IsReadOnly="True"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="8" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -2921,16 +3024,6 @@
       CanUpdate="True"
       EntityType="SystemRole" />
     <AssociationSet
-      Name="FK_BillingDetail_Role1"
-      Association="FK_BillingDetail_Role1">
-      <AssociationSetEnd
-        Name="ClientRole"
-        EntitySet="ClientRoles" />
-      <AssociationSetEnd
-        Name="BillingDetail"
-        EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet
       Name="FK_Person_Role1"
       Association="FK_Person_Role1">
       <AssociationSetEnd
@@ -3192,6 +3285,15 @@
         Name="TimesheetPerson"
         IsOptional="True"
         ParameterType=":String?" />
+      <QueryOperation.SortCriteria>
+        <SortCriterion
+          Direction="Descending">
+          <ChainExpression>
+            <MemberExpression
+              Member="TimesheetDate" />
+          </ChainExpression>
+        </SortCriterion>
+      </QueryOperation.SortCriteria>
     </QueryOperation>
     <AssociationSet
       Name="FK_Timesheet_DimDate"
@@ -6279,7 +6381,7 @@
         <SortCriterion>
           <ChainExpression>
             <MemberExpression
-              Member="Comments" />
+              Member="InvoiceLineDescription" />
           </ChainExpression>
         </SortCriterion>
       </QueryOperation.SortCriteria>
@@ -6456,6 +6558,26 @@
         IsOptional="True"
         ParameterType=":String?" />
     </QueryOperation>
+    <AssociationSet
+      Name="FK_Invoice_DimDate2"
+      Association="FK_Invoice_DimDate2">
+      <AssociationSetEnd
+        Name="DimDate"
+        EntitySet="DimDates" />
+      <AssociationSetEnd
+        Name="Invoice"
+        EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_BillingDetail_ClientRole"
+      Association="FK_BillingDetail_ClientRole">
+      <AssociationSetEnd
+        Name="ClientRole"
+        EntitySet="ClientRoles" />
+      <AssociationSetEnd
+        Name="BillingDetail"
+        EntitySet="BillingDetails" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -6706,11 +6828,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="BillingDetails"
-        Association="FK_BillingDetail_Role1"
-        FromEnd="ClientRole"
-        ToEnd="BillingDetail" />
-      <NavigationProperty
         Name="ActiveType"
         Association="FK_ClientRole_ActiveType"
         FromEnd="ClientRole"
@@ -6720,6 +6837,11 @@
         Association="FK_InvoiceLine_InvoiceLine"
         FromEnd="ClientRole"
         ToEnd="InvoiceLine" />
+      <NavigationProperty
+        Name="BillingDetails"
+        Association="FK_BillingDetail_ClientRole"
+        FromEnd="ClientRole"
+        ToEnd="BillingDetail" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -6843,20 +6965,6 @@
         ToEnd="ActiveType" />
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="FK_BillingDetail_Role1">
-    <AssociationEnd
-      Name="ClientRole"
-      EntityType="ClientRole">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="BillingDetail"
-      Multiplicity="Many"
-      EntityType="BillingDetail" />
-  </Association>
   <Association
     Name="FK_Person_Role1">
     <AssociationEnd
@@ -7925,6 +8033,20 @@
         Association="FK_Invoice_DimDate1"
         FromEnd="Invoice"
         ToEnd="DimDate" />
+      <EntityProperty
+        Name="InvoiceNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="DimDate2"
+        Association="FK_Invoice_DimDate2"
+        FromEnd="Invoice"
+        ToEnd="DimDate" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -7965,16 +8087,6 @@
         PropertyType=":Int32?">
         <EntityProperty.Attributes>
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Comments"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="500" />
-          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -8393,6 +8505,35 @@
       Multiplicity="Many"
       EntityType="InvoiceLine" />
   </Association>
+  <Association
+    Name="FK_Invoice_DimDate2">
+    <AssociationEnd
+      Name="DimDate"
+      EntityType="DimDate">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Invoice"
+      Multiplicity="Many"
+      EntityType="Invoice" />
+  </Association>
+  <Association
+    Name="FK_BillingDetail_ClientRole">
+    <AssociationEnd
+      Name="ClientRole"
+      Multiplicity="One"
+      EntityType="ClientRole">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="BillingDetail"
+      Multiplicity="Many"
+      EntityType="BillingDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -8409,7 +8550,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="07dfc899-cd68-4680-955e-86f0a4183081" />
+        Value="5052b11a-cb6e-441f-aec9-25ec78721e54" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -8533,6 +8674,11 @@
           Type="int"
           PropertyName="BillingDetailClientID" />
         <SsdlForeignKeyProperty
+          Name="BillingDetailClientRoleID"
+          Nullable="False"
+          Type="int"
+          PropertyName="BillingDetailClientRoleID" />
+        <SsdlForeignKeyProperty
           Name="BillingDetailDateID"
           Nullable="False"
           Type="int"
@@ -8542,11 +8688,6 @@
           Nullable="False"
           Type="int"
           PropertyName="BillingDetailPersonID" />
-        <SsdlForeignKeyProperty
-          Name="BillingDetailClientRoleID"
-          Nullable="True"
-          Type="int"
-          PropertyName="BillingDetailClientRoleID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -8688,6 +8829,53 @@
           Nullable="True"
           Type="varchar"
           Property="Client/Properties[InvoiceEmailAddress]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBank"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBank]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBankBranch"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBankBranch]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBankAccount"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBankAccount]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceVATNumber"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceVATNumber]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceCompanyReg"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceCompanyReg]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceTelNo"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceTelNo]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceContactPerson"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceContactPerson]" />
+        <SsdlProperty
+          Name="InvoiceAddress"
+          Nullable="True"
+          Type="varchar(max)"
+          Property="Client/Properties[InvoiceAddress]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -8947,8 +9135,8 @@
           Property="DimDate/Properties[BillingPeriod]" />
         <SsdlProperty
           Name="WeekEnding"
-          Nullable="True"
-          Type="datetime"
+          Nullable="False"
+          Type="date"
           Property="DimDate/Properties[WeekEnding]" />
         <SsdlProperty
           MaxLength="10"
@@ -9006,6 +9194,12 @@
           Type="varchar"
           Property="Invoice/Properties[InvoiceEmailAddress]" />
         <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceNumber"
+          Nullable="True"
+          Type="varchar"
+          Property="Invoice/Properties[InvoiceNumber]" />
+        <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
@@ -9053,6 +9247,11 @@
           Type="int"
           PropertyName="InvoiceDueDateID" />
         <SsdlForeignKeyProperty
+          Name="InvoicePaidDateID"
+          Nullable="True"
+          Type="int"
+          PropertyName="InvoicePaidDateID" />
+        <SsdlForeignKeyProperty
           Name="InvoiceStatusID"
           Nullable="False"
           Type="int"
@@ -9082,12 +9281,6 @@
           StoreGeneratedPattern="Computed"
           Type="int"
           Property="InvoiceLine/Properties[LoadDateID]" />
-        <SsdlProperty
-          MaxLength="500"
-          Name="Comments"
-          Nullable="False"
-          Type="varchar"
-          Property="InvoiceLine/Properties[Comments]" />
         <SsdlProperty
           MaxLength="500"
           Name="InvoiceLineDescription"
@@ -9441,6 +9634,12 @@
           Type="int"
           Property="Project/Properties[AdminProject]" />
         <SsdlProperty
+          Name="CommPercent"
+          Nullable="False"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[CommPercent]" />
+        <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
@@ -9746,7 +9945,7 @@
           Property="Timesheet/Properties[sys_ModifiedBy]" />
         <SsdlProperty
           Name="PeriodEnding"
-          Nullable="True"
+          Nullable="False"
           StoreGeneratedPattern="Computed"
           Type="date"
           Property="Timesheet/Properties[PeriodEnding]" />
@@ -9868,6 +10067,12 @@
           Nullable="False"
           Type="nvarchar"
           Property="TimesheetDetail/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          Name="VerCol"
+          Nullable="False"
+          StoreGeneratedPattern="Computed"
+          Type="timestamp"
+          Property="TimesheetDetail/Properties[VerCol]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -10287,6 +10492,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_BillingDetail_ClientRole">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_BillingDetail_ClientRole" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_BillingDetail_ClientRole]/Members[ClientRole]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ClientRoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_BillingDetail_ClientRole]/Members[BillingDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillingDetailClientRoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_BillingDetail_DimDate">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -10324,27 +10550,6 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailPersonID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_BillingDetail_Role1">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_BillingDetail_Role" />
-        <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_BillingDetail_Role1]/Members[ClientRole]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="ClientRoleID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="TimesheetsData/Members[FK_BillingDetail_Role1]/Members[BillingDetail]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="BillingDetailClientRoleID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>
@@ -10534,6 +10739,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="InvoiceDueDateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Invoice_DimDate2">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Invoice_DimDate2" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Invoice_DimDate2]/Members[DimDate]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Invoice_DimDate2]/Members[Invoice]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="InvoicePaidDateID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

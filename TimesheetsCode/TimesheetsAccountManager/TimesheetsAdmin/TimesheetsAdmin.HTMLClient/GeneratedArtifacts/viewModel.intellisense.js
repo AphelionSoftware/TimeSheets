@@ -318,6 +318,61 @@
         /// </field>
         ActiveType1_postRender: $parameters,
         /// <field>
+        /// Called after the Center content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Center_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceEmailAddress content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceEmailAddress_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceBank content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceBank_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceBankBranch content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceBankBranch_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceBankAccount content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceBankAccount_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceVATNumber content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceVATNumber_postRender: $parameters,
+        /// <field>
+        /// Called after the Right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Right_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceCompanyReg content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceCompanyReg_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceTelNo content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceTelNo_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceContactPerson content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceContactPerson_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceAddress content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceAddress_postRender: $parameters,
+        /// <field>
         /// Called after the UnallocatedTimesheets content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -377,16 +432,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ProjectName_postRender: $parameters,
-        /// <field>
-        /// Called after the ConsultingEstimate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ConsultingEstimate_postRender: $parameters,
-        /// <field>
-        /// Called after the SoftwareEstimate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        SoftwareEstimate_postRender: $parameters,
         /// <field>
         /// Called after the ProjectCap content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -570,7 +615,12 @@
         /// Called after the Rate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Rate_postRender: $parameters
+        Rate_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingDetailSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingDetailSourceKey_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditTimesheet, {
@@ -1059,6 +1109,134 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate5_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditProject, {
+        /// <field>
+        /// Called when a new AddEditProject screen is created.
+        /// <br/>created(msls.application.AddEditProject screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditProject],
+        /// <field>
+        /// Called before changes on an active AddEditProject screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditProject screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditProject],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: $parameters,
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: $parameters,
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectSourceKey_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectCode content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectCode_postRender: $parameters,
+        /// <field>
+        /// Called after the ConsultingEstimate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ConsultingEstimate_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectCap content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectCap_postRender: $parameters,
+        /// <field>
+        /// Called after the AdminProject content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AdminProject_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: $parameters,
+        /// <field>
+        /// Called after the Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: $parameters,
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate2_postRender: $parameters,
+        /// <field>
+        /// Called after the ActiveType content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ActiveType_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate3_postRender: $parameters,
+        /// <field>
+        /// Called after the MonthlyCap content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        MonthlyCap_postRender: $parameters,
+        /// <field>
+        /// Called after the MonthlyCapWarning content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        MonthlyCapWarning_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectCapWarning content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectCapWarning_postRender: $parameters,
+        /// <field>
+        /// Called after the InvoiceEmailAddress content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        InvoiceEmailAddress_postRender: $parameters,
+        /// <field>
+        /// Called after the CommPercent content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CommPercent_postRender: $parameters
     });
 
 }(msls.application));

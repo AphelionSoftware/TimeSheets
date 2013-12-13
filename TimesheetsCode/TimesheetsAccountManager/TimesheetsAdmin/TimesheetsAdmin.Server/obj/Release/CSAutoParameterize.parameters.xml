@@ -3,7 +3,7 @@
   <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Connection String used in web.config by the application to access the database." defaultValue="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Dropbox\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetsAccountManager\\TimesheetsAdmin\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
   </parameter>
-  <parameter name="07dfc899-cd68-4680-955e-86f0a4183081-Web.config Connection String" description="07dfc899-cd68-4680-955e-86f0a4183081 Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\sql2012;Initial Catalog=Timesheets20130908;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Dropbox\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetsAccountManager\\TimesheetsAdmin\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='07dfc899-cd68-4680-955e-86f0a4183081']/@connectionString" />
+  <parameter name="5052b11a-cb6e-441f-aec9-25ec78721e54-Web.config Connection String" description="5052b11a-cb6e-441f-aec9-25ec78721e54 Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\sql2012;Initial Catalog=Timesheets;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Dropbox\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetsAccountManager\\TimesheetsAdmin\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='5052b11a-cb6e-441f-aec9-25ec78721e54']/@connectionString" />
   </parameter>
 </parameters>

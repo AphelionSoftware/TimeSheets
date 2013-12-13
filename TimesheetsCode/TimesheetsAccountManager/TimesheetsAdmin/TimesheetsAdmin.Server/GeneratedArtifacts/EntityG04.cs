@@ -823,7 +823,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTime> WeekEnding
+        public global::System.DateTime WeekEnding
         {
             get
             {
@@ -978,6 +978,29 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices2
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> Invoices2Query
+        {
+            get
+            {
+                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2);
             }
         }
 
@@ -1311,11 +1334,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>> WeekEnding
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> WeekEnding
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
@@ -1367,6 +1390,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices2
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -1404,13 +1435,14 @@ namespace LightSwitchApplication
                 new string WeekEndingBillingPeriod { get; set; }
                 new string BillingPeriodText { get; set; }
                 new global::System.Nullable<int> BillingPeriod { get; set; }
-                new global::System.Nullable<global::System.DateTime> WeekEnding { get; set; }
+                new global::System.DateTime WeekEnding { get; set; }
                 new string WeekEndingText { get; set; }
                 new global::System.Collections.IEnumerable TimesheetDetails { get; }
                 new global::System.Collections.IEnumerable Timesheets { get; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
                 new global::System.Collections.IEnumerable Invoices { get; }
                 new global::System.Collections.IEnumerable Invoices1 { get; }
+                new global::System.Collections.IEnumerable Invoices2 { get; }
             }
             #pragma warning restore 109
     
@@ -2564,8 +2596,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
+                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
                         "WeekEnding",
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Stub,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_ComputeIsReadOnly,
@@ -2573,7 +2605,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_GetImplementationValue,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_SetImplementationValue,
                         global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_OnValueChanged);
-                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
                 {
                     c(d, ref d._WeekEnding, sf);
                 }
@@ -2587,13 +2619,13 @@ namespace LightSwitchApplication
                 {
                     e.WeekEnding_Validate(r);
                 }
-                private static global::System.Nullable<global::System.DateTime> _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.DateTime _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
                 {
                     return d.ImplementationEntity.WeekEnding;
                 }
-                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.TruncateDate(v);
                 }
                 private static void _WeekEnding_OnValueChanged(global::LightSwitchApplication.DimDate e)
                 {
@@ -2737,6 +2769,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.Invoices1;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices2 = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices2",
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_Stub,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_GetReferencedEntities,
+                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_GetEntityCollection);
+                private static void _Invoices2_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices2, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices2_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2, ref d._Invoices2);
+                }
+                private static global::System.Collections.IEnumerable _Invoices2_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Invoices2;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2833,7 +2885,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _BillingPeriod;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _WeekEnding;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _WeekEnding;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingText;
@@ -2852,6 +2904,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices2;
             
         }
     

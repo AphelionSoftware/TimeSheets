@@ -166,15 +166,6 @@
               }
             },
             {
-              "id": "BillingDetail/Properties[ClientRole]",
-              "name": "ClientRole",
-              "association": { "__id": "FK_BillingDetail_Role1" },
-              "elementType": { "__id": "ClientRole" },
-              "fromEnd": { "__id": "FK_BillingDetail_Role1/Ends[BillingDetail]" },
-              "propertyType": { "__id": "ClientRole" },
-              "toEnd": { "__id": "FK_BillingDetail_Role1/Ends[ClientRole]" }
-            },
-            {
               "id": "BillingDetail/Properties[ActiveType]",
               "name": "ActiveType",
               "association": { "__id": "FK_BillingDetail_ActiveType" },
@@ -191,6 +182,15 @@
               "fromEnd": { "__id": "FK_BillingDetail_DimDate/Ends[BillingDetail]" },
               "propertyType": { "__id": "DimDate" },
               "toEnd": { "__id": "FK_BillingDetail_DimDate/Ends[DimDate]" }
+            },
+            {
+              "id": "BillingDetail/Properties[ClientRole]",
+              "name": "ClientRole",
+              "association": { "__id": "FK_BillingDetail_ClientRole" },
+              "elementType": { "__id": "ClientRole" },
+              "fromEnd": { "__id": "FK_BillingDetail_ClientRole/Ends[BillingDetail]" },
+              "propertyType": { "__id": "ClientRole" },
+              "toEnd": { "__id": "FK_BillingDetail_ClientRole/Ends[ClientRole]" }
             }
           ]
         },
@@ -2692,26 +2692,6 @@
               ]
             },
             {
-              "id": "Timesheets_Data/Members[FK_BillingDetail_Role1]",
-              "name": "FK_BillingDetail_Role1",
-              "association": { "__id": "FK_BillingDetail_Role1" },
-              "ends":
-              [
-                {
-                  "properties": [ "ClientRoleID" ],
-                  "id": "Timesheets_Data/Members[FK_BillingDetail_Role1]/Members[ClientRole]",
-                  "name": "ClientRole",
-                  "entitySet": { "__id": "Timesheets_Data/Members[ClientRoles]" }
-                },
-                {
-                  "properties": [ "BillingDetailClientRoleID" ],
-                  "id": "Timesheets_Data/Members[FK_BillingDetail_Role1]/Members[BillingDetail]",
-                  "name": "BillingDetail",
-                  "entitySet": { "__id": "Timesheets_Data/Members[BillingDetails]" }
-                }
-              ]
-            },
-            {
               "id": "Timesheets_Data/Members[FK_Person_Role1]",
               "name": "FK_Person_Role1",
               "association": { "__id": "FK_Person_Role1" },
@@ -3288,6 +3268,26 @@
                   "id": "Timesheets_Data/Members[FK_InvoiceStatus_ActiveType]/Members[InvoiceStatus]",
                   "name": "InvoiceStatus",
                   "entitySet": { "__id": "Timesheets_Data/Members[InvoiceStatus]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_BillingDetail_ClientRole]",
+              "name": "FK_BillingDetail_ClientRole",
+              "association": { "__id": "FK_BillingDetail_ClientRole" },
+              "ends":
+              [
+                {
+                  "properties": [ "ClientRoleID" ],
+                  "id": "Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[ClientRole]",
+                  "name": "ClientRole",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ClientRoles]" }
+                },
+                {
+                  "properties": [ "BillingDetailClientRoleID" ],
+                  "id": "Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[BillingDetail]",
+                  "name": "BillingDetail",
+                  "entitySet": { "__id": "Timesheets_Data/Members[BillingDetails]" }
                 }
               ]
             }
@@ -4050,6 +4050,23 @@
                   "name": "ProjectName",
                   "isOptional": true,
                   "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "Project/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "member": { "__id": "Project/Properties[ProjectName]" }
                 }
               ]
             },
@@ -7196,35 +7213,6 @@
                                 ]
                               },
                               {
-                                "displayName": "Client Role",
-                                "name": "ClientRole",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "choicesSource":
-                                {
-                                  "member": { "__id": "AddEditBillingDetail/Properties[ClientRolesSorted]" }
-                                },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "BillingDetail/Properties[ClientRole]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Client Role",
-                                    "name": "ClientRole1",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
                                 "displayName": "Billing Start Date",
                                 "name": "DimDate",
                                 "kind": "Details",
@@ -8743,15 +8731,6 @@
               }
             },
             {
-              "id": "ClientRole/Properties[BillingDetails]",
-              "name": "BillingDetails",
-              "association": { "__id": "FK_BillingDetail_Role1" },
-              "elementType": { "__id": "BillingDetail" },
-              "fromEnd": { "__id": "FK_BillingDetail_Role1/Ends[ClientRole]" },
-              "propertyType": { "__id": "BillingDetail*" },
-              "toEnd": { "__id": "FK_BillingDetail_Role1/Ends[BillingDetail]" }
-            },
-            {
               "id": "ClientRole/Properties[ActiveType]",
               "name": "ActiveType",
               "association": { "__id": "FK_ClientRole_ActiveType" },
@@ -8768,6 +8747,15 @@
               "fromEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[ClientRole]" },
               "propertyType": { "__id": "InvoiceLine*" },
               "toEnd": { "__id": "FK_InvoiceLine_InvoiceLine/Ends[InvoiceLine]" }
+            },
+            {
+              "id": "ClientRole/Properties[BillingDetails]",
+              "name": "BillingDetails",
+              "association": { "__id": "FK_BillingDetail_ClientRole" },
+              "elementType": { "__id": "BillingDetail" },
+              "fromEnd": { "__id": "FK_BillingDetail_ClientRole/Ends[ClientRole]" },
+              "propertyType": { "__id": "BillingDetail*" },
+              "toEnd": { "__id": "FK_BillingDetail_ClientRole/Ends[BillingDetail]" }
             }
           ]
         },
@@ -8918,26 +8906,6 @@
               "fromEnd": { "__id": "FK_SystemRole_ActiveType/Ends[SystemRole]" },
               "propertyType": { "__id": "ActiveType" },
               "toEnd": { "__id": "FK_SystemRole_ActiveType/Ends[ActiveType]" }
-            }
-          ]
-        },
-        {
-          "id": "FK_BillingDetail_Role1",
-          "name": "FK_BillingDetail_Role1",
-          "ends":
-          [
-            {
-              "id": "FK_BillingDetail_Role1/Ends[ClientRole]",
-              "name": "ClientRole",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "ClientRole" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_BillingDetail_Role1/Ends[BillingDetail]",
-              "name": "BillingDetail",
-              "multiplicity": "Many",
-              "entityType": { "__id": "BillingDetail" }
             }
           ]
         },
@@ -9289,64 +9257,7 @@
                     "displayName": "Billing Details",
                     "name": "BillingDetails",
                     "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Billing Details",
-                        "name": "BillingDetails1",
-                        "kind": "Collection",
-                        "view": { "__id": ":List" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "AddEditClientRole/Properties[BillingDetails]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Billing Detail",
-                            "name": "RowTemplate",
-                            "kind": "Details",
-                            "view": { "__id": ":Summary" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                              ]
-                            }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditBillingDetail]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "AddEditClientRole/Properties[BillingDetails]" } },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showAddEditBillingDetail]/Parameters[BillingDetail]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "AddEditClientRole/Properties[BillingDetails]" }
-                                      },
-                                      {
-                                        "member": { "__id": "CollectionView$BillingDetail/Properties[selectedItem]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    ]
+                    "view": { "__id": ":RowsLayout" }
                   }
                 ]
               },
@@ -9404,36 +9315,6 @@
               "elementType": { "__id": "ClientRole" },
               "propertyType": { "__id": "ClientRole" },
               ":@IsParameter": { }
-            },
-            {
-              "id": "AddEditClientRole/Properties[BillingDetails]",
-              "name": "BillingDetails",
-              "pageSize": 15,
-              "elementType": { "__id": "BillingDetail" },
-              "propertyType": { "__id": "CollectionView$BillingDetail" },
-              "query":
-              {
-                "id": "AddEditClientRole/Properties[BillingDetails]/Query",
-                "name": "BillingDetailsQuery",
-                "elementType": { "__id": "BillingDetail" },
-                "returnType": { "__id": "BillingDetail*" },
-                "source":
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "AddEditClientRole/Properties[ClientRole]" }
-                    },
-                    {
-                      "member": { "__id": "ClientRole/Properties[BillingDetails]" }
-                    }
-                  ]
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "AddEditClientRole/Properties[BillingDetails]/Query" }
-              }
             }
           ]
         },
@@ -10001,27 +9882,63 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "Projects",
-                        "name": "Project",
+                        "displayName": "Projects Filter",
+                        "name": "ProjectsFilter",
                         "kind": "Collection",
                         "view": { "__id": ":List" },
                         "dataSource":
                         {
-                          "member": { "__id": "BrowseProjects/Properties[Projects]" }
+                          "member": { "__id": "BrowseProjects/Properties[ProjectsFilter]" }
                         },
                         "childContentItems":
                         [
                           {
                             "displayName": "Project",
-                            "name": "RowTemplate",
+                            "name": "ProjectsFilterTemplate",
                             "kind": "Details",
-                            "view": { "__id": ":Summary" },
+                            "view": { "__id": ":ColumnsLayout" },
                             "dataSource":
                             {
                               "links":
                               [
                               ]
-                            }
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Project Name",
+                                "name": "ProjectName1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Project/Properties[ProjectName]" }
+                                }
+                              },
+                              {
+                                "displayName": "Client",
+                                "name": "Client",
+                                "kind": "Details",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Project/Properties[Client]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Client Name",
+                                    "name": "ClientName",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Client/Properties[ClientName]" }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           }
                         ],
                         "propertySources":
@@ -10031,7 +9948,7 @@
                             "source":
                             {
                               "target": { "__id": "!module/Methods[showAddEditProject]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseProjects/Properties[Projects]" } },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseProjects/Properties[ProjectsFilter]" } },
                               "arguments":
                               [
                                 {
@@ -10041,7 +9958,7 @@
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "BrowseProjects/Properties[Projects]" }
+                                        "member": { "__id": "BrowseProjects/Properties[ProjectsFilter]" }
                                       },
                                       {
                                         "member": { "__id": "CollectionView$Project/Properties[selectedItem]" }
@@ -10050,6 +9967,80 @@
                                   }
                                 }
                               ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Filter",
+                        "name": "ShowFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "BrowseProjects/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "BrowseProjects/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "Filter"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add Project",
+                        "name": "AddProject",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditProject]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseProjects/Properties[ProjectsFilter]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditProject]/Parameters[Project]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Home Screen",
+                        "name": "ShowHomeScreen",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showHomeScreen]" }
                             }
                           }
                         ]
@@ -10069,7 +10060,39 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Client Name",
+                        "name": "ClientName1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[ClientName]" }
+                        }
+                      },
+                      {
+                        "displayName": "Project Name",
+                        "name": "ProjectName",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[ProjectName]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -10130,6 +10153,67 @@
               {
                 "target": { "__id": "BrowseProjects/Properties[Projects]/Query" }
               }
+            },
+            {
+              "id": "BrowseProjects/Properties[ProjectsFilter]",
+              "name": "ProjectsFilter",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "BrowseProjects/Properties[ProjectsFilter]/Query",
+                "name": "ProjectsFilterQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ProjectsFilter]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseProjects/Properties[ProjectsFilter]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ClientName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[ClientName]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ProjectName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[ProjectName]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BrowseProjects/Properties[ClientName]",
+              "name": "ClientName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseProjects/Properties[ProjectName]",
+              "name": "ProjectName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
             }
           ]
         },
@@ -12278,6 +12362,26 @@
               "name": "BillingDetailPersonName",
               "elementType": { "__id": ":String?" },
               "propertyType": { "__id": ":String?" }
+            }
+          ]
+        },
+        {
+          "id": "FK_BillingDetail_ClientRole",
+          "name": "FK_BillingDetail_ClientRole",
+          "ends":
+          [
+            {
+              "id": "FK_BillingDetail_ClientRole/Ends[ClientRole]",
+              "name": "ClientRole",
+              "multiplicity": "One",
+              "entityType": { "__id": "ClientRole" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_BillingDetail_ClientRole/Ends[BillingDetail]",
+              "name": "BillingDetail",
+              "multiplicity": "Many",
+              "entityType": { "__id": "BillingDetail" }
             }
           ]
         },

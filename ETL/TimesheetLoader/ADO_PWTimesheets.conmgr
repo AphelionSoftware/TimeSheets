@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ADO_PWTimesheets"
+  DTS:DTSID="{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=r51q8t78uk.database.windows.net;User ID=LOrealTest;Initial Catalog=Timesheets;Persist Security Info=True;Application Name=SSIS-TimesheetLoader-{8AE8770F-9B92-43B6-A7F0-DA7C748968A9}mgs-ssd\SQL2012.PWTimesheets;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1"
+        p4:Salt="uoNvlVh6Zg=="
+        p4:IV="olKKeYZ5vos=" xmlns:p4="www.microsoft.com/SqlServer/SSIS">Y1Cg8QeA3VYW01pBdRTxL04qcTq2YwUuQbx2l3UDKA75GmJN8+iJDZejt59yLGs5g9nopYK6ElQIkvL3MBkmrnHmsyti0l5VvR6PRWwXWo+LZN0YcYoRXRFFbk5q+00obLAzlpPMNf/W2z6btenIZEelmkJ0nY6/HS5lIKU0t1U=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -11,4 +11,8 @@ myapp.InvoiceLine.created = function (entity) {
     myapp.activeDataWorkspace.Timesheets20130908Data.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
         entity.ActiveType = ActiveTypesQuery.results[0];
     });
+
+
+
+  
 };

@@ -13,7 +13,7 @@
     [Hours]                    DECIMAL (18, 2) NOT NULL,
     [TimesheetID]              INT             NOT NULL,
     [TimesheetTypeOfWorkID]    INT             NOT NULL,
-    [Comments]                 VARCHAR (500)   NULL,
+    [Comments]                 VARCHAR (500)   NOT NULL,
     [ClientComments]           VARCHAR (MAX)   NULL,
     [AMComments]               VARCHAR (MAX)   NULL,
     [Exclude]                  INT             CONSTRAINT [DF_TimesheetDetail_Exclude] DEFAULT ((0)) NOT NULL,
@@ -23,6 +23,7 @@
     [sys_CreatedBy]            NVARCHAR (255)  DEFAULT ('Unknown') NOT NULL,
     [sys_ModifiedOn]           DATETIME        DEFAULT (getdate()) NOT NULL,
     [sys_ModifiedBy]           NVARCHAR (255)  DEFAULT ('Unknown') NOT NULL,
+    [VerCol]                   ROWVERSION      NOT NULL,
     CONSTRAINT [PK_TimesheetDetail] PRIMARY KEY CLUSTERED ([TimesheetDetailID] ASC),
     CONSTRAINT [FK_TimesheetDetail_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
     CONSTRAINT [FK_TimesheetDetail_BillingStatus] FOREIGN KEY ([Billable]) REFERENCES [dbo].[BillingStatus] ([BillingStatusID]),
@@ -32,6 +33,8 @@
     CONSTRAINT [FK_TimesheetDetail_Timesheet] FOREIGN KEY ([TimesheetID]) REFERENCES [dbo].[Timesheet] ([TimesheetID]),
     CONSTRAINT [FK_TimesheetDetail_TypeOfWork] FOREIGN KEY ([TimesheetTypeOfWorkID]) REFERENCES [dbo].[TypeOfWork] ([TypeOfWorkID])
 );
+
+
 
 
 GO

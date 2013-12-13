@@ -1,0 +1,24 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Client"
+  DTS:DTSID="{598E52B6-CB4A-4795-8682-F502AAA3F9BE}"
+  DTS:CreationName="CACHE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager>
+      <DTS:CacheColumns>
+        <DTS:CacheColumn
+          DTS:DataType="130"
+          DTS:Length="255"
+          DTS:IndexPosition="1"
+          DTS:ObjectName="ClientSourceKey"
+          DTS:DTSID="{8C54C60E-2C70-44BB-8478-834996E15FA5}"
+          DTS:CreationName="" />
+        <DTS:CacheColumn
+          DTS:DataType="3"
+          DTS:ObjectName="ClientID"
+          DTS:DTSID="{91C5A179-FE4D-4447-B477-6856DBCF74CE}"
+          DTS:CreationName="" />
+      </DTS:CacheColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
