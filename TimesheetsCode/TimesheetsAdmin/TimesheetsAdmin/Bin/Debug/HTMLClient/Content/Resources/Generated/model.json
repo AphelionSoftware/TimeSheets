@@ -24,6 +24,11 @@
               "id": "DataWorkspace/Members[Timesheets_Data]",
               "name": "Timesheets_Data",
               "entityContainer": { "__id": "Timesheets_Data" }
+            },
+            {
+              "id": "DataWorkspace/Members[ApplicationData]",
+              "name": "ApplicationData",
+              "entityContainer": { "__id": "ApplicationData" }
             }
           ]
         },
@@ -1297,6 +1302,25 @@
               "fromEnd": { "__id": "FK_InvoiceLine_Person/Ends[Person]" },
               "propertyType": { "__id": "InvoiceLine*" },
               "toEnd": { "__id": "FK_InvoiceLine_Person/Ends[InvoiceLine]" }
+            },
+            {
+              "id": "Person/Properties[ResourcePlans]",
+              "name": "ResourcePlans",
+              "association": { "__id": "FK_ResourcePlan_Person" },
+              "elementType": { "__id": "ResourcePlan" },
+              "fromEnd": { "__id": "FK_ResourcePlan_Person/Ends[Person]" },
+              "propertyType": { "__id": "ResourcePlan*" },
+              "toEnd": { "__id": "FK_ResourcePlan_Person/Ends[ResourcePlan]" }
+            },
+            {
+              "id": "Person/Properties[ResourcePlanRanges]",
+              "name": "ResourcePlanRanges",
+              "association": { "__id": "ResourcePlanRange_Person" },
+              "elementType": { "__id": "ResourcePlanRange" },
+              "fromEnd": { "__id": "ResourcePlanRange_Person/Ends[Person]" },
+              "propertyType": { "__id": "ResourcePlanRange*" },
+              "toEnd": { "__id": "ResourcePlanRange_Person/Ends[ResourcePlanRange]" },
+              "virtualAssociation": { "__id": "ResourcePlanRange_Person" }
             }
           ]
         },
@@ -1597,6 +1621,37 @@
               "fromEnd": { "__id": "FK_InvoiceLine_Project/Ends[Project]" },
               "propertyType": { "__id": "InvoiceLine*" },
               "toEnd": { "__id": "FK_InvoiceLine_Project/Ends[InvoiceLine]" }
+            },
+            {
+              "id": "Project/Properties[CommPercent]",
+              "name": "CommPercent",
+              "propertyType": { "__id": ":Decimal" },
+              ":@Required": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Project/Properties[ResourcePlans]",
+              "name": "ResourcePlans",
+              "association": { "__id": "FK_ResourcePlan_Project" },
+              "elementType": { "__id": "ResourcePlan" },
+              "fromEnd": { "__id": "FK_ResourcePlan_Project/Ends[Project]" },
+              "propertyType": { "__id": "ResourcePlan*" },
+              "toEnd": { "__id": "FK_ResourcePlan_Project/Ends[ResourcePlan]" }
+            },
+            {
+              "id": "Project/Properties[ResourcePlanRanges]",
+              "name": "ResourcePlanRanges",
+              "association": { "__id": "ResourcePlanRange_Project" },
+              "elementType": { "__id": "ResourcePlanRange" },
+              "fromEnd": { "__id": "ResourcePlanRange_Project/Ends[Project]" },
+              "propertyType": { "__id": "ResourcePlanRange*" },
+              "toEnd": { "__id": "ResourcePlanRange_Project/Ends[ResourcePlanRange]" },
+              "virtualAssociation": { "__id": "ResourcePlanRange_Project" }
             }
           ]
         },
@@ -3290,6 +3345,46 @@
                   "entitySet": { "__id": "Timesheets_Data/Members[BillingDetails]" }
                 }
               ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_ResourcePlan_Person]",
+              "name": "FK_ResourcePlan_Person",
+              "association": { "__id": "FK_ResourcePlan_Person" },
+              "ends":
+              [
+                {
+                  "properties": [ "PersonID" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_Person]/Members[Person]",
+                  "name": "Person",
+                  "entitySet": { "__id": "Timesheets_Data/Members[People]" }
+                },
+                {
+                  "properties": [ "ResourcePlanPersonID" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_Person]/Members[ResourcePlan]",
+                  "name": "ResourcePlan",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[FK_ResourcePlan_Project]",
+              "name": "FK_ResourcePlan_Project",
+              "association": { "__id": "FK_ResourcePlan_Project" },
+              "ends":
+              [
+                {
+                  "properties": [ "ProjectID" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_Project]/Members[Project]",
+                  "name": "Project",
+                  "entitySet": { "__id": "Timesheets_Data/Members[Projects]" }
+                },
+                {
+                  "properties": [ "ResourcePlanProjectID" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_Project]/Members[ResourcePlan]",
+                  "name": "ResourcePlan",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -3437,6 +3532,15 @@
               "canUpdate": true,
               "elementType": { "__id": "InvoiceStatu" },
               "entityType": { "__id": "InvoiceStatu" }
+            },
+            {
+              "id": "Timesheets_Data/Members[ResourcePlans]",
+              "name": "ResourcePlans",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "ResourcePlan" },
+              "entityType": { "__id": "ResourcePlan" }
             }
           ],
           "queryOperations":
@@ -4319,6 +4423,99 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "Timesheets_Data/Members[ResourcePlans_Single]",
+              "name": "ResourcePlans_Single",
+              "elementType": { "__id": "ResourcePlan" },
+              "query": { "__id": "Timesheets_Data/Members[ResourcePlans_Single]" },
+              "returnType": { "__id": "ResourcePlan" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlans_Single]/Parameters[ResourcePlanID]",
+                  "name": "ResourcePlanID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[ResourcePlans_SingleOrDefault]",
+              "name": "ResourcePlans_SingleOrDefault",
+              "elementType": { "__id": "ResourcePlan" },
+              "query": { "__id": "Timesheets_Data/Members[ResourcePlans_SingleOrDefault]" },
+              "returnType": { "__id": "ResourcePlan" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlans_SingleOrDefault]/Parameters[ResourcePlanID]",
+                  "name": "ResourcePlanID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[ResourcePlanSorted]",
+              "name": "ResourcePlanSorted",
+              "elementType": { "__id": "ResourcePlan" },
+              "query": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]" },
+              "returnType": { "__id": "ResourcePlan*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[ClientProject]",
+                  "name": "ClientProject",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[EndDate]",
+                  "name": "EndDate",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":DateTime?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[StartDate]",
+                  "name": "StartDate",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":DateTime?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ResourcePlan/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4519,6 +4716,52 @@
                             "source":
                             {
                               "target": { "__id": "!module/Methods[showBrowseInvoiceStatus]" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Resourcing",
+                    "name": "Resourcing",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Show Browse Resource Plan",
+                        "name": "ShowBrowseResourcePlan",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseResourcePlanSorted]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Show Add Edit Resource Plan Range",
+                        "name": "ShowAddEditResourcePlanRange",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourcePlanRange]" },
+                              ":@CreateNewEntity":
+                              {
+                                "entityType": { "__id": "ResourcePlanRange" },
+                                "targetParameter": { "__id": "!module/Methods[showAddEditResourcePlanRange]/Parameters[ResourcePlanRange]" }
+                              }
                             }
                           }
                         ]
@@ -12386,6 +12629,1470 @@
           ]
         },
         {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "ResourcePlan/Properties[ResourcePlanComments]" } },
+          "id": "ResourcePlan",
+          "name": "ResourcePlan",
+          "methods":
+          [
+            {
+              "id": "ResourcePlan/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "ResourcePlan/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "ResourcePlan/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "ResourcePlan/Properties[ResourcePlanID]",
+              "name": "ResourcePlanID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlan/Properties[ResourcePlanComments]",
+              "name": "ResourcePlanComments",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "ResourcePlan/Properties[WeekEndingDate]",
+              "name": "WeekEndingDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlan/Properties[Blocks]",
+              "name": "Blocks",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlan/Properties[sys_CreatedOn]",
+              "name": "sys_CreatedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlan/Properties[sys_CreatedBy]",
+              "name": "sys_CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "ResourcePlan/Properties[sys_ModifiedOn]",
+              "name": "sys_ModifiedOn",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlan/Properties[sys_ModifiedBy]",
+              "name": "sys_ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "ResourcePlan/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "FK_ResourcePlan_Person" },
+              "elementType": { "__id": "Person" },
+              "fromEnd": { "__id": "FK_ResourcePlan_Person/Ends[ResourcePlan]" },
+              "propertyType": { "__id": "Person" },
+              "toEnd": { "__id": "FK_ResourcePlan_Person/Ends[Person]" }
+            },
+            {
+              "id": "ResourcePlan/Properties[Project]",
+              "name": "Project",
+              "association": { "__id": "FK_ResourcePlan_Project" },
+              "elementType": { "__id": "Project" },
+              "fromEnd": { "__id": "FK_ResourcePlan_Project/Ends[ResourcePlan]" },
+              "propertyType": { "__id": "Project" },
+              "toEnd": { "__id": "FK_ResourcePlan_Project/Ends[Project]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_ResourcePlan_Person",
+          "name": "FK_ResourcePlan_Person",
+          "ends":
+          [
+            {
+              "id": "FK_ResourcePlan_Person/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "One",
+              "entityType": { "__id": "Person" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ResourcePlan_Person/Ends[ResourcePlan]",
+              "name": "ResourcePlan",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ResourcePlan" }
+            }
+          ]
+        },
+        {
+          "id": "FK_ResourcePlan_Project",
+          "name": "FK_ResourcePlan_Project",
+          "ends":
+          [
+            {
+              "id": "FK_ResourcePlan_Project/Ends[Project]",
+              "name": "Project",
+              "multiplicity": "One",
+              "entityType": { "__id": "Project" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ResourcePlan_Project/Ends[ResourcePlan]",
+              "name": "ResourcePlan",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ResourcePlan" }
+            }
+          ]
+        },
+        {
+          "displayName": "Browse Resource Plan Sorted",
+          "id": "BrowseResourcePlanSorted",
+          "name": "BrowseResourcePlanSorted",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Resource Plan List",
+                    "name": "ResourcePlanList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Resource Plan Sorted",
+                        "name": "ResourcePlan",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Resource Plan",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":ColumnsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Resource Plan Comments",
+                                "name": "ResourcePlanComments",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[ResourcePlanComments]" }
+                                }
+                              },
+                              {
+                                "displayName": "Week Ending Date",
+                                "name": "WeekEndingDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Person",
+                                "name": "Person",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Person]" }
+                                }
+                              },
+                              {
+                                "displayName": "Project",
+                                "name": "Project",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Project]" }
+                                }
+                              },
+                              {
+                                "displayName": "Blocks",
+                                "name": "Blocks",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Blocks]" }
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourcePlan]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditResourcePlan]/Parameters[ResourcePlan]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$ResourcePlan/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add Resource Plan",
+                        "name": "AddResourcePlan",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourcePlan]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditResourcePlan]/Parameters[ResourcePlan]" }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Person",
+                        "name": "ResourcePlanPersonName",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanPersonName]" }
+                        }
+                      },
+                      {
+                        "displayName": "Client or Project",
+                        "name": "ResourcePlanClientProject",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanClientProject]" }
+                        }
+                      },
+                      {
+                        "displayName": "Start Date",
+                        "name": "StartDate",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[StartDate]" }
+                        }
+                      },
+                      {
+                        "displayName": "End Date",
+                        "name": "EndDate",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[EndDate]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Browse"
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseResourcePlanSorted/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourcePlanSorted/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseResourcePlanSorted/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourcePlanSorted/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]",
+              "name": "ResourcePlanSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "ResourcePlan" },
+              "propertyType": { "__id": "CollectionView$ResourcePlan" },
+              "query":
+              {
+                "id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]/Query",
+                "name": "ResourcePlanSortedQuery",
+                "elementType": { "__id": "ResourcePlan" },
+                "returnType": { "__id": "ResourcePlan*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanSorted]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[PersonName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanPersonName]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[ClientProject]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[ResourcePlanClientProject]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[StartDate]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[StartDate]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ResourcePlanSorted]/Parameters[EndDate]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseResourcePlanSorted/Properties[EndDate]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BrowseResourcePlanSorted/Properties[ResourcePlanPersonName]",
+              "name": "ResourcePlanPersonName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseResourcePlanSorted/Properties[ResourcePlanClientProject]",
+              "name": "ResourcePlanClientProject",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseResourcePlanSorted/Properties[StartDate]",
+              "name": "StartDate",
+              "elementType": { "__id": ":DateTime?" },
+              "propertyType": { "__id": ":DateTime?" }
+            },
+            {
+              "id": "BrowseResourcePlanSorted/Properties[EndDate]",
+              "name": "EndDate",
+              "elementType": { "__id": ":DateTime?" },
+              "propertyType": { "__id": ":DateTime?" }
+            }
+          ]
+        },
+        {
+          "displayName": "Add Edit Resource Plan",
+          "id": "AddEditResourcePlan",
+          "name": "AddEditResourcePlan",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[Timesheets_Data]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[ResourcePlan]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Resource Plan Comments",
+                                "name": "ResourcePlanComments",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[ResourcePlanComments]" }
+                                }
+                              },
+                              {
+                                "displayName": "Week Ending Date",
+                                "name": "WeekEndingDate",
+                                "kind": "Value",
+                                "view": { "__id": ":DateTimePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":DateTimePicker/Properties[TimePickerEnabled]" },
+                                    "value": false
+                                  },
+                                  {
+                                    "property": { "__id": ":DateTimePicker/Properties[MinimumYear]" },
+                                    "value": 2013
+                                  },
+                                  {
+                                    "property": { "__id": ":DateTimePicker/Properties[MaximumYear]" },
+                                    "value": 2020
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Person",
+                                "name": "Person",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditResourcePlan/Properties[PersonSorted]" }
+                                },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Person]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Person",
+                                    "name": "RowTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Project",
+                                "name": "Project",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditResourcePlan/Properties[ProjectsFilter]" }
+                                },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Project]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Project",
+                                    "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Blocks",
+                                "name": "Blocks",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Blocks]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditResourcePlan/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourcePlan/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditResourcePlan/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourcePlan/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditResourcePlan/Properties[ResourcePlan]",
+              "name": "ResourcePlan",
+              "elementType": { "__id": "ResourcePlan" },
+              "propertyType": { "__id": "ResourcePlan" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "AddEditResourcePlan/Properties[PersonSorted]",
+              "name": "PersonSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "Person" },
+              "propertyType": { "__id": "CollectionView$Person" },
+              "query":
+              {
+                "id": "AddEditResourcePlan/Properties[PersonSorted]/Query",
+                "name": "PersonSortedQuery",
+                "elementType": { "__id": "Person" },
+                "returnType": { "__id": "Person*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[PersonSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditResourcePlan/Properties[PersonSorted]/Query" }
+              }
+            },
+            {
+              "id": "AddEditResourcePlan/Properties[ProjectsFilter]",
+              "name": "ProjectsFilter",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "AddEditResourcePlan/Properties[ProjectsFilter]/Query",
+                "name": "ProjectsFilterQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ProjectsFilter]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditResourcePlan/Properties[ProjectsFilter]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ClientName]" }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ProjectName]" }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "ApplicationData",
+          "name": "ApplicationData",
+          "isIntrinsic": true,
+          "entitySets":
+          [
+            {
+              "id": "ApplicationData/Members[ResourcePlanRanges]",
+              "name": "ResourcePlanRanges",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "ResourcePlanRange" },
+              "entityType": { "__id": "ResourcePlanRange" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "ApplicationData/Members[ResourcePlanRanges_Single]",
+              "name": "ResourcePlanRanges_Single",
+              "elementType": { "__id": "ResourcePlanRange" },
+              "query": { "__id": "ApplicationData/Members[ResourcePlanRanges_Single]" },
+              "returnType": { "__id": "ResourcePlanRange" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[ResourcePlanRanges]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[ResourcePlanRanges_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ApplicationData/Members[ResourcePlanRanges_SingleOrDefault]",
+              "name": "ResourcePlanRanges_SingleOrDefault",
+              "elementType": { "__id": "ResourcePlanRange" },
+              "query": { "__id": "ApplicationData/Members[ResourcePlanRanges_SingleOrDefault]" },
+              "returnType": { "__id": "ResourcePlanRange" },
+              "source":
+              {
+                "member": { "__id": "ApplicationData/Members[ResourcePlanRanges]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ApplicationData/Members[ResourcePlanRanges_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "ResourcePlanRange/Properties[Comments]" } },
+          "id": "ResourcePlanRange",
+          "name": "ResourcePlanRange",
+          "methods":
+          [
+            {
+              "id": "ResourcePlanRange/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "ResourcePlanRange/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "ResourcePlanRange/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "ResourcePlanRange/Properties[Id]",
+              "name": "Id",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[RowVersion]",
+              "name": "RowVersion",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":RowVersion" },
+              ":@UseForConcurrency": { },
+              ":@Hidden": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Comments]",
+              "name": "Comments",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[StartDate]",
+              "name": "StartDate",
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[EndDate]",
+              "name": "EndDate",
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Blocks]",
+              "name": "Blocks",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Person]",
+              "name": "Person",
+              "association": { "__id": "ResourcePlanRange_Person" },
+              "elementType": { "__id": "Person" },
+              "fromEnd": { "__id": "ResourcePlanRange_Person/Ends[ResourcePlanRange]" },
+              "propertyType": { "__id": "Person" },
+              "toEnd": { "__id": "ResourcePlanRange_Person/Ends[Person]" },
+              "virtualAssociation": { "__id": "ResourcePlanRange_Person" }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Person_PersonID]",
+              "name": "Person_PersonID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Project]",
+              "name": "Project",
+              "association": { "__id": "ResourcePlanRange_Project" },
+              "elementType": { "__id": "Project" },
+              "fromEnd": { "__id": "ResourcePlanRange_Project/Ends[ResourcePlanRange]" },
+              "propertyType": { "__id": "Project" },
+              "toEnd": { "__id": "ResourcePlanRange_Project/Ends[Project]" },
+              "virtualAssociation": { "__id": "ResourcePlanRange_Project" }
+            },
+            {
+              "id": "ResourcePlanRange/Properties[Project_ProjectID]",
+              "name": "Project_ProjectID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { }
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlanRange_Person",
+          "name": "ResourcePlanRange_Person",
+          "ends":
+          [
+            {
+              "id": "ResourcePlanRange_Person/Ends[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ResourcePlanRange" }
+            },
+            {
+              "id": "ResourcePlanRange_Person/Ends[Person]",
+              "name": "Person",
+              "multiplicity": "One",
+              "entityType": { "__id": "Person" }
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlanRange_Person_Set",
+          "name": "ResourcePlanRange_Person_Set",
+          "virtualAssociation": { "__id": "ResourcePlanRange_Person" },
+          "ends":
+          [
+            {
+              "id": "ResourcePlanRange_Person_Set/Members[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "entityContainer": { "__id": "ApplicationData" },
+              "entitySet": { "__id": "ApplicationData/Members[ResourcePlanRanges]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "ResourcePlanRange/Properties[Person_PersonID]" }
+                }
+              ]
+            },
+            {
+              "id": "ResourcePlanRange_Person_Set/Members[Person]",
+              "name": "Person",
+              "entityContainer": { "__id": "Timesheets_Data" },
+              "entitySet": { "__id": "Timesheets_Data/Members[People]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "Person/Properties[PersonID]" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlanRange_Project",
+          "name": "ResourcePlanRange_Project",
+          "ends":
+          [
+            {
+              "id": "ResourcePlanRange_Project/Ends[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ResourcePlanRange" }
+            },
+            {
+              "id": "ResourcePlanRange_Project/Ends[Project]",
+              "name": "Project",
+              "multiplicity": "One",
+              "entityType": { "__id": "Project" }
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlanRange_Project_Set",
+          "name": "ResourcePlanRange_Project_Set",
+          "virtualAssociation": { "__id": "ResourcePlanRange_Project" },
+          "ends":
+          [
+            {
+              "id": "ResourcePlanRange_Project_Set/Members[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "entityContainer": { "__id": "ApplicationData" },
+              "entitySet": { "__id": "ApplicationData/Members[ResourcePlanRanges]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "ResourcePlanRange/Properties[Project_ProjectID]" }
+                }
+              ]
+            },
+            {
+              "id": "ResourcePlanRange_Project_Set/Members[Project]",
+              "name": "Project",
+              "entityContainer": { "__id": "Timesheets_Data" },
+              "entitySet": { "__id": "Timesheets_Data/Members[Projects]" },
+              "properties":
+              [
+                {
+                  "entityProperty": { "__id": "Project/Properties[ProjectID]" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "displayName": "Add Edit Resource Plan Range",
+          "id": "AddEditResourcePlanRange",
+          "name": "AddEditResourcePlanRange",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[ApplicationData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[ResourcePlanRange]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Comments",
+                                "name": "Comments",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[Comments]" }
+                                }
+                              },
+                              {
+                                "displayName": "Person",
+                                "name": "Person",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditResourcePlanRange/Properties[PersonSorted]" }
+                                },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[Person]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Person",
+                                    "name": "RowTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Project",
+                                "name": "Project",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditResourcePlanRange/Properties[ProjectsFilter]" }
+                                },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[Project]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Project",
+                                    "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Start Date",
+                                "name": "StartDate",
+                                "kind": "Value",
+                                "view": { "__id": ":DatePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[StartDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "End Date",
+                                "name": "EndDate",
+                                "kind": "Value",
+                                "view": { "__id": ":DatePicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[EndDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Blocks",
+                                "name": "Blocks",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlanRange/Properties[Blocks]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditResourcePlanRange/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourcePlanRange/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditResourcePlanRange/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourcePlanRange/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditResourcePlanRange/Properties[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "elementType": { "__id": "ResourcePlanRange" },
+              "propertyType": { "__id": "ResourcePlanRange" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "AddEditResourcePlanRange/Properties[ProjectsFilter]",
+              "name": "ProjectsFilter",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "AddEditResourcePlanRange/Properties[ProjectsFilter]/Query",
+                "name": "ProjectsFilterQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ProjectsFilter]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditResourcePlanRange/Properties[ProjectsFilter]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ClientName]" }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[ProjectName]" }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AddEditResourcePlanRange/Properties[PersonSorted]",
+              "name": "PersonSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "Person" },
+              "propertyType": { "__id": "CollectionView$Person" },
+              "query":
+              {
+                "id": "AddEditResourcePlanRange/Properties[PersonSorted]/Query",
+                "name": "PersonSortedQuery",
+                "elementType": { "__id": "Person" },
+                "returnType": { "__id": "Person*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[PersonSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditResourcePlanRange/Properties[PersonSorted]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlanRange*",
+          "name": "ResourcePlanRange*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "ResourcePlanRange" }
+        },
+        {
+          "id": "CollectionView$ResourcePlanRange",
+          "name": "CollectionView$ResourcePlanRange",
+          "kind": "CollectionView",
+          "elementType": { "__id": "ResourcePlanRange" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "ResourcePlanRange" }
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "ResourcePlanRange" }
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$ResourcePlanRange/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$ResourcePlanRange/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "ResourcePlanRange" }
+            }
+          ]
+        },
+        {
+          "id": "ResourcePlan*",
+          "name": "ResourcePlan*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "ResourcePlan" }
+        },
+        {
+          "id": "CollectionView$ResourcePlan",
+          "name": "CollectionView$ResourcePlan",
+          "kind": "CollectionView",
+          "elementType": { "__id": "ResourcePlan" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$ResourcePlan/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "ResourcePlan" }
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "ResourcePlan" }
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$ResourcePlan/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$ResourcePlan/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "ResourcePlan" }
+            }
+          ]
+        },
+        {
           "id": "InvoiceStatu*",
           "name": "InvoiceStatu*",
           "kind": "Enumerable",
@@ -13433,6 +15140,37 @@
           "id": "!module/Methods[showBrowseBillingDetailNoRole]",
           "name": "showBrowseBillingDetailNoRole",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseBillingDetailNoRole" } }
+        },
+        {
+          "id": "!module/Methods[showBrowseResourcePlanSorted]",
+          "name": "showBrowseResourcePlanSorted",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseResourcePlanSorted" } }
+        },
+        {
+          "id": "!module/Methods[showAddEditResourcePlan]",
+          "name": "showAddEditResourcePlan",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditResourcePlan" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditResourcePlan]/Parameters[ResourcePlan]",
+              "name": "ResourcePlan",
+              "parameterType": { "__id": "ResourcePlan" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showAddEditResourcePlanRange]",
+          "name": "showAddEditResourcePlanRange",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditResourcePlanRange" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditResourcePlanRange]/Parameters[ResourcePlanRange]",
+              "name": "ResourcePlanRange",
+              "parameterType": { "__id": "ResourcePlanRange" }
+            }
+          ]
         }
       ]
     },

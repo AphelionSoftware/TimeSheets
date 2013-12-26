@@ -1,4 +1,5 @@
 ﻿
+
 CREATE VIEW [dbo].[UnallocatedTimesheets]
 as
 
@@ -37,7 +38,7 @@ and not p.Billable = 0
 inner join dbo.Client c
 on P.ClientID = c.ClientID
 left join dbo.Person AMPerson
-on p.AccountManagerPersonID = amperson.PersonID
+on ISNULL(p.AccountManagerPersonID, C.AccountManagerPersonID) = amperson.PersonID
 
 inner join dbo.TypeOfWork TOW 
 on td.TimesheetTypeOfWorkID  = TOW.TypeOfWorkID

@@ -759,6 +759,52 @@ namespace LightSwitchApplication
             }
         }
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ResourcePlan> ResourcePlans
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetValue(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlans);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ResourcePlan> ResourcePlansQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetQuery(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlans);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ResourcePlanRange> ResourcePlanRanges
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetValue(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlanRanges);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ResourcePlanRange> ResourcePlanRangesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Person.DetailsClass.GetQuery(this, global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlanRanges);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -1073,6 +1119,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan> ResourcePlans
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlans) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange> ResourcePlanRanges
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlanRanges) as global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -1108,6 +1170,7 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable Timesheets { get; }
                 new global::System.Collections.IEnumerable Invoices { get; }
                 new global::System.Collections.IEnumerable InvoiceLines { get; }
+                new global::System.Collections.IEnumerable ResourcePlans { get; }
             }
             #pragma warning restore 109
     
@@ -2083,6 +2146,36 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.InvoiceLines;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Entry
+                    ResourcePlans = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Entry(
+                        "ResourcePlans",
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._ResourcePlans_Stub,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._ResourcePlans_GetReferencedEntities,
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._ResourcePlans_GetEntityCollection);
+                private static void _ResourcePlans_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Person.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Data> c, global::LightSwitchApplication.Person.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ResourcePlans, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan> _ResourcePlans_GetReferencedEntities(global::LightSwitchApplication.Person.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass>(global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties.ResourcePlans, ref d._ResourcePlans);
+                }
+                private static global::System.Collections.IEnumerable _ResourcePlans_GetEntityCollection(global::LightSwitchApplication.Person.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ResourcePlans;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange>.Entry
+                    ResourcePlanRanges = new global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange>.Entry(
+                        "ResourcePlanRanges",
+                        global::LightSwitchApplication.Person.DetailsClass.PropertySetProperties._ResourcePlanRanges_Stub);
+                private static void _ResourcePlanRanges_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Person.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange>.Data> c, global::LightSwitchApplication.Person.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ResourcePlanRanges, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2171,6 +2264,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Data _ResourcePlans;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityVirtualCollectionProperty<global::LightSwitchApplication.Person, global::LightSwitchApplication.Person.DetailsClass, global::LightSwitchApplication.ResourcePlanRange>.Data _ResourcePlanRanges;
             
         }
     

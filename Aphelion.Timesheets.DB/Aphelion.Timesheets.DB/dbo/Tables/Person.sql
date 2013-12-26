@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Person] (
+CREATE TABLE [dbo].[Person] (
     [PersonID]              INT            IDENTITY (1, 1) NOT NULL,
     [PersonSourceKey]       VARCHAR (255)  NULL,
     [LoadDate]              DATETIME       CONSTRAINT [DF_Person_LoadDate] DEFAULT (getdate()) NOT NULL,
@@ -29,6 +29,9 @@
 
 
 
-GO
 
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Person]
+    ON [dbo].[Person]([PersonSourceKey] ASC);
 

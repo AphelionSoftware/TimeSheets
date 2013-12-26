@@ -429,6 +429,12 @@ window.myapp = msls.application;
         /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
         /// Gets the invoiceLines for this person.
         /// </field>
+        /// <field name="ResourcePlans" type="msls.EntityCollection" elementType="msls.application.ResourcePlan">
+        /// Gets the resourcePlans for this person.
+        /// </field>
+        /// <field name="ResourcePlanRanges" type="msls.EntityCollection" elementType="msls.application.ResourcePlanRange">
+        /// Gets the resourcePlanRanges for this person.
+        /// </field>
         /// <field name="details" type="msls.application.Person.Details">
         /// Gets the details for this person.
         /// </field>
@@ -522,6 +528,15 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
         /// Gets the invoiceLines for this project.
+        /// </field>
+        /// <field name="CommPercent" type="Number">
+        /// Gets or sets the commPercent for this project.
+        /// </field>
+        /// <field name="ResourcePlans" type="msls.EntityCollection" elementType="msls.application.ResourcePlan">
+        /// Gets the resourcePlans for this project.
+        /// </field>
+        /// <field name="ResourcePlanRanges" type="msls.EntityCollection" elementType="msls.application.ResourcePlanRange">
+        /// Gets the resourcePlanRanges for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
@@ -1154,6 +1169,92 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function ResourcePlan(entitySet) {
+        /// <summary>
+        /// Represents the ResourcePlan entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this resourcePlan.
+        /// </param>
+        /// <field name="ResourcePlanID" type="Number">
+        /// Gets or sets the resourcePlanID for this resourcePlan.
+        /// </field>
+        /// <field name="ResourcePlanComments" type="String">
+        /// Gets or sets the resourcePlanComments for this resourcePlan.
+        /// </field>
+        /// <field name="WeekEndingDate" type="Date">
+        /// Gets or sets the weekEndingDate for this resourcePlan.
+        /// </field>
+        /// <field name="Blocks" type="Number">
+        /// Gets or sets the blocks for this resourcePlan.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this resourcePlan.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this resourcePlan.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this resourcePlan.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this resourcePlan.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this resourcePlan.
+        /// </field>
+        /// <field name="Project" type="msls.application.Project">
+        /// Gets or sets the project for this resourcePlan.
+        /// </field>
+        /// <field name="details" type="msls.application.ResourcePlan.Details">
+        /// Gets the details for this resourcePlan.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function ResourcePlanRange(entitySet) {
+        /// <summary>
+        /// Represents the ResourcePlanRange entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this resourcePlanRange.
+        /// </param>
+        /// <field name="Id" type="Number">
+        /// Gets or sets the id for this resourcePlanRange.
+        /// </field>
+        /// <field name="RowVersion" type="Array">
+        /// Gets or sets the rowVersion for this resourcePlanRange.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this resourcePlanRange.
+        /// </field>
+        /// <field name="StartDate" type="Date">
+        /// Gets or sets the startDate for this resourcePlanRange.
+        /// </field>
+        /// <field name="EndDate" type="Date">
+        /// Gets or sets the endDate for this resourcePlanRange.
+        /// </field>
+        /// <field name="Blocks" type="Number">
+        /// Gets or sets the blocks for this resourcePlanRange.
+        /// </field>
+        /// <field name="Person" type="Person">
+        /// Gets or sets the person for this resourcePlanRange.
+        /// </field>
+        /// <field name="Person_PersonID" type="Number">
+        /// Gets or sets the person_PersonID for this resourcePlanRange.
+        /// </field>
+        /// <field name="Project" type="Project">
+        /// Gets or sets the project for this resourcePlanRange.
+        /// </field>
+        /// <field name="Project_ProjectID" type="Number">
+        /// Gets or sets the project_ProjectID for this resourcePlanRange.
+        /// </field>
+        /// <field name="details" type="msls.application.ResourcePlanRange.Details">
+        /// Gets the details for this resourcePlanRange.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function Timesheets_Data(dataWorkspace) {
         /// <summary>
         /// Represents the Timesheets_Data data service.
@@ -1209,7 +1310,26 @@ window.myapp = msls.application;
         /// <field name="InvoiceStatus" type="msls.EntitySet">
         /// Gets the InvoiceStatus entity set.
         /// </field>
+        /// <field name="ResourcePlans" type="msls.EntitySet">
+        /// Gets the ResourcePlans entity set.
+        /// </field>
         /// <field name="details" type="msls.application.Timesheets_Data.Details">
+        /// Gets the details for this data service.
+        /// </field>
+        $DataService.call(this, dataWorkspace);
+    };
+
+    function ApplicationData(dataWorkspace) {
+        /// <summary>
+        /// Represents the ApplicationData data service.
+        /// </summary>
+        /// <param name="dataWorkspace" type="msls.DataWorkspace">
+        /// The data workspace that created this data service.
+        /// </param>
+        /// <field name="ResourcePlanRanges" type="msls.EntitySet">
+        /// Gets the ResourcePlanRanges entity set.
+        /// </field>
+        /// <field name="details" type="msls.application.ApplicationData.Details">
         /// Gets the details for this data service.
         /// </field>
         $DataService.call(this, dataWorkspace);
@@ -1220,6 +1340,9 @@ window.myapp = msls.application;
         /// </summary>
         /// <field name="Timesheets_Data" type="msls.application.Timesheets_Data">
         /// Gets the Timesheets_Data data service.
+        /// </field>
+        /// <field name="ApplicationData" type="msls.application.ApplicationData">
+        /// Gets the ApplicationData data service.
         /// </field>
         /// <field name="details" type="msls.application.DataWorkspace.Details">
         /// Gets the details for this data workspace.
@@ -1360,7 +1483,9 @@ window.myapp = msls.application;
             { name: "SharepointUserName", type: String },
             { name: "Timesheets", kind: "collection", elementType: Timesheet },
             { name: "Invoices", kind: "collection", elementType: Invoice },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine }
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "ResourcePlans", kind: "collection", elementType: ResourcePlan },
+            { name: "ResourcePlanRanges", kind: "virtualCollection", elementType: ResourcePlanRange }
         ]),
 
         Project: $defineEntity(Project, [
@@ -1390,7 +1515,10 @@ window.myapp = msls.application;
             { name: "MonthlyCapWarning", type: Number },
             { name: "ProjectCapWarning", type: Number },
             { name: "InvoiceEmailAddress", type: String },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine }
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "CommPercent", type: Number },
+            { name: "ResourcePlans", kind: "collection", elementType: ResourcePlan },
+            { name: "ResourcePlanRanges", kind: "virtualCollection", elementType: ResourcePlanRange }
         ]),
 
         Timesheet: $defineEntity(Timesheet, [
@@ -1588,6 +1716,32 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType }
         ]),
 
+        ResourcePlan: $defineEntity(ResourcePlan, [
+            { name: "ResourcePlanID", type: Number },
+            { name: "ResourcePlanComments", type: String },
+            { name: "WeekEndingDate", type: Date },
+            { name: "Blocks", type: Number },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "Person", kind: "reference", type: Person },
+            { name: "Project", kind: "reference", type: Project }
+        ]),
+
+        ResourcePlanRange: $defineEntity(ResourcePlanRange, [
+            { name: "Id", type: Number },
+            { name: "RowVersion", type: Array },
+            { name: "Comments", type: String },
+            { name: "StartDate", type: Date },
+            { name: "EndDate", type: Date },
+            { name: "Blocks", type: Number },
+            { name: "Person", kind: "virtualReference", type: Person },
+            { name: "Person_PersonID", type: Number },
+            { name: "Project", kind: "virtualReference", type: Project },
+            { name: "Project_ProjectID", type: Number }
+        ]),
+
         Timesheets_Data: $defineDataService(Timesheets_Data, lightSwitchApplication.rootUri + "/Timesheets_Data.svc", [
             { name: "BillingDetails", elementType: BillingDetail },
             { name: "BillingStatusSet", elementType: BillingStatus },
@@ -1604,7 +1758,8 @@ window.myapp = msls.application;
             { name: "ActiveTypes", elementType: ActiveType },
             { name: "Invoices", elementType: Invoice },
             { name: "InvoiceLines", elementType: InvoiceLine },
-            { name: "InvoiceStatus", elementType: InvoiceStatu }
+            { name: "InvoiceStatus", elementType: InvoiceStatu },
+            { name: "ResourcePlans", elementType: ResourcePlan }
         ], [
             {
                 name: "BillingDetails_SingleOrDefault", value: function (BillingDetailID) {
@@ -1799,11 +1954,43 @@ window.myapp = msls.application;
                             PersonName: $toODataString(PersonName, "String?")
                         });
                 }
+            },
+            {
+                name: "ResourcePlans_SingleOrDefault", value: function (ResourcePlanID) {
+                    return new $DataServiceQuery({ _entitySet: this.ResourcePlans },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ResourcePlans(" + "ResourcePlanID=" + $toODataString(ResourcePlanID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "ResourcePlanSorted", value: function (PersonName, ClientProject, EndDate, StartDate) {
+                    return new $DataServiceQuery({ _entitySet: this.ResourcePlans },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ResourcePlanSorted()",
+                        {
+                            PersonName: $toODataString(PersonName, "String?"),
+                            ClientProject: $toODataString(ClientProject, "String?"),
+                            EndDate: $toODataString(EndDate, "DateTime?"),
+                            StartDate: $toODataString(StartDate, "DateTime?")
+                        });
+                }
+            }
+        ]),
+
+        ApplicationData: $defineDataService(ApplicationData, lightSwitchApplication.rootUri + "/ApplicationData.svc", [
+            { name: "ResourcePlanRanges", elementType: ResourcePlanRange }
+        ], [
+            {
+                name: "ResourcePlanRanges_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.ResourcePlanRanges },
+                        lightSwitchApplication.rootUri + "/ApplicationData.svc" + "/ResourcePlanRanges(" + "Id=" + $toODataString(Id, "Int32?") + ")"
+                    );
+                }
             }
         ]),
 
         DataWorkspace: $defineDataWorkspace(DataWorkspace, [
-            { name: "Timesheets_Data", type: Timesheets_Data }
+            { name: "Timesheets_Data", type: Timesheets_Data },
+            { name: "ApplicationData", type: ApplicationData }
         ])
 
     });

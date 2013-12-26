@@ -141,6 +141,20 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.ResourcePlan> ResourcePlanSorted(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.ResourcePlan> query;
+            global::System.DateTime today1 = global::Microsoft.LightSwitch.RelativeDates.Today();
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.ResourcePlan>("ResourcePlans"),
+                        (r) => (((((PersonName == null) || r.Person.PersonName.Contains(PersonName)) && (((ClientProject == null) || r.Project.ProjectName.Contains(ClientProject)) || ((ClientProject == null) || r.Project.Client.ClientName.Contains(ClientProject)))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))) && ((r.WeekEndingDate >= today1) || ((EndDate.HasValue == false) || ((StartDate.HasValue == false) || ((StartDate.HasValue && (r.WeekEndingDate >= StartDate)) && (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))))))),
+                    (r) => r.WeekEndingDate),
+                (r) => r.Person.PersonName);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -209,6 +223,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.InvoiceStatu))
             {
                 return new global::LightSwitchApplication.Implementation.InvoiceStatu();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.ResourcePlan))
+            {
+                return new global::LightSwitchApplication.Implementation.ResourcePlan();
             }
     
             return base.CreateObject(type);
@@ -290,6 +308,127 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.InvoiceStatu();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ResourcePlan))
+            {
+                return new global::LightSwitchApplication.Implementation.ResourcePlan();
+            }
+            return null;
+        }
+    
+    #endregion
+    
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public class ApplicationDataDataService
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.ApplicationData>
+    {
+    
+        public ApplicationDataDataService() : base()
+        {
+        }
+    
+        protected override global::Microsoft.LightSwitch.IDataService GetDataService(global::Microsoft.LightSwitch.IDataWorkspace dataWorkspace)
+        {
+            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).ApplicationData;
+        }
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public class ApplicationDataServiceImplementation
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.ApplicationData>
+    {
+        public ApplicationDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
+        {
+        }
+    
+    #region Queries
+    #endregion
+
+    #region Protected Methods
+        protected override object CreateObject(global::System.Type type)
+        {
+            if (type == typeof(global::LightSwitchApplication.Implementation.ResourcePlanRange))
+            {
+                return new global::LightSwitchApplication.Implementation.ResourcePlanRange();
+            }
+    
+            return base.CreateObject(type);
+        }
+    
+        protected override global::LightSwitchApplication.Implementation.ApplicationData CreateObjectContext()
+        {
+            string assemblyName = global::System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            string localConnectionString = this.GetEntityConnectionString(
+                "_IntrinsicData",
+                "res://" + assemblyName + "/ApplicationData.csdl|res://" + assemblyName + "/ApplicationData.ssdl|res://" + assemblyName + "/ApplicationData.msl",
+                "System.Data.SqlClient",
+                false);
+            if (!string.IsNullOrEmpty(localConnectionString))
+            {
+                return new global::LightSwitchApplication.Implementation.ApplicationData(localConnectionString);
+            }
+            else
+            {
+                return new global::LightSwitchApplication.Implementation.ApplicationData(new global::System.Data.EntityClient.EntityConnection(global::LightSwitchApplication.Implementation.ApplicationDataServiceImplementation.__workspace, this.__SqlAzureConnection));
+            }
+        }
+    
+        private static global::System.Data.Metadata.Edm.MetadataWorkspace __workspace = new global::System.Data.Metadata.Edm.MetadataWorkspace(new string[] { "res://*/ApplicationData.csdl", "res://*/ApplicationData.ssdl", "res://*/ApplicationData.msl" }, new global::System.Reflection.Assembly[] { global::System.Reflection.Assembly.GetExecutingAssembly() });
+    
+        private global::System.Data.SqlClient.SqlConnection ___sqlAzureConnection;
+        private global::System.Data.SqlClient.SqlConnection __SqlAzureConnection
+        {
+            get
+            {
+                if (this.___sqlAzureConnection == null)
+                {
+                    using (global::Microsoft.SharePoint.Client.ClientContext context = global::LightSwitchApplication.Application.Current.SharePoint.GetHostWebClientContext())
+                    {
+                        bool isReadOnly;
+                        if (global::Microsoft.SharePoint.Client.AppInstance.TryGetAppDatabaseConnectionDirect(context, out this.___sqlAzureConnection, out isReadOnly))
+                        {
+                            if (this.___sqlAzureConnection.State != global::System.Data.ConnectionState.Closed)
+                            {
+                                this.___sqlAzureConnection.Close();
+                            }
+                        }
+                        else
+                        {
+                            this.ThrowDatabaseConnectionNotAvailableException();
+                        }
+                    }
+                }
+    
+                return this.___sqlAzureConnection;
+            }
+        }
+    
+        protected override void Dispose(bool disposing)
+        {
+            try
+            {
+                if (disposing)
+                {
+                    if (this.___sqlAzureConnection != null)
+                    {
+                        this.___sqlAzureConnection.Dispose();
+                    }
+                }
+            }
+            finally
+            {
+                base.Dispose(disposing);
+            }
+        }
+    
+        protected override global::Microsoft.LightSwitch.Internal.IEntityImplementation CreateEntityImplementation<T>()
+        {
+            if (typeof(T) == typeof(global::LightSwitchApplication.ResourcePlanRange))
+            {
+                return new global::LightSwitchApplication.Implementation.ResourcePlanRange();
+            }
             return null;
         }
     
@@ -312,6 +451,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Timesheets_DataService();
             }
+            if (dataServiceType == typeof(global::LightSwitchApplication.ApplicationDataService))
+            {
+                return new global::LightSwitchApplication.ApplicationDataService();
+            }
             return base.CreateDataService(dataServiceType);
         }
     
@@ -320,6 +463,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(TDataService) == typeof(global::LightSwitchApplication.Timesheets_DataService))
             {
                 return new global::LightSwitchApplication.Implementation.Timesheets_DataServiceImplementation(dataService);
+            }
+            if (typeof(TDataService) == typeof(global::LightSwitchApplication.ApplicationDataService))
+            {
+                return new global::LightSwitchApplication.Implementation.ApplicationDataServiceImplementation(dataService);
             }
             return base.CreateDataServiceImplementation(dataService);
         }
@@ -398,6 +545,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.InvoiceStatu) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.InvoiceStatu);
+            }
+            if (typeof(global::LightSwitchApplication.ResourcePlan) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ResourcePlan);
+            }
+            if (typeof(global::LightSwitchApplication.ResourcePlanRange) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ResourcePlanRange);
             }
             return null;
         }
@@ -908,6 +1063,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Person.DetailsClass.IImplementation.ResourcePlans
+        {
+            get
+            {
+                return this.ResourcePlans;
+            }
+        }
+        
         partial void OnPersonSystemRoleIDChanged()
         {
             if (this.__host != null)
@@ -1034,6 +1197,14 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.InvoiceLines;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Project.DetailsClass.IImplementation.ResourcePlans
+        {
+            get
+            {
+                return this.ResourcePlans;
             }
         }
         
@@ -2215,6 +2386,120 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ResourcePlan :
+        global::LightSwitchApplication.ResourcePlan.DetailsClass.IImplementation
+    {
+    
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ResourcePlan.DetailsClass.IImplementation.Person
+        {
+            get
+            {
+                return this.Person;
+            }
+            set
+            {
+                this.Person = (global::LightSwitchApplication.Implementation.Person)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Person");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ResourcePlan.DetailsClass.IImplementation.Project
+        {
+            get
+            {
+                return this.Project;
+            }
+            set
+            {
+                this.Project = (global::LightSwitchApplication.Implementation.Project)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Project");
+                }
+            }
+        }
+        
+        partial void OnResourcePlanPersonIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Person");
+            }
+        }
+        
+        partial void OnResourcePlanProjectIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Project");
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ResourcePlanRange :
+        global::LightSwitchApplication.ResourcePlanRange.DetailsClass.IImplementation
+    {
+    
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

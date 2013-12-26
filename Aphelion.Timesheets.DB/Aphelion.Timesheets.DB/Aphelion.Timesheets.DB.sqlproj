@@ -123,5 +123,8 @@
     <Build Include="dbo\Stored Procedures\invInsertInvoices.sql" />
     <Build Include="dbo\Stored Procedures\invInsertInvoiceLines.sql" />
     <Build Include="dbo\Tables\DB_Revisions.sql" />
+    <Build Include="dbo\Tables\ResourcePlan.sql" />
+    <Build Include="dbo\Views\vw_ResourcePlan.sql" />
+    <Build Include="dbo\Stored Procedures\InsertResourcing.sql" />
   </ItemGroup>
 </Project>

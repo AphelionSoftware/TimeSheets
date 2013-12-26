@@ -11,6 +11,7 @@
   </AppPrincipal>
   <AppPrerequisites>
     <AppPrerequisite Type="AutoProvisioning" ID="RemoteWebHost" />
+    <AppPrerequisite Type="AutoProvisioning" ID="Database" />
   </AppPrerequisites>
   <AppPermissionRequests AllowAppOnlyPolicy="true">
     <AppPermissionRequest Scope="http://sharepoint/content/sitecollection/web" Right="Manage"></AppPermissionRequest>

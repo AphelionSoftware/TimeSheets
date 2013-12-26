@@ -636,6 +636,42 @@ namespace LightSwitchApplication
         partial void InvoiceStatus_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Inserting(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Inserted(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Updating(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Updated(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Deleting(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Deleted(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Validate(global::LightSwitchApplication.ResourcePlan entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -781,6 +817,21 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void BillingDetailNoRole_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_Executing(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanSorted_PreprocessQuery(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_Executed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_ExecuteFailed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2006,6 +2057,81 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
+                __ResourcePlansEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
+                    "ResourcePlans",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Filter);
+            private static bool __ResourcePlans_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanRead(ref result);
+                return result;
+            }
+            private static void __ResourcePlans_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Inserting(e);
+            }
+            private static void __ResourcePlans_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Inserted(e);
+            }
+            private static void __ResourcePlans_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Updating(e);
+            }
+            private static void __ResourcePlans_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Updated(e);
+            }
+            private static void __ResourcePlans_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Deleting(e);
+            }
+            private static void __ResourcePlans_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Deleted(e);
+            }
+            private static void __ResourcePlans_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ResourcePlans_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> __ResourcePlans_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter = null;
+                d.ResourcePlans_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>(
                     "SaveChanges",
@@ -2327,6 +2453,39 @@ namespace LightSwitchApplication
                 d.BillingDetailNoRole_PreprocessQuery((string)args[0], (string)args[1], ref query);
                 return query;
             }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
+                __ResourcePlanSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
+                    "ResourcePlanSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_PreprocessQuery);
+            private static bool __ResourcePlanSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.ResourcePlanSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __ResourcePlanSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ResourcePlanSorted_Executing((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3]);
+            }
+            private static void __ResourcePlanSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ResourcePlanSorted_Executed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan>)args[4]);
+            }
+            private static void __ResourcePlanSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.ResourcePlanSorted_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ex);
+            }
+            private static global::System.Linq.IQueryable __ResourcePlanSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan>)args[4];
+                d.ResourcePlanSorted_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ref query);
+                return query;
+            }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Timesheets_DataService>
@@ -2343,6 +2502,249 @@ namespace LightSwitchApplication
                 d.Query_Executed(queryDescriptor);
             }
             private static void __Query_Failed(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
+            {
+                d.Query_ExecuteFailed(queryDescriptor);
+            }
+        }
+    
+        #endregion
+    }
+    
+    /// <summary>
+    /// Provides members to query and update data in the ApplicationData datasource.
+    /// </summary>
+    public sealed partial class ApplicationDataService
+        : global::LightSwitchApplication.ApplicationData
+    {
+        #region Constructors
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ApplicationDataService() : base()
+        {
+        }
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Server Interceptions Points
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Inserting(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Inserted(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Updating(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Updated(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Deleting(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Deleted(global::LightSwitchApplication.ResourcePlanRange entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Validate(global::LightSwitchApplication.ResourcePlanRange entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanRanges_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlanRange, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executed();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executed(global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_ExecuteFailed(global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor);
+    
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        public static new class DetailsClass
+        {
+    
+            static DetailsClass()
+            {
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.ResourcePlanRange>
+                __ResourcePlanRangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ApplicationDataService, global::LightSwitchApplication.ResourcePlanRange>(
+                    "ResourcePlanRanges",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_CanInsert,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_CanUpdate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_CanDelete,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_CanRead,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Inserting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Inserted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Updating,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Updated,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Deleting,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Deleted,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Validate,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__ResourcePlanRanges_Filter);
+            private static bool __ResourcePlanRanges_CanInsert(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.ResourcePlanRanges_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ResourcePlanRanges_CanUpdate(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.ResourcePlanRanges_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ResourcePlanRanges_CanDelete(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.ResourcePlanRanges_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ResourcePlanRanges_CanRead(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                bool result = true;
+                d.ResourcePlanRanges_CanRead(ref result);
+                return result;
+            }
+            private static void __ResourcePlanRanges_Inserting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Inserting(e);
+            }
+            private static void __ResourcePlanRanges_Inserted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Inserted(e);
+            }
+            private static void __ResourcePlanRanges_Updating(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Updating(e);
+            }
+            private static void __ResourcePlanRanges_Updated(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Updated(e);
+            }
+            private static void __ResourcePlanRanges_Deleting(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Deleting(e);
+            }
+            private static void __ResourcePlanRanges_Deleted(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e)
+            {
+                d.ResourcePlanRanges_Deleted(e);
+            }
+            private static void __ResourcePlanRanges_Validate(global::LightSwitchApplication.ApplicationDataService d, global::LightSwitchApplication.ResourcePlanRange e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ResourcePlanRanges_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlanRange, bool>> __ResourcePlanRanges_Filter(global::LightSwitchApplication.ApplicationDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlanRange, bool>> filter = null;
+                d.ResourcePlanRanges_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.ApplicationDataService>
+                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.ApplicationDataService>(
+                    "SaveChanges",
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaveChanges_CanExecute,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaveChanges_Executing,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaveChanges_Executed,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__SaveChanges_Failed);
+            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.ApplicationDataService d, bool r)
+            {
+                d.SaveChanges_CanExecute(ref r);
+                return r;
+            }
+            private static void __SaveChanges_Executing(global::LightSwitchApplication.ApplicationDataService d, object[] args)
+            {
+                d.SaveChanges_Executing();
+            }
+            private static void __SaveChanges_Executed(global::LightSwitchApplication.ApplicationDataService d, object[] args)
+            {
+                d.SaveChanges_Executed();
+            }
+            private static void __SaveChanges_Failed(global::LightSwitchApplication.ApplicationDataService d, object[] args, global::System.Exception ex)
+            {
+                d.SaveChanges_ExecuteFailed(ex);
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.ApplicationDataService>
+                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.ApplicationDataService>(
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Query_Executing,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Query_Executed,
+                    global::LightSwitchApplication.ApplicationDataService.DetailsClass.__Query_Failed);
+            private static void __Query_Executing(global::LightSwitchApplication.ApplicationDataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
+            {
+                d.Query_Executing(queryDescriptor);
+            }
+            private static void __Query_Executed(global::LightSwitchApplication.ApplicationDataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
+            {
+                d.Query_Executed(queryDescriptor);
+            }
+            private static void __Query_Failed(global::LightSwitchApplication.ApplicationDataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
             {
                 d.Query_ExecuteFailed(queryDescriptor);
             }

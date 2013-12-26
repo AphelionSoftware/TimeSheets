@@ -549,6 +549,96 @@
         $Screen.call(this, dataWorkspace, "BrowseBillingDetailNoRole", parameters);
     }
 
+    function BrowseResourcePlanSorted(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseResourcePlanSorted screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ResourcePlanSorted" type="msls.VisualCollection" elementType="msls.application.ResourcePlan">
+        /// Gets the resourcePlanSorted for this screen.
+        /// </field>
+        /// <field name="ResourcePlanPersonName" type="String">
+        /// Gets or sets the resourcePlanPersonName for this screen.
+        /// </field>
+        /// <field name="ResourcePlanClientProject" type="String">
+        /// Gets or sets the resourcePlanClientProject for this screen.
+        /// </field>
+        /// <field name="StartDate" type="Date">
+        /// Gets or sets the startDate for this screen.
+        /// </field>
+        /// <field name="EndDate" type="Date">
+        /// Gets or sets the endDate for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseResourcePlanSorted.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseResourcePlanSorted", parameters);
+    }
+
+    function AddEditResourcePlan(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditResourcePlan screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ResourcePlan" type="msls.application.ResourcePlan">
+        /// Gets or sets the resourcePlan for this screen.
+        /// </field>
+        /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
+        /// Gets the personSorted for this screen.
+        /// </field>
+        /// <field name="ProjectsFilter" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectsFilter for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditResourcePlan.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditResourcePlan", parameters);
+    }
+
+    function AddEditResourcePlanRange(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditResourcePlanRange screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ResourcePlanRange" type="msls.application.ResourcePlanRange">
+        /// Gets or sets the resourcePlanRange for this screen.
+        /// </field>
+        /// <field name="ProjectsFilter" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectsFilter for this screen.
+        /// </field>
+        /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
+        /// Gets the personSorted for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditResourcePlanRange.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditResourcePlanRange", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         HomeScreen: $defineScreen(HomeScreen, [
@@ -800,6 +890,54 @@
             },
             { name: "BillingDetailClientName", kind: "local", type: String },
             { name: "BillingDetailPersonName", kind: "local", type: String }
+        ], [
+        ]),
+
+        BrowseResourcePlanSorted: $defineScreen(BrowseResourcePlanSorted, [
+            {
+                name: "ResourcePlanSorted", kind: "collection", elementType: lightSwitchApplication.ResourcePlan,
+                createQuery: function (PersonName, ClientProject, EndDate, StartDate) {
+                    return this.dataWorkspace.Timesheets_Data.ResourcePlanSorted(PersonName, ClientProject, EndDate, StartDate).expand("Person").expand("Project");
+                }
+            },
+            { name: "ResourcePlanPersonName", kind: "local", type: String },
+            { name: "ResourcePlanClientProject", kind: "local", type: String },
+            { name: "StartDate", kind: "local", type: Date },
+            { name: "EndDate", kind: "local", type: Date }
+        ], [
+        ]),
+
+        AddEditResourcePlan: $defineScreen(AddEditResourcePlan, [
+            { name: "ResourcePlan", kind: "local", type: lightSwitchApplication.ResourcePlan },
+            {
+                name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.PersonSorted();
+                }
+            },
+            {
+                name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (ClientName, ProjectName) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName);
+                }
+            }
+        ], [
+        ]),
+
+        AddEditResourcePlanRange: $defineScreen(AddEditResourcePlanRange, [
+            { name: "ResourcePlanRange", kind: "local", type: lightSwitchApplication.ResourcePlanRange },
+            {
+                name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (ClientName, ProjectName) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName);
+                }
+            },
+            {
+                name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.PersonSorted();
+                }
+            }
         ], [
         ]),
 
@@ -1065,6 +1203,42 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("BrowseBillingDetailNoRole", parameters, options);
+        }),
+
+        showBrowseResourcePlanSorted: $defineShowScreen(function showBrowseResourcePlanSorted(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseResourcePlanSorted screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseResourcePlanSorted", parameters, options);
+        }),
+
+        showAddEditResourcePlan: $defineShowScreen(function showAddEditResourcePlan(ResourcePlan, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditResourcePlan screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditResourcePlan", parameters, options);
+        }),
+
+        showAddEditResourcePlanRange: $defineShowScreen(function showAddEditResourcePlanRange(ResourcePlanRange, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditResourcePlanRange screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditResourcePlanRange", parameters, options);
         })
 
     });

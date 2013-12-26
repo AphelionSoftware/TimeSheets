@@ -16,10 +16,12 @@
     CONSTRAINT [PK_BillingDetail] PRIMARY KEY CLUSTERED ([BillingDetailID] ASC),
     CONSTRAINT [FK_BillingDetail_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
     CONSTRAINT [FK_BillingDetail_Client] FOREIGN KEY ([BillingDetailClientID]) REFERENCES [dbo].[Client] ([ClientID]),
+    CONSTRAINT [FK_BillingDetail_ClientRole] FOREIGN KEY ([BillingDetailClientRoleID]) REFERENCES [dbo].[ClientRole] ([ClientRoleID]),
     CONSTRAINT [FK_BillingDetail_DimDate] FOREIGN KEY ([BillingDetailDateID]) REFERENCES [dbo].[DimDate] ([DateID]),
-    CONSTRAINT [FK_BillingDetail_Person] FOREIGN KEY ([BillingDetailPersonID]) REFERENCES [dbo].[Person] ([PersonID]),
-    CONSTRAINT [FK_BillingDetail_Role] FOREIGN KEY ([BillingDetailClientRoleID]) REFERENCES [dbo].[ClientRole] ([ClientRoleID])
+    CONSTRAINT [FK_BillingDetail_Person] FOREIGN KEY ([BillingDetailPersonID]) REFERENCES [dbo].[Person] ([PersonID])
 );
+
+
 
 
 

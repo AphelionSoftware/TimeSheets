@@ -130,4 +130,20 @@
         created: [lightSwitchApplication.InvoiceStatu]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.ResourcePlan, {
+        /// <field>
+        /// Called when a new resourcePlan is created.
+        /// <br/>created(msls.application.ResourcePlan entity)
+        /// </field>
+        created: [lightSwitchApplication.ResourcePlan]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ResourcePlanRange, {
+        /// <field>
+        /// Called when a new resourcePlanRange is created.
+        /// <br/>created(msls.application.ResourcePlanRange entity)
+        /// </field>
+        created: [lightSwitchApplication.ResourcePlanRange]
+    });
+
 }(msls.application));

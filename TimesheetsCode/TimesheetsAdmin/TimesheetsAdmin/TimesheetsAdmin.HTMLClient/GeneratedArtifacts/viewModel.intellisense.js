@@ -74,7 +74,22 @@
         /// Called after the ShowBrowseInvoiceStatus content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowBrowseInvoiceStatus_postRender: $parameters
+        ShowBrowseInvoiceStatus_postRender: $parameters,
+        /// <field>
+        /// Called after the Resourcing content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Resourcing_postRender: $parameters,
+        /// <field>
+        /// Called after the ShowBrowseResourcePlan content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowBrowseResourcePlan_postRender: $parameters,
+        /// <field>
+        /// Called after the ShowAddEditResourcePlanRange content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowAddEditResourcePlanRange_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseTimesheetDetails, {
@@ -1248,6 +1263,215 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         PersonName_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseResourcePlanSorted, {
+        /// <field>
+        /// Called when a new BrowseResourcePlanSorted screen is created.
+        /// <br/>created(msls.application.BrowseResourcePlanSorted screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseResourcePlanSorted],
+        /// <field>
+        /// Called before changes on an active BrowseResourcePlanSorted screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseResourcePlanSorted screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseResourcePlanSorted],
+        /// <field>
+        /// Called after the ResourcePlanList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanList_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlan content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlan_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlanComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanComments_postRender: $parameters,
+        /// <field>
+        /// Called after the WeekEndingDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WeekEndingDate_postRender: $parameters,
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: $parameters,
+        /// <field>
+        /// Called after the Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project_postRender: $parameters,
+        /// <field>
+        /// Called after the Blocks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Blocks_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlanPersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanPersonName_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlanClientProject content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanClientProject_postRender: $parameters,
+        /// <field>
+        /// Called after the StartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StartDate_postRender: $parameters,
+        /// <field>
+        /// Called after the EndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndDate_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditResourcePlan, {
+        /// <field>
+        /// Called when a new AddEditResourcePlan screen is created.
+        /// <br/>created(msls.application.AddEditResourcePlan screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditResourcePlan],
+        /// <field>
+        /// Called before changes on an active AddEditResourcePlan screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditResourcePlan screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditResourcePlan],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: $parameters,
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: $parameters,
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlanComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanComments_postRender: $parameters,
+        /// <field>
+        /// Called after the WeekEndingDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WeekEndingDate_postRender: $parameters,
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: $parameters,
+        /// <field>
+        /// Called after the Blocks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Blocks_postRender: $parameters
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditResourcePlanRange, {
+        /// <field>
+        /// Called when a new AddEditResourcePlanRange screen is created.
+        /// <br/>created(msls.application.AddEditResourcePlanRange screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditResourcePlanRange],
+        /// <field>
+        /// Called before changes on an active AddEditResourcePlanRange screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditResourcePlanRange screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditResourcePlanRange],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: $parameters,
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: $parameters,
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project_postRender: $parameters,
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: $parameters,
+        /// <field>
+        /// Called after the StartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StartDate_postRender: $parameters,
+        /// <field>
+        /// Called after the EndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndDate_postRender: $parameters,
+        /// <field>
+        /// Called after the Blocks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Blocks_postRender: $parameters
     });
 
 }(msls.application));

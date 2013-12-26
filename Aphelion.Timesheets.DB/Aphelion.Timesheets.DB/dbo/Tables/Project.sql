@@ -16,10 +16,11 @@
     [ProjectCap]             MONEY           NULL,
     [AccountManagerPersonID] INT             NULL,
     [AdminProject]           INT             CONSTRAINT [DF_Project_AdminProject] DEFAULT ((0)) NOT NULL,
-    [sys_CreatedOn]          DATETIME        DEFAULT (getdate()) NOT NULL,
-    [sys_CreatedBy]          NVARCHAR (255)  DEFAULT ('Unknown') NOT NULL,
-    [sys_ModifiedOn]         DATETIME        DEFAULT (getdate()) NOT NULL,
-    [sys_ModifiedBy]         NVARCHAR (255)  DEFAULT ('Unknown') NOT NULL,
+    [CommPercent]            DECIMAL (18, 2) CONSTRAINT [DF_Project_CommPercent] DEFAULT ((0)) NOT NULL,
+    [sys_CreatedOn]          DATETIME        CONSTRAINT [DF__Project__sys_Cre__02084FDA] DEFAULT (getdate()) NOT NULL,
+    [sys_CreatedBy]          NVARCHAR (255)  CONSTRAINT [DF__Project__sys_Cre__02FC7413] DEFAULT ('Unknown') NOT NULL,
+    [sys_ModifiedOn]         DATETIME        CONSTRAINT [DF__Project__sys_Mod__03F0984C] DEFAULT (getdate()) NOT NULL,
+    [sys_ModifiedBy]         NVARCHAR (255)  CONSTRAINT [DF__Project__sys_Mod__04E4BC85] DEFAULT ('Unknown') NOT NULL,
     [MonthlyCap]             DECIMAL (18, 2) NULL,
     [MonthlyCapWarning]      DECIMAL (18, 2) NULL,
     [ProjectCapWarning]      DECIMAL (18, 2) NULL,
@@ -31,6 +32,8 @@
     CONSTRAINT [FK_Project_Person] FOREIGN KEY ([AccountManagerPersonID]) REFERENCES [dbo].[Person] ([PersonID]),
     CONSTRAINT [IX_Project_1] UNIQUE CLUSTERED ([Billable] DESC, [AccountManagerPersonID] ASC, [ProjectID] ASC)
 );
+
+
 
 
 

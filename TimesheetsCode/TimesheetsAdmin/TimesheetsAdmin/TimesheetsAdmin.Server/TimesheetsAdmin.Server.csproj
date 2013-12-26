@@ -77,6 +77,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
@@ -218,6 +219,8 @@
     <Compile Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserCode\ApplicationDataService.cs" />
+    <Compile Include="UserCode\Shared\ResourcePlan.cs" />
     <Compile Include="UserCode\Timesheets_DataService.cs" />
     <Compile Include="UserCode\Shared\BillingDetail.cs" />
     <Compile Include="UserCode\Shared\BillingStatus.cs" />
