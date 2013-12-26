@@ -246,6 +246,9 @@
         /// <field name="ClientRolesSorted" type="msls.VisualCollection" elementType="msls.application.ClientRole">
         /// Gets the clientRolesSorted for this screen.
         /// </field>
+        /// <field name="FilteredClient" type="msls.VisualCollection" elementType="msls.application.Client">
+        /// Gets the filteredClient for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditBillingDetail.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -437,6 +440,9 @@
         /// <field name="Project" type="msls.application.Project">
         /// Gets or sets the project for this screen.
         /// </field>
+        /// <field name="PersonAccountManager" type="msls.VisualCollection" elementType="msls.application.Person">
+        /// Gets the personAccountManager for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditProject.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -599,8 +605,8 @@
         /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
         /// Gets the personSorted for this screen.
         /// </field>
-        /// <field name="ProjectsFilter" type="msls.VisualCollection" elementType="msls.application.Project">
-        /// Gets the projectsFilter for this screen.
+        /// <field name="BillableProjects" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the billableProjects for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditResourcePlan.Details">
         /// Gets the details for this screen.
@@ -624,11 +630,11 @@
         /// <field name="ResourcePlanRange" type="msls.application.ResourcePlanRange">
         /// Gets or sets the resourcePlanRange for this screen.
         /// </field>
-        /// <field name="ProjectsFilter" type="msls.VisualCollection" elementType="msls.application.Project">
-        /// Gets the projectsFilter for this screen.
-        /// </field>
         /// <field name="PersonSorted" type="msls.VisualCollection" elementType="msls.application.Person">
         /// Gets the personSorted for this screen.
+        /// </field>
+        /// <field name="BillableProjects" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the billableProjects for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditResourcePlanRange.Details">
         /// Gets the details for this screen.
@@ -768,6 +774,12 @@
                 createQuery: function () {
                     return this.dataWorkspace.Timesheets_Data.ClientRolesSorted();
                 }
+            },
+            {
+                name: "FilteredClient", kind: "collection", elementType: lightSwitchApplication.Client,
+                createQuery: function (ClientName) {
+                    return this.dataWorkspace.Timesheets_Data.FilteredClient(ClientName);
+                }
             }
         ], [
         ]),
@@ -844,7 +856,13 @@
         ]),
 
         AddEditProject: $defineScreen(AddEditProject, [
-            { name: "Project", kind: "local", type: lightSwitchApplication.Project }
+            { name: "Project", kind: "local", type: lightSwitchApplication.Project },
+            {
+                name: "PersonAccountManager", kind: "collection", elementType: lightSwitchApplication.Person,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.PersonAccountManager();
+                }
+            }
         ], [
         ]),
 
@@ -916,9 +934,9 @@
                 }
             },
             {
-                name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function (ClientName, ProjectName) {
-                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName);
+                name: "BillableProjects", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (Client_Project, AM) {
+                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM);
                 }
             }
         ], [
@@ -927,15 +945,15 @@
         AddEditResourcePlanRange: $defineScreen(AddEditResourcePlanRange, [
             { name: "ResourcePlanRange", kind: "local", type: lightSwitchApplication.ResourcePlanRange },
             {
-                name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function (ClientName, ProjectName) {
-                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName);
-                }
-            },
-            {
                 name: "PersonSorted", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
                     return this.dataWorkspace.Timesheets_Data.PersonSorted();
+                }
+            },
+            {
+                name: "BillableProjects", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (Client_Project, AM) {
+                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM);
                 }
             }
         ], [

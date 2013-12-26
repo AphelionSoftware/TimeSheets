@@ -1105,7 +1105,12 @@
         /// Called after the RowTemplate3 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate3_postRender: $parameters
+        RowTemplate3_postRender: $parameters,
+        /// <field>
+        /// Called after the CommPercent content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CommPercent_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseInvoiceStatus, {

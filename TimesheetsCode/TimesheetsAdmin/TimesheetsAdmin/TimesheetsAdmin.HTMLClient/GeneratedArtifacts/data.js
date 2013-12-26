@@ -1973,6 +1973,24 @@ window.myapp = msls.application;
                             StartDate: $toODataString(StartDate, "DateTime?")
                         });
                 }
+            },
+            {
+                name: "BillableProjects", value: function (Client_Project, AM) {
+                    return new $DataServiceQuery({ _entitySet: this.Projects },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/BillableProjects()",
+                        {
+                            Client_Project: $toODataString(Client_Project, "String?"),
+                            AM: $toODataString(AM, "String?")
+                        });
+                }
+            },
+            {
+                name: "PersonAccountManager", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.People },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/PersonAccountManager()",
+                        {
+                        });
+                }
             }
         ]),
 

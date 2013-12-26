@@ -241,6 +241,6 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.DomainServices.Hosting.OData.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.DomainServices.Server.xml
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.pdb
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache

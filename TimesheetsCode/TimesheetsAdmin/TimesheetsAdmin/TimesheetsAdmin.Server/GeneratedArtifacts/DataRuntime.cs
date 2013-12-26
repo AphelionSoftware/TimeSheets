@@ -897,6 +897,28 @@ namespace LightSwitchApplication
             return this.Details.Methods.ResourcePlanSorted.CreateInvocation(PersonName, ClientProject, EndDate, StartDate).Execute();
         }
         
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="Client_Project">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="AM">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> BillableProjects(string Client_Project, string AM)
+        {
+            return this.Details.Methods.BillableProjects.CreateInvocation(Client_Project, AM).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Person> PersonAccountManager()
+        {
+            return this.Details.Methods.PersonAccountManager.CreateInvocation().Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1294,6 +1316,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.ResourcePlanSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ResourcePlan>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project> BillableProjects
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.BillableProjects) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person> PersonAccountManager
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties.PersonAccountManager) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person>;
                     }
                 }
                 
@@ -1894,6 +1932,26 @@ namespace LightSwitchApplication
                     c(d, ref d._ResourcePlanSorted, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    BillableProjects = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                        "BillableProjects",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._BillableProjects_Stub);
+                private static void _BillableProjects_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._BillableProjects, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person>.Entry
+                    PersonAccountManager = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person>.Entry(
+                        "PersonAccountManager",
+                        global::LightSwitchApplication.Timesheets_Data.DetailsClass.MethodSetProperties._PersonAccountManager_Stub);
+                private static void _PersonAccountManager_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person>.Data> c, global::LightSwitchApplication.Timesheets_Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PersonAccountManager, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2256,6 +2314,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Data _ResourcePlanSorted;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Project>.Data _BillableProjects;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Timesheets_Data, global::LightSwitchApplication.Timesheets_Data.DetailsClass, global::LightSwitchApplication.Person>.Data _PersonAccountManager;
             
         }
     

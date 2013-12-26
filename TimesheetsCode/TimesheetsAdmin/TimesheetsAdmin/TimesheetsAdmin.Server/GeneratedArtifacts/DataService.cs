@@ -834,6 +834,36 @@ namespace LightSwitchApplication
         partial void ResourcePlanSorted_ExecuteFailed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillableProjects_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_Executing(string Client_Project, string AM);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillableProjects_PreprocessQuery(string Client_Project, string AM, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_Executed(string Client_Project, string AM, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_ExecuteFailed(string Client_Project, string AM, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonAccountManager_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonAccountManager_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2484,6 +2514,72 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan>)args[4];
                 d.ResourcePlanSorted_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
+                __BillableProjectsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
+                    "BillableProjects",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_PreprocessQuery);
+            private static bool __BillableProjects_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.BillableProjects_CanExecute(ref r);
+                return r;
+            }
+            private static void __BillableProjects_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillableProjects_Executing((string)args[0], (string)args[1]);
+            }
+            private static void __BillableProjects_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillableProjects_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[2]);
+            }
+            private static void __BillableProjects_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.BillableProjects_ExecuteFailed((string)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __BillableProjects_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[2];
+                d.BillableProjects_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
+                __PersonAccountManagerEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
+                    "PersonAccountManager",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_PreprocessQuery);
+            private static bool __PersonAccountManager_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.PersonAccountManager_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonAccountManager_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonAccountManager_Executing();
+            }
+            private static void __PersonAccountManager_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonAccountManager_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person>)args[0]);
+            }
+            private static void __PersonAccountManager_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonAccountManager_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __PersonAccountManager_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
+                d.PersonAccountManager_PreprocessQuery(ref query);
                 return query;
             }
     

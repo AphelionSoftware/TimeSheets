@@ -155,6 +155,30 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> BillableProjects(string Client_Project, string AM)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                        (p) => ((((((p.AdminProject == 0) && (p.BillingStatus.BillingStatusID == 1)) && (((Client_Project == null) || p.Client.ClientName.Contains(Client_Project)) || ((Client_Project == null) || p.ProjectName.Contains(Client_Project)))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)) && ((AM == null) || p.Person.PersonName.Contains(AM)))),
+                    (p) => p.Client.ClientName),
+                (p) => p.ProjectName);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Person> PersonAccountManager()
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Person> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.Person>("People"),
+                    (p) => ((p.ActiveType.ID == 1) && ((p.SystemRole.SystemRoleCode.CompareTo("AM") == 0) || (p.SystemRole.SystemRoleCode.CompareTo("ADMIN") == 0)))),
+                (p) => p.PersonName);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods

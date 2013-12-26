@@ -380,7 +380,7 @@
     Name="HomeScreen">
     <Screen.Attributes>
       <DisplayName
-        Value="Home Screen v 2.0.25" />
+        Value="Home Screen v 2.1.31" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4239,6 +4239,14 @@
                   Name="Client"
                   Kind="Details"
                   DataType="Client">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="AddEditBillingDetail/Properties[FilteredClient]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -4538,6 +4546,35 @@
           <ChainExpression>
             <CallExpression
               Target="AddEditBillingDetail/Properties[ClientRolesSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="FilteredClient"
+        PageSize="45"
+        PropertyType="CollectionView$Client">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="FilteredClientQuery"
+            ReturnType="Client*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[FilteredClient]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditBillingDetail/Properties[FilteredClient]/Query">
+              <ArgumentExpression
+                Parameter="ClientName" />
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -6888,6 +6925,19 @@
                     </ContentItem.DataSource>
                   </ContentItem>
                 </ContentItem>
+                <ContentItem
+                  Name="CommPercent"
+                  Kind="Value"
+                  DataType=":Decimal">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Project/Properties[CommPercent]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -6974,6 +7024,32 @@
           <IsParameter />
         </ScreenProperty.Attributes>
       </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="PersonAccountManager"
+        PageSize="45"
+        PropertyType="CollectionView$Person">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PersonAccountManagerQuery"
+            ReturnType="Person*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[PersonAccountManager]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditProject/Properties[PersonAccountManager]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
   <EntityType>
@@ -8688,7 +8764,7 @@
                 <ContentItem
                   Name="WeekEndingDate"
                   Kind="Value"
-                  DataType=":DateTime">
+                  DataType=":Date">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -8805,6 +8881,48 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ShowFilter"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="BrowseResourcePlanSorted/Methods[showDialog]">
+                          <ArgumentExpression
+                            Parameter="dialogName">
+                            <ConstantExpression
+                              Value="Filter"
+                              ResultType=":String" />
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-filter"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem.CommandItems>
@@ -8875,6 +8993,38 @@
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[TimePickerEnabled]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MinimumYear]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="2013"
+                        ResultType=":Int32" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MaximumYear]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="2020"
+                        ResultType=":Int32" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
               Name="EndDate"
@@ -8888,6 +9038,38 @@
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[TimePickerEnabled]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MinimumYear]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="2013"
+                        ResultType=":Int32" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MaximumYear]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="2020"
+                        ResultType=":Int32" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
           </ContentItem>
         </ContentItem>
@@ -9058,7 +9240,7 @@
                 <ContentItem
                   Name="WeekEndingDate"
                   Kind="Value"
-                  DataType=":DateTime"
+                  DataType=":Date"
                   View="Microsoft.LightSwitch.MobileWeb:DateTimePicker">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -9140,7 +9322,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="AddEditResourcePlan/Properties[ProjectsFilter]" />
+                          Member="AddEditResourcePlan/Properties[BillableProjects]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.ChoicesSource>
@@ -9289,12 +9471,12 @@
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
       <ScreenCollectionProperty
-        Name="ProjectsFilter"
+        Name="BillableProjects"
         PageSize="45"
         PropertyType="CollectionView$Project">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="ProjectsFilterQuery"
+            Name="BillableProjectsQuery"
             ReturnType="Project*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
@@ -9302,7 +9484,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets_Data/Members[ProjectsFilter]" />
+                  Member="Timesheets_Data/Members[BillableProjects]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -9310,11 +9492,11 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="AddEditResourcePlan/Properties[ProjectsFilter]/Query">
+              Target="AddEditResourcePlan/Properties[BillableProjects]/Query">
               <ArgumentExpression
-                Parameter="ClientName" />
+                Parameter="Client_Project" />
               <ArgumentExpression
-                Parameter="ProjectName" />
+                Parameter="AM" />
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -9452,7 +9634,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="AddEditResourcePlanRange/Properties[ProjectsFilter]" />
+                          Member="AddEditResourcePlanRange/Properties[BillableProjects]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.ChoicesSource>
@@ -9601,37 +9783,6 @@
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenCollectionProperty
-        Name="ProjectsFilter"
-        PageSize="45"
-        PropertyType="CollectionView$Project">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="ProjectsFilterQuery"
-            ReturnType="Project*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="Timesheets_Data/Members[ProjectsFilter]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="AddEditResourcePlanRange/Properties[ProjectsFilter]/Query">
-              <ArgumentExpression
-                Parameter="ClientName" />
-              <ArgumentExpression
-                Parameter="ProjectName" />
-            </CallExpression>
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenCollectionProperty
         Name="PersonSorted"
         PageSize="45"
         PropertyType="CollectionView$Person">
@@ -9654,6 +9805,37 @@
           <ChainExpression>
             <CallExpression
               Target="AddEditResourcePlanRange/Properties[PersonSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="BillableProjects"
+        PageSize="45"
+        PropertyType="CollectionView$Project">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="BillableProjectsQuery"
+            ReturnType="Project*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[BillableProjects]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditResourcePlanRange/Properties[BillableProjects]/Query">
+              <ArgumentExpression
+                Parameter="Client_Project" />
+              <ArgumentExpression
+                Parameter="AM" />
+            </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>

@@ -601,7 +601,7 @@ namespace LightSwitchApplication
                 }
                 private static void _WeekEndingDate_SetImplementationValue(global::LightSwitchApplication.ResourcePlan.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.WeekEndingDate = global::LightSwitchApplication.ResourcePlan.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.WeekEndingDate = global::LightSwitchApplication.ResourcePlan.DetailsClass.TruncateDate(v);
                 }
                 private static void _WeekEndingDate_OnValueChanged(global::LightSwitchApplication.ResourcePlan e)
                 {

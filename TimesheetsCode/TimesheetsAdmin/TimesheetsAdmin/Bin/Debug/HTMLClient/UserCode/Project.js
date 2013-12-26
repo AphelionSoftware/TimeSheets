@@ -10,4 +10,5 @@ myapp.Project.created = function (entity) {
     entity.LoadDate = "1999/01/01";
     entity.Active = 1;
     entity.AdminProject = 0;
+    entity.CommPercent = 0;
 };
