@@ -117,7 +117,6 @@
     <Build Include="..\..\..\DatabaseScripts\0010_Add_GetBillingRateByPersonID.sql">
       <Link>dbo\Functions\0010_Add_GetBillingRateByPersonID.sql</Link>
     </Build>
-    <Build Include="dbo\Tables\XLSBilled.sql" />
     <Build Include="dbo\Tables\InvoiceStatus.sql" />
     <Build Include="dbo\Tables\InvoiceLine.sql" />
     <Build Include="dbo\Tables\Invoice.sql" />
@@ -125,5 +124,6 @@
     <Build Include="dbo\Views\OverbudgetTimesheets.sql" />
     <Build Include="dbo\Stored Procedures\invInsertInvoices.sql" />
     <Build Include="dbo\Stored Procedures\invInsertInvoiceLines.sql" />
+    <Build Include="dbo\Tables\ResourcePlan.sql" />
   </ItemGroup>
 </Project>

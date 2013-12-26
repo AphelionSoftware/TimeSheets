@@ -1,5 +1,4 @@
-﻿
-CREATE PROC [dbo].[invInsertInvoices] as
+﻿CREATE PROC [dbo].[invInsertInvoices] as
 
 
 INSERT INTO [dbo].[Invoice]
@@ -13,7 +12,7 @@ INSERT INTO [dbo].[Invoice]
            ,[InvoiceStatusID]
 )
 
-SELECT SourceKey, DateID, DueDateID, AccountManagerPersonID, ClientID, Comments, InvoiceEmailAddress, InvoiceStatus FROM (
+SELECT * FROM (
 SELECT  ddMonth.BillingPeriodText + ' for '  + C.ClientSourceKey SourceKey,
  max(dd.DateID) as DateID
 ,max(ddMonth.DateID) as DueDateID
@@ -22,7 +21,6 @@ SELECT  ddMonth.BillingPeriodText + ' for '  + C.ClientSourceKey SourceKey,
 , ddMonth.BillingPeriodText + ' for '  + C.ClientSourceKey Comments
 ,COALESCE(C.InvoiceEmailAddress, P.InvoiceEmailAddress, 'sales@aphelion.bi') InvoiceEmailAddress
 , 0 InvoiceStatus
-, dd.BillingPeriodText
 
 FROM dbo.TimesheetDetail TD
 
@@ -49,14 +47,9 @@ GROUP BY ddMonth.BillingYear, ddMonth.BillingPeriodText
 , P.AccountManagerPersonID
 ,c.AccountManagerPersonID
 ,c.ClientSourceKey
-,dd.BillingPeriodText
 ,COALESCE(C.InvoiceEmailAddress, P.InvoiceEmailAddress, 'sales@aphelion.bi')
 ) Inv
-WHERE NOT EXISTS (SELECT 1 FROM dbo.Invoice I
-	INNER JOIN cube.DimDate DDi
-		on I.InvoiceDateID = ddI.DateID
-	WHERE ddI.BillingPeriodText = inv.BillingPeriodText
-	and InvoiceClientID = INV.ClientID
-	
-	)
+WHERE NOT EXISTS (SELECT 1 FROM dbo.Invoice 
+	WHERE InvoiceDateID = INV.DateID
+	and InvoiceClientID = INV.ClientID)
 ORDER BY DateID, SourceKey
