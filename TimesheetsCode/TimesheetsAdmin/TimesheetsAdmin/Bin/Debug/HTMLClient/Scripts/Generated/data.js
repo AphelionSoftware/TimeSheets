@@ -1991,6 +1991,19 @@ window.myapp = msls.application;
                         {
                         });
                 }
+            },
+            {
+                name: "TimesheetDetailSorted", value: function (BillingStatusName, PersonName, ProjectName, ClientName, ProjectID) {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailSorted()",
+                        {
+                            BillingStatusName: $toODataString(BillingStatusName, "String?"),
+                            PersonName: $toODataString(PersonName, "String?"),
+                            ProjectName: $toODataString(ProjectName, "String?"),
+                            ClientName: $toODataString(ClientName, "String?"),
+                            ProjectID: $toODataString(ProjectID, "Int32?")
+                        });
+                }
             }
         ]),
 

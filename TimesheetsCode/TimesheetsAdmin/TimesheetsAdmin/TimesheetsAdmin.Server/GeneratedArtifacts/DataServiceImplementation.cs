@@ -162,7 +162,7 @@ namespace LightSwitchApplication.Implementation
                 global::System.Linq.Queryable.OrderBy(
                     global::System.Linq.Queryable.Where(
                         this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                        (p) => ((((((p.AdminProject == 0) && (p.BillingStatus.BillingStatusID == 1)) && (((Client_Project == null) || p.Client.ClientName.Contains(Client_Project)) || ((Client_Project == null) || p.ProjectName.Contains(Client_Project)))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)) && ((AM == null) || p.Person.PersonName.Contains(AM)))),
+                        (p) => ((((((p.AdminProject == 0) && (((Client_Project == null) || p.Client.ClientName.Contains(Client_Project)) || ((Client_Project == null) || p.ProjectName.Contains(Client_Project)))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)) && ((AM == null) || p.Person.PersonName.Contains(AM))) && ((p.BillingStatus.BillingStatusID == 1) || (p.ProjectID < 0)))),
                     (p) => p.Client.ClientName),
                 (p) => p.ProjectName);
             return query;
@@ -176,6 +176,23 @@ namespace LightSwitchApplication.Implementation
                     this.GetQuery<global::LightSwitchApplication.Implementation.Person>("People"),
                     (p) => ((p.ActiveType.ID == 1) && ((p.SystemRole.SystemRoleCode.CompareTo("AM") == 0) || (p.SystemRole.SystemRoleCode.CompareTo("ADMIN") == 0)))),
                 (p) => p.PersonName);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailSorted(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.ThenBy(
+                    global::System.Linq.Queryable.ThenBy(
+                        global::System.Linq.Queryable.OrderByDescending(
+                            global::System.Linq.Queryable.Where(
+                                this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails"),
+                                (t) => ((((((BillingStatusName == null) || t.BillingStatus.BillingStatusName.Contains(BillingStatusName)) && ((PersonName == null) || t.Person.PersonName.Contains(PersonName))) && ((ProjectName == null) || t.Project.ProjectName.Contains(ProjectName))) && ((ClientName == null) || t.Project.Client.ClientName.Contains(ClientName))) && ((ProjectID.HasValue == false) || (ProjectID.HasValue && (t.Project.ProjectID == ProjectID))))),
+                            (t) => t.DimDate.DateID),
+                        (t) => t.Project.Client.ClientName),
+                    (t) => t.Project.ProjectName),
+                (t) => t.Person.PersonName);
             return query;
         }
     

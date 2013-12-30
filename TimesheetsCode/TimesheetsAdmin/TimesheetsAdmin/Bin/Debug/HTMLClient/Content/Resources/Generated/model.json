@@ -4576,6 +4576,100 @@
                   "member": { "__id": "Person/Properties[PersonName]" }
                 }
               ]
+            },
+            {
+              "id": "Timesheets_Data/Members[TimesheetDetailSorted]",
+              "name": "TimesheetDetailSorted",
+              "elementType": { "__id": "TimesheetDetail" },
+              "query": { "__id": "Timesheets_Data/Members[TimesheetDetailSorted]" },
+              "returnType": { "__id": "TimesheetDetail*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailSorted]/Parameters[BillingStatusName]",
+                  "name": "BillingStatusName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailSorted]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailSorted]/Parameters[ProjectName]",
+                  "name": "ProjectName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailSorted]/Parameters[ClientName]",
+                  "name": "ClientName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailSorted]/Parameters[ProjectID]",
+                  "name": "ProjectID",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                    },
+                    {
+                      "member": { "__id": "DimDate/Properties[DateID]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[ProjectName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4585,13 +4679,13 @@
           ":@SharePointEnabled": { }
         },
         {
-          "displayName": "Home Screen v 2.1.31",
+          "displayName": "Home Screen v 2.1.36",
           "id": "HomeScreen",
           "name": "HomeScreen",
           "launchMode": "Single",
           "rootContentItem":
           {
-            "displayName": "Home Screen v 2.1.31",
+            "displayName": "Home Screen v 2.1.36",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -10807,6 +10901,247 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "displayName": "Timesheets",
+                    "name": "Timesheets",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Timesheet Details",
+                        "name": "TimesheetDetails",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[TimesheetDetails]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Timesheet Detail",
+                            "name": "TimesheetDetailsTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":ColumnsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Dim Date",
+                                "name": "DimDate",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Person",
+                                "name": "Person1",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                                }
+                              },
+                              {
+                                "displayName": "Comments",
+                                "name": "Comments",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[Comments]" }
+                                }
+                              },
+                              {
+                                "displayName": "Hours",
+                                "name": "Hours",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[Hours]" }
+                                }
+                              },
+                              {
+                                "displayName": "Type Of Work",
+                                "name": "TypeOfWork",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[TypeOfWork]" }
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditTimesheetDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "AddEditProject/Properties[TimesheetDetails]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditTimesheetDetail]/Parameters[TimesheetDetail]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "AddEditProject/Properties[TimesheetDetails]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$TimesheetDetail/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Filter",
+                        "name": "ShowFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "AddEditProject/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "AddEditProject/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "Filter"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Resources",
+                    "name": "Resources",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Resource Plans",
+                        "name": "ResourcePlans",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[ResourcePlans]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Resource Plan",
+                            "name": "ResourcePlansTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":ColumnsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Week Ending Date",
+                                "name": "WeekEndingDate",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Person",
+                                "name": "Person3",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Person]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Person",
+                                    "name": "Person3Template",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Blocks",
+                                "name": "Blocks",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[Blocks]" }
+                                }
+                              },
+                              {
+                                "displayName": "Resource Plan Comments",
+                                "name": "ResourcePlanComments",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ResourcePlan/Properties[ResourcePlanComments]" }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -10814,7 +11149,59 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Person Name1",
+                        "name": "PersonName1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[PersonName1]" }
+                        }
+                      },
+                      {
+                        "displayName": "Billing Status Name1",
+                        "name": "BillingStatusName1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[BillingStatusName1]" }
+                        }
+                      },
+                      {
+                        "displayName": "Start Date",
+                        "name": "StartDate",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[StartDate]" }
+                        }
+                      },
+                      {
+                        "displayName": "End Date",
+                        "name": "EndDate",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditProject/Properties[EndDate]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -10866,6 +11253,150 @@
               ":@IsParameter": { }
             },
             {
+              "id": "AddEditProject/Properties[TimesheetDetails]",
+              "name": "TimesheetDetails",
+              "pageSize": 45,
+              "elementType": { "__id": "TimesheetDetail" },
+              "propertyType": { "__id": "CollectionView$TimesheetDetail" },
+              "query":
+              {
+                "id": "AddEditProject/Properties[TimesheetDetails]/Query",
+                "name": "TimesheetDetailsQuery",
+                "elementType": { "__id": "TimesheetDetail" },
+                "returnType": { "__id": "TimesheetDetail*" },
+                "filterExpression":
+                {
+                  "nodeType": "And",
+                  "left":
+                  {
+                    "nodeType": "Contains",
+                    "left":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                        },
+                        {
+                          "member": { "__id": "Person/Properties[PersonName]" }
+                        }
+                      ]
+                    },
+                    "right":
+                    {
+                      "parameter": { "__id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[PersonName]" }
+                    }
+                  },
+                  "right":
+                  {
+                    "nodeType": "Contains",
+                    "left":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "TimesheetDetail/Properties[BillingStatus]" }
+                        },
+                        {
+                          "member": { "__id": "BillingStatus/Properties[BillingStatusName]" }
+                        }
+                      ]
+                    },
+                    "right":
+                    {
+                      "parameter": { "__id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[BillingStatusName]" }
+                    }
+                  }
+                },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "AddEditProject/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[TimesheetDetails]" }
+                    }
+                  ]
+                },
+                "parameters":
+                [
+                  {
+                    "id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[PersonName]",
+                    "name": "PersonName",
+                    "isOptional": true,
+                    "parameterType": { "__id": ":String?" }
+                  },
+                  {
+                    "id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[BillingStatusName]",
+                    "name": "BillingStatusName",
+                    "isOptional": true,
+                    "parameterType": { "__id": ":String?" }
+                  }
+                ],
+                "sortCriteria":
+                [
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                      },
+                      {
+                        "member": { "__id": "DimDate/Properties[DateID]" }
+                      }
+                    ]
+                  },
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                      },
+                      {
+                        "member": { "__id": "Person/Properties[PersonName]" }
+                      }
+                    ]
+                  },
+                  {
+                    "member": { "__id": "TimesheetDetail/Properties[Comments]" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditProject/Properties[TimesheetDetails]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[PersonName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditProject/Properties[PersonName1]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "AddEditProject/Properties[TimesheetDetails]/Query/Parameters[BillingStatusName]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditProject/Properties[BillingStatusName1]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
               "id": "AddEditProject/Properties[PersonAccountManager]",
               "name": "PersonAccountManager",
               "pageSize": 45,
@@ -10885,6 +11416,107 @@
               "source":
               {
                 "target": { "__id": "AddEditProject/Properties[PersonAccountManager]/Query" }
+              }
+            },
+            {
+              "id": "AddEditProject/Properties[BillingStatusName]",
+              "name": "BillingStatusName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[PersonName]",
+              "name": "PersonName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[ProjectName]",
+              "name": "ProjectName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[ClientName]",
+              "name": "ClientName",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[PersonName1]",
+              "name": "PersonName1",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[BillingStatusName1]",
+              "name": "BillingStatusName1",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditProject/Properties[StartDate]",
+              "name": "StartDate",
+              "elementType": { "__id": ":DateTime?" },
+              "propertyType": { "__id": ":DateTime?" }
+            },
+            {
+              "id": "AddEditProject/Properties[EndDate]",
+              "name": "EndDate",
+              "elementType": { "__id": ":DateTime?" },
+              "propertyType": { "__id": ":DateTime?" }
+            },
+            {
+              "id": "AddEditProject/Properties[ResourcePlans]",
+              "name": "ResourcePlans",
+              "pageSize": 45,
+              "elementType": { "__id": "ResourcePlan" },
+              "propertyType": { "__id": "CollectionView$ResourcePlan" },
+              "query":
+              {
+                "id": "AddEditProject/Properties[ResourcePlans]/Query",
+                "name": "ResourcePlansQuery",
+                "elementType": { "__id": "ResourcePlan" },
+                "returnType": { "__id": "ResourcePlan*" },
+                "filterExpression":
+                {
+                  "nodeType": "GreaterThanOrEqual",
+                  "left":
+                  {
+                    "links":
+                    [
+                      {
+                        "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                      }
+                    ]
+                  },
+                  "right":
+                  {
+                    "target": { "__id": ":RelativeDates/GlobalValues[StartOfWeek]" }
+                  }
+                },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "AddEditProject/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[ResourcePlans]" }
+                    }
+                  ]
+                },
+                "sortCriteria":
+                [
+                  {
+                    "member": { "__id": "ResourcePlan/Properties[WeekEndingDate]" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditProject/Properties[ResourcePlans]/Query" }
               }
             }
           ]

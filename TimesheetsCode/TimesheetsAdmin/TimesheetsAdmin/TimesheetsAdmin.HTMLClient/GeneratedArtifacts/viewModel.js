@@ -440,8 +440,38 @@
         /// <field name="Project" type="msls.application.Project">
         /// Gets or sets the project for this screen.
         /// </field>
+        /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetails for this screen.
+        /// </field>
         /// <field name="PersonAccountManager" type="msls.VisualCollection" elementType="msls.application.Person">
         /// Gets the personAccountManager for this screen.
+        /// </field>
+        /// <field name="BillingStatusName" type="String">
+        /// Gets or sets the billingStatusName for this screen.
+        /// </field>
+        /// <field name="PersonName" type="String">
+        /// Gets or sets the personName for this screen.
+        /// </field>
+        /// <field name="ProjectName" type="String">
+        /// Gets or sets the projectName for this screen.
+        /// </field>
+        /// <field name="ClientName" type="String">
+        /// Gets or sets the clientName for this screen.
+        /// </field>
+        /// <field name="PersonName1" type="String">
+        /// Gets or sets the personName1 for this screen.
+        /// </field>
+        /// <field name="BillingStatusName1" type="String">
+        /// Gets or sets the billingStatusName1 for this screen.
+        /// </field>
+        /// <field name="StartDate" type="Date">
+        /// Gets or sets the startDate for this screen.
+        /// </field>
+        /// <field name="EndDate" type="Date">
+        /// Gets or sets the endDate for this screen.
+        /// </field>
+        /// <field name="ResourcePlans" type="msls.VisualCollection" elementType="msls.application.ResourcePlan">
+        /// Gets the resourcePlans for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditProject.Details">
         /// Gets the details for this screen.
@@ -858,9 +888,42 @@
         AddEditProject: $defineScreen(AddEditProject, [
             { name: "Project", kind: "local", type: lightSwitchApplication.Project },
             {
+                name: "TimesheetDetails", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
+                getNavigationProperty: function () {
+                    if (this.owner.Project) {
+                        return this.owner.Project.details.properties.TimesheetDetails;
+                    }
+                    return null;
+                },
+                appendQuery: function (PersonName, BillingStatusName) {
+                    return this.filter("" + ((PersonName === undefined || PersonName === null) ? "true" : "substringof(" + $toODataString(PersonName, "String?") + ", Person/PersonName)") + " and " + ((BillingStatusName === undefined || BillingStatusName === null) ? "true" : "substringof(" + $toODataString(BillingStatusName, "String?") + ", BillingStatus/BillingStatusName)") + "").orderByDescending("DimDate/DateID").thenBy("Person/PersonName").thenBy("Comments").expand("DimDate").expand("Person").expand("TypeOfWork");
+                }
+            },
+            {
                 name: "PersonAccountManager", kind: "collection", elementType: lightSwitchApplication.Person,
                 createQuery: function () {
                     return this.dataWorkspace.Timesheets_Data.PersonAccountManager();
+                }
+            },
+            { name: "BillingStatusName", kind: "local", type: String },
+            { name: "PersonName", kind: "local", type: String },
+            { name: "ProjectName", kind: "local", type: String },
+            { name: "ClientName", kind: "local", type: String },
+            { name: "PersonName1", kind: "local", type: String },
+            { name: "BillingStatusName1", kind: "local", type: String },
+            { name: "StartDate", kind: "local", type: Date },
+            { name: "EndDate", kind: "local", type: Date },
+            {
+                name: "ResourcePlans", kind: "collection", elementType: lightSwitchApplication.ResourcePlan,
+                getNavigationProperty: function () {
+                    if (this.owner.Project) {
+                        return this.owner.Project.details.properties.ResourcePlans;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    var startOfWeek1 = msls.relativeDates.startOfWeek();
+                    return this.filter("WeekEndingDate ge " + $toODataString(startOfWeek1, "DateTime") + "").orderBy("WeekEndingDate").expand("Person");
                 }
             }
         ], [

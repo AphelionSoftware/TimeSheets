@@ -4915,19 +4915,41 @@
                             </BinaryExpression.Left>
                             <BinaryExpression.Right>
                               <BinaryExpression
-                                NodeType="Equal">
+                                NodeType="Or">
+                                <BinaryExpression.Attributes>
+                                  <ExpressionGroup />
+                                </BinaryExpression.Attributes>
                                 <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="BillingStatus" />
-                                    <MemberExpression
-                                      Member="BillingStatusID" />
-                                  </ChainExpression>
+                                  <BinaryExpression
+                                    NodeType="Contains">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Client" />
+                                        <MemberExpression
+                                          Member="ClientName" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="Client_Project" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
                                 </BinaryExpression.Left>
                                 <BinaryExpression.Right>
-                                  <ConstantExpression
-                                    Value="1"
-                                    ResultType=":Int32" />
+                                  <BinaryExpression
+                                    NodeType="Contains">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="ProjectName" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="Client_Project" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
                                 </BinaryExpression.Right>
                               </BinaryExpression>
                             </BinaryExpression.Right>
@@ -4935,41 +4957,19 @@
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
                           <BinaryExpression
-                            NodeType="Or">
-                            <BinaryExpression.Attributes>
-                              <ExpressionGroup />
-                            </BinaryExpression.Attributes>
+                            NodeType="Equal">
                             <BinaryExpression.Left>
-                              <BinaryExpression
-                                NodeType="Contains">
-                                <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="Client" />
-                                    <MemberExpression
-                                      Member="ClientName" />
-                                  </ChainExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <ParameterExpression
-                                    Parameter="Client_Project" />
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="ActiveType" />
+                                <MemberExpression
+                                  Member="ID" />
+                              </ChainExpression>
                             </BinaryExpression.Left>
                             <BinaryExpression.Right>
-                              <BinaryExpression
-                                NodeType="Contains">
-                                <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="ProjectName" />
-                                  </ChainExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <ParameterExpression
-                                    Parameter="Client_Project" />
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
+                              <ConstantExpression
+                                Value="1"
+                                ResultType=":Int32" />
                             </BinaryExpression.Right>
                           </BinaryExpression>
                         </BinaryExpression.Right>
@@ -4980,6 +4980,8 @@
                         NodeType="Equal">
                         <BinaryExpression.Left>
                           <ChainExpression>
+                            <MemberExpression
+                              Member="Client" />
                             <MemberExpression
                               Member="ActiveType" />
                             <MemberExpression
@@ -4997,15 +4999,38 @@
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
                   <BinaryExpression
+                    NodeType="Contains">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Person" />
+                        <MemberExpression
+                          Member="PersonName" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="AM" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Or">
+                <BinaryExpression.Attributes>
+                  <ExpressionGroup />
+                </BinaryExpression.Attributes>
+                <BinaryExpression.Left>
+                  <BinaryExpression
                     NodeType="Equal">
                     <BinaryExpression.Left>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Client" />
+                          Member="BillingStatus" />
                         <MemberExpression
-                          Member="ActiveType" />
-                        <MemberExpression
-                          Member="ID" />
+                          Member="BillingStatusID" />
                       </ChainExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
@@ -5014,23 +5039,22 @@
                         ResultType=":Int32" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
-                </BinaryExpression.Right>
-              </BinaryExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <BinaryExpression
-                NodeType="Contains">
-                <BinaryExpression.Left>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="Person" />
-                    <MemberExpression
-                      Member="PersonName" />
-                  </ChainExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
-                  <ParameterExpression
-                    Parameter="AM" />
+                  <BinaryExpression
+                    NodeType="LessThan">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ProjectID" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ConstantExpression
+                        Value="0"
+                        ResultType=":Int32" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -5149,6 +5173,182 @@
       <QueryOperation.SortCriteria>
         <SortCriterion>
           <ChainExpression>
+            <MemberExpression
+              Member="PersonName" />
+          </ChainExpression>
+        </SortCriterion>
+      </QueryOperation.SortCriteria>
+    </QueryOperation>
+    <QueryOperation
+      Name="TimesheetDetailSorted"
+      ReturnType="TimesheetDetail*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="Contains">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="BillingStatus" />
+                                <MemberExpression
+                                  Member="BillingStatusName" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="BillingStatusName" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Contains">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Person" />
+                                <MemberExpression
+                                  Member="PersonName" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="PersonName" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Contains">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Project" />
+                            <MemberExpression
+                              Member="ProjectName" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="ProjectName" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Contains">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Project" />
+                        <MemberExpression
+                          Member="Client" />
+                        <MemberExpression
+                          Member="ClientName" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="ClientName" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Project" />
+                    <MemberExpression
+                      Member="ProjectID" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="ProjectID" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="TimesheetDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="BillingStatusName"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="PersonName"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="ProjectName"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="ClientName"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="ProjectID"
+        IsOptional="True"
+        ParameterType=":Int32?" />
+      <QueryOperation.SortCriteria>
+        <SortCriterion
+          Direction="Descending">
+          <ChainExpression>
+            <MemberExpression
+              Member="DimDate" />
+            <MemberExpression
+              Member="DateID" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="Project" />
+            <MemberExpression
+              Member="Client" />
+            <MemberExpression
+              Member="ClientName" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="Project" />
+            <MemberExpression
+              Member="ProjectName" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="Person" />
             <MemberExpression
               Member="PersonName" />
           </ChainExpression>
@@ -6724,6 +6924,248 @@
       Multiplicity="Many"
       EntityType="ResourcePlan" />
   </Association>
+  <EntityContainer
+    Name="ApplicationData"
+    IsIntrinsic="True">
+    <SubmitOperation
+      Name="SaveChanges" />
+    <EntitySet
+      Name="ResourcePlanRanges"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ResourcePlanRange" />
+    <QueryOperation
+      Name="ResourcePlanRanges_Single"
+      ReturnType="ResourcePlanRange">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ResourcePlanRanges" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ResourcePlanRanges_SingleOrDefault"
+      ReturnType="ResourcePlanRange">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ResourcePlanRanges" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="ApplicationDataMapping"
+    DataProvider="EntityFrameworkDataProvider"
+    EntityContainer="ApplicationData" />
+  <EntityType
+    Name="ResourcePlanRange">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <UseForConcurrency />
+          <Generated />
+          <Hidden />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Comments"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StartDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EndDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Blocks"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <VirtualNavigationProperty
+        Name="Person"
+        FromEnd="ResourcePlanRange"
+        ToEnd="Person"
+        VirtualAssociation="ResourcePlanRange_Person" />
+      <EntityProperty
+        Name="Person_PersonID"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <VirtualNavigationProperty
+        Name="Project"
+        FromEnd="ResourcePlanRange"
+        ToEnd="Project"
+        VirtualAssociation="ResourcePlanRange_Project" />
+      <EntityProperty
+        Name="Project_ProjectID"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <VirtualAssociation
+    Name="ResourcePlanRange_Person">
+    <VirtualAssociationEnd
+      Name="ResourcePlanRange"
+      Multiplicity="Many"
+      EntityType="ResourcePlanRange" />
+    <VirtualAssociationEnd
+      Name="Person"
+      Multiplicity="One"
+      EntityType="Person" />
+  </VirtualAssociation>
+  <VirtualAssociationSet
+    Name="ResourcePlanRange_Person_Set"
+    VirtualAssociation="ResourcePlanRange_Person">
+    <VirtualAssociationSetEnd
+      Name="ResourcePlanRange"
+      EntityContainer="ApplicationData"
+      EntitySet="ResourcePlanRanges">
+      <VirtualAssociationSetEndProperty
+        EntityProperty="Person_PersonID" />
+    </VirtualAssociationSetEnd>
+    <VirtualAssociationSetEnd
+      Name="Person"
+      EntityContainer="Timesheets_Data"
+      EntitySet="People">
+      <VirtualAssociationSetEndProperty
+        EntityProperty="PersonID" />
+    </VirtualAssociationSetEnd>
+  </VirtualAssociationSet>
+  <VirtualAssociation
+    Name="ResourcePlanRange_Project">
+    <VirtualAssociationEnd
+      Name="ResourcePlanRange"
+      Multiplicity="Many"
+      EntityType="ResourcePlanRange" />
+    <VirtualAssociationEnd
+      Name="Project"
+      Multiplicity="One"
+      EntityType="Project" />
+  </VirtualAssociation>
+  <VirtualAssociationSet
+    Name="ResourcePlanRange_Project_Set"
+    VirtualAssociation="ResourcePlanRange_Project">
+    <VirtualAssociationSetEnd
+      Name="ResourcePlanRange"
+      EntityContainer="ApplicationData"
+      EntitySet="ResourcePlanRanges">
+      <VirtualAssociationSetEndProperty
+        EntityProperty="Project_ProjectID" />
+    </VirtualAssociationSetEnd>
+    <VirtualAssociationSetEnd
+      Name="Project"
+      EntityContainer="Timesheets_Data"
+      EntitySet="Projects">
+      <VirtualAssociationSetEndProperty
+        EntityProperty="ProjectID" />
+    </VirtualAssociationSetEnd>
+  </VirtualAssociationSet>
   <DataService
     Name="Timesheets_DataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -6740,7 +7182,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="6b9f4a3f-2398-42dc-8abf-889fcee6b3eb" />
+        Value="d5dfceaa-5372-426a-a0a3-cd7f7d0398f6" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -6864,11 +7306,6 @@
           Type="int"
           PropertyName="BillingDetailClientID" />
         <SsdlForeignKeyProperty
-          Name="BillingDetailClientRoleID"
-          Nullable="False"
-          Type="int"
-          PropertyName="BillingDetailClientRoleID" />
-        <SsdlForeignKeyProperty
           Name="BillingDetailDateID"
           Nullable="False"
           Type="int"
@@ -6878,6 +7315,11 @@
           Nullable="False"
           Type="int"
           PropertyName="BillingDetailPersonID" />
+        <SsdlForeignKeyProperty
+          Name="BillingDetailClientRoleID"
+          Nullable="False"
+          Type="int"
+          PropertyName="BillingDetailClientRoleID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -7824,12 +8266,6 @@
           Type="int"
           Property="Project/Properties[AdminProject]" />
         <SsdlProperty
-          Name="CommPercent"
-          Nullable="False"
-          Scale="2"
-          Type="decimal"
-          Property="Project/Properties[CommPercent]" />
-        <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
@@ -7875,6 +8311,12 @@
           Nullable="True"
           Type="varchar"
           Property="Project/Properties[InvoiceEmailAddress]" />
+        <SsdlProperty
+          Name="CommPercent"
+          Nullable="False"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[CommPercent]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -8475,27 +8917,6 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
-      AssociationSet="FK_BillingDetail_ClientRole">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_BillingDetail_ClientRole" />
-        <SsdlAssociationSetEnd
-          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[ClientRole]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="ClientRoleID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[BillingDetail]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="BillingDetailClientRoleID" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
       AssociationSet="FK_BillingDetail_DimDate">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -8533,6 +8954,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="BillingDetailPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_BillingDetail_ClientRole">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_BillingDetail_Role" />
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[ClientRole]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ClientRoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_BillingDetail_ClientRole]/Members[BillingDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillingDetailClientRoleID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>
@@ -9336,246 +9778,4 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
   </DataService>
-  <EntityContainer
-    Name="ApplicationData"
-    IsIntrinsic="True">
-    <SubmitOperation
-      Name="SaveChanges" />
-    <EntitySet
-      Name="ResourcePlanRanges"
-      CanDelete="True"
-      CanInsert="True"
-      CanUpdate="True"
-      EntityType="ResourcePlanRange" />
-    <QueryOperation
-      Name="ResourcePlanRanges_Single"
-      ReturnType="ResourcePlanRange">
-      <QueryOperation.Attributes>
-        <Generated />
-        <Description
-          Value="Returns the entity whose identity is specified by the parameter(s)." />
-      </QueryOperation.Attributes>
-      <QueryOperation.FilterExpression>
-        <QueryFilterExpressionTree>
-          <BinaryExpression
-            NodeType="Equal">
-            <BinaryExpression.Left>
-              <ChainExpression>
-                <MemberExpression
-                  Member="Id" />
-              </ChainExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <ParameterExpression
-                Parameter="Id" />
-            </BinaryExpression.Right>
-          </BinaryExpression>
-        </QueryFilterExpressionTree>
-      </QueryOperation.FilterExpression>
-      <QueryOperation.Source>
-        <QuerySourceExpressionTree>
-          <MemberExpression
-            Member="ResourcePlanRanges" />
-        </QuerySourceExpressionTree>
-      </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="Id"
-        ParameterType=":Int32?">
-        <QueryOperationParameter.Attributes>
-          <Description
-            Value="The value of the 'Id' key property of the entity to retrieve." />
-        </QueryOperationParameter.Attributes>
-      </QueryOperationParameter>
-    </QueryOperation>
-    <QueryOperation
-      Name="ResourcePlanRanges_SingleOrDefault"
-      ReturnType="ResourcePlanRange">
-      <QueryOperation.Attributes>
-        <Generated />
-        <Description
-          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
-      </QueryOperation.Attributes>
-      <QueryOperation.FilterExpression>
-        <QueryFilterExpressionTree>
-          <BinaryExpression
-            NodeType="Equal">
-            <BinaryExpression.Left>
-              <ChainExpression>
-                <MemberExpression
-                  Member="Id" />
-              </ChainExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <ParameterExpression
-                Parameter="Id" />
-            </BinaryExpression.Right>
-          </BinaryExpression>
-        </QueryFilterExpressionTree>
-      </QueryOperation.FilterExpression>
-      <QueryOperation.Source>
-        <QuerySourceExpressionTree>
-          <MemberExpression
-            Member="ResourcePlanRanges" />
-        </QuerySourceExpressionTree>
-      </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="Id"
-        ParameterType=":Int32?">
-        <QueryOperationParameter.Attributes>
-          <Description
-            Value="The value of the 'Id' key property of the entity to retrieve." />
-        </QueryOperationParameter.Attributes>
-      </QueryOperationParameter>
-    </QueryOperation>
-  </EntityContainer>
-  <DataService
-    Name="ApplicationDataMapping"
-    DataProvider="EntityFrameworkDataProvider"
-    EntityContainer="ApplicationData" />
-  <EntityType
-    Name="ResourcePlanRange">
-    <EntityType.Methods>
-      <EntityMethod
-        Name="Delete">
-        <EntityMethod.Attributes>
-          <Generated />
-        </EntityMethod.Attributes>
-      </EntityMethod>
-    </EntityType.Methods>
-    <EntityType.Properties>
-      <KeyProperty
-        Name="Id"
-        PropertyType=":Int32">
-        <KeyProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </KeyProperty.Attributes>
-      </KeyProperty>
-      <EntityProperty
-        Name="RowVersion"
-        PropertyType=":RowVersion">
-        <EntityProperty.Attributes>
-          <UseForConcurrency />
-          <Generated />
-          <Hidden />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Comments"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="255" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="StartDate"
-        PropertyType=":Date">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="EndDate"
-        PropertyType=":Date">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Blocks"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <VirtualNavigationProperty
-        Name="Person"
-        FromEnd="ResourcePlanRange"
-        ToEnd="Person"
-        VirtualAssociation="ResourcePlanRange_Person" />
-      <EntityProperty
-        Name="Person_PersonID"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <VirtualNavigationProperty
-        Name="Project"
-        FromEnd="ResourcePlanRange"
-        ToEnd="Project"
-        VirtualAssociation="ResourcePlanRange_Project" />
-      <EntityProperty
-        Name="Project_ProjectID"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-    </EntityType.Properties>
-  </EntityType>
-  <VirtualAssociation
-    Name="ResourcePlanRange_Person">
-    <VirtualAssociationEnd
-      Name="ResourcePlanRange"
-      Multiplicity="Many"
-      EntityType="ResourcePlanRange" />
-    <VirtualAssociationEnd
-      Name="Person"
-      Multiplicity="One"
-      EntityType="Person" />
-  </VirtualAssociation>
-  <VirtualAssociationSet
-    Name="ResourcePlanRange_Person_Set"
-    VirtualAssociation="ResourcePlanRange_Person">
-    <VirtualAssociationSetEnd
-      Name="ResourcePlanRange"
-      EntityContainer="ApplicationData"
-      EntitySet="ResourcePlanRanges">
-      <VirtualAssociationSetEndProperty
-        EntityProperty="Person_PersonID" />
-    </VirtualAssociationSetEnd>
-    <VirtualAssociationSetEnd
-      Name="Person"
-      EntityContainer="Timesheets_Data"
-      EntitySet="People">
-      <VirtualAssociationSetEndProperty
-        EntityProperty="PersonID" />
-    </VirtualAssociationSetEnd>
-  </VirtualAssociationSet>
-  <VirtualAssociation
-    Name="ResourcePlanRange_Project">
-    <VirtualAssociationEnd
-      Name="ResourcePlanRange"
-      Multiplicity="Many"
-      EntityType="ResourcePlanRange" />
-    <VirtualAssociationEnd
-      Name="Project"
-      Multiplicity="One"
-      EntityType="Project" />
-  </VirtualAssociation>
-  <VirtualAssociationSet
-    Name="ResourcePlanRange_Project_Set"
-    VirtualAssociation="ResourcePlanRange_Project">
-    <VirtualAssociationSetEnd
-      Name="ResourcePlanRange"
-      EntityContainer="ApplicationData"
-      EntitySet="ResourcePlanRanges">
-      <VirtualAssociationSetEndProperty
-        EntityProperty="Project_ProjectID" />
-    </VirtualAssociationSetEnd>
-    <VirtualAssociationSetEnd
-      Name="Project"
-      EntityContainer="Timesheets_Data"
-      EntitySet="Projects">
-      <VirtualAssociationSetEndProperty
-        EntityProperty="ProjectID" />
-    </VirtualAssociationSetEnd>
-  </VirtualAssociationSet>
 </ModelFragment>

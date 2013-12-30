@@ -1110,7 +1110,112 @@
         /// Called after the CommPercent content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        CommPercent_postRender: $parameters
+        CommPercent_postRender: $parameters,
+        /// <field>
+        /// Called after the Timesheets content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Timesheets_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetails content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetails_postRender: $parameters,
+        /// <field>
+        /// Called after the TimesheetDetailsTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailsTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the DimDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DimDate_postRender: $parameters,
+        /// <field>
+        /// Called after the Person1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person1_postRender: $parameters,
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: $parameters,
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: $parameters,
+        /// <field>
+        /// Called after the TypeOfWork content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TypeOfWork_postRender: $parameters,
+        /// <field>
+        /// Called after the Resources content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Resources_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlans content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlans_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlansTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlansTemplate_postRender: $parameters,
+        /// <field>
+        /// Called after the WeekEndingDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WeekEndingDate_postRender: $parameters,
+        /// <field>
+        /// Called after the Person3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person3_postRender: $parameters,
+        /// <field>
+        /// Called after the Person3Template content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person3Template_postRender: $parameters,
+        /// <field>
+        /// Called after the Blocks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Blocks_postRender: $parameters,
+        /// <field>
+        /// Called after the ResourcePlanComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanComments_postRender: $parameters,
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: $parameters,
+        /// <field>
+        /// Called after the PersonName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName1_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatusName1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatusName1_postRender: $parameters,
+        /// <field>
+        /// Called after the StartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StartDate_postRender: $parameters,
+        /// <field>
+        /// Called after the EndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndDate_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseInvoiceStatus, {

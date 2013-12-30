@@ -22,7 +22,7 @@
     <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetsAdmin</ApplicationName>
-    <AssemblyVersion>2.1.31.0</AssemblyVersion>
+    <AssemblyVersion>2.1.37.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -192,11 +192,6 @@
       <InstanceGuid>{7828c6a5-2d42-49c7-a6d5-21f3a9ea7fbf}</InstanceGuid>
       <Name>SharePoint</Name>
     </SubProject>
-  </ItemGroup>
-  <ItemGroup>
-    <PublishParameter Include="Timesheets_Data">
-      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
-    </PublishParameter>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

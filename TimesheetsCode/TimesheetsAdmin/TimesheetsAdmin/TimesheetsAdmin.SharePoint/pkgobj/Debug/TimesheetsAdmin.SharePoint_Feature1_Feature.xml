@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="f5181602-98ef-407a-a2be-f62e13b5828a" Scope="Web" Title="TimesheetsAdmin.SharePoint Feature1" Version="2.1.31.0">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="f5181602-98ef-407a-a2be-f62e13b5828a" Scope="Web" Title="TimesheetsAdmin.SharePoint Feature1" Version="2.1.36.0">
   <ElementManifests>
     <ElementManifest Location="Elements.xml" />
   </ElementManifests>

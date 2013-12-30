@@ -864,6 +864,21 @@ namespace LightSwitchApplication
         partial void PersonAccountManager_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_Executing(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailSorted_PreprocessQuery(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_Executed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_ExecuteFailed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2580,6 +2595,39 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
                 d.PersonAccountManager_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
+                __TimesheetDetailSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
+                    "TimesheetDetailSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_PreprocessQuery);
+            private static bool __TimesheetDetailSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.TimesheetDetailSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __TimesheetDetailSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailSorted_Executing((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4]);
+            }
+            private static void __TimesheetDetailSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailSorted_Executed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail>)args[5]);
+            }
+            private static void __TimesheetDetailSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.TimesheetDetailSorted_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ex);
+            }
+            private static global::System.Linq.IQueryable __TimesheetDetailSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail>)args[5];
+                d.TimesheetDetailSorted_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ref query);
                 return query;
             }
     
