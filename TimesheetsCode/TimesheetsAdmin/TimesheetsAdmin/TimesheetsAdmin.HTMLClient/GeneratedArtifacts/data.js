@@ -1975,12 +1975,13 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "BillableProjects", value: function (Client_Project, AM) {
+                name: "BillableProjects", value: function (Client_Project, AM, Billable) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/BillableProjects()",
                         {
                             Client_Project: $toODataString(Client_Project, "String?"),
-                            AM: $toODataString(AM, "String?")
+                            AM: $toODataString(AM, "String?"),
+                            Billable: $toODataString(Billable, "Int32?")
                         });
                 }
             },

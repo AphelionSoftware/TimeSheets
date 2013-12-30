@@ -144,5 +144,19 @@ namespace LightSwitchApplication
         {
 
         }
+
+        partial void ResourcePlans_Inserting(ResourcePlan entity)
+        {
+            entity.sys_CreatedBy = /*Application.User.FullName*/"MarkGStacey";
+            entity.sys_CreatedOn = System.DateTime.Now;
+            entity.sys_ModifiedBy = /*Application.User.FullName*/"MarkGStacey";
+            entity.sys_ModifiedOn = System.DateTime.Now;
+        }
+
+        partial void ResourcePlans_Updating(ResourcePlan entity)
+        {
+            entity.sys_ModifiedBy = /*Application.User.FullName*/"MarkGStacey";
+            entity.sys_ModifiedOn = System.DateTime.Now;
+        }
     }
 }

@@ -155,14 +155,14 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> BillableProjects(string Client_Project, string AM)
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> BillableProjects(string Client_Project, string AM, global::System.Nullable<int> Billable)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
             query = global::System.Linq.Queryable.ThenBy(
                 global::System.Linq.Queryable.OrderBy(
                     global::System.Linq.Queryable.Where(
                         this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                        (p) => ((((((p.AdminProject == 0) && (((Client_Project == null) || p.Client.ClientName.Contains(Client_Project)) || ((Client_Project == null) || p.ProjectName.Contains(Client_Project)))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)) && ((AM == null) || p.Person.PersonName.Contains(AM))) && ((p.BillingStatus.BillingStatusID == 1) || (p.ProjectID < 0)))),
+                        (p) => (((((((p.AdminProject == 0) && (((Client_Project == null) || p.Client.ClientName.Contains(Client_Project)) || ((Client_Project == null) || p.ProjectName.Contains(Client_Project)))) && (p.ActiveType.ID == 1)) && (p.Client.ActiveType.ID == 1)) && ((AM == null) || p.Person.PersonName.Contains(AM))) && (p.Client.ActiveType.ID == 1)) && ((Billable.HasValue == false) || (Billable.HasValue && (p.BillingStatus.BillingStatusID == Billable))))),
                     (p) => p.Client.ClientName),
                 (p) => p.ProjectName);
             return query;

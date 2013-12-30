@@ -906,9 +906,12 @@ namespace LightSwitchApplication
         /// <param name="AM">
         /// No Modeled Description Available
         /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> BillableProjects(string Client_Project, string AM)
+        /// <param name="Billable">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> BillableProjects(string Client_Project, string AM, global::System.Nullable<int> Billable)
         {
-            return this.Details.Methods.BillableProjects.CreateInvocation(Client_Project, AM).Execute();
+            return this.Details.Methods.BillableProjects.CreateInvocation(Client_Project, AM, Billable).Execute();
         }
         
         /// <summary>

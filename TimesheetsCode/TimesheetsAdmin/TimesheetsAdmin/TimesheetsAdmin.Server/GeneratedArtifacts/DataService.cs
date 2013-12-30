@@ -837,16 +837,16 @@ namespace LightSwitchApplication
         partial void BillableProjects_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_Executing(string Client_Project, string AM);
+        partial void BillableProjects_Executing(string Client_Project, string AM, global::System.Nullable<int> Billable);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillableProjects_PreprocessQuery(string Client_Project, string AM, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+        partial void BillableProjects_PreprocessQuery(string Client_Project, string AM, global::System.Nullable<int> Billable, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_Executed(string Client_Project, string AM, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+        partial void BillableProjects_Executed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_ExecuteFailed(string Client_Project, string AM, global::System.Exception exception);
+        partial void BillableProjects_ExecuteFailed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PersonAccountManager_CanExecute(ref bool result);
@@ -2548,20 +2548,20 @@ namespace LightSwitchApplication
             }
             private static void __BillableProjects_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.BillableProjects_Executing((string)args[0], (string)args[1]);
+                d.BillableProjects_Executing((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2]);
             }
             private static void __BillableProjects_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.BillableProjects_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[2]);
+                d.BillableProjects_Executed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[3]);
             }
             private static void __BillableProjects_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
             {
-                d.BillableProjects_ExecuteFailed((string)args[0], (string)args[1], ex);
+                d.BillableProjects_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ex);
             }
             private static global::System.Linq.IQueryable __BillableProjects_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[2];
-                d.BillableProjects_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[3];
+                d.BillableProjects_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ref query);
                 return query;
             }
             

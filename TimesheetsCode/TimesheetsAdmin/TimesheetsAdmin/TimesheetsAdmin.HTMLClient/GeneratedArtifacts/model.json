@@ -4540,6 +4540,12 @@
                   "name": "AM",
                   "isOptional": true,
                   "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[BillableProjects]/Parameters[Billable]",
+                  "name": "Billable",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":Int32?" }
                 }
               ],
               "sortCriteria":
@@ -4679,13 +4685,13 @@
           ":@SharePointEnabled": { }
         },
         {
-          "displayName": "Home Screen v 2.1.36",
+          "displayName": "Home Screen v 2.2.36",
           "id": "HomeScreen",
           "name": "HomeScreen",
           "launchMode": "Single",
           "rootContentItem":
           {
-            "displayName": "Home Screen v 2.1.36",
+            "displayName": "Home Screen v 2.2.36",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -10805,6 +10811,10 @@
                                 "name": "Client",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditProject/Properties[FilteredClient]" }
+                                },
                                 "dataSource":
                                 {
                                   "member": { "__id": "Project/Properties[Client]" }
@@ -10830,6 +10840,10 @@
                                 "name": "Person",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditProject/Properties[PersonAccountManager]" }
+                                },
                                 "dataSource":
                                 {
                                   "member": { "__id": "Project/Properties[Person]" }
@@ -11517,6 +11531,34 @@
               "source":
               {
                 "target": { "__id": "AddEditProject/Properties[ResourcePlans]/Query" }
+              }
+            },
+            {
+              "id": "AddEditProject/Properties[FilteredClient]",
+              "name": "FilteredClient",
+              "pageSize": 45,
+              "elementType": { "__id": "Client" },
+              "propertyType": { "__id": "CollectionView$Client" },
+              "query":
+              {
+                "id": "AddEditProject/Properties[FilteredClient]/Query",
+                "name": "FilteredClientQuery",
+                "elementType": { "__id": "Client" },
+                "returnType": { "__id": "Client*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[FilteredClient]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditProject/Properties[FilteredClient]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[FilteredClient]/Parameters[ClientName]" }
+                  }
+                ]
               }
             }
           ]
@@ -14060,7 +14102,7 @@
                                   },
                                   {
                                     "property": { "__id": ":DateTimePicker/Properties[MinimumYear]" },
-                                    "value": 2013
+                                    "value": 2014
                                   },
                                   {
                                     "property": { "__id": ":DateTimePicker/Properties[MaximumYear]" },
@@ -14151,6 +14193,39 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Project Filter",
+                        "name": "ShowProjectFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "AddEditResourcePlan/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "AddEditResourcePlan/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "ProjectFilter"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -14159,7 +14234,64 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Project Filter",
+                    "name": "ProjectFilter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Client Project",
+                        "name": "Client_Project",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[Client_Project]" }
+                        }
+                      },
+                      {
+                        "displayName": "AM",
+                        "name": "AM",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[AM]" }
+                        }
+                      },
+                      {
+                        "displayName": "Billable",
+                        "name": "Billable",
+                        "kind": "Details",
+                        "view": { "__id": ":DetailsModalPicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[Billable]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Billing Status",
+                            "name": "BillingStatus",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -14255,13 +14387,64 @@
                 "arguments":
                 [
                   {
-                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Client_Project]" }
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Client_Project]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[Client_Project]" }
+                        }
+                      ]
+                    }
                   },
                   {
-                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[AM]" }
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[AM]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[AM]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Billable]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlan/Properties[Billable]" }
+                        },
+                        {
+                          "member": { "__id": "BillingStatus/Properties[BillingStatusID]" }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
+            },
+            {
+              "id": "AddEditResourcePlan/Properties[Client_Project]",
+              "name": "Client_Project",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditResourcePlan/Properties[AM]",
+              "name": "AM",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditResourcePlan/Properties[Billable]",
+              "name": "Billable",
+              "elementType": { "__id": "BillingStatus" },
+              "propertyType": { "__id": "BillingStatus" }
             }
           ]
         },
@@ -14655,7 +14838,18 @@
                                 "dataSource":
                                 {
                                   "member": { "__id": "ResourcePlanRange/Properties[StartDate]" }
-                                }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":DatePicker/Properties[MinimumYear]" },
+                                    "value": 2014
+                                  },
+                                  {
+                                    "property": { "__id": ":DatePicker/Properties[MaximumYear]" },
+                                    "value": 2020
+                                  }
+                                ]
                               },
                               {
                                 "displayName": "End Date",
@@ -14665,7 +14859,18 @@
                                 "dataSource":
                                 {
                                   "member": { "__id": "ResourcePlanRange/Properties[EndDate]" }
-                                }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":DatePicker/Properties[MinimumYear]" },
+                                    "value": 2014
+                                  },
+                                  {
+                                    "property": { "__id": ":DatePicker/Properties[MaximumYear]" },
+                                    "value": 2020
+                                  }
+                                ]
                               },
                               {
                                 "displayName": "Blocks",
@@ -14692,6 +14897,39 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Filter Project",
+                        "name": "ShowFilterProject",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "AddEditResourcePlanRange/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "AddEditResourcePlanRange/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "FilterProject"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -14700,7 +14938,64 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter Project",
+                    "name": "FilterProject",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Client Project",
+                        "name": "Client_Project",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[Client_Project]" }
+                        }
+                      },
+                      {
+                        "displayName": "AM",
+                        "name": "AM",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[AM]" }
+                        }
+                      },
+                      {
+                        "displayName": "Billable",
+                        "name": "Billable",
+                        "kind": "Details",
+                        "view": { "__id": ":DetailsModalPicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[Billable]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Billing Status",
+                            "name": "BillingStatus",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -14796,13 +15091,64 @@
                 "arguments":
                 [
                   {
-                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Client_Project]" }
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Client_Project]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[Client_Project]" }
+                        }
+                      ]
+                    }
                   },
                   {
-                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[AM]" }
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[AM]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[AM]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[BillableProjects]/Parameters[Billable]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditResourcePlanRange/Properties[Billable]" }
+                        },
+                        {
+                          "member": { "__id": "BillingStatus/Properties[BillingStatusID]" }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
+            },
+            {
+              "id": "AddEditResourcePlanRange/Properties[Client_Project]",
+              "name": "Client_Project",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditResourcePlanRange/Properties[AM]",
+              "name": "AM",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AddEditResourcePlanRange/Properties[Billable]",
+              "name": "Billable",
+              "elementType": { "__id": "BillingStatus" },
+              "propertyType": { "__id": "BillingStatus" }
             }
           ]
         },

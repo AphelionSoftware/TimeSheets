@@ -679,3 +679,4 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Scripts\Generated\resources.js
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\Generated\model.json
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\Content\Resources\msls.lang-en-us.resjson
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Bin\Debug\HTMLClient\UserCode\ResourcePlan.js

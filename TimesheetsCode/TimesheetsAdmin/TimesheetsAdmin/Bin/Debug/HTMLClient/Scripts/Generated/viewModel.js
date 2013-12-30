@@ -473,6 +473,9 @@
         /// <field name="ResourcePlans" type="msls.VisualCollection" elementType="msls.application.ResourcePlan">
         /// Gets the resourcePlans for this screen.
         /// </field>
+        /// <field name="FilteredClient" type="msls.VisualCollection" elementType="msls.application.Client">
+        /// Gets the filteredClient for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditProject.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -638,6 +641,15 @@
         /// <field name="BillableProjects" type="msls.VisualCollection" elementType="msls.application.Project">
         /// Gets the billableProjects for this screen.
         /// </field>
+        /// <field name="Client_Project" type="String">
+        /// Gets or sets the client_Project for this screen.
+        /// </field>
+        /// <field name="AM" type="String">
+        /// Gets or sets the aM for this screen.
+        /// </field>
+        /// <field name="Billable" type="msls.application.BillingStatus">
+        /// Gets or sets the billable for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditResourcePlan.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -665,6 +677,15 @@
         /// </field>
         /// <field name="BillableProjects" type="msls.VisualCollection" elementType="msls.application.Project">
         /// Gets the billableProjects for this screen.
+        /// </field>
+        /// <field name="Client_Project" type="String">
+        /// Gets or sets the client_Project for this screen.
+        /// </field>
+        /// <field name="AM" type="String">
+        /// Gets or sets the aM for this screen.
+        /// </field>
+        /// <field name="Billable" type="msls.application.BillingStatus">
+        /// Gets or sets the billable for this screen.
         /// </field>
         /// <field name="details" type="msls.application.AddEditResourcePlanRange.Details">
         /// Gets the details for this screen.
@@ -925,6 +946,12 @@
                     var startOfWeek1 = msls.relativeDates.startOfWeek();
                     return this.filter("WeekEndingDate ge " + $toODataString(startOfWeek1, "DateTime") + "").orderBy("WeekEndingDate").expand("Person");
                 }
+            },
+            {
+                name: "FilteredClient", kind: "collection", elementType: lightSwitchApplication.Client,
+                createQuery: function (ClientName) {
+                    return this.dataWorkspace.Timesheets_Data.FilteredClient(ClientName);
+                }
             }
         ], [
         ]),
@@ -998,10 +1025,13 @@
             },
             {
                 name: "BillableProjects", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function (Client_Project, AM) {
-                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM);
+                createQuery: function (Client_Project, AM, Billable) {
+                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM, Billable);
                 }
-            }
+            },
+            { name: "Client_Project", kind: "local", type: String },
+            { name: "AM", kind: "local", type: String },
+            { name: "Billable", kind: "local", type: lightSwitchApplication.BillingStatus }
         ], [
         ]),
 
@@ -1015,10 +1045,13 @@
             },
             {
                 name: "BillableProjects", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function (Client_Project, AM) {
-                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM);
+                createQuery: function (Client_Project, AM, Billable) {
+                    return this.dataWorkspace.Timesheets_Data.BillableProjects(Client_Project, AM, Billable);
                 }
-            }
+            },
+            { name: "Client_Project", kind: "local", type: String },
+            { name: "AM", kind: "local", type: String },
+            { name: "Billable", kind: "local", type: lightSwitchApplication.BillingStatus }
         ], [
         ]),
 

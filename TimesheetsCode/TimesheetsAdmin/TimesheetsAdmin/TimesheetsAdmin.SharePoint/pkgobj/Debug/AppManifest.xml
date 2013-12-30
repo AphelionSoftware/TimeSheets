@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Published:a2ba41A2-b704-4a9d-a9ed-aecacc1d43ed-->
 <!--Created:0f94c101-eca2-421b-9ee1-671ad586290e-->
-<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetsAdmin" ProductID="{eb079f6e-adf2-4564-9d2c-ecbed61e7de8}" Version="2.1.36.0" SharePointMinVersion="15.0.0.0">
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetsAdmin" ProductID="{eb079f6e-adf2-4564-9d2c-ecbed61e7de8}" Version="2.2.37.0" SharePointMinVersion="15.0.0.0">
   <Properties>
     <Title>TimesheetsAdmin</Title>
     <StartPage>~remoteAppUrl/SharePointLaunch.aspx?{StandardTokens}</StartPage>

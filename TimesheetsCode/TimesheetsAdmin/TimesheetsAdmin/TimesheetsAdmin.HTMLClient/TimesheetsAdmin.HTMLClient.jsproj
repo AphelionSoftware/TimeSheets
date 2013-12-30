@@ -83,6 +83,7 @@
     <Content Include="UserCode\InvoiceStatu.js" />
     <Content Include="UserCode\Person.js" />
     <Content Include="UserCode\Project.js" />
+    <Content Include="UserCode\ResourcePlan.js" />
     <Content Include="UserCode\RoleType.js" />
     <Content Include="UserCode\Timesheet.js" />
     <Content Include="UserCode\TimesheetDetail.js" />

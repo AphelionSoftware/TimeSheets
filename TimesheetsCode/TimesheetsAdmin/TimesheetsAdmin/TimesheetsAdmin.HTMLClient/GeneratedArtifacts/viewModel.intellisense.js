@@ -1513,7 +1513,32 @@
         /// Called after the Blocks content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Blocks_postRender: $parameters
+        Blocks_postRender: $parameters,
+        /// <field>
+        /// Called after the ProjectFilter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectFilter_postRender: $parameters,
+        /// <field>
+        /// Called after the Client_Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_Project_postRender: $parameters,
+        /// <field>
+        /// Called after the AM content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AM_postRender: $parameters,
+        /// <field>
+        /// Called after the Billable content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Billable_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditResourcePlanRange, {
@@ -1581,7 +1606,32 @@
         /// Called after the Blocks content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Blocks_postRender: $parameters
+        Blocks_postRender: $parameters,
+        /// <field>
+        /// Called after the FilterProject content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        FilterProject_postRender: $parameters,
+        /// <field>
+        /// Called after the Client_Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_Project_postRender: $parameters,
+        /// <field>
+        /// Called after the AM content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AM_postRender: $parameters,
+        /// <field>
+        /// Called after the Billable content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Billable_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: $parameters
     });
 
 }(msls.application));
