@@ -24,8 +24,6 @@ C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\System.ServiceModel.PollingDuplex.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\\Server\System.Spatial.dll
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Common.dll
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\Server\Microsoft.WindowsAzure.ServiceRuntime.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\Client\Microsoft.LightSwitch.xml
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v3.0\Server\Microsoft.LightSwitch.Server.xml

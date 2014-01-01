@@ -801,91 +801,6 @@
         /// </field>
         UnallocatedTimesheetsSorted1Template_postRender: $parameters,
         /// <field>
-        /// Called after the TimesheetDetailSourceKey content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailSourceKey_postRender: $parameters,
-        /// <field>
-        /// Called after the ClientName1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ClientName1_postRender: $parameters,
-        /// <field>
-        /// Called after the ProjectName1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectName1_postRender: $parameters,
-        /// <field>
-        /// Called after the Active content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Active_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailFileName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailFileName_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailDateID1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailDateID1_postRender: $parameters,
-        /// <field>
-        /// Called after the Hours1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Hours1_postRender: $parameters,
-        /// <field>
-        /// Called after the Comments1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Comments1_postRender: $parameters,
-        /// <field>
-        /// Called after the ClientComments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ClientComments_postRender: $parameters,
-        /// <field>
-        /// Called after the AMComments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        AMComments_postRender: $parameters,
-        /// <field>
-        /// Called after the TypeOfWorkName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TypeOfWorkName_postRender: $parameters,
-        /// <field>
-        /// Called after the AccountManager content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        AccountManager_postRender: $parameters,
-        /// <field>
-        /// Called after the AMEmail content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        AMEmail_postRender: $parameters,
-        /// <field>
-        /// Called after the BillingPeriodText content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingPeriodText_postRender: $parameters,
-        /// <field>
-        /// Called after the BillingStatus content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingStatus_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetail content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetail_postRender: $parameters,
-        /// <field>
-        /// Called after the Timesheet content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Timesheet_postRender: $parameters,
-        /// <field>
         /// Called after the Filter content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -947,42 +862,7 @@
         /// Called after the RowTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate_postRender: $parameters,
-        /// <field>
-        /// Called after the BillingStatusID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        BillingStatusID_postRender: $parameters,
-        /// <field>
-        /// Called after the ProjectName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectName_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailDateID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailDateID_postRender: $parameters,
-        /// <field>
-        /// Called after the Hours content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Hours_postRender: $parameters,
-        /// <field>
-        /// Called after the Comments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Comments_postRender: $parameters,
-        /// <field>
-        /// Called after the ClientComments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ClientComments_postRender: $parameters,
-        /// <field>
-        /// Called after the AMComments content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        AMComments_postRender: $parameters
+        RowTemplate_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.BrowseInvoices, {

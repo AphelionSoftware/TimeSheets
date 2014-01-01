@@ -186,9 +186,6 @@
     <LightSwitchExtension Include="Microsoft.LightSwitch.Extensions">
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
     </LightSwitchExtension>
-    <LightSwitchExtension Include="Wijmo.LightSwitch">
-      <Server>WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.SERVER</Server>
-    </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
     <SubProject Include="TimesheetsAdmin.SharePoint\TimesheetsAdmin.SharePoint.csproj">

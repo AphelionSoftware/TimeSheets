@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Connection String used in web.config by the application to access the database." defaultValue="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Dropbox\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetsAccountManager\\TimesheetsAdmin\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
-  </parameter>
-  <parameter name="5052b11a-cb6e-441f-aec9-25ec78721e54-Web.config Connection String" description="5052b11a-cb6e-441f-aec9-25ec78721e54 Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\sql2012;Initial Catalog=Timesheets;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Dropbox\\GitHub\\TimeSheets\\TimesheetsCode\\TimesheetsAccountManager\\TimesheetsAdmin\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='5052b11a-cb6e-441f-aec9-25ec78721e54']/@connectionString" />
-  </parameter>
-</parameters>

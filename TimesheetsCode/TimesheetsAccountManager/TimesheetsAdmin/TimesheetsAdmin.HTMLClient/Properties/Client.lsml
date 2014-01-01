@@ -4833,8 +4833,7 @@
             <ContentItem
               Name="UnallocatedTimesheetsSorted1"
               Kind="Collection"
-              DataType="CollectionView$UnallocatedTimesheet"
-              View="Wijmo.LightSwitch:CollectionCustomControl">
+              DataType="CollectionView$UnallocatedTimesheet">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -5334,8 +5333,7 @@
             <ContentItem
               Name="WijmoGrid"
               Kind="Collection"
-              DataType="CollectionView$UnallocatedTimesheet"
-              View="Wijmo.LightSwitch:CollectionCustomControl">
+              DataType="CollectionView$UnallocatedTimesheet">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
