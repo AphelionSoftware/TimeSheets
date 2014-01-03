@@ -551,6 +551,12 @@
           Type="int"
           Property="Project/Properties[AdminProject]" />
         <SsdlProperty
+          Name="CommPercent"
+          Nullable="False"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[CommPercent]" />
+        <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
@@ -596,12 +602,6 @@
           Nullable="True"
           Type="varchar"
           Property="Project/Properties[InvoiceEmailAddress]" />
-        <SsdlProperty
-          Name="CommPercent"
-          Nullable="False"
-          Scale="2"
-          Type="decimal"
-          Property="Project/Properties[CommPercent]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

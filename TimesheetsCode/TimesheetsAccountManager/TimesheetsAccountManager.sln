@@ -9,7 +9,7 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TimesheetsAdmin.HTMLClient"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetsAdmin.Server", "TimesheetsAdmin\TimesheetsAdmin.Server\TimesheetsAdmin.Server.csproj", "{E3131DF7-0320-4DA6-955E-941CB9714268}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetsAdmin.SharePoint", "TimesheetsAdmin\TimesheetsAdmin.SharePoint\TimesheetsAdmin.SharePoint.csproj", "{7828C6A5-2D42-49C7-A6D5-21F3A9EA7FBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetsAccountManager.SharePoint", "TimesheetsAdmin\TimesheetsAdmin.SharePoint\TimesheetsAccountManager.SharePoint.csproj", "{7828C6A5-2D42-49C7-A6D5-21F3A9EA7FBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

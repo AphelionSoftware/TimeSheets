@@ -297,6 +297,19 @@
     <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetDetailSorted.lsml">
       <DependentUpon>TimesheetDetails.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoiceLinesSorted.lsml">
+      <DependentUpon>InvoiceLines.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoicesSorted.lsml">
+      <DependentUpon>Invoices.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ProjectsSorted.lsml">
+      <DependentUpon>Projects.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\UnallocatedTimesheets.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetDetailsUnallocated.lsml">
+      <DependentUpon>TimesheetDetails.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -22,8 +22,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="TimesheetsData"
-      EntityContainer="TimesheetsData" />
+      Name="Timesheets_Data"
+      EntityContainer="Timesheets_Data" />
   </EntityContainerGroup>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">

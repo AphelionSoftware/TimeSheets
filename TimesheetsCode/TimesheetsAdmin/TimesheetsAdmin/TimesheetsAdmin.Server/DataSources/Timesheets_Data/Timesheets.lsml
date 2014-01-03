@@ -197,6 +197,20 @@
         Association="fk_TimesheetPersonID"
         FromEnd="Timesheet"
         ToEnd="Person" />
+      <EntityProperty
+        Name="VerCol"
+        IsReadOnly="True"
+        PropertyType=":RowVersion">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <UseForConcurrency />
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="8" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -423,6 +437,12 @@
           StoreGeneratedPattern="Computed"
           Type="date"
           Property="Timesheet/Properties[PeriodEnding]" />
+        <SsdlProperty
+          Name="VerCol"
+          Nullable="False"
+          StoreGeneratedPattern="Computed"
+          Type="timestamp"
+          Property="Timesheet/Properties[VerCol]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

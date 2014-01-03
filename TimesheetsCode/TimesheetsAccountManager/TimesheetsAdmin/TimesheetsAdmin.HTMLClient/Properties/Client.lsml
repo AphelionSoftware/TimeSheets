@@ -13,7 +13,6 @@
     <Partial
       IsPrimary="True" />
   </Application.Attributes>
-  <Application.Methods></Application.Methods>
   <EntityContainerGroup
     Name="DataWorkspace">
     <EntityContainerGroupProperty
@@ -28,8 +27,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="TimesheetsData"
-      EntityContainer="TimesheetsData" />
+      Name="Timesheets_Data"
+      EntityContainer="Timesheets_Data" />
   </EntityContainerGroup>
   <GlobalAttributeGroup>
     <GlobalAttributeGroup.Attributes>

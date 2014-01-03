@@ -8,7 +8,7 @@
     Name="EditUnallocatedTimesheets">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimesheetsData" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -284,7 +284,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimesheetsData/Members[UnallocatedTimesheetsSorted]" />
+                  Member="Timesheets_Data/Members[UnallocatedTimesheetsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -331,7 +331,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimesheetsData/Members[BillingStatusSet]" />
+                  Member="Timesheets_Data/Members[BillingStatusSet]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>

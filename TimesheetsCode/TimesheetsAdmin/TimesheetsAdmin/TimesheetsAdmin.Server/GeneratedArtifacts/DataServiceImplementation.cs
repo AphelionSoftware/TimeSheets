@@ -313,6 +313,52 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> InvoiceLinesSorted(global::System.Nullable<int> InvoiceID, string PersonName, string InvoiceLineDescription, string ProjectName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.InvoiceLine>("InvoiceLines"),
+                    (i) => (((((InvoiceID.HasValue == false) || (InvoiceID.HasValue && (i.Invoice.InvoiceID == InvoiceID))) && ((PersonName == null) || i.Invoice.Person.PersonName.Contains(PersonName))) && ((InvoiceLineDescription == null) || i.InvoiceLineDescription.Contains(InvoiceLineDescription))) && ((ProjectName == null) || i.Project.ProjectName.Contains(ProjectName)))),
+                (i) => i.InvoiceLineDescription);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> InvoicesSorted(string PersonName, string InvoiceStatusName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> query;
+            query = global::System.Linq.Queryable.OrderByDescending(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.Invoice>("Invoices"),
+                    (i) => ((((PersonName == null) || i.Person.PersonName.Contains(PersonName)) && ((InvoiceStatusName == null) || i.InvoiceStatu.InvoiceStatusName.Contains(InvoiceStatusName))) && (i.ActiveType.ID == 1))),
+                (i) => i.DimDate.DateID);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectsSorted()
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                (p) => p.ProjectName);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsUnallocated(string Project_Client, string PersonName, string AM)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.ThenBy(
+                    global::System.Linq.Queryable.OrderBy(
+                        global::System.Linq.Queryable.Where(
+                            this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails"),
+                            (t) => (((((t.ActiveType.ID == 1) && (t.BillingStatus.BillingStatusCode.CompareTo("0") < 0)) && (((Project_Client == null) || t.Project.ProjectName.Contains(Project_Client)) && ((Project_Client == null) || t.Project.Client.ClientName.Contains(Project_Client)))) && ((PersonName == null) || t.Person.PersonName.Contains(PersonName))) && ((AM == null) || t.Project.Person.PersonName.Contains(AM)))),
+                        (t) => t.Project.Client.ClientName),
+                    (t) => t.Project.ProjectName),
+                (t) => t.Person.PersonName);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -385,6 +431,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.TypeOfWork))
             {
                 return new global::LightSwitchApplication.Implementation.TypeOfWork();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.UnallocatedTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
             }
     
             return base.CreateObject(type);
@@ -469,6 +519,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.TypeOfWork))
             {
                 return new global::LightSwitchApplication.Implementation.TypeOfWork();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.UnallocatedTimesheet))
+            {
+                return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
             }
             return null;
         }
@@ -594,6 +648,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.TypeOfWork) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.TypeOfWork);
+            }
+            if (typeof(global::LightSwitchApplication.UnallocatedTimesheet) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.UnallocatedTimesheet);
             }
             return null;
         }
@@ -2541,6 +2599,39 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class UnallocatedTimesheet :
+        global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation
+    {
+    
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

@@ -1,27 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{8A4D642E-824A-4D58-BD56-648CC30C8F17}") = "TimesheetsInvoices", "TimesheetsInvoices\TimesheetsInvoices.ls3proj", "{34630497-25F7-4FA4-BD78-19C8D72EC316}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8D9C8A9D-5DED-4B64-BF65-B598BA549D93}") = "TimesheetsInvoices", "TimesheetsInvoices\TimesheetsInvoices.lsxproj", "{34630497-25F7-4FA4-BD78-19C8D72EC316}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TimesheetsInvoices.HTMLClient", "TimesheetsInvoices\TimesheetsInvoices.HTMLClient\TimesheetsInvoices.HTMLClient.jsproj", "{4593990A-3352-4FD3-AA62-B4F0CE5586FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetsInvoices.Server", "TimesheetsInvoices\TimesheetsInvoices.Server\TimesheetsInvoices.Server.csproj", "{10FA2AF9-8602-4923-A855-0BC1B140790C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4593990A-3352-4FD3-AA62-B4F0CE5586FE} = {4593990A-3352-4FD3-AA62-B4F0CE5586FE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetsInvoices.SharePoint", "TimesheetsInvoices\TimesheetsInvoices.SharePoint\TimesheetsInvoices.SharePoint.csproj", "{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(ProjectDependencies) = postSolution
-		{10FA2AF9-8602-4923-A855-0BC1B140790C}.0 = {4593990A-3352-4FD3-AA62-B4F0CE5586FE}
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34630497-25F7-4FA4-BD78-19C8D72EC316}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4593990A-3352-4FD3-AA62-B4F0CE5586FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,6 +32,12 @@ Global
 		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10FA2AF9-8602-4923-A855-0BC1B140790C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BD2B159-DBBB-49C2-AE08-04FE2344DB23}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

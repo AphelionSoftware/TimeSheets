@@ -15,11 +15,11 @@
   </PropertyGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>4593990a-3352-4fd3-aa62-b4f0ce5586fe</ProjectGuid>
-    <LightSwitchVersion>v3.0</LightSwitchVersion>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
   <PropertyGroup>
     <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion-->
@@ -34,7 +34,7 @@
     <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content\dark-theme.css" />
+    <Content Include="Content\dark-theme-2.0.0.css" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
@@ -42,45 +42,49 @@
     <Content Include="Content\Images\icons-36-white.png" />
     <Content Include="Content\Images\msls-black-icons-18.png" />
     <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
     <Content Include="Content\Images\msls-loader-dark.gif" />
     <Content Include="Content\Images\msls-loader-light.gif" />
     <Content Include="Content\Images\msls-white-icons-18.png" />
     <Content Include="Content\Images\msls-white-icons-36.png" />
-    <Content Include="Content\jquery.mobile-1.2.0.css" />
-    <Content Include="Content\jquery.mobile-1.2.0.min.css" />
-    <Content Include="Content\jquery.mobile.structure-1.2.0.css" />
-    <Content Include="Content\jquery.mobile.structure-1.2.0.min.css" />
-    <Content Include="Content\jquery.mobile.theme-1.2.0.css" />
-    <Content Include="Content\jquery.mobile.theme-1.2.0.min.css" />
-    <Content Include="Content\light-theme.css" />
-    <Content Include="Content\msls-1.0.0.css" />
-    <Content Include="Content\msls-1.0.0.min.css" />
-    <Content Include="Content\msls-dark.css" />
-    <Content Include="Content\msls-light.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\light-theme-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.min.css" />
+    <Content Include="Content\msls-dark-2.0.0.css" />
+    <Content Include="Content\msls-light-2.0.0.css" />
     <Content Include="default.htm" />
     <Content Include="Content\user-customization.css" />
     <Content Include="Content\Images\user-logo.png" />
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
-    <Content Include="Scripts\datajs-1.1.0.js" />
-    <Content Include="Scripts\datajs-1.1.0.min.js" />
-    <Content Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <Content Include="Scripts\jquery.mobile-1.2.0-vsdoc.js" />
-    <Content Include="Scripts\jquery.mobile-1.2.0.js" />
-    <Content Include="Scripts\jquery.mobile-1.2.0.min.js" />
-    <Content Include="Scripts\msls-1.0.0-vsdoc.js" />
-    <Content Include="Scripts\msls-1.0.0.js" />
-    <Content Include="Scripts\msls-1.0.0.min.js" />
+    <Content Include="Screens\BrowseInvoicesInDraft.lsml.js">
+      <DependentUpon>BrowseInvoicesInDraft.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\datajs-1.1.1.js" />
+    <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\msls-2.0.0-vsdoc.js" />
+    <Content Include="Scripts\msls-2.0.0.js" />
+    <Content Include="Scripts\msls-2.0.0.min.js" />
+    <Content Include="Scripts\msls.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
-    <Content Include="UserCode\BillingDetail.js" />
-    <Content Include="UserCode\BrowseInvoicesInDraft.js" />
-    <Content Include="UserCode\Client.js" />
-    <Content Include="UserCode\Invoice.js" />
-    <Content Include="UserCode\InvoiceLine.js" />
+    <Content Include="UserCode\BillingDetail.lsml.js" />
+    <Content Include="UserCode\Client.lsml.js" />
+    <Content Include="UserCode\Invoice.lsml.js" />
+    <Content Include="UserCode\InvoiceLine.lsml.js" />
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\TimesheetsInvoices.Server\TimesheetsInvoices.Server.csproj">
@@ -91,6 +95,20 @@
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddEditBillingDetail.lsml" />
+    <LightSwitchModel Include="Screens\AddEditClient.lsml" />
+    <LightSwitchModel Include="Screens\AddEditCommission.lsml" />
+    <LightSwitchModel Include="Screens\AddEditInvoice.lsml" />
+    <LightSwitchModel Include="Screens\AddEditInvoiceLine.lsml" />
+    <LightSwitchModel Include="Screens\BrowseAllInvoices.lsml" />
+    <LightSwitchModel Include="Screens\BrowseClientsSorted.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCommissionsToPay.lsml" />
+    <LightSwitchModel Include="Screens\BrowseInvoicesInDraft.lsml" />
+    <LightSwitchModel Include="Screens\BrowseIssuedButNotPaid.lsml" />
+    <LightSwitchModel Include="Screens\BrowsePaid.lsml" />
+    <LightSwitchModel Include="Screens\Homescreen.lsml" />
+    <LightSwitchModel Include="Screens\InvoicesToBeIssued.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
@@ -109,8 +127,8 @@
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\Microsoft.LightSwitch.Build.Tasks.targets" />
   <!-- Redefine the targets to be empty -->
   <Target Name="GetXapOutputFile" />
   <PropertyGroup>

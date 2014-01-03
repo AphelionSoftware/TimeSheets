@@ -7,7 +7,7 @@
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
-        Target="ServiceInterface:TimesheetsData" />
+        Target="ServiceInterface:Timesheets_Data" />
     </EntityContainer.Attributes>
   </EntityContainer>
   <EntityType>
@@ -164,18 +164,6 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_TimesheetDetail_Project" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:FK_TimesheetDetail_Timesheet" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:FK_TimesheetDetail_TypeOfWork" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -380,6 +368,18 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_BillingDetail_ClientRole" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_TypeOfWork" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_Timesheet" />
     </Association.Attributes>
   </Association>
 </Application>

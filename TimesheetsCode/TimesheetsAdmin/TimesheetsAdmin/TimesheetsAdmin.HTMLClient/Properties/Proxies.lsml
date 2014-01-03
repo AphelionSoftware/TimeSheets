@@ -400,4 +400,10 @@
         Target="ServiceInterface:ResourcePlanRange_Project_Set" />
     </VirtualAssociationSet.Attributes>
   </VirtualAssociationSet>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:UnallocatedTimesheet" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

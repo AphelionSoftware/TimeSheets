@@ -479,23 +479,20 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+        public byte[] VerCol
         {
             get
             {
-                return global::LightSwitchApplication.Timesheet.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails);
+                return global::LightSwitchApplication.Timesheet.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.VerCol);
             }
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TimesheetDetail> TimesheetDetailsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.Timesheet.DetailsClass.GetQuery(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails);
-            }
-        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VerCol_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VerCol_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VerCol_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -589,6 +586,29 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.Timesheet.DetailsClass.GetQuery(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.UnallocatedTimesheets);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheet.DetailsClass.GetValue(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TimesheetDetail> TimesheetDetailsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Timesheet.DetailsClass.GetQuery(this, global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails);
             }
         }
 
@@ -810,11 +830,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]> VerCol
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                        return base.GetItem(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.VerCol) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]>;
                     }
                 }
                 
@@ -850,6 +870,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -873,11 +901,12 @@ namespace LightSwitchApplication
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
                 new global::System.DateTime PeriodEnding { get; }
-                new global::System.Collections.IEnumerable TimesheetDetails { get; }
+                new byte[] VerCol { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation DimDate { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::System.Collections.IEnumerable UnallocatedTimesheets { get; }
+                new global::System.Collections.IEnumerable TimesheetDetails { get; }
             }
             #pragma warning restore 109
     
@@ -1505,23 +1534,36 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
-                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
-                        "TimesheetDetails",
-                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_Stub,
-                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_GetReferencedEntities,
-                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_GetEntityCollection);
-                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.Timesheet.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]>.Entry
+                    VerCol = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]>.Entry(
+                        "VerCol",
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._VerCol_Stub,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._VerCol_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._VerCol_Validate,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._VerCol_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._VerCol_OnValueChanged);
+                private static void _VerCol_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.Timesheet.DetailsClass d, object sf)
                 {
-                    c(d, ref d._TimesheetDetails, sf);
+                    c(d, ref d._VerCol, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> _TimesheetDetails_GetReferencedEntities(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                private static bool _VerCol_ComputeIsReadOnly(global::LightSwitchApplication.Timesheet e)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass>(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails, ref d._TimesheetDetails);
+                    bool result = false;
+                    e.VerCol_IsReadOnly(ref result);
+                    return result;
                 }
-                private static global::System.Collections.IEnumerable _TimesheetDetails_GetEntityCollection(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                private static void _VerCol_Validate(global::LightSwitchApplication.Timesheet e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    return d.ImplementationEntity.TimesheetDetails;
+                    e.VerCol_Validate(r);
+                }
+                private static byte[] _VerCol_GetImplementationValue(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    return d.ImplementationEntity.VerCol;
+                }
+                private static void _VerCol_OnValueChanged(global::LightSwitchApplication.Timesheet e)
+                {
+                    e.VerCol_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1685,6 +1727,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.UnallocatedTimesheets;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
+                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
+                        "TimesheetDetails",
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_Stub,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_GetReferencedEntities,
+                        global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties._TimesheetDetails_GetEntityCollection);
+                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Timesheet.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.Timesheet.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TimesheetDetails, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> _TimesheetDetails_GetReferencedEntities(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass>(global::LightSwitchApplication.Timesheet.DetailsClass.PropertySetProperties.TimesheetDetails, ref d._TimesheetDetails);
+                }
+                private static global::System.Collections.IEnumerable _TimesheetDetails_GetEntityCollection(global::LightSwitchApplication.Timesheet.DetailsClass d)
+                {
+                    return d.ImplementationEntity.TimesheetDetails;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1739,7 +1801,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::System.DateTime>.Data _PeriodEnding;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, byte[]>.Data _VerCol;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.DimDate>.Data _DimDate;
@@ -1752,6 +1814,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.UnallocatedTimesheet>.Data _UnallocatedTimesheets;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
             
         }
     

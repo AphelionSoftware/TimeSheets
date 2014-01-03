@@ -200,19 +200,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSources\TimesheetsData\BillingDetail.lsml.cs">
+    <Compile Include="DataSources\Timesheets_Data\BillingDetail.lsml.cs">
       <DependentUpon>BillingDetails.lsml</DependentUpon>
     </Compile>
-    <Compile Include="DataSources\TimesheetsData\BillingStatus.lsml.cs">
+    <Compile Include="DataSources\Timesheets_Data\BillingStatus.lsml.cs">
       <DependentUpon>BillingStatusSet.lsml</DependentUpon>
     </Compile>
-    <Compile Include="DataSources\TimesheetsData\Client.lsml.cs">
+    <Compile Include="DataSources\Timesheets_Data\Client.lsml.cs">
       <DependentUpon>Clients.lsml</DependentUpon>
     </Compile>
-    <Compile Include="DataSources\TimesheetsData\UnallocatedTimesheet.lsml.cs">
+    <Compile Include="DataSources\Timesheets_Data\TimesheetDetail.lsml.cs">
+      <DependentUpon>TimesheetDetails.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\Timesheets_Data\UnallocatedTimesheet.lsml.cs">
       <DependentUpon>UnallocatedTimesheets.lsml</DependentUpon>
     </Compile>
-    <Compile Include="DataSources\TimesheetsData\_TimesheetsDataService.lsml.cs" />
+    <Compile Include="DataSources\Timesheets_Data\_Timesheets_DataService.lsml.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,55 +242,58 @@
     <Content Include="SharePointLaunch.aspx" />
     <Content Include="Web.config" />
     <_ServerFile Include="packages.config" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDetails.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\BillingStatusSet.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\Clients.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\DimDates.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\People.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\Projects.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\Timesheets.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\TimesheetDetails.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\TypeOfWorks.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\RoleTypes.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\ClientRoles.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\SystemRoles.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\ActiveTypes.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\OverbudgetTimesheets.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsOverCaps.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\UnallocatedTimesheets.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\Invoices.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceLines.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceStatus.lsml" />
-    <LightSwitchModel Include="Properties\DataSources\TimesheetsData.lsml" />
-    <LightSwitchModel Include="DataSources\TimesheetsData\TimesheetsByDate.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\BillingDetails.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\BillingStatusSet.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\Clients.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\DimDates.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\People.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\Projects.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\Timesheets.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetDetails.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TypeOfWorks.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\RoleTypes.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ClientRoles.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\SystemRoles.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ActiveTypes.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\OverbudgetTimesheets.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ProjectsOverCaps.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\UnallocatedTimesheets.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\Invoices.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoiceLines.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoiceStatus.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\Timesheets_Data.lsml" />
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetsByDate.lsml">
       <DependentUpon>Timesheets.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\PersonSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\PersonSorted.lsml">
       <DependentUpon>People.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDate.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\BillingDate.lsml">
       <DependentUpon>DimDates.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\FilteredClient.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\FilteredClient.lsml">
       <DependentUpon>Clients.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsFilter.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ProjectsFilter.lsml">
       <DependentUpon>Projects.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\ProjectsSorted.lsml">
       <DependentUpon>Projects.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\UnallocatedTimesheetsSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\UnallocatedTimesheetsSorted.lsml">
       <DependentUpon>UnallocatedTimesheets.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\InvoicesSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoicesSorted.lsml">
       <DependentUpon>Invoices.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceLinesSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\InvoiceLinesSorted.lsml">
       <DependentUpon>InvoiceLines.lsml</DependentUpon>
     </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDetailsSorted.lsml">
+    <LightSwitchModel Include="DataSources\Timesheets_Data\BillingDetailsSorted.lsml">
       <DependentUpon>BillingDetails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetDetailsUnallocated.lsml">
+      <DependentUpon>TimesheetDetails.lsml</DependentUpon>
     </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -8,7 +8,7 @@
     Name="AddEditTimesheetDetail">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimesheetsData" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -109,52 +109,6 @@
                     Name="RowTemplate"
                     Kind="Details"
                     DataType="DimDate">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="TypeOfWork"
-                  Kind="Details"
-                  DataType="TypeOfWork">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[TypeOfWork]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate4"
-                    Kind="Details"
-                    DataType="TypeOfWork">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Timesheet"
-                  Kind="Details"
-                  DataType="Timesheet">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="TimesheetDetail/Properties[Timesheet]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate3"
-                    Kind="Details"
-                    DataType="Timesheet">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />

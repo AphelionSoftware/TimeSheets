@@ -8,7 +8,7 @@
     Name="UnallocatedTimesheets">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimesheetsData" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -20,102 +20,137 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="UnallocatedTimesheetList"
-            Kind="Group">
+            Name="Details"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Details" />
+            </ContentItem.Attributes>
             <ContentItem
-              Name="UnallocatedTimesheetsSorted"
+              Name="TimesheetDetailsUnallocated"
               Kind="Collection"
-              DataType="CollectionView$UnallocatedTimesheet"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              DataType="CollectionView$TimesheetDetail"
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
+                      Member="UnallocatedTimesheets/Properties[TimesheetDetailsUnallocated]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="UnallocatedTimesheetsSortedTemplate"
+                Name="TimesheetDetailsUnallocatedTemplate"
                 Kind="Details"
-                DataType="UnallocatedTimesheet"
-                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                DataType="TimesheetDetail">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="ProjectName"
-                  Kind="Value"
-                  DataType=":String">
+                  Name="BillingStatus"
+                  Kind="Details"
+                  DataType="BillingStatus"
+                  View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[ProjectName]" />
+                          Member="TimesheetDetail/Properties[BillingStatus]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ContentItem
+                    Name="BillingStatusTemplate"
+                    Kind="Details"
+                    DataType="BillingStatus">
+                    <ContentItem.DataSource>
                       <ScreenExpressionTree>
-                        <ChainExpression>
-                          <CallExpression
-                            Target="!module/Methods[showAddEditTimesheetDetail]">
-                            <ArgumentExpression
-                              Parameter="TimesheetDetail">
-                              <ChainExpression>
-                                <MemberExpression
-                                  Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
-                                <MemberExpression
-                                  Member="selectedItem" />
-                                <MemberExpression
-                                  Member="TimesheetDetail" />
-                              </ChainExpression>
-                            </ArgumentExpression>
-                          </CallExpression>
-                        </ChainExpression>
+                        <ChainExpression />
                       </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="BillingStatus1"
+                      Kind="Details"
+                      DataType="BillingStatus">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem
-                  Name="TimesheetDetailDateID"
-                  Kind="Value"
-                  DataType=":Int32">
+                  Name="Project"
+                  Kind="Details"
+                  DataType="Project">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TimesheetDetailDateID]" />
+                          Member="TimesheetDetail/Properties[Project]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ContentItem
+                    Name="Project1"
+                    Kind="Details"
+                    DataType="Project">
+                    <ContentItem.DataSource>
                       <ScreenExpressionTree>
-                        <ChainExpression>
-                          <CallExpression
-                            Target="!module/Methods[showAddEditTimesheetDetail]">
-                            <ArgumentExpression
-                              Parameter="TimesheetDetail">
-                              <ChainExpression>
-                                <MemberExpression
-                                  Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
-                                <MemberExpression
-                                  Member="selectedItem" />
-                                <MemberExpression
-                                  Member="TimesheetDetail" />
-                              </ChainExpression>
-                            </ArgumentExpression>
-                          </CallExpression>
-                        </ChainExpression>
+                        <ChainExpression />
                       </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="DimDate"
+                  Kind="Details"
+                  DataType="DimDate">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[DimDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="DimDate1"
+                    Kind="Details"
+                    DataType="DimDate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Person"
+                  Kind="Details"
+                  DataType="Person">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetDetail/Properties[Person]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Person1"
+                    Kind="Details"
+                    DataType="Person">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem
                   Name="Hours"
@@ -125,7 +160,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Hours]" />
+                          Member="TimesheetDetail/Properties[Hours]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -138,188 +173,61 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Comments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-              </ContentItem>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <CallExpression
-                        Target="!module/Methods[showAddEditTimesheetDetail]">
-                        <ArgumentExpression
-                          Parameter="TimesheetDetail">
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
-                            <MemberExpression
-                              Member="selectedItem" />
-                            <MemberExpression
-                              Member="TimesheetDetail" />
-                          </ChainExpression>
-                        </ArgumentExpression>
-                      </CallExpression>
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
-            </ContentItem>
-            <ContentItem.CommandItems>
-              <ContentItem
-                Name="ShowHomeScreen"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showHomeScreen]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-back"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="ShowFilter"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="UnallocatedTimesheets/Methods[showDialog]">
-                          <ArgumentExpression
-                            Parameter="dialogName">
-                            <ConstantExpression
-                              Value="Filter"
-                              ResultType=":String" />
-                          </ArgumentExpression>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="Edit"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditTimesheetDetail]">
-                          <ArgumentExpression
-                            Parameter="TimesheetDetail">
-                            <ChainExpression>
-                              <MemberExpression
-                                Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
-                              <MemberExpression
-                                Member="selectedItem" />
-                              <MemberExpression
-                                Member="TimesheetDetail" />
-                            </ChainExpression>
-                          </ArgumentExpression>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-            </ContentItem.CommandItems>
-          </ContentItem>
-          <ContentItem
-            Name="Grid"
-            Kind="Group">
-            <ContentItem
-              Name="UnallocatedTimesheetsSorted1"
-              Kind="Collection"
-              DataType="CollectionView$UnallocatedTimesheet">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-              <ContentItem
-                Name="UnallocatedTimesheetsSorted1Template"
-                Kind="Details"
-                DataType="UnallocatedTimesheet">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression />
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-                <ContentItem
-                  Name="TimesheetDetailSourceKey"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TimesheetDetailSourceKey]" />
+                          Member="TimesheetDetail/Properties[Comments]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="ClientName1"
+                  Name="ClientComments"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?"
+                  View="Microsoft.LightSwitch.MobileWeb:TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[ClientName]" />
+                          Member="TimesheetDetail/Properties[ClientComments]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="ProjectName1"
+                  Name="AMComments"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?"
+                  View="Microsoft.LightSwitch.MobileWeb:TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[ProjectName]" />
+                          Member="TimesheetDetail/Properties[AMComments]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Active"
-                  Kind="Value"
-                  DataType=":Int32">
+                  Name="TypeOfWork"
+                  Kind="Details"
+                  DataType="TypeOfWork">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Active]" />
+                          Member="TimesheetDetail/Properties[TypeOfWork]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                  <ContentItem
+                    Name="TypeOfWork1"
+                    Kind="Details"
+                    DataType="TypeOfWork">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem
                   Name="TimesheetDetailFileName"
@@ -329,282 +237,26 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TimesheetDetailFileName]" />
+                          Member="TimesheetDetail/Properties[TimesheetDetailFileName]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="TimesheetDetailDateID1"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TimesheetDetailDateID]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Hours1"
-                  Kind="Value"
-                  DataType=":Decimal">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Hours]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="Comments1"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Comments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="ClientComments"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[ClientComments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="AMComments"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[AMComments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="TypeOfWorkName"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TypeOfWorkName]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="AccountManager"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[AccountManager]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="AMEmail"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[AMEmail]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="BillingPeriodText"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[BillingPeriodText]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="BillingStatus"
-                  Kind="Details"
-                  DataType="BillingStatus">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[BillingStatus]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="BillingStatus1"
-                    Kind="Details"
-                    DataType="BillingStatus">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="TimesheetDetail"
-                  Kind="Details"
-                  DataType="TimesheetDetail">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[TimesheetDetail]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="TimesheetDetail1"
-                    Kind="Details"
-                    DataType="TimesheetDetail">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="Timesheet"
-                  Kind="Details"
-                  DataType="Timesheet">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="UnallocatedTimesheet/Properties[Timesheet]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="Timesheet1"
-                    Kind="Details"
-                    DataType="Timesheet">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
               </ContentItem>
             </ContentItem>
-            <ContentItem.CommandItems>
-              <ContentItem
-                Name="ShowHomeScreen1"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showHomeScreen]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-back"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-            </ContentItem.CommandItems>
           </ContentItem>
-          <ContentItem.PropertySources>
-            <ControlPropertySource
-              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
-              <ScreenExpressionTree>
-                <ChainExpression>
-                  <ConstantExpression
-                    Value="True"
-                    ResultType=":Boolean" />
-                </ChainExpression>
-              </ScreenExpressionTree>
-            </ControlPropertySource>
-          </ContentItem.PropertySources>
         </ContentItem>
         <ContentItem
           Name="Popups"
           Kind="Group"
-          View="Microsoft.LightSwitch.MobileWeb:DialogPages">
-          <ContentItem
-            Name="Filter"
-            Kind="Group">
-            <ContentItem
-              Name="ClientName"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[ClientName]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="PersonName"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[PersonName]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-          </ContentItem>
-        </ContentItem>
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
         <ContentItem.PropertySources>
           <ControlPropertySource
             Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
             <ScreenExpressionTree>
               <ChainExpression>
                 <ConstantExpression
-                  Value="Browse"
+                  Value="Edit"
                   ResultType=":String" />
               </ChainExpression>
             </ScreenExpressionTree>
@@ -638,20 +290,20 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="UnallocatedTimesheets1"
+        Name="TimesheetDetailsUnallocated"
         PageSize="45"
-        PropertyType="CollectionView$UnallocatedTimesheet">
+        PropertyType="CollectionView$TimesheetDetail">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="UnallocatedTimesheets1Query"
-            ReturnType="UnallocatedTimesheet*">
+            Name="TimesheetDetailsUnallocatedQuery"
+            ReturnType="TimesheetDetail*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimesheetsData/Members[UnallocatedTimesheets]" />
+                  Member="Timesheets_Data/Members[TimesheetDetailsUnallocated]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -659,57 +311,10 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="UnallocatedTimesheets/Properties[UnallocatedTimesheets1]/Query" />
+              Target="UnallocatedTimesheets/Properties[TimesheetDetailsUnallocated]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
-      <ScreenCollectionProperty
-        Name="UnallocatedTimesheetsSorted"
-        PageSize="45"
-        PropertyType="CollectionView$UnallocatedTimesheet">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="UnallocatedTimesheetsSortedQuery"
-            ReturnType="UnallocatedTimesheet*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="TimesheetsData/Members[UnallocatedTimesheetsSorted]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="UnallocatedTimesheets/Properties[UnallocatedTimesheetsSorted]/Query">
-              <ArgumentExpression
-                Parameter="ClientName">
-                <ChainExpression>
-                  <MemberExpression
-                    Member="UnallocatedTimesheets/Properties[ClientName]" />
-                </ChainExpression>
-              </ArgumentExpression>
-              <ArgumentExpression
-                Parameter="PersonName">
-                <ChainExpression>
-                  <MemberExpression
-                    Member="UnallocatedTimesheets/Properties[PersonName]" />
-                </ChainExpression>
-              </ArgumentExpression>
-            </CallExpression>
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenProperty
-        Name="ClientName"
-        PropertyType=":String?" />
-      <ScreenProperty
-        Name="PersonName"
-        PropertyType=":String?" />
     </Screen.Properties>
   </Screen>
   <Application.Methods>

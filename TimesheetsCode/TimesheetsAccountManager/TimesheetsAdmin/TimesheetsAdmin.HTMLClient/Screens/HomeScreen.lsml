@@ -68,7 +68,7 @@
               </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
-              Name="EditUnallocatedTimesheets"
+              Name="EditUnallocatedTimesheetsOLD"
               Kind="Command">
               <ContentItem.PropertySources>
                 <ControlPropertySource
@@ -77,6 +77,21 @@
                     <ChainExpression>
                       <CallExpression
                         Target="!module/Methods[showEditUnallocatedTimesheets]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="ShowUnallocatedTimesheets"
+              Kind="Command">
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showUnallocatedTimesheets]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>

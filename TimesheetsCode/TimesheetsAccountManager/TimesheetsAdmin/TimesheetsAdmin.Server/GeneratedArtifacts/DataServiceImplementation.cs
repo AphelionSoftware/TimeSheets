@@ -13,26 +13,26 @@ namespace LightSwitchApplication.Implementation
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class TimesheetsDataDataService
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.TimesheetsData>
+    public class Timesheets_DataDataService
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataService<global::LightSwitchApplication.Implementation.Timesheets_Data>
     {
     
-        public TimesheetsDataDataService() : base()
+        public Timesheets_DataDataService() : base()
         {
         }
     
         protected override global::Microsoft.LightSwitch.IDataService GetDataService(global::Microsoft.LightSwitch.IDataWorkspace dataWorkspace)
         {
-            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).TimesheetsData;
+            return ((global::LightSwitchApplication.DataWorkspace)dataWorkspace).Timesheets_Data;
         }
     }
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public class TimesheetsDataServiceImplementation
-        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.TimesheetsData>
+    public class Timesheets_DataServiceImplementation
+        : global::Microsoft.LightSwitch.ServerGenerated.Implementation.DataServiceImplementation<global::LightSwitchApplication.Implementation.Timesheets_Data>
     {
-        public TimesheetsDataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
+        public Timesheets_DataServiceImplementation(global::Microsoft.LightSwitch.IDataService dataService) : base(dataService)
         {
         }
     
@@ -142,6 +142,23 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsUnallocated(string PersonName, string Client_Project)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.ThenBy(
+                    global::System.Linq.Queryable.ThenBy(
+                        global::System.Linq.Queryable.OrderBy(
+                            global::System.Linq.Queryable.Where(
+                                this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails"),
+                                (t) => ((((t.BillingStatus.BillingStatusID < 0) && ((PersonName == null) || t.Person.PersonName.Contains(PersonName))) && (((Client_Project == null) || t.Project.ProjectName.Contains(Client_Project)) || ((Client_Project == null) || t.Project.Client.ClientName.Contains(Client_Project)))) && (t.ActiveType.ID == 1))),
+                            (t) => t.Project.Client.ClientName),
+                        (t) => t.Project.ProjectName),
+                    (t) => t.DimDate.DateID),
+                (t) => t.Person.PersonName);
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -227,12 +244,12 @@ namespace LightSwitchApplication.Implementation
             return base.CreateObject(type);
         }
     
-        protected override global::LightSwitchApplication.Implementation.TimesheetsData CreateObjectContext()
+        protected override global::LightSwitchApplication.Implementation.Timesheets_Data CreateObjectContext()
         {
             string assemblyName = global::System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-            return new global::LightSwitchApplication.Implementation.TimesheetsData(this.GetEntityConnectionString(
-                "TimesheetsData",
-                "res://" + assemblyName + "/TimesheetsData.csdl|res://" + assemblyName + "/TimesheetsData.ssdl|res://" + assemblyName + "/TimesheetsData.msl",
+            return new global::LightSwitchApplication.Implementation.Timesheets_Data(this.GetEntityConnectionString(
+                "Timesheets_Data",
+                "res://" + assemblyName + "/Timesheets_Data.csdl|res://" + assemblyName + "/Timesheets_Data.ssdl|res://" + assemblyName + "/Timesheets_Data.msl",
                 "System.Data.SqlClient",
                 true));
         }
@@ -333,18 +350,18 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.IDataService CreateDataService(global::System.Type dataServiceType)
         {
-            if (dataServiceType == typeof(global::LightSwitchApplication.TimesheetsDataService))
+            if (dataServiceType == typeof(global::LightSwitchApplication.Timesheets_DataService))
             {
-                return new global::LightSwitchApplication.TimesheetsDataService();
+                return new global::LightSwitchApplication.Timesheets_DataService();
             }
             return base.CreateDataService(dataServiceType);
         }
     
         protected override global::Microsoft.LightSwitch.Internal.IDataServiceImplementation CreateDataServiceImplementation<TDataService>(TDataService dataService)
         {
-            if (typeof(TDataService) == typeof(global::LightSwitchApplication.TimesheetsDataService))
+            if (typeof(TDataService) == typeof(global::LightSwitchApplication.Timesheets_DataService))
             {
-                return new global::LightSwitchApplication.Implementation.TimesheetsDataServiceImplementation(dataService);
+                return new global::LightSwitchApplication.Implementation.Timesheets_DataServiceImplementation(dataService);
             }
             return base.CreateDataServiceImplementation(dataService);
         }
@@ -2028,38 +2045,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.Timesheet
-        {
-            get
-            {
-                return this.Timesheet;
-            }
-            set
-            {
-                this.Timesheet = (global::LightSwitchApplication.Implementation.Timesheet)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("Timesheet");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.TypeOfWork
-        {
-            get
-            {
-                return this.TypeOfWork;
-            }
-            set
-            {
-                this.TypeOfWork = (global::LightSwitchApplication.Implementation.TypeOfWork)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("TypeOfWork");
-                }
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.BillingStatus
         {
             get
@@ -2100,6 +2085,38 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.TypeOfWork
+        {
+            get
+            {
+                return this.TypeOfWork;
+            }
+            set
+            {
+                this.TypeOfWork = (global::LightSwitchApplication.Implementation.TypeOfWork)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("TypeOfWork");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.Timesheet
+        {
+            get
+            {
+                return this.Timesheet;
+            }
+            set
+            {
+                this.Timesheet = (global::LightSwitchApplication.Implementation.Timesheet)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Timesheet");
+                }
+            }
+        }
+        
         partial void OnTimesheetDetailDateIDChanged()
         {
             if (this.__host != null)
@@ -2124,22 +2141,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        partial void OnTimesheetIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("Timesheet");
-            }
-        }
-        
-        partial void OnTimesheetTypeOfWorkIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("TypeOfWork");
-            }
-        }
-        
         partial void OnBillableChanged()
         {
             if (this.__host != null)
@@ -2153,6 +2154,22 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("ActiveType");
+            }
+        }
+        
+        partial void OnTimesheetTypeOfWorkIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("TypeOfWork");
+            }
+        }
+        
+        partial void OnTimesheetIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Timesheet");
             }
         }
         
@@ -2189,14 +2206,6 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.TimesheetDetails
-        {
-            get
-            {
-                return this.TimesheetDetails;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.DimDate
         {
             get
@@ -2250,6 +2259,14 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.UnallocatedTimesheets;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Timesheet.DetailsClass.IImplementation.TimesheetDetails
+        {
+            get
+            {
+                return this.TimesheetDetails;
             }
         }
         
@@ -2310,14 +2327,6 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.TypeOfWork.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TypeOfWork.DetailsClass.IImplementation.TimesheetDetails
-        {
-            get
-            {
-                return this.TimesheetDetails;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TypeOfWork.DetailsClass.IImplementation.ActiveType
         {
             get
@@ -2331,6 +2340,14 @@ namespace LightSwitchApplication.Implementation
                 {
                     this.__host.RaisePropertyChanged("ActiveType");
                 }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TypeOfWork.DetailsClass.IImplementation.TimesheetDetails
+        {
+            get
+            {
+                return this.TimesheetDetails;
             }
         }
         

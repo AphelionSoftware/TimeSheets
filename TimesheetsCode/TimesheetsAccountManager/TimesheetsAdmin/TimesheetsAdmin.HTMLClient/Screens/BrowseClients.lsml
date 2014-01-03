@@ -8,7 +8,7 @@
     Name="BrowseClients">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="TimesheetsData" />
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -320,7 +320,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="TimesheetsData/Members[FilteredClient]" />
+                  Member="Timesheets_Data/Members[FilteredClient]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>

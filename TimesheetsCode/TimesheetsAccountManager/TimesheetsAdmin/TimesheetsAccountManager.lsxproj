@@ -22,7 +22,7 @@
     <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetsAccountManager</ApplicationName>
-    <AssemblyVersion>1.0.33.0</AssemblyVersion>
+    <AssemblyVersion>1.0.35.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -54,10 +54,10 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>
-    </RequireSecureConnection>
+    <RequireSecureConnection>True</RequireSecureConnection>
     <AllowAllWindowsUsers>true</AllowAllWindowsUsers>
     <PendingProjectUpgrade>false</PendingProjectUpgrade>
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>Bin\Debug</OutputPath>
@@ -152,21 +152,6 @@
     </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
-    <PublishParameter Include="TimesheetsData">
-      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;User ID=LOrealTest;Password=Denali@2011</Value>
-    </PublishParameter>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Install>True</Install>
-      <Name>.NETFramework,Version=v4.0</Name>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Install>True</Install>
-      <Name>Microsoft.Windows.Installer.4.5</Name>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
     <DiagnosticsConfiguration Include="diagnostics.wadcfg">
       <Visible>false</Visible>
     </DiagnosticsConfiguration>
@@ -184,12 +169,22 @@
       <Private>True</Private>
       <Type>Server</Type>
     </ProjectReference>
-    <ProjectReference Include="TimesheetsAdmin.SharePoint\TimesheetsAdmin.SharePoint.csproj">
-      <Name>TimesheetsAdmin.SharePoint</Name>
+    <ProjectReference Include="TimesheetsAdmin.SharePoint\TimesheetsAccountManager.SharePoint.csproj">
+      <Name>TimesheetsAccountManager.SharePoint</Name>
       <Project>{7828c6a5-2d42-49c7-a6d5-21f3a9ea7fbf}</Project>
       <Private>True</Private>
       <Type>SharePoint</Type>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Install>True</Install>
+      <Name>.NETFramework,Version=v4.0</Name>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Install>True</Install>
+      <Name>Microsoft.Windows.Installer.4.5</Name>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
 </Project>

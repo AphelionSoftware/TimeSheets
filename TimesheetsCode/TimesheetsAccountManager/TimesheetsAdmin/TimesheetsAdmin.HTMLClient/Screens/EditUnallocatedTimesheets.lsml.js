@@ -76,7 +76,7 @@ function createCombo(args) {
 
     // build options array
     var arr = [];
-    var x = myapp.activeDataWorkspace.TimesheetsData.BillingStatusSet.load().then(function (Query) {
+    var x = myapp.activeDataWorkspace.Timesheets_Data.BillingStatusSet.load().then(function (Query) {
 
 
         for (var i = 0; i < Query.results.length; i++) {

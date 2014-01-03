@@ -1157,6 +1157,9 @@ window.myapp = msls.application;
         /// <field name="Person" type="msls.application.Person">
         /// Gets or sets the person for this timesheet.
         /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheet.
+        /// </field>
         /// <field name="details" type="msls.application.Timesheet.Details">
         /// Gets the details for this timesheet.
         /// </field>
@@ -1208,6 +1211,88 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.TypeOfWork.Details">
         /// Gets the details for this typeOfWork.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function UnallocatedTimesheet(entitySet) {
+        /// <summary>
+        /// Represents the UnallocatedTimesheet entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this unallocatedTimesheet.
+        /// </param>
+        /// <field name="BillingStatusID" type="Number">
+        /// Gets or sets the billingStatusID for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="BillingStatusName" type="String">
+        /// Gets or sets the billingStatusName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="ClientName" type="String">
+        /// Gets or sets the clientName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="ProjectName" type="String">
+        /// Gets or sets the projectName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailID" type="Number">
+        /// Gets or sets the timesheetDetailID for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailSourceKey" type="String">
+        /// Gets or sets the timesheetDetailSourceKey for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="Active" type="Number">
+        /// Gets or sets the active for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailFileName" type="String">
+        /// Gets or sets the timesheetDetailFileName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailDateID" type="Number">
+        /// Gets or sets the timesheetDetailDateID for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="Hours" type="String">
+        /// Gets or sets the hours for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TimesheetID" type="Number">
+        /// Gets or sets the timesheetID for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="ClientComments" type="String">
+        /// Gets or sets the clientComments for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="AMComments" type="String">
+        /// Gets or sets the aMComments for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="Exclude" type="Number">
+        /// Gets or sets the exclude for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="TypeOfWorkName" type="String">
+        /// Gets or sets the typeOfWorkName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="AccountManager" type="String">
+        /// Gets or sets the accountManager for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="AMEmail" type="String">
+        /// Gets or sets the aMEmail for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="BillingPeriodText" type="String">
+        /// Gets or sets the billingPeriodText for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="ADUserName" type="String">
+        /// Gets or sets the aDUserName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="SharePointUserName" type="String">
+        /// Gets or sets the sharePointUserName for this unallocatedTimesheet.
+        /// </field>
+        /// <field name="details" type="msls.application.UnallocatedTimesheet.Details">
+        /// Gets the details for this unallocatedTimesheet.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -1312,6 +1397,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="TypeOfWorks" type="msls.EntitySet">
         /// Gets the TypeOfWorks entity set.
+        /// </field>
+        /// <field name="UnallocatedTimesheets" type="msls.EntitySet">
+        /// Gets the UnallocatedTimesheets entity set.
         /// </field>
         /// <field name="details" type="msls.application.Timesheets_Data.Details">
         /// Gets the details for this data service.
@@ -1711,7 +1799,8 @@ window.myapp = msls.application;
             { name: "DimDate", kind: "reference", type: DimDate },
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "PeriodEnding", type: Date, isReadOnly: true },
-            { name: "Person", kind: "reference", type: Person }
+            { name: "Person", kind: "reference", type: Person },
+            { name: "VerCol", type: Array, isReadOnly: true }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [
@@ -1727,6 +1816,32 @@ window.myapp = msls.application;
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "ActiveType", kind: "reference", type: ActiveType }
+        ]),
+
+        UnallocatedTimesheet: $defineEntity(UnallocatedTimesheet, [
+            { name: "BillingStatusID", type: Number },
+            { name: "BillingStatusName", type: String },
+            { name: "ClientName", type: String },
+            { name: "ProjectName", type: String },
+            { name: "TimesheetDetailID", type: Number },
+            { name: "TimesheetDetailSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "Active", type: Number },
+            { name: "TimesheetDetailFileName", type: String },
+            { name: "TimesheetDetailDateID", type: Number },
+            { name: "LoadDateID", type: Number },
+            { name: "Hours", type: String },
+            { name: "TimesheetID", type: Number },
+            { name: "Comments", type: String },
+            { name: "ClientComments", type: String },
+            { name: "AMComments", type: String },
+            { name: "Exclude", type: Number },
+            { name: "TypeOfWorkName", type: String },
+            { name: "AccountManager", type: String },
+            { name: "AMEmail", type: String },
+            { name: "BillingPeriodText", type: String },
+            { name: "ADUserName", type: String },
+            { name: "SharePointUserName", type: String }
         ]),
 
         ResourcePlanRange: $defineEntity(ResourcePlanRange, [
@@ -1759,7 +1874,8 @@ window.myapp = msls.application;
             { name: "SystemRoles", elementType: SystemRole },
             { name: "TimesheetDetails", elementType: TimesheetDetail },
             { name: "Timesheets", elementType: Timesheet },
-            { name: "TypeOfWorks", elementType: TypeOfWork }
+            { name: "TypeOfWorks", elementType: TypeOfWork },
+            { name: "UnallocatedTimesheets", elementType: UnallocatedTimesheet }
         ], [
             {
                 name: "ActiveTypes_SingleOrDefault", value: function (ID) {
@@ -2006,6 +2122,54 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "InvoiceLinesSorted", value: function (InvoiceID, PersonName, InvoiceLineDescription, ProjectName) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoiceLinesSorted()",
+                        {
+                            InvoiceID: $toODataString(InvoiceID, "Int32?"),
+                            PersonName: $toODataString(PersonName, "String?"),
+                            InvoiceLineDescription: $toODataString(InvoiceLineDescription, "String?"),
+                            ProjectName: $toODataString(ProjectName, "String?")
+                        });
+                }
+            },
+            {
+                name: "InvoicesSorted", value: function (PersonName, InvoiceStatusName) {
+                    return new $DataServiceQuery({ _entitySet: this.Invoices },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoicesSorted()",
+                        {
+                            PersonName: $toODataString(PersonName, "String?"),
+                            InvoiceStatusName: $toODataString(InvoiceStatusName, "String?")
+                        });
+                }
+            },
+            {
+                name: "ProjectsSorted", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.Projects },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ProjectsSorted()",
+                        {
+                        });
+                }
+            },
+            {
+                name: "UnallocatedTimesheets_SingleOrDefault", value: function (BillingStatusID, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail, ADUserName, SharePointUserName) {
+                    return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/UnallocatedTimesheets(" + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + "," + "ADUserName=" + $toODataString(ADUserName, "String?") + "," + "SharePointUserName=" + $toODataString(SharePointUserName, "String?") + ")"
+                    );
+                }
+            },
+            {
+                name: "TimesheetDetailsUnallocated", value: function (Project_Client, PersonName, AM) {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailsUnallocated()",
+                        {
+                            Project_Client: $toODataString(Project_Client, "String?"),
+                            PersonName: $toODataString(PersonName, "String?"),
+                            AM: $toODataString(AM, "String?")
+                        });
                 }
             }
         ]),
