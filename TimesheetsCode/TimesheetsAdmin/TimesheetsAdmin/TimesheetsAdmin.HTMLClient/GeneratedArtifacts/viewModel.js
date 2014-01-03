@@ -418,6 +418,12 @@
         /// <field name="ProjectName" type="String">
         /// Gets or sets the projectName for this screen.
         /// </field>
+        /// <field name="AM" type="String">
+        /// Gets or sets the aM for this screen.
+        /// </field>
+        /// <field name="BillingStatusID" type="msls.application.BillingStatus">
+        /// Gets or sets the billingStatusID for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.BrowseProjects.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -897,12 +903,14 @@
             },
             {
                 name: "ProjectsFilter", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function (ClientName, ProjectName) {
-                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName).expand("Client");
+                createQuery: function (ClientName, ProjectName, AM, BillingStatusID) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsFilter(ClientName, ProjectName, AM, BillingStatusID).expand("Client");
                 }
             },
             { name: "ClientName", kind: "local", type: String },
-            { name: "ProjectName", kind: "local", type: String }
+            { name: "ProjectName", kind: "local", type: String },
+            { name: "AM", kind: "local", type: String },
+            { name: "BillingStatusID", kind: "local", type: lightSwitchApplication.BillingStatus }
         ], [
         ]),
 

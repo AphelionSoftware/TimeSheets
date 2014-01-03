@@ -740,9 +740,15 @@ namespace LightSwitchApplication
         /// <param name="ProjectName">
         /// No Modeled Description Available
         /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectsFilter(string ClientName, string ProjectName)
+        /// <param name="AM">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="BillingStatusID">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectsFilter(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID)
         {
-            return this.Details.Methods.ProjectsFilter.CreateInvocation(ClientName, ProjectName).Execute();
+            return this.Details.Methods.ProjectsFilter.CreateInvocation(ClientName, ProjectName, AM, BillingStatusID).Execute();
         }
         
         /// <summary>

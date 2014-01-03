@@ -4154,6 +4154,18 @@
                   "name": "ProjectName",
                   "isOptional": true,
                   "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[AM]",
+                  "name": "AM",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[BillingStatusID]",
+                  "name": "BillingStatusID",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":Int32?" }
                 }
               ],
               "sortCriteria":
@@ -4685,13 +4697,13 @@
           ":@SharePointEnabled": { }
         },
         {
-          "displayName": "Home Screen v 2.2.36",
+          "displayName": "Home Screen v 2.2.39",
           "id": "HomeScreen",
           "name": "HomeScreen",
           "launchMode": "Single",
           "rootContentItem":
           {
-            "displayName": "Home Screen v 2.2.36",
+            "displayName": "Home Screen v 2.2.39",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -10524,6 +10536,41 @@
                         {
                           "member": { "__id": "BrowseProjects/Properties[ProjectName]" }
                         }
+                      },
+                      {
+                        "displayName": "AM",
+                        "name": "AM",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[AM]" }
+                        }
+                      },
+                      {
+                        "displayName": "Billing Status",
+                        "name": "BillingStatusID",
+                        "kind": "Details",
+                        "view": { "__id": ":DetailsModalPicker" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[BillingStatusID]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Billing Status",
+                            "name": "BillingStatus",
+                            "kind": "Details",
+                            "view": { "__id": ":Summary" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            }
+                          }
+                        ]
                       }
                     ]
                   }
@@ -10634,6 +10681,33 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[AM]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[AM]" }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsFilter]/Parameters[BillingStatusID]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "BrowseProjects/Properties[BillingStatusID]" }
+                        },
+                        {
+                          "member": { "__id": "BillingStatus/Properties[BillingStatusID]" }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -10649,6 +10723,18 @@
               "name": "ProjectName",
               "elementType": { "__id": ":String?" },
               "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseProjects/Properties[AM]",
+              "name": "AM",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "BrowseProjects/Properties[BillingStatusID]",
+              "name": "BillingStatusID",
+              "elementType": { "__id": "BillingStatus" },
+              "propertyType": { "__id": "BillingStatus" }
             }
           ]
         },

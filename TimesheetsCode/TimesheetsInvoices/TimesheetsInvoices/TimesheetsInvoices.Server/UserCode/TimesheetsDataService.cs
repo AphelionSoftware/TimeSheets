@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace LightSwitchApplication
 {
-    public partial class Timesheets20130908DataService
+    public partial class TimesheetsDataService
     {
         partial void Invoices_Inserting(Invoice entity)
         {
@@ -82,7 +82,7 @@ namespace LightSwitchApplication
 
         partial void Clients_Inserted(Client entity)
         {
-            Project p = this.DataWorkspace.Timesheets20130908Data.Projects.AddNew();
+            Project p = this.DataWorkspace.TimesheetsData.Projects.AddNew();
             p.Client = entity;
             p.sys_CreatedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
             p.sys_CreatedOn = System.DateTime.Now;
@@ -92,7 +92,7 @@ namespace LightSwitchApplication
             p.ProjectName = entity.ClientName;
             p.ProjectSourceKey = entity.ClientSourceKey;
             p.ProjectCode = entity.ClientCode;
-            //this.DataWorkspace.Timesheets20130908Data.SaveChanges();
+            //this.DataWorkspace.TimesheetsData.SaveChanges();
             
         }
 

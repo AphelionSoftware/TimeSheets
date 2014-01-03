@@ -28,7 +28,7 @@
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort>44302</IISExpressSSLPort>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
@@ -221,7 +221,7 @@
     <Compile Include="UserCode\Shared\Client.cs" />
     <Compile Include="UserCode\Shared\Invoice.cs" />
     <Compile Include="UserCode\Shared\InvoiceLine.cs" />
-    <Compile Include="UserCode\Timesheets20130908DataService.cs" />
+    <Compile Include="UserCode\TimesheetsDataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">

@@ -100,6 +100,23 @@
           Name="BillingDetail"
           ParameterType="BillingDetail" />
       </ApplicationMethod>
+      <ApplicationMethod
+        Name="showBrowseCommissionsToPay">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="BrowseCommissionsToPay" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="showAddEditCommission">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="AddEditCommission" />
+        </ApplicationMethod.Attributes>
+        <ApplicationMethodParameter
+          Name="Commission"
+          ParameterType="Commission" />
+      </ApplicationMethod>
     </Application.Methods>
   </Application>
   <EntityContainerGroup
@@ -116,8 +133,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="Timesheets20130908Data"
-      EntityContainer="Timesheets20130908Data" />
+      Name="TimesheetsData"
+      EntityContainer="TimesheetsData" />
   </EntityContainerGroup>
   <EntityType>
     <EntityType.Attributes>
@@ -380,7 +397,7 @@
   <EntityContainer>
     <EntityContainer.Attributes>
       <Proxy
-        Target="ServiceInterface:Timesheets20130908Data" />
+        Target="ServiceInterface:TimesheetsData" />
     </EntityContainer.Attributes>
   </EntityContainer>
   <GlobalAttributeGroup>
@@ -393,7 +410,7 @@
     Name="Homescreen">
     <Screen.Attributes>
       <DisplayName
-        Value="Customer Invoices" />
+        Value="Customer Invoices v 19" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -493,6 +510,21 @@
                     <ChainExpression>
                       <CallExpression
                         Target="!module/Methods[showBrowseAllInvoices]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="ShowCommissionsToPay"
+              Kind="Command">
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showBrowseCommissionsToPay]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -642,7 +674,7 @@
     Name="InvoicesToBeIssued">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -1011,7 +1043,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ToBeIssued]" />
+                  Member="TimesheetsData/Members[ToBeIssued]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -1058,7 +1090,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ProjectsSorted]" />
+                  Member="TimesheetsData/Members[ProjectsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -1076,7 +1108,7 @@
     Name="AddEditInvoice">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -2031,7 +2063,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ProjectsSorted]" />
+                  Member="TimesheetsData/Members[ProjectsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2057,7 +2089,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[AM]" />
+                  Member="TimesheetsData/Members[AM]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2083,7 +2115,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[FilteredDates]" />
+                  Member="TimesheetsData/Members[FilteredDates]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2109,7 +2141,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientsSorted]" />
+                  Member="TimesheetsData/Members[ClientsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2140,7 +2172,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientRoleSorted]" />
+                  Member="TimesheetsData/Members[ClientRoleSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2188,7 +2220,7 @@
     Name="BrowseAllInvoices">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -2674,7 +2706,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[AllInvoices]" />
+                  Member="TimesheetsData/Members[AllInvoices]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -2723,7 +2755,7 @@
     Name="BrowseIssuedButNotPaid">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -3065,7 +3097,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[IssuedButNotPaid]" />
+                  Member="TimesheetsData/Members[IssuedButNotPaid]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -3104,7 +3136,7 @@
     Name="BrowsePaid">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -3432,7 +3464,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[Paid]" />
+                  Member="TimesheetsData/Members[Paid]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -3471,7 +3503,7 @@
     Name="BrowseInvoicesInDraft">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -3809,7 +3841,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[InvoicesInDraft]" />
+                  Member="TimesheetsData/Members[InvoicesInDraft]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -3848,7 +3880,7 @@
     Name="BrowseClientsSorted">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -4144,7 +4176,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientsSorted]" />
+                  Member="TimesheetsData/Members[ClientsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -4183,7 +4215,7 @@
     Name="AddEditClient">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5006,7 +5038,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[AM]" />
+                  Member="TimesheetsData/Members[AM]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5024,7 +5056,7 @@
     Name="AddEditInvoiceLine">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5339,7 +5371,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ProjectsSorted]" />
+                  Member="TimesheetsData/Members[ProjectsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5374,7 +5406,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientRoleSorted]" />
+                  Member="TimesheetsData/Members[ClientRoleSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5400,7 +5432,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[PeopleSorted]" />
+                  Member="TimesheetsData/Members[PeopleSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5430,7 +5462,7 @@
     Name="AddEditBillingDetail">
     <Screen.Attributes>
       <SaveChangesTo
-        EntityContainer="Timesheets20130908Data" />
+        EntityContainer="TimesheetsData" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -5745,7 +5777,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientsSorted]" />
+                  Member="TimesheetsData/Members[ClientsSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5776,7 +5808,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[PeopleSorted]" />
+                  Member="TimesheetsData/Members[PeopleSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5802,7 +5834,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[FilteredDates]" />
+                  Member="TimesheetsData/Members[FilteredDates]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5828,7 +5860,7 @@
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="Timesheets20130908Data/Members[ClientRoleSorted]" />
+                  Member="TimesheetsData/Members[ClientRoleSorted]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -5890,4 +5922,465 @@
         Target="ServiceInterface:FK_CommissionStatus_ActiveType" />
     </Association.Attributes>
   </Association>
+  <Screen
+    Name="BrowseCommissionsToPay">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="TimesheetsData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="CommissionList"
+            Kind="Group">
+            <ContentItem
+              Name="Commission"
+              Kind="Collection"
+              DataType="CollectionView$Commission"
+              View="Microsoft.LightSwitch.MobileWeb:List">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseCommissionsToPay/Properties[CommissionsToPay]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="RowTemplate"
+                Kind="Details"
+                DataType="Commission"
+                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="CommissionDescription"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[CommissionDescription]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CommissionAmount"
+                  Kind="Value"
+                  DataType=":Decimal">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[CommissionAmount]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Person"
+                  Kind="Details"
+                  DataType="Person">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[Person]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate5"
+                    Kind="Details"
+                    DataType="Person">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditCommission]">
+                        <CallExpression.Attributes>
+                          <AssociatedCollection
+                            Collection="BrowseCommissionsToPay/Properties[CommissionsToPay]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="Commission">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="BrowseCommissionsToPay/Properties[CommissionsToPay]" />
+                            <MemberExpression
+                              Member="selectedItem" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+        <ContentItem.PropertySources>
+          <ControlPropertySource
+            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
+            <ScreenExpressionTree>
+              <ChainExpression>
+                <ConstantExpression
+                  Value="Browse"
+                  ResultType=":String" />
+              </ChainExpression>
+            </ScreenExpressionTree>
+          </ControlPropertySource>
+        </ContentItem.PropertySources>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="CommissionsToPay"
+        PageSize="45"
+        PropertyType="CollectionView$Commission">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="CommissionsToPayQuery"
+            ReturnType="Commission*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="TimesheetsData/Members[CommissionsToPay]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="BrowseCommissionsToPay/Properties[CommissionsToPay]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="AddEditCommission">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="TimesheetsData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.MobileWeb:Screen">
+        <ContentItem
+          Name="Tabs"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:TabPages">
+          <ContentItem
+            Name="Details"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Details" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="columns"
+              Kind="Details"
+              DataType="Commission"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="columns" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="AddEditCommission/Properties[Commission]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="left"
+                Kind="Group">
+                <ContentItem
+                  Name="CommissionDescription"
+                  Kind="Value"
+                  DataType=":String"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[CommissionDescription]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CommissionAmount"
+                  Kind="Value"
+                  DataType=":Decimal"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[CommissionAmount]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="right"
+                Kind="Group">
+                <ContentItem
+                  Name="CommissionStatu"
+                  Kind="Details"
+                  DataType="CommissionStatu">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[CommissionStatu]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate1"
+                    Kind="Details"
+                    DataType="CommissionStatu">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="DimDate"
+                  Kind="Details"
+                  DataType="DimDate">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[DimDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate2"
+                    Kind="Details"
+                    DataType="DimDate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="Invoice"
+                  Kind="Details"
+                  DataType="Invoice"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[Invoice]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Person"
+                  Kind="Details"
+                  DataType="Person"
+                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Commission/Properties[Person]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem
+          Name="Popups"
+          Kind="Group"
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+        <ContentItem.PropertySources>
+          <ControlPropertySource
+            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ScreenType]">
+            <ScreenExpressionTree>
+              <ChainExpression>
+                <ConstantExpression
+                  Value="Edit"
+                  ResultType=":String" />
+              </ChainExpression>
+            </ScreenExpressionTree>
+          </ControlPropertySource>
+          <ControlPropertySource
+            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ShowAsDialog]">
+            <ScreenExpressionTree>
+              <ChainExpression>
+                <ConstantExpression
+                  Value="True"
+                  ResultType=":Boolean" />
+              </ChainExpression>
+            </ScreenExpressionTree>
+          </ControlPropertySource>
+        </ContentItem.PropertySources>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="showTab">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="tabName"
+          ParameterType=":String" />
+      </ScreenMethod>
+      <ScreenMethod
+        Name="showDialog">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+        <ScreenMethodParameter
+          Name="dialogName"
+          ParameterType=":String" />
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="Commission"
+        PropertyType="Commission">
+        <ScreenProperty.Attributes>
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+  </Screen>
 </ModelFragment>

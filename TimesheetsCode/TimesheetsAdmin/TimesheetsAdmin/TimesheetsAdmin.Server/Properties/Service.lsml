@@ -3682,18 +3682,106 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Contains">
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="Contains">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="Client" />
+                                    <MemberExpression
+                                      Member="ClientName" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="ClientName" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Contains">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="ProjectName" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="ProjectName" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="ActiveType" />
+                                <MemberExpression
+                                  Member="ID" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ConstantExpression
+                                Value="1"
+                                ResultType=":Int32" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
                               Member="Client" />
                             <MemberExpression
-                              Member="ClientName" />
+                              Member="ActiveType" />
+                            <MemberExpression
+                              Member="ID" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ConstantExpression
+                            Value="1"
+                            ResultType=":Int32" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Or">
+                    <BinaryExpression.Attributes>
+                      <ExpressionGroup />
+                    </BinaryExpression.Attributes>
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Contains">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Person" />
+                            <MemberExpression
+                              Member="PersonName" />
                           </ChainExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
                           <ParameterExpression
-                            Parameter="ClientName" />
+                            Parameter="AM" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Left>
@@ -3703,32 +3791,18 @@
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
-                              Member="ProjectName" />
+                              Member="Client" />
+                            <MemberExpression
+                              Member="Person" />
+                            <MemberExpression
+                              Member="PersonName" />
                           </ChainExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
                           <ParameterExpression
-                            Parameter="ProjectName" />
+                            Parameter="AM" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
-                    </BinaryExpression.Right>
-                  </BinaryExpression>
-                </BinaryExpression.Left>
-                <BinaryExpression.Right>
-                  <BinaryExpression
-                    NodeType="Equal">
-                    <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="ActiveType" />
-                        <MemberExpression
-                          Member="ID" />
-                      </ChainExpression>
-                    </BinaryExpression.Left>
-                    <BinaryExpression.Right>
-                      <ConstantExpression
-                        Value="1"
-                        ResultType=":Int32" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Right>
@@ -3740,17 +3814,14 @@
                 <BinaryExpression.Left>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Client" />
+                      Member="BillingStatus" />
                     <MemberExpression
-                      Member="ActiveType" />
-                    <MemberExpression
-                      Member="ID" />
+                      Member="BillingStatusID" />
                   </ChainExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
-                  <ConstantExpression
-                    Value="1"
-                    ResultType=":Int32" />
+                  <ParameterExpression
+                    Parameter="BillingStatusID" />
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -3771,6 +3842,14 @@
         Name="ProjectName"
         IsOptional="True"
         ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="AM"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="BillingStatusID"
+        IsOptional="True"
+        ParameterType=":Int32?" />
       <QueryOperation.SortCriteria>
         <SortCriterion>
           <ChainExpression>
