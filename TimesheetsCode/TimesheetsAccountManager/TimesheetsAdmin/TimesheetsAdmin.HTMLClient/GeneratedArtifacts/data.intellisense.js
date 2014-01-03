@@ -2,6 +2,14 @@
 
 (function (lightSwitchApplication) {
 
+    msls._addEntryPoints(lightSwitchApplication.ActiveType, {
+        /// <field>
+        /// Called when a new activeType is created.
+        /// <br/>created(msls.application.ActiveType entity)
+        /// </field>
+        created: [lightSwitchApplication.ActiveType]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.BillingDetail, {
         /// <field>
         /// Called when a new billingDetail is created.
@@ -16,6 +24,14 @@
         /// <br/>created(msls.application.BillingStatus entity)
         /// </field>
         created: [lightSwitchApplication.BillingStatus]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ClientRole, {
+        /// <field>
+        /// Called when a new clientRole is created.
+        /// <br/>created(msls.application.ClientRole entity)
+        /// </field>
+        created: [lightSwitchApplication.ClientRole]
     });
 
     msls._addEntryPoints(lightSwitchApplication.Client, {
@@ -34,6 +50,38 @@
         created: [lightSwitchApplication.DimDate]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.InvoiceLine, {
+        /// <field>
+        /// Called when a new invoiceLine is created.
+        /// <br/>created(msls.application.InvoiceLine entity)
+        /// </field>
+        created: [lightSwitchApplication.InvoiceLine]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Invoice, {
+        /// <field>
+        /// Called when a new invoice is created.
+        /// <br/>created(msls.application.Invoice entity)
+        /// </field>
+        created: [lightSwitchApplication.Invoice]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.InvoiceStatu, {
+        /// <field>
+        /// Called when a new invoiceStatu is created.
+        /// <br/>created(msls.application.InvoiceStatu entity)
+        /// </field>
+        created: [lightSwitchApplication.InvoiceStatu]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.OverbudgetTimesheet, {
+        /// <field>
+        /// Called when a new overbudgetTimesheet is created.
+        /// <br/>created(msls.application.OverbudgetTimesheet entity)
+        /// </field>
+        created: [lightSwitchApplication.OverbudgetTimesheet]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.Person, {
         /// <field>
         /// Called when a new person is created.
@@ -50,28 +98,12 @@
         created: [lightSwitchApplication.Project]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.Timesheet, {
+    msls._addEntryPoints(lightSwitchApplication.ProjectsOverCap, {
         /// <field>
-        /// Called when a new timesheet is created.
-        /// <br/>created(msls.application.Timesheet entity)
+        /// Called when a new projectsOverCap is created.
+        /// <br/>created(msls.application.ProjectsOverCap entity)
         /// </field>
-        created: [lightSwitchApplication.Timesheet]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.TimesheetDetail, {
-        /// <field>
-        /// Called when a new timesheetDetail is created.
-        /// <br/>created(msls.application.TimesheetDetail entity)
-        /// </field>
-        created: [lightSwitchApplication.TimesheetDetail]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.TypeOfWork, {
-        /// <field>
-        /// Called when a new typeOfWork is created.
-        /// <br/>created(msls.application.TypeOfWork entity)
-        /// </field>
-        created: [lightSwitchApplication.TypeOfWork]
+        created: [lightSwitchApplication.ProjectsOverCap]
     });
 
     msls._addEntryPoints(lightSwitchApplication.RoleType, {
@@ -82,14 +114,6 @@
         created: [lightSwitchApplication.RoleType]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ClientRole, {
-        /// <field>
-        /// Called when a new clientRole is created.
-        /// <br/>created(msls.application.ClientRole entity)
-        /// </field>
-        created: [lightSwitchApplication.ClientRole]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.SystemRole, {
         /// <field>
         /// Called when a new systemRole is created.
@@ -98,28 +122,28 @@
         created: [lightSwitchApplication.SystemRole]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ActiveType, {
+    msls._addEntryPoints(lightSwitchApplication.TimesheetDetail, {
         /// <field>
-        /// Called when a new activeType is created.
-        /// <br/>created(msls.application.ActiveType entity)
+        /// Called when a new timesheetDetail is created.
+        /// <br/>created(msls.application.TimesheetDetail entity)
         /// </field>
-        created: [lightSwitchApplication.ActiveType]
+        created: [lightSwitchApplication.TimesheetDetail]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.OverbudgetTimesheet, {
+    msls._addEntryPoints(lightSwitchApplication.Timesheet, {
         /// <field>
-        /// Called when a new overbudgetTimesheet is created.
-        /// <br/>created(msls.application.OverbudgetTimesheet entity)
+        /// Called when a new timesheet is created.
+        /// <br/>created(msls.application.Timesheet entity)
         /// </field>
-        created: [lightSwitchApplication.OverbudgetTimesheet]
+        created: [lightSwitchApplication.Timesheet]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ProjectsOverCap, {
+    msls._addEntryPoints(lightSwitchApplication.TypeOfWork, {
         /// <field>
-        /// Called when a new projectsOverCap is created.
-        /// <br/>created(msls.application.ProjectsOverCap entity)
+        /// Called when a new typeOfWork is created.
+        /// <br/>created(msls.application.TypeOfWork entity)
         /// </field>
-        created: [lightSwitchApplication.ProjectsOverCap]
+        created: [lightSwitchApplication.TypeOfWork]
     });
 
     msls._addEntryPoints(lightSwitchApplication.UnallocatedTimesheet, {
@@ -128,30 +152,6 @@
         /// <br/>created(msls.application.UnallocatedTimesheet entity)
         /// </field>
         created: [lightSwitchApplication.UnallocatedTimesheet]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Invoice, {
-        /// <field>
-        /// Called when a new invoice is created.
-        /// <br/>created(msls.application.Invoice entity)
-        /// </field>
-        created: [lightSwitchApplication.Invoice]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.InvoiceLine, {
-        /// <field>
-        /// Called when a new invoiceLine is created.
-        /// <br/>created(msls.application.InvoiceLine entity)
-        /// </field>
-        created: [lightSwitchApplication.InvoiceLine]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.InvoiceStatu, {
-        /// <field>
-        /// Called when a new invoiceStatu is created.
-        /// <br/>created(msls.application.InvoiceStatu entity)
-        /// </field>
-        created: [lightSwitchApplication.InvoiceStatu]
     });
 
 }(msls.application));

@@ -16,33 +16,33 @@ namespace LightSwitchApplication
     /// <summary>
     /// No Modeled Description Available
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-    public sealed partial class DimDate : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+    public sealed partial class ClientRole : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the DimDate entity.
+        /// Initializes a new instance of the ClientRole entity.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public DimDate()
+        public ClientRole()
             : this(null)
         {
         }
     
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public DimDate(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.DimDate> entitySet)
+        public ClientRole(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ClientRole> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.DimDate.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.ClientRole.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDate_Created();
+        partial void ClientRole_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDate_AllowSaveWithErrors(ref bool result);
+        partial void ClientRole_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -51,7 +51,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
         {
@@ -64,7 +64,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::LightSwitchApplication.DataWorkspace DataWorkspace
         {
@@ -81,469 +81,153 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string StandardDate
+        public string ClientRoleName
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.StandardDate);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleName);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.StandardDate, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleName, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void StandardDate_IsReadOnly(ref bool result);
+        partial void ClientRoleName_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void StandardDate_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ClientRoleName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void StandardDate_Changed();
+        partial void ClientRoleName_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int DateID
+        public int ClientRoleID
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DateID);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleID);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoleID_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoleID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoleID_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ClientRoleSourceKey
+        {
+            get
+            {
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleSourceKey);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DateID, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleSourceKey, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateID_IsReadOnly(ref bool result);
+        partial void ClientRoleSourceKey_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ClientRoleSourceKey_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateID_Changed();
+        partial void ClientRoleSourceKey_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime c_Date
+        public global::System.DateTime LoadDate
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.c_Date);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.LoadDate);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.c_Date, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.LoadDate, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void c_Date_IsReadOnly(ref bool result);
+        partial void LoadDate_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void c_Date_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void LoadDate_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void c_Date_Changed();
+        partial void LoadDate_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Day
+        public string ClientRoleCode
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Day);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleCode);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Day, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleCode, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Day_IsReadOnly(ref bool result);
+        partial void ClientRoleCode_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Day_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ClientRoleCode_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Day_Changed();
+        partial void ClientRoleCode_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string DaySuffix
+        public global::System.Nullable<int> LoadDateID
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DaySuffix);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DaySuffix, value);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.LoadDateID);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DaySuffix_IsReadOnly(ref bool result);
+        partial void LoadDateID_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DaySuffix_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void LoadDateID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DaySuffix_Changed();
+        partial void LoadDateID_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string DayOfWeek
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfWeek);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfWeek, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfWeek_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfWeek_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfWeek_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int DOWInMonth
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DOWInMonth);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DOWInMonth, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DOWInMonth_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DOWInMonth_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DOWInMonth_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int DayOfYear
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfYear);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfYear, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfYear_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DayOfYear_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int WeekOfYear
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfYear);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfYear, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfYear_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfYear_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int WeekOfMonth
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfMonth);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfMonth, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfMonth_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfMonth_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekOfMonth_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int MonthNumber
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthNumber);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthNumber, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthNumber_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthNumber_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthNumber_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string MonthName
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthName);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthName, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthName_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void MonthName_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Quarter
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Quarter);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Quarter, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Quarter_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Quarter_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Quarter_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string QuarterName
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.QuarterName);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.QuarterName, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void QuarterName_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void QuarterName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void QuarterName_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string YearName
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearName);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearName, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearName_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearName_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int YearNumber
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearNumber);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearNumber, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearNumber_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearNumber_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void YearNumber_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> IsPublicHoliday
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.IsPublicHoliday);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.IsPublicHoliday, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void IsPublicHoliday_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void IsPublicHoliday_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void IsPublicHoliday_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string HolidayText
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.HolidayText);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.HolidayText, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void HolidayText_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void HolidayText_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void HolidayText_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int DateSK
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DateSK);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateSK_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateSK_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DateSK_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime sys_CreatedOn
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedOn);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedOn);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedOn, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedOn, value);
             }
         }
         
@@ -557,17 +241,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string sys_CreatedBy
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedBy);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedBy);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedBy, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedBy, value);
             }
         }
         
@@ -581,17 +265,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime sys_ModifiedOn
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedOn);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedOn);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedOn, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedOn, value);
             }
         }
         
@@ -605,17 +289,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string sys_ModifiedBy
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedBy);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedBy);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedBy, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedBy, value);
             }
         }
         
@@ -629,378 +313,70 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Active
+        public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Active);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType);
             }
             set
             {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Active, value);
+                global::LightSwitchApplication.ClientRole.DetailsClass.SetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Active_IsReadOnly(ref bool result);
+        partial void ActiveType_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Active_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ActiveType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Active_Changed();
+        partial void ActiveType_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> ContractorYear
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.InvoiceLine> InvoiceLines
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear, value);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines);
             }
         }
         
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorYear_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorYear_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> ContractorMonth
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.InvoiceLine> InvoiceLinesQuery
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorMonth_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorMonth_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorMonth_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string ContractorPeriod
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorPeriod_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ContractorPeriod_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string BillingYear
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingYear_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingYear_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingYear_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string WeekEndingBillingPeriod
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingBillingPeriod_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingBillingPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingBillingPeriod_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string BillingPeriodText
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriodText_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriodText_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriodText_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> BillingPeriod
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriod_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriod_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingPeriod_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime WeekEnding
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEnding_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEnding_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEnding_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string WeekEndingText
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText);
-            }
-            set
-            {
-                global::LightSwitchApplication.DimDate.DetailsClass.SetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingText_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingText_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void WeekEndingText_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.TimesheetDetails);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TimesheetDetail> TimesheetDetailsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.TimesheetDetails);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetQuery(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines);
             }
         }
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Timesheet> Timesheets
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Timesheets);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Timesheet> TimesheetsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Timesheets);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.BillingDetail> BillingDetails
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingDetails);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetValue(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
             }
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.BillingDetail> BillingDetailsQuery
         {
             get
             {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingDetails);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> InvoicesQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices1
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> Invoices1Query
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices2
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetValue(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> Invoices2Query
-        {
-            get
-            {
-                return global::LightSwitchApplication.DimDate.DetailsClass.GetQuery(this, global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2);
+                return global::LightSwitchApplication.ClientRole.DetailsClass.GetQuery(this, global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails);
             }
         }
 
@@ -1010,40 +386,40 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.DimDate,
-                global::LightSwitchApplication.DimDate.DetailsClass,
-                global::LightSwitchApplication.DimDate.DetailsClass.IImplementation,
-                global::LightSwitchApplication.DimDate.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>>
+                global::LightSwitchApplication.ClientRole,
+                global::LightSwitchApplication.ClientRole.DetailsClass,
+                global::LightSwitchApplication.ClientRole.DetailsClass.IImplementation,
+                global::LightSwitchApplication.ClientRole.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.StandardDate;
+                var initializeEntry = global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleName;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>.Entry
-                __DimDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>.Entry(
-                    global::LightSwitchApplication.DimDate.DetailsClass.__DimDate_CreateNew,
-                    global::LightSwitchApplication.DimDate.DetailsClass.__DimDate_Created,
-                    global::LightSwitchApplication.DimDate.DetailsClass.__DimDate_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.DimDate __DimDate_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.DimDate> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>.Entry
+                __ClientRoleEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>.Entry(
+                    global::LightSwitchApplication.ClientRole.DetailsClass.__ClientRole_CreateNew,
+                    global::LightSwitchApplication.ClientRole.DetailsClass.__ClientRole_Created,
+                    global::LightSwitchApplication.ClientRole.DetailsClass.__ClientRole_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.ClientRole __ClientRole_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ClientRole> es)
             {
-                return new global::LightSwitchApplication.DimDate(es);
+                return new global::LightSwitchApplication.ClientRole(es);
             }
-            private static void __DimDate_Created(global::LightSwitchApplication.DimDate e)
+            private static void __ClientRole_Created(global::LightSwitchApplication.ClientRole e)
             {
-                e.DimDate_Created();
+                e.ClientRole_Created();
             }
-            private static bool __DimDate_AllowSaveWithErrors(global::LightSwitchApplication.DimDate e)
+            private static bool __ClientRole_AllowSaveWithErrors(global::LightSwitchApplication.ClientRole e)
             {
                 bool result = false;
-                e.DimDate_AllowSaveWithErrors(ref result);
+                e.ClientRole_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -1051,7 +427,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass> Commands
             {
                 get
                 {
@@ -1059,7 +435,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass> Methods
             {
                 get
                 {
@@ -1067,7 +443,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.DimDate.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.ClientRole.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -1077,324 +453,116 @@ namespace LightSwitchApplication
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> StandardDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string> ClientRoleName
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.StandardDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> DateID
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int> ClientRoleID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DateID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> c_Date
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string> ClientRoleSourceKey
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.c_Date) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleSourceKey) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> Day
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime> LoadDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Day) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.LoadDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> DaySuffix
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string> ClientRoleCode
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DaySuffix) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ClientRoleCode) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> DayOfWeek
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>> LoadDateID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfWeek) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.LoadDateID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> DOWInMonth
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime> sys_CreatedOn
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DOWInMonth) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> DayOfYear
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string> sys_CreatedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DayOfYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> WeekOfYear
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime> sys_ModifiedOn
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> WeekOfMonth
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string> sys_ModifiedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekOfMonth) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.sys_ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> MonthNumber
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthNumber) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> MonthName
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine> InvoiceLines
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.MonthName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> Quarter
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Quarter) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> QuarterName
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.QuarterName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> YearName
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> YearNumber
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.YearNumber) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>> IsPublicHoliday
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.IsPublicHoliday) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> HolidayText
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.HolidayText) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> DateSK
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.DateSK) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> sys_CreatedOn
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> sys_CreatedBy
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> sys_ModifiedOn
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> sys_ModifiedBy
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.sys_ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int> Active
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Active) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> ContractorYear
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> ContractorMonth
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorMonth) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> ContractorPeriod
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.ContractorPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> BillingYear
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingYear) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> WeekEndingBillingPeriod
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingBillingPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> BillingPeriodText
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriodText) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>> BillingPeriod
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingPeriod) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime> WeekEnding
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEnding) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string> WeekEndingText
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.WeekEndingText) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Timesheets) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail> BillingDetails
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices1
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice> Invoices2
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>;
+                        return base.GetItem(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>;
                     }
                 }
                 
@@ -1404,1509 +572,517 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new string StandardDate { get; set; }
-                new int DateID { get; set; }
-                new global::System.DateTime c_Date { get; set; }
-                new int Day { get; set; }
-                new string DaySuffix { get; set; }
-                new string DayOfWeek { get; set; }
-                new int DOWInMonth { get; set; }
-                new int DayOfYear { get; set; }
-                new int WeekOfYear { get; set; }
-                new int WeekOfMonth { get; set; }
-                new int MonthNumber { get; set; }
-                new string MonthName { get; set; }
-                new int Quarter { get; set; }
-                new string QuarterName { get; set; }
-                new string YearName { get; set; }
-                new int YearNumber { get; set; }
-                new global::System.Nullable<bool> IsPublicHoliday { get; set; }
-                new string HolidayText { get; set; }
-                new int DateSK { get; }
+                new string ClientRoleName { get; set; }
+                new int ClientRoleID { get; }
+                new string ClientRoleSourceKey { get; set; }
+                new global::System.DateTime LoadDate { get; set; }
+                new string ClientRoleCode { get; set; }
+                new global::System.Nullable<int> LoadDateID { get; }
                 new global::System.DateTime sys_CreatedOn { get; set; }
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
-                new int Active { get; set; }
-                new global::System.Nullable<int> ContractorYear { get; set; }
-                new global::System.Nullable<int> ContractorMonth { get; set; }
-                new string ContractorPeriod { get; set; }
-                new string BillingYear { get; set; }
-                new string WeekEndingBillingPeriod { get; set; }
-                new string BillingPeriodText { get; set; }
-                new global::System.Nullable<int> BillingPeriod { get; set; }
-                new global::System.DateTime WeekEnding { get; set; }
-                new string WeekEndingText { get; set; }
-                new global::System.Collections.IEnumerable TimesheetDetails { get; }
-                new global::System.Collections.IEnumerable Timesheets { get; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
+                new global::System.Collections.IEnumerable InvoiceLines { get; }
                 new global::System.Collections.IEnumerable BillingDetails { get; }
-                new global::System.Collections.IEnumerable Invoices { get; }
-                new global::System.Collections.IEnumerable Invoices1 { get; }
-                new global::System.Collections.IEnumerable Invoices2 { get; }
             }
             #pragma warning restore 109
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal class PropertySetProperties
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    StandardDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "StandardDate",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._StandardDate_OnValueChanged);
-                private static void _StandardDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry
+                    ClientRoleName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry(
+                        "ClientRoleName",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleName_OnValueChanged);
+                private static void _ClientRoleName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
-                    c(d, ref d._StandardDate, sf);
+                    c(d, ref d._ClientRoleName, sf);
                 }
-                private static bool _StandardDate_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _ClientRoleName_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
-                    e.StandardDate_IsReadOnly(ref result);
+                    e.ClientRoleName_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _StandardDate_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ClientRoleName_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.StandardDate_Validate(r);
+                    e.ClientRoleName_Validate(r);
                 }
-                private static string _StandardDate_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static string _ClientRoleName_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    return d.ImplementationEntity.StandardDate;
+                    return d.ImplementationEntity.ClientRoleName;
                 }
-                private static void _StandardDate_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                private static void _ClientRoleName_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.StandardDate = v;
+                    d.ImplementationEntity.ClientRoleName = v;
                 }
-                private static void _StandardDate_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _ClientRoleName_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
-                    e.StandardDate_Changed();
+                    e.ClientRoleName_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    DateID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "DateID",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateID_OnValueChanged);
-                private static void _DateID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._DateID, sf);
-                }
-                private static bool _DateID_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.DateID_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _DateID_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.DateID_Validate(r);
-                }
-                private static int _DateID_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.DateID;
-                }
-                private static void _DateID_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.DateID = v;
-                }
-                private static void _DateID_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.DateID_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
-                    c_Date = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
-                        "c_Date",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._c_Date_OnValueChanged);
-                private static void _c_Date_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._c_Date, sf);
-                }
-                private static bool _c_Date_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.c_Date_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _c_Date_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.c_Date_Validate(r);
-                }
-                private static global::System.DateTime _c_Date_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.c_Date;
-                }
-                private static void _c_Date_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
-                {
-                    d.ImplementationEntity.c_Date = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
-                }
-                private static void _c_Date_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.c_Date_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    Day = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "Day",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Day_OnValueChanged);
-                private static void _Day_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Day, sf);
-                }
-                private static bool _Day_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.Day_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Day_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Day_Validate(r);
-                }
-                private static int _Day_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Day;
-                }
-                private static void _Day_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.Day = v;
-                }
-                private static void _Day_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.Day_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    DaySuffix = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "DaySuffix",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DaySuffix_OnValueChanged);
-                private static void _DaySuffix_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._DaySuffix, sf);
-                }
-                private static bool _DaySuffix_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.DaySuffix_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _DaySuffix_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.DaySuffix_Validate(r);
-                }
-                private static string _DaySuffix_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.DaySuffix;
-                }
-                private static void _DaySuffix_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.DaySuffix = v;
-                }
-                private static void _DaySuffix_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.DaySuffix_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    DayOfWeek = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "DayOfWeek",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfWeek_OnValueChanged);
-                private static void _DayOfWeek_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._DayOfWeek, sf);
-                }
-                private static bool _DayOfWeek_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.DayOfWeek_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _DayOfWeek_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.DayOfWeek_Validate(r);
-                }
-                private static string _DayOfWeek_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.DayOfWeek;
-                }
-                private static void _DayOfWeek_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.DayOfWeek = v;
-                }
-                private static void _DayOfWeek_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.DayOfWeek_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    DOWInMonth = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "DOWInMonth",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DOWInMonth_OnValueChanged);
-                private static void _DOWInMonth_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._DOWInMonth, sf);
-                }
-                private static bool _DOWInMonth_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.DOWInMonth_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _DOWInMonth_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.DOWInMonth_Validate(r);
-                }
-                private static int _DOWInMonth_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.DOWInMonth;
-                }
-                private static void _DOWInMonth_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.DOWInMonth = v;
-                }
-                private static void _DOWInMonth_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.DOWInMonth_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    DayOfYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "DayOfYear",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DayOfYear_OnValueChanged);
-                private static void _DayOfYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._DayOfYear, sf);
-                }
-                private static bool _DayOfYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.DayOfYear_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _DayOfYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.DayOfYear_Validate(r);
-                }
-                private static int _DayOfYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.DayOfYear;
-                }
-                private static void _DayOfYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.DayOfYear = v;
-                }
-                private static void _DayOfYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.DayOfYear_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    WeekOfYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "WeekOfYear",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfYear_OnValueChanged);
-                private static void _WeekOfYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._WeekOfYear, sf);
-                }
-                private static bool _WeekOfYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.WeekOfYear_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _WeekOfYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.WeekOfYear_Validate(r);
-                }
-                private static int _WeekOfYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.WeekOfYear;
-                }
-                private static void _WeekOfYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.WeekOfYear = v;
-                }
-                private static void _WeekOfYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.WeekOfYear_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    WeekOfMonth = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "WeekOfMonth",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekOfMonth_OnValueChanged);
-                private static void _WeekOfMonth_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._WeekOfMonth, sf);
-                }
-                private static bool _WeekOfMonth_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.WeekOfMonth_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _WeekOfMonth_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.WeekOfMonth_Validate(r);
-                }
-                private static int _WeekOfMonth_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.WeekOfMonth;
-                }
-                private static void _WeekOfMonth_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.WeekOfMonth = v;
-                }
-                private static void _WeekOfMonth_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.WeekOfMonth_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    MonthNumber = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "MonthNumber",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthNumber_OnValueChanged);
-                private static void _MonthNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._MonthNumber, sf);
-                }
-                private static bool _MonthNumber_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.MonthNumber_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _MonthNumber_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.MonthNumber_Validate(r);
-                }
-                private static int _MonthNumber_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.MonthNumber;
-                }
-                private static void _MonthNumber_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.MonthNumber = v;
-                }
-                private static void _MonthNumber_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.MonthNumber_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    MonthName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "MonthName",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._MonthName_OnValueChanged);
-                private static void _MonthName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._MonthName, sf);
-                }
-                private static bool _MonthName_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.MonthName_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _MonthName_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.MonthName_Validate(r);
-                }
-                private static string _MonthName_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.MonthName;
-                }
-                private static void _MonthName_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.MonthName = v;
-                }
-                private static void _MonthName_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.MonthName_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    Quarter = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "Quarter",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Quarter_OnValueChanged);
-                private static void _Quarter_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Quarter, sf);
-                }
-                private static bool _Quarter_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.Quarter_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Quarter_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Quarter_Validate(r);
-                }
-                private static int _Quarter_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Quarter;
-                }
-                private static void _Quarter_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.Quarter = v;
-                }
-                private static void _Quarter_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.Quarter_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    QuarterName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "QuarterName",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._QuarterName_OnValueChanged);
-                private static void _QuarterName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._QuarterName, sf);
-                }
-                private static bool _QuarterName_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.QuarterName_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _QuarterName_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.QuarterName_Validate(r);
-                }
-                private static string _QuarterName_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.QuarterName;
-                }
-                private static void _QuarterName_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.QuarterName = v;
-                }
-                private static void _QuarterName_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.QuarterName_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    YearName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "YearName",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearName_OnValueChanged);
-                private static void _YearName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._YearName, sf);
-                }
-                private static bool _YearName_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.YearName_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _YearName_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.YearName_Validate(r);
-                }
-                private static string _YearName_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.YearName;
-                }
-                private static void _YearName_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.YearName = v;
-                }
-                private static void _YearName_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.YearName_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    YearNumber = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "YearNumber",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._YearNumber_OnValueChanged);
-                private static void _YearNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._YearNumber, sf);
-                }
-                private static bool _YearNumber_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.YearNumber_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _YearNumber_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.YearNumber_Validate(r);
-                }
-                private static int _YearNumber_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.YearNumber;
-                }
-                private static void _YearNumber_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.YearNumber = v;
-                }
-                private static void _YearNumber_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.YearNumber_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>>.Entry
-                    IsPublicHoliday = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>>.Entry(
-                        "IsPublicHoliday",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._IsPublicHoliday_OnValueChanged);
-                private static void _IsPublicHoliday_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._IsPublicHoliday, sf);
-                }
-                private static bool _IsPublicHoliday_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.IsPublicHoliday_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _IsPublicHoliday_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.IsPublicHoliday_Validate(r);
-                }
-                private static global::System.Nullable<bool> _IsPublicHoliday_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.IsPublicHoliday;
-                }
-                private static void _IsPublicHoliday_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<bool> v)
-                {
-                    d.ImplementationEntity.IsPublicHoliday = v;
-                }
-                private static void _IsPublicHoliday_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.IsPublicHoliday_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    HolidayText = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "HolidayText",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._HolidayText_OnValueChanged);
-                private static void _HolidayText_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._HolidayText, sf);
-                }
-                private static bool _HolidayText_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.HolidayText_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _HolidayText_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.HolidayText_Validate(r);
-                }
-                private static string _HolidayText_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.HolidayText;
-                }
-                private static void _HolidayText_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.HolidayText = v;
-                }
-                private static void _HolidayText_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.HolidayText_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    DateSK = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "DateSK",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateSK_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateSK_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateSK_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateSK_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int>.Entry
+                    ClientRoleID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int>.Entry(
+                        "ClientRoleID",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleID_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleID_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleID_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._DateSK_OnValueChanged);
-                private static void _DateSK_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleID_OnValueChanged);
+                private static void _ClientRoleID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
-                    c(d, ref d._DateSK, sf);
+                    c(d, ref d._ClientRoleID, sf);
                 }
-                private static bool _DateSK_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _ClientRoleID_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
-                    e.DateSK_IsReadOnly(ref result);
+                    e.ClientRoleID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _DateSK_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ClientRoleID_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.DateSK_Validate(r);
+                    e.ClientRoleID_Validate(r);
                 }
-                private static int _DateSK_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static int _ClientRoleID_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    return d.ImplementationEntity.DateSK;
+                    return d.ImplementationEntity.ClientRoleID;
                 }
-                private static void _DateSK_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _ClientRoleID_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
-                    e.DateSK_Changed();
+                    e.ClientRoleID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
-                    sys_CreatedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry
+                    ClientRoleSourceKey = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry(
+                        "ClientRoleSourceKey",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleSourceKey_OnValueChanged);
+                private static void _ClientRoleSourceKey_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ClientRoleSourceKey, sf);
+                }
+                private static bool _ClientRoleSourceKey_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
+                {
+                    bool result = false;
+                    e.ClientRoleSourceKey_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ClientRoleSourceKey_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ClientRoleSourceKey_Validate(r);
+                }
+                private static string _ClientRoleSourceKey_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ClientRoleSourceKey;
+                }
+                private static void _ClientRoleSourceKey_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ClientRoleSourceKey = v;
+                }
+                private static void _ClientRoleSourceKey_OnValueChanged(global::LightSwitchApplication.ClientRole e)
+                {
+                    e.ClientRoleSourceKey_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry
+                    LoadDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry(
+                        "LoadDate",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDate_OnValueChanged);
+                private static void _LoadDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
+                {
+                    c(d, ref d._LoadDate, sf);
+                }
+                private static bool _LoadDate_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
+                {
+                    bool result = false;
+                    e.LoadDate_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _LoadDate_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.LoadDate_Validate(r);
+                }
+                private static global::System.DateTime _LoadDate_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.ImplementationEntity.LoadDate;
+                }
+                private static void _LoadDate_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, global::System.DateTime v)
+                {
+                    d.ImplementationEntity.LoadDate = global::LightSwitchApplication.ClientRole.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _LoadDate_OnValueChanged(global::LightSwitchApplication.ClientRole e)
+                {
+                    e.LoadDate_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry
+                    ClientRoleCode = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry(
+                        "ClientRoleCode",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ClientRoleCode_OnValueChanged);
+                private static void _ClientRoleCode_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ClientRoleCode, sf);
+                }
+                private static bool _ClientRoleCode_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
+                {
+                    bool result = false;
+                    e.ClientRoleCode_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ClientRoleCode_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ClientRoleCode_Validate(r);
+                }
+                private static string _ClientRoleCode_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ClientRoleCode;
+                }
+                private static void _ClientRoleCode_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ClientRoleCode = v;
+                }
+                private static void _ClientRoleCode_OnValueChanged(global::LightSwitchApplication.ClientRole e)
+                {
+                    e.ClientRoleCode_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>>.Entry
+                    LoadDateID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "LoadDateID",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDateID_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDateID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDateID_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDateID_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._LoadDateID_OnValueChanged);
+                private static void _LoadDateID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
+                {
+                    c(d, ref d._LoadDateID, sf);
+                }
+                private static bool _LoadDateID_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
+                {
+                    bool result = false;
+                    e.LoadDateID_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _LoadDateID_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.LoadDateID_Validate(r);
+                }
+                private static global::System.Nullable<int> _LoadDateID_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
+                {
+                    return d.ImplementationEntity.LoadDateID;
+                }
+                private static void _LoadDateID_OnValueChanged(global::LightSwitchApplication.ClientRole e)
+                {
+                    e.LoadDateID_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry
+                    sys_CreatedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry(
                         "sys_CreatedOn",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedOn_OnValueChanged);
-                private static void _sys_CreatedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedOn_OnValueChanged);
+                private static void _sys_CreatedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_CreatedOn, sf);
                 }
-                private static bool _sys_CreatedOn_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _sys_CreatedOn_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
                     e.sys_CreatedOn_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_CreatedOn_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_CreatedOn_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_CreatedOn_Validate(r);
                 }
-                private static global::System.DateTime _sys_CreatedOn_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.DateTime _sys_CreatedOn_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_CreatedOn;
                 }
-                private static void _sys_CreatedOn_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
+                private static void _sys_CreatedOn_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.sys_CreatedOn = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.sys_CreatedOn = global::LightSwitchApplication.ClientRole.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _sys_CreatedOn_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _sys_CreatedOn_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
                     e.sys_CreatedOn_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    sys_CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry
+                    sys_CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry(
                         "sys_CreatedBy",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_CreatedBy_OnValueChanged);
-                private static void _sys_CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_CreatedBy_OnValueChanged);
+                private static void _sys_CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_CreatedBy, sf);
                 }
-                private static bool _sys_CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _sys_CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
                     e.sys_CreatedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_CreatedBy_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_CreatedBy_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_CreatedBy_Validate(r);
                 }
-                private static string _sys_CreatedBy_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static string _sys_CreatedBy_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_CreatedBy;
                 }
-                private static void _sys_CreatedBy_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                private static void _sys_CreatedBy_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.sys_CreatedBy = v;
                 }
-                private static void _sys_CreatedBy_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _sys_CreatedBy_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
                     e.sys_CreatedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
-                    sys_ModifiedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry
+                    sys_ModifiedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Entry(
                         "sys_ModifiedOn",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedOn_OnValueChanged);
-                private static void _sys_ModifiedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedOn_OnValueChanged);
+                private static void _sys_ModifiedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_ModifiedOn, sf);
                 }
-                private static bool _sys_ModifiedOn_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _sys_ModifiedOn_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
                     e.sys_ModifiedOn_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_ModifiedOn_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_ModifiedOn_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_ModifiedOn_Validate(r);
                 }
-                private static global::System.DateTime _sys_ModifiedOn_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.DateTime _sys_ModifiedOn_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_ModifiedOn;
                 }
-                private static void _sys_ModifiedOn_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
+                private static void _sys_ModifiedOn_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.sys_ModifiedOn = global::LightSwitchApplication.DimDate.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.sys_ModifiedOn = global::LightSwitchApplication.ClientRole.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _sys_ModifiedOn_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _sys_ModifiedOn_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
                     e.sys_ModifiedOn_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    sys_ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry
+                    sys_ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Entry(
                         "sys_ModifiedBy",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._sys_ModifiedBy_OnValueChanged);
-                private static void _sys_ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._sys_ModifiedBy_OnValueChanged);
+                private static void _sys_ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_ModifiedBy, sf);
                 }
-                private static bool _sys_ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _sys_ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
                     e.sys_ModifiedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_ModifiedBy_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_ModifiedBy_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_ModifiedBy_Validate(r);
                 }
-                private static string _sys_ModifiedBy_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static string _sys_ModifiedBy_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_ModifiedBy;
                 }
-                private static void _sys_ModifiedBy_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
+                private static void _sys_ModifiedBy_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.sys_ModifiedBy = v;
                 }
-                private static void _sys_ModifiedBy_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _sys_ModifiedBy_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
                     e.sys_ModifiedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry
-                    Active = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Entry(
-                        "Active",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Active_OnValueChanged);
-                private static void _Active_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                        "ActiveType",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_Validate,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_GetCoreImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_GetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_SetImplementationValue,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_Refresh,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._ActiveType_OnValueChanged);
+                private static void _ActiveType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Active, sf);
+                    c(d, ref d._ActiveType, sf);
                 }
-                private static bool _Active_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.Active_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Active_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Active_Validate(r);
-                }
-                private static int _Active_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Active;
-                }
-                private static void _Active_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.Active = v;
-                }
-                private static void _Active_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.Active_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
-                    ContractorYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
-                        "ContractorYear",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorYear_OnValueChanged);
-                private static void _ContractorYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ContractorYear, sf);
-                }
-                private static bool _ContractorYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static bool _ActiveType_ComputeIsReadOnly(global::LightSwitchApplication.ClientRole e)
                 {
                     bool result = false;
-                    e.ContractorYear_IsReadOnly(ref result);
+                    e.ActiveType_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ContractorYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ActiveType_Validate(global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.ContractorYear_Validate(r);
+                    e.ActiveType_Validate(r);
                 }
-                private static global::System.Nullable<int> _ContractorYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _ActiveType_GetCoreImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    return d.ImplementationEntity.ContractorYear;
+                    return d.ImplementationEntity.ActiveType;
                 }
-                private static void _ContractorYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
+                private static global::LightSwitchApplication.ActiveType _ActiveType_GetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    d.ImplementationEntity.ContractorYear = v;
+                    return d.GetImplementationValue<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass>(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
                 }
-                private static void _ContractorYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
+                private static void _ActiveType_SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass d, global::LightSwitchApplication.ActiveType v)
                 {
-                    e.ContractorYear_Changed();
+                    d.SetImplementationValue(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType, (i, ev) => i.ActiveType = ev, v);
                 }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
-                    ContractorMonth = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
-                        "ContractorMonth",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorMonth_OnValueChanged);
-                private static void _ContractorMonth_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                private static void _ActiveType_Refresh(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    c(d, ref d._ContractorMonth, sf);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
                 }
-                private static bool _ContractorMonth_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static void _ActiveType_OnValueChanged(global::LightSwitchApplication.ClientRole e)
                 {
-                    bool result = false;
-                    e.ContractorMonth_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _ContractorMonth_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.ContractorMonth_Validate(r);
-                }
-                private static global::System.Nullable<int> _ContractorMonth_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ContractorMonth;
-                }
-                private static void _ContractorMonth_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
-                {
-                    d.ImplementationEntity.ContractorMonth = v;
-                }
-                private static void _ContractorMonth_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.ContractorMonth_Changed();
+                    e.ActiveType_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    ContractorPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "ContractorPeriod",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._ContractorPeriod_OnValueChanged);
-                private static void _ContractorPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry
+                    InvoiceLines = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Entry(
+                        "InvoiceLines",
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._InvoiceLines_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._InvoiceLines_GetReferencedEntities,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._InvoiceLines_GetEntityCollection);
+                private static void _InvoiceLines_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ContractorPeriod, sf);
+                    c(d, ref d._InvoiceLines, sf);
                 }
-                private static bool _ContractorPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.InvoiceLine> _InvoiceLines_GetReferencedEntities(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    bool result = false;
-                    e.ContractorPeriod_IsReadOnly(ref result);
-                    return result;
+                    return d.GetReferencedEntities<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass>(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.InvoiceLines, ref d._InvoiceLines);
                 }
-                private static void _ContractorPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static global::System.Collections.IEnumerable _InvoiceLines_GetEntityCollection(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    e.ContractorPeriod_Validate(r);
-                }
-                private static string _ContractorPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ContractorPeriod;
-                }
-                private static void _ContractorPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.ContractorPeriod = v;
-                }
-                private static void _ContractorPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.ContractorPeriod_Changed();
+                    return d.ImplementationEntity.InvoiceLines;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    BillingYear = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "BillingYear",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingYear_OnValueChanged);
-                private static void _BillingYear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BillingYear, sf);
-                }
-                private static bool _BillingYear_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.BillingYear_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _BillingYear_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.BillingYear_Validate(r);
-                }
-                private static string _BillingYear_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.BillingYear;
-                }
-                private static void _BillingYear_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.BillingYear = v;
-                }
-                private static void _BillingYear_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.BillingYear_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    WeekEndingBillingPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "WeekEndingBillingPeriod",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingBillingPeriod_OnValueChanged);
-                private static void _WeekEndingBillingPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._WeekEndingBillingPeriod, sf);
-                }
-                private static bool _WeekEndingBillingPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.WeekEndingBillingPeriod_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _WeekEndingBillingPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.WeekEndingBillingPeriod_Validate(r);
-                }
-                private static string _WeekEndingBillingPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.WeekEndingBillingPeriod;
-                }
-                private static void _WeekEndingBillingPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.WeekEndingBillingPeriod = v;
-                }
-                private static void _WeekEndingBillingPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.WeekEndingBillingPeriod_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    BillingPeriodText = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "BillingPeriodText",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriodText_OnValueChanged);
-                private static void _BillingPeriodText_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BillingPeriodText, sf);
-                }
-                private static bool _BillingPeriodText_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.BillingPeriodText_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _BillingPeriodText_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.BillingPeriodText_Validate(r);
-                }
-                private static string _BillingPeriodText_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.BillingPeriodText;
-                }
-                private static void _BillingPeriodText_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.BillingPeriodText = v;
-                }
-                private static void _BillingPeriodText_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.BillingPeriodText_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry
-                    BillingPeriod = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Entry(
-                        "BillingPeriod",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingPeriod_OnValueChanged);
-                private static void _BillingPeriod_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._BillingPeriod, sf);
-                }
-                private static bool _BillingPeriod_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.BillingPeriod_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _BillingPeriod_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.BillingPeriod_Validate(r);
-                }
-                private static global::System.Nullable<int> _BillingPeriod_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.BillingPeriod;
-                }
-                private static void _BillingPeriod_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.Nullable<int> v)
-                {
-                    d.ImplementationEntity.BillingPeriod = v;
-                }
-                private static void _BillingPeriod_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.BillingPeriod_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry
-                    WeekEnding = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Entry(
-                        "WeekEnding",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEnding_OnValueChanged);
-                private static void _WeekEnding_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._WeekEnding, sf);
-                }
-                private static bool _WeekEnding_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.WeekEnding_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _WeekEnding_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.WeekEnding_Validate(r);
-                }
-                private static global::System.DateTime _WeekEnding_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.WeekEnding;
-                }
-                private static void _WeekEnding_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, global::System.DateTime v)
-                {
-                    d.ImplementationEntity.WeekEnding = global::LightSwitchApplication.DimDate.DetailsClass.TruncateDate(v);
-                }
-                private static void _WeekEnding_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.WeekEnding_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry
-                    WeekEndingText = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Entry(
-                        "WeekEndingText",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_ComputeIsReadOnly,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_Validate,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_GetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_SetImplementationValue,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._WeekEndingText_OnValueChanged);
-                private static void _WeekEndingText_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._WeekEndingText, sf);
-                }
-                private static bool _WeekEndingText_ComputeIsReadOnly(global::LightSwitchApplication.DimDate e)
-                {
-                    bool result = false;
-                    e.WeekEndingText_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _WeekEndingText_Validate(global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.WeekEndingText_Validate(r);
-                }
-                private static string _WeekEndingText_GetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.WeekEndingText;
-                }
-                private static void _WeekEndingText_SetImplementationValue(global::LightSwitchApplication.DimDate.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.WeekEndingText = v;
-                }
-                private static void _WeekEndingText_OnValueChanged(global::LightSwitchApplication.DimDate e)
-                {
-                    e.WeekEndingText_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
-                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
-                        "TimesheetDetails",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._TimesheetDetails_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._TimesheetDetails_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._TimesheetDetails_GetEntityCollection);
-                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._TimesheetDetails, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> _TimesheetDetails_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.TimesheetDetails, ref d._TimesheetDetails);
-                }
-                private static global::System.Collections.IEnumerable _TimesheetDetails_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.TimesheetDetails;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
-                    Timesheets = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
-                        "Timesheets",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Timesheets_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Timesheets_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Timesheets_GetEntityCollection);
-                private static void _Timesheets_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Timesheets, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet> _Timesheets_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Timesheet, global::LightSwitchApplication.Timesheet.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Timesheets, ref d._Timesheets);
-                }
-                private static global::System.Collections.IEnumerable _Timesheets_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Timesheets;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
-                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry
+                    BillingDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Entry(
                         "BillingDetails",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingDetails_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingDetails_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._BillingDetails_GetEntityCollection);
-                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_Stub,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetReferencedEntities,
+                        global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties._BillingDetails_GetEntityCollection);
+                private static void _BillingDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ClientRole.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data> c, global::LightSwitchApplication.ClientRole.DetailsClass d, object sf)
                 {
                     c(d, ref d._BillingDetails, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> _BillingDetails_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> _BillingDetails_GetReferencedEntities(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.BillingDetail, global::LightSwitchApplication.BillingDetail.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.BillingDetails, ref d._BillingDetails);
+                    return d.GetReferencedEntities<global::LightSwitchApplication.BillingDetail, global::LightSwitchApplication.BillingDetail.DetailsClass>(global::LightSwitchApplication.ClientRole.DetailsClass.PropertySetProperties.BillingDetails, ref d._BillingDetails);
                 }
-                private static global::System.Collections.IEnumerable _BillingDetails_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
+                private static global::System.Collections.IEnumerable _BillingDetails_GetEntityCollection(global::LightSwitchApplication.ClientRole.DetailsClass d)
                 {
                     return d.ImplementationEntity.BillingDetails;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
-                    Invoices = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
-                        "Invoices",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices_GetEntityCollection);
-                private static void _Invoices_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Invoices, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices, ref d._Invoices);
-                }
-                private static global::System.Collections.IEnumerable _Invoices_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Invoices;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
-                    Invoices1 = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
-                        "Invoices1",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices1_GetEntityCollection);
-                private static void _Invoices1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Invoices1, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices1_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices1, ref d._Invoices1);
-                }
-                private static global::System.Collections.IEnumerable _Invoices1_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Invoices1;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
-                    Invoices2 = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
-                        "Invoices2",
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_Stub,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_GetReferencedEntities,
-                        global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties._Invoices2_GetEntityCollection);
-                private static void _Invoices2_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DimDate.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.DimDate.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Invoices2, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices2_GetReferencedEntities(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.DimDate.DetailsClass.PropertySetProperties.Invoices2, ref d._Invoices2);
-                }
-                private static global::System.Collections.IEnumerable _Invoices2_GetEntityCollection(global::LightSwitchApplication.DimDate.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Invoices2;
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _StandardDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _ClientRoleName;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _DateID;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, int>.Data _ClientRoleID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _c_Date;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _ClientRoleSourceKey;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _Day;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data _LoadDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _DaySuffix;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _ClientRoleCode;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _DayOfWeek;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.Nullable<int>>.Data _LoadDateID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _DOWInMonth;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data _sys_CreatedOn;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _DayOfYear;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _sys_CreatedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _WeekOfYear;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::System.DateTime>.Data _sys_ModifiedOn;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _WeekOfMonth;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, string>.Data _sys_ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _MonthNumber;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _MonthName;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.InvoiceLine>.Data _InvoiceLines;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _Quarter;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _QuarterName;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _YearName;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _YearNumber;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<bool>>.Data _IsPublicHoliday;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _HolidayText;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _DateSK;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _sys_CreatedOn;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _sys_CreatedBy;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _sys_ModifiedOn;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _sys_ModifiedBy;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, int>.Data _Active;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _ContractorYear;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _ContractorMonth;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _ContractorPeriod;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _BillingYear;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingBillingPeriod;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _BillingPeriodText;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.Nullable<int>>.Data _BillingPeriod;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::System.DateTime>.Data _WeekEnding;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, string>.Data _WeekEndingText;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices1;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.DimDate, global::LightSwitchApplication.DimDate.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices2;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ClientRole, global::LightSwitchApplication.ClientRole.DetailsClass, global::LightSwitchApplication.BillingDetail>.Data _BillingDetails;
             
         }
     

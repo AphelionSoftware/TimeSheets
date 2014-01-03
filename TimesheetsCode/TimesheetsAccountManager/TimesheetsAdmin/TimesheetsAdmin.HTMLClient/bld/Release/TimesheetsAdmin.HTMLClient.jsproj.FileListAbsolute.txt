@@ -6,3 +6,5 @@ D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\Times
 D:\Dropbox\Clients\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs

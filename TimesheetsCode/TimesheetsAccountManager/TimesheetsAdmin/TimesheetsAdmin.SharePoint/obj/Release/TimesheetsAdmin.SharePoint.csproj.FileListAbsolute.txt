@@ -12,3 +12,6 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsA
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.csprojResolveAssemblyReference.cache
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Release\TimesheetsAdmin.SharePoint.pdb
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.dll
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Release\TimesheetsAdmin.SharePoint.pdb

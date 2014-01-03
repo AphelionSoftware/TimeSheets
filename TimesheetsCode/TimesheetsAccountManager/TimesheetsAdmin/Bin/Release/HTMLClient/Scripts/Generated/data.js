@@ -1,4 +1,4 @@
-﻿/// <reference path="../Scripts/msls-1.0.0.js" />
+﻿/// <reference path="../Scripts/msls.js" />
 
 window.myapp = msls.application;
 
@@ -29,7 +29,7 @@ window.myapp = msls.application;
         /// <field name="LoadDate" type="Date">
         /// Gets or sets the loadDate for this billingDetail.
         /// </field>
-        /// <field name="Rate" type="Number">
+        /// <field name="Rate" type="String">
         /// Gets or sets the rate for this billingDetail.
         /// </field>
         /// <field name="LoadDateID" type="Number">
@@ -378,7 +378,7 @@ window.myapp = msls.application;
         /// <field name="HourlyCost" type="Number">
         /// Gets or sets the hourlyCost for this person.
         /// </field>
-        /// <field name="MonthlyCost" type="Number">
+        /// <field name="MonthlyCost" type="String">
         /// Gets or sets the monthlyCost for this person.
         /// </field>
         /// <field name="IsContractor" type="Number">
@@ -469,16 +469,16 @@ window.myapp = msls.application;
         /// <field name="ProjectFirstFilename" type="String">
         /// Gets or sets the projectFirstFilename for this project.
         /// </field>
-        /// <field name="ConsultingEstimate" type="Number">
+        /// <field name="ConsultingEstimate" type="String">
         /// Gets or sets the consultingEstimate for this project.
         /// </field>
-        /// <field name="SoftwareEstimate" type="Number">
+        /// <field name="SoftwareEstimate" type="String">
         /// Gets or sets the softwareEstimate for this project.
         /// </field>
-        /// <field name="VMEstimate" type="Number">
+        /// <field name="VMEstimate" type="String">
         /// Gets or sets the vMEstimate for this project.
         /// </field>
-        /// <field name="ProjectCap" type="Number">
+        /// <field name="ProjectCap" type="String">
         /// Gets or sets the projectCap for this project.
         /// </field>
         /// <field name="AdminProject" type="Number">
@@ -511,13 +511,13 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this project.
         /// </field>
-        /// <field name="MonthlyCap" type="Number">
+        /// <field name="MonthlyCap" type="String">
         /// Gets or sets the monthlyCap for this project.
         /// </field>
-        /// <field name="MonthlyCapWarning" type="Number">
+        /// <field name="MonthlyCapWarning" type="String">
         /// Gets or sets the monthlyCapWarning for this project.
         /// </field>
-        /// <field name="ProjectCapWarning" type="Number">
+        /// <field name="ProjectCapWarning" type="String">
         /// Gets or sets the projectCapWarning for this project.
         /// </field>
         /// <field name="InvoiceEmailAddress" type="String">
@@ -526,7 +526,7 @@ window.myapp = msls.application;
         /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
         /// Gets the invoiceLines for this project.
         /// </field>
-        /// <field name="CommPercent" type="Number">
+        /// <field name="CommPercent" type="String">
         /// Gets or sets the commPercent for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
@@ -642,7 +642,7 @@ window.myapp = msls.application;
         /// <field name="LoadDateID" type="Number">
         /// Gets or sets the loadDateID for this timesheetDetail.
         /// </field>
-        /// <field name="Hours" type="Number">
+        /// <field name="Hours" type="String">
         /// Gets or sets the hours for this timesheetDetail.
         /// </field>
         /// <field name="Comments" type="String">
@@ -1017,7 +1017,7 @@ window.myapp = msls.application;
         /// <field name="LoadDateID" type="Number">
         /// Gets or sets the loadDateID for this overbudgetTimesheet.
         /// </field>
-        /// <field name="Hours" type="Number">
+        /// <field name="Hours" type="String">
         /// Gets or sets the hours for this overbudgetTimesheet.
         /// </field>
         /// <field name="TimesheetID" type="Number">
@@ -1103,7 +1103,7 @@ window.myapp = msls.application;
         /// <field name="LoadDateID" type="Number">
         /// Gets or sets the loadDateID for this unallocatedTimesheet.
         /// </field>
-        /// <field name="Hours" type="Number">
+        /// <field name="Hours" type="String">
         /// Gets or sets the hours for this unallocatedTimesheet.
         /// </field>
         /// <field name="TimesheetID" type="Number">
@@ -1255,7 +1255,7 @@ window.myapp = msls.application;
         /// <field name="InvoiceLineCode" type="String">
         /// Gets or sets the invoiceLineCode for this invoiceLine.
         /// </field>
-        /// <field name="InvoiceLineRate" type="Number">
+        /// <field name="InvoiceLineRate" type="String">
         /// Gets or sets the invoiceLineRate for this invoiceLine.
         /// </field>
         /// <field name="InvoiceLineQty" type="Number">
@@ -1282,7 +1282,7 @@ window.myapp = msls.application;
         /// <field name="Person" type="msls.application.Person">
         /// Gets or sets the person for this invoiceLine.
         /// </field>
-        /// <field name="InvoiceLineAmount" type="Number">
+        /// <field name="InvoiceLineAmount" type="String">
         /// Gets or sets the invoiceLineAmount for this invoiceLine.
         /// </field>
         /// <field name="ClientRole" type="msls.application.ClientRole">
@@ -1431,11 +1431,11 @@ window.myapp = msls.application;
     msls._addToNamespace("msls.application", {
 
         BillingDetail: $defineEntity(BillingDetail, [
-            { name: "BillingDetailID", type: Number },
+            { name: "BillingDetailID", type: Number, isReadOnly: true },
             { name: "BillingDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
-            { name: "Rate", type: Number },
-            { name: "LoadDateID", type: Number },
+            { name: "Rate", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "Client", kind: "reference", type: Client },
             { name: "Person", kind: "reference", type: Person },
             { name: "sys_CreatedOn", type: Date },
@@ -1449,11 +1449,11 @@ window.myapp = msls.application;
 
         BillingStatus: $defineEntity(BillingStatus, [
             { name: "BillingStatusName", type: String },
-            { name: "BillingStatusID", type: Number },
+            { name: "BillingStatusID", type: Number, isReadOnly: true },
             { name: "BillingStatusSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "BillingStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1466,11 +1466,11 @@ window.myapp = msls.application;
 
         Client: $defineEntity(Client, [
             { name: "ClientName", type: String },
-            { name: "ClientID", type: Number },
+            { name: "ClientID", type: Number, isReadOnly: true },
             { name: "ClientSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ClientCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "sys_CreatedOn", type: Date },
@@ -1510,7 +1510,7 @@ window.myapp = msls.application;
             { name: "YearNumber", type: Number },
             { name: "IsPublicHoliday", type: Boolean },
             { name: "HolidayText", type: String },
-            { name: "DateSK", type: Number },
+            { name: "DateSK", type: Number, isReadOnly: true },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1535,17 +1535,17 @@ window.myapp = msls.application;
 
         Person: $defineEntity(Person, [
             { name: "PersonName", type: String },
-            { name: "PersonID", type: Number },
+            { name: "PersonID", type: Number, isReadOnly: true },
             { name: "PersonSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "PersonCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "BillingPercentTarget", type: Number },
             { name: "BillingPercentMinimum", type: Number },
             { name: "Email", type: String },
             { name: "StartDate", type: Date },
             { name: "HourlyCost", type: Number },
-            { name: "MonthlyCost", type: Number },
+            { name: "MonthlyCost", type: String },
             { name: "IsContractor", type: Number },
             { name: "Billable", type: Number },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
@@ -1566,18 +1566,18 @@ window.myapp = msls.application;
         ]),
 
         Project: $defineEntity(Project, [
-            { name: "ProjectID", type: Number },
+            { name: "ProjectID", type: Number, isReadOnly: true },
             { name: "ProjectName", type: String },
             { name: "ProjectSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ProjectCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "ProjectFirstPersonName", type: String },
             { name: "ProjectFirstFilename", type: String },
-            { name: "ConsultingEstimate", type: Number },
-            { name: "SoftwareEstimate", type: Number },
-            { name: "VMEstimate", type: Number },
-            { name: "ProjectCap", type: Number },
+            { name: "ConsultingEstimate", type: String },
+            { name: "SoftwareEstimate", type: String },
+            { name: "VMEstimate", type: String },
+            { name: "ProjectCap", type: String },
             { name: "AdminProject", type: Number },
             { name: "BillingStatus", kind: "reference", type: BillingStatus },
             { name: "Client", kind: "reference", type: Client },
@@ -1588,16 +1588,16 @@ window.myapp = msls.application;
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "MonthlyCap", type: Number },
-            { name: "MonthlyCapWarning", type: Number },
-            { name: "ProjectCapWarning", type: Number },
+            { name: "MonthlyCap", type: String },
+            { name: "MonthlyCapWarning", type: String },
+            { name: "ProjectCapWarning", type: String },
             { name: "InvoiceEmailAddress", type: String },
             { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
-            { name: "CommPercent", type: Number }
+            { name: "CommPercent", type: String }
         ]),
 
         Timesheet: $defineEntity(Timesheet, [
-            { name: "TimesheetID", type: Number },
+            { name: "TimesheetID", type: Number, isReadOnly: true },
             { name: "TimesheetSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TimesheetName", type: String },
@@ -1607,7 +1607,7 @@ window.myapp = msls.application;
             { name: "TimesheetToDateID", type: Number },
             { name: "TimesheetPerson", type: String },
             { name: "TimesheetDate", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "OverallStatusID", type: Number },
             { name: "sys_CreatedOn", type: Date },
@@ -1616,20 +1616,20 @@ window.myapp = msls.application;
             { name: "sys_ModifiedBy", type: String },
             { name: "DimDate", kind: "reference", type: DimDate },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "PeriodEnding", type: Date },
+            { name: "PeriodEnding", type: Date, isReadOnly: true },
             { name: "Person", kind: "reference", type: Person },
             { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
-            { name: "TimesheetDetailID", type: Number },
+            { name: "TimesheetDetailID", type: Number, isReadOnly: true },
             { name: "TimesheetDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TimesheetDetailName", type: String },
             { name: "TimesheetDetailCode", type: String },
             { name: "TimesheetDetailFileName", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "Hours", type: String },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
             { name: "AMComments", type: String },
@@ -1647,16 +1647,16 @@ window.myapp = msls.application;
             { name: "BillingStatus", kind: "reference", type: BillingStatus },
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet },
-            { name: "VerCol", type: Array }
+            { name: "VerCol", type: Array, isReadOnly: true }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [
-            { name: "TypeOfWorkID", type: Number },
+            { name: "TypeOfWorkID", type: Number, isReadOnly: true },
             { name: "TypeOfWorkName", type: String },
             { name: "TypeOfWorkSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TypeOfWorkCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1666,12 +1666,12 @@ window.myapp = msls.application;
         ]),
 
         RoleType: $defineEntity(RoleType, [
-            { name: "RoleTypeID", type: Number },
+            { name: "RoleTypeID", type: Number, isReadOnly: true },
             { name: "RoleTypeName", type: String },
             { name: "RoleTypeSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "RoleTypeCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1681,11 +1681,11 @@ window.myapp = msls.application;
 
         ClientRole: $defineEntity(ClientRole, [
             { name: "ClientRoleName", type: String },
-            { name: "ClientRoleID", type: Number },
+            { name: "ClientRoleID", type: Number, isReadOnly: true },
             { name: "ClientRoleSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ClientRoleCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1696,12 +1696,12 @@ window.myapp = msls.application;
         ]),
 
         SystemRole: $defineEntity(SystemRole, [
-            { name: "SystemRoleID", type: Number },
+            { name: "SystemRoleID", type: Number, isReadOnly: true },
             { name: "SystemRoleName", type: String },
             { name: "SystemRoleSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "SystemRoleCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1746,7 +1746,7 @@ window.myapp = msls.application;
             { name: "TimesheetDetailFileName", type: String },
             { name: "TimesheetDetailDateID", type: Number },
             { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "Hours", type: String },
             { name: "TimesheetID", type: Number },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
@@ -1772,7 +1772,7 @@ window.myapp = msls.application;
             { name: "TimesheetDetailFileName", type: String },
             { name: "TimesheetDetailDateID", type: Number },
             { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "Hours", type: String },
             { name: "TimesheetID", type: Number },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
@@ -1792,11 +1792,11 @@ window.myapp = msls.application;
         ]),
 
         Invoice: $defineEntity(Invoice, [
-            { name: "InvoiceID", type: Number },
+            { name: "InvoiceID", type: Number, isReadOnly: true },
             { name: "InvoiceSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "InvoiceFileName", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "Comments", type: String },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1815,12 +1815,12 @@ window.myapp = msls.application;
         ]),
 
         InvoiceLine: $defineEntity(InvoiceLine, [
-            { name: "InvoiceLineID", type: Number },
+            { name: "InvoiceLineID", type: Number, isReadOnly: true },
             { name: "LoadDate", type: Date },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "InvoiceLineDescription", type: String },
             { name: "InvoiceLineCode", type: String },
-            { name: "InvoiceLineRate", type: Number },
+            { name: "InvoiceLineRate", type: String },
             { name: "InvoiceLineQty", type: Number },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1829,18 +1829,18 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "Invoice", kind: "reference", type: Invoice },
             { name: "Person", kind: "reference", type: Person },
-            { name: "InvoiceLineAmount", type: Number },
+            { name: "InvoiceLineAmount", type: String },
             { name: "ClientRole", kind: "reference", type: ClientRole },
             { name: "Project", kind: "reference", type: Project }
         ]),
 
         InvoiceStatu: $defineEntity(InvoiceStatu, [
-            { name: "InvoiceStatusID", type: Number },
+            { name: "InvoiceStatusID", type: Number, isReadOnly: true },
             { name: "InvoiceStatusSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "InvoiceStatusName", type: String },
             { name: "InvoiceStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1955,6 +1955,55 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "ActiveTypes_SingleOrDefault", value: function (ID) {
+                    return new $DataServiceQuery({ _entitySet: this.ActiveTypes },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "OverbudgetTimesheets_SingleOrDefault", value: function (BillingStatusName, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail) {
+                    return new $DataServiceQuery({ _entitySet: this.OverbudgetTimesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/OverbudgetTimesheets(" + "BillingStatusName=" + $toODataString(BillingStatusName, "String?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + ")"
+                    );
+                }
+            },
+            {
+                name: "ProjectsOverCaps_SingleOrDefault", value: function (ErrorMessage) {
+                    return new $DataServiceQuery({ _entitySet: this.ProjectsOverCaps },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectsOverCaps(" + "ErrorMessage=" + $toODataString(ErrorMessage, "String?") + ")"
+                    );
+                }
+            },
+            {
+                name: "UnallocatedTimesheets_SingleOrDefault", value: function (ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail, ADUserName, SharePointUserName, BillingStatusID) {
+                    return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/UnallocatedTimesheets(" + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + "," + "ADUserName=" + $toODataString(ADUserName, "String?") + "," + "SharePointUserName=" + $toODataString(SharePointUserName, "String?") + "," + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Invoices_SingleOrDefault", value: function (InvoiceID) {
+                    return new $DataServiceQuery({ _entitySet: this.Invoices },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Invoices(" + "InvoiceID=" + $toODataString(InvoiceID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "InvoiceLines_SingleOrDefault", value: function (InvoiceLineID) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLines(" + "InvoiceLineID=" + $toODataString(InvoiceLineID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "InvoiceStatus_SingleOrDefault", value: function (InvoiceStatusID) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceStatus },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceStatus(" + "InvoiceStatusID=" + $toODataString(InvoiceStatusID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
                 name: "TimesheetsByDate", value: function (StartDate, EndDate, TimesheetPerson) {
                     return new $DataServiceQuery({ _entitySet: this.Timesheets },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetsByDate()",
@@ -1963,13 +2012,6 @@ window.myapp = msls.application;
                             EndDate: $toODataString(EndDate, "DateTime?"),
                             TimesheetPerson: $toODataString(TimesheetPerson, "String?")
                         });
-                }
-            },
-            {
-                name: "ActiveTypes_SingleOrDefault", value: function (ID) {
-                    return new $DataServiceQuery({ _entitySet: this.ActiveTypes },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
-                    );
                 }
             },
             {
@@ -2017,27 +2059,6 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "OverbudgetTimesheets_SingleOrDefault", value: function (BillingStatusName, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail) {
-                    return new $DataServiceQuery({ _entitySet: this.OverbudgetTimesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/OverbudgetTimesheets(" + "BillingStatusName=" + $toODataString(BillingStatusName, "String?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + ")"
-                    );
-                }
-            },
-            {
-                name: "ProjectsOverCaps_SingleOrDefault", value: function (ErrorMessage) {
-                    return new $DataServiceQuery({ _entitySet: this.ProjectsOverCaps },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectsOverCaps(" + "ErrorMessage=" + $toODataString(ErrorMessage, "String?") + ")"
-                    );
-                }
-            },
-            {
-                name: "UnallocatedTimesheets_SingleOrDefault", value: function (ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail, ADUserName, SharePointUserName, BillingStatusID) {
-                    return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/UnallocatedTimesheets(" + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + "," + "ADUserName=" + $toODataString(ADUserName, "String?") + "," + "SharePointUserName=" + $toODataString(SharePointUserName, "String?") + "," + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
                 name: "UnallocatedTimesheetsSorted", value: function (ClientName, PersonName) {
                     return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/UnallocatedTimesheetsSorted()",
@@ -2045,27 +2066,6 @@ window.myapp = msls.application;
                             ClientName: $toODataString(ClientName, "String?"),
                             PersonName: $toODataString(PersonName, "String?")
                         });
-                }
-            },
-            {
-                name: "Invoices_SingleOrDefault", value: function (InvoiceID) {
-                    return new $DataServiceQuery({ _entitySet: this.Invoices },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Invoices(" + "InvoiceID=" + $toODataString(InvoiceID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "InvoiceLines_SingleOrDefault", value: function (InvoiceLineID) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLines(" + "InvoiceLineID=" + $toODataString(InvoiceLineID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "InvoiceStatus_SingleOrDefault", value: function (InvoiceStatusID) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceStatus },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceStatus(" + "InvoiceStatusID=" + $toODataString(InvoiceStatusID, "Int32?") + ")"
-                    );
                 }
             },
             {

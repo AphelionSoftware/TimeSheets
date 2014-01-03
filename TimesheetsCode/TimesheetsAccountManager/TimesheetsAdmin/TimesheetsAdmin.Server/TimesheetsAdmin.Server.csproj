@@ -13,8 +13,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LightSwitchApplication</RootNamespace>
     <AssemblyName>Application.Server</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <LightSwitchVersion>v3.0</LightSwitchVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <SupportedCultures>en-US</SupportedCultures>
     <FileAlignment>512</FileAlignment>
@@ -33,6 +33,8 @@
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <NuGetPackagesFolder Condition=" Exists('..\Packages')">..\Packages\</NuGetPackagesFolder>
+    <NuGetPackagesFolder Condition=" Exists('..\..\Packages')">..\..\Packages\</NuGetPackagesFolder>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,7 +59,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.LightSwitch.Extensions.Server">
-      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\ServerGen\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
+      <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.LightSwitch.Server.SharePoint">
       <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.SharePoint.dll</HintPath>
@@ -87,6 +89,11 @@
       <ProjectCritical>True</ProjectCritical>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>$(NuGetPackagesFolder)\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
     <Reference Include="System.Runtime.Serialization">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
@@ -110,18 +117,13 @@
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
-    <Reference Include="Microsoft.LightSwitch.Base.Server">
-      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Base.Server.dll</HintPath>
-      <Private>True</Private>
-      <ProjectCritical>True</ProjectCritical>
-    </Reference>
-    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.11.3, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.12.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.ExportProvider.dll</HintPath>
       <SpecificVersion>True</SpecificVersion>
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
-    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=11.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.CodeMarker.dll</HintPath>
       <SpecificVersion>True</SpecificVersion>
       <Private>True</Private>
@@ -140,10 +142,6 @@
     <Reference Include="Microsoft.LightSwitch.Server">
       <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.dll</HintPath>
       <Private>True</Private>
-      <ProjectCritical>True</ProjectCritical>
-    </Reference>
-    <Reference Include="Microsoft.LightSwitch.Server.Internal">
-      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.Internal.dll</HintPath>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
     <Reference Include="Microsoft.LightSwitch.Server.Host">
@@ -175,14 +173,6 @@
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel">
-      <Private>True</Private>
-      <ProjectCritical>True</ProjectCritical>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Extensions">
-      <Private>True</Private>
-      <ProjectCritical>True</ProjectCritical>
-    </Reference>
     <Reference Include="System.Spatial">
       <HintPath>$(LightSwitchSDKPath)\Server\System.Spatial.dll</HintPath>
       <Private>True</Private>
@@ -210,6 +200,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\TimesheetsData\BillingDetail.lsml.cs">
+      <DependentUpon>BillingDetails.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\TimesheetsData\BillingStatus.lsml.cs">
+      <DependentUpon>BillingStatusSet.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\TimesheetsData\Client.lsml.cs">
+      <DependentUpon>Clients.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\TimesheetsData\UnallocatedTimesheet.lsml.cs">
+      <DependentUpon>UnallocatedTimesheets.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\TimesheetsData\_TimesheetsDataService.lsml.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharePointLaunch.aspx.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
@@ -218,11 +228,6 @@
     <Compile Include="SharePointLaunch.aspx.designer.cs">
       <DependentUpon>SharePointLaunch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserCode\Shared\Client.cs" />
-    <Compile Include="UserCode\Shared\UnallocatedTimesheet.cs" />
-    <Compile Include="UserCode\TimesheetsDataService.cs" />
-    <Compile Include="UserCode\Shared\BillingDetail.cs" />
-    <Compile Include="UserCode\Shared\BillingStatus.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">
@@ -230,8 +235,60 @@
     </LightSwitchModel>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="default.aspx" />
     <Content Include="SharePointLaunch.aspx" />
     <Content Include="Web.config" />
+    <_ServerFile Include="packages.config" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDetails.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\BillingStatusSet.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\Clients.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\DimDates.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\People.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\Projects.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\Timesheets.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\TimesheetDetails.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\TypeOfWorks.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\RoleTypes.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\ClientRoles.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\SystemRoles.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\ActiveTypes.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\OverbudgetTimesheets.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsOverCaps.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\UnallocatedTimesheets.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\Invoices.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceLines.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceStatus.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\TimesheetsData.lsml" />
+    <LightSwitchModel Include="DataSources\TimesheetsData\TimesheetsByDate.lsml">
+      <DependentUpon>Timesheets.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\PersonSorted.lsml">
+      <DependentUpon>People.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDate.lsml">
+      <DependentUpon>DimDates.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\FilteredClient.lsml">
+      <DependentUpon>Clients.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsFilter.lsml">
+      <DependentUpon>Projects.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\ProjectsSorted.lsml">
+      <DependentUpon>Projects.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\UnallocatedTimesheetsSorted.lsml">
+      <DependentUpon>UnallocatedTimesheets.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\InvoicesSorted.lsml">
+      <DependentUpon>Invoices.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\InvoiceLinesSorted.lsml">
+      <DependentUpon>InvoiceLines.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\BillingDetailsSorted.lsml">
+      <DependentUpon>BillingDetails.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -242,9 +299,7 @@
     <_ServerFile Include="LogOut.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataLogic\" />
-    <Folder Include="DataSources\" />
-    <Folder Include="Web\" />
+    <Folder Include="UserCode\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>

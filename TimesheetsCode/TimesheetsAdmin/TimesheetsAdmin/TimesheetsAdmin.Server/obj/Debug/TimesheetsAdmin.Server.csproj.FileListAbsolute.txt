@@ -253,10 +253,7 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.Data.OData.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.Data.Services.Client.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.Data.Services.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.IdentityModel.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.IdentityModel.Extensions.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.AppBridge.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Base.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.CodeMarker.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.ExportProvider.dll
@@ -265,7 +262,6 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Model.Xaml.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Server.Host.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Server.Internal.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.Server.SharePoint.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.SharePoint.Client.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
@@ -287,3 +283,6 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.pdb
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Application.Server.dll.config
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.IdentityModel.Tokens.Jwt.xml

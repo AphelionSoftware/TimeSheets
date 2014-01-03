@@ -1,4 +1,4 @@
-﻿/// <reference path="../Scripts/msls-1.0.0.js" />
+﻿/// <reference path="../Scripts/msls.js" />
 
 window.myapp = msls.application;
 
@@ -12,6 +12,85 @@ window.myapp = msls.application;
         $defineDataWorkspace = msls._defineDataWorkspace,
         $DataServiceQuery = msls.DataServiceQuery,
         $toODataString = msls._toODataString;
+
+    function ActiveType(entitySet) {
+        /// <summary>
+        /// Represents the ActiveType entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this activeType.
+        /// </param>
+        /// <field name="ID" type="Number">
+        /// Gets or sets the iD for this activeType.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this activeType.
+        /// </field>
+        /// <field name="Code" type="String">
+        /// Gets or sets the code for this activeType.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this activeType.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this activeType.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this activeType.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this activeType.
+        /// </field>
+        /// <field name="Active" type="Number">
+        /// Gets or sets the active for this activeType.
+        /// </field>
+        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetails for this activeType.
+        /// </field>
+        /// <field name="BillingStatus" type="msls.EntityCollection" elementType="msls.application.BillingStatus">
+        /// Gets the billingStatus for this activeType.
+        /// </field>
+        /// <field name="Clients" type="msls.EntityCollection" elementType="msls.application.Client">
+        /// Gets the clients for this activeType.
+        /// </field>
+        /// <field name="ClientRoles" type="msls.EntityCollection" elementType="msls.application.ClientRole">
+        /// Gets the clientRoles for this activeType.
+        /// </field>
+        /// <field name="People" type="msls.EntityCollection" elementType="msls.application.Person">
+        /// Gets the people for this activeType.
+        /// </field>
+        /// <field name="Projects" type="msls.EntityCollection" elementType="msls.application.Project">
+        /// Gets the projects for this activeType.
+        /// </field>
+        /// <field name="RoleTypes" type="msls.EntityCollection" elementType="msls.application.RoleType">
+        /// Gets the roleTypes for this activeType.
+        /// </field>
+        /// <field name="SystemRoles" type="msls.EntityCollection" elementType="msls.application.SystemRole">
+        /// Gets the systemRoles for this activeType.
+        /// </field>
+        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
+        /// Gets the timesheets for this activeType.
+        /// </field>
+        /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetails for this activeType.
+        /// </field>
+        /// <field name="TypeOfWorks" type="msls.EntityCollection" elementType="msls.application.TypeOfWork">
+        /// Gets the typeOfWorks for this activeType.
+        /// </field>
+        /// <field name="Invoices" type="msls.EntityCollection" elementType="msls.application.Invoice">
+        /// Gets the invoices for this activeType.
+        /// </field>
+        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
+        /// Gets the invoiceLines for this activeType.
+        /// </field>
+        /// <field name="InvoiceStatus" type="msls.EntityCollection" elementType="msls.application.InvoiceStatu">
+        /// Gets the invoiceStatus for this activeType.
+        /// </field>
+        /// <field name="details" type="msls.application.ActiveType.Details">
+        /// Gets the details for this activeType.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
 
     function BillingDetail(entitySet) {
         /// <summary>
@@ -29,7 +108,7 @@ window.myapp = msls.application;
         /// <field name="LoadDate" type="Date">
         /// Gets or sets the loadDate for this billingDetail.
         /// </field>
-        /// <field name="Rate" type="Number">
+        /// <field name="Rate" type="String">
         /// Gets or sets the rate for this billingDetail.
         /// </field>
         /// <field name="LoadDateID" type="Number">
@@ -119,6 +198,58 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.BillingStatus.Details">
         /// Gets the details for this billingStatus.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function ClientRole(entitySet) {
+        /// <summary>
+        /// Represents the ClientRole entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this clientRole.
+        /// </param>
+        /// <field name="ClientRoleName" type="String">
+        /// Gets or sets the clientRoleName for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleID" type="Number">
+        /// Gets or sets the clientRoleID for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleSourceKey" type="String">
+        /// Gets or sets the clientRoleSourceKey for this clientRole.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleCode" type="String">
+        /// Gets or sets the clientRoleCode for this clientRole.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this clientRole.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this clientRole.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this clientRole.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this clientRole.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this clientRole.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this clientRole.
+        /// </field>
+        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
+        /// Gets the invoiceLines for this clientRole.
+        /// </field>
+        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetails for this clientRole.
+        /// </field>
+        /// <field name="details" type="msls.application.ClientRole.Details">
+        /// Gets the details for this clientRole.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -338,6 +469,265 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function InvoiceLine(entitySet) {
+        /// <summary>
+        /// Represents the InvoiceLine entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this invoiceLine.
+        /// </param>
+        /// <field name="InvoiceLineID" type="Number">
+        /// Gets or sets the invoiceLineID for this invoiceLine.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this invoiceLine.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this invoiceLine.
+        /// </field>
+        /// <field name="InvoiceLineDescription" type="String">
+        /// Gets or sets the invoiceLineDescription for this invoiceLine.
+        /// </field>
+        /// <field name="InvoiceLineCode" type="String">
+        /// Gets or sets the invoiceLineCode for this invoiceLine.
+        /// </field>
+        /// <field name="InvoiceLineRate" type="String">
+        /// Gets or sets the invoiceLineRate for this invoiceLine.
+        /// </field>
+        /// <field name="InvoiceLineQty" type="Number">
+        /// Gets or sets the invoiceLineQty for this invoiceLine.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this invoiceLine.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this invoiceLine.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this invoiceLine.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this invoiceLine.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this invoiceLine.
+        /// </field>
+        /// <field name="Invoice" type="msls.application.Invoice">
+        /// Gets or sets the invoice for this invoiceLine.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this invoiceLine.
+        /// </field>
+        /// <field name="InvoiceLineAmount" type="String">
+        /// Gets or sets the invoiceLineAmount for this invoiceLine.
+        /// </field>
+        /// <field name="ClientRole" type="msls.application.ClientRole">
+        /// Gets or sets the clientRole for this invoiceLine.
+        /// </field>
+        /// <field name="Project" type="msls.application.Project">
+        /// Gets or sets the project for this invoiceLine.
+        /// </field>
+        /// <field name="details" type="msls.application.InvoiceLine.Details">
+        /// Gets the details for this invoiceLine.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function Invoice(entitySet) {
+        /// <summary>
+        /// Represents the Invoice entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this invoice.
+        /// </param>
+        /// <field name="InvoiceID" type="Number">
+        /// Gets or sets the invoiceID for this invoice.
+        /// </field>
+        /// <field name="InvoiceSourceKey" type="String">
+        /// Gets or sets the invoiceSourceKey for this invoice.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this invoice.
+        /// </field>
+        /// <field name="InvoiceFileName" type="String">
+        /// Gets or sets the invoiceFileName for this invoice.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this invoice.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this invoice.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this invoice.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this invoice.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this invoice.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this invoice.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this invoice.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this invoice.
+        /// </field>
+        /// <field name="DimDate" type="msls.application.DimDate">
+        /// Gets or sets the dimDate for this invoice.
+        /// </field>
+        /// <field name="InvoiceStatu" type="msls.application.InvoiceStatu">
+        /// Gets or sets the invoiceStatu for this invoice.
+        /// </field>
+        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
+        /// Gets the invoiceLines for this invoice.
+        /// </field>
+        /// <field name="InvoiceEmailAddress" type="String">
+        /// Gets or sets the invoiceEmailAddress for this invoice.
+        /// </field>
+        /// <field name="Client" type="msls.application.Client">
+        /// Gets or sets the client for this invoice.
+        /// </field>
+        /// <field name="DueDate" type="msls.application.DimDate">
+        /// Gets or sets the dueDate for this invoice.
+        /// </field>
+        /// <field name="InvoiceNumber" type="String">
+        /// Gets or sets the invoiceNumber for this invoice.
+        /// </field>
+        /// <field name="DimDate2" type="msls.application.DimDate">
+        /// Gets or sets the dimDate2 for this invoice.
+        /// </field>
+        /// <field name="details" type="msls.application.Invoice.Details">
+        /// Gets the details for this invoice.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function InvoiceStatu(entitySet) {
+        /// <summary>
+        /// Represents the InvoiceStatu entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this invoiceStatu.
+        /// </param>
+        /// <field name="InvoiceStatusID" type="Number">
+        /// Gets or sets the invoiceStatusID for this invoiceStatu.
+        /// </field>
+        /// <field name="InvoiceStatusSourceKey" type="String">
+        /// Gets or sets the invoiceStatusSourceKey for this invoiceStatu.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this invoiceStatu.
+        /// </field>
+        /// <field name="InvoiceStatusName" type="String">
+        /// Gets or sets the invoiceStatusName for this invoiceStatu.
+        /// </field>
+        /// <field name="InvoiceStatusCode" type="String">
+        /// Gets or sets the invoiceStatusCode for this invoiceStatu.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this invoiceStatu.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this invoiceStatu.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this invoiceStatu.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this invoiceStatu.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this invoiceStatu.
+        /// </field>
+        /// <field name="Invoices" type="msls.EntityCollection" elementType="msls.application.Invoice">
+        /// Gets the invoices for this invoiceStatu.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this invoiceStatu.
+        /// </field>
+        /// <field name="details" type="msls.application.InvoiceStatu.Details">
+        /// Gets the details for this invoiceStatu.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function OverbudgetTimesheet(entitySet) {
+        /// <summary>
+        /// Represents the OverbudgetTimesheet entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this overbudgetTimesheet.
+        /// </param>
+        /// <field name="BillingStatusName" type="String">
+        /// Gets or sets the billingStatusName for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="ClientName" type="String">
+        /// Gets or sets the clientName for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="ProjectName" type="String">
+        /// Gets or sets the projectName for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailID" type="Number">
+        /// Gets or sets the timesheetDetailID for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailSourceKey" type="String">
+        /// Gets or sets the timesheetDetailSourceKey for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="Active" type="Number">
+        /// Gets or sets the active for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailFileName" type="String">
+        /// Gets or sets the timesheetDetailFileName for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TimesheetDetailDateID" type="Number">
+        /// Gets or sets the timesheetDetailDateID for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="Hours" type="String">
+        /// Gets or sets the hours for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TimesheetID" type="Number">
+        /// Gets or sets the timesheetID for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="ClientComments" type="String">
+        /// Gets or sets the clientComments for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="AMComments" type="String">
+        /// Gets or sets the aMComments for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="Exclude" type="Number">
+        /// Gets or sets the exclude for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="TypeOfWorkName" type="String">
+        /// Gets or sets the typeOfWorkName for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="AccountManager" type="String">
+        /// Gets or sets the accountManager for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="AMEmail" type="String">
+        /// Gets or sets the aMEmail for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="BillingPeriodText" type="String">
+        /// Gets or sets the billingPeriodText for this overbudgetTimesheet.
+        /// </field>
+        /// <field name="details" type="msls.application.OverbudgetTimesheet.Details">
+        /// Gets the details for this overbudgetTimesheet.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function Person(entitySet) {
         /// <summary>
         /// Represents the Person entity type.
@@ -378,7 +768,7 @@ window.myapp = msls.application;
         /// <field name="HourlyCost" type="Number">
         /// Gets or sets the hourlyCost for this person.
         /// </field>
-        /// <field name="MonthlyCost" type="Number">
+        /// <field name="MonthlyCost" type="String">
         /// Gets or sets the monthlyCost for this person.
         /// </field>
         /// <field name="IsContractor" type="Number">
@@ -469,16 +859,16 @@ window.myapp = msls.application;
         /// <field name="ProjectFirstFilename" type="String">
         /// Gets or sets the projectFirstFilename for this project.
         /// </field>
-        /// <field name="ConsultingEstimate" type="Number">
+        /// <field name="ConsultingEstimate" type="String">
         /// Gets or sets the consultingEstimate for this project.
         /// </field>
-        /// <field name="SoftwareEstimate" type="Number">
+        /// <field name="SoftwareEstimate" type="String">
         /// Gets or sets the softwareEstimate for this project.
         /// </field>
-        /// <field name="VMEstimate" type="Number">
+        /// <field name="VMEstimate" type="String">
         /// Gets or sets the vMEstimate for this project.
         /// </field>
-        /// <field name="ProjectCap" type="Number">
+        /// <field name="ProjectCap" type="String">
         /// Gets or sets the projectCap for this project.
         /// </field>
         /// <field name="AdminProject" type="Number">
@@ -511,13 +901,13 @@ window.myapp = msls.application;
         /// <field name="ActiveType" type="msls.application.ActiveType">
         /// Gets or sets the activeType for this project.
         /// </field>
-        /// <field name="MonthlyCap" type="Number">
+        /// <field name="MonthlyCap" type="String">
         /// Gets or sets the monthlyCap for this project.
         /// </field>
-        /// <field name="MonthlyCapWarning" type="Number">
+        /// <field name="MonthlyCapWarning" type="String">
         /// Gets or sets the monthlyCapWarning for this project.
         /// </field>
-        /// <field name="ProjectCapWarning" type="Number">
+        /// <field name="ProjectCapWarning" type="String">
         /// Gets or sets the projectCapWarning for this project.
         /// </field>
         /// <field name="InvoiceEmailAddress" type="String">
@@ -526,11 +916,213 @@ window.myapp = msls.application;
         /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
         /// Gets the invoiceLines for this project.
         /// </field>
-        /// <field name="CommPercent" type="Number">
+        /// <field name="CommPercent" type="String">
         /// Gets or sets the commPercent for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function ProjectsOverCap(entitySet) {
+        /// <summary>
+        /// Represents the ProjectsOverCap entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this projectsOverCap.
+        /// </param>
+        /// <field name="ErrorMessage" type="String">
+        /// Gets or sets the errorMessage for this projectsOverCap.
+        /// </field>
+        /// <field name="details" type="msls.application.ProjectsOverCap.Details">
+        /// Gets the details for this projectsOverCap.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function RoleType(entitySet) {
+        /// <summary>
+        /// Represents the RoleType entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this roleType.
+        /// </param>
+        /// <field name="RoleTypeID" type="Number">
+        /// Gets or sets the roleTypeID for this roleType.
+        /// </field>
+        /// <field name="RoleTypeName" type="String">
+        /// Gets or sets the roleTypeName for this roleType.
+        /// </field>
+        /// <field name="RoleTypeSourceKey" type="String">
+        /// Gets or sets the roleTypeSourceKey for this roleType.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this roleType.
+        /// </field>
+        /// <field name="RoleTypeCode" type="String">
+        /// Gets or sets the roleTypeCode for this roleType.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this roleType.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this roleType.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this roleType.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this roleType.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this roleType.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this roleType.
+        /// </field>
+        /// <field name="details" type="msls.application.RoleType.Details">
+        /// Gets the details for this roleType.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function SystemRole(entitySet) {
+        /// <summary>
+        /// Represents the SystemRole entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this systemRole.
+        /// </param>
+        /// <field name="SystemRoleID" type="Number">
+        /// Gets or sets the systemRoleID for this systemRole.
+        /// </field>
+        /// <field name="SystemRoleName" type="String">
+        /// Gets or sets the systemRoleName for this systemRole.
+        /// </field>
+        /// <field name="SystemRoleSourceKey" type="String">
+        /// Gets or sets the systemRoleSourceKey for this systemRole.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this systemRole.
+        /// </field>
+        /// <field name="SystemRoleCode" type="String">
+        /// Gets or sets the systemRoleCode for this systemRole.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this systemRole.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this systemRole.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this systemRole.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this systemRole.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this systemRole.
+        /// </field>
+        /// <field name="People" type="msls.EntityCollection" elementType="msls.application.Person">
+        /// Gets the people for this systemRole.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this systemRole.
+        /// </field>
+        /// <field name="details" type="msls.application.SystemRole.Details">
+        /// Gets the details for this systemRole.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function TimesheetDetail(entitySet) {
+        /// <summary>
+        /// Represents the TimesheetDetail entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this timesheetDetail.
+        /// </param>
+        /// <field name="TimesheetDetailID" type="Number">
+        /// Gets or sets the timesheetDetailID for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailSourceKey" type="String">
+        /// Gets or sets the timesheetDetailSourceKey for this timesheetDetail.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailName" type="String">
+        /// Gets or sets the timesheetDetailName for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailCode" type="String">
+        /// Gets or sets the timesheetDetailCode for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailFileName" type="String">
+        /// Gets or sets the timesheetDetailFileName for this timesheetDetail.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this timesheetDetail.
+        /// </field>
+        /// <field name="Hours" type="String">
+        /// Gets or sets the hours for this timesheetDetail.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this timesheetDetail.
+        /// </field>
+        /// <field name="ClientComments" type="String">
+        /// Gets or sets the clientComments for this timesheetDetail.
+        /// </field>
+        /// <field name="AMComments" type="String">
+        /// Gets or sets the aMComments for this timesheetDetail.
+        /// </field>
+        /// <field name="Exclude" type="Number">
+        /// Gets or sets the exclude for this timesheetDetail.
+        /// </field>
+        /// <field name="LastUpdateDate" type="Date">
+        /// Gets or sets the lastUpdateDate for this timesheetDetail.
+        /// </field>
+        /// <field name="DimDate" type="msls.application.DimDate">
+        /// Gets or sets the dimDate for this timesheetDetail.
+        /// </field>
+        /// <field name="Person" type="msls.application.Person">
+        /// Gets or sets the person for this timesheetDetail.
+        /// </field>
+        /// <field name="Project" type="msls.application.Project">
+        /// Gets or sets the project for this timesheetDetail.
+        /// </field>
+        /// <field name="Timesheet" type="msls.application.Timesheet">
+        /// Gets or sets the timesheet for this timesheetDetail.
+        /// </field>
+        /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
+        /// Gets or sets the typeOfWork for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this timesheetDetail.
+        /// </field>
+        /// <field name="BillingStatus" type="msls.application.BillingStatus">
+        /// Gets or sets the billingStatus for this timesheetDetail.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this timesheetDetail.
+        /// </field>
+        /// <field name="UnallocatedTimesheets" type="msls.EntityCollection" elementType="msls.application.UnallocatedTimesheet">
+        /// Gets the unallocatedTimesheets for this timesheetDetail.
+        /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheetDetail.
+        /// </field>
+        /// <field name="details" type="msls.application.TimesheetDetail.Details">
+        /// Gets the details for this timesheetDetail.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -614,97 +1206,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function TimesheetDetail(entitySet) {
-        /// <summary>
-        /// Represents the TimesheetDetail entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this timesheetDetail.
-        /// </param>
-        /// <field name="TimesheetDetailID" type="Number">
-        /// Gets or sets the timesheetDetailID for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailSourceKey" type="String">
-        /// Gets or sets the timesheetDetailSourceKey for this timesheetDetail.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailName" type="String">
-        /// Gets or sets the timesheetDetailName for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailCode" type="String">
-        /// Gets or sets the timesheetDetailCode for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailFileName" type="String">
-        /// Gets or sets the timesheetDetailFileName for this timesheetDetail.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this timesheetDetail.
-        /// </field>
-        /// <field name="Hours" type="Number">
-        /// Gets or sets the hours for this timesheetDetail.
-        /// </field>
-        /// <field name="Comments" type="String">
-        /// Gets or sets the comments for this timesheetDetail.
-        /// </field>
-        /// <field name="ClientComments" type="String">
-        /// Gets or sets the clientComments for this timesheetDetail.
-        /// </field>
-        /// <field name="AMComments" type="String">
-        /// Gets or sets the aMComments for this timesheetDetail.
-        /// </field>
-        /// <field name="Exclude" type="Number">
-        /// Gets or sets the exclude for this timesheetDetail.
-        /// </field>
-        /// <field name="LastUpdateDate" type="Date">
-        /// Gets or sets the lastUpdateDate for this timesheetDetail.
-        /// </field>
-        /// <field name="DimDate" type="msls.application.DimDate">
-        /// Gets or sets the dimDate for this timesheetDetail.
-        /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this timesheetDetail.
-        /// </field>
-        /// <field name="Project" type="msls.application.Project">
-        /// Gets or sets the project for this timesheetDetail.
-        /// </field>
-        /// <field name="Timesheet" type="msls.application.Timesheet">
-        /// Gets or sets the timesheet for this timesheetDetail.
-        /// </field>
-        /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
-        /// Gets or sets the typeOfWork for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this timesheetDetail.
-        /// </field>
-        /// <field name="BillingStatus" type="msls.application.BillingStatus">
-        /// Gets or sets the billingStatus for this timesheetDetail.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this timesheetDetail.
-        /// </field>
-        /// <field name="UnallocatedTimesheets" type="msls.EntityCollection" elementType="msls.application.UnallocatedTimesheet">
-        /// Gets the unallocatedTimesheets for this timesheetDetail.
-        /// </field>
-        /// <field name="VerCol" type="Array">
-        /// Gets or sets the verCol for this timesheetDetail.
-        /// </field>
-        /// <field name="details" type="msls.application.TimesheetDetail.Details">
-        /// Gets the details for this timesheetDetail.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function TypeOfWork(entitySet) {
         /// <summary>
         /// Represents the TypeOfWork entity type.
@@ -754,321 +1255,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function RoleType(entitySet) {
-        /// <summary>
-        /// Represents the RoleType entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this roleType.
-        /// </param>
-        /// <field name="RoleTypeID" type="Number">
-        /// Gets or sets the roleTypeID for this roleType.
-        /// </field>
-        /// <field name="RoleTypeName" type="String">
-        /// Gets or sets the roleTypeName for this roleType.
-        /// </field>
-        /// <field name="RoleTypeSourceKey" type="String">
-        /// Gets or sets the roleTypeSourceKey for this roleType.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this roleType.
-        /// </field>
-        /// <field name="RoleTypeCode" type="String">
-        /// Gets or sets the roleTypeCode for this roleType.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this roleType.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this roleType.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this roleType.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this roleType.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this roleType.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this roleType.
-        /// </field>
-        /// <field name="details" type="msls.application.RoleType.Details">
-        /// Gets the details for this roleType.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function ClientRole(entitySet) {
-        /// <summary>
-        /// Represents the ClientRole entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this clientRole.
-        /// </param>
-        /// <field name="ClientRoleName" type="String">
-        /// Gets or sets the clientRoleName for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleID" type="Number">
-        /// Gets or sets the clientRoleID for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleSourceKey" type="String">
-        /// Gets or sets the clientRoleSourceKey for this clientRole.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleCode" type="String">
-        /// Gets or sets the clientRoleCode for this clientRole.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this clientRole.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this clientRole.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this clientRole.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this clientRole.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this clientRole.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this clientRole.
-        /// </field>
-        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
-        /// Gets the invoiceLines for this clientRole.
-        /// </field>
-        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this clientRole.
-        /// </field>
-        /// <field name="details" type="msls.application.ClientRole.Details">
-        /// Gets the details for this clientRole.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function SystemRole(entitySet) {
-        /// <summary>
-        /// Represents the SystemRole entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this systemRole.
-        /// </param>
-        /// <field name="SystemRoleID" type="Number">
-        /// Gets or sets the systemRoleID for this systemRole.
-        /// </field>
-        /// <field name="SystemRoleName" type="String">
-        /// Gets or sets the systemRoleName for this systemRole.
-        /// </field>
-        /// <field name="SystemRoleSourceKey" type="String">
-        /// Gets or sets the systemRoleSourceKey for this systemRole.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this systemRole.
-        /// </field>
-        /// <field name="SystemRoleCode" type="String">
-        /// Gets or sets the systemRoleCode for this systemRole.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this systemRole.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this systemRole.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this systemRole.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this systemRole.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this systemRole.
-        /// </field>
-        /// <field name="People" type="msls.EntityCollection" elementType="msls.application.Person">
-        /// Gets the people for this systemRole.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this systemRole.
-        /// </field>
-        /// <field name="details" type="msls.application.SystemRole.Details">
-        /// Gets the details for this systemRole.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function ActiveType(entitySet) {
-        /// <summary>
-        /// Represents the ActiveType entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this activeType.
-        /// </param>
-        /// <field name="ID" type="Number">
-        /// Gets or sets the iD for this activeType.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this activeType.
-        /// </field>
-        /// <field name="Code" type="String">
-        /// Gets or sets the code for this activeType.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this activeType.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this activeType.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this activeType.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this activeType.
-        /// </field>
-        /// <field name="Active" type="Number">
-        /// Gets or sets the active for this activeType.
-        /// </field>
-        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this activeType.
-        /// </field>
-        /// <field name="BillingStatus" type="msls.EntityCollection" elementType="msls.application.BillingStatus">
-        /// Gets the billingStatus for this activeType.
-        /// </field>
-        /// <field name="Clients" type="msls.EntityCollection" elementType="msls.application.Client">
-        /// Gets the clients for this activeType.
-        /// </field>
-        /// <field name="ClientRoles" type="msls.EntityCollection" elementType="msls.application.ClientRole">
-        /// Gets the clientRoles for this activeType.
-        /// </field>
-        /// <field name="People" type="msls.EntityCollection" elementType="msls.application.Person">
-        /// Gets the people for this activeType.
-        /// </field>
-        /// <field name="Projects" type="msls.EntityCollection" elementType="msls.application.Project">
-        /// Gets the projects for this activeType.
-        /// </field>
-        /// <field name="RoleTypes" type="msls.EntityCollection" elementType="msls.application.RoleType">
-        /// Gets the roleTypes for this activeType.
-        /// </field>
-        /// <field name="SystemRoles" type="msls.EntityCollection" elementType="msls.application.SystemRole">
-        /// Gets the systemRoles for this activeType.
-        /// </field>
-        /// <field name="Timesheets" type="msls.EntityCollection" elementType="msls.application.Timesheet">
-        /// Gets the timesheets for this activeType.
-        /// </field>
-        /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetails for this activeType.
-        /// </field>
-        /// <field name="TypeOfWorks" type="msls.EntityCollection" elementType="msls.application.TypeOfWork">
-        /// Gets the typeOfWorks for this activeType.
-        /// </field>
-        /// <field name="Invoices" type="msls.EntityCollection" elementType="msls.application.Invoice">
-        /// Gets the invoices for this activeType.
-        /// </field>
-        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
-        /// Gets the invoiceLines for this activeType.
-        /// </field>
-        /// <field name="InvoiceStatus" type="msls.EntityCollection" elementType="msls.application.InvoiceStatu">
-        /// Gets the invoiceStatus for this activeType.
-        /// </field>
-        /// <field name="details" type="msls.application.ActiveType.Details">
-        /// Gets the details for this activeType.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function OverbudgetTimesheet(entitySet) {
-        /// <summary>
-        /// Represents the OverbudgetTimesheet entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this overbudgetTimesheet.
-        /// </param>
-        /// <field name="BillingStatusName" type="String">
-        /// Gets or sets the billingStatusName for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="ClientName" type="String">
-        /// Gets or sets the clientName for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="ProjectName" type="String">
-        /// Gets or sets the projectName for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TimesheetDetailID" type="Number">
-        /// Gets or sets the timesheetDetailID for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TimesheetDetailSourceKey" type="String">
-        /// Gets or sets the timesheetDetailSourceKey for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="Active" type="Number">
-        /// Gets or sets the active for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TimesheetDetailFileName" type="String">
-        /// Gets or sets the timesheetDetailFileName for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TimesheetDetailDateID" type="Number">
-        /// Gets or sets the timesheetDetailDateID for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="Hours" type="Number">
-        /// Gets or sets the hours for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TimesheetID" type="Number">
-        /// Gets or sets the timesheetID for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="Comments" type="String">
-        /// Gets or sets the comments for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="ClientComments" type="String">
-        /// Gets or sets the clientComments for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="AMComments" type="String">
-        /// Gets or sets the aMComments for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="Exclude" type="Number">
-        /// Gets or sets the exclude for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="TypeOfWorkName" type="String">
-        /// Gets or sets the typeOfWorkName for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="AccountManager" type="String">
-        /// Gets or sets the accountManager for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="AMEmail" type="String">
-        /// Gets or sets the aMEmail for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="BillingPeriodText" type="String">
-        /// Gets or sets the billingPeriodText for this overbudgetTimesheet.
-        /// </field>
-        /// <field name="details" type="msls.application.OverbudgetTimesheet.Details">
-        /// Gets the details for this overbudgetTimesheet.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function ProjectsOverCap(entitySet) {
-        /// <summary>
-        /// Represents the ProjectsOverCap entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this projectsOverCap.
-        /// </param>
-        /// <field name="ErrorMessage" type="String">
-        /// Gets or sets the errorMessage for this projectsOverCap.
-        /// </field>
-        /// <field name="details" type="msls.application.ProjectsOverCap.Details">
-        /// Gets the details for this projectsOverCap.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function UnallocatedTimesheet(entitySet) {
         /// <summary>
         /// Represents the UnallocatedTimesheet entity type.
@@ -1103,7 +1289,7 @@ window.myapp = msls.application;
         /// <field name="LoadDateID" type="Number">
         /// Gets or sets the loadDateID for this unallocatedTimesheet.
         /// </field>
-        /// <field name="Hours" type="Number">
+        /// <field name="Hours" type="String">
         /// Gets or sets the hours for this unallocatedTimesheet.
         /// </field>
         /// <field name="TimesheetID" type="Number">
@@ -1160,192 +1346,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function Invoice(entitySet) {
-        /// <summary>
-        /// Represents the Invoice entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this invoice.
-        /// </param>
-        /// <field name="InvoiceID" type="Number">
-        /// Gets or sets the invoiceID for this invoice.
-        /// </field>
-        /// <field name="InvoiceSourceKey" type="String">
-        /// Gets or sets the invoiceSourceKey for this invoice.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this invoice.
-        /// </field>
-        /// <field name="InvoiceFileName" type="String">
-        /// Gets or sets the invoiceFileName for this invoice.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this invoice.
-        /// </field>
-        /// <field name="Comments" type="String">
-        /// Gets or sets the comments for this invoice.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this invoice.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this invoice.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this invoice.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this invoice.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this invoice.
-        /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this invoice.
-        /// </field>
-        /// <field name="DimDate" type="msls.application.DimDate">
-        /// Gets or sets the dimDate for this invoice.
-        /// </field>
-        /// <field name="InvoiceStatu" type="msls.application.InvoiceStatu">
-        /// Gets or sets the invoiceStatu for this invoice.
-        /// </field>
-        /// <field name="InvoiceLines" type="msls.EntityCollection" elementType="msls.application.InvoiceLine">
-        /// Gets the invoiceLines for this invoice.
-        /// </field>
-        /// <field name="InvoiceEmailAddress" type="String">
-        /// Gets or sets the invoiceEmailAddress for this invoice.
-        /// </field>
-        /// <field name="Client" type="msls.application.Client">
-        /// Gets or sets the client for this invoice.
-        /// </field>
-        /// <field name="DueDate" type="msls.application.DimDate">
-        /// Gets or sets the dueDate for this invoice.
-        /// </field>
-        /// <field name="InvoiceNumber" type="String">
-        /// Gets or sets the invoiceNumber for this invoice.
-        /// </field>
-        /// <field name="DimDate2" type="msls.application.DimDate">
-        /// Gets or sets the dimDate2 for this invoice.
-        /// </field>
-        /// <field name="details" type="msls.application.Invoice.Details">
-        /// Gets the details for this invoice.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function InvoiceLine(entitySet) {
-        /// <summary>
-        /// Represents the InvoiceLine entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this invoiceLine.
-        /// </param>
-        /// <field name="InvoiceLineID" type="Number">
-        /// Gets or sets the invoiceLineID for this invoiceLine.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this invoiceLine.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this invoiceLine.
-        /// </field>
-        /// <field name="InvoiceLineDescription" type="String">
-        /// Gets or sets the invoiceLineDescription for this invoiceLine.
-        /// </field>
-        /// <field name="InvoiceLineCode" type="String">
-        /// Gets or sets the invoiceLineCode for this invoiceLine.
-        /// </field>
-        /// <field name="InvoiceLineRate" type="Number">
-        /// Gets or sets the invoiceLineRate for this invoiceLine.
-        /// </field>
-        /// <field name="InvoiceLineQty" type="Number">
-        /// Gets or sets the invoiceLineQty for this invoiceLine.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this invoiceLine.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this invoiceLine.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this invoiceLine.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this invoiceLine.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this invoiceLine.
-        /// </field>
-        /// <field name="Invoice" type="msls.application.Invoice">
-        /// Gets or sets the invoice for this invoiceLine.
-        /// </field>
-        /// <field name="Person" type="msls.application.Person">
-        /// Gets or sets the person for this invoiceLine.
-        /// </field>
-        /// <field name="InvoiceLineAmount" type="Number">
-        /// Gets or sets the invoiceLineAmount for this invoiceLine.
-        /// </field>
-        /// <field name="ClientRole" type="msls.application.ClientRole">
-        /// Gets or sets the clientRole for this invoiceLine.
-        /// </field>
-        /// <field name="Project" type="msls.application.Project">
-        /// Gets or sets the project for this invoiceLine.
-        /// </field>
-        /// <field name="details" type="msls.application.InvoiceLine.Details">
-        /// Gets the details for this invoiceLine.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function InvoiceStatu(entitySet) {
-        /// <summary>
-        /// Represents the InvoiceStatu entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this invoiceStatu.
-        /// </param>
-        /// <field name="InvoiceStatusID" type="Number">
-        /// Gets or sets the invoiceStatusID for this invoiceStatu.
-        /// </field>
-        /// <field name="InvoiceStatusSourceKey" type="String">
-        /// Gets or sets the invoiceStatusSourceKey for this invoiceStatu.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this invoiceStatu.
-        /// </field>
-        /// <field name="InvoiceStatusName" type="String">
-        /// Gets or sets the invoiceStatusName for this invoiceStatu.
-        /// </field>
-        /// <field name="InvoiceStatusCode" type="String">
-        /// Gets or sets the invoiceStatusCode for this invoiceStatu.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this invoiceStatu.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this invoiceStatu.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this invoiceStatu.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this invoiceStatu.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this invoiceStatu.
-        /// </field>
-        /// <field name="Invoices" type="msls.EntityCollection" elementType="msls.application.Invoice">
-        /// Gets the invoices for this invoiceStatu.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this invoiceStatu.
-        /// </field>
-        /// <field name="details" type="msls.application.InvoiceStatu.Details">
-        /// Gets the details for this invoiceStatu.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function TimesheetsData(dataWorkspace) {
         /// <summary>
         /// Represents the TimesheetsData data service.
@@ -1353,11 +1353,17 @@ window.myapp = msls.application;
         /// <param name="dataWorkspace" type="msls.DataWorkspace">
         /// The data workspace that created this data service.
         /// </param>
+        /// <field name="ActiveTypes" type="msls.EntitySet">
+        /// Gets the ActiveTypes entity set.
+        /// </field>
         /// <field name="BillingDetails" type="msls.EntitySet">
         /// Gets the BillingDetails entity set.
         /// </field>
         /// <field name="BillingStatusSet" type="msls.EntitySet">
         /// Gets the BillingStatusSet entity set.
+        /// </field>
+        /// <field name="ClientRoles" type="msls.EntitySet">
+        /// Gets the ClientRoles entity set.
         /// </field>
         /// <field name="Clients" type="msls.EntitySet">
         /// Gets the Clients entity set.
@@ -1365,50 +1371,44 @@ window.myapp = msls.application;
         /// <field name="DimDates" type="msls.EntitySet">
         /// Gets the DimDates entity set.
         /// </field>
+        /// <field name="InvoiceLines" type="msls.EntitySet">
+        /// Gets the InvoiceLines entity set.
+        /// </field>
+        /// <field name="Invoices" type="msls.EntitySet">
+        /// Gets the Invoices entity set.
+        /// </field>
+        /// <field name="InvoiceStatus" type="msls.EntitySet">
+        /// Gets the InvoiceStatus entity set.
+        /// </field>
+        /// <field name="OverbudgetTimesheets" type="msls.EntitySet">
+        /// Gets the OverbudgetTimesheets entity set.
+        /// </field>
         /// <field name="People" type="msls.EntitySet">
         /// Gets the People entity set.
         /// </field>
         /// <field name="Projects" type="msls.EntitySet">
         /// Gets the Projects entity set.
         /// </field>
-        /// <field name="Timesheets" type="msls.EntitySet">
-        /// Gets the Timesheets entity set.
-        /// </field>
-        /// <field name="TimesheetDetails" type="msls.EntitySet">
-        /// Gets the TimesheetDetails entity set.
-        /// </field>
-        /// <field name="TypeOfWorks" type="msls.EntitySet">
-        /// Gets the TypeOfWorks entity set.
+        /// <field name="ProjectsOverCaps" type="msls.EntitySet">
+        /// Gets the ProjectsOverCaps entity set.
         /// </field>
         /// <field name="RoleTypes" type="msls.EntitySet">
         /// Gets the RoleTypes entity set.
         /// </field>
-        /// <field name="ClientRoles" type="msls.EntitySet">
-        /// Gets the ClientRoles entity set.
-        /// </field>
         /// <field name="SystemRoles" type="msls.EntitySet">
         /// Gets the SystemRoles entity set.
         /// </field>
-        /// <field name="ActiveTypes" type="msls.EntitySet">
-        /// Gets the ActiveTypes entity set.
+        /// <field name="TimesheetDetails" type="msls.EntitySet">
+        /// Gets the TimesheetDetails entity set.
         /// </field>
-        /// <field name="OverbudgetTimesheets" type="msls.EntitySet">
-        /// Gets the OverbudgetTimesheets entity set.
+        /// <field name="Timesheets" type="msls.EntitySet">
+        /// Gets the Timesheets entity set.
         /// </field>
-        /// <field name="ProjectsOverCaps" type="msls.EntitySet">
-        /// Gets the ProjectsOverCaps entity set.
+        /// <field name="TypeOfWorks" type="msls.EntitySet">
+        /// Gets the TypeOfWorks entity set.
         /// </field>
         /// <field name="UnallocatedTimesheets" type="msls.EntitySet">
         /// Gets the UnallocatedTimesheets entity set.
-        /// </field>
-        /// <field name="Invoices" type="msls.EntitySet">
-        /// Gets the Invoices entity set.
-        /// </field>
-        /// <field name="InvoiceLines" type="msls.EntitySet">
-        /// Gets the InvoiceLines entity set.
-        /// </field>
-        /// <field name="InvoiceStatus" type="msls.EntitySet">
-        /// Gets the InvoiceStatus entity set.
         /// </field>
         /// <field name="details" type="msls.application.TimesheetsData.Details">
         /// Gets the details for this data service.
@@ -1430,12 +1430,37 @@ window.myapp = msls.application;
 
     msls._addToNamespace("msls.application", {
 
+        ActiveType: $defineEntity(ActiveType, [
+            { name: "ID", type: Number },
+            { name: "Name", type: String },
+            { name: "Code", type: String },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "Active", type: Number },
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
+            { name: "BillingStatus", kind: "collection", elementType: BillingStatus },
+            { name: "Clients", kind: "collection", elementType: Client },
+            { name: "ClientRoles", kind: "collection", elementType: ClientRole },
+            { name: "People", kind: "collection", elementType: Person },
+            { name: "Projects", kind: "collection", elementType: Project },
+            { name: "RoleTypes", kind: "collection", elementType: RoleType },
+            { name: "SystemRoles", kind: "collection", elementType: SystemRole },
+            { name: "Timesheets", kind: "collection", elementType: Timesheet },
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "TypeOfWorks", kind: "collection", elementType: TypeOfWork },
+            { name: "Invoices", kind: "collection", elementType: Invoice },
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "InvoiceStatus", kind: "collection", elementType: InvoiceStatu }
+        ]),
+
         BillingDetail: $defineEntity(BillingDetail, [
-            { name: "BillingDetailID", type: Number },
+            { name: "BillingDetailID", type: Number, isReadOnly: true },
             { name: "BillingDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
-            { name: "Rate", type: Number },
-            { name: "LoadDateID", type: Number },
+            { name: "Rate", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "Client", kind: "reference", type: Client },
             { name: "Person", kind: "reference", type: Person },
             { name: "sys_CreatedOn", type: Date },
@@ -1449,11 +1474,11 @@ window.myapp = msls.application;
 
         BillingStatus: $defineEntity(BillingStatus, [
             { name: "BillingStatusName", type: String },
-            { name: "BillingStatusID", type: Number },
+            { name: "BillingStatusID", type: Number, isReadOnly: true },
             { name: "BillingStatusSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "BillingStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1464,13 +1489,29 @@ window.myapp = msls.application;
             { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet }
         ]),
 
+        ClientRole: $defineEntity(ClientRole, [
+            { name: "ClientRoleName", type: String },
+            { name: "ClientRoleID", type: Number, isReadOnly: true },
+            { name: "ClientRoleSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "ClientRoleCode", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail }
+        ]),
+
         Client: $defineEntity(Client, [
             { name: "ClientName", type: String },
-            { name: "ClientID", type: Number },
+            { name: "ClientID", type: Number, isReadOnly: true },
             { name: "ClientSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ClientCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
             { name: "Projects", kind: "collection", elementType: Project },
             { name: "sys_CreatedOn", type: Date },
@@ -1510,7 +1551,7 @@ window.myapp = msls.application;
             { name: "YearNumber", type: Number },
             { name: "IsPublicHoliday", type: Boolean },
             { name: "HolidayText", type: String },
-            { name: "DateSK", type: Number },
+            { name: "DateSK", type: Number, isReadOnly: true },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1533,19 +1574,100 @@ window.myapp = msls.application;
             { name: "Invoices2", kind: "collection", elementType: Invoice }
         ]),
 
+        InvoiceLine: $defineEntity(InvoiceLine, [
+            { name: "InvoiceLineID", type: Number, isReadOnly: true },
+            { name: "LoadDate", type: Date },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "InvoiceLineDescription", type: String },
+            { name: "InvoiceLineCode", type: String },
+            { name: "InvoiceLineRate", type: String },
+            { name: "InvoiceLineQty", type: Number },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "Invoice", kind: "reference", type: Invoice },
+            { name: "Person", kind: "reference", type: Person },
+            { name: "InvoiceLineAmount", type: String },
+            { name: "ClientRole", kind: "reference", type: ClientRole },
+            { name: "Project", kind: "reference", type: Project }
+        ]),
+
+        Invoice: $defineEntity(Invoice, [
+            { name: "InvoiceID", type: Number, isReadOnly: true },
+            { name: "InvoiceSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "InvoiceFileName", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "Comments", type: String },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "Person", kind: "reference", type: Person },
+            { name: "DimDate", kind: "reference", type: DimDate },
+            { name: "InvoiceStatu", kind: "reference", type: InvoiceStatu },
+            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
+            { name: "InvoiceEmailAddress", type: String },
+            { name: "Client", kind: "reference", type: Client },
+            { name: "DueDate", kind: "reference", type: DimDate },
+            { name: "InvoiceNumber", type: String },
+            { name: "DimDate2", kind: "reference", type: DimDate }
+        ]),
+
+        InvoiceStatu: $defineEntity(InvoiceStatu, [
+            { name: "InvoiceStatusID", type: Number, isReadOnly: true },
+            { name: "InvoiceStatusSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "InvoiceStatusName", type: String },
+            { name: "InvoiceStatusCode", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "Invoices", kind: "collection", elementType: Invoice },
+            { name: "ActiveType", kind: "reference", type: ActiveType }
+        ]),
+
+        OverbudgetTimesheet: $defineEntity(OverbudgetTimesheet, [
+            { name: "BillingStatusName", type: String },
+            { name: "ClientName", type: String },
+            { name: "ProjectName", type: String },
+            { name: "TimesheetDetailID", type: Number },
+            { name: "TimesheetDetailSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "Active", type: Number },
+            { name: "TimesheetDetailFileName", type: String },
+            { name: "TimesheetDetailDateID", type: Number },
+            { name: "LoadDateID", type: Number },
+            { name: "Hours", type: String },
+            { name: "TimesheetID", type: Number },
+            { name: "Comments", type: String },
+            { name: "ClientComments", type: String },
+            { name: "AMComments", type: String },
+            { name: "Exclude", type: Number },
+            { name: "TypeOfWorkName", type: String },
+            { name: "AccountManager", type: String },
+            { name: "AMEmail", type: String },
+            { name: "BillingPeriodText", type: String }
+        ]),
+
         Person: $defineEntity(Person, [
             { name: "PersonName", type: String },
-            { name: "PersonID", type: Number },
+            { name: "PersonID", type: Number, isReadOnly: true },
             { name: "PersonSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "PersonCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "BillingPercentTarget", type: Number },
             { name: "BillingPercentMinimum", type: Number },
             { name: "Email", type: String },
             { name: "StartDate", type: Date },
             { name: "HourlyCost", type: Number },
-            { name: "MonthlyCost", type: Number },
+            { name: "MonthlyCost", type: String },
             { name: "IsContractor", type: Number },
             { name: "Billable", type: Number },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
@@ -1566,18 +1688,18 @@ window.myapp = msls.application;
         ]),
 
         Project: $defineEntity(Project, [
-            { name: "ProjectID", type: Number },
+            { name: "ProjectID", type: Number, isReadOnly: true },
             { name: "ProjectName", type: String },
             { name: "ProjectSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ProjectCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "ProjectFirstPersonName", type: String },
             { name: "ProjectFirstFilename", type: String },
-            { name: "ConsultingEstimate", type: Number },
-            { name: "SoftwareEstimate", type: Number },
-            { name: "VMEstimate", type: Number },
-            { name: "ProjectCap", type: Number },
+            { name: "ConsultingEstimate", type: String },
+            { name: "SoftwareEstimate", type: String },
+            { name: "VMEstimate", type: String },
+            { name: "ProjectCap", type: String },
             { name: "AdminProject", type: Number },
             { name: "BillingStatus", kind: "reference", type: BillingStatus },
             { name: "Client", kind: "reference", type: Client },
@@ -1588,48 +1710,56 @@ window.myapp = msls.application;
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "MonthlyCap", type: Number },
-            { name: "MonthlyCapWarning", type: Number },
-            { name: "ProjectCapWarning", type: Number },
+            { name: "MonthlyCap", type: String },
+            { name: "MonthlyCapWarning", type: String },
+            { name: "ProjectCapWarning", type: String },
             { name: "InvoiceEmailAddress", type: String },
             { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
-            { name: "CommPercent", type: Number }
+            { name: "CommPercent", type: String }
         ]),
 
-        Timesheet: $defineEntity(Timesheet, [
-            { name: "TimesheetID", type: Number },
-            { name: "TimesheetSourceKey", type: String },
+        ProjectsOverCap: $defineEntity(ProjectsOverCap, [
+            { name: "ErrorMessage", type: String }
+        ]),
+
+        RoleType: $defineEntity(RoleType, [
+            { name: "RoleTypeID", type: Number, isReadOnly: true },
+            { name: "RoleTypeName", type: String },
+            { name: "RoleTypeSourceKey", type: String },
             { name: "LoadDate", type: Date },
-            { name: "TimesheetName", type: String },
-            { name: "TimesheetCode", type: String },
-            { name: "TimesheetFileName", type: String },
-            { name: "TimesheetFromDateID", type: Number },
-            { name: "TimesheetToDateID", type: Number },
-            { name: "TimesheetPerson", type: String },
-            { name: "TimesheetDate", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "OverallStatusID", type: Number },
+            { name: "RoleTypeCode", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
-            { name: "DimDate", kind: "reference", type: DimDate },
-            { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "PeriodEnding", type: Date },
-            { name: "Person", kind: "reference", type: Person },
-            { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet }
+            { name: "ActiveType", kind: "reference", type: ActiveType }
+        ]),
+
+        SystemRole: $defineEntity(SystemRole, [
+            { name: "SystemRoleID", type: Number, isReadOnly: true },
+            { name: "SystemRoleName", type: String },
+            { name: "SystemRoleSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "SystemRoleCode", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "People", kind: "collection", elementType: Person },
+            { name: "ActiveType", kind: "reference", type: ActiveType }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
-            { name: "TimesheetDetailID", type: Number },
+            { name: "TimesheetDetailID", type: Number, isReadOnly: true },
             { name: "TimesheetDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TimesheetDetailName", type: String },
             { name: "TimesheetDetailCode", type: String },
             { name: "TimesheetDetailFileName", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "Hours", type: String },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
             { name: "AMComments", type: String },
@@ -1647,119 +1777,47 @@ window.myapp = msls.application;
             { name: "BillingStatus", kind: "reference", type: BillingStatus },
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet },
-            { name: "VerCol", type: Array }
+            { name: "VerCol", type: Array, isReadOnly: true }
+        ]),
+
+        Timesheet: $defineEntity(Timesheet, [
+            { name: "TimesheetID", type: Number, isReadOnly: true },
+            { name: "TimesheetSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "TimesheetName", type: String },
+            { name: "TimesheetCode", type: String },
+            { name: "TimesheetFileName", type: String },
+            { name: "TimesheetFromDateID", type: Number },
+            { name: "TimesheetToDateID", type: Number },
+            { name: "TimesheetPerson", type: String },
+            { name: "TimesheetDate", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "OverallStatusID", type: Number },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "DimDate", kind: "reference", type: DimDate },
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "PeriodEnding", type: Date, isReadOnly: true },
+            { name: "Person", kind: "reference", type: Person },
+            { name: "UnallocatedTimesheets", kind: "collection", elementType: UnallocatedTimesheet }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [
-            { name: "TypeOfWorkID", type: Number },
+            { name: "TypeOfWorkID", type: Number, isReadOnly: true },
             { name: "TypeOfWorkName", type: String },
             { name: "TypeOfWorkSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TypeOfWorkCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "ActiveType", kind: "reference", type: ActiveType }
-        ]),
-
-        RoleType: $defineEntity(RoleType, [
-            { name: "RoleTypeID", type: Number },
-            { name: "RoleTypeName", type: String },
-            { name: "RoleTypeSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "RoleTypeCode", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
-        ]),
-
-        ClientRole: $defineEntity(ClientRole, [
-            { name: "ClientRoleName", type: String },
-            { name: "ClientRoleID", type: Number },
-            { name: "ClientRoleSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "ClientRoleCode", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
-            { name: "BillingDetails", kind: "collection", elementType: BillingDetail }
-        ]),
-
-        SystemRole: $defineEntity(SystemRole, [
-            { name: "SystemRoleID", type: Number },
-            { name: "SystemRoleName", type: String },
-            { name: "SystemRoleSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "SystemRoleCode", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "People", kind: "collection", elementType: Person },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
-        ]),
-
-        ActiveType: $defineEntity(ActiveType, [
-            { name: "ID", type: Number },
-            { name: "Name", type: String },
-            { name: "Code", type: String },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "Active", type: Number },
-            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
-            { name: "BillingStatus", kind: "collection", elementType: BillingStatus },
-            { name: "Clients", kind: "collection", elementType: Client },
-            { name: "ClientRoles", kind: "collection", elementType: ClientRole },
-            { name: "People", kind: "collection", elementType: Person },
-            { name: "Projects", kind: "collection", elementType: Project },
-            { name: "RoleTypes", kind: "collection", elementType: RoleType },
-            { name: "SystemRoles", kind: "collection", elementType: SystemRole },
-            { name: "Timesheets", kind: "collection", elementType: Timesheet },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "TypeOfWorks", kind: "collection", elementType: TypeOfWork },
-            { name: "Invoices", kind: "collection", elementType: Invoice },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
-            { name: "InvoiceStatus", kind: "collection", elementType: InvoiceStatu }
-        ]),
-
-        OverbudgetTimesheet: $defineEntity(OverbudgetTimesheet, [
-            { name: "BillingStatusName", type: String },
-            { name: "ClientName", type: String },
-            { name: "ProjectName", type: String },
-            { name: "TimesheetDetailID", type: Number },
-            { name: "TimesheetDetailSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "Active", type: Number },
-            { name: "TimesheetDetailFileName", type: String },
-            { name: "TimesheetDetailDateID", type: Number },
-            { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
-            { name: "TimesheetID", type: Number },
-            { name: "Comments", type: String },
-            { name: "ClientComments", type: String },
-            { name: "AMComments", type: String },
-            { name: "Exclude", type: Number },
-            { name: "TypeOfWorkName", type: String },
-            { name: "AccountManager", type: String },
-            { name: "AMEmail", type: String },
-            { name: "BillingPeriodText", type: String }
-        ]),
-
-        ProjectsOverCap: $defineEntity(ProjectsOverCap, [
-            { name: "ErrorMessage", type: String }
         ]),
 
         UnallocatedTimesheet: $defineEntity(UnallocatedTimesheet, [
@@ -1772,7 +1830,7 @@ window.myapp = msls.application;
             { name: "TimesheetDetailFileName", type: String },
             { name: "TimesheetDetailDateID", type: Number },
             { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "Hours", type: String },
             { name: "TimesheetID", type: Number },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
@@ -1791,85 +1849,34 @@ window.myapp = msls.application;
             { name: "BillingStatusID", type: Number }
         ]),
 
-        Invoice: $defineEntity(Invoice, [
-            { name: "InvoiceID", type: Number },
-            { name: "InvoiceSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "InvoiceFileName", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "Comments", type: String },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "Person", kind: "reference", type: Person },
-            { name: "DimDate", kind: "reference", type: DimDate },
-            { name: "InvoiceStatu", kind: "reference", type: InvoiceStatu },
-            { name: "InvoiceLines", kind: "collection", elementType: InvoiceLine },
-            { name: "InvoiceEmailAddress", type: String },
-            { name: "Client", kind: "reference", type: Client },
-            { name: "DueDate", kind: "reference", type: DimDate },
-            { name: "InvoiceNumber", type: String },
-            { name: "DimDate2", kind: "reference", type: DimDate }
-        ]),
-
-        InvoiceLine: $defineEntity(InvoiceLine, [
-            { name: "InvoiceLineID", type: Number },
-            { name: "LoadDate", type: Date },
-            { name: "LoadDateID", type: Number },
-            { name: "InvoiceLineDescription", type: String },
-            { name: "InvoiceLineCode", type: String },
-            { name: "InvoiceLineRate", type: Number },
-            { name: "InvoiceLineQty", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "Invoice", kind: "reference", type: Invoice },
-            { name: "Person", kind: "reference", type: Person },
-            { name: "InvoiceLineAmount", type: Number },
-            { name: "ClientRole", kind: "reference", type: ClientRole },
-            { name: "Project", kind: "reference", type: Project }
-        ]),
-
-        InvoiceStatu: $defineEntity(InvoiceStatu, [
-            { name: "InvoiceStatusID", type: Number },
-            { name: "InvoiceStatusSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "InvoiceStatusName", type: String },
-            { name: "InvoiceStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "Invoices", kind: "collection", elementType: Invoice },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
-        ]),
-
         TimesheetsData: $defineDataService(TimesheetsData, lightSwitchApplication.rootUri + "/TimesheetsData.svc", [
+            { name: "ActiveTypes", elementType: ActiveType },
             { name: "BillingDetails", elementType: BillingDetail },
             { name: "BillingStatusSet", elementType: BillingStatus },
+            { name: "ClientRoles", elementType: ClientRole },
             { name: "Clients", elementType: Client },
             { name: "DimDates", elementType: DimDate },
+            { name: "InvoiceLines", elementType: InvoiceLine },
+            { name: "Invoices", elementType: Invoice },
+            { name: "InvoiceStatus", elementType: InvoiceStatu },
+            { name: "OverbudgetTimesheets", elementType: OverbudgetTimesheet },
             { name: "People", elementType: Person },
             { name: "Projects", elementType: Project },
-            { name: "Timesheets", elementType: Timesheet },
-            { name: "TimesheetDetails", elementType: TimesheetDetail },
-            { name: "TypeOfWorks", elementType: TypeOfWork },
-            { name: "RoleTypes", elementType: RoleType },
-            { name: "ClientRoles", elementType: ClientRole },
-            { name: "SystemRoles", elementType: SystemRole },
-            { name: "ActiveTypes", elementType: ActiveType },
-            { name: "OverbudgetTimesheets", elementType: OverbudgetTimesheet },
             { name: "ProjectsOverCaps", elementType: ProjectsOverCap },
-            { name: "UnallocatedTimesheets", elementType: UnallocatedTimesheet },
-            { name: "Invoices", elementType: Invoice },
-            { name: "InvoiceLines", elementType: InvoiceLine },
-            { name: "InvoiceStatus", elementType: InvoiceStatu }
+            { name: "RoleTypes", elementType: RoleType },
+            { name: "SystemRoles", elementType: SystemRole },
+            { name: "TimesheetDetails", elementType: TimesheetDetail },
+            { name: "Timesheets", elementType: Timesheet },
+            { name: "TypeOfWorks", elementType: TypeOfWork },
+            { name: "UnallocatedTimesheets", elementType: UnallocatedTimesheet }
         ], [
+            {
+                name: "ActiveTypes_SingleOrDefault", value: function (ID) {
+                    return new $DataServiceQuery({ _entitySet: this.ActiveTypes },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                    );
+                }
+            },
             {
                 name: "BillingDetails_SingleOrDefault", value: function (BillingDetailID) {
                     return new $DataServiceQuery({ _entitySet: this.BillingDetails },
@@ -1878,65 +1885,19 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "BillingDetailsSorted", value: function (ClientName, PersonName) {
+                    return new $DataServiceQuery({ _entitySet: this.BillingDetails },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingDetailsSorted()",
+                        {
+                            ClientName: $toODataString(ClientName, "String?"),
+                            PersonName: $toODataString(PersonName, "String?")
+                        });
+                }
+            },
+            {
                 name: "BillingStatusSet_SingleOrDefault", value: function (BillingStatusID) {
                     return new $DataServiceQuery({ _entitySet: this.BillingStatusSet },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingStatusSet(" + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "Clients_SingleOrDefault", value: function (ClientID) {
-                    return new $DataServiceQuery({ _entitySet: this.Clients },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "DimDates_SingleOrDefault", value: function (DateID) {
-                    return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/DimDates(" + "DateID=" + $toODataString(DateID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "People_SingleOrDefault", value: function (PersonID) {
-                    return new $DataServiceQuery({ _entitySet: this.People },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "Projects_SingleOrDefault", value: function (ProjectID) {
-                    return new $DataServiceQuery({ _entitySet: this.Projects },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Projects(" + "ProjectID=" + $toODataString(ProjectID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
-                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "TimesheetDetails_SingleOrDefault", value: function (TimesheetDetailID) {
-                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetails(" + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "TypeOfWorks_SingleOrDefault", value: function (TypeOfWorkID) {
-                    return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "RoleTypes_SingleOrDefault", value: function (RoleTypeID) {
-                    return new $DataServiceQuery({ _entitySet: this.RoleTypes },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/RoleTypes(" + "RoleTypeID=" + $toODataString(RoleTypeID, "Int32?") + ")"
                     );
                 }
             },
@@ -1948,27 +1909,90 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "SystemRoles_SingleOrDefault", value: function (SystemRoleID) {
-                    return new $DataServiceQuery({ _entitySet: this.SystemRoles },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/SystemRoles(" + "SystemRoleID=" + $toODataString(SystemRoleID, "Int32?") + ")"
+                name: "Clients_SingleOrDefault", value: function (ClientID) {
+                    return new $DataServiceQuery({ _entitySet: this.Clients },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
                     );
                 }
             },
             {
-                name: "TimesheetsByDate", value: function (StartDate, EndDate, TimesheetPerson) {
-                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetsByDate()",
+                name: "FilteredClient", value: function (ClientName) {
+                    return new $DataServiceQuery({ _entitySet: this.Clients },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/FilteredClient()",
                         {
-                            StartDate: $toODataString(StartDate, "DateTime?"),
-                            EndDate: $toODataString(EndDate, "DateTime?"),
-                            TimesheetPerson: $toODataString(TimesheetPerson, "String?")
+                            ClientName: $toODataString(ClientName, "String?")
                         });
                 }
             },
             {
-                name: "ActiveTypes_SingleOrDefault", value: function (ID) {
-                    return new $DataServiceQuery({ _entitySet: this.ActiveTypes },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ActiveTypes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                name: "DimDates_SingleOrDefault", value: function (DateID) {
+                    return new $DataServiceQuery({ _entitySet: this.DimDates },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/DimDates(" + "DateID=" + $toODataString(DateID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "BillingDate", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.DimDates },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingDate()",
+                        {
+                        });
+                }
+            },
+            {
+                name: "InvoiceLines_SingleOrDefault", value: function (InvoiceLineID) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLines(" + "InvoiceLineID=" + $toODataString(InvoiceLineID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "InvoiceLinesSorted", value: function (InvoiceID, AM, InvoiceLineDescription, ProjectName) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLinesSorted()",
+                        {
+                            InvoiceID: $toODataString(InvoiceID, "Int32?"),
+                            AM: $toODataString(AM, "String?"),
+                            InvoiceLineDescription: $toODataString(InvoiceLineDescription, "String?"),
+                            ProjectName: $toODataString(ProjectName, "String?")
+                        });
+                }
+            },
+            {
+                name: "Invoices_SingleOrDefault", value: function (InvoiceID) {
+                    return new $DataServiceQuery({ _entitySet: this.Invoices },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Invoices(" + "InvoiceID=" + $toODataString(InvoiceID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "InvoicesSorted", value: function (PersonName, InvoiceStatusName) {
+                    return new $DataServiceQuery({ _entitySet: this.Invoices },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoicesSorted()",
+                        {
+                            PersonName: $toODataString(PersonName, "String?"),
+                            InvoiceStatusName: $toODataString(InvoiceStatusName, "String?")
+                        });
+                }
+            },
+            {
+                name: "InvoiceStatus_SingleOrDefault", value: function (InvoiceStatusID) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceStatus },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceStatus(" + "InvoiceStatusID=" + $toODataString(InvoiceStatusID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "OverbudgetTimesheets_SingleOrDefault", value: function (BillingStatusName, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail) {
+                    return new $DataServiceQuery({ _entitySet: this.OverbudgetTimesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/OverbudgetTimesheets(" + "BillingStatusName=" + $toODataString(BillingStatusName, "String?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + ")"
+                    );
+                }
+            },
+            {
+                name: "People_SingleOrDefault", value: function (PersonID) {
+                    return new $DataServiceQuery({ _entitySet: this.People },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/People(" + "PersonID=" + $toODataString(PersonID, "Int32?") + ")"
                     );
                 }
             },
@@ -1981,20 +2005,10 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "BillingDate", value: function () {
-                    return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingDate()",
-                        {
-                        });
-                }
-            },
-            {
-                name: "FilteredClient", value: function (ClientName) {
-                    return new $DataServiceQuery({ _entitySet: this.Clients },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/FilteredClient()",
-                        {
-                            ClientName: $toODataString(ClientName, "String?")
-                        });
+                name: "Projects_SingleOrDefault", value: function (ProjectID) {
+                    return new $DataServiceQuery({ _entitySet: this.Projects },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Projects(" + "ProjectID=" + $toODataString(ProjectID, "Int32?") + ")"
+                    );
                 }
             },
             {
@@ -2017,16 +2031,55 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "OverbudgetTimesheets_SingleOrDefault", value: function (BillingStatusName, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail) {
-                    return new $DataServiceQuery({ _entitySet: this.OverbudgetTimesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/OverbudgetTimesheets(" + "BillingStatusName=" + $toODataString(BillingStatusName, "String?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + ")"
+                name: "ProjectsOverCaps_SingleOrDefault", value: function (ErrorMessage) {
+                    return new $DataServiceQuery({ _entitySet: this.ProjectsOverCaps },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectsOverCaps(" + "ErrorMessage=" + $toODataString(ErrorMessage, "String?") + ")"
                     );
                 }
             },
             {
-                name: "ProjectsOverCaps_SingleOrDefault", value: function (ErrorMessage) {
-                    return new $DataServiceQuery({ _entitySet: this.ProjectsOverCaps },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectsOverCaps(" + "ErrorMessage=" + $toODataString(ErrorMessage, "String?") + ")"
+                name: "RoleTypes_SingleOrDefault", value: function (RoleTypeID) {
+                    return new $DataServiceQuery({ _entitySet: this.RoleTypes },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/RoleTypes(" + "RoleTypeID=" + $toODataString(RoleTypeID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "SystemRoles_SingleOrDefault", value: function (SystemRoleID) {
+                    return new $DataServiceQuery({ _entitySet: this.SystemRoles },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/SystemRoles(" + "SystemRoleID=" + $toODataString(SystemRoleID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "TimesheetDetails_SingleOrDefault", value: function (TimesheetDetailID) {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetails(" + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "TimesheetsByDate", value: function (StartDate, EndDate, TimesheetPerson) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetsByDate()",
+                        {
+                            StartDate: $toODataString(StartDate, "DateTime?"),
+                            EndDate: $toODataString(EndDate, "DateTime?"),
+                            TimesheetPerson: $toODataString(TimesheetPerson, "String?")
+                        });
+                }
+            },
+            {
+                name: "TypeOfWorks_SingleOrDefault", value: function (TypeOfWorkID) {
+                    return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
                     );
                 }
             },
@@ -2041,59 +2094,6 @@ window.myapp = msls.application;
                 name: "UnallocatedTimesheetsSorted", value: function (ClientName, PersonName) {
                     return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/UnallocatedTimesheetsSorted()",
-                        {
-                            ClientName: $toODataString(ClientName, "String?"),
-                            PersonName: $toODataString(PersonName, "String?")
-                        });
-                }
-            },
-            {
-                name: "Invoices_SingleOrDefault", value: function (InvoiceID) {
-                    return new $DataServiceQuery({ _entitySet: this.Invoices },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Invoices(" + "InvoiceID=" + $toODataString(InvoiceID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "InvoiceLines_SingleOrDefault", value: function (InvoiceLineID) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLines(" + "InvoiceLineID=" + $toODataString(InvoiceLineID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "InvoiceStatus_SingleOrDefault", value: function (InvoiceStatusID) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceStatus },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceStatus(" + "InvoiceStatusID=" + $toODataString(InvoiceStatusID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "InvoicesSorted", value: function (PersonName, InvoiceStatusName) {
-                    return new $DataServiceQuery({ _entitySet: this.Invoices },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoicesSorted()",
-                        {
-                            PersonName: $toODataString(PersonName, "String?"),
-                            InvoiceStatusName: $toODataString(InvoiceStatusName, "String?")
-                        });
-                }
-            },
-            {
-                name: "InvoiceLinesSorted", value: function (InvoiceID, AM, InvoiceLineDescription, ProjectName) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/InvoiceLinesSorted()",
-                        {
-                            InvoiceID: $toODataString(InvoiceID, "Int32?"),
-                            AM: $toODataString(AM, "String?"),
-                            InvoiceLineDescription: $toODataString(InvoiceLineDescription, "String?"),
-                            ProjectName: $toODataString(ProjectName, "String?")
-                        });
-                }
-            },
-            {
-                name: "BillingDetailsSorted", value: function (ClientName, PersonName) {
-                    return new $DataServiceQuery({ _entitySet: this.BillingDetails },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/BillingDetailsSorted()",
                         {
                             ClientName: $toODataString(ClientName, "String?"),
                             PersonName: $toODataString(PersonName, "String?")

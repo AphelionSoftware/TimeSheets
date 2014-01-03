@@ -16,33 +16,33 @@ namespace LightSwitchApplication
     /// <summary>
     /// No Modeled Description Available
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-    public sealed partial class RoleType : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+    public sealed partial class InvoiceStatu : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the RoleType entity.
+        /// Initializes a new instance of the InvoiceStatu entity.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public RoleType()
+        public InvoiceStatu()
             : this(null)
         {
         }
     
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public RoleType(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.RoleType> entitySet)
+        public InvoiceStatu(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.InvoiceStatu> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.RoleType.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.InvoiceStatu.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleType_Created();
+        partial void InvoiceStatu_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleType_AllowSaveWithErrors(ref bool result);
+        partial void InvoiceStatu_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -51,7 +51,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
         {
@@ -64,7 +64,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::LightSwitchApplication.DataWorkspace DataWorkspace
         {
@@ -81,85 +81,85 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int RoleTypeID
+        public int InvoiceStatusID
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeID);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusID);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeID_IsReadOnly(ref bool result);
+        partial void InvoiceStatusID_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void InvoiceStatusID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeID_Changed();
+        partial void InvoiceStatusID_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RoleTypeName
+        public string InvoiceStatusName
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeName);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusName);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeName, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusName, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeName_IsReadOnly(ref bool result);
+        partial void InvoiceStatusName_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void InvoiceStatusName_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeName_Changed();
+        partial void InvoiceStatusName_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RoleTypeSourceKey
+        public string InvoiceStatusSourceKey
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeSourceKey);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusSourceKey);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeSourceKey, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusSourceKey, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeSourceKey_IsReadOnly(ref bool result);
+        partial void InvoiceStatusSourceKey_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeSourceKey_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void InvoiceStatusSourceKey_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeSourceKey_Changed();
+        partial void InvoiceStatusSourceKey_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime LoadDate
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.LoadDate);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.LoadDate);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.LoadDate, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.LoadDate, value);
             }
         }
         
@@ -173,37 +173,37 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string RoleTypeCode
+        public string InvoiceStatusCode
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeCode);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusCode);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeCode, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusCode, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeCode_IsReadOnly(ref bool result);
+        partial void InvoiceStatusCode_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeCode_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void InvoiceStatusCode_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypeCode_Changed();
+        partial void InvoiceStatusCode_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Nullable<int> LoadDateID
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.LoadDateID);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.LoadDateID);
             }
         }
         
@@ -217,17 +217,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime sys_CreatedOn
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedOn);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedOn);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedOn, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedOn, value);
             }
         }
         
@@ -241,17 +241,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string sys_CreatedBy
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedBy);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedBy);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedBy, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedBy, value);
             }
         }
         
@@ -265,17 +265,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime sys_ModifiedOn
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedOn);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedOn);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedOn, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedOn, value);
             }
         }
         
@@ -289,17 +289,17 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string sys_ModifiedBy
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedBy);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedBy);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedBy, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedBy, value);
             }
         }
         
@@ -313,17 +313,40 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Invoice> Invoices
+        {
+            get
+            {
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Invoice> InvoicesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetQuery(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.Invoices);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
             {
-                return global::LightSwitchApplication.RoleType.DetailsClass.GetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType);
+                return global::LightSwitchApplication.InvoiceStatu.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType);
             }
             set
             {
-                global::LightSwitchApplication.RoleType.DetailsClass.SetValue(this, global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType, value);
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType, value);
             }
         }
         
@@ -340,40 +363,40 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.RoleType,
-                global::LightSwitchApplication.RoleType.DetailsClass,
-                global::LightSwitchApplication.RoleType.DetailsClass.IImplementation,
-                global::LightSwitchApplication.RoleType.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>>
+                global::LightSwitchApplication.InvoiceStatu,
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass,
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.IImplementation,
+                global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeID;
+                var initializeEntry = global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusID;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>.Entry
-                __RoleTypeEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>.Entry(
-                    global::LightSwitchApplication.RoleType.DetailsClass.__RoleType_CreateNew,
-                    global::LightSwitchApplication.RoleType.DetailsClass.__RoleType_Created,
-                    global::LightSwitchApplication.RoleType.DetailsClass.__RoleType_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.RoleType __RoleType_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.RoleType> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>.Entry
+                __InvoiceStatuEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>.Entry(
+                    global::LightSwitchApplication.InvoiceStatu.DetailsClass.__InvoiceStatu_CreateNew,
+                    global::LightSwitchApplication.InvoiceStatu.DetailsClass.__InvoiceStatu_Created,
+                    global::LightSwitchApplication.InvoiceStatu.DetailsClass.__InvoiceStatu_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.InvoiceStatu __InvoiceStatu_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.InvoiceStatu> es)
             {
-                return new global::LightSwitchApplication.RoleType(es);
+                return new global::LightSwitchApplication.InvoiceStatu(es);
             }
-            private static void __RoleType_Created(global::LightSwitchApplication.RoleType e)
+            private static void __InvoiceStatu_Created(global::LightSwitchApplication.InvoiceStatu e)
             {
-                e.RoleType_Created();
+                e.InvoiceStatu_Created();
             }
-            private static bool __RoleType_AllowSaveWithErrors(global::LightSwitchApplication.RoleType e)
+            private static bool __InvoiceStatu_AllowSaveWithErrors(global::LightSwitchApplication.InvoiceStatu e)
             {
                 bool result = false;
-                e.RoleType_AllowSaveWithErrors(ref result);
+                e.InvoiceStatu_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -381,7 +404,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass> Commands
             {
                 get
                 {
@@ -389,7 +412,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass> Methods
             {
                 get
                 {
@@ -397,7 +420,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.RoleType.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -407,100 +430,108 @@ namespace LightSwitchApplication
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int> RoleTypeID
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int> InvoiceStatusID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string> RoleTypeName
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string> InvoiceStatusName
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusName) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string> RoleTypeSourceKey
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string> InvoiceStatusSourceKey
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeSourceKey) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusSourceKey) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime> LoadDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime> LoadDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.LoadDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.LoadDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string> RoleTypeCode
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string> InvoiceStatusCode
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.RoleTypeCode) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.InvoiceStatusCode) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>> LoadDateID
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>> LoadDateID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.LoadDateID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.LoadDateID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime> sys_CreatedOn
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime> sys_CreatedOn
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string> sys_CreatedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string> sys_CreatedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime> sys_ModifiedOn
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime> sys_ModifiedOn
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedOn) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string> sys_ModifiedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string> sys_ModifiedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.sys_ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.sys_ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice> Invoices
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.Invoices) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType>;
                     }
                 }
                 
@@ -510,431 +541,452 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int RoleTypeID { get; }
-                new string RoleTypeName { get; set; }
-                new string RoleTypeSourceKey { get; set; }
+                new int InvoiceStatusID { get; }
+                new string InvoiceStatusName { get; set; }
+                new string InvoiceStatusSourceKey { get; set; }
                 new global::System.DateTime LoadDate { get; set; }
-                new string RoleTypeCode { get; set; }
+                new string InvoiceStatusCode { get; set; }
                 new global::System.Nullable<int> LoadDateID { get; }
                 new global::System.DateTime sys_CreatedOn { get; set; }
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
+                new global::System.Collections.IEnumerable Invoices { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
             }
             #pragma warning restore 109
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal class PropertySetProperties
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int>.Entry
-                    RoleTypeID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int>.Entry(
-                        "RoleTypeID",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeID_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeID_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeID_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeID_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int>.Entry
+                    InvoiceStatusID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int>.Entry(
+                        "InvoiceStatusID",
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusID_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusID_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusID_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeID_OnValueChanged);
-                private static void _RoleTypeID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusID_OnValueChanged);
+                private static void _InvoiceStatusID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
-                    c(d, ref d._RoleTypeID, sf);
+                    c(d, ref d._InvoiceStatusID, sf);
                 }
-                private static bool _RoleTypeID_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _InvoiceStatusID_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
-                    e.RoleTypeID_IsReadOnly(ref result);
+                    e.InvoiceStatusID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _RoleTypeID_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _InvoiceStatusID_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.RoleTypeID_Validate(r);
+                    e.InvoiceStatusID_Validate(r);
                 }
-                private static int _RoleTypeID_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static int _InvoiceStatusID_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    return d.ImplementationEntity.RoleTypeID;
+                    return d.ImplementationEntity.InvoiceStatusID;
                 }
-                private static void _RoleTypeID_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _InvoiceStatusID_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
-                    e.RoleTypeID_Changed();
+                    e.InvoiceStatusID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry
-                    RoleTypeName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry(
-                        "RoleTypeName",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeName_OnValueChanged);
-                private static void _RoleTypeName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry
+                    InvoiceStatusName = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry(
+                        "InvoiceStatusName",
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusName_OnValueChanged);
+                private static void _InvoiceStatusName_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
-                    c(d, ref d._RoleTypeName, sf);
+                    c(d, ref d._InvoiceStatusName, sf);
                 }
-                private static bool _RoleTypeName_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _InvoiceStatusName_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
-                    e.RoleTypeName_IsReadOnly(ref result);
+                    e.InvoiceStatusName_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _RoleTypeName_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _InvoiceStatusName_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.RoleTypeName_Validate(r);
+                    e.InvoiceStatusName_Validate(r);
                 }
-                private static string _RoleTypeName_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static string _InvoiceStatusName_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    return d.ImplementationEntity.RoleTypeName;
+                    return d.ImplementationEntity.InvoiceStatusName;
                 }
-                private static void _RoleTypeName_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, string v)
+                private static void _InvoiceStatusName_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.RoleTypeName = v;
+                    d.ImplementationEntity.InvoiceStatusName = v;
                 }
-                private static void _RoleTypeName_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _InvoiceStatusName_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
-                    e.RoleTypeName_Changed();
+                    e.InvoiceStatusName_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry
-                    RoleTypeSourceKey = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry(
-                        "RoleTypeSourceKey",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeSourceKey_OnValueChanged);
-                private static void _RoleTypeSourceKey_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry
+                    InvoiceStatusSourceKey = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry(
+                        "InvoiceStatusSourceKey",
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusSourceKey_OnValueChanged);
+                private static void _InvoiceStatusSourceKey_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
-                    c(d, ref d._RoleTypeSourceKey, sf);
+                    c(d, ref d._InvoiceStatusSourceKey, sf);
                 }
-                private static bool _RoleTypeSourceKey_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _InvoiceStatusSourceKey_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
-                    e.RoleTypeSourceKey_IsReadOnly(ref result);
+                    e.InvoiceStatusSourceKey_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _RoleTypeSourceKey_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _InvoiceStatusSourceKey_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.RoleTypeSourceKey_Validate(r);
+                    e.InvoiceStatusSourceKey_Validate(r);
                 }
-                private static string _RoleTypeSourceKey_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static string _InvoiceStatusSourceKey_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    return d.ImplementationEntity.RoleTypeSourceKey;
+                    return d.ImplementationEntity.InvoiceStatusSourceKey;
                 }
-                private static void _RoleTypeSourceKey_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, string v)
+                private static void _InvoiceStatusSourceKey_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.RoleTypeSourceKey = v;
+                    d.ImplementationEntity.InvoiceStatusSourceKey = v;
                 }
-                private static void _RoleTypeSourceKey_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _InvoiceStatusSourceKey_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
-                    e.RoleTypeSourceKey_Changed();
+                    e.InvoiceStatusSourceKey_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry
-                    LoadDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry
+                    LoadDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry(
                         "LoadDate",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDate_OnValueChanged);
-                private static void _LoadDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDate_OnValueChanged);
+                private static void _LoadDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._LoadDate, sf);
                 }
-                private static bool _LoadDate_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _LoadDate_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.LoadDate_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _LoadDate_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _LoadDate_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.LoadDate_Validate(r);
                 }
-                private static global::System.DateTime _LoadDate_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::System.DateTime _LoadDate_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.LoadDate;
                 }
-                private static void _LoadDate_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, global::System.DateTime v)
+                private static void _LoadDate_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.LoadDate = global::LightSwitchApplication.RoleType.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.LoadDate = global::LightSwitchApplication.InvoiceStatu.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _LoadDate_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _LoadDate_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.LoadDate_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry
-                    RoleTypeCode = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry(
-                        "RoleTypeCode",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._RoleTypeCode_OnValueChanged);
-                private static void _RoleTypeCode_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry
+                    InvoiceStatusCode = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry(
+                        "InvoiceStatusCode",
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._InvoiceStatusCode_OnValueChanged);
+                private static void _InvoiceStatusCode_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
-                    c(d, ref d._RoleTypeCode, sf);
+                    c(d, ref d._InvoiceStatusCode, sf);
                 }
-                private static bool _RoleTypeCode_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _InvoiceStatusCode_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
-                    e.RoleTypeCode_IsReadOnly(ref result);
+                    e.InvoiceStatusCode_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _RoleTypeCode_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _InvoiceStatusCode_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.RoleTypeCode_Validate(r);
+                    e.InvoiceStatusCode_Validate(r);
                 }
-                private static string _RoleTypeCode_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static string _InvoiceStatusCode_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    return d.ImplementationEntity.RoleTypeCode;
+                    return d.ImplementationEntity.InvoiceStatusCode;
                 }
-                private static void _RoleTypeCode_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, string v)
+                private static void _InvoiceStatusCode_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.RoleTypeCode = v;
+                    d.ImplementationEntity.InvoiceStatusCode = v;
                 }
-                private static void _RoleTypeCode_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _InvoiceStatusCode_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
-                    e.RoleTypeCode_Changed();
+                    e.InvoiceStatusCode_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>>.Entry
-                    LoadDateID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>>.Entry
+                    LoadDateID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>>.Entry(
                         "LoadDateID",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDateID_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDateID_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDateID_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDateID_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDateID_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDateID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDateID_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDateID_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._LoadDateID_OnValueChanged);
-                private static void _LoadDateID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._LoadDateID_OnValueChanged);
+                private static void _LoadDateID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._LoadDateID, sf);
                 }
-                private static bool _LoadDateID_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _LoadDateID_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.LoadDateID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _LoadDateID_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _LoadDateID_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.LoadDateID_Validate(r);
                 }
-                private static global::System.Nullable<int> _LoadDateID_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::System.Nullable<int> _LoadDateID_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.LoadDateID;
                 }
-                private static void _LoadDateID_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _LoadDateID_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.LoadDateID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry
-                    sys_CreatedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry
+                    sys_CreatedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry(
                         "sys_CreatedOn",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedOn_OnValueChanged);
-                private static void _sys_CreatedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedOn_OnValueChanged);
+                private static void _sys_CreatedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_CreatedOn, sf);
                 }
-                private static bool _sys_CreatedOn_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _sys_CreatedOn_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.sys_CreatedOn_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_CreatedOn_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_CreatedOn_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_CreatedOn_Validate(r);
                 }
-                private static global::System.DateTime _sys_CreatedOn_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::System.DateTime _sys_CreatedOn_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_CreatedOn;
                 }
-                private static void _sys_CreatedOn_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, global::System.DateTime v)
+                private static void _sys_CreatedOn_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.sys_CreatedOn = global::LightSwitchApplication.RoleType.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.sys_CreatedOn = global::LightSwitchApplication.InvoiceStatu.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _sys_CreatedOn_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _sys_CreatedOn_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.sys_CreatedOn_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry
-                    sys_CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry
+                    sys_CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry(
                         "sys_CreatedBy",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_CreatedBy_OnValueChanged);
-                private static void _sys_CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_CreatedBy_OnValueChanged);
+                private static void _sys_CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_CreatedBy, sf);
                 }
-                private static bool _sys_CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _sys_CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.sys_CreatedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_CreatedBy_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_CreatedBy_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_CreatedBy_Validate(r);
                 }
-                private static string _sys_CreatedBy_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static string _sys_CreatedBy_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_CreatedBy;
                 }
-                private static void _sys_CreatedBy_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, string v)
+                private static void _sys_CreatedBy_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.sys_CreatedBy = v;
                 }
-                private static void _sys_CreatedBy_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _sys_CreatedBy_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.sys_CreatedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry
-                    sys_ModifiedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry
+                    sys_ModifiedOn = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Entry(
                         "sys_ModifiedOn",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedOn_OnValueChanged);
-                private static void _sys_ModifiedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedOn_OnValueChanged);
+                private static void _sys_ModifiedOn_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_ModifiedOn, sf);
                 }
-                private static bool _sys_ModifiedOn_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _sys_ModifiedOn_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.sys_ModifiedOn_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_ModifiedOn_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_ModifiedOn_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_ModifiedOn_Validate(r);
                 }
-                private static global::System.DateTime _sys_ModifiedOn_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::System.DateTime _sys_ModifiedOn_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_ModifiedOn;
                 }
-                private static void _sys_ModifiedOn_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, global::System.DateTime v)
+                private static void _sys_ModifiedOn_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.sys_ModifiedOn = global::LightSwitchApplication.RoleType.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.sys_ModifiedOn = global::LightSwitchApplication.InvoiceStatu.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _sys_ModifiedOn_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _sys_ModifiedOn_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.sys_ModifiedOn_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry
-                    sys_ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry
+                    sys_ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Entry(
                         "sys_ModifiedBy",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._sys_ModifiedBy_OnValueChanged);
-                private static void _sys_ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._sys_ModifiedBy_OnValueChanged);
+                private static void _sys_ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._sys_ModifiedBy, sf);
                 }
-                private static bool _sys_ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _sys_ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.sys_ModifiedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _sys_ModifiedBy_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _sys_ModifiedBy_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.sys_ModifiedBy_Validate(r);
                 }
-                private static string _sys_ModifiedBy_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static string _sys_ModifiedBy_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.sys_ModifiedBy;
                 }
-                private static void _sys_ModifiedBy_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, string v)
+                private static void _sys_ModifiedBy_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.sys_ModifiedBy = v;
                 }
-                private static void _sys_ModifiedBy_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _sys_ModifiedBy_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.sys_ModifiedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
-                    ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice>.Entry
+                    Invoices = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice>.Entry(
+                        "Invoices",
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._Invoices_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._Invoices_GetReferencedEntities,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._Invoices_GetEntityCollection);
+                private static void _Invoices_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Invoices, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Invoice> _Invoices_GetReferencedEntities(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass>(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.Invoices, ref d._Invoices);
+                }
+                private static global::System.Collections.IEnumerable _Invoices_GetEntityCollection(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Invoices;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_Stub,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_Validate,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_GetCoreImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_GetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_SetImplementationValue,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_Refresh,
-                        global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties._ActiveType_OnValueChanged);
-                private static void _ActiveType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RoleType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.RoleType.DetailsClass d, object sf)
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_Stub,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_Validate,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_GetCoreImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_Refresh,
+                        global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties._ActiveType_OnValueChanged);
+                private static void _ActiveType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.InvoiceStatu.DetailsClass d, object sf)
                 {
                     c(d, ref d._ActiveType, sf);
                 }
-                private static bool _ActiveType_ComputeIsReadOnly(global::LightSwitchApplication.RoleType e)
+                private static bool _ActiveType_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     bool result = false;
                     e.ActiveType_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ActiveType_Validate(global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ActiveType_Validate(global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ActiveType_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _ActiveType_GetCoreImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _ActiveType_GetCoreImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
                     return d.ImplementationEntity.ActiveType;
                 }
-                private static global::LightSwitchApplication.ActiveType _ActiveType_GetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static global::LightSwitchApplication.ActiveType _ActiveType_GetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass>(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
+                    return d.GetImplementationValue<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass>(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
                 }
-                private static void _ActiveType_SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass d, global::LightSwitchApplication.ActiveType v)
+                private static void _ActiveType_SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass d, global::LightSwitchApplication.ActiveType v)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType, (i, ev) => i.ActiveType = ev, v);
+                    d.SetImplementationValue(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType, (i, ev) => i.ActiveType = ev, v);
                 }
-                private static void _ActiveType_Refresh(global::LightSwitchApplication.RoleType.DetailsClass d)
+                private static void _ActiveType_Refresh(global::LightSwitchApplication.InvoiceStatu.DetailsClass d)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.RoleType.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.InvoiceStatu.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
                 }
-                private static void _ActiveType_OnValueChanged(global::LightSwitchApplication.RoleType e)
+                private static void _ActiveType_OnValueChanged(global::LightSwitchApplication.InvoiceStatu e)
                 {
                     e.ActiveType_Changed();
                 }
@@ -942,37 +994,40 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, int>.Data _RoleTypeID;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, int>.Data _InvoiceStatusID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data _RoleTypeName;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data _InvoiceStatusName;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data _RoleTypeSourceKey;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data _InvoiceStatusSourceKey;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data _LoadDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data _LoadDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data _RoleTypeCode;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data _InvoiceStatusCode;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.Nullable<int>>.Data _LoadDateID;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.Nullable<int>>.Data _LoadDateID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data _sys_CreatedOn;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data _sys_CreatedOn;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data _sys_CreatedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data _sys_CreatedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::System.DateTime>.Data _sys_ModifiedOn;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::System.DateTime>.Data _sys_ModifiedOn;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, string>.Data _sys_ModifiedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, string>.Data _sys_ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RoleType, global::LightSwitchApplication.RoleType.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.Invoice>.Data _Invoices;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceStatu, global::LightSwitchApplication.InvoiceStatu.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
             
         }
     

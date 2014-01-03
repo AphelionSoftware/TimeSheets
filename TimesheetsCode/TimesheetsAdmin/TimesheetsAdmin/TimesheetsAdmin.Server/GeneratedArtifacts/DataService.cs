@@ -12,2649 +12,6 @@ namespace LightSwitchApplication
     #region Data Services
     
     /// <summary>
-    /// Provides members to query and update data in the Timesheets_Data datasource.
-    /// </summary>
-    public sealed partial class Timesheets_DataService
-        : global::LightSwitchApplication.Timesheets_Data
-    {
-        #region Constructors
-    
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Timesheets_DataService() : base()
-        {
-        }
-    
-        #endregion
-    
-        #region Private Properties
-        
-        /// <summary>
-        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.Application Application
-        {
-            get
-            {
-                return global::LightSwitchApplication.Application.Current;
-            }
-        }
-        
-        /// <summary>
-        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private global::LightSwitchApplication.DataWorkspace DataWorkspace
-        {
-            get
-            {
-                return (global::LightSwitchApplication.DataWorkspace)this.Details.DataWorkspace;
-            }
-        }
-        
-        #endregion
-    
-        #region Server Interceptions Points
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Inserting(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Inserted(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Updating(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Updated(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Deleting(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Deleted(global::LightSwitchApplication.BillingDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Validate(global::LightSwitchApplication.BillingDetail entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Inserting(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Inserted(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Updating(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Updated(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Deleting(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Deleted(global::LightSwitchApplication.BillingStatus entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Validate(global::LightSwitchApplication.BillingStatus entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingStatusSet_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Inserting(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Inserted(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Updating(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Updated(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Deleting(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Deleted(global::LightSwitchApplication.Client entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Validate(global::LightSwitchApplication.Client entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Clients_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Inserting(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Inserted(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Updating(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Updated(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Deleting(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Deleted(global::LightSwitchApplication.DimDate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Validate(global::LightSwitchApplication.DimDate entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void DimDates_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Inserting(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Inserted(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Updating(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Updated(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Deleting(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Deleted(global::LightSwitchApplication.Person entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Validate(global::LightSwitchApplication.Person entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void People_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Inserting(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Inserted(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Updating(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Updated(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Deleting(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Deleted(global::LightSwitchApplication.Project entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Validate(global::LightSwitchApplication.Project entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Projects_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Inserting(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Inserted(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Updating(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Updated(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Deleting(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Deleted(global::LightSwitchApplication.Timesheet entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Validate(global::LightSwitchApplication.Timesheet entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Timesheets_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Inserting(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Inserted(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Updating(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Updated(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Deleting(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Deleted(global::LightSwitchApplication.TimesheetDetail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Validate(global::LightSwitchApplication.TimesheetDetail entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Inserting(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Inserted(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Updating(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Updated(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Deleting(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Deleted(global::LightSwitchApplication.TypeOfWork entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Validate(global::LightSwitchApplication.TypeOfWork entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TypeOfWorks_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Inserting(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Inserted(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Updating(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Updated(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Deleting(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Deleted(global::LightSwitchApplication.RoleType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Validate(global::LightSwitchApplication.RoleType entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RoleTypes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Inserting(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Inserted(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Updating(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Updated(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Deleting(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Deleted(global::LightSwitchApplication.ClientRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Validate(global::LightSwitchApplication.ClientRole entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRoles_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Inserting(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Inserted(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Updating(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Updated(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Deleting(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Deleted(global::LightSwitchApplication.SystemRole entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Validate(global::LightSwitchApplication.SystemRole entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SystemRoles_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Inserting(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Inserted(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Updating(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Updated(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Deleting(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Deleted(global::LightSwitchApplication.ActiveType entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Validate(global::LightSwitchApplication.ActiveType entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ActiveTypes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Inserting(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Inserted(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Updating(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Updated(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Deleting(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Deleted(global::LightSwitchApplication.Invoice entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Validate(global::LightSwitchApplication.Invoice entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Invoices_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Inserting(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Inserted(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Updating(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Updated(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Deleting(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Deleted(global::LightSwitchApplication.InvoiceLine entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Validate(global::LightSwitchApplication.InvoiceLine entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceLines_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Inserting(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Inserted(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Updating(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Updated(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Deleting(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Deleted(global::LightSwitchApplication.InvoiceStatu entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Validate(global::LightSwitchApplication.InvoiceStatu entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatus_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Inserting(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Inserted(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Updating(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Updated(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Deleting(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Deleted(global::LightSwitchApplication.ResourcePlan entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Validate(global::LightSwitchApplication.ResourcePlan entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlans_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaveChanges_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaveChanges_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaveChanges_Executed();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetsByDate_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetsByDate_Executing(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetsByDate_PreprocessQuery(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetsByDate_Executed(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetsByDate_ExecuteFailed(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonSorted_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonSorted_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDate_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDate_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDate_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDate_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDate_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void FilteredClient_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void FilteredClient_Executing(string ClientName);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void FilteredClient_PreprocessQuery(string ClientName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Client> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void FilteredClient_Executed(string ClientName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Client> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void FilteredClient_ExecuteFailed(string ClientName, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProjectsFilter_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_Executing(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProjectsFilter_PreprocessQuery(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_Executed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_ExecuteFailed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatusSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void InvoiceStatusSorted_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void InvoiceStatusSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void InvoiceStatusSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.InvoiceStatu> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void InvoiceStatusSorted_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRolesSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ClientRolesSorted_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ClientRolesSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ClientRolesSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ClientRole> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ClientRolesSorted_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetailsSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailsSorted_Executing(string ClientName, string PersonName);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetailsSorted_PreprocessQuery(string ClientName, string PersonName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailsSorted_Executed(string ClientName, string PersonName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailsSorted_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetailNoRole_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailNoRole_Executing(string ClientName, string PersonName);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillingDetailNoRole_PreprocessQuery(string ClientName, string PersonName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailNoRole_Executed(string ClientName, string PersonName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillingDetailNoRole_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlanSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ResourcePlanSorted_Executing(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ResourcePlanSorted_PreprocessQuery(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ResourcePlanSorted_Executed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ResourcePlanSorted_ExecuteFailed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillableProjects_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_Executing(string Client_Project, string AM, global::System.Nullable<int> Billable);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void BillableProjects_PreprocessQuery(string Client_Project, string AM, global::System.Nullable<int> Billable, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_Executed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void BillableProjects_ExecuteFailed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonAccountManager_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonAccountManager_Executing();
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonAccountManager_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonAccountManager_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonAccountManager_ExecuteFailed(global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetailSorted_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailSorted_Executing(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetailSorted_PreprocessQuery(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailSorted_Executed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailSorted_ExecuteFailed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Query_Executed(global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Query_ExecuteFailed(global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor);
-    
-        #endregion
-    
-        #region Details Class
-    
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
-        public static new class DetailsClass
-        {
-    
-            static DetailsClass()
-            {
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
-                __BillingDetailsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
-                    "BillingDetails",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Filter);
-            private static bool __BillingDetails_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingDetails_CanInsert(ref result);
-                return result;
-            }
-            private static bool __BillingDetails_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingDetails_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __BillingDetails_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingDetails_CanDelete(ref result);
-                return result;
-            }
-            private static bool __BillingDetails_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingDetails_CanRead(ref result);
-                return result;
-            }
-            private static void __BillingDetails_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Inserting(e);
-            }
-            private static void __BillingDetails_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Inserted(e);
-            }
-            private static void __BillingDetails_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Updating(e);
-            }
-            private static void __BillingDetails_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Updated(e);
-            }
-            private static void __BillingDetails_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Deleting(e);
-            }
-            private static void __BillingDetails_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
-            {
-                d.BillingDetails_Deleted(e);
-            }
-            private static void __BillingDetails_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.BillingDetails_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> __BillingDetails_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> filter = null;
-                d.BillingDetails_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingStatus>
-                __BillingStatusSetEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingStatus>(
-                    "BillingStatusSet",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Filter);
-            private static bool __BillingStatusSet_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingStatusSet_CanInsert(ref result);
-                return result;
-            }
-            private static bool __BillingStatusSet_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingStatusSet_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __BillingStatusSet_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingStatusSet_CanDelete(ref result);
-                return result;
-            }
-            private static bool __BillingStatusSet_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.BillingStatusSet_CanRead(ref result);
-                return result;
-            }
-            private static void __BillingStatusSet_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Inserting(e);
-            }
-            private static void __BillingStatusSet_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Inserted(e);
-            }
-            private static void __BillingStatusSet_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Updating(e);
-            }
-            private static void __BillingStatusSet_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Updated(e);
-            }
-            private static void __BillingStatusSet_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Deleting(e);
-            }
-            private static void __BillingStatusSet_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
-            {
-                d.BillingStatusSet_Deleted(e);
-            }
-            private static void __BillingStatusSet_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.BillingStatusSet_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> __BillingStatusSet_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> filter = null;
-                d.BillingStatusSet_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>
-                __ClientsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>(
-                    "Clients",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Filter);
-            private static bool __Clients_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Clients_CanInsert(ref result);
-                return result;
-            }
-            private static bool __Clients_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Clients_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __Clients_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Clients_CanDelete(ref result);
-                return result;
-            }
-            private static bool __Clients_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Clients_CanRead(ref result);
-                return result;
-            }
-            private static void __Clients_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Inserting(e);
-            }
-            private static void __Clients_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Inserted(e);
-            }
-            private static void __Clients_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Updating(e);
-            }
-            private static void __Clients_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Updated(e);
-            }
-            private static void __Clients_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Deleting(e);
-            }
-            private static void __Clients_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
-            {
-                d.Clients_Deleted(e);
-            }
-            private static void __Clients_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.Clients_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> __Clients_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> filter = null;
-                d.Clients_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>
-                __DimDatesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>(
-                    "DimDates",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Filter);
-            private static bool __DimDates_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.DimDates_CanInsert(ref result);
-                return result;
-            }
-            private static bool __DimDates_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.DimDates_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __DimDates_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.DimDates_CanDelete(ref result);
-                return result;
-            }
-            private static bool __DimDates_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.DimDates_CanRead(ref result);
-                return result;
-            }
-            private static void __DimDates_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Inserting(e);
-            }
-            private static void __DimDates_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Inserted(e);
-            }
-            private static void __DimDates_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Updating(e);
-            }
-            private static void __DimDates_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Updated(e);
-            }
-            private static void __DimDates_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Deleting(e);
-            }
-            private static void __DimDates_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
-            {
-                d.DimDates_Deleted(e);
-            }
-            private static void __DimDates_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.DimDates_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> __DimDates_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> filter = null;
-                d.DimDates_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
-                __PeopleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
-                    "People",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Filter);
-            private static bool __People_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.People_CanInsert(ref result);
-                return result;
-            }
-            private static bool __People_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.People_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __People_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.People_CanDelete(ref result);
-                return result;
-            }
-            private static bool __People_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.People_CanRead(ref result);
-                return result;
-            }
-            private static void __People_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Inserting(e);
-            }
-            private static void __People_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Inserted(e);
-            }
-            private static void __People_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Updating(e);
-            }
-            private static void __People_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Updated(e);
-            }
-            private static void __People_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Deleting(e);
-            }
-            private static void __People_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
-            {
-                d.People_Deleted(e);
-            }
-            private static void __People_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.People_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> __People_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter = null;
-                d.People_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
-                __ProjectsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
-                    "Projects",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Filter);
-            private static bool __Projects_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Projects_CanInsert(ref result);
-                return result;
-            }
-            private static bool __Projects_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Projects_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __Projects_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Projects_CanDelete(ref result);
-                return result;
-            }
-            private static bool __Projects_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Projects_CanRead(ref result);
-                return result;
-            }
-            private static void __Projects_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Inserting(e);
-            }
-            private static void __Projects_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Inserted(e);
-            }
-            private static void __Projects_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Updating(e);
-            }
-            private static void __Projects_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Updated(e);
-            }
-            private static void __Projects_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Deleting(e);
-            }
-            private static void __Projects_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
-            {
-                d.Projects_Deleted(e);
-            }
-            private static void __Projects_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.Projects_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> __Projects_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> filter = null;
-                d.Projects_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
-                __TimesheetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
-                    "Timesheets",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Filter);
-            private static bool __Timesheets_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Timesheets_CanInsert(ref result);
-                return result;
-            }
-            private static bool __Timesheets_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Timesheets_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __Timesheets_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Timesheets_CanDelete(ref result);
-                return result;
-            }
-            private static bool __Timesheets_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Timesheets_CanRead(ref result);
-                return result;
-            }
-            private static void __Timesheets_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Inserting(e);
-            }
-            private static void __Timesheets_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Inserted(e);
-            }
-            private static void __Timesheets_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Updating(e);
-            }
-            private static void __Timesheets_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Updated(e);
-            }
-            private static void __Timesheets_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Deleting(e);
-            }
-            private static void __Timesheets_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
-            {
-                d.Timesheets_Deleted(e);
-            }
-            private static void __Timesheets_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.Timesheets_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> __Timesheets_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> filter = null;
-                d.Timesheets_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
-                __TimesheetDetailsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
-                    "TimesheetDetails",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Filter);
-            private static bool __TimesheetDetails_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TimesheetDetails_CanInsert(ref result);
-                return result;
-            }
-            private static bool __TimesheetDetails_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TimesheetDetails_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __TimesheetDetails_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TimesheetDetails_CanDelete(ref result);
-                return result;
-            }
-            private static bool __TimesheetDetails_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TimesheetDetails_CanRead(ref result);
-                return result;
-            }
-            private static void __TimesheetDetails_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Inserting(e);
-            }
-            private static void __TimesheetDetails_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Inserted(e);
-            }
-            private static void __TimesheetDetails_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Updating(e);
-            }
-            private static void __TimesheetDetails_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Updated(e);
-            }
-            private static void __TimesheetDetails_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Deleting(e);
-            }
-            private static void __TimesheetDetails_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
-            {
-                d.TimesheetDetails_Deleted(e);
-            }
-            private static void __TimesheetDetails_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.TimesheetDetails_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> __TimesheetDetails_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter = null;
-                d.TimesheetDetails_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TypeOfWork>
-                __TypeOfWorksEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TypeOfWork>(
-                    "TypeOfWorks",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Filter);
-            private static bool __TypeOfWorks_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TypeOfWorks_CanInsert(ref result);
-                return result;
-            }
-            private static bool __TypeOfWorks_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TypeOfWorks_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __TypeOfWorks_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TypeOfWorks_CanDelete(ref result);
-                return result;
-            }
-            private static bool __TypeOfWorks_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TypeOfWorks_CanRead(ref result);
-                return result;
-            }
-            private static void __TypeOfWorks_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Inserting(e);
-            }
-            private static void __TypeOfWorks_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Inserted(e);
-            }
-            private static void __TypeOfWorks_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Updating(e);
-            }
-            private static void __TypeOfWorks_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Updated(e);
-            }
-            private static void __TypeOfWorks_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Deleting(e);
-            }
-            private static void __TypeOfWorks_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
-            {
-                d.TypeOfWorks_Deleted(e);
-            }
-            private static void __TypeOfWorks_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.TypeOfWorks_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> __TypeOfWorks_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> filter = null;
-                d.TypeOfWorks_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.RoleType>
-                __RoleTypesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.RoleType>(
-                    "RoleTypes",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Filter);
-            private static bool __RoleTypes_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.RoleTypes_CanInsert(ref result);
-                return result;
-            }
-            private static bool __RoleTypes_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.RoleTypes_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __RoleTypes_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.RoleTypes_CanDelete(ref result);
-                return result;
-            }
-            private static bool __RoleTypes_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.RoleTypes_CanRead(ref result);
-                return result;
-            }
-            private static void __RoleTypes_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Inserting(e);
-            }
-            private static void __RoleTypes_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Inserted(e);
-            }
-            private static void __RoleTypes_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Updating(e);
-            }
-            private static void __RoleTypes_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Updated(e);
-            }
-            private static void __RoleTypes_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Deleting(e);
-            }
-            private static void __RoleTypes_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
-            {
-                d.RoleTypes_Deleted(e);
-            }
-            private static void __RoleTypes_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.RoleTypes_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> __RoleTypes_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> filter = null;
-                d.RoleTypes_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>
-                __ClientRolesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>(
-                    "ClientRoles",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Filter);
-            private static bool __ClientRoles_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ClientRoles_CanInsert(ref result);
-                return result;
-            }
-            private static bool __ClientRoles_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ClientRoles_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __ClientRoles_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ClientRoles_CanDelete(ref result);
-                return result;
-            }
-            private static bool __ClientRoles_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ClientRoles_CanRead(ref result);
-                return result;
-            }
-            private static void __ClientRoles_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Inserting(e);
-            }
-            private static void __ClientRoles_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Inserted(e);
-            }
-            private static void __ClientRoles_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Updating(e);
-            }
-            private static void __ClientRoles_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Updated(e);
-            }
-            private static void __ClientRoles_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Deleting(e);
-            }
-            private static void __ClientRoles_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
-            {
-                d.ClientRoles_Deleted(e);
-            }
-            private static void __ClientRoles_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.ClientRoles_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> __ClientRoles_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> filter = null;
-                d.ClientRoles_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.SystemRole>
-                __SystemRolesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.SystemRole>(
-                    "SystemRoles",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Filter);
-            private static bool __SystemRoles_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.SystemRoles_CanInsert(ref result);
-                return result;
-            }
-            private static bool __SystemRoles_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.SystemRoles_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __SystemRoles_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.SystemRoles_CanDelete(ref result);
-                return result;
-            }
-            private static bool __SystemRoles_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.SystemRoles_CanRead(ref result);
-                return result;
-            }
-            private static void __SystemRoles_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Inserting(e);
-            }
-            private static void __SystemRoles_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Inserted(e);
-            }
-            private static void __SystemRoles_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Updating(e);
-            }
-            private static void __SystemRoles_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Updated(e);
-            }
-            private static void __SystemRoles_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Deleting(e);
-            }
-            private static void __SystemRoles_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
-            {
-                d.SystemRoles_Deleted(e);
-            }
-            private static void __SystemRoles_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.SystemRoles_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> __SystemRoles_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> filter = null;
-                d.SystemRoles_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ActiveType>
-                __ActiveTypesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ActiveType>(
-                    "ActiveTypes",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Filter);
-            private static bool __ActiveTypes_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ActiveTypes_CanInsert(ref result);
-                return result;
-            }
-            private static bool __ActiveTypes_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ActiveTypes_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __ActiveTypes_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ActiveTypes_CanDelete(ref result);
-                return result;
-            }
-            private static bool __ActiveTypes_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ActiveTypes_CanRead(ref result);
-                return result;
-            }
-            private static void __ActiveTypes_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Inserting(e);
-            }
-            private static void __ActiveTypes_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Inserted(e);
-            }
-            private static void __ActiveTypes_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Updating(e);
-            }
-            private static void __ActiveTypes_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Updated(e);
-            }
-            private static void __ActiveTypes_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Deleting(e);
-            }
-            private static void __ActiveTypes_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
-            {
-                d.ActiveTypes_Deleted(e);
-            }
-            private static void __ActiveTypes_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.ActiveTypes_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> __ActiveTypes_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> filter = null;
-                d.ActiveTypes_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Invoice>
-                __InvoicesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Invoice>(
-                    "Invoices",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Filter);
-            private static bool __Invoices_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Invoices_CanInsert(ref result);
-                return result;
-            }
-            private static bool __Invoices_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Invoices_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __Invoices_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Invoices_CanDelete(ref result);
-                return result;
-            }
-            private static bool __Invoices_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.Invoices_CanRead(ref result);
-                return result;
-            }
-            private static void __Invoices_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Inserting(e);
-            }
-            private static void __Invoices_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Inserted(e);
-            }
-            private static void __Invoices_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Updating(e);
-            }
-            private static void __Invoices_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Updated(e);
-            }
-            private static void __Invoices_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Deleting(e);
-            }
-            private static void __Invoices_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
-            {
-                d.Invoices_Deleted(e);
-            }
-            private static void __Invoices_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.Invoices_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> __Invoices_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> filter = null;
-                d.Invoices_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceLine>
-                __InvoiceLinesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceLine>(
-                    "InvoiceLines",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Filter);
-            private static bool __InvoiceLines_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceLines_CanInsert(ref result);
-                return result;
-            }
-            private static bool __InvoiceLines_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceLines_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __InvoiceLines_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceLines_CanDelete(ref result);
-                return result;
-            }
-            private static bool __InvoiceLines_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceLines_CanRead(ref result);
-                return result;
-            }
-            private static void __InvoiceLines_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Inserting(e);
-            }
-            private static void __InvoiceLines_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Inserted(e);
-            }
-            private static void __InvoiceLines_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Updating(e);
-            }
-            private static void __InvoiceLines_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Updated(e);
-            }
-            private static void __InvoiceLines_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Deleting(e);
-            }
-            private static void __InvoiceLines_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
-            {
-                d.InvoiceLines_Deleted(e);
-            }
-            private static void __InvoiceLines_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.InvoiceLines_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> __InvoiceLines_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> filter = null;
-                d.InvoiceLines_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>
-                __InvoiceStatusEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>(
-                    "InvoiceStatus",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Filter);
-            private static bool __InvoiceStatus_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceStatus_CanInsert(ref result);
-                return result;
-            }
-            private static bool __InvoiceStatus_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceStatus_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __InvoiceStatus_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceStatus_CanDelete(ref result);
-                return result;
-            }
-            private static bool __InvoiceStatus_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.InvoiceStatus_CanRead(ref result);
-                return result;
-            }
-            private static void __InvoiceStatus_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Inserting(e);
-            }
-            private static void __InvoiceStatus_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Inserted(e);
-            }
-            private static void __InvoiceStatus_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Updating(e);
-            }
-            private static void __InvoiceStatus_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Updated(e);
-            }
-            private static void __InvoiceStatus_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Deleting(e);
-            }
-            private static void __InvoiceStatus_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
-            {
-                d.InvoiceStatus_Deleted(e);
-            }
-            private static void __InvoiceStatus_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.InvoiceStatus_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> __InvoiceStatus_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> filter = null;
-                d.InvoiceStatus_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
-                __ResourcePlansEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
-                    "ResourcePlans",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanInsert,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanUpdate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanDelete,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanRead,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updating,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updated,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleting,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleted,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Filter);
-            private static bool __ResourcePlans_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ResourcePlans_CanInsert(ref result);
-                return result;
-            }
-            private static bool __ResourcePlans_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ResourcePlans_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __ResourcePlans_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ResourcePlans_CanDelete(ref result);
-                return result;
-            }
-            private static bool __ResourcePlans_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.ResourcePlans_CanRead(ref result);
-                return result;
-            }
-            private static void __ResourcePlans_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Inserting(e);
-            }
-            private static void __ResourcePlans_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Inserted(e);
-            }
-            private static void __ResourcePlans_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Updating(e);
-            }
-            private static void __ResourcePlans_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Updated(e);
-            }
-            private static void __ResourcePlans_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Deleting(e);
-            }
-            private static void __ResourcePlans_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
-            {
-                d.ResourcePlans_Deleted(e);
-            }
-            private static void __ResourcePlans_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.ResourcePlans_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> __ResourcePlans_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter = null;
-                d.ResourcePlans_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>
-                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>(
-                    "SaveChanges",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Failed);
-            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.SaveChanges_CanExecute(ref r);
-                return r;
-            }
-            private static void __SaveChanges_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.SaveChanges_Executing();
-            }
-            private static void __SaveChanges_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.SaveChanges_Executed();
-            }
-            private static void __SaveChanges_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.SaveChanges_ExecuteFailed(ex);
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
-                __TimesheetsByDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
-                    "TimesheetsByDate",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_PreprocessQuery);
-            private static bool __TimesheetsByDate_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.TimesheetsByDate_CanExecute(ref r);
-                return r;
-            }
-            private static void __TimesheetsByDate_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetsByDate_Executing((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2]);
-            }
-            private static void __TimesheetsByDate_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetsByDate_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet>)args[3]);
-            }
-            private static void __TimesheetsByDate_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.TimesheetsByDate_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], ex);
-            }
-            private static global::System.Linq.IQueryable __TimesheetsByDate_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet>)args[3];
-                d.TimesheetsByDate_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
-                __PersonSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
-                    "PersonSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_PreprocessQuery);
-            private static bool __PersonSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.PersonSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __PersonSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.PersonSorted_Executing();
-            }
-            private static void __PersonSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.PersonSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person>)args[0]);
-            }
-            private static void __PersonSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.PersonSorted_ExecuteFailed(ex);
-            }
-            private static global::System.Linq.IQueryable __PersonSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
-                d.PersonSorted_PreprocessQuery(ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>
-                __BillingDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>(
-                    "BillingDate",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_PreprocessQuery);
-            private static bool __BillingDate_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.BillingDate_CanExecute(ref r);
-                return r;
-            }
-            private static void __BillingDate_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDate_Executing();
-            }
-            private static void __BillingDate_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDate_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate>)args[0]);
-            }
-            private static void __BillingDate_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.BillingDate_ExecuteFailed(ex);
-            }
-            private static global::System.Linq.IQueryable __BillingDate_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate>)args[0];
-                d.BillingDate_PreprocessQuery(ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>
-                __FilteredClientEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>(
-                    "FilteredClient",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_PreprocessQuery);
-            private static bool __FilteredClient_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.FilteredClient_CanExecute(ref r);
-                return r;
-            }
-            private static void __FilteredClient_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.FilteredClient_Executing((string)args[0]);
-            }
-            private static void __FilteredClient_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.FilteredClient_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Client>)args[1]);
-            }
-            private static void __FilteredClient_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.FilteredClient_ExecuteFailed((string)args[0], ex);
-            }
-            private static global::System.Linq.IQueryable __FilteredClient_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Client> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Client>)args[1];
-                d.FilteredClient_PreprocessQuery((string)args[0], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
-                __ProjectsFilterEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
-                    "ProjectsFilter",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_PreprocessQuery);
-            private static bool __ProjectsFilter_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.ProjectsFilter_CanExecute(ref r);
-                return r;
-            }
-            private static void __ProjectsFilter_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ProjectsFilter_Executing((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3]);
-            }
-            private static void __ProjectsFilter_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ProjectsFilter_Executed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[4]);
-            }
-            private static void __ProjectsFilter_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.ProjectsFilter_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ex);
-            }
-            private static global::System.Linq.IQueryable __ProjectsFilter_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[4];
-                d.ProjectsFilter_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>
-                __InvoiceStatusSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>(
-                    "InvoiceStatusSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_PreprocessQuery);
-            private static bool __InvoiceStatusSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.InvoiceStatusSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __InvoiceStatusSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.InvoiceStatusSorted_Executing();
-            }
-            private static void __InvoiceStatusSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.InvoiceStatusSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.InvoiceStatu>)args[0]);
-            }
-            private static void __InvoiceStatusSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.InvoiceStatusSorted_ExecuteFailed(ex);
-            }
-            private static global::System.Linq.IQueryable __InvoiceStatusSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu>)args[0];
-                d.InvoiceStatusSorted_PreprocessQuery(ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>
-                __ClientRolesSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>(
-                    "ClientRolesSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_PreprocessQuery);
-            private static bool __ClientRolesSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.ClientRolesSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __ClientRolesSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ClientRolesSorted_Executing();
-            }
-            private static void __ClientRolesSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ClientRolesSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ClientRole>)args[0]);
-            }
-            private static void __ClientRolesSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.ClientRolesSorted_ExecuteFailed(ex);
-            }
-            private static global::System.Linq.IQueryable __ClientRolesSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole>)args[0];
-                d.ClientRolesSorted_PreprocessQuery(ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
-                __BillingDetailsSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
-                    "BillingDetailsSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_PreprocessQuery);
-            private static bool __BillingDetailsSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.BillingDetailsSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __BillingDetailsSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDetailsSorted_Executing((string)args[0], (string)args[1]);
-            }
-            private static void __BillingDetailsSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDetailsSorted_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail>)args[2]);
-            }
-            private static void __BillingDetailsSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.BillingDetailsSorted_ExecuteFailed((string)args[0], (string)args[1], ex);
-            }
-            private static global::System.Linq.IQueryable __BillingDetailsSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail>)args[2];
-                d.BillingDetailsSorted_PreprocessQuery((string)args[0], (string)args[1], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
-                __BillingDetailNoRoleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
-                    "BillingDetailNoRole",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_PreprocessQuery);
-            private static bool __BillingDetailNoRole_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.BillingDetailNoRole_CanExecute(ref r);
-                return r;
-            }
-            private static void __BillingDetailNoRole_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDetailNoRole_Executing((string)args[0], (string)args[1]);
-            }
-            private static void __BillingDetailNoRole_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillingDetailNoRole_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail>)args[2]);
-            }
-            private static void __BillingDetailNoRole_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.BillingDetailNoRole_ExecuteFailed((string)args[0], (string)args[1], ex);
-            }
-            private static global::System.Linq.IQueryable __BillingDetailNoRole_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail>)args[2];
-                d.BillingDetailNoRole_PreprocessQuery((string)args[0], (string)args[1], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
-                __ResourcePlanSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
-                    "ResourcePlanSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_PreprocessQuery);
-            private static bool __ResourcePlanSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.ResourcePlanSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __ResourcePlanSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ResourcePlanSorted_Executing((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3]);
-            }
-            private static void __ResourcePlanSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.ResourcePlanSorted_Executed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan>)args[4]);
-            }
-            private static void __ResourcePlanSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.ResourcePlanSorted_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ex);
-            }
-            private static global::System.Linq.IQueryable __ResourcePlanSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan>)args[4];
-                d.ResourcePlanSorted_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
-                __BillableProjectsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
-                    "BillableProjects",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_PreprocessQuery);
-            private static bool __BillableProjects_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.BillableProjects_CanExecute(ref r);
-                return r;
-            }
-            private static void __BillableProjects_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillableProjects_Executing((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2]);
-            }
-            private static void __BillableProjects_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.BillableProjects_Executed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[3]);
-            }
-            private static void __BillableProjects_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.BillableProjects_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ex);
-            }
-            private static global::System.Linq.IQueryable __BillableProjects_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[3];
-                d.BillableProjects_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
-                __PersonAccountManagerEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
-                    "PersonAccountManager",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_PreprocessQuery);
-            private static bool __PersonAccountManager_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.PersonAccountManager_CanExecute(ref r);
-                return r;
-            }
-            private static void __PersonAccountManager_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.PersonAccountManager_Executing();
-            }
-            private static void __PersonAccountManager_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.PersonAccountManager_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person>)args[0]);
-            }
-            private static void __PersonAccountManager_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.PersonAccountManager_ExecuteFailed(ex);
-            }
-            private static global::System.Linq.IQueryable __PersonAccountManager_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
-                d.PersonAccountManager_PreprocessQuery(ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
-                __TimesheetDetailSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
-                    "TimesheetDetailSorted",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_PreprocessQuery);
-            private static bool __TimesheetDetailSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.TimesheetDetailSorted_CanExecute(ref r);
-                return r;
-            }
-            private static void __TimesheetDetailSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetDetailSorted_Executing((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4]);
-            }
-            private static void __TimesheetDetailSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetDetailSorted_Executed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail>)args[5]);
-            }
-            private static void __TimesheetDetailSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.TimesheetDetailSorted_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ex);
-            }
-            private static global::System.Linq.IQueryable __TimesheetDetailSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail>)args[5];
-                d.TimesheetDetailSorted_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ref query);
-                return query;
-            }
-    
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Timesheets_DataService>
-                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Timesheets_DataService>(
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Failed);
-            private static void __Query_Executing(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
-            {
-                d.Query_Executing(queryDescriptor);
-            }
-            private static void __Query_Executed(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
-            {
-                d.Query_Executed(queryDescriptor);
-            }
-            private static void __Query_Failed(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
-            {
-                d.Query_ExecuteFailed(queryDescriptor);
-            }
-        }
-    
-        #endregion
-    }
-    
-    /// <summary>
     /// Provides members to query and update data in the ApplicationData datasource.
     /// </summary>
     public sealed partial class ApplicationDataService
@@ -2662,7 +19,7 @@ namespace LightSwitchApplication
     {
         #region Constructors
     
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public ApplicationDataService() : base()
         {
@@ -2675,7 +32,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::LightSwitchApplication.Application Application
         {
@@ -2688,7 +45,7 @@ namespace LightSwitchApplication
         /// <summary>
         /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
         /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private global::LightSwitchApplication.DataWorkspace DataWorkspace
         {
@@ -2889,6 +246,2649 @@ namespace LightSwitchApplication
                 d.Query_Executed(queryDescriptor);
             }
             private static void __Query_Failed(global::LightSwitchApplication.ApplicationDataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
+            {
+                d.Query_ExecuteFailed(queryDescriptor);
+            }
+        }
+    
+        #endregion
+    }
+    
+    /// <summary>
+    /// Provides members to query and update data in the Timesheets_Data datasource.
+    /// </summary>
+    public sealed partial class Timesheets_DataService
+        : global::LightSwitchApplication.Timesheets_Data
+    {
+        #region Constructors
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Timesheets_DataService() : base()
+        {
+        }
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Server Interceptions Points
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Inserting(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Inserted(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Updating(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Updated(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Deleting(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Deleted(global::LightSwitchApplication.ActiveType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Validate(global::LightSwitchApplication.ActiveType entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveTypes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Inserting(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Inserted(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Updating(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Updated(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Deleting(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Deleted(global::LightSwitchApplication.BillingDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Validate(global::LightSwitchApplication.BillingDetail entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Inserting(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Inserted(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Updating(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Updated(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Deleting(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Deleted(global::LightSwitchApplication.BillingStatus entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Validate(global::LightSwitchApplication.BillingStatus entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingStatusSet_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Inserting(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Inserted(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Updating(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Updated(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Deleting(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Deleted(global::LightSwitchApplication.ClientRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Validate(global::LightSwitchApplication.ClientRole entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRoles_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Inserting(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Inserted(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Updating(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Updated(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Deleting(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Deleted(global::LightSwitchApplication.Client entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Validate(global::LightSwitchApplication.Client entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Clients_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Inserting(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Inserted(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Updating(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Updated(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Deleting(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Deleted(global::LightSwitchApplication.DimDate entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Validate(global::LightSwitchApplication.DimDate entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DimDates_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Inserting(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Inserted(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Updating(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Updated(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Deleting(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Deleted(global::LightSwitchApplication.InvoiceLine entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Validate(global::LightSwitchApplication.InvoiceLine entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLines_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Inserting(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Inserted(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Updating(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Updated(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Deleting(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Deleted(global::LightSwitchApplication.Invoice entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Validate(global::LightSwitchApplication.Invoice entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Invoices_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Inserting(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Inserted(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Updating(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Updated(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Deleting(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Deleted(global::LightSwitchApplication.InvoiceStatu entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Validate(global::LightSwitchApplication.InvoiceStatu entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatus_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Inserting(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Inserted(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Updating(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Updated(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Deleting(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Deleted(global::LightSwitchApplication.Person entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Validate(global::LightSwitchApplication.Person entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void People_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Inserting(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Inserted(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Updating(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Updated(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Deleting(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Deleted(global::LightSwitchApplication.Project entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Validate(global::LightSwitchApplication.Project entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Projects_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Inserting(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Inserted(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Updating(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Updated(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Deleting(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Deleted(global::LightSwitchApplication.ResourcePlan entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Validate(global::LightSwitchApplication.ResourcePlan entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlans_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Inserting(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Inserted(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Updating(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Updated(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Deleting(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Deleted(global::LightSwitchApplication.RoleType entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Validate(global::LightSwitchApplication.RoleType entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RoleTypes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Inserting(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Inserted(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Updating(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Updated(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Deleting(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Deleted(global::LightSwitchApplication.SystemRole entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Validate(global::LightSwitchApplication.SystemRole entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SystemRoles_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Inserting(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Inserted(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Updating(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Updated(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Deleting(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Deleted(global::LightSwitchApplication.TimesheetDetail entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Validate(global::LightSwitchApplication.TimesheetDetail entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Inserting(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Inserted(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Updating(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Updated(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Deleting(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Deleted(global::LightSwitchApplication.Timesheet entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Validate(global::LightSwitchApplication.Timesheet entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Timesheets_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Inserting(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Inserted(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Updating(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Updated(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Deleting(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Deleted(global::LightSwitchApplication.TypeOfWork entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Validate(global::LightSwitchApplication.TypeOfWork entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorks_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executed();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetailNoRole_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailNoRole_Executing(string ClientName, string PersonName);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetailNoRole_PreprocessQuery(string ClientName, string PersonName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailNoRole_Executed(string ClientName, string PersonName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailNoRole_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetailsSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailsSorted_Executing(string ClientName, string PersonName);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDetailsSorted_PreprocessQuery(string ClientName, string PersonName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailsSorted_Executed(string ClientName, string PersonName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDetailsSorted_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRolesSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ClientRolesSorted_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ClientRolesSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ClientRolesSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ClientRole> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ClientRolesSorted_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilteredClient_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredClient_Executing(string ClientName);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilteredClient_PreprocessQuery(string ClientName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Client> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredClient_Executed(string ClientName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Client> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredClient_ExecuteFailed(string ClientName, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDate_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDate_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillingDate_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDate_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillingDate_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatusSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void InvoiceStatusSorted_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceStatusSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void InvoiceStatusSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.InvoiceStatu> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void InvoiceStatusSorted_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonAccountManager_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonAccountManager_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonAccountManager_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonSorted_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonSorted_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillableProjects_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_Executing(string Client_Project, string AM, global::System.Nullable<int> Billable);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BillableProjects_PreprocessQuery(string Client_Project, string AM, global::System.Nullable<int> Billable, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_Executed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void BillableProjects_ExecuteFailed(string Client_Project, string AM, global::System.Nullable<int> Billable, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectsFilter_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ProjectsFilter_Executing(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectsFilter_PreprocessQuery(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ProjectsFilter_Executed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ProjectsFilter_ExecuteFailed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_Executing(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ResourcePlanSorted_PreprocessQuery(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_Executed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ResourcePlanSorted_ExecuteFailed(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_Executing(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailSorted_PreprocessQuery(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_Executed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailSorted_ExecuteFailed(string BillingStatusName, string PersonName, string ProjectName, string ClientName, global::System.Nullable<int> ProjectID, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetsByDate_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetsByDate_Executing(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetsByDate_PreprocessQuery(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetsByDate_Executed(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetsByDate_ExecuteFailed(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executed(global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_ExecuteFailed(global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor);
+    
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        public static new class DetailsClass
+        {
+    
+            static DetailsClass()
+            {
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ActiveType>
+                __ActiveTypesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ActiveType>(
+                    "ActiveTypes",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ActiveTypes_Filter);
+            private static bool __ActiveTypes_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ActiveTypes_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ActiveTypes_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ActiveTypes_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ActiveTypes_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ActiveTypes_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ActiveTypes_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ActiveTypes_CanRead(ref result);
+                return result;
+            }
+            private static void __ActiveTypes_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Inserting(e);
+            }
+            private static void __ActiveTypes_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Inserted(e);
+            }
+            private static void __ActiveTypes_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Updating(e);
+            }
+            private static void __ActiveTypes_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Updated(e);
+            }
+            private static void __ActiveTypes_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Deleting(e);
+            }
+            private static void __ActiveTypes_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e)
+            {
+                d.ActiveTypes_Deleted(e);
+            }
+            private static void __ActiveTypes_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ActiveType e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ActiveTypes_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> __ActiveTypes_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ActiveType, bool>> filter = null;
+                d.ActiveTypes_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
+                __BillingDetailsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
+                    "BillingDetails",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetails_Filter);
+            private static bool __BillingDetails_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingDetails_CanInsert(ref result);
+                return result;
+            }
+            private static bool __BillingDetails_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingDetails_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __BillingDetails_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingDetails_CanDelete(ref result);
+                return result;
+            }
+            private static bool __BillingDetails_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingDetails_CanRead(ref result);
+                return result;
+            }
+            private static void __BillingDetails_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Inserting(e);
+            }
+            private static void __BillingDetails_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Inserted(e);
+            }
+            private static void __BillingDetails_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Updating(e);
+            }
+            private static void __BillingDetails_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Updated(e);
+            }
+            private static void __BillingDetails_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Deleting(e);
+            }
+            private static void __BillingDetails_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e)
+            {
+                d.BillingDetails_Deleted(e);
+            }
+            private static void __BillingDetails_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingDetail e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.BillingDetails_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> __BillingDetails_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingDetail, bool>> filter = null;
+                d.BillingDetails_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingStatus>
+                __BillingStatusSetEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingStatus>(
+                    "BillingStatusSet",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingStatusSet_Filter);
+            private static bool __BillingStatusSet_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingStatusSet_CanInsert(ref result);
+                return result;
+            }
+            private static bool __BillingStatusSet_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingStatusSet_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __BillingStatusSet_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingStatusSet_CanDelete(ref result);
+                return result;
+            }
+            private static bool __BillingStatusSet_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.BillingStatusSet_CanRead(ref result);
+                return result;
+            }
+            private static void __BillingStatusSet_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Inserting(e);
+            }
+            private static void __BillingStatusSet_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Inserted(e);
+            }
+            private static void __BillingStatusSet_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Updating(e);
+            }
+            private static void __BillingStatusSet_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Updated(e);
+            }
+            private static void __BillingStatusSet_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Deleting(e);
+            }
+            private static void __BillingStatusSet_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e)
+            {
+                d.BillingStatusSet_Deleted(e);
+            }
+            private static void __BillingStatusSet_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.BillingStatus e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.BillingStatusSet_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> __BillingStatusSet_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.BillingStatus, bool>> filter = null;
+                d.BillingStatusSet_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>
+                __ClientRolesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>(
+                    "ClientRoles",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRoles_Filter);
+            private static bool __ClientRoles_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ClientRoles_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ClientRoles_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ClientRoles_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ClientRoles_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ClientRoles_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ClientRoles_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ClientRoles_CanRead(ref result);
+                return result;
+            }
+            private static void __ClientRoles_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Inserting(e);
+            }
+            private static void __ClientRoles_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Inserted(e);
+            }
+            private static void __ClientRoles_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Updating(e);
+            }
+            private static void __ClientRoles_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Updated(e);
+            }
+            private static void __ClientRoles_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Deleting(e);
+            }
+            private static void __ClientRoles_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e)
+            {
+                d.ClientRoles_Deleted(e);
+            }
+            private static void __ClientRoles_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ClientRole e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ClientRoles_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> __ClientRoles_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ClientRole, bool>> filter = null;
+                d.ClientRoles_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>
+                __ClientsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>(
+                    "Clients",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Clients_Filter);
+            private static bool __Clients_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Clients_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Clients_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Clients_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Clients_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Clients_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Clients_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Clients_CanRead(ref result);
+                return result;
+            }
+            private static void __Clients_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Inserting(e);
+            }
+            private static void __Clients_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Inserted(e);
+            }
+            private static void __Clients_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Updating(e);
+            }
+            private static void __Clients_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Updated(e);
+            }
+            private static void __Clients_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Deleting(e);
+            }
+            private static void __Clients_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e)
+            {
+                d.Clients_Deleted(e);
+            }
+            private static void __Clients_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Client e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Clients_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> __Clients_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Client, bool>> filter = null;
+                d.Clients_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>
+                __DimDatesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>(
+                    "DimDates",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__DimDates_Filter);
+            private static bool __DimDates_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.DimDates_CanInsert(ref result);
+                return result;
+            }
+            private static bool __DimDates_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.DimDates_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __DimDates_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.DimDates_CanDelete(ref result);
+                return result;
+            }
+            private static bool __DimDates_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.DimDates_CanRead(ref result);
+                return result;
+            }
+            private static void __DimDates_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Inserting(e);
+            }
+            private static void __DimDates_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Inserted(e);
+            }
+            private static void __DimDates_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Updating(e);
+            }
+            private static void __DimDates_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Updated(e);
+            }
+            private static void __DimDates_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Deleting(e);
+            }
+            private static void __DimDates_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e)
+            {
+                d.DimDates_Deleted(e);
+            }
+            private static void __DimDates_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.DimDate e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.DimDates_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> __DimDates_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.DimDate, bool>> filter = null;
+                d.DimDates_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceLine>
+                __InvoiceLinesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceLine>(
+                    "InvoiceLines",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceLines_Filter);
+            private static bool __InvoiceLines_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceLines_CanInsert(ref result);
+                return result;
+            }
+            private static bool __InvoiceLines_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceLines_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __InvoiceLines_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceLines_CanDelete(ref result);
+                return result;
+            }
+            private static bool __InvoiceLines_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceLines_CanRead(ref result);
+                return result;
+            }
+            private static void __InvoiceLines_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Inserting(e);
+            }
+            private static void __InvoiceLines_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Inserted(e);
+            }
+            private static void __InvoiceLines_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Updating(e);
+            }
+            private static void __InvoiceLines_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Updated(e);
+            }
+            private static void __InvoiceLines_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Deleting(e);
+            }
+            private static void __InvoiceLines_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e)
+            {
+                d.InvoiceLines_Deleted(e);
+            }
+            private static void __InvoiceLines_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceLine e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.InvoiceLines_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> __InvoiceLines_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceLine, bool>> filter = null;
+                d.InvoiceLines_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Invoice>
+                __InvoicesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Invoice>(
+                    "Invoices",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Invoices_Filter);
+            private static bool __Invoices_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Invoices_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Invoices_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Invoices_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Invoices_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Invoices_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Invoices_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Invoices_CanRead(ref result);
+                return result;
+            }
+            private static void __Invoices_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Inserting(e);
+            }
+            private static void __Invoices_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Inserted(e);
+            }
+            private static void __Invoices_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Updating(e);
+            }
+            private static void __Invoices_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Updated(e);
+            }
+            private static void __Invoices_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Deleting(e);
+            }
+            private static void __Invoices_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e)
+            {
+                d.Invoices_Deleted(e);
+            }
+            private static void __Invoices_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Invoices_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> __Invoices_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Invoice, bool>> filter = null;
+                d.Invoices_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>
+                __InvoiceStatusEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>(
+                    "InvoiceStatus",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatus_Filter);
+            private static bool __InvoiceStatus_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceStatus_CanInsert(ref result);
+                return result;
+            }
+            private static bool __InvoiceStatus_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceStatus_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __InvoiceStatus_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceStatus_CanDelete(ref result);
+                return result;
+            }
+            private static bool __InvoiceStatus_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.InvoiceStatus_CanRead(ref result);
+                return result;
+            }
+            private static void __InvoiceStatus_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Inserting(e);
+            }
+            private static void __InvoiceStatus_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Inserted(e);
+            }
+            private static void __InvoiceStatus_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Updating(e);
+            }
+            private static void __InvoiceStatus_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Updated(e);
+            }
+            private static void __InvoiceStatus_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Deleting(e);
+            }
+            private static void __InvoiceStatus_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e)
+            {
+                d.InvoiceStatus_Deleted(e);
+            }
+            private static void __InvoiceStatus_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.InvoiceStatu e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.InvoiceStatus_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> __InvoiceStatus_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.InvoiceStatu, bool>> filter = null;
+                d.InvoiceStatus_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
+                __PeopleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
+                    "People",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__People_Filter);
+            private static bool __People_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.People_CanInsert(ref result);
+                return result;
+            }
+            private static bool __People_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.People_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __People_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.People_CanDelete(ref result);
+                return result;
+            }
+            private static bool __People_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.People_CanRead(ref result);
+                return result;
+            }
+            private static void __People_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Inserting(e);
+            }
+            private static void __People_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Inserted(e);
+            }
+            private static void __People_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Updating(e);
+            }
+            private static void __People_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Updated(e);
+            }
+            private static void __People_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Deleting(e);
+            }
+            private static void __People_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e)
+            {
+                d.People_Deleted(e);
+            }
+            private static void __People_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Person e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.People_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> __People_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Person, bool>> filter = null;
+                d.People_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
+                __ProjectsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
+                    "Projects",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Projects_Filter);
+            private static bool __Projects_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Projects_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Projects_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Projects_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Projects_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Projects_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Projects_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Projects_CanRead(ref result);
+                return result;
+            }
+            private static void __Projects_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Inserting(e);
+            }
+            private static void __Projects_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Inserted(e);
+            }
+            private static void __Projects_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Updating(e);
+            }
+            private static void __Projects_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Updated(e);
+            }
+            private static void __Projects_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Deleting(e);
+            }
+            private static void __Projects_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e)
+            {
+                d.Projects_Deleted(e);
+            }
+            private static void __Projects_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Project e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Projects_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> __Projects_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Project, bool>> filter = null;
+                d.Projects_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
+                __ResourcePlansEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
+                    "ResourcePlans",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlans_Filter);
+            private static bool __ResourcePlans_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ResourcePlans_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.ResourcePlans_CanRead(ref result);
+                return result;
+            }
+            private static void __ResourcePlans_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Inserting(e);
+            }
+            private static void __ResourcePlans_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Inserted(e);
+            }
+            private static void __ResourcePlans_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Updating(e);
+            }
+            private static void __ResourcePlans_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Updated(e);
+            }
+            private static void __ResourcePlans_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Deleting(e);
+            }
+            private static void __ResourcePlans_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e)
+            {
+                d.ResourcePlans_Deleted(e);
+            }
+            private static void __ResourcePlans_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.ResourcePlan e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ResourcePlans_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> __ResourcePlans_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ResourcePlan, bool>> filter = null;
+                d.ResourcePlans_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.RoleType>
+                __RoleTypesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.RoleType>(
+                    "RoleTypes",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__RoleTypes_Filter);
+            private static bool __RoleTypes_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.RoleTypes_CanInsert(ref result);
+                return result;
+            }
+            private static bool __RoleTypes_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.RoleTypes_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __RoleTypes_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.RoleTypes_CanDelete(ref result);
+                return result;
+            }
+            private static bool __RoleTypes_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.RoleTypes_CanRead(ref result);
+                return result;
+            }
+            private static void __RoleTypes_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Inserting(e);
+            }
+            private static void __RoleTypes_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Inserted(e);
+            }
+            private static void __RoleTypes_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Updating(e);
+            }
+            private static void __RoleTypes_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Updated(e);
+            }
+            private static void __RoleTypes_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Deleting(e);
+            }
+            private static void __RoleTypes_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e)
+            {
+                d.RoleTypes_Deleted(e);
+            }
+            private static void __RoleTypes_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.RoleType e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.RoleTypes_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> __RoleTypes_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RoleType, bool>> filter = null;
+                d.RoleTypes_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.SystemRole>
+                __SystemRolesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.SystemRole>(
+                    "SystemRoles",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SystemRoles_Filter);
+            private static bool __SystemRoles_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.SystemRoles_CanInsert(ref result);
+                return result;
+            }
+            private static bool __SystemRoles_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.SystemRoles_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __SystemRoles_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.SystemRoles_CanDelete(ref result);
+                return result;
+            }
+            private static bool __SystemRoles_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.SystemRoles_CanRead(ref result);
+                return result;
+            }
+            private static void __SystemRoles_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Inserting(e);
+            }
+            private static void __SystemRoles_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Inserted(e);
+            }
+            private static void __SystemRoles_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Updating(e);
+            }
+            private static void __SystemRoles_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Updated(e);
+            }
+            private static void __SystemRoles_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Deleting(e);
+            }
+            private static void __SystemRoles_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e)
+            {
+                d.SystemRoles_Deleted(e);
+            }
+            private static void __SystemRoles_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.SystemRole e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.SystemRoles_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> __SystemRoles_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SystemRole, bool>> filter = null;
+                d.SystemRoles_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
+                __TimesheetDetailsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
+                    "TimesheetDetails",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetails_Filter);
+            private static bool __TimesheetDetails_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TimesheetDetails_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TimesheetDetails_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TimesheetDetails_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TimesheetDetails_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TimesheetDetails_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TimesheetDetails_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TimesheetDetails_CanRead(ref result);
+                return result;
+            }
+            private static void __TimesheetDetails_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Inserting(e);
+            }
+            private static void __TimesheetDetails_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Inserted(e);
+            }
+            private static void __TimesheetDetails_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Updating(e);
+            }
+            private static void __TimesheetDetails_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Updated(e);
+            }
+            private static void __TimesheetDetails_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Deleting(e);
+            }
+            private static void __TimesheetDetails_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e)
+            {
+                d.TimesheetDetails_Deleted(e);
+            }
+            private static void __TimesheetDetails_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetDetail e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TimesheetDetails_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> __TimesheetDetails_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter = null;
+                d.TimesheetDetails_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
+                __TimesheetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
+                    "Timesheets",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Timesheets_Filter);
+            private static bool __Timesheets_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Timesheets_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Timesheets_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Timesheets_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Timesheets_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Timesheets_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Timesheets_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.Timesheets_CanRead(ref result);
+                return result;
+            }
+            private static void __Timesheets_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Inserting(e);
+            }
+            private static void __Timesheets_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Inserted(e);
+            }
+            private static void __Timesheets_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Updating(e);
+            }
+            private static void __Timesheets_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Updated(e);
+            }
+            private static void __Timesheets_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Deleting(e);
+            }
+            private static void __Timesheets_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e)
+            {
+                d.Timesheets_Deleted(e);
+            }
+            private static void __Timesheets_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.Timesheet e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Timesheets_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> __Timesheets_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Timesheet, bool>> filter = null;
+                d.Timesheets_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TypeOfWork>
+                __TypeOfWorksEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TypeOfWork>(
+                    "TypeOfWorks",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanInsert,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanUpdate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanDelete,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_CanRead,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Inserting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Inserted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Updating,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Updated,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Deleting,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Deleted,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TypeOfWorks_Filter);
+            private static bool __TypeOfWorks_CanInsert(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TypeOfWorks_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TypeOfWorks_CanUpdate(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TypeOfWorks_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TypeOfWorks_CanDelete(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TypeOfWorks_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TypeOfWorks_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TypeOfWorks_CanRead(ref result);
+                return result;
+            }
+            private static void __TypeOfWorks_Inserting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Inserting(e);
+            }
+            private static void __TypeOfWorks_Inserted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Inserted(e);
+            }
+            private static void __TypeOfWorks_Updating(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Updating(e);
+            }
+            private static void __TypeOfWorks_Updated(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Updated(e);
+            }
+            private static void __TypeOfWorks_Deleting(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Deleting(e);
+            }
+            private static void __TypeOfWorks_Deleted(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e)
+            {
+                d.TypeOfWorks_Deleted(e);
+            }
+            private static void __TypeOfWorks_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TypeOfWork e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TypeOfWorks_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> __TypeOfWorks_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> filter = null;
+                d.TypeOfWorks_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>
+                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Timesheets_DataService>(
+                    "SaveChanges",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__SaveChanges_Failed);
+            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.SaveChanges_CanExecute(ref r);
+                return r;
+            }
+            private static void __SaveChanges_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.SaveChanges_Executing();
+            }
+            private static void __SaveChanges_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.SaveChanges_Executed();
+            }
+            private static void __SaveChanges_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.SaveChanges_ExecuteFailed(ex);
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
+                __BillingDetailNoRoleEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
+                    "BillingDetailNoRole",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailNoRole_PreprocessQuery);
+            private static bool __BillingDetailNoRole_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.BillingDetailNoRole_CanExecute(ref r);
+                return r;
+            }
+            private static void __BillingDetailNoRole_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDetailNoRole_Executing((string)args[0], (string)args[1]);
+            }
+            private static void __BillingDetailNoRole_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDetailNoRole_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail>)args[2]);
+            }
+            private static void __BillingDetailNoRole_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.BillingDetailNoRole_ExecuteFailed((string)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __BillingDetailNoRole_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail>)args[2];
+                d.BillingDetailNoRole_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>
+                __BillingDetailsSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.BillingDetail>(
+                    "BillingDetailsSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDetailsSorted_PreprocessQuery);
+            private static bool __BillingDetailsSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.BillingDetailsSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __BillingDetailsSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDetailsSorted_Executing((string)args[0], (string)args[1]);
+            }
+            private static void __BillingDetailsSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDetailsSorted_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.BillingDetail>)args[2]);
+            }
+            private static void __BillingDetailsSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.BillingDetailsSorted_ExecuteFailed((string)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __BillingDetailsSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.BillingDetail>)args[2];
+                d.BillingDetailsSorted_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>
+                __ClientRolesSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ClientRole>(
+                    "ClientRolesSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ClientRolesSorted_PreprocessQuery);
+            private static bool __ClientRolesSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.ClientRolesSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __ClientRolesSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ClientRolesSorted_Executing();
+            }
+            private static void __ClientRolesSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ClientRolesSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ClientRole>)args[0]);
+            }
+            private static void __ClientRolesSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.ClientRolesSorted_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __ClientRolesSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ClientRole>)args[0];
+                d.ClientRolesSorted_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>
+                __FilteredClientEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Client>(
+                    "FilteredClient",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__FilteredClient_PreprocessQuery);
+            private static bool __FilteredClient_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.FilteredClient_CanExecute(ref r);
+                return r;
+            }
+            private static void __FilteredClient_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.FilteredClient_Executing((string)args[0]);
+            }
+            private static void __FilteredClient_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.FilteredClient_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Client>)args[1]);
+            }
+            private static void __FilteredClient_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.FilteredClient_ExecuteFailed((string)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __FilteredClient_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Client> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Client>)args[1];
+                d.FilteredClient_PreprocessQuery((string)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>
+                __BillingDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.DimDate>(
+                    "BillingDate",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillingDate_PreprocessQuery);
+            private static bool __BillingDate_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.BillingDate_CanExecute(ref r);
+                return r;
+            }
+            private static void __BillingDate_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDate_Executing();
+            }
+            private static void __BillingDate_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillingDate_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate>)args[0]);
+            }
+            private static void __BillingDate_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.BillingDate_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __BillingDate_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate>)args[0];
+                d.BillingDate_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>
+                __InvoiceStatusSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.InvoiceStatu>(
+                    "InvoiceStatusSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__InvoiceStatusSorted_PreprocessQuery);
+            private static bool __InvoiceStatusSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.InvoiceStatusSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __InvoiceStatusSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.InvoiceStatusSorted_Executing();
+            }
+            private static void __InvoiceStatusSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.InvoiceStatusSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.InvoiceStatu>)args[0]);
+            }
+            private static void __InvoiceStatusSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.InvoiceStatusSorted_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __InvoiceStatusSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.InvoiceStatu>)args[0];
+                d.InvoiceStatusSorted_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
+                __PersonAccountManagerEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
+                    "PersonAccountManager",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonAccountManager_PreprocessQuery);
+            private static bool __PersonAccountManager_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.PersonAccountManager_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonAccountManager_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonAccountManager_Executing();
+            }
+            private static void __PersonAccountManager_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonAccountManager_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person>)args[0]);
+            }
+            private static void __PersonAccountManager_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonAccountManager_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __PersonAccountManager_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
+                d.PersonAccountManager_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>
+                __PersonSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Person>(
+                    "PersonSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__PersonSorted_PreprocessQuery);
+            private static bool __PersonSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.PersonSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonSorted_Executing();
+            }
+            private static void __PersonSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.PersonSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Person>)args[0]);
+            }
+            private static void __PersonSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonSorted_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __PersonSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Person> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Person>)args[0];
+                d.PersonSorted_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
+                __BillableProjectsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
+                    "BillableProjects",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__BillableProjects_PreprocessQuery);
+            private static bool __BillableProjects_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.BillableProjects_CanExecute(ref r);
+                return r;
+            }
+            private static void __BillableProjects_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillableProjects_Executing((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2]);
+            }
+            private static void __BillableProjects_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.BillableProjects_Executed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[3]);
+            }
+            private static void __BillableProjects_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.BillableProjects_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ex);
+            }
+            private static global::System.Linq.IQueryable __BillableProjects_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[3];
+                d.BillableProjects_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<int>)args[2], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>
+                __ProjectsFilterEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Project>(
+                    "ProjectsFilter",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ProjectsFilter_PreprocessQuery);
+            private static bool __ProjectsFilter_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.ProjectsFilter_CanExecute(ref r);
+                return r;
+            }
+            private static void __ProjectsFilter_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ProjectsFilter_Executing((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3]);
+            }
+            private static void __ProjectsFilter_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ProjectsFilter_Executed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[4]);
+            }
+            private static void __ProjectsFilter_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.ProjectsFilter_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ex);
+            }
+            private static global::System.Linq.IQueryable __ProjectsFilter_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[4];
+                d.ProjectsFilter_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>
+                __ResourcePlanSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.ResourcePlan>(
+                    "ResourcePlanSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__ResourcePlanSorted_PreprocessQuery);
+            private static bool __ResourcePlanSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.ResourcePlanSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __ResourcePlanSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ResourcePlanSorted_Executing((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3]);
+            }
+            private static void __ResourcePlanSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.ResourcePlanSorted_Executed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan>)args[4]);
+            }
+            private static void __ResourcePlanSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.ResourcePlanSorted_ExecuteFailed((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ex);
+            }
+            private static global::System.Linq.IQueryable __ResourcePlanSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ResourcePlan>)args[4];
+                d.ResourcePlanSorted_PreprocessQuery((string)args[0], (string)args[1], (global::System.Nullable<global::System.DateTime>)args[2], (global::System.Nullable<global::System.DateTime>)args[3], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
+                __TimesheetDetailSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
+                    "TimesheetDetailSorted",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailSorted_PreprocessQuery);
+            private static bool __TimesheetDetailSorted_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.TimesheetDetailSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __TimesheetDetailSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailSorted_Executing((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4]);
+            }
+            private static void __TimesheetDetailSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailSorted_Executed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail>)args[5]);
+            }
+            private static void __TimesheetDetailSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.TimesheetDetailSorted_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ex);
+            }
+            private static global::System.Linq.IQueryable __TimesheetDetailSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail>)args[5];
+                d.TimesheetDetailSorted_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (string)args[3], (global::System.Nullable<int>)args[4], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
+                __TimesheetsByDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
+                    "TimesheetsByDate",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetsByDate_PreprocessQuery);
+            private static bool __TimesheetsByDate_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.TimesheetsByDate_CanExecute(ref r);
+                return r;
+            }
+            private static void __TimesheetsByDate_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetsByDate_Executing((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2]);
+            }
+            private static void __TimesheetsByDate_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetsByDate_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Timesheet>)args[3]);
+            }
+            private static void __TimesheetsByDate_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.TimesheetsByDate_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], ex);
+            }
+            private static global::System.Linq.IQueryable __TimesheetsByDate_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet>)args[3];
+                d.TimesheetsByDate_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (string)args[2], ref query);
+                return query;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Timesheets_DataService>
+                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Timesheets_DataService>(
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__Query_Failed);
+            private static void __Query_Executing(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
+            {
+                d.Query_Executing(queryDescriptor);
+            }
+            private static void __Query_Executed(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
+            {
+                d.Query_Executed(queryDescriptor);
+            }
+            private static void __Query_Failed(global::LightSwitchApplication.Timesheets_DataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
             {
                 d.Query_ExecuteFailed(queryDescriptor);
             }

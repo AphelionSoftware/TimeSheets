@@ -15,11 +15,11 @@
   </PropertyGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>82efdcbb-e9b2-4912-a8e4-2dd277cce6ec</ProjectGuid>
-    <LightSwitchVersion>v3.0</LightSwitchVersion>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
   <PropertyGroup>
     <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion-->
@@ -36,7 +36,7 @@
   <ItemGroup>
     <Content Include="Content\c1ls-dark-3.0.20132.20.css" />
     <Content Include="Content\c1ls-light-3.0.20132.20.css" />
-    <Content Include="Content\dark-theme-1.0.1.css" />
+    <Content Include="Content\dark-theme-2.0.0.css" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
@@ -44,6 +44,7 @@
     <Content Include="Content\Images\icons-36-white.png" />
     <Content Include="Content\Images\msls-black-icons-18.png" />
     <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
     <Content Include="Content\Images\msls-loader-dark.gif" />
     <Content Include="Content\Images\msls-loader-light.gif" />
     <Content Include="Content\Images\msls-white-icons-18.png" />
@@ -69,12 +70,12 @@
     <Content Include="Content\jquery.mobile.theme-1.3.2.css" />
     <Content Include="Content\jquery.mobile.theme-1.3.2.min.css" />
     <Content Include="Content\jquery.wijmo-pro.all.3.20132.12.min.css" />
-    <Content Include="Content\light-theme-1.0.1.css" />
-    <Content Include="Content\msls-1.0.1.css" />
-    <Content Include="Content\msls-1.0.1.min.css" />
-    <Content Include="Content\msls-dark-1.0.1.css" />
+    <Content Include="Content\light-theme-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.min.css" />
+    <Content Include="Content\msls-dark-2.0.0.css" />
     <Content Include="Content\msls-dark.css" />
-    <Content Include="Content\msls-light-1.0.1.css" />
+    <Content Include="Content\msls-light-2.0.0.css" />
     <Content Include="Content\msls-light.css" />
     <Content Include="default.htm" />
     <Content Include="Content\user-customization.css" />
@@ -82,12 +83,15 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\EditUnallocatedTimesheets.lsml.js">
+      <DependentUpon>EditUnallocatedTimesheets.lsml</DependentUpon>
+    </Content>
     <Content Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
     <Content Include="Scripts\c1ls-3.0.20132.20.js" />
-    <Content Include="Scripts\datajs-1.1.0.js" />
-    <Content Include="Scripts\datajs-1.1.0.min.js" />
+    <Content Include="Scripts\datajs-1.1.1.js" />
+    <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\GPL-LICENSE.txt" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -96,32 +100,28 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\jquery.mobile-1.2.0.js" />
     <Content Include="Scripts\jquery.mobile-1.2.0.min.js" />
-    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
     <Content Include="Scripts\jquery.mobile-1.3.2.js" />
     <Content Include="Scripts\jquery.mobile-1.3.2.min.js" />
     <Content Include="Scripts\jquery.mobile-1.3.2.min.map" />
     <Content Include="Scripts\jquery.wijmo-open.all.3.20132.12.min.js" />
     <Content Include="Scripts\jquery.wijmo-pro.all.3.20132.12.min.js" />
     <Content Include="Scripts\MIT-LICENSE.txt" />
-    <Content Include="Scripts\msls-1.0.0-vsdoc.js" />
-    <Content Include="Scripts\msls-1.0.0.min.js" />
-    <Content Include="Scripts\msls-1.0.1-vsdoc.js" />
-    <Content Include="Scripts\msls-1.0.1.js" />
-    <Content Include="Scripts\msls-1.0.1.min.js" />
+    <Content Include="Scripts\msls-2.0.0-vsdoc.js" />
+    <Content Include="Scripts\msls-2.0.0.js" />
+    <Content Include="Scripts\msls-2.0.0.min.js" />
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
-    <Content Include="UserCode\BillingDetail.js" />
-    <Content Include="UserCode\BillingStatus.js" />
-    <Content Include="UserCode\Client.js" />
-    <Content Include="UserCode\ClientRole.js" />
-    <Content Include="UserCode\EditUnallocatedTimesheets.js" />
-    <Content Include="UserCode\Person.js" />
-    <Content Include="UserCode\Project.js" />
-    <Content Include="UserCode\RoleType.js" />
-    <Content Include="UserCode\Timesheet.js" />
-    <Content Include="UserCode\TimesheetDetail.js" />
-    <Content Include="UserCode\TypeOfWork.js" />
+    <Content Include="UserCode\BillingDetail.lsml.js" />
+    <Content Include="UserCode\BillingStatus.lsml.js" />
+    <Content Include="UserCode\Client.lsml.js" />
+    <Content Include="UserCode\ClientRole.lsml.js" />
+    <Content Include="UserCode\Person.lsml.js" />
+    <Content Include="UserCode\Project.lsml.js" />
+    <Content Include="UserCode\RoleType.lsml.js" />
+    <Content Include="UserCode\Timesheet.lsml.js" />
+    <Content Include="UserCode\TimesheetDetail.lsml.js" />
+    <Content Include="UserCode\TypeOfWork.lsml.js" />
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\TimesheetsAdmin.Server\TimesheetsAdmin.Server.csproj">
@@ -132,6 +132,23 @@
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Properties\TimesheetsData\BillingDetails.lsml" />
+    <LightSwitchModel Include="Screens\AddEditBillingDetail.lsml" />
+    <LightSwitchModel Include="Screens\AddEditClient.lsml" />
+    <LightSwitchModel Include="Screens\AddEditInvoice.lsml" />
+    <LightSwitchModel Include="Screens\AddEditProject.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTimesheet.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTimesheetDetail.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTypeOfWork.lsml" />
+    <LightSwitchModel Include="Screens\BrowseBillingDetails.lsml" />
+    <LightSwitchModel Include="Screens\BrowseClients.lsml" />
+    <LightSwitchModel Include="Screens\BrowseInvoices.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTimesheetDetails.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTimesheets.lsml" />
+    <LightSwitchModel Include="Screens\EditUnallocatedTimesheets.lsml" />
+    <LightSwitchModel Include="Screens\HomeScreen.lsml" />
+    <LightSwitchModel Include="Screens\UnallocatedTimesheets.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
@@ -150,8 +167,8 @@
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\Microsoft.LightSwitch.Build.Tasks.targets" />
   <!-- Redefine the targets to be empty -->
   <Target Name="GetXapOutputFile" />
   <PropertyGroup>
