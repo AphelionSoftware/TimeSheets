@@ -2,85 +2,62 @@
 
 (function (lightSwitchApplication) {
 
-    var $parameters = [document.createElement("div"), msls.ContentItem];
+    var $element = document.createElement("div");
 
-    msls._addEntryPoints(lightSwitchApplication.ManageTimesheets, {
-        /// <field>
-        /// Called when a new ManageTimesheets screen is created.
-        /// <br/>created(msls.application.ManageTimesheets screen)
-        /// </field>
-        created: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called before changes on an active ManageTimesheets screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.ManageTimesheets screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to determine if the EditTimesheet_Tap method can be executed.
-        /// <br/>canExecute(msls.application.ManageTimesheets screen)
-        /// </field>
-        EditTimesheet_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to execute the EditTimesheet_Tap method.
-        /// <br/>execute(msls.application.ManageTimesheets screen)
-        /// </field>
-        EditTimesheet_Tap_execute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to determine if the ShowTimesheetDetails_Tap method can be executed.
-        /// <br/>canExecute(msls.application.ManageTimesheets screen)
-        /// </field>
-        ShowTimesheetDetails_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to execute the ShowTimesheetDetails_Tap method.
-        /// <br/>execute(msls.application.ManageTimesheets screen)
-        /// </field>
-        ShowTimesheetDetails_Tap_execute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to determine if the Timesheet_ItemTap method can be executed.
-        /// <br/>canExecute(msls.application.ManageTimesheets screen)
-        /// </field>
-        Timesheet_ItemTap_canExecute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called to execute the Timesheet_ItemTap method.
-        /// <br/>execute(msls.application.ManageTimesheets screen)
-        /// </field>
-        Timesheet_ItemTap_execute: [lightSwitchApplication.ManageTimesheets],
-        /// <field>
-        /// Called after the TimesheetList content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetList_postRender: $parameters,
-        /// <field>
-        /// Called after the Timesheet content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Timesheet_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate_postRender: $parameters,
-        /// <field>
-        /// Called after the DimDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        DimDate_postRender: $parameters,
-        /// <field>
-        /// Called after the FilterByDateRange content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        FilterByDateRange_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetStartDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetStartDate_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetEndDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetEndDate_postRender: $parameters
-    });
+    lightSwitchApplication.AddNewTimesheet.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddNewTimesheet
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddNewTimesheet,
+            data: lightSwitchApplication.AddNewTimesheet,
+            value: lightSwitchApplication.AddNewTimesheet
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddNewTimesheet,
+            data: lightSwitchApplication.AddNewTimesheet,
+            value: lightSwitchApplication.Timesheet
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddNewTimesheet,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.Timesheet
+        },
+        DimDate: {
+            _$class: msls.ContentItem,
+            _$name: "DimDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddNewTimesheet,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.DimDate
+        },
+        RowTemplate1: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate1",
+            _$parentName: "DimDate",
+            screen: lightSwitchApplication.AddNewTimesheet,
+            data: lightSwitchApplication.DimDate,
+            value: lightSwitchApplication.DimDate
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddNewTimesheet
+        }
+    };
 
     msls._addEntryPoints(lightSwitchApplication.AddNewTimesheet, {
         /// <field>
@@ -97,28 +74,83 @@
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Details_postRender: $parameters,
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddNewTimesheet().findContentItem("Details"); }],
         /// <field>
         /// Called after the columns content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        columns_postRender: $parameters,
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddNewTimesheet().findContentItem("columns"); }],
         /// <field>
         /// Called after the left content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        left_postRender: $parameters,
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddNewTimesheet().findContentItem("left"); }],
         /// <field>
         /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        DimDate_postRender: $parameters,
+        DimDate_postRender: [$element, function () { return new lightSwitchApplication.AddNewTimesheet().findContentItem("DimDate"); }],
         /// <field>
         /// Called after the RowTemplate1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate1_postRender: $parameters
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.AddNewTimesheet().findContentItem("RowTemplate1"); }]
     });
+
+    lightSwitchApplication.EditTimesheet.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EditTimesheet
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.EditTimesheet,
+            value: lightSwitchApplication.EditTimesheet
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.EditTimesheet,
+            value: lightSwitchApplication.Timesheet
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.Timesheet
+        },
+        DimDate: {
+            _$class: msls.ContentItem,
+            _$name: "DimDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.DimDate
+        },
+        RowTemplate1: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate1",
+            _$parentName: "DimDate",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.DimDate,
+            value: lightSwitchApplication.DimDate
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EditTimesheet
+        }
+    };
 
     msls._addEntryPoints(lightSwitchApplication.EditTimesheet, {
         /// <field>
@@ -135,28 +167,153 @@
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Details_postRender: $parameters,
+        Details_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("Details"); }],
         /// <field>
         /// Called after the columns content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        columns_postRender: $parameters,
+        columns_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("columns"); }],
         /// <field>
         /// Called after the left content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        left_postRender: $parameters,
+        left_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("left"); }],
         /// <field>
         /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        DimDate_postRender: $parameters,
+        DimDate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("DimDate"); }],
         /// <field>
         /// Called after the RowTemplate1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate1_postRender: $parameters
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("RowTemplate1"); }]
     });
+
+    lightSwitchApplication.EditTimesheetDetails.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EditTimesheetDetails
+        },
+        TimesheetDetail List: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetail List",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.EditTimesheetDetails,
+            value: lightSwitchApplication.EditTimesheetDetails
+        },
+        WeekEnding: {
+            _$class: msls.ContentItem,
+            _$name: "WeekEnding",
+            _$parentName: "TimesheetDetail List",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.EditTimesheetDetails,
+            value: Date
+        },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "TimesheetDetail List",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.EditTimesheetDetails,
+            value: lightSwitchApplication.EditTimesheetDetails
+        },
+        TimesheetDetailsQuery: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetailsQuery",
+            _$parentName: "TimesheetDetail List",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.EditTimesheetDetails,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.EditTimesheetDetails,
+                _$entry: {
+                    elementType: lightSwitchApplication.TimesheetDetail
+                }
+            }
+        },
+        TimesheetDetailsQueryTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetailsQueryTemplate",
+            _$parentName: "TimesheetDetailsQuery",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.TimesheetDetail
+        },
+        DimDate: {
+            _$class: msls.ContentItem,
+            _$name: "DimDate",
+            _$parentName: "TimesheetDetailsQueryTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.DimDate
+        },
+        DimDateTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "DimDateTemplate",
+            _$parentName: "DimDate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.DimDate,
+            value: lightSwitchApplication.DimDate
+        },
+        Project: {
+            _$class: msls.ContentItem,
+            _$name: "Project",
+            _$parentName: "TimesheetDetailsQueryTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.Project
+        },
+        ProjectTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectTemplate",
+            _$parentName: "Project",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Project
+        },
+        TypeOfWork: {
+            _$class: msls.ContentItem,
+            _$name: "TypeOfWork",
+            _$parentName: "TimesheetDetailsQueryTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.TypeOfWork
+        },
+        TypeOfWorkTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "TypeOfWorkTemplate",
+            _$parentName: "TypeOfWork",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TypeOfWork,
+            value: lightSwitchApplication.TypeOfWork
+        },
+        Comments: {
+            _$class: msls.ContentItem,
+            _$name: "Comments",
+            _$parentName: "TimesheetDetailsQueryTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: String
+        },
+        Hours: {
+            _$class: msls.ContentItem,
+            _$name: "Hours",
+            _$parentName: "TimesheetDetailsQueryTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EditTimesheetDetails
+        }
+    };
 
     msls._addEntryPoints(lightSwitchApplication.EditTimesheetDetails, {
         /// <field>
@@ -213,92 +370,222 @@
         /// Called after the TimesheetDetail List content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TimesheetDetail List_postRender: $parameters,
+        TimesheetDetail List_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("TimesheetDetail List"); }],
         /// <field>
         /// Called after the WeekEnding content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        WeekEnding_postRender: $parameters,
-        /// <field>
-        /// Called after the Instructions content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Instructions_postRender: $parameters,
+        WeekEnding_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("WeekEnding"); }],
         /// <field>
         /// Called after the Group content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group_postRender: $parameters,
+        Group_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("Group"); }],
         /// <field>
-        /// Called after the Header content item has been rendered.
+        /// Called after the TimesheetDetailsQuery content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Header_postRender: $parameters,
+        TimesheetDetailsQuery_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("TimesheetDetailsQuery"); }],
         /// <field>
-        /// Called after the DateGroup content item has been rendered.
+        /// Called after the TimesheetDetailsQueryTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        DateGroup_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailsQuery_selectedItem_DimDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailsQuery_selectedItem_DimDate_postRender: $parameters,
+        TimesheetDetailsQueryTemplate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("TimesheetDetailsQueryTemplate"); }],
         /// <field>
         /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        DimDate_postRender: $parameters,
+        DimDate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("DimDate"); }],
         /// <field>
-        /// Called after the ProjectGroup content item has been rendered.
+        /// Called after the DimDateTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ProjectGroup_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailsQuery_selectedItem_Project content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailsQuery_selectedItem_Project_postRender: $parameters,
+        DimDateTemplate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("DimDateTemplate"); }],
         /// <field>
         /// Called after the Project content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Project_postRender: $parameters,
+        Project_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("Project"); }],
         /// <field>
-        /// Called after the WorkGroup content item has been rendered.
+        /// Called after the ProjectTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        WorkGroup_postRender: $parameters,
-        /// <field>
-        /// Called after the TimesheetDetailsQuery_selectedItem_TypeOfWork content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailsQuery_selectedItem_TypeOfWork_postRender: $parameters,
+        ProjectTemplate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("ProjectTemplate"); }],
         /// <field>
         /// Called after the TypeOfWork content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TypeOfWork_postRender: $parameters,
+        TypeOfWork_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("TypeOfWork"); }],
         /// <field>
-        /// Called after the WijmoGrid content item has been rendered.
+        /// Called after the TypeOfWorkTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        WijmoGrid_postRender: $parameters,
-        /// <field>
-        /// Called after the RowTemplate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate_postRender: $parameters,
-        /// <field>
-        /// Called after the Hours content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Hours_postRender: $parameters,
+        TypeOfWorkTemplate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("TypeOfWorkTemplate"); }],
         /// <field>
         /// Called after the Comments content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Comments_postRender: $parameters
+        Comments_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("Comments"); }],
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("Hours"); }]
+    });
+
+    lightSwitchApplication.ManageTimesheets.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManageTimesheets
+        },
+        TimesheetList: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: lightSwitchApplication.ManageTimesheets
+        },
+        Timesheet: {
+            _$class: msls.ContentItem,
+            _$name: "Timesheet",
+            _$parentName: "TimesheetList",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ManageTimesheets,
+                _$entry: {
+                    elementType: lightSwitchApplication.Timesheet
+                }
+            }
+        },
+        RowTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate",
+            _$parentName: "Timesheet",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.Timesheet
+        },
+        DimDate: {
+            _$class: msls.ContentItem,
+            _$name: "DimDate",
+            _$parentName: "RowTemplate",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.Timesheet,
+            value: lightSwitchApplication.DimDate
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManageTimesheets
+        },
+        FilterByDateRange: {
+            _$class: msls.ContentItem,
+            _$name: "FilterByDateRange",
+            _$parentName: "Popups",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: lightSwitchApplication.ManageTimesheets
+        },
+        TimesheetStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetStartDate",
+            _$parentName: "FilterByDateRange",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: Date
+        },
+        TimesheetEndDate: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetEndDate",
+            _$parentName: "FilterByDateRange",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: Date
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ManageTimesheets, {
+        /// <field>
+        /// Called when a new ManageTimesheets screen is created.
+        /// <br/>created(msls.application.ManageTimesheets screen)
+        /// </field>
+        created: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called before changes on an active ManageTimesheets screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ManageTimesheets screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to determine if the EditTimesheet_Tap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        EditTimesheet_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the EditTimesheet_Tap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        EditTimesheet_Tap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to determine if the ShowTimesheetDetails_Tap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        ShowTimesheetDetails_Tap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the ShowTimesheetDetails_Tap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        ShowTimesheetDetails_Tap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to determine if the Timesheet_ItemTap method can be executed.
+        /// <br/>canExecute(msls.application.ManageTimesheets screen)
+        /// </field>
+        Timesheet_ItemTap_canExecute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called to execute the Timesheet_ItemTap method.
+        /// <br/>execute(msls.application.ManageTimesheets screen)
+        /// </field>
+        Timesheet_ItemTap_execute: [lightSwitchApplication.ManageTimesheets],
+        /// <field>
+        /// Called after the TimesheetList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetList_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("TimesheetList"); }],
+        /// <field>
+        /// Called after the Timesheet content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Timesheet_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("Timesheet"); }],
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("RowTemplate"); }],
+        /// <field>
+        /// Called after the DimDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        DimDate_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("DimDate"); }],
+        /// <field>
+        /// Called after the FilterByDateRange content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        FilterByDateRange_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("FilterByDateRange"); }],
+        /// <field>
+        /// Called after the TimesheetStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetStartDate_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("TimesheetStartDate"); }],
+        /// <field>
+        /// Called after the TimesheetEndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetEndDate_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("TimesheetEndDate"); }]
     });
 
 }(msls.application));

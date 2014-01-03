@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="PersonItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="PersonID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="PersonSourceKey"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LoadDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PersonName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PersonCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LoadDateID"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PersonSystemRoleID"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillingPercentTarget"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillingPercentMinimum"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Email"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StartDate"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HourlyCost"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MonthlyCost"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsContractor"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Billable"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ADUsername"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="BillingDetails"
+        Association="PersonItem_BillingDetail"
+        FromEnd="PersonItem"
+        ToEnd="BillingDetail" />
+      <NavigationProperty
+        Name="Clients"
+        Association="PersonItem_Client"
+        FromEnd="PersonItem"
+        ToEnd="Client" />
+      <NavigationProperty
+        Name="ActiveType"
+        Association="ActiveType_PersonItem"
+        FromEnd="PersonItem"
+        ToEnd="ActiveType" />
+      <NavigationProperty
+        Name="Projects"
+        Association="PersonItem_Project"
+        FromEnd="PersonItem"
+        ToEnd="Project" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="PersonItem_TimesheetDetail"
+        FromEnd="PersonItem"
+        ToEnd="TimesheetDetail" />
+      <EntityProperty
+        Name="SharepointUserName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Timesheets"
+        Association="fk_TimesheetPersonID"
+        FromEnd="Person"
+        ToEnd="Timesheet" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="PersonItem_BillingDetail">
+    <AssociationEnd
+      Name="PersonItem"
+      Multiplicity="One"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="BillingDetail"
+      Multiplicity="Many"
+      EntityType="BillingDetail" />
+  </Association>
+  <Association
+    Name="PersonItem_Client">
+    <AssociationEnd
+      Name="PersonItem"
+      Multiplicity="One"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Client"
+      Multiplicity="Many"
+      EntityType="Client" />
+  </Association>
+  <Association
+    Name="PersonItem_Project">
+    <AssociationEnd
+      Name="PersonItem"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Project"
+      Multiplicity="Many"
+      EntityType="Project" />
+  </Association>
+  <Association
+    Name="PersonItem_TimesheetDetail">
+    <AssociationEnd
+      Name="PersonItem"
+      Multiplicity="One"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
+  <Association
+    Name="fk_TimesheetPersonID">
+    <AssociationEnd
+      Name="Person"
+      Multiplicity="One"
+      EntityType="PersonItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Timesheet"
+      Multiplicity="Many"
+      EntityType="Timesheet" />
+  </Association>
+  <EntityContainer
+    Name="TimesheetsData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="People"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="PersonItem" />
+    <AssociationSet
+      Name="FK_BillingDetail_Person"
+      Association="PersonItem_BillingDetail">
+      <AssociationSetEnd
+        Name="PersonItem"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="BillingDetail"
+        EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Client_Person"
+      Association="PersonItem_Client">
+      <AssociationSetEnd
+        Name="PersonItem"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Client"
+        EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Project_Person"
+      Association="PersonItem_Project">
+      <AssociationSetEnd
+        Name="PersonItem"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Project"
+        EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_TimesheetDetail_Person"
+      Association="PersonItem_TimesheetDetail">
+      <AssociationSetEnd
+        Name="PersonItem"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="People_Single"
+      ReturnType="PersonItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PersonID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PersonID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="People" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PersonID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PersonID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="People_SingleOrDefault"
+      ReturnType="PersonItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PersonID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PersonID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="People" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PersonID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PersonID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="fk_TimesheetPersonID"
+      Association="fk_TimesheetPersonID">
+      <AssociationSetEnd
+        Name="Person"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Timesheet"
+        EntitySet="Timesheets" />
+    </AssociationSet>
+  </EntityContainer>
+  <DataService
+    Name="TimesheetsDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="People">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Person" />
+        <SsdlProperty
+          Name="PersonID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="PersonItem/Properties[PersonID]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="PersonSourceKey"
+          Nullable="True"
+          Type="varchar"
+          Property="PersonItem/Properties[PersonSourceKey]" />
+        <SsdlProperty
+          Name="LoadDate"
+          Nullable="False"
+          Type="datetime"
+          Property="PersonItem/Properties[LoadDate]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="PersonName"
+          Nullable="False"
+          Type="varchar"
+          Property="PersonItem/Properties[PersonName]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="PersonCode"
+          Nullable="False"
+          Type="varchar"
+          Property="PersonItem/Properties[PersonCode]" />
+        <SsdlProperty
+          Name="LoadDateID"
+          Nullable="True"
+          StoreGeneratedPattern="Computed"
+          Type="int"
+          Property="PersonItem/Properties[LoadDateID]" />
+        <SsdlProperty
+          Name="PersonSystemRoleID"
+          Nullable="True"
+          Type="int"
+          Property="PersonItem/Properties[PersonSystemRoleID]" />
+        <SsdlProperty
+          Name="BillingPercentTarget"
+          Nullable="False"
+          Type="int"
+          Property="PersonItem/Properties[BillingPercentTarget]" />
+        <SsdlProperty
+          Name="BillingPercentMinimum"
+          Nullable="False"
+          Type="int"
+          Property="PersonItem/Properties[BillingPercentMinimum]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="Email"
+          Nullable="True"
+          Type="varchar"
+          Property="PersonItem/Properties[Email]" />
+        <SsdlProperty
+          Name="StartDate"
+          Nullable="False"
+          Type="date"
+          Property="PersonItem/Properties[StartDate]" />
+        <SsdlProperty
+          Name="HourlyCost"
+          Nullable="True"
+          Type="int"
+          Property="PersonItem/Properties[HourlyCost]" />
+        <SsdlProperty
+          Name="MonthlyCost"
+          Nullable="True"
+          Type="money"
+          Property="PersonItem/Properties[MonthlyCost]" />
+        <SsdlProperty
+          Name="IsContractor"
+          Nullable="False"
+          Type="int"
+          Property="PersonItem/Properties[IsContractor]" />
+        <SsdlProperty
+          Name="Billable"
+          Nullable="False"
+          Type="int"
+          Property="PersonItem/Properties[Billable]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="ADUsername"
+          Nullable="True"
+          Type="varchar"
+          Property="PersonItem/Properties[ADUsername]" />
+        <SsdlProperty
+          Name="sys_CreatedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="PersonItem/Properties[sys_CreatedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_CreatedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="PersonItem/Properties[sys_CreatedBy]" />
+        <SsdlProperty
+          Name="sys_ModifiedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="PersonItem/Properties[sys_ModifiedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_ModifiedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="PersonItem/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="SharepointUserName"
+          Nullable="True"
+          Type="varchar"
+          Property="PersonItem/Properties[SharepointUserName]" />
+        <SsdlForeignKeyProperty
+          Name="Active"
+          Nullable="False"
+          Type="int"
+          PropertyName="Active" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_BillingDetail_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_BillingDetail_Person" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_BillingDetail_Person]/Members[PersonItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_BillingDetail_Person]/Members[BillingDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillingDetailPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Client_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Client_Person" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Client_Person]/Members[PersonItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Client_Person]/Members[Client]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AccountManagerPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Project_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Project_Person" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Project_Person]/Members[PersonItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_Project_Person]/Members[Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="AccountManagerPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_Person" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[PersonItem]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[TimesheetDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetDetailPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="fk_TimesheetPersonID">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="fk_TimesheetPersonID" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[fk_TimesheetPersonID]/Members[Person]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[fk_TimesheetPersonID]/Members[Timesheet]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

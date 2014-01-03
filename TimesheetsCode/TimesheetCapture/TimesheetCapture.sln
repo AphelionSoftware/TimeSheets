@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{8A4D642E-824A-4D58-BD56-648CC30C8F17}") = "TimesheetCapture", "TimesheetCapture\TimesheetCapture.ls3proj", "{5ACCD737-2D2F-4555-8494-F8432CF71EB5}"
-EndProject
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF0B41D7-0A5E-4EFE-AB50-1C0B7B0B5AD3}"
+EndProject
+Project("{8D9C8A9D-5DED-4B64-BF65-B598BA549D93}") = "TimesheetCapture", "TimesheetCapture\TimesheetCapture.lsxproj", "{5ACCD737-2D2F-4555-8494-F8432CF71EB5}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TimesheetCapture.HTMLClient", "TimesheetCapture\TimesheetCapture.HTMLClient\TimesheetCapture.HTMLClient.jsproj", "{FEA24249-7377-4B31-AD80-B182D0DD380E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetCapture.Server", "TimesheetCapture\TimesheetCapture.Server\TimesheetCapture.Server.csproj", "{8E845063-CA67-4781-85ED-4EF187387E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimesheetCapture.SharePoint", "TimesheetCapture\TimesheetCapture.SharePoint\TimesheetCapture.SharePoint.csproj", "{14033E86-630F-451F-AEFF-04CE7535B857}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,12 +23,6 @@ Global
 		{5ACCD737-2D2F-4555-8494-F8432CF71EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ACCD737-2D2F-4555-8494-F8432CF71EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ACCD737-2D2F-4555-8494-F8432CF71EB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{FEA24249-7377-4B31-AD80-B182D0DD380E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEA24249-7377-4B31-AD80-B182D0DD380E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEA24249-7377-4B31-AD80-B182D0DD380E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -29,6 +31,12 @@ Global
 		{8E845063-CA67-4781-85ED-4EF187387E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E845063-CA67-4781-85ED-4EF187387E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E845063-CA67-4781-85ED-4EF187387E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14033E86-630F-451F-AEFF-04CE7535B857}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

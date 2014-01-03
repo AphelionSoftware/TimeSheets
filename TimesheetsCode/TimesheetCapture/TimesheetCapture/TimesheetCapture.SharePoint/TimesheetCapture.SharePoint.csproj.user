@@ -3,4 +3,14 @@
   <PropertyGroup>
     <SharePointSiteUrl>https://aphelionws.sharepoint.com/sites/LS/</SharePointSiteUrl>
   </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
+        <ProjectStore>
+          <AppInstancePackageModifiedTime>2014-01-03T17:46:37.7907584Z</AppInstancePackageModifiedTime>
+          <AppInstanceId>9c7f1eda-2ea4-4846-85c5-94e96ccf373f</AppInstanceId>
+        </ProjectStore>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

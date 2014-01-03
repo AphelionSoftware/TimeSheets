@@ -6,3 +6,6 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetC
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.dll
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.pdb
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.csprojResolveAssemblyReference.cache
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Release\TimesheetCapture.SharePoint.pdb
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.dll
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Release\TimesheetCapture.SharePoint.pdb

@@ -52,6 +52,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ClientRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ClientRole)">
+        <MappingFragment StoreEntitySet="ClientRoles">
+          <ScalarProperty Name="ClientRoleID" ColumnName="ClientRoleID" />
+          <ScalarProperty Name="ClientRoleSourceKey" ColumnName="ClientRoleSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="ClientRoleName" ColumnName="ClientRoleName" />
+          <ScalarProperty Name="ClientRoleCode" ColumnName="ClientRoleCode" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Clients">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Client)">
         <MappingFragment StoreEntitySet="Clients">
@@ -67,23 +84,6 @@
           <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="AccountManagerPersonID" ColumnName="AccountManagerPersonID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ClientRoles">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ClientRole)">
-        <MappingFragment StoreEntitySet="ClientRoles">
-          <ScalarProperty Name="ClientRoleID" ColumnName="ClientRoleID" />
-          <ScalarProperty Name="ClientRoleSourceKey" ColumnName="ClientRoleSourceKey" />
-          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
-          <ScalarProperty Name="ClientRoleName" ColumnName="ClientRoleName" />
-          <ScalarProperty Name="ClientRoleCode" ColumnName="ClientRoleCode" />
-          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
-          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
-          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
-          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
-          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
-          <ScalarProperty Name="Active" ColumnName="Active" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -201,33 +201,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Timesheets">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Timesheet)">
-        <MappingFragment StoreEntitySet="Timesheets">
-          <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
-          <ScalarProperty Name="TimesheetSourceKey" ColumnName="TimesheetSourceKey" />
-          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
-          <ScalarProperty Name="TimesheetName" ColumnName="TimesheetName" />
-          <ScalarProperty Name="TimesheetCode" ColumnName="TimesheetCode" />
-          <ScalarProperty Name="TimesheetFileName" ColumnName="TimesheetFileName" />
-          <ScalarProperty Name="TimesheetFromDateID" ColumnName="TimesheetFromDateID" />
-          <ScalarProperty Name="TimesheetToDateID" ColumnName="TimesheetToDateID" />
-          <ScalarProperty Name="TimesheetPerson" ColumnName="TimesheetPerson" />
-          <ScalarProperty Name="TimesheetDate" ColumnName="TimesheetDate" />
-          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
-          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
-          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
-          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
-          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
-          <ScalarProperty Name="Active" ColumnName="Active" />
-          <ScalarProperty Name="TimesheetDateID" ColumnName="TimesheetDateID" />
-          <ScalarProperty Name="OverallStatusID" ColumnName="OverallStatusID" />
-          <ScalarProperty Name="PeriodEnding" ColumnName="PeriodEnding" />
-          <ScalarProperty Name="TimesheetPersonID" ColumnName="TimesheetPersonID" />
-          <ScalarProperty Name="VerCol" ColumnName="VerCol" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TimesheetDetails">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TimesheetDetail)">
         <MappingFragment StoreEntitySet="TimesheetDetails">
@@ -255,6 +228,33 @@
           <ScalarProperty Name="TimesheetDetailProjectID" ColumnName="TimesheetDetailProjectID" />
           <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
           <ScalarProperty Name="TimesheetTypeOfWorkID" ColumnName="TimesheetTypeOfWorkID" />
+          <ScalarProperty Name="VerCol" ColumnName="VerCol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timesheets">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Timesheet)">
+        <MappingFragment StoreEntitySet="Timesheets">
+          <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
+          <ScalarProperty Name="TimesheetSourceKey" ColumnName="TimesheetSourceKey" />
+          <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+          <ScalarProperty Name="TimesheetName" ColumnName="TimesheetName" />
+          <ScalarProperty Name="TimesheetCode" ColumnName="TimesheetCode" />
+          <ScalarProperty Name="TimesheetFileName" ColumnName="TimesheetFileName" />
+          <ScalarProperty Name="TimesheetFromDateID" ColumnName="TimesheetFromDateID" />
+          <ScalarProperty Name="TimesheetToDateID" ColumnName="TimesheetToDateID" />
+          <ScalarProperty Name="TimesheetPerson" ColumnName="TimesheetPerson" />
+          <ScalarProperty Name="TimesheetDate" ColumnName="TimesheetDate" />
+          <ScalarProperty Name="LoadDateID" ColumnName="LoadDateID" />
+          <ScalarProperty Name="sys_CreatedOn" ColumnName="sys_CreatedOn" />
+          <ScalarProperty Name="sys_CreatedBy" ColumnName="sys_CreatedBy" />
+          <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
+          <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="TimesheetDateID" ColumnName="TimesheetDateID" />
+          <ScalarProperty Name="OverallStatusID" ColumnName="OverallStatusID" />
+          <ScalarProperty Name="PeriodEnding" ColumnName="PeriodEnding" />
+          <ScalarProperty Name="TimesheetPersonID" ColumnName="TimesheetPersonID" />
           <ScalarProperty Name="VerCol" ColumnName="VerCol" />
         </MappingFragment>
       </EntityTypeMapping>

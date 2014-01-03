@@ -4,29 +4,17 @@
     <EntitySet Name="ActiveTypes" EntityType="TimesheetsDataStore.ActiveType" store:Type="Tables" Schema="dbo" Table="ActiveType" />
     <EntitySet Name="BillingDetails" EntityType="TimesheetsDataStore.BillingDetail" store:Type="Tables" Schema="dbo" Table="BillingDetail" />
     <EntitySet Name="BillingStatus" EntityType="TimesheetsDataStore.BillingStatu" store:Type="Tables" Schema="dbo" Table="BillingStatus" />
-    <EntitySet Name="Clients" EntityType="TimesheetsDataStore.Client" store:Type="Tables" Schema="dbo" Table="Client" />
     <EntitySet Name="ClientRoles" EntityType="TimesheetsDataStore.ClientRole" store:Type="Tables" Schema="dbo" Table="ClientRole" />
+    <EntitySet Name="Clients" EntityType="TimesheetsDataStore.Client" store:Type="Tables" Schema="dbo" Table="Client" />
     <EntitySet Name="DimDates" EntityType="TimesheetsDataStore.DimDate" store:Type="Tables" Schema="dbo" Table="DimDate" />
     <EntitySet Name="OverallStatus" EntityType="TimesheetsDataStore.OverallStatu" store:Type="Tables" Schema="dbo" Table="OverallStatus" />
     <EntitySet Name="People" EntityType="TimesheetsDataStore.PersonItem" store:Type="Tables" Schema="dbo" Table="Person" />
     <EntitySet Name="Projects" EntityType="TimesheetsDataStore.Project" store:Type="Tables" Schema="dbo" Table="Project" />
-    <EntitySet Name="Timesheets" EntityType="TimesheetsDataStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
     <EntitySet Name="TimesheetDetails" EntityType="TimesheetsDataStore.TimesheetDetail" store:Type="Tables" Schema="dbo" Table="TimesheetDetail" />
+    <EntitySet Name="Timesheets" EntityType="TimesheetsDataStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
     <EntitySet Name="TypeOfWorks" EntityType="TimesheetsDataStore.TypeOfWork" store:Type="Tables" Schema="dbo" Table="TypeOfWork" />
     <AssociationSet Name="FK_BillingDetail_ActiveType" Association="TimesheetsDataStore.FK_BillingDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
-      <End Role="BillingDetail" EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BillingDetail_Client" Association="TimesheetsDataStore.FK_BillingDetail_Client">
-      <End Role="Client" EntitySet="Clients" />
-      <End Role="BillingDetail" EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet Name="PersonItem_BillingDetail" Association="TimesheetsDataStore.PersonItem_BillingDetail">
-      <End Role="PersonItem" EntitySet="People" />
-      <End Role="BillingDetail" EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BillingDetail_Role" Association="TimesheetsDataStore.FK_BillingDetail_Role">
-      <End Role="ClientRole" EntitySet="ClientRoles" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_BillingStatus_ActiveType" Association="TimesheetsDataStore.FK_BillingStatus_ActiveType">
@@ -35,10 +23,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_Client_ActiveType" Association="TimesheetsDataStore.FK_Client_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
-      <End Role="Client" EntitySet="Clients" />
-    </AssociationSet>
-    <AssociationSet Name="PersonItem_Client" Association="TimesheetsDataStore.PersonItem_Client">
-      <End Role="PersonItem" EntitySet="People" />
       <End Role="Client" EntitySet="Clients" />
     </AssociationSet>
     <AssociationSet Name="FK_ClientRole_ActiveType" Association="TimesheetsDataStore.FK_ClientRole_ActiveType">
@@ -57,45 +41,73 @@
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="Project" EntitySet="Projects" />
     </AssociationSet>
-    <AssociationSet Name="FK_Project_BillingStatus" Association="TimesheetsDataStore.FK_Project_BillingStatus">
-      <End Role="BillingStatus" EntitySet="BillingStatus" />
-      <End Role="Project" EntitySet="Projects" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Project_Client" Association="TimesheetsDataStore.FK_Project_Client">
-      <End Role="Client" EntitySet="Clients" />
-      <End Role="Project" EntitySet="Projects" />
-    </AssociationSet>
-    <AssociationSet Name="PersonItem_Project" Association="TimesheetsDataStore.PersonItem_Project">
-      <End Role="PersonItem" EntitySet="People" />
-      <End Role="Project" EntitySet="Projects" />
-    </AssociationSet>
     <AssociationSet Name="FK_Timesheet_ActiveType" Association="TimesheetsDataStore.FK_Timesheet_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
-      <End Role="Timesheet" EntitySet="Timesheets" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Timesheet_DimDate" Association="TimesheetsDataStore.FK_Timesheet_DimDate">
-      <End Role="DimDate" EntitySet="DimDates" />
-      <End Role="Timesheet" EntitySet="Timesheets" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Timesheet_OverallStatus" Association="TimesheetsDataStore.FK_Timesheet_OverallStatus">
-      <End Role="OverallStatus" EntitySet="OverallStatus" />
       <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
     <AssociationSet Name="FK_TimesheetDetail_ActiveType" Association="TimesheetsDataStore.FK_TimesheetDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
     </AssociationSet>
+    <AssociationSet Name="FK_TypeOfWork_ActiveType" Association="TimesheetsDataStore.FK_TypeOfWork_ActiveType">
+      <End Role="ActiveType" EntitySet="ActiveTypes" />
+      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_BillingStatus" Association="TimesheetsDataStore.FK_Project_BillingStatus">
+      <End Role="BillingStatus" EntitySet="BillingStatus" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
     <AssociationSet Name="FK_TimesheetDetail_BillingStatus" Association="TimesheetsDataStore.FK_TimesheetDetail_BillingStatus">
       <End Role="BillingStatus" EntitySet="BillingStatus" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Role" Association="TimesheetsDataStore.FK_BillingDetail_Role">
+      <End Role="ClientRole" EntitySet="ClientRoles" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_Client" Association="TimesheetsDataStore.FK_BillingDetail_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Client" Association="TimesheetsDataStore.FK_Project_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_DimDate" Association="TimesheetsDataStore.FK_Timesheet_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
     <AssociationSet Name="FK_TimesheetDetail_DimDate" Association="TimesheetsDataStore.FK_TimesheetDetail_DimDate">
       <End Role="DimDate" EntitySet="DimDates" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
     </AssociationSet>
+    <AssociationSet Name="FK_BillingDetail_DimDate" Association="TimesheetsDataStore.FK_BillingDetail_DimDate">
+      <End Role="DimDate" EntitySet="DimDates" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Timesheet_OverallStatus" Association="TimesheetsDataStore.FK_Timesheet_OverallStatus">
+      <End Role="OverallStatus" EntitySet="OverallStatus" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
+    </AssociationSet>
+    <AssociationSet Name="PersonItem_BillingDetail" Association="TimesheetsDataStore.PersonItem_BillingDetail">
+      <End Role="PersonItem" EntitySet="People" />
+      <End Role="BillingDetail" EntitySet="BillingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="PersonItem_Client" Association="TimesheetsDataStore.PersonItem_Client">
+      <End Role="PersonItem" EntitySet="People" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="PersonItem_Project" Association="TimesheetsDataStore.PersonItem_Project">
+      <End Role="PersonItem" EntitySet="People" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
     <AssociationSet Name="PersonItem_TimesheetDetail" Association="TimesheetsDataStore.PersonItem_TimesheetDetail">
       <End Role="PersonItem" EntitySet="People" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_TimesheetPersonID" Association="TimesheetsDataStore.fk_TimesheetPersonID">
+      <End Role="Person" EntitySet="People" />
+      <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
     <AssociationSet Name="FK_TimesheetDetail_Project" Association="TimesheetsDataStore.FK_TimesheetDetail_Project">
       <End Role="Project" EntitySet="Projects" />
@@ -108,18 +120,6 @@
     <AssociationSet Name="FK_TimesheetDetail_TypeOfWork" Association="TimesheetsDataStore.FK_TimesheetDetail_TypeOfWork">
       <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
       <End Role="TimesheetDetail" EntitySet="TimesheetDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TypeOfWork_ActiveType" Association="TimesheetsDataStore.FK_TypeOfWork_ActiveType">
-      <End Role="ActiveType" EntitySet="ActiveTypes" />
-      <End Role="TypeOfWork" EntitySet="TypeOfWorks" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BillingDetail_DimDate" Association="TimesheetsDataStore.FK_BillingDetail_DimDate">
-      <End Role="DimDate" EntitySet="DimDates" />
-      <End Role="BillingDetail" EntitySet="BillingDetails" />
-    </AssociationSet>
-    <AssociationSet Name="fk_TimesheetPersonID" Association="TimesheetsDataStore.fk_TimesheetPersonID">
-      <End Role="Person" EntitySet="People" />
-      <End Role="Timesheet" EntitySet="Timesheets" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ActiveType">
@@ -149,10 +149,10 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
-    <Property Name="BillingDetailClientID" Type="int" Nullable="false" />
-    <Property Name="BillingDetailPersonID" Type="int" Nullable="false" />
     <Property Name="BillingDetailClientRoleID" Type="int" />
+    <Property Name="BillingDetailClientID" Type="int" Nullable="false" />
     <Property Name="BillingDetailDateID" Type="int" Nullable="false" />
+    <Property Name="BillingDetailPersonID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BillingStatu">
     <Key>
@@ -163,6 +163,22 @@
     <Property Name="LoadDate" Type="datetime" Nullable="false" />
     <Property Name="BillingStatusName" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="BillingStatusCode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientRole">
+    <Key>
+      <PropertyRef Name="ClientRoleID" />
+    </Key>
+    <Property Name="ClientRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientRoleSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="ClientRoleName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="ClientRoleCode" Type="varchar" Nullable="false" MaxLength="255" />
     <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
@@ -186,22 +202,6 @@
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="AccountManagerPersonID" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="ClientRole">
-    <Key>
-      <PropertyRef Name="ClientRoleID" />
-    </Key>
-    <Property Name="ClientRoleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ClientRoleSourceKey" Type="varchar" MaxLength="255" />
-    <Property Name="LoadDate" Type="datetime" Nullable="false" />
-    <Property Name="ClientRoleName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ClientRoleCode" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
-    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
-    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
-    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Active" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DimDate">
     <Key>
@@ -313,32 +313,6 @@
     <Property Name="ClientID" Type="int" Nullable="false" />
     <Property Name="AccountManagerPersonID" Type="int" />
   </EntityType>
-  <EntityType Name="Timesheet">
-    <Key>
-      <PropertyRef Name="TimesheetID" />
-    </Key>
-    <Property Name="TimesheetID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="TimesheetSourceKey" Type="varchar" MaxLength="255" />
-    <Property Name="LoadDate" Type="datetime" Nullable="false" />
-    <Property Name="TimesheetName" Type="varchar" MaxLength="255" />
-    <Property Name="TimesheetCode" Type="varchar" MaxLength="255" />
-    <Property Name="TimesheetFileName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TimesheetFromDateID" Type="int" Nullable="false" />
-    <Property Name="TimesheetToDateID" Type="int" Nullable="false" />
-    <Property Name="TimesheetPerson" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="TimesheetDate" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
-    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
-    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
-    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="PeriodEnding" Type="date" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="VerCol" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
-    <Property Name="Active" Type="int" Nullable="false" />
-    <Property Name="TimesheetDateID" Type="int" Nullable="false" />
-    <Property Name="OverallStatusID" Type="int" Nullable="false" />
-    <Property Name="TimesheetPersonID" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="TimesheetDetail">
     <Key>
       <PropertyRef Name="TimesheetDetailID" />
@@ -369,6 +343,32 @@
     <Property Name="TimesheetID" Type="int" Nullable="false" />
     <Property Name="TimesheetTypeOfWorkID" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Timesheet">
+    <Key>
+      <PropertyRef Name="TimesheetID" />
+    </Key>
+    <Property Name="TimesheetID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimesheetSourceKey" Type="varchar" MaxLength="255" />
+    <Property Name="LoadDate" Type="datetime" Nullable="false" />
+    <Property Name="TimesheetName" Type="varchar" MaxLength="255" />
+    <Property Name="TimesheetCode" Type="varchar" MaxLength="255" />
+    <Property Name="TimesheetFileName" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetFromDateID" Type="int" Nullable="false" />
+    <Property Name="TimesheetToDateID" Type="int" Nullable="false" />
+    <Property Name="TimesheetPerson" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="TimesheetDate" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadDateID" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="sys_CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="PeriodEnding" Type="date" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="VerCol" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Active" Type="int" Nullable="false" />
+    <Property Name="TimesheetDateID" Type="int" Nullable="false" />
+    <Property Name="OverallStatusID" Type="int" Nullable="false" />
+    <Property Name="TimesheetPersonID" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="TypeOfWork">
     <Key>
       <PropertyRef Name="TypeOfWorkID" />
@@ -386,7 +386,9 @@
     <Property Name="Active" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_BillingDetail_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -397,44 +399,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_BillingDetail_Client">
-    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="1" />
-    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Client">
-        <PropertyRef Name="ClientID" />
-      </Principal>
-      <Dependent Role="BillingDetail">
-        <PropertyRef Name="BillingDetailClientID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="PersonItem_BillingDetail">
-    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1" />
-    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PersonItem">
-        <PropertyRef Name="PersonID" />
-      </Principal>
-      <Dependent Role="BillingDetail">
-        <PropertyRef Name="BillingDetailPersonID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_BillingDetail_Role">
-    <End Role="ClientRole" Type="TimesheetsDataStore.ClientRole" Multiplicity="0..1" />
-    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ClientRole">
-        <PropertyRef Name="ClientRoleID" />
-      </Principal>
-      <Dependent Role="BillingDetail">
-        <PropertyRef Name="BillingDetailClientRoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_BillingStatus_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -446,7 +414,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Client_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -457,20 +427,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="PersonItem_Client">
-    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1" />
-    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PersonItem">
-        <PropertyRef Name="PersonID" />
-      </Principal>
-      <Dependent Role="Client">
-        <PropertyRef Name="AccountManagerPersonID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_ClientRole_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="ClientRole" Type="TimesheetsDataStore.ClientRole" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -482,7 +442,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OverallStatus_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="OverallStatus" Type="TimesheetsDataStore.OverallStatu" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -494,7 +456,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="ActiveType_PersonItem">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -506,7 +470,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Project_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ActiveType">
@@ -517,8 +483,52 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Timesheet_ActiveType">
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TimesheetDetail_ActiveType">
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TypeOfWork_ActiveType">
+    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TypeOfWork" Type="TimesheetsDataStore.TypeOfWork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActiveType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TypeOfWork">
+        <PropertyRef Name="Active" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Project_BillingStatus">
-    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="1" />
+    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BillingStatus">
@@ -529,8 +539,52 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TimesheetDetail_BillingStatus">
+    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BillingStatus">
+        <PropertyRef Name="BillingStatusID" />
+      </Principal>
+      <Dependent Role="TimesheetDetail">
+        <PropertyRef Name="Billable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Role">
+    <End Role="ClientRole" Type="TimesheetsDataStore.ClientRole" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientRole">
+        <PropertyRef Name="ClientRoleID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientRoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BillingDetail_Client">
+    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Project_Client">
-    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="1" />
+    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Client">
@@ -541,32 +595,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="PersonItem_Project">
-    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="0..1" />
-    <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PersonItem">
-        <PropertyRef Name="PersonID" />
-      </Principal>
-      <Dependent Role="Project">
-        <PropertyRef Name="AccountManagerPersonID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Timesheet_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
-    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ActiveType">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Timesheet">
-        <PropertyRef Name="Active" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Timesheet_DimDate">
-    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1" />
+    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DimDate">
@@ -577,44 +609,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Timesheet_OverallStatus">
-    <End Role="OverallStatus" Type="TimesheetsDataStore.OverallStatu" Multiplicity="1" />
-    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OverallStatus">
-        <PropertyRef Name="OverallStatusID" />
-      </Principal>
-      <Dependent Role="Timesheet">
-        <PropertyRef Name="OverallStatusID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TimesheetDetail_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
-    <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ActiveType">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="TimesheetDetail">
-        <PropertyRef Name="Active" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TimesheetDetail_BillingStatus">
-    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="0..1" />
-    <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="BillingStatus">
-        <PropertyRef Name="BillingStatusID" />
-      </Principal>
-      <Dependent Role="TimesheetDetail">
-        <PropertyRef Name="Billable" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TimesheetDetail_DimDate">
-    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1" />
+    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DimDate">
@@ -625,8 +623,80 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_BillingDetail_DimDate">
+    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DimDate">
+        <PropertyRef Name="DateID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailDateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Timesheet_OverallStatus">
+    <End Role="OverallStatus" Type="TimesheetsDataStore.OverallStatu" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OverallStatus">
+        <PropertyRef Name="OverallStatusID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="OverallStatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonItem_BillingDetail">
+    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonItem">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="BillingDetail">
+        <PropertyRef Name="BillingDetailPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonItem_Client">
+    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Client" Type="TimesheetsDataStore.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonItem">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonItem_Project">
+    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonItem">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="AccountManagerPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="PersonItem_TimesheetDetail">
-    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1" />
+    <End Role="PersonItem" Type="TimesheetsDataStore.PersonItem" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PersonItem">
@@ -637,8 +707,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_TimesheetPersonID">
+    <End Role="Person" Type="TimesheetsDataStore.PersonItem" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Timesheet">
+        <PropertyRef Name="TimesheetPersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TimesheetDetail_Project">
-    <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="1" />
+    <End Role="Project" Type="TimesheetsDataStore.Project" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Project">
@@ -650,7 +736,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_TimesheetDetail_Timesheet">
-    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="1" />
+    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Timesheet">
@@ -662,7 +750,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_TimesheetDetail_TypeOfWork">
-    <End Role="TypeOfWork" Type="TimesheetsDataStore.TypeOfWork" Multiplicity="1" />
+    <End Role="TypeOfWork" Type="TimesheetsDataStore.TypeOfWork" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TypeOfWork">
@@ -670,42 +760,6 @@
       </Principal>
       <Dependent Role="TimesheetDetail">
         <PropertyRef Name="TimesheetTypeOfWorkID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TypeOfWork_ActiveType">
-    <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1" />
-    <End Role="TypeOfWork" Type="TimesheetsDataStore.TypeOfWork" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ActiveType">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="TypeOfWork">
-        <PropertyRef Name="Active" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_BillingDetail_DimDate">
-    <End Role="DimDate" Type="TimesheetsDataStore.DimDate" Multiplicity="1" />
-    <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DimDate">
-        <PropertyRef Name="DateID" />
-      </Principal>
-      <Dependent Role="BillingDetail">
-        <PropertyRef Name="BillingDetailDateID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_TimesheetPersonID">
-    <End Role="Person" Type="TimesheetsDataStore.PersonItem" Multiplicity="1" />
-    <End Role="Timesheet" Type="TimesheetsDataStore.Timesheet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Person">
-        <PropertyRef Name="PersonID" />
-      </Principal>
-      <Dependent Role="Timesheet">
-        <PropertyRef Name="TimesheetPersonID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

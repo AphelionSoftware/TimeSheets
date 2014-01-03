@@ -20,32 +20,32 @@ using System.Xml.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_BillingDetail", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Role", "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ClientRole), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingStatus_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingStatu), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Client_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Client", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_ClientRole_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ClientRole), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_OverallStatus_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "OverallStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OverallStatu), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "ActiveType_PersonItem", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.PersonItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.BillingStatu), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Project", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.PersonItem), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_OverallStatus", "OverallStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.OverallStatu), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.BillingStatu), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.BillingStatu), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Role", "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ClientRole), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_OverallStatus", "OverallStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.OverallStatu), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_BillingDetail", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Client", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Client), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_Project", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.PersonItem), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "PersonItem_TimesheetDetail", "PersonItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_Project", "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Project), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_Timesheet", "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Timesheet), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_TypeOfWork", "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.TypeOfWork), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "fk_TimesheetPersonID", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.PersonItem), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
 
 #endregion
 
@@ -145,22 +145,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Client> Clients
-        {
-            get
-            {
-                if ((_Clients == null))
-                {
-                    _Clients = base.CreateObjectSet<Client>("Clients");
-                }
-                return _Clients;
-            }
-        }
-        private ObjectSet<Client> _Clients;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<ClientRole> ClientRoles
         {
             get
@@ -173,6 +157,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<ClientRole> _ClientRoles;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Client> Clients
+        {
+            get
+            {
+                if ((_Clients == null))
+                {
+                    _Clients = base.CreateObjectSet<Client>("Clients");
+                }
+                return _Clients;
+            }
+        }
+        private ObjectSet<Client> _Clients;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -241,22 +241,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Timesheet> Timesheets
-        {
-            get
-            {
-                if ((_Timesheets == null))
-                {
-                    _Timesheets = base.CreateObjectSet<Timesheet>("Timesheets");
-                }
-                return _Timesheets;
-            }
-        }
-        private ObjectSet<Timesheet> _Timesheets;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<TimesheetDetail> TimesheetDetails
         {
             get
@@ -269,6 +253,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TimesheetDetail> _TimesheetDetails;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Timesheet> Timesheets
+        {
+            get
+            {
+                if ((_Timesheets == null))
+                {
+                    _Timesheets = base.CreateObjectSet<Timesheet>("Timesheets");
+                }
+                return _Timesheets;
+            }
+        }
+        private ObjectSet<Timesheet> _Timesheets;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -315,19 +315,19 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Clients EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToClients(Client client)
-        {
-            base.AddObject("Clients", client);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the ClientRoles EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToClientRoles(ClientRole clientRole)
         {
             base.AddObject("ClientRoles", clientRole);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Clients EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToClients(Client client)
+        {
+            base.AddObject("Clients", client);
         }
     
         /// <summary>
@@ -363,19 +363,19 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Timesheets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTimesheets(Timesheet timesheet)
-        {
-            base.AddObject("Timesheets", timesheet);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the TimesheetDetails EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToTimesheetDetails(TimesheetDetail timesheetDetail)
         {
             base.AddObject("TimesheetDetails", timesheetDetail);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Timesheets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTimesheets(Timesheet timesheet)
+        {
+            base.AddObject("Timesheets", timesheet);
         }
     
         /// <summary>
@@ -4530,30 +4530,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String SharepointUserName
-        {
-            get
-            {
-                return _SharepointUserName;
-            }
-            set
-            {
-                OnSharepointUserNameChanging(value);
-                ReportPropertyChanging("SharepointUserName");
-                _SharepointUserName = value;
-                ReportPropertyChanged("SharepointUserName");
-                OnSharepointUserNameChanged();
-            }
-        }
-        private global::System.String _SharepointUserName;
-        partial void OnSharepointUserNameChanging(global::System.String value);
-        partial void OnSharepointUserNameChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 Active
@@ -4574,6 +4550,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _Active;
         partial void OnActiveChanging(global::System.Int32 value);
         partial void OnActiveChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SharepointUserName
+        {
+            get
+            {
+                return _SharepointUserName;
+            }
+            set
+            {
+                OnSharepointUserNameChanging(value);
+                ReportPropertyChanging("SharepointUserName");
+                _SharepointUserName = value;
+                ReportPropertyChanged("SharepointUserName");
+                OnSharepointUserNameChanged();
+            }
+        }
+        private global::System.String _SharepointUserName;
+        partial void OnSharepointUserNameChanging(global::System.String value);
+        partial void OnSharepointUserNameChanged();
 
         #endregion
 
@@ -5193,78 +5193,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> MonthlyCap
-        {
-            get
-            {
-                return _MonthlyCap;
-            }
-            set
-            {
-                OnMonthlyCapChanging(value);
-                ReportPropertyChanging("MonthlyCap");
-                _MonthlyCap = value;
-                ReportPropertyChanged("MonthlyCap");
-                OnMonthlyCapChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _MonthlyCap;
-        partial void OnMonthlyCapChanging(Nullable<global::System.Decimal> value);
-        partial void OnMonthlyCapChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> MonthlyCapWarning
-        {
-            get
-            {
-                return _MonthlyCapWarning;
-            }
-            set
-            {
-                OnMonthlyCapWarningChanging(value);
-                ReportPropertyChanging("MonthlyCapWarning");
-                _MonthlyCapWarning = value;
-                ReportPropertyChanged("MonthlyCapWarning");
-                OnMonthlyCapWarningChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _MonthlyCapWarning;
-        partial void OnMonthlyCapWarningChanging(Nullable<global::System.Decimal> value);
-        partial void OnMonthlyCapWarningChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> ProjectCapWarning
-        {
-            get
-            {
-                return _ProjectCapWarning;
-            }
-            set
-            {
-                OnProjectCapWarningChanging(value);
-                ReportPropertyChanging("ProjectCapWarning");
-                _ProjectCapWarning = value;
-                ReportPropertyChanged("ProjectCapWarning");
-                OnProjectCapWarningChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _ProjectCapWarning;
-        partial void OnProjectCapWarningChanging(Nullable<global::System.Decimal> value);
-        partial void OnProjectCapWarningChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 Active
@@ -5357,6 +5285,78 @@ namespace LightSwitchApplication.Implementation
         private Nullable<global::System.Int32> _AccountManagerPersonID;
         partial void OnAccountManagerPersonIDChanging(Nullable<global::System.Int32> value);
         partial void OnAccountManagerPersonIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> MonthlyCap
+        {
+            get
+            {
+                return _MonthlyCap;
+            }
+            set
+            {
+                OnMonthlyCapChanging(value);
+                ReportPropertyChanging("MonthlyCap");
+                _MonthlyCap = value;
+                ReportPropertyChanged("MonthlyCap");
+                OnMonthlyCapChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _MonthlyCap;
+        partial void OnMonthlyCapChanging(Nullable<global::System.Decimal> value);
+        partial void OnMonthlyCapChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> MonthlyCapWarning
+        {
+            get
+            {
+                return _MonthlyCapWarning;
+            }
+            set
+            {
+                OnMonthlyCapWarningChanging(value);
+                ReportPropertyChanging("MonthlyCapWarning");
+                _MonthlyCapWarning = value;
+                ReportPropertyChanged("MonthlyCapWarning");
+                OnMonthlyCapWarningChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _MonthlyCapWarning;
+        partial void OnMonthlyCapWarningChanging(Nullable<global::System.Decimal> value);
+        partial void OnMonthlyCapWarningChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> ProjectCapWarning
+        {
+            get
+            {
+                return _ProjectCapWarning;
+            }
+            set
+            {
+                OnProjectCapWarningChanging(value);
+                ReportPropertyChanging("ProjectCapWarning");
+                _ProjectCapWarning = value;
+                ReportPropertyChanged("ProjectCapWarning");
+                OnProjectCapWarningChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _ProjectCapWarning;
+        partial void OnProjectCapWarningChanging(Nullable<global::System.Decimal> value);
+        partial void OnProjectCapWarningChanged();
 
         #endregion
 
@@ -5565,13 +5565,13 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_CreatedBy">Initial value of the sys_CreatedBy property.</param>
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
-        /// <param name="periodEnding">Initial value of the PeriodEnding property.</param>
-        /// <param name="verCol">Initial value of the VerCol property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDateID">Initial value of the TimesheetDateID property.</param>
         /// <param name="overallStatusID">Initial value of the OverallStatusID property.</param>
+        /// <param name="periodEnding">Initial value of the PeriodEnding property.</param>
         /// <param name="timesheetPersonID">Initial value of the TimesheetPersonID property.</param>
-        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.DateTime periodEnding, global::System.Byte[] verCol, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.Int32 timesheetPersonID)
+        /// <param name="verCol">Initial value of the VerCol property.</param>
+        public static Timesheet CreateTimesheet(global::System.Int32 timesheetID, global::System.DateTime loadDate, global::System.String timesheetFileName, global::System.Int32 timesheetFromDateID, global::System.Int32 timesheetToDateID, global::System.String timesheetPerson, global::System.String timesheetDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDateID, global::System.Int32 overallStatusID, global::System.DateTime periodEnding, global::System.Int32 timesheetPersonID, global::System.Byte[] verCol)
         {
             Timesheet timesheet = new Timesheet();
             timesheet.TimesheetID = timesheetID;
@@ -5585,12 +5585,12 @@ namespace LightSwitchApplication.Implementation
             timesheet.sys_CreatedBy = sys_CreatedBy;
             timesheet.sys_ModifiedOn = sys_ModifiedOn;
             timesheet.sys_ModifiedBy = sys_ModifiedBy;
-            timesheet.PeriodEnding = periodEnding;
-            timesheet.VerCol = verCol;
             timesheet.Active = active;
             timesheet.TimesheetDateID = timesheetDateID;
             timesheet.OverallStatusID = overallStatusID;
+            timesheet.PeriodEnding = periodEnding;
             timesheet.TimesheetPersonID = timesheetPersonID;
+            timesheet.VerCol = verCol;
             return timesheet;
         }
 
@@ -5966,54 +5966,6 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime PeriodEnding
-        {
-            get
-            {
-                return _PeriodEnding;
-            }
-            set
-            {
-                OnPeriodEndingChanging(value);
-                ReportPropertyChanging("PeriodEnding");
-                _PeriodEnding = value;
-                ReportPropertyChanged("PeriodEnding");
-                OnPeriodEndingChanged();
-            }
-        }
-        private global::System.DateTime _PeriodEnding;
-        partial void OnPeriodEndingChanging(global::System.DateTime value);
-        partial void OnPeriodEndingChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Byte[] VerCol
-        {
-            get
-            {
-                return StructuralObject.GetValidValue(_VerCol);
-            }
-            set
-            {
-                OnVerColChanging(value);
-                ReportPropertyChanging("VerCol");
-                _VerCol = value;
-                ReportPropertyChanged("VerCol");
-                OnVerColChanged();
-            }
-        }
-        private global::System.Byte[] _VerCol;
-        partial void OnVerColChanging(global::System.Byte[] value);
-        partial void OnVerColChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 Active
         {
             get
@@ -6086,6 +6038,30 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.DateTime PeriodEnding
+        {
+            get
+            {
+                return _PeriodEnding;
+            }
+            set
+            {
+                OnPeriodEndingChanging(value);
+                ReportPropertyChanging("PeriodEnding");
+                _PeriodEnding = value;
+                ReportPropertyChanged("PeriodEnding");
+                OnPeriodEndingChanged();
+            }
+        }
+        private global::System.DateTime _PeriodEnding;
+        partial void OnPeriodEndingChanging(global::System.DateTime value);
+        partial void OnPeriodEndingChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Int32 TimesheetPersonID
         {
             get
@@ -6104,6 +6080,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _TimesheetPersonID;
         partial void OnTimesheetPersonIDChanging(global::System.Int32 value);
         partial void OnTimesheetPersonIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] VerCol
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_VerCol);
+            }
+            set
+            {
+                OnVerColChanging(value);
+                ReportPropertyChanging("VerCol");
+                _VerCol = value;
+                ReportPropertyChanged("VerCol");
+                OnVerColChanged();
+            }
+        }
+        private global::System.Byte[] _VerCol;
+        partial void OnVerColChanging(global::System.Byte[] value);
+        partial void OnVerColChanged();
 
         #endregion
 
@@ -6314,14 +6314,14 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_CreatedBy">Initial value of the sys_CreatedBy property.</param>
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
-        /// <param name="verCol">Initial value of the VerCol property.</param>
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="timesheetDetailDateID">Initial value of the TimesheetDetailDateID property.</param>
         /// <param name="timesheetDetailPersonID">Initial value of the TimesheetDetailPersonID property.</param>
         /// <param name="timesheetDetailProjectID">Initial value of the TimesheetDetailProjectID property.</param>
         /// <param name="timesheetID">Initial value of the TimesheetID property.</param>
         /// <param name="timesheetTypeOfWorkID">Initial value of the TimesheetTypeOfWorkID property.</param>
-        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Byte[] verCol, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID)
+        /// <param name="verCol">Initial value of the VerCol property.</param>
+        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID, global::System.Byte[] verCol)
         {
             TimesheetDetail timesheetDetail = new TimesheetDetail();
             timesheetDetail.TimesheetDetailID = timesheetDetailID;
@@ -6337,13 +6337,13 @@ namespace LightSwitchApplication.Implementation
             timesheetDetail.sys_CreatedBy = sys_CreatedBy;
             timesheetDetail.sys_ModifiedOn = sys_ModifiedOn;
             timesheetDetail.sys_ModifiedBy = sys_ModifiedBy;
-            timesheetDetail.VerCol = verCol;
             timesheetDetail.Active = active;
             timesheetDetail.TimesheetDetailDateID = timesheetDetailDateID;
             timesheetDetail.TimesheetDetailPersonID = timesheetDetailPersonID;
             timesheetDetail.TimesheetDetailProjectID = timesheetDetailProjectID;
             timesheetDetail.TimesheetID = timesheetID;
             timesheetDetail.TimesheetTypeOfWorkID = timesheetTypeOfWorkID;
+            timesheetDetail.VerCol = verCol;
             return timesheetDetail;
         }
 
@@ -6767,30 +6767,6 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Byte[] VerCol
-        {
-            get
-            {
-                return StructuralObject.GetValidValue(_VerCol);
-            }
-            set
-            {
-                OnVerColChanging(value);
-                ReportPropertyChanging("VerCol");
-                _VerCol = value;
-                ReportPropertyChanged("VerCol");
-                OnVerColChanged();
-            }
-        }
-        private global::System.Byte[] _VerCol;
-        partial void OnVerColChanging(global::System.Byte[] value);
-        partial void OnVerColChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 Active
         {
             get
@@ -6953,6 +6929,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _TimesheetTypeOfWorkID;
         partial void OnTimesheetTypeOfWorkIDChanging(global::System.Int32 value);
         partial void OnTimesheetTypeOfWorkIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] VerCol
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_VerCol);
+            }
+            set
+            {
+                OnVerColChanging(value);
+                ReportPropertyChanging("VerCol");
+                _VerCol = value;
+                ReportPropertyChanged("VerCol");
+                OnVerColChanged();
+            }
+        }
+        private global::System.Byte[] _VerCol;
+        partial void OnVerColChanging(global::System.Byte[] value);
+        partial void OnVerColChanged();
 
         #endregion
 

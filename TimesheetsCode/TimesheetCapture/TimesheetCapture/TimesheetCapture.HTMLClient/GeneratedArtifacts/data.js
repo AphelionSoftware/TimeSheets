@@ -1,4 +1,4 @@
-﻿/// <reference path="../Scripts/msls-1.0.0.js" />
+﻿/// <reference path="../Scripts/msls.js" />
 
 window.myapp = msls.application;
 
@@ -96,7 +96,7 @@ window.myapp = msls.application;
         /// <field name="LoadDate" type="Date">
         /// Gets or sets the loadDate for this billingDetail.
         /// </field>
-        /// <field name="Rate" type="Number">
+        /// <field name="Rate" type="String">
         /// Gets or sets the rate for this billingDetail.
         /// </field>
         /// <field name="LoadDateID" type="Number">
@@ -187,6 +187,55 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function ClientRole(entitySet) {
+        /// <summary>
+        /// Represents the ClientRole entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this clientRole.
+        /// </param>
+        /// <field name="ClientRoleID" type="Number">
+        /// Gets or sets the clientRoleID for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleSourceKey" type="String">
+        /// Gets or sets the clientRoleSourceKey for this clientRole.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleName" type="String">
+        /// Gets or sets the clientRoleName for this clientRole.
+        /// </field>
+        /// <field name="ClientRoleCode" type="String">
+        /// Gets or sets the clientRoleCode for this clientRole.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this clientRole.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this clientRole.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this clientRole.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this clientRole.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this clientRole.
+        /// </field>
+        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
+        /// Gets the billingDetails for this clientRole.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this clientRole.
+        /// </field>
+        /// <field name="details" type="msls.application.ClientRole.Details">
+        /// Gets the details for this clientRole.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function Client(entitySet) {
         /// <summary>
         /// Represents the Client entity type.
@@ -238,55 +287,6 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.Client.Details">
         /// Gets the details for this client.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function ClientRole(entitySet) {
-        /// <summary>
-        /// Represents the ClientRole entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this clientRole.
-        /// </param>
-        /// <field name="ClientRoleID" type="Number">
-        /// Gets or sets the clientRoleID for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleSourceKey" type="String">
-        /// Gets or sets the clientRoleSourceKey for this clientRole.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleName" type="String">
-        /// Gets or sets the clientRoleName for this clientRole.
-        /// </field>
-        /// <field name="ClientRoleCode" type="String">
-        /// Gets or sets the clientRoleCode for this clientRole.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this clientRole.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this clientRole.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this clientRole.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this clientRole.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this clientRole.
-        /// </field>
-        /// <field name="BillingDetails" type="msls.EntityCollection" elementType="msls.application.BillingDetail">
-        /// Gets the billingDetails for this clientRole.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this clientRole.
-        /// </field>
-        /// <field name="details" type="msls.application.ClientRole.Details">
-        /// Gets the details for this clientRole.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -504,7 +504,7 @@ window.myapp = msls.application;
         /// <field name="HourlyCost" type="Number">
         /// Gets or sets the hourlyCost for this personItem.
         /// </field>
-        /// <field name="MonthlyCost" type="Number">
+        /// <field name="MonthlyCost" type="String">
         /// Gets or sets the monthlyCost for this personItem.
         /// </field>
         /// <field name="IsContractor" type="Number">
@@ -586,16 +586,16 @@ window.myapp = msls.application;
         /// <field name="ProjectFirstFilename" type="String">
         /// Gets or sets the projectFirstFilename for this project.
         /// </field>
-        /// <field name="ConsultingEstimate" type="Number">
+        /// <field name="ConsultingEstimate" type="String">
         /// Gets or sets the consultingEstimate for this project.
         /// </field>
-        /// <field name="SoftwareEstimate" type="Number">
+        /// <field name="SoftwareEstimate" type="String">
         /// Gets or sets the softwareEstimate for this project.
         /// </field>
-        /// <field name="VMEstimate" type="Number">
+        /// <field name="VMEstimate" type="String">
         /// Gets or sets the vMEstimate for this project.
         /// </field>
-        /// <field name="ProjectCap" type="Number">
+        /// <field name="ProjectCap" type="String">
         /// Gets or sets the projectCap for this project.
         /// </field>
         /// <field name="AdminProject" type="Number">
@@ -628,17 +628,105 @@ window.myapp = msls.application;
         /// <field name="TimesheetDetails" type="msls.EntityCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this project.
         /// </field>
-        /// <field name="MonthlyCap" type="Number">
+        /// <field name="MonthlyCap" type="String">
         /// Gets or sets the monthlyCap for this project.
         /// </field>
-        /// <field name="MonthlyCapWarning" type="Number">
+        /// <field name="MonthlyCapWarning" type="String">
         /// Gets or sets the monthlyCapWarning for this project.
         /// </field>
-        /// <field name="ProjectCapWarning" type="Number">
+        /// <field name="ProjectCapWarning" type="String">
         /// Gets or sets the projectCapWarning for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function TimesheetDetail(entitySet) {
+        /// <summary>
+        /// Represents the TimesheetDetail entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this timesheetDetail.
+        /// </param>
+        /// <field name="TimesheetDetailID" type="Number">
+        /// Gets or sets the timesheetDetailID for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailSourceKey" type="String">
+        /// Gets or sets the timesheetDetailSourceKey for this timesheetDetail.
+        /// </field>
+        /// <field name="LoadDate" type="Date">
+        /// Gets or sets the loadDate for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailName" type="String">
+        /// Gets or sets the timesheetDetailName for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailCode" type="String">
+        /// Gets or sets the timesheetDetailCode for this timesheetDetail.
+        /// </field>
+        /// <field name="TimesheetDetailFileName" type="String">
+        /// Gets or sets the timesheetDetailFileName for this timesheetDetail.
+        /// </field>
+        /// <field name="LoadDateID" type="Number">
+        /// Gets or sets the loadDateID for this timesheetDetail.
+        /// </field>
+        /// <field name="Hours" type="String">
+        /// Gets or sets the hours for this timesheetDetail.
+        /// </field>
+        /// <field name="Comments" type="String">
+        /// Gets or sets the comments for this timesheetDetail.
+        /// </field>
+        /// <field name="ClientComments" type="String">
+        /// Gets or sets the clientComments for this timesheetDetail.
+        /// </field>
+        /// <field name="AMComments" type="String">
+        /// Gets or sets the aMComments for this timesheetDetail.
+        /// </field>
+        /// <field name="Exclude" type="Number">
+        /// Gets or sets the exclude for this timesheetDetail.
+        /// </field>
+        /// <field name="LastUpdateDate" type="Date">
+        /// Gets or sets the lastUpdateDate for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_CreatedOn" type="Date">
+        /// Gets or sets the sys_CreatedOn for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_CreatedBy" type="String">
+        /// Gets or sets the sys_CreatedBy for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_ModifiedOn" type="Date">
+        /// Gets or sets the sys_ModifiedOn for this timesheetDetail.
+        /// </field>
+        /// <field name="sys_ModifiedBy" type="String">
+        /// Gets or sets the sys_ModifiedBy for this timesheetDetail.
+        /// </field>
+        /// <field name="ActiveType" type="msls.application.ActiveType">
+        /// Gets or sets the activeType for this timesheetDetail.
+        /// </field>
+        /// <field name="BillingStatu" type="msls.application.BillingStatu">
+        /// Gets or sets the billingStatu for this timesheetDetail.
+        /// </field>
+        /// <field name="DimDate" type="msls.application.DimDate">
+        /// Gets or sets the dimDate for this timesheetDetail.
+        /// </field>
+        /// <field name="PersonItem" type="msls.application.PersonItem">
+        /// Gets or sets the personItem for this timesheetDetail.
+        /// </field>
+        /// <field name="Project" type="msls.application.Project">
+        /// Gets or sets the project for this timesheetDetail.
+        /// </field>
+        /// <field name="Timesheet" type="msls.application.Timesheet">
+        /// Gets or sets the timesheet for this timesheetDetail.
+        /// </field>
+        /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
+        /// Gets or sets the typeOfWork for this timesheetDetail.
+        /// </field>
+        /// <field name="VerCol" type="Array">
+        /// Gets or sets the verCol for this timesheetDetail.
+        /// </field>
+        /// <field name="details" type="msls.application.TimesheetDetail.Details">
+        /// Gets the details for this timesheetDetail.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -722,94 +810,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function TimesheetDetail(entitySet) {
-        /// <summary>
-        /// Represents the TimesheetDetail entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this timesheetDetail.
-        /// </param>
-        /// <field name="TimesheetDetailID" type="Number">
-        /// Gets or sets the timesheetDetailID for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailSourceKey" type="String">
-        /// Gets or sets the timesheetDetailSourceKey for this timesheetDetail.
-        /// </field>
-        /// <field name="LoadDate" type="Date">
-        /// Gets or sets the loadDate for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailName" type="String">
-        /// Gets or sets the timesheetDetailName for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailCode" type="String">
-        /// Gets or sets the timesheetDetailCode for this timesheetDetail.
-        /// </field>
-        /// <field name="TimesheetDetailFileName" type="String">
-        /// Gets or sets the timesheetDetailFileName for this timesheetDetail.
-        /// </field>
-        /// <field name="LoadDateID" type="Number">
-        /// Gets or sets the loadDateID for this timesheetDetail.
-        /// </field>
-        /// <field name="Hours" type="Number">
-        /// Gets or sets the hours for this timesheetDetail.
-        /// </field>
-        /// <field name="Comments" type="String">
-        /// Gets or sets the comments for this timesheetDetail.
-        /// </field>
-        /// <field name="ClientComments" type="String">
-        /// Gets or sets the clientComments for this timesheetDetail.
-        /// </field>
-        /// <field name="AMComments" type="String">
-        /// Gets or sets the aMComments for this timesheetDetail.
-        /// </field>
-        /// <field name="Exclude" type="Number">
-        /// Gets or sets the exclude for this timesheetDetail.
-        /// </field>
-        /// <field name="LastUpdateDate" type="Date">
-        /// Gets or sets the lastUpdateDate for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_CreatedOn" type="Date">
-        /// Gets or sets the sys_CreatedOn for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_CreatedBy" type="String">
-        /// Gets or sets the sys_CreatedBy for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_ModifiedOn" type="Date">
-        /// Gets or sets the sys_ModifiedOn for this timesheetDetail.
-        /// </field>
-        /// <field name="sys_ModifiedBy" type="String">
-        /// Gets or sets the sys_ModifiedBy for this timesheetDetail.
-        /// </field>
-        /// <field name="ActiveType" type="msls.application.ActiveType">
-        /// Gets or sets the activeType for this timesheetDetail.
-        /// </field>
-        /// <field name="BillingStatu" type="msls.application.BillingStatu">
-        /// Gets or sets the billingStatu for this timesheetDetail.
-        /// </field>
-        /// <field name="DimDate" type="msls.application.DimDate">
-        /// Gets or sets the dimDate for this timesheetDetail.
-        /// </field>
-        /// <field name="PersonItem" type="msls.application.PersonItem">
-        /// Gets or sets the personItem for this timesheetDetail.
-        /// </field>
-        /// <field name="Project" type="msls.application.Project">
-        /// Gets or sets the project for this timesheetDetail.
-        /// </field>
-        /// <field name="Timesheet" type="msls.application.Timesheet">
-        /// Gets or sets the timesheet for this timesheetDetail.
-        /// </field>
-        /// <field name="TypeOfWork" type="msls.application.TypeOfWork">
-        /// Gets or sets the typeOfWork for this timesheetDetail.
-        /// </field>
-        /// <field name="VerCol" type="Array">
-        /// Gets or sets the verCol for this timesheetDetail.
-        /// </field>
-        /// <field name="details" type="msls.application.TimesheetDetail.Details">
-        /// Gets the details for this timesheetDetail.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function TypeOfWork(entitySet) {
         /// <summary>
         /// Represents the TypeOfWork entity type.
@@ -875,11 +875,11 @@ window.myapp = msls.application;
         /// <field name="BillingStatus" type="msls.EntitySet">
         /// Gets the BillingStatus entity set.
         /// </field>
-        /// <field name="Clients" type="msls.EntitySet">
-        /// Gets the Clients entity set.
-        /// </field>
         /// <field name="ClientRoles" type="msls.EntitySet">
         /// Gets the ClientRoles entity set.
+        /// </field>
+        /// <field name="Clients" type="msls.EntitySet">
+        /// Gets the Clients entity set.
         /// </field>
         /// <field name="DimDates" type="msls.EntitySet">
         /// Gets the DimDates entity set.
@@ -893,11 +893,11 @@ window.myapp = msls.application;
         /// <field name="Projects" type="msls.EntitySet">
         /// Gets the Projects entity set.
         /// </field>
-        /// <field name="Timesheets" type="msls.EntitySet">
-        /// Gets the Timesheets entity set.
-        /// </field>
         /// <field name="TimesheetDetails" type="msls.EntitySet">
         /// Gets the TimesheetDetails entity set.
+        /// </field>
+        /// <field name="Timesheets" type="msls.EntitySet">
+        /// Gets the Timesheets entity set.
         /// </field>
         /// <field name="TypeOfWorks" type="msls.EntitySet">
         /// Gets the TypeOfWorks entity set.
@@ -944,11 +944,11 @@ window.myapp = msls.application;
         ]),
 
         BillingDetail: $defineEntity(BillingDetail, [
-            { name: "BillingDetailID", type: Number },
+            { name: "BillingDetailID", type: Number, isReadOnly: true },
             { name: "BillingDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
-            { name: "Rate", type: Number },
-            { name: "LoadDateID", type: Number },
+            { name: "Rate", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -961,12 +961,12 @@ window.myapp = msls.application;
         ]),
 
         BillingStatu: $defineEntity(BillingStatu, [
-            { name: "BillingStatusID", type: Number },
+            { name: "BillingStatusID", type: Number, isReadOnly: true },
             { name: "BillingStatusSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "BillingStatusName", type: String },
             { name: "BillingStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -976,13 +976,28 @@ window.myapp = msls.application;
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail }
         ]),
 
+        ClientRole: $defineEntity(ClientRole, [
+            { name: "ClientRoleID", type: Number, isReadOnly: true },
+            { name: "ClientRoleSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "ClientRoleName", type: String },
+            { name: "ClientRoleCode", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
+            { name: "ActiveType", kind: "reference", type: ActiveType }
+        ]),
+
         Client: $defineEntity(Client, [
-            { name: "ClientID", type: Number },
+            { name: "ClientID", type: Number, isReadOnly: true },
             { name: "ClientSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ClientName", type: String },
             { name: "ClientCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -991,21 +1006,6 @@ window.myapp = msls.application;
             { name: "ActiveType", kind: "reference", type: ActiveType },
             { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "Projects", kind: "collection", elementType: Project }
-        ]),
-
-        ClientRole: $defineEntity(ClientRole, [
-            { name: "ClientRoleID", type: Number },
-            { name: "ClientRoleSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "ClientRoleName", type: String },
-            { name: "ClientRoleCode", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
-            { name: "ActiveType", kind: "reference", type: ActiveType }
         ]),
 
         DimDate: $defineEntity(DimDate, [
@@ -1032,7 +1032,7 @@ window.myapp = msls.application;
             { name: "sys_ModifiedOn", type: Date },
             { name: "sys_ModifiedBy", type: String },
             { name: "Active", type: Number },
-            { name: "DateSK", type: Number },
+            { name: "DateSK", type: Number, isReadOnly: true },
             { name: "Timesheets", kind: "collection", elementType: Timesheet },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "BillingDetails", kind: "collection", elementType: BillingDetail },
@@ -1048,12 +1048,12 @@ window.myapp = msls.application;
         ]),
 
         OverallStatu: $defineEntity(OverallStatu, [
-            { name: "OverallStatusID", type: Number },
+            { name: "OverallStatusID", type: Number, isReadOnly: true },
             { name: "OverallStatusSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "OverallStatusName", type: String },
             { name: "OverallStatusCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1063,19 +1063,19 @@ window.myapp = msls.application;
         ]),
 
         PersonItem: $defineEntity(PersonItem, [
-            { name: "PersonID", type: Number },
+            { name: "PersonID", type: Number, isReadOnly: true },
             { name: "PersonSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "PersonName", type: String },
             { name: "PersonCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "PersonSystemRoleID", type: Number },
             { name: "BillingPercentTarget", type: Number },
             { name: "BillingPercentMinimum", type: Number },
             { name: "Email", type: String },
             { name: "StartDate", type: Date },
             { name: "HourlyCost", type: Number },
-            { name: "MonthlyCost", type: Number },
+            { name: "MonthlyCost", type: String },
             { name: "IsContractor", type: Number },
             { name: "Billable", type: Number },
             { name: "ADUsername", type: String },
@@ -1093,18 +1093,18 @@ window.myapp = msls.application;
         ]),
 
         Project: $defineEntity(Project, [
-            { name: "ProjectID", type: Number },
+            { name: "ProjectID", type: Number, isReadOnly: true },
             { name: "ProjectSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "ProjectName", type: String },
             { name: "ProjectCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "ProjectFirstPersonName", type: String },
             { name: "ProjectFirstFilename", type: String },
-            { name: "ConsultingEstimate", type: Number },
-            { name: "SoftwareEstimate", type: Number },
-            { name: "VMEstimate", type: Number },
-            { name: "ProjectCap", type: Number },
+            { name: "ConsultingEstimate", type: String },
+            { name: "SoftwareEstimate", type: String },
+            { name: "VMEstimate", type: String },
+            { name: "ProjectCap", type: String },
             { name: "AdminProject", type: Number },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
@@ -1115,45 +1115,20 @@ window.myapp = msls.application;
             { name: "Client", kind: "reference", type: Client },
             { name: "PersonItem", kind: "reference", type: PersonItem },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "MonthlyCap", type: Number },
-            { name: "MonthlyCapWarning", type: Number },
-            { name: "ProjectCapWarning", type: Number }
-        ]),
-
-        Timesheet: $defineEntity(Timesheet, [
-            { name: "TimesheetID", type: Number },
-            { name: "TimesheetSourceKey", type: String },
-            { name: "LoadDate", type: Date },
-            { name: "TimesheetName", type: String },
-            { name: "TimesheetCode", type: String },
-            { name: "TimesheetFileName", type: String },
-            { name: "TimesheetFromDateID", type: Number },
-            { name: "TimesheetToDateID", type: Number },
-            { name: "TimesheetPerson", type: String },
-            { name: "TimesheetDate", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "sys_CreatedOn", type: Date },
-            { name: "sys_CreatedBy", type: String },
-            { name: "sys_ModifiedOn", type: Date },
-            { name: "sys_ModifiedBy", type: String },
-            { name: "ActiveType", kind: "reference", type: ActiveType },
-            { name: "DimDate", kind: "reference", type: DimDate },
-            { name: "OverallStatus", kind: "reference", type: OverallStatu },
-            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
-            { name: "PeriodEnding", type: Date },
-            { name: "Person", kind: "reference", type: PersonItem },
-            { name: "VerCol", type: Array }
+            { name: "MonthlyCap", type: String },
+            { name: "MonthlyCapWarning", type: String },
+            { name: "ProjectCapWarning", type: String }
         ]),
 
         TimesheetDetail: $defineEntity(TimesheetDetail, [
-            { name: "TimesheetDetailID", type: Number },
+            { name: "TimesheetDetailID", type: Number, isReadOnly: true },
             { name: "TimesheetDetailSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TimesheetDetailName", type: String },
             { name: "TimesheetDetailCode", type: String },
             { name: "TimesheetDetailFileName", type: String },
-            { name: "LoadDateID", type: Number },
-            { name: "Hours", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "Hours", type: String },
             { name: "Comments", type: String },
             { name: "ClientComments", type: String },
             { name: "AMComments", type: String },
@@ -1170,16 +1145,41 @@ window.myapp = msls.application;
             { name: "Project", kind: "reference", type: Project },
             { name: "Timesheet", kind: "reference", type: Timesheet },
             { name: "TypeOfWork", kind: "reference", type: TypeOfWork },
-            { name: "VerCol", type: Array }
+            { name: "VerCol", type: Array, isReadOnly: true }
+        ]),
+
+        Timesheet: $defineEntity(Timesheet, [
+            { name: "TimesheetID", type: Number, isReadOnly: true },
+            { name: "TimesheetSourceKey", type: String },
+            { name: "LoadDate", type: Date },
+            { name: "TimesheetName", type: String },
+            { name: "TimesheetCode", type: String },
+            { name: "TimesheetFileName", type: String },
+            { name: "TimesheetFromDateID", type: Number },
+            { name: "TimesheetToDateID", type: Number },
+            { name: "TimesheetPerson", type: String },
+            { name: "TimesheetDate", type: String },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
+            { name: "sys_CreatedOn", type: Date },
+            { name: "sys_CreatedBy", type: String },
+            { name: "sys_ModifiedOn", type: Date },
+            { name: "sys_ModifiedBy", type: String },
+            { name: "ActiveType", kind: "reference", type: ActiveType },
+            { name: "DimDate", kind: "reference", type: DimDate },
+            { name: "OverallStatus", kind: "reference", type: OverallStatu },
+            { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
+            { name: "PeriodEnding", type: Date, isReadOnly: true },
+            { name: "Person", kind: "reference", type: PersonItem },
+            { name: "VerCol", type: Array, isReadOnly: true }
         ]),
 
         TypeOfWork: $defineEntity(TypeOfWork, [
-            { name: "TypeOfWorkID", type: Number },
+            { name: "TypeOfWorkID", type: Number, isReadOnly: true },
             { name: "TypeOfWorkSourceKey", type: String },
             { name: "LoadDate", type: Date },
             { name: "TypeOfWorkName", type: String },
             { name: "TypeOfWorkCode", type: String },
-            { name: "LoadDateID", type: Number },
+            { name: "LoadDateID", type: Number, isReadOnly: true },
             { name: "sys_CreatedOn", type: Date },
             { name: "sys_CreatedBy", type: String },
             { name: "sys_ModifiedOn", type: Date },
@@ -1192,14 +1192,14 @@ window.myapp = msls.application;
             { name: "ActiveTypes", elementType: ActiveType },
             { name: "BillingDetails", elementType: BillingDetail },
             { name: "BillingStatus", elementType: BillingStatu },
-            { name: "Clients", elementType: Client },
             { name: "ClientRoles", elementType: ClientRole },
+            { name: "Clients", elementType: Client },
             { name: "DimDates", elementType: DimDate },
             { name: "OverallStatus", elementType: OverallStatu },
             { name: "People", elementType: PersonItem },
             { name: "Projects", elementType: Project },
-            { name: "Timesheets", elementType: Timesheet },
             { name: "TimesheetDetails", elementType: TimesheetDetail },
+            { name: "Timesheets", elementType: Timesheet },
             { name: "TypeOfWorks", elementType: TypeOfWork }
         ], [
             {
@@ -1224,16 +1224,16 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Clients_SingleOrDefault", value: function (ClientID) {
-                    return new $DataServiceQuery({ _entitySet: this.Clients },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
+                name: "ClientRoles_SingleOrDefault", value: function (ClientRoleID) {
+                    return new $DataServiceQuery({ _entitySet: this.ClientRoles },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ClientRoles(" + "ClientRoleID=" + $toODataString(ClientRoleID, "Int32?") + ")"
                     );
                 }
             },
             {
-                name: "ClientRoles_SingleOrDefault", value: function (ClientRoleID) {
-                    return new $DataServiceQuery({ _entitySet: this.ClientRoles },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ClientRoles(" + "ClientRoleID=" + $toODataString(ClientRoleID, "Int32?") + ")"
+                name: "Clients_SingleOrDefault", value: function (ClientID) {
+                    return new $DataServiceQuery({ _entitySet: this.Clients },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Clients(" + "ClientID=" + $toODataString(ClientID, "Int32?") + ")"
                     );
                 }
             },
@@ -1242,6 +1242,23 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.DimDates },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/DimDates(" + "DateID=" + $toODataString(DateID, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "TimesheetDate", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.DimDates },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDate()",
+                        {
+                        });
+                }
+            },
+            {
+                name: "TimesheetDetailDate", value: function (PeriodEndDate) {
+                    return new $DataServiceQuery({ _entitySet: this.DimDates },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailDate()",
+                        {
+                            PeriodEndDate: $toODataString(PeriodEndDate, "DateTime?")
+                        });
                 }
             },
             {
@@ -1266,10 +1283,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
-                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
-                    );
+                name: "ProjectSorted", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.Projects },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectSorted()",
+                        {
+                        });
                 }
             },
             {
@@ -1280,10 +1298,27 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "TypeOfWorks_SingleOrDefault", value: function (TypeOfWorkID) {
-                    return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
+                name: "TimesheetDetailsQuery", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailsQuery()",
+                        {
+                        });
+                }
+            },
+            {
+                name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "GetTimesheet", value: function (TimesheetID) {
+                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/GetTimesheet()",
+                        {
+                            TimesheetID: $toODataString(TimesheetID, "Int32?")
+                        });
                 }
             },
             {
@@ -1297,45 +1332,10 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "TimesheetDate", value: function () {
-                    return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDate()",
-                        {
-                        });
-                }
-            },
-            {
-                name: "TimesheetDetailDate", value: function (PeriodEndDate) {
-                    return new $DataServiceQuery({ _entitySet: this.DimDates },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailDate()",
-                        {
-                            PeriodEndDate: $toODataString(PeriodEndDate, "DateTime?")
-                        });
-                }
-            },
-            {
-                name: "ProjectSorted", value: function () {
-                    return new $DataServiceQuery({ _entitySet: this.Projects },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectSorted()",
-                        {
-                        });
-                }
-            },
-            {
-                name: "TimesheetDetailsQuery", value: function () {
-                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailsQuery()",
-                        {
-                        });
-                }
-            },
-            {
-                name: "GetTimesheet", value: function (TimesheetID) {
-                    return new $DataServiceQuery({ _entitySet: this.Timesheets },
-                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/GetTimesheet()",
-                        {
-                            TimesheetID: $toODataString(TimesheetID, "Int32?")
-                        });
+                name: "TypeOfWorks_SingleOrDefault", value: function (TypeOfWorkID) {
+                    return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TypeOfWorks(" + "TypeOfWorkID=" + $toODataString(TypeOfWorkID, "Int32?") + ")"
+                    );
                 }
             }
         ]),
