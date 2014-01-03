@@ -1817,6 +1817,125 @@
               </ContentItem>
             </ContentItem.CommandItems>
           </ContentItem>
+          <ContentItem
+            Name="Commissions"
+            Kind="Group">
+            <ContentItem
+              Name="Commissions_selectedItem"
+              Kind="Details"
+              DataType="Commission">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="AddEditInvoice/Properties[Commissions]" />
+                    <MemberExpression
+                      Member="selectedItem" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="CommissionDescription"
+                Kind="Value"
+                DataType=":String"
+                View="Microsoft.LightSwitch.MobileWeb:Text">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Commission/Properties[CommissionDescription]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CommissionAmount"
+                Kind="Value"
+                DataType=":Decimal"
+                View="Microsoft.LightSwitch.MobileWeb:Text">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Commission/Properties[CommissionAmount]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Person"
+                Kind="Details"
+                DataType="Person"
+                View="Microsoft.LightSwitch.MobileWeb:Summary">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Commission/Properties[Person]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="CommissionStatu"
+                Kind="Details"
+                DataType="CommissionStatu">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Commission/Properties[CommissionStatu]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="CommissionStatu1"
+                  Kind="Details"
+                  DataType="CommissionStatu">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="DimDate3"
+                Kind="Details"
+                DataType="DimDate">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Paid Date" />
+                </ContentItem.Attributes>
+                <ContentItem.ChoicesSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddEditInvoice/Properties[FilteredDates]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.ChoicesSource>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Commission/Properties[DimDate]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="DimDate4"
+                  Kind="Details"
+                  DataType="DimDate">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
         </ContentItem>
         <ContentItem
           Name="Popups"
@@ -2030,6 +2149,36 @@
           <ChainExpression>
             <CallExpression
               Target="AddEditInvoice/Properties[ClientRoleSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="Commissions"
+        PageSize="45"
+        PropertyType="CollectionView$Commission">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="CommissionsQuery"
+            ReturnType="Commission*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddEditInvoice/Properties[Invoice]" />
+                  <MemberExpression
+                    Member="Commissions" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddEditInvoice/Properties[Commissions]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -5693,4 +5842,52 @@
       </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Commission" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:CommissionStatu" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Commission_ActiveType" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Commission_CommissionStatus" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Commission_DimDate" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Commission_Invoice" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Commission_Person" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_CommissionStatus_ActiveType" />
+    </Association.Attributes>
+  </Association>
 </ModelFragment>

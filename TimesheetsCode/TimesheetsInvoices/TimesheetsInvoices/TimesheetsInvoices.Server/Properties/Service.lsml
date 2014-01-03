@@ -171,6 +171,16 @@
         Association="FK_TypeOfWork_ActiveType"
         FromEnd="ActiveType"
         ToEnd="TypeOfWork" />
+      <NavigationProperty
+        Name="Commissions"
+        Association="FK_Commission_ActiveType"
+        FromEnd="ActiveType"
+        ToEnd="Commission" />
+      <NavigationProperty
+        Name="CommissionStatus"
+        Association="FK_CommissionStatus_ActiveType"
+        FromEnd="ActiveType"
+        ToEnd="CommissionStatus" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1090,6 +1100,11 @@
         Association="FK_Invoice_DimDate2"
         FromEnd="DimDate"
         ToEnd="Invoice" />
+      <NavigationProperty
+        Name="Commissions"
+        Association="FK_Commission_DimDate"
+        FromEnd="DimDate"
+        ToEnd="Commission" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1275,6 +1290,11 @@
         Association="FK_Invoice_DimDate2"
         FromEnd="Invoice"
         ToEnd="DimDate" />
+      <NavigationProperty
+        Name="Commissions"
+        Association="FK_Commission_Invoice"
+        FromEnd="Invoice"
+        ToEnd="Commission" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1786,6 +1806,11 @@
         Association="FK_Project_Person"
         FromEnd="Person"
         ToEnd="Project" />
+      <NavigationProperty
+        Name="Commissions"
+        Association="FK_Commission_Person"
+        FromEnd="Person"
+        ToEnd="Commission" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -2027,6 +2052,17 @@
         Association="FK_Project_Person"
         FromEnd="Project"
         ToEnd="Person" />
+      <EntityProperty
+        Name="CommPercent"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="18"
+            Scale="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -5715,6 +5751,280 @@
         </SortCriterion>
       </QueryOperation.SortCriteria>
     </QueryOperation>
+    <EntitySet
+      Name="Commissions"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Commission" />
+    <EntitySet
+      Name="CommissionStatus"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CommissionStatu" />
+    <AssociationSet
+      Name="FK_Commission_ActiveType"
+      Association="FK_Commission_ActiveType">
+      <AssociationSetEnd
+        Name="ActiveType"
+        EntitySet="ActiveTypes" />
+      <AssociationSetEnd
+        Name="Commission"
+        EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Commission_CommissionStatus"
+      Association="FK_Commission_CommissionStatus">
+      <AssociationSetEnd
+        Name="CommissionStatus"
+        EntitySet="CommissionStatus" />
+      <AssociationSetEnd
+        Name="Commission"
+        EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Commission_DimDate"
+      Association="FK_Commission_DimDate">
+      <AssociationSetEnd
+        Name="DimDate"
+        EntitySet="DimDates" />
+      <AssociationSetEnd
+        Name="Commission"
+        EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Commission_Invoice"
+      Association="FK_Commission_Invoice">
+      <AssociationSetEnd
+        Name="Invoice"
+        EntitySet="Invoices" />
+      <AssociationSetEnd
+        Name="Commission"
+        EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_Commission_Person"
+      Association="FK_Commission_Person">
+      <AssociationSetEnd
+        Name="Person"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="Commission"
+        EntitySet="Commissions" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_CommissionStatus_ActiveType"
+      Association="FK_CommissionStatus_ActiveType">
+      <AssociationSetEnd
+        Name="ActiveType"
+        EntitySet="ActiveTypes" />
+      <AssociationSetEnd
+        Name="CommissionStatus"
+        EntitySet="CommissionStatus" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Commissions_Single"
+      ReturnType="Commission">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CommissionID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CommissionID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Commissions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CommissionID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CommissionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Commissions_SingleOrDefault"
+      ReturnType="Commission">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CommissionID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CommissionID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Commissions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CommissionID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CommissionID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CommissionStatus_Single"
+      ReturnType="CommissionStatu">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CommissionStatusID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CommissionStatusID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CommissionStatus" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CommissionStatusID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CommissionStatusID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CommissionStatus_SingleOrDefault"
+      ReturnType="CommissionStatu">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CommissionStatusID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CommissionStatusID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CommissionStatus" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CommissionStatusID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'CommissionStatusID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CommissionsToPay"
+      ReturnType="Commission*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CommissionStatu" />
+                <MemberExpression
+                  Member="CommissionStatusCode" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ConstantExpression
+                Value="DUE"
+                ResultType=":String" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Commissions" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperation.SortCriteria>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="Invoice" />
+            <MemberExpression
+              Member="DimDate" />
+            <MemberExpression
+              Member="DateID" />
+          </ChainExpression>
+        </SortCriterion>
+      </QueryOperation.SortCriteria>
+    </QueryOperation>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -5754,6 +6064,335 @@
       Multiplicity="Many"
       EntityType="BillingDetail" />
   </Association>
+  <EntityType
+    Name="Commission">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="CommissionID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="LoadDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CommissionDescription"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="500" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CommissionAmount"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ActiveType"
+        Association="FK_Commission_ActiveType"
+        FromEnd="Commission"
+        ToEnd="ActiveType" />
+      <NavigationProperty
+        Name="CommissionStatu"
+        Association="FK_Commission_CommissionStatus"
+        FromEnd="Commission"
+        ToEnd="CommissionStatus" />
+      <NavigationProperty
+        Name="DimDate"
+        Association="FK_Commission_DimDate"
+        FromEnd="Commission"
+        ToEnd="DimDate" />
+      <NavigationProperty
+        Name="Invoice"
+        Association="FK_Commission_Invoice"
+        FromEnd="Commission"
+        ToEnd="Invoice" />
+      <NavigationProperty
+        Name="Person"
+        Association="FK_Commission_Person"
+        FromEnd="Commission"
+        ToEnd="Person" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="CommissionStatu">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="CommissionStatusID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="CommissionStatusSourceKey"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LoadDate"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CommissionStatusName"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CommissionStatusCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LoadDateID"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedOn"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="sys_ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Commissions"
+        Association="FK_Commission_CommissionStatus"
+        FromEnd="CommissionStatus"
+        ToEnd="Commission" />
+      <NavigationProperty
+        Name="ActiveType"
+        Association="FK_CommissionStatus_ActiveType"
+        FromEnd="CommissionStatus"
+        ToEnd="ActiveType" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Commission_ActiveType">
+    <AssociationEnd
+      Name="ActiveType"
+      Multiplicity="One"
+      EntityType="ActiveType">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Commission"
+      Multiplicity="Many"
+      EntityType="Commission" />
+  </Association>
+  <Association
+    Name="FK_Commission_CommissionStatus">
+    <AssociationEnd
+      Name="CommissionStatus"
+      Multiplicity="One"
+      EntityType="CommissionStatu">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Commission"
+      Multiplicity="Many"
+      EntityType="Commission" />
+  </Association>
+  <Association
+    Name="FK_Commission_DimDate">
+    <AssociationEnd
+      Name="DimDate"
+      EntityType="DimDate">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Commission"
+      Multiplicity="Many"
+      EntityType="Commission" />
+  </Association>
+  <Association
+    Name="FK_Commission_Invoice">
+    <AssociationEnd
+      Name="Invoice"
+      Multiplicity="One"
+      EntityType="Invoice">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Commission"
+      Multiplicity="Many"
+      EntityType="Commission" />
+  </Association>
+  <Association
+    Name="FK_Commission_Person">
+    <AssociationEnd
+      Name="Person"
+      EntityType="Person">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Commission"
+      Multiplicity="Many"
+      EntityType="Commission" />
+  </Association>
+  <Association
+    Name="FK_CommissionStatus_ActiveType">
+    <AssociationEnd
+      Name="ActiveType"
+      Multiplicity="One"
+      EntityType="ActiveType">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CommissionStatus"
+      Multiplicity="Many"
+      EntityType="CommissionStatu" />
+  </Association>
   <DataService
     Name="Timesheets20130908DataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -5770,7 +6409,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="465e953c-a390-4ee4-a048-1584c966b3b8" />
+        Value="60140e7d-c719-4ab0-adbe-acecf9b50435" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -6171,6 +6810,153 @@
           Nullable="False"
           Type="nvarchar"
           Property="ClientRole/Properties[sys_ModifiedBy]" />
+        <SsdlForeignKeyProperty
+          Name="Active"
+          Nullable="False"
+          Type="int"
+          PropertyName="Active" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Commissions">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Commission" />
+        <SsdlProperty
+          Name="CommissionID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Commission/Properties[CommissionID]" />
+        <SsdlProperty
+          Name="LoadDate"
+          Nullable="False"
+          Type="datetime"
+          Property="Commission/Properties[LoadDate]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="CommissionDescription"
+          Nullable="False"
+          Type="varchar"
+          Property="Commission/Properties[CommissionDescription]" />
+        <SsdlProperty
+          Name="CommissionAmount"
+          Nullable="False"
+          Type="money"
+          Property="Commission/Properties[CommissionAmount]" />
+        <SsdlProperty
+          Name="sys_CreatedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="Commission/Properties[sys_CreatedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_CreatedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Commission/Properties[sys_CreatedBy]" />
+        <SsdlProperty
+          Name="sys_ModifiedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="Commission/Properties[sys_ModifiedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_ModifiedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="Commission/Properties[sys_ModifiedBy]" />
+        <SsdlForeignKeyProperty
+          Name="Active"
+          Nullable="False"
+          Type="int"
+          PropertyName="Active" />
+        <SsdlForeignKeyProperty
+          Name="CommissionStatusID"
+          Nullable="False"
+          Type="int"
+          PropertyName="CommissionStatusID" />
+        <SsdlForeignKeyProperty
+          Name="CommissionPaidDateID"
+          Nullable="True"
+          Type="int"
+          PropertyName="CommissionPaidDateID" />
+        <SsdlForeignKeyProperty
+          Name="InvoiceID"
+          Nullable="False"
+          Type="int"
+          PropertyName="InvoiceID" />
+        <SsdlForeignKeyProperty
+          Name="CommissionPersonID"
+          Nullable="True"
+          Type="int"
+          PropertyName="CommissionPersonID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="CommissionStatus">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="CommissionStatus" />
+        <SsdlProperty
+          Name="CommissionStatusID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="CommissionStatu/Properties[CommissionStatusID]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="CommissionStatusSourceKey"
+          Nullable="True"
+          Type="varchar"
+          Property="CommissionStatu/Properties[CommissionStatusSourceKey]" />
+        <SsdlProperty
+          Name="LoadDate"
+          Nullable="False"
+          Type="datetime"
+          Property="CommissionStatu/Properties[LoadDate]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="CommissionStatusName"
+          Nullable="False"
+          Type="varchar"
+          Property="CommissionStatu/Properties[CommissionStatusName]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="CommissionStatusCode"
+          Nullable="False"
+          Type="varchar"
+          Property="CommissionStatu/Properties[CommissionStatusCode]" />
+        <SsdlProperty
+          Name="LoadDateID"
+          Nullable="True"
+          StoreGeneratedPattern="Computed"
+          Type="int"
+          Property="CommissionStatu/Properties[LoadDateID]" />
+        <SsdlProperty
+          Name="sys_CreatedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="CommissionStatu/Properties[sys_CreatedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_CreatedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="CommissionStatu/Properties[sys_CreatedBy]" />
+        <SsdlProperty
+          Name="sys_ModifiedOn"
+          Nullable="False"
+          Type="datetime"
+          Property="CommissionStatu/Properties[sys_ModifiedOn]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="sys_ModifiedBy"
+          Nullable="False"
+          Type="nvarchar"
+          Property="CommissionStatu/Properties[sys_ModifiedBy]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"
@@ -6854,6 +7640,12 @@
           Type="int"
           Property="Project/Properties[AdminProject]" />
         <SsdlProperty
+          Name="CommPercent"
+          Nullable="False"
+          Scale="2"
+          Type="decimal"
+          Property="Project/Properties[CommPercent]" />
+        <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"
           Type="datetime"
@@ -7313,6 +8105,132 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="Timesheets20130908Data/Members[FK_ClientRole_ActiveType]/Members[ClientRole]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Active" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Commission_ActiveType">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Commission_ActiveType" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_ActiveType]/Members[ActiveType]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_ActiveType]/Members[Commission]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Active" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Commission_CommissionStatus">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Commission_CommissionStatus" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_CommissionStatus]/Members[CommissionStatus]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CommissionStatusID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_CommissionStatus]/Members[Commission]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CommissionStatusID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Commission_DimDate">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Commission_DimDate" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_DimDate]/Members[DimDate]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_DimDate]/Members[Commission]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CommissionPaidDateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Commission_Invoice">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Commission_Invoice" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_Invoice]/Members[Invoice]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="InvoiceID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_Invoice]/Members[Commission]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="InvoiceID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Commission_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Commission_Person" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_Person]/Members[Person]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_Commission_Person]/Members[Commission]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CommissionPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_CommissionStatus_ActiveType">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_CommissionStatus_ActiveType" />
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_CommissionStatus_ActiveType]/Members[ActiveType]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets20130908Data/Members[FK_CommissionStatus_ActiveType]/Members[CommissionStatus]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />
