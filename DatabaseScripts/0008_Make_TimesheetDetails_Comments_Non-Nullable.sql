@@ -1,3 +1,8 @@
+use Timesheets
+go
+
+
+
 DROP INDEX [IX_TimesheetDetail_Unique] ON [dbo].[TimesheetDetail];
 GO
 

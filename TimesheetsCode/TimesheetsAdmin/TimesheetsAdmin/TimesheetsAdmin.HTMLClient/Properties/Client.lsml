@@ -380,7 +380,7 @@
     Name="HomeScreen">
     <Screen.Attributes>
       <DisplayName
-        Value="Home Screen v 2.2.36" />
+        Value="Home Screen v 2.2.39" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -6566,6 +6566,46 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
             </ContentItem>
+            <ContentItem
+              Name="AM"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseProjects/Properties[AM]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="BillingStatusID"
+              Kind="Details"
+              DataType="BillingStatus">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Billing Status" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseProjects/Properties[BillingStatusID]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="BillingStatus"
+                Kind="Details"
+                DataType="BillingStatus">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
           </ContentItem>
         </ContentItem>
         <ContentItem.PropertySources>
@@ -6670,6 +6710,22 @@
                     Member="BrowseProjects/Properties[ProjectName]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="AM">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseProjects/Properties[AM]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="BillingStatusID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseProjects/Properties[BillingStatusID]" />
+                  <MemberExpression
+                    Member="BillingStatusID" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -6680,6 +6736,12 @@
       <ScreenProperty
         Name="ProjectName"
         PropertyType=":String?" />
+      <ScreenProperty
+        Name="AM"
+        PropertyType=":String?" />
+      <ScreenProperty
+        Name="BillingStatusID"
+        PropertyType="BillingStatus" />
     </Screen.Properties>
   </Screen>
   <Screen

@@ -1889,12 +1889,14 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "ProjectsFilter", value: function (ClientName, ProjectName) {
+                name: "ProjectsFilter", value: function (ClientName, ProjectName, AM, BillingStatusID) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ProjectsFilter()",
                         {
                             ClientName: $toODataString(ClientName, "String?"),
-                            ProjectName: $toODataString(ProjectName, "String?")
+                            ProjectName: $toODataString(ProjectName, "String?"),
+                            AM: $toODataString(AM, "String?"),
+                            BillingStatusID: $toODataString(BillingStatusID, "Int32?")
                         });
                 }
             },

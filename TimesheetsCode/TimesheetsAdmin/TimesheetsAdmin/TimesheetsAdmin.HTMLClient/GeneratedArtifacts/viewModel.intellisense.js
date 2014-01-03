@@ -1002,7 +1002,22 @@
         /// Called after the ProjectName content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ProjectName_postRender: $parameters
+        ProjectName_postRender: $parameters,
+        /// <field>
+        /// Called after the AM content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AM_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatusID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatusID_postRender: $parameters,
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: $parameters
     });
 
     msls._addEntryPoints(lightSwitchApplication.AddEditProject, {

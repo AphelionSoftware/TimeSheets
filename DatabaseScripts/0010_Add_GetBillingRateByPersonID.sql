@@ -1,4 +1,7 @@
-﻿/*
+﻿use Timesheets
+go
+
+
 CREATE FUNCTION [dbo].[GetBillingRateByPersonID]
 (
 	@BillingDetailPersonID int,
@@ -50,4 +53,3 @@ VALUES
 );
 GO
 
-*/

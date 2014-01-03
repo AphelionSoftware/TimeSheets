@@ -7,7 +7,7 @@ myapp.Client.created = function (entity) {
     entity.sys_ModifiedBy = "NA";
     entity.sys_ModifiedOn = "1999/01/01";
     entity.LoadDate = "1999/01/01";
-    myapp.activeDataWorkspace.Timesheets20130908Data.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
+    myapp.activeDataWorkspace.TimesheetsData.ActiveTypes_SingleOrDefault(1).execute().then(function (ActiveTypesQuery) {
         entity.ActiveType = ActiveTypesQuery.results[0];
     });
 };

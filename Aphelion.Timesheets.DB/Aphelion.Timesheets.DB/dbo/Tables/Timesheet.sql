@@ -19,12 +19,17 @@
     [sys_ModifiedBy]      NVARCHAR (255) CONSTRAINT [DF__Timesheet__sys_M__3CF40B7E] DEFAULT ('Unknown') NOT NULL,
     [PeriodEnding]        AS             (CONVERT([date],CONVERT([varchar](8),[TimesheetDateID],(0)),(112))) PERSISTED NOT NULL,
     [TimesheetPersonID]   INT            NOT NULL,
+    [VerCol]              ROWVERSION     NOT NULL,
     CONSTRAINT [PK_Timesheet] PRIMARY KEY CLUSTERED ([TimesheetID] ASC),
     CONSTRAINT [FK_Timesheet_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
     CONSTRAINT [FK_Timesheet_DimDate] FOREIGN KEY ([TimesheetDateID]) REFERENCES [dbo].[DimDate] ([DateID]),
     CONSTRAINT [FK_Timesheet_OverallStatus] FOREIGN KEY ([OverallStatusID]) REFERENCES [dbo].[OverallStatus] ([OverallStatusID]),
     CONSTRAINT [fk_TimesheetPersonID] FOREIGN KEY ([TimesheetPersonID]) REFERENCES [dbo].[Person] ([PersonID])
 );
+
+
+
+
 
 
 

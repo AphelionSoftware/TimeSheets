@@ -126,5 +126,19 @@
     <Build Include="dbo\Tables\ResourcePlan.sql" />
     <Build Include="dbo\Views\vw_ResourcePlan.sql" />
     <Build Include="dbo\Stored Procedures\InsertResourcing.sql" />
+    <Build Include="dbo\Views\vw_NPerson.sql" />
+    <Build Include="dbo\Tables\CommissionStatus.sql" />
+    <Build Include="dbo\Tables\Commission.sql" />
+    <Build Include="dbo\Stored Procedures\invInsertCommission.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\Azure\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\Azure\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>True</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>

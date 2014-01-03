@@ -1,3 +1,0 @@
-﻿CREATE LOGIN [NT SERVICE\MSSQLServerOLAPService]
-    FROM WINDOWS WITH DEFAULT_DATABASE = [TimeSheets_Dev_Leo], DEFAULT_LANGUAGE = [us_english];
-

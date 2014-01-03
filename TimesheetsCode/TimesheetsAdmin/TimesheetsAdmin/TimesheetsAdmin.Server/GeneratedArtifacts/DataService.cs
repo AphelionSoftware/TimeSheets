@@ -747,16 +747,16 @@ namespace LightSwitchApplication
         partial void ProjectsFilter_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_Executing(string ClientName, string ProjectName);
+        partial void ProjectsFilter_Executing(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProjectsFilter_PreprocessQuery(string ClientName, string ProjectName, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+        partial void ProjectsFilter_PreprocessQuery(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_Executed(string ClientName, string ProjectName, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+        partial void ProjectsFilter_Executed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsFilter_ExecuteFailed(string ClientName, string ProjectName, global::System.Exception exception);
+        partial void ProjectsFilter_ExecuteFailed(string ClientName, string ProjectName, string AM, global::System.Nullable<int> BillingStatusID, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void InvoiceStatusSorted_CanExecute(ref bool result);
@@ -2350,20 +2350,20 @@ namespace LightSwitchApplication
             }
             private static void __ProjectsFilter_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.ProjectsFilter_Executing((string)args[0], (string)args[1]);
+                d.ProjectsFilter_Executing((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3]);
             }
             private static void __ProjectsFilter_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.ProjectsFilter_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[2]);
+                d.ProjectsFilter_Executed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[4]);
             }
             private static void __ProjectsFilter_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
             {
-                d.ProjectsFilter_ExecuteFailed((string)args[0], (string)args[1], ex);
+                d.ProjectsFilter_ExecuteFailed((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ex);
             }
             private static global::System.Linq.IQueryable __ProjectsFilter_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[2];
-                d.ProjectsFilter_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[4];
+                d.ProjectsFilter_PreprocessQuery((string)args[0], (string)args[1], (string)args[2], (global::System.Nullable<int>)args[3], ref query);
                 return query;
             }
             

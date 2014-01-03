@@ -14,8 +14,8 @@
   DTS:ObjectName="ImportBilling"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="574"
-  DTS:VersionGUID="{0EA58A37-6FB7-40E7-A5A3-2BD2AC1AB4B4}">
+  DTS:VersionBuild="584"
+  DTS:VersionGUID="{E88621D8-7EF2-42CB-BFA2-5045802C83F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -470,7 +470,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20131006</DTS:VariableValue>
+        DTS:DataType="3">20131201</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1079,7 +1079,7 @@ where [refTable].[BillingNameShort] = ?</property>
                               dataType="System.Int32"
                               description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                               name="NoMatchBehavior"
-                              typeConverter="LookupNoMatchBehavior">0</property>
+                              typeConverter="LookupNoMatchBehavior">1</property>
                             <property
                               dataType="System.Int32"
                               description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -1149,7 +1149,6 @@ where [refTable].[BillingNameShort] = ?</property>
                             <output
                               refId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_BillingStatus.Outputs[Lookup Match Output]"
                               errorOrTruncationOperation="Lookup"
-                              errorRowDisposition="FailComponent"
                               exclusionGroup="1"
                               name="Lookup Match Output"
                               synchronousInputId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_BillingStatus.Inputs[Lookup Input]">
@@ -2741,9 +2740,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2777,9 +2774,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2791,7 +2786,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
