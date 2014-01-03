@@ -38,6 +38,10 @@
 
 
 
+
+
+
+
 GO
 CREATE UNIQUE NONCLUSTERED INDEX [IX_Project]
     ON [dbo].[Project]([ProjectSourceKey] ASC, [ClientID] DESC);

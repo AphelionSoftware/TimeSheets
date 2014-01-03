@@ -1,13 +1,40 @@
-﻿CREATE VIEW dbo.vw_ResourcePlan
+﻿CREATE VIEW [dbo].[vw_ResourcePlan]
 as
-SELECT TOP 2147483648 cast(WeekEnding as date) WeekEnding
+SELECT TOP 2147483648
+			
+ cast(WeekEnding as date) WeekEnding
 	,ResourcePlanComments
+	, CAST(P.PersonID as varchar(10)) + '.' + RIGHT('00' + CAST(
+	
+	Number + ISNULL(  (
+			SELECT MAX(Blocks) 
+				FROM dbo.ResourcePlan RPInner
+					WHERE RPInner.WeekEndingDate = Weeks.WeekEnding
+						AND RPInner.ResourcePlanPersonID = P.PersonID
+						and RPInner.ResourcePlanID > RP.ResourcePlanID 
+						), 0
+						)
+	
+	as varchar(2)) , 2) as PNID
 	, P.PersonID 
-	, Number
-	, ColorScale = CASE WHEN PR.ProjectID IS NULL THEN NULL
-	WHEN PR.ProjectID < 0 THEN PR.ProjectID
+	, Number  
+	+ ISNULL(  (
+			SELECT MAX(Blocks) 
+				FROM dbo.ResourcePlan RPInner
+					WHERE RPInner.WeekEndingDate = Weeks.WeekEnding
+						AND RPInner.ResourcePlanPersonID = P.PersonID
+						and RPInner.ResourcePlanID > RP.ResourcePlanID 
+						), 0
+						) AS Number
+	, ColorScale = CASE WHEN PR.ProjectID IS NULL THEN 0
+	WHEN PR.ProjectID < 0 THEN -1-- PR.ProjectID
 		ELSE 
-			DENSE_RANK() over (order by C.ClientCode, PR.ProjectCode) 
+			DENSE_RANK() over (partition by
+			CASE WHEN PR.ProjectID IS NULL THEN 0
+			WHEN PR.ProjectID < 0 THEN 0
+			ELSE 1 END
+			order by 
+			C.ClientCode, PR.ProjectCode) 
 			END 
 	,  PR.ProjectID ProjectID
 from 
@@ -37,7 +64,7 @@ and C.Active = 1
 ) on p.PersonID = RP.ResourcePlanPersonID
 and  Rp.Blocks >= Numbers.Number
 and rp.WeekEndingDate =weeks.WeekEnding
-Where P.Active = 1
+--Where P.Active = 1
 
 
 
