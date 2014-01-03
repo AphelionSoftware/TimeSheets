@@ -8,14 +8,14 @@
   DTS:DelayValidation="True"
   DTS:DTSID="{977A2A3A-81C8-4686-B794-AF9143E17B39}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="Billability"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="558"
-  DTS:VersionGUID="{A3B0F609-4B39-480A-A1E0-FF0C1ED5EE4B}">
+  DTS:VersionBuild="562"
+  DTS:VersionGUID="{31ED1C92-ADE8-4D70-85ED-318C5C99D0F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:Variables>
@@ -429,7 +429,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20131112</DTS:VariableValue>
+        DTS:DataType="3">20131210</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -791,23 +791,6 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\EPT_CreateInvoices"
-          DTS:CreationName="SSIS.ExecutePackageTask.3"
-          DTS:Description="Execute Package Task"
-          DTS:DTSID="{BA76ACB3-277E-4246-B7D8-68A448E7D077}"
-          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="EPT_CreateInvoices"
-          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <ExecutePackageTask>
-              <UseProjectReference>True</UseProjectReference>
-              <PackageName>CreateDraftInvoices.dtsx</PackageName>
-            </ExecutePackageTask>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
           DTS:refId="Package\Sequence Container\EPT_Cubes"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
@@ -821,6 +804,23 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
               <PackageName>CubeProcess.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\EPT_Invoices"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{329EE4F0-65BC-49E7-A22C-9BE93575944A}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EPT_Invoices"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Invoices.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -846,11 +846,11 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{2CE6B9B6-CDE4-4D63-9499-EFA3C757106C}"
+          DTS:DTSID="{0A15B946-C82C-4455-96D8-DCAF6673D2A5}"
           DTS:From="Package\Sequence Container\Billing"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Sequence Container\EPT_Cubes" />
+          DTS:To="Package\Sequence Container\EPT_Invoices" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
@@ -870,11 +870,11 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
-          DTS:DTSID="{0D06D6D6-D56F-472E-8B21-433A9539C392}"
-          DTS:From="Package\Sequence Container\EPT_Cubes"
+          DTS:DTSID="{AD5CD49E-22D6-433D-AC02-84F93086FA54}"
+          DTS:From="Package\Sequence Container\EPT_Invoices"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 3"
-          DTS:To="Package\Sequence Container\EPT_CreateInvoices" />
+          DTS:To="Package\Sequence Container\EPT_Cubes" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -903,46 +903,50 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="156.8,41.6"
+          Size="157,42"
           Id="Package\FLC_CountFiles\Expression Task"
           TopLeft="5.5,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="168,103.2"
-          Size="168,145.6"
+          PanelSize="168,103"
+          Size="168,146"
           Id="Package\FLC_CountFiles"
           TopLeft="63.0000000000001,5.5" />
         <NodeLayout
-          Size="107.2,41.6"
+          Size="107,42"
           Id="Package\Sequence Container\Billing"
           TopLeft="80,41" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Sequence Container\Create Unallocated"
-          TopLeft="49,256" />
+          TopLeft="52.1616337597617,307.798751551598" />
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\Sequence Container\EPT_Cubes"
-          TopLeft="64.0000000000001,139.5" />
+          TopLeft="67.1616337597618,191.298751551598" />
         <NodeLayout
-          Size="148,41.6"
+          Size="142,42"
+          Id="Package\Sequence Container\EPT_Invoices"
+          TopLeft="55.5741980923412,125.834643984371" />
+        <NodeLayout
+          Size="148,42"
           Id="Package\Sequence Container\Overcap_mails"
-          TopLeft="54,342" />
+          TopLeft="57.1616337597617,393.798751551598" />
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
-          TopLeft="131.75,83">
+          TopLeft="130.037099046171,83">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56.5"
+              EndConnector="0,42.8346439843706"
               Start="0,0"
-              End="0,49">
+              End="0,35.3346439843706">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49" />
+                    End="0,35.3346439843706" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -953,7 +957,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="131.5,181.5">
+          TopLeft="134.661633759762,233.298751551598">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -975,7 +979,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="130.5,298">
+          TopLeft="133.661633759762,349.798751551598">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -995,36 +999,20 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\Sequence Container\EPT_CreateInvoices"
-          TopLeft="252.000004632133,253.364707752743" />
         <EdgeLayout
           Id="Package\Sequence Container.PrecedenceConstraints[Constraint 3]"
-          TopLeft="150.666666666667,181.1">
+          TopLeft="129.867915926051,167.834643984371">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="187.733337965466,72.2647077527428"
+              EndConnector="0,23.464107567227"
               Start="0,0"
-              End="187.733337965466,64.7647077527428">
+              End="0,15.964107567227">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.4251504621947" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.4251504621947"
-                    Point2="0,29.4251504621947"
-                    Point3="4,29.4251504621947" />
-                  <mssgle:LineSegment
-                    End="183.733337965466,29.4251504621947" />
-                  <mssgle:CubicBezierSegment
-                    Point1="183.733337965466,29.4251504621947"
-                    Point2="187.733337965466,29.4251504621947"
-                    Point3="187.733337965466,33.4251504621947" />
-                  <mssgle:LineSegment
-                    End="187.733337965466,64.7647077527428" />
+                    End="0,15.964107567227" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1036,43 +1024,43 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="432.8,966.4"
-          Size="432.8,1009.6"
+          PanelSize="320,967"
+          Size="320,1010"
           Id="Package\Sequence Container"
           TopLeft="19.5000000000001,211.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="147,151.1">
+          TopLeft="147,151.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="88.9,60.3999999999999"
+              EndConnector="32.5,60"
               Start="0,0"
-              End="88.9,52.8999999999999">
+              End="32.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.2" />
+                    End="0,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.2"
-                    Point2="0,30.2"
-                    Point3="4,30.2" />
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
                   <mssgle:LineSegment
-                    End="84.9,30.2" />
+                    End="28.5,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="84.9,30.2"
-                    Point2="88.9,30.2"
-                    Point3="88.9,34.2" />
+                    Point1="28.5,30"
+                    Point2="32.5,30"
+                    Point3="32.5,34" />
                   <mssgle:LineSegment
-                    End="88.9,52.8999999999999" />
+                    End="32.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="36.45,35.2,16,16"
+              BoundingBox="8.25,35,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

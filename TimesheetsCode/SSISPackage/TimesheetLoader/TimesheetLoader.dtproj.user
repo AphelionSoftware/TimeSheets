@@ -9,7 +9,7 @@
         <StartObjectID>TimesheetLoaderRawFile.dtsx</StartObjectID>
         <UserIDs />
         <UserPasswords />
-        <OfflineMode>true</OfflineMode>
+        <OfflineMode>false</OfflineMode>
         <ProgressReporting>true</ProgressReporting>
         <ParameterConfigurationSensitiveValues>
           <ConfigurationSetting>

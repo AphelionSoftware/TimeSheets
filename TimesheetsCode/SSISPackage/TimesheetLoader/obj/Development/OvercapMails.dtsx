@@ -29,12 +29,12 @@
           ConnectionString="OutgoingRequiresAuth=False;SMTPConnectionSetting=;SMTPConnectionUsername=;ConnectionRequiresSPA=False;MailAccountType=3;ServerAddress=smtp.gmail.com;UserName=mark.stacey@aphelion.ws;ServerPort=587;RequiresSSLConnection=False;EncryptedConnectionType=2;ServerTimeout=60;RootFolder=;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="11pvKkF9lQ=="
-            IV="fAbxzZlfNXc=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="QaQ8bpl1rw=="
+            IV="1Bmh4ZBXY3M=" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
             <CipherData>
-              <CipherValue>fAbxzZlfNXcPm92Ah4mR/Q1lHeTgZhVC11beDoBV28JQIl62CT1/55+Nas5I2bDgNeVsg5fSJrI=</CipherValue>
+              <CipherValue>1Bmh4ZBXY3NmGg1w4/rLxvq+QE77/ko3Sg2OIIL9iRbblhtkPmjLowV9KBsA164LjPG+3AUfAIM=</CipherValue>
             </CipherData>
           </EncryptedData>
         </EmailConnectionManager>
@@ -462,7 +462,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20131007</DTS:VariableValue>
+        DTS:DataType="3">20131210</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""

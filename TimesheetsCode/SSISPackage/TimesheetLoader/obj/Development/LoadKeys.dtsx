@@ -14,8 +14,8 @@
   DTS:ObjectName="LoadKeys"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="613"
-  DTS:VersionGUID="{DDA9FBC2-20AF-48EA-8B48-AE46B5EAAFC3}">
+  DTS:VersionBuild="614"
+  DTS:VersionGUID="{58B66803-A5CB-41AF-81A7-7346DC0206A4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -483,7 +483,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20131007</DTS:VariableValue>
+        DTS:DataType="3">20131210</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -2757,14 +2757,14 @@ where [refTable].[ProjectSourceKey] = ?</property>
               <paths>
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
-                  endId="Package\Keys\DFT_Project\LKP_Project.Inputs[Lookup Input]"
-                  name="Derived Column Output"
-                  startId="Package\Keys\DFT_Project\DRC_Copy.Outputs[Derived Column Output]" />
-                <path
-                  refId="Package\Keys\DFT_Project.Paths[Derived Column Output]"
                   endId="Package\Keys\DFT_Project\OLEDEST_Project.Inputs[OLE DB Destination Input]"
                   name="Derived Column Output"
                   startId="Package\Keys\DFT_Project\DRC_Client.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Keys\DFT_Project.Paths[Derived Column Output]"
+                  endId="Package\Keys\DFT_Project\LKP_Project.Inputs[Lookup Input]"
+                  name="Derived Column Output"
+                  startId="Package\Keys\DFT_Project\DRC_Copy.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Keys\DFT_Project.Paths[Excel Source Output]"
                   endId="Package\Keys\DFT_Project\DRC_Copy.Inputs[Derived Column Input]"
@@ -3845,9 +3845,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3881,9 +3879,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3970,7 +3966,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Derived Column Output]"
+          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
           TopLeft="785,430">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4006,7 +4002,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Keys\DFT_Project.Paths[Derived Column Output1]"
+          Id="Package\Keys\DFT_Project.Paths[Derived Column Output]"
           TopLeft="740,265">
           <EdgeLayout.Curve>
             <mssgle:Curve

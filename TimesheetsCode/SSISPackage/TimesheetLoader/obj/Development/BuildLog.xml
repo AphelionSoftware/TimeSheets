@@ -2,81 +2,88 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TimesheetLoader</Name>
-    <LastWriteTime>2013-10-07T17:56:12.5142483Z</LastWriteTime>
+    <LastWriteTime>2013-12-10T15:38:51.2067283Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-    <Salt>EYo7YO8o</Salt>
-    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAABNvSl5PoM/LrQX+SRefDcVDVJFAdadQbZWjlUOoQyzwAAAAAAOgAAAAAIAACAAAACQeGzro82eT/ao82hDLxilN+pCXALHY7bUoPyZbCPgOTAAAACWogdG/makh033o2vVCE5vyekAGn2GOCxwVUsltNLcY6lwYyny0D4+WxIGfSiO2J5AAAAAxnZqr06aH+NLISH0B/VW1+gD78mW3On46p8cTYZ2sUAaGgj76VnvZq7+0EoURCZYZvA8g9zYBmiOYUuG+5+Wdg==</LastKnownProtectedHashedPassword>
+    <Salt>8wH3/lVz</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAADoUHQu65Y8Wedqzn/3K54QItaFwjw8rUgwJhGsW3w5fQAAAAAOgAAAAAIAACAAAABtO+nU2O1xzoT7QXMMQQ1Ta1n5Chs7D75FIgjhF6qeLzAAAACVh4CU2DP88NtB66dG5rjgVcrFl/9ieqeYVtYAsE8wNIjwDiKg6LZo57WK7/+P34VAAAAA93qcGOPtOP+r/yE6O6tIIhJrkHoZOIozjRbXpyhgkkDckFSi5mwZdReJj8fBwU3KkDWsXNwA2QSvep+YQfqGTg==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>TimesheetLoaderRawFile.dtsx</Name>
-      <LastWriteTime>2013-10-14T01:33:16.7891699Z</LastWriteTime>
+      <LastWriteTime>2013-12-10T16:16:11.4433831Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>MLQ3sXx9</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAB/LzFoHZBPncKlqKJ1wYP0VaJ8toeH4js9HA3mELMKaAAAAAAOgAAAAAIAACAAAAAHvkPcM+lufOUaoi2+8il5shxPVQJimbitrnfpyN+kVzAAAABlDXBY26icqb/72/ty5MqM3lMqpS76mTQhTjgglVy0DhMDomI2sXv6pWnZIWfZGiVAAAAAybI24D+Zvyw+S1+PJJFXqBFYutVZQkfKIWM+E4CiJMYTPq2ycbO+rg8Yp90EYDLJBhet4GTZiI1CIP2shzz5dQ==</LastKnownProtectedHashedPassword>
+      <Salt>UBFfh+uU</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAA5KyFn8f0/Kijk06lK+n4vbLQMtweHyL8c8PJkOGS4ngAAAAAOgAAAAAIAACAAAABugWvoV07gFbdMDWkJypfKLurK8+b6vxmF9ckFUu42cDAAAAB1Xx6wKELaxJfHZBj/JaLWMijFd3btKLhgEVKN9hHDIMi7c7G+Pm4/05Mjl5oTITpAAAAAuoL4oQoZf3K4nsYtszdflV8w9q7nU13ftri9FI9P15HNq50ANjOC7CpDV5JX4h2GwyrwqUwqpmbsMUi5XN3rBQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Billability.dtsx</Name>
-      <LastWriteTime>2013-05-29T21:01:35Z</LastWriteTime>
+      <LastWriteTime>2013-12-10T16:15:56.7466259Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>I0njc7WX</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACWDH1tKEHR74m6Qe6XAegr4fhFaz7pquJxKWfsz5JQzQAAAAAOgAAAAAIAACAAAADdPkyPtO6aTZfRA5SCt/vi7Te7deQ7H2/0UVbLyoWGrzAAAAAearx7nV34BdEWzAC503XXjcRc9yrlCx5qYvVHt7dN8Q1Y+AjOPaMFISOXEbO/GM9AAAAAnYNqGuH119Q06jfeS+1hW1LYA3pVpcKV933YXOfW+smMLp7pILRIR/ByGMxiqJfER+aZlh22B1ELKxkefJjb6A==</LastKnownProtectedHashedPassword>
+      <Salt>uSg942Up</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACkDEEYj+w6FRUSbRcoGpno956hKIgEGHUOBe7pKBT65wAAAAAOgAAAAAIAACAAAAAcy8EkBkNpzqGeOHFGrcXgpw4XeiviRjaJNUNpAStpSjAAAAAkO4GtfZtnXrcpHZ3iO96BficcMWTDVwiJS7wAg92fI52rKjZ8NRNx0rVtXNmgo85AAAAACWSudh4GyL/9bhLUaTYzetlcHhvPAnkpNZcsMAxw4Si0HrL+gk6suSi9HbYM98QBqG63FNT5AZdVGLP5GbvpOA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CreateUnallocated.dtsx</Name>
-      <LastWriteTime>2013-06-26T17:26:25Z</LastWriteTime>
+      <LastWriteTime>2013-12-02T08:28:00.8519595Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>zSpkNoHo</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAABwMbfxm65rzamRQUEVbBBv7ICcSYgO8FzJEDfdmN7fPgAAAAAOgAAAAAIAACAAAACh4gYrWGrxjHUfF0DnbbkaRM1/abnR/DybeNDplzbR9zAAAAAyg1O0TDM+oBfFb4AyumwLEIXQ/XWKzCnRCSL0L0jFflzpEeTw76HM7OviTFJWLHZAAAAAqjMmszL28SIUnRQJXOmQ0KiCp2Fe4Af6NmSTDIw4Cl4pipcKUKIaX2tYZM7AZG578qcBwqwcOyEP1Vu+iMq0vQ==</LastKnownProtectedHashedPassword>
+      <Salt>tXSH5KDD</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAD7L2iUt6kn16Vu+sGWu36KHdqihnUP28GuhypWhkHq7AAAAAAOgAAAAAIAACAAAACMTfxNPIYrVcErzbueOh2op9eyoqz4i6GdTyphnhU3NzAAAADilCYGA8muldx+XsUjMlI1d7hPIxV9+MDxKNGaOG6DL9juWYvMjKm2KDbQcDzMaPJAAAAAhDxkqtVK8pkLF3QhjHJ67h94BGN3QmrLyu35te4AnhdgTo3jNHwdMMxSjq57rQO3kr9aYweKo8pPAG7LP0Ko9w==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CubeProcess.dtsx</Name>
       <LastWriteTime>2013-10-06T19:54:00.3332521Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>Ov2cVTs2</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAADjuX9GWvA/f1FhoBOCmGNUj5CPEM0ZkFyCkWi6KpYArAAAAAAOgAAAAAIAACAAAACaFkCGaSKkpThXTPDioqLTRd1L4S5XOig7rfdAGDBPFzAAAABw/0nV/iHYhX3zVziBYIBJJf4J9UfdTezjFvNVtkZzVa7kOYvDZIHzTwiTFLmdzfRAAAAAyr8hRqDyZJAYJ7HLlAhyQorWatotO9qS3fpRy8SCrNdjN+dmz3qrKbyFIWeVxHqbtR68NX8n5HpwjBxX+JYnXw==</LastKnownProtectedHashedPassword>
+      <Salt>D55Ge+Sa</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAABQMkhD6Y9pWw75coMUCoDDoQY7BwFvIpYk9RR5LjGwQgAAAAAOgAAAAAIAACAAAAB15+aVfZIyOCO4GeNEqD+euxACmIcdzO47V6c++gyn0DAAAAAenhqsUgPc3JDrGhhlvAn1uYBO13RiVc9TF8esAxxlYuTxOJXJJU721/jXiWIUfIJAAAAAdPnz3NsLxqW7aw5Xmgnat3MZQVADrJxXrxOsCSVgamxjHYew79ShIwvZX+a+Z+rCJgNhvkY/k4zlKtV5ZkMPUA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SendMails.dtsx</Name>
-      <LastWriteTime>2013-10-07T18:23:10.5586229Z</LastWriteTime>
+      <LastWriteTime>2013-12-02T07:14:19.0196661Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>YQeiBFYo</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAD7+DsNZfcl0a9vCuOMAH5u94dLh4XC/8zrZwNlOnIbHQAAAAAOgAAAAAIAACAAAAA4UgR7fgzZPrqh8bDRcKxilCcfnyKsJNYB/r9ewQdTBzAAAACZsO3i7G7OrsjbeBkNX3eKH4eor0q35ijyHiMFBOmAqIFzp2KqmPdfDQxNh6B1QbVAAAAAMkn992jII8vYFmx0e2w6ShUJiPSmPRya/24zRo8jMSkPszGUqVpfrd6PE1Gbvxl+SfZWKZwJCWrQS/yexfereA==</LastKnownProtectedHashedPassword>
+      <Salt>vH/L3Ona</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACesg18Z6AmdYcJnBDJFXU9uvaimqnnKJlPCII1JuI3eQAAAAAOgAAAAAIAACAAAADXxMa2KWf1ZC6CvSY7AghTBS2Tw9GXkU0e5bS2LZHCaDAAAADfPPsTR3Xm3lZVjHmB5tqqBAWSZDDApx5BH46FprhFgDE6+Z1td8ZTG+G6GpZgXgNAAAAAg81rHaQFvBENvvgTCVM9u0aawEC6Q0srFis65cymoak5b2Nvv9FhVaqu+HtfNwS/10hgJIFj7ZT5UnHShKLrlw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadKeys.dtsx</Name>
-      <LastWriteTime>2013-10-07T17:56:12.3892568Z</LastWriteTime>
+      <LastWriteTime>2013-12-04T21:08:52.8443428Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>99JdADxf</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACri+MKNz5V7K6S62XEnPQ5oz1RQQdSTD0vQkhrpqaIrgAAAAAOgAAAAAIAACAAAAD0E1NuQkwWakhEsdNzMm9Pg8yYT3LloiQzDahFreQCwjAAAACkZepYVEtPEDA9frRyRes9eWqpCN0eXMrECSVoK15gmZ3E0mmtQX5QyqgRP3L4dJdAAAAAfe4cL8L7I7gv8RDxBORj6dQdyDfy8gD8V5jDKfjt/mO7ULw1M2+iPlc+beuusBggBJDgxKcE1u025KnGLs4mDg==</LastKnownProtectedHashedPassword>
+      <Salt>VwysSjTw</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACovPTLJHUKgYO6BDP3h9uSY0+bBNG7LCM2hfOhOPr7BQAAAAAOgAAAAAIAACAAAAB3IYleFHwsqG2/mb9pqhQFPeDeug9eyAdmZPpe7ZuBQDAAAAAbjnUPB5DJmBJQPcQzlGpc8Hf2yoUNWvP7Q78Y+T/kj54wmpuAKzReTOU7m9Sb03lAAAAAetsVEFw+dVbMYoSNZFGDkq/YO+9Z1TSIQaGxRg7qKxhx90Es+rU1X6jLsj7vCRM9ou/aPqVvDDc39zDcuwfvIQ==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>OvercapMails.dtsx</Name>
       <LastWriteTime>2013-10-07T17:55:06.4101517Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>unFcrKMy</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAB8ZjQKaqpMh1c5/OFusxNb6g3OdMGCCe2eXpb7le4t4QAAAAAOgAAAAAIAACAAAADJMhWXtDrQv85Ozza1QF++CfCQBEg/6VkiNZK7igc/XjAAAABACNwrTowIRJAufk+MZzmIvKYsV/1GZPdzFkmMh99DNDFgzoz5KEzQUPWFSajidZBAAAAAuapo7JfEPKV9ln48qX2cFFGWD+bvY7DH8bWKs5uOoflemuLYcewOBB9GH4/xm0KGS2vwq50yOQUXUkh6pgbekQ==</LastKnownProtectedHashedPassword>
+      <Salt>8i0O4kkN</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAADI/eKSXvdHwKVDD5a+qqmJkuV37XC4s5vpyUqZ2AtMigAAAAAOgAAAAAIAACAAAACBZwhrzsmEfIBEurUhUs2VNk52ad8kzwodhRY6TjAE2DAAAAAykbrfxmC46KGcIxtyMlehcs1hK3jXeWNgsdCzCFqjMGKsNs5F4v9zlkftMOAqw3NAAAAACxnNPm5IeJU/uvwaRF9MknXbUWSEA8c3APIleM8ZW8p0a0zEiONGk9EAHGijbnqNU/BrUdWRX+5m9CMfSRFfSA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ImportBilling.dtsx</Name>
-      <LastWriteTime>2013-10-06T19:22:53.6999101Z</LastWriteTime>
+      <LastWriteTime>2013-12-01T17:06:08.3133854Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>ushcp8o/</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAADghx8k525iye2T3B/YLqrTIQUYv5zLtka/FA6n0MtL/AAAAAAOgAAAAAIAACAAAAAdhW3oVb6RmsR5tYlHDlaQjSzPUsIcHSutOem6fAPjxzAAAAAsDu1P1YHDIkaMLxVnEVuN2SAi8NgVWLcJSJ+0gGX92PwZRvkL2xjXjdyN3uWeEgJAAAAAh7CppQGdMoeNYg5tPK/k4pyrVGXyDTxwfwEkaotspiyOV8tijuJT5hOswGUmywT5PHAk4yPTKT4z/iChtkst9Q==</LastKnownProtectedHashedPassword>
+      <Salt>8YbrBuxG</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACgevjCtQyLFFHXfoarvqGT7OcEXJsDXQtzNSdA4y5XBQAAAAAOgAAAAAIAACAAAADBbUqPTNXiGjT+y7MUVGuaxyjRlekfn0SlVYAFKz3ZkjAAAAB78GyORqu2vyuxe77888VvVbm795OwKAS9pRWhmL4nSqjLKMZTlnlPjnj2/OkORWZAAAAAyed7INdcVYAqPFaVHdOqbM1/igFvCz1zrsBD7s7ylee+XwB489ktkdvNE5Ip56DIU8ccVNvEIF/H2WporKu+JA==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UnallocatedMails.dtsx</Name>
       <LastWriteTime>2013-10-07T17:55:16.5542309Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>S4X4d+66</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAADeoWp0EkxR0QgpcA1hNO0PDaS+mb1eE7kfZYKdLoh2kQAAAAAOgAAAAAIAACAAAACzqptnkOsskp5Rz1eU4wB7key3u9HkaCF4UfdT3waFsjAAAAC14fWSuMcWJYq59dtmzqSqMbT6Bu232d9H0rpkMmVb++ENojZsvaDEF0C6kn+xn4BAAAAAWfNlp9Rolzkf5eTfJYr/f9n36rFAM9ZcOoU/zA3agzkBprSUzsudh6qF9EZ9UEPbXxe3de0Akj7smyF81+1iLA==</LastKnownProtectedHashedPassword>
+      <Salt>rr9i6tkQ</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACxkGgs3WYwWmVh/FeHbTSbEe+nmWyRGL22e8pzI6DZ3AAAAAAOgAAAAAIAACAAAAAE3JDMOWGlVbVldmZi6sDfNVAo4n2gnshGPRXm/tnqkDAAAAChUy4SaYlgDtYwc4SVx0/mTSNdylwKR61ebZVrhJVUE0JpZhAfb6p+kevWEddgYKRAAAAAhch2F7Q4DOq8r13LVHurt67tQkcUZJ/Zebffkejq7d8iueodpH+1Vbsbe3TJiha5BpaU7g3efQGnXCx2AaUMVg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CachePreload.dtsx</Name>
       <LastWriteTime>2013-07-12T13:07:49Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>4SRHTlXp</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAAB+JkeJWoJ7L6oSSxSB1EkVzkHQNUB46skS/Z6s2Lc46gAAAAAOgAAAAAIAACAAAABVWgV21kCi4O5S4PFQ1OnFaMMj0w26OFTAcN+D66dIZjAAAABcaOXI6otwI8Ds+hWmvWSjHJU1ETRWn2vtiVTFwI4I+itz+0FlD8erOhlrASqhl/NAAAAAgge0OCqq31E0YOa8jSZGA2OZCTo9OvjNtRuk8QaUGwLezHRmmdLb3sEjHRK/3i0//UH/V2XrxG+7apWDqMOIuQ==</LastKnownProtectedHashedPassword>
+      <Salt>od5SNUDo</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACzWGE3sZ3n+e1evSb1Qb3KSfrK9/DnneRS2F9cpR+pTAAAAAAOgAAAAAIAACAAAAAOjPJvzCTrzJBDCECussMQyK3uhfcYaGMVXe5k4yUXkDAAAAB3DU4Eky4BvvFpsnt3Yd4FyFmX06yG1AI61dyS/hjOAEwNzj1a5nvo7Pdk8jP9OxBAAAAAwTi0uK3BxWWqZYTT+hc8It9vn3HCxLvFOEN3vFUJc8XpORPOdrtjASIUuHQ0zQPLK2U9LdSx3RW1jP/onNogwA==</LastKnownProtectedHashedPassword>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Invoices.dtsx</Name>
+      <LastWriteTime>2014-01-03T12:59:19.3457058Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>APDwiZVB</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1oiPwgOgK0qk8FXo7A0SgAAAAAACAAAAAAAQZgAAAAEAACAAAACRJYNi9Fn+zFOJDtDPXh6cQl0ffPyx4TwxJevk23Ef0AAAAAAOgAAAAAIAACAAAADOG0kgib6zTN8/4KEokgC5PCf0UxPxR5XuYD1lfmjMFDAAAABLxP66G7mNC3Pgh+BbhpmyBlcRKI4l2GAYN+/8s/XewRnPNyn8qpqaCQtuzgtS4jFAAAAAQqUh/VD+/uToiFNjOj3WEdjJw5HoWI+hhGQcyj/IHxxPN70kt7qkx4tSE+mg75Oggh3NSuGIRqku9icAJfgt0g==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>

@@ -7,7 +7,7 @@
   DTS:CreatorName="MGS2012\Administrator"
   DTS:DTSID="{F6E73FEC-6BE9-40B0-A667-7CE91AE50F78}"
   DTS:ExecutableType="SSIS.Package.3"
-  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LastModifiedProductVersion="11.0.3368.0"
   DTS:LocaleID="7177"
   DTS:ObjectName="CachePreload"
   DTS:PackageType="5"
@@ -384,8 +384,8 @@ FROM dbo.Client</property>
                   <connections>
                     <connection
                       refId="Package\SEQ_Caching\DFT_LoadConsultant\Cache Transform.Connections[CacheConnection]"
-                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
+                      connectionManagerRefId="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
                       description="The connection used to access the cache."
                       name="CacheConnection" />
                   </connections>
@@ -1766,8 +1766,8 @@ FROM dbo.TypeOfWork</property>
                   <connections>
                     <connection
                       refId="Package\SEQ_Doubleload\DFT_LoadConsultant\Cache Transform.Connections[CacheConnection]"
-                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
+                      connectionManagerRefId="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
                       description="The connection used to access the cache."
                       name="CacheConnection" />
                   </connections>
@@ -1974,8 +1974,8 @@ FROM dbo.TypeOfWork</property>
                   <connections>
                     <connection
                       refId="Package\SEQ_Doubleload\DFT_LoadConsultant 1\Cache Transform.Connections[CacheConnection]"
-                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[CachePerson]"
+                      connectionManagerID="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
+                      connectionManagerRefId="{C94DC2F6-DE65-40F0-B372-05B24C38A325}:invalid"
                       description="The connection used to access the cache."
                       name="CacheConnection" />
                   </connections>
