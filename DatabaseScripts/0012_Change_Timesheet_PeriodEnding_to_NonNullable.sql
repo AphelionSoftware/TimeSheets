@@ -1,3 +1,8 @@
+use Timesheets
+go
+
+
+
 CREATE TABLE #Timesheet
 (
 	[TimesheetID] [int] NOT NULL,

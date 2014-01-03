@@ -1,3 +1,6 @@
+use Timesheets
+go
+
 
 ALTER TABLE Project
 ADD 
