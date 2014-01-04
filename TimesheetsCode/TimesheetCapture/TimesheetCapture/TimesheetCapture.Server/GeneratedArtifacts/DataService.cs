@@ -522,16 +522,16 @@ namespace LightSwitchApplication
         partial void TimesheetDetailDate_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailDate_Executing(global::System.Nullable<global::System.DateTime> PeriodEndDate);
+        partial void TimesheetDetailDate_Executing();
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetailDate_PreprocessQuery(global::System.Nullable<global::System.DateTime> PeriodEndDate, ref global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query);
+        partial void TimesheetDetailDate_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailDate_Executed(global::System.Nullable<global::System.DateTime> PeriodEndDate, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate> result);
+        partial void TimesheetDetailDate_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailDate_ExecuteFailed(global::System.Nullable<global::System.DateTime> PeriodEndDate, global::System.Exception exception);
+        partial void TimesheetDetailDate_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ProjectSorted_CanExecute(ref bool result);
@@ -1591,20 +1591,20 @@ namespace LightSwitchApplication
             }
             private static void __TimesheetDetailDate_Executing(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                d.TimesheetDetailDate_Executing((global::System.Nullable<global::System.DateTime>)args[0]);
+                d.TimesheetDetailDate_Executing();
             }
             private static void __TimesheetDetailDate_Executed(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                d.TimesheetDetailDate_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate>)args[1]);
+                d.TimesheetDetailDate_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.DimDate>)args[0]);
             }
             private static void __TimesheetDetailDate_Failed(global::LightSwitchApplication.TimesheetsDataService d, object[] args, global::System.Exception ex)
             {
-                d.TimesheetDetailDate_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], ex);
+                d.TimesheetDetailDate_ExecuteFailed(ex);
             }
             private static global::System.Linq.IQueryable __TimesheetDetailDate_PreprocessQuery(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate>)args[1];
-                d.TimesheetDetailDate_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.DimDate>)args[0];
+                d.TimesheetDetailDate_PreprocessQuery(ref query);
                 return query;
             }
             

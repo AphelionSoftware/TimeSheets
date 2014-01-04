@@ -19,12 +19,13 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="WeekEnding" />
+                  Member="Active" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
-              <ParameterExpression
-                Parameter="PeriodEndDate" />
+              <ConstantExpression
+                Value="0"
+                ResultType=":Int32" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -35,9 +36,6 @@
             Member="DimDates" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="PeriodEndDate"
-        ParameterType=":Date?" />
       <QueryOperation.SortCriteria>
         <SortCriterion
           Direction="Descending">

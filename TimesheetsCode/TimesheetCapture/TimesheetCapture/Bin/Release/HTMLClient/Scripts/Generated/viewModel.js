@@ -161,7 +161,7 @@
             {
                 name: "TimesheetDetailDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
                 createQuery: function (PeriodEndDate) {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEndDate).filter("" + ((PeriodEndDate === undefined || PeriodEndDate === null) ? "false" : "(WeekEnding eq " + $toODataString(PeriodEndDate, "DateTime?") + ")") + "");
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEndDate);
                 }
             },
             { name: "WeekEnding", kind: "local", type: Date },

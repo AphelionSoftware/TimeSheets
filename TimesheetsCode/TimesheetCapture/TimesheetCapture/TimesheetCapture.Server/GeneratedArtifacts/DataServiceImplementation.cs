@@ -46,13 +46,13 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.DimDate> TimesheetDetailDate(global::System.Nullable<global::System.DateTime> PeriodEndDate)
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.DimDate> TimesheetDetailDate()
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.DimDate> query;
             query = global::System.Linq.Queryable.OrderByDescending(
                 global::System.Linq.Queryable.Where(
                     this.GetQuery<global::LightSwitchApplication.Implementation.DimDate>("DimDates"),
-                    (d) => (PeriodEndDate.HasValue && (d.WeekEnding == PeriodEndDate))),
+                    (d) => (d.Active == 0)),
                 (d) => d.c_Date);
             return query;
         }

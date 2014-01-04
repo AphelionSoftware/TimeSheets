@@ -56,6 +56,10 @@ namespace LightSwitchApplication
                             break;
                     }
 
+                    if (strUser == "")
+                    {
+                        strUser = Application.User.PersonId;
+                    }
 
                 }
                 return strUser;

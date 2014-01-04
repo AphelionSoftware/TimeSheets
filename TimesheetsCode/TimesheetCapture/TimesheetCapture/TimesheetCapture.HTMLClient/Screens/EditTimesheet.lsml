@@ -109,6 +109,9 @@
               </ContentItem>
             </ContentItem>
           </ContentItem>
+          <ContentItem
+            Name="Group"
+            Kind="Group" />
         </ContentItem>
         <ContentItem
           Name="Popups"

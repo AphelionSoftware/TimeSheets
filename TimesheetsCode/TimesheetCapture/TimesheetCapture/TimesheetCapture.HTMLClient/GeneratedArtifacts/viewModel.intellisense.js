@@ -144,6 +144,14 @@
             data: lightSwitchApplication.DimDate,
             value: lightSwitchApplication.DimDate
         },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EditTimesheet,
+            data: lightSwitchApplication.EditTimesheet,
+            value: lightSwitchApplication.EditTimesheet
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -187,7 +195,12 @@
         /// Called after the RowTemplate1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("RowTemplate1"); }]
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("RowTemplate1"); }],
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheet().findContentItem("Group"); }]
     });
 
     lightSwitchApplication.EditTimesheetDetails.prototype._$contentItems = {
