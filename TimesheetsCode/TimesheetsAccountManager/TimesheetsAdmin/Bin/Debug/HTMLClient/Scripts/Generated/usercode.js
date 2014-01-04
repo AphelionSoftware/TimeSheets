@@ -3,6 +3,7 @@ document.writeln("<script type=\"text/javascript\" src=\"UserCode/BillingDetail.
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/BillingStatus.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Client.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/ClientRole.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"UserCode/Invoice.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Person.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Project.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/RoleType.lsml.js\"></script>");

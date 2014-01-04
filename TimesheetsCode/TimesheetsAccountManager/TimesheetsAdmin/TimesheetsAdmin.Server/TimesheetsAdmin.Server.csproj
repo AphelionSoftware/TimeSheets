@@ -209,6 +209,9 @@
     <Compile Include="DataSources\Timesheets_Data\Client.lsml.cs">
       <DependentUpon>Clients.lsml</DependentUpon>
     </Compile>
+    <Compile Include="DataSources\Timesheets_Data\Invoice.lsml.cs">
+      <DependentUpon>Invoices.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\Timesheets_Data\TimesheetDetail.lsml.cs">
       <DependentUpon>TimesheetDetails.lsml</DependentUpon>
     </Compile>

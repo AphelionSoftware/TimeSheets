@@ -14,9 +14,13 @@
       Name="SaveChanges" />
   </EntityContainer>
   <DataService
-    Name="Timesheets20130908DataDataService"
+    Name="TimesheetsDataDataService"
     DataProvider="EntityFrameworkDataProvider"
     EntityContainer="TimesheetsData">
+    <DataService.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="DataProviderName"
@@ -34,9 +38,5 @@
         Name="ProviderManifestToken"
         Value="2008" />
     </DataService.ConnectionProperties>
-    <DataService.Attributes>
-      <Partial
-        IsPrimary="True" />
-    </DataService.Attributes>
   </DataService>
 </ServiceApplication>

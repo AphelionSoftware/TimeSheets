@@ -2188,7 +2188,7 @@
       ]
     },
     {
-      "homeScreen": { "__id": "HomeScreen" },
+      "homeScreen": { "__id": "UnallocatedTimesheets" },
       "id": "!module",
       "name": "LightSwitchApplication.TimesheetsAdmin",
       "logo": "/Content/Images/logo.png",
@@ -2197,7 +2197,7 @@
       "shell": { "__id": ":HTMLShell" },
       "theme": { "__id": ":HTMLTheme" },
       ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
-      ":@HomeScreen": { "value": { "__id": "HomeScreen" } },
+      ":@HomeScreen": { "value": { "__id": "UnallocatedTimesheets" } },
       ":@Partial": { "isPrimary": true },
       "globalItems":
       [
@@ -5402,6 +5402,82 @@
               ]
             },
             {
+              "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]",
+              "name": "TimesheetDetailsUnallocated",
+              "elementType": { "__id": "TimesheetDetail" },
+              "query": { "__id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]" },
+              "returnType": { "__id": "TimesheetDetail*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[Client_Project]",
+                  "name": "Client_Project",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[ProjectName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
+                    },
+                    {
+                      "member": { "__id": "DimDate/Properties[DateID]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "Timesheets_Data/Members[Timesheets_Single]",
               "name": "Timesheets_Single",
               "elementType": { "__id": "Timesheet" },
@@ -5765,82 +5841,6 @@
                     },
                     {
                       "member": { "__id": "DimDate/Properties[DateID]" }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]",
-              "name": "TimesheetDetailsUnallocated",
-              "elementType": { "__id": "TimesheetDetail" },
-              "query": { "__id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]" },
-              "returnType": { "__id": "TimesheetDetail*" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[PersonName]",
-                  "name": "PersonName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[Client_Project]",
-                  "name": "Client_Project",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                }
-              ],
-              "sortCriteria":
-              [
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                    },
-                    {
-                      "member": { "__id": "Project/Properties[Client]" }
-                    },
-                    {
-                      "member": { "__id": "Client/Properties[ClientName]" }
-                    }
-                  ]
-                },
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                    },
-                    {
-                      "member": { "__id": "Project/Properties[ProjectName]" }
-                    }
-                  ]
-                },
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
-                    },
-                    {
-                      "member": { "__id": "DimDate/Properties[DateID]" }
-                    }
-                  ]
-                },
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Person]" }
-                    },
-                    {
-                      "member": { "__id": "Person/Properties[PersonName]" }
                     }
                   ]
                 }
@@ -15263,22 +15263,6 @@
                         ]
                       },
                       {
-                        "displayName": "Edit Unallocated Timesheets OLD",
-                        "name": "EditUnallocatedTimesheetsOLD",
-                        "kind": "Command",
-                        "view": { "__id": ":Button" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showEditUnallocatedTimesheets]" }
-                            }
-                          }
-                        ]
-                      },
-                      {
                         "displayName": "Show Unallocated Timesheets",
                         "name": "ShowUnallocatedTimesheets",
                         "kind": "Command",
@@ -15735,6 +15719,44 @@
           "id": "!module/Methods[showUnallocatedTimesheets]",
           "name": "showUnallocatedTimesheets",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "UnallocatedTimesheets" } }
+        }
+      ],
+      "navigationItems":
+      [
+        {
+          "id": "!module/NavigationItems[link]",
+          "name": "link",
+          "method": { "__id": "!module/Methods[showHomeScreen]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showBrowseBillingDetails]" }
+        },
+        {
+          "id": "!module/NavigationItems[link2]",
+          "name": "link2",
+          "method": { "__id": "!module/Methods[showBrowseClients]" }
+        },
+        {
+          "id": "!module/NavigationItems[link3]",
+          "name": "link3",
+          "method": { "__id": "!module/Methods[showBrowseInvoices]" }
+        },
+        {
+          "id": "!module/NavigationItems[link4]",
+          "name": "link4",
+          "method": { "__id": "!module/Methods[showBrowseTimesheetDetails]" }
+        },
+        {
+          "id": "!module/NavigationItems[link5]",
+          "name": "link5",
+          "method": { "__id": "!module/Methods[showBrowseTimesheets]" }
+        },
+        {
+          "id": "!module/NavigationItems[link6]",
+          "name": "link6",
+          "method": { "__id": "!module/Methods[showUnallocatedTimesheets]" }
         }
       ]
     }

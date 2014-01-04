@@ -103,6 +103,7 @@
     <LightSwitchModel Include="Screens\AddEditInvoiceLine.lsml" />
     <LightSwitchModel Include="Screens\BrowseAllInvoices.lsml" />
     <LightSwitchModel Include="Screens\BrowseClientsSorted.lsml" />
+    <LightSwitchModel Include="Screens\BrowseCommissionsSorted.lsml" />
     <LightSwitchModel Include="Screens\BrowseCommissionsToPay.lsml" />
     <LightSwitchModel Include="Screens\BrowseInvoicesInDraft.lsml" />
     <LightSwitchModel Include="Screens\BrowseIssuedButNotPaid.lsml" />

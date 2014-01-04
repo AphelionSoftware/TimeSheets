@@ -9,7 +9,7 @@
     <ModuleNamespace
       Namespace="LightSwitchApplication" />
     <HomeScreen
-      Value="HomeScreen" />
+      Value="UnallocatedTimesheets" />
     <Partial
       IsPrimary="True" />
   </Application.Attributes>
@@ -36,4 +36,27 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Application.NavigationItems>
+    <ApplicationNavigationMethodLink
+      Name="link"
+      Method="!module/Methods[showHomeScreen]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showBrowseBillingDetails]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseClients]" />
+    <ApplicationNavigationMethodLink
+      Name="link3"
+      Method="!module/Methods[showBrowseInvoices]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showBrowseTimesheetDetails]" />
+    <ApplicationNavigationMethodLink
+      Name="link5"
+      Method="!module/Methods[showBrowseTimesheets]" />
+    <ApplicationNavigationMethodLink
+      Name="link6"
+      Method="!module/Methods[showUnallocatedTimesheets]" />
+  </Application.NavigationItems>
 </Application>

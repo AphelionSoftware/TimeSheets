@@ -2688,12 +2688,6 @@
             _$parentName: "Timesheets",
             screen: lightSwitchApplication.HomeScreen
         },
-        EditUnallocatedTimesheetsOLD: {
-            _$class: msls.ContentItem,
-            _$name: "EditUnallocatedTimesheetsOLD",
-            _$parentName: "Timesheets",
-            screen: lightSwitchApplication.HomeScreen
-        },
         ShowUnallocatedTimesheets: {
             _$class: msls.ContentItem,
             _$name: "ShowUnallocatedTimesheets",
@@ -2739,11 +2733,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ShowBrowseBillingDetails_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowBrowseBillingDetails"); }],
-        /// <field>
-        /// Called after the EditUnallocatedTimesheetsOLD content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        EditUnallocatedTimesheetsOLD_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("EditUnallocatedTimesheetsOLD"); }],
         /// <field>
         /// Called after the ShowUnallocatedTimesheets content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

@@ -8,7 +8,7 @@
     Name="Homescreen">
     <Screen.Attributes>
       <DisplayName
-        Value="Customer Invoices v 19" />
+        Value="Customer Invoices v 1.0.20" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -123,6 +123,25 @@
                     <ChainExpression>
                       <CallExpression
                         Target="!module/Methods[showBrowseCommissionsToPay]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              Name="ShowBrowseCommissionsSorted"
+              Kind="Command">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Show All Commissions" />
+              </ContentItem.Attributes>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showBrowseCommissionsSorted]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>

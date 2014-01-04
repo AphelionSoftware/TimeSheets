@@ -298,6 +298,9 @@
     <LightSwitchModel Include="DataSources\TimesheetsData\CommissionsToPay.lsml">
       <DependentUpon>Commissions.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\CommissionsSorted.lsml">
+      <DependentUpon>Commissions.lsml</DependentUpon>
+    </LightSwitchModel>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

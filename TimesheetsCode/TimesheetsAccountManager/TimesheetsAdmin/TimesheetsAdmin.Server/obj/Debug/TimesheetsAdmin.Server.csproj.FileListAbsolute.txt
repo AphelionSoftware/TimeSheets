@@ -205,3 +205,4 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsA
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.DomainServices.Server.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\Application.Server.pdb
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.Server\obj\Debug\TimesheetsAdmin.Server.csprojResolveAssemblyReference.cache

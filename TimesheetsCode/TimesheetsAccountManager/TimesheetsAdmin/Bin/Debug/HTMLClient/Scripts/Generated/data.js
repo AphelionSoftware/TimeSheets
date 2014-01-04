@@ -2063,6 +2063,16 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "TimesheetDetailsUnallocated", value: function (PersonName, Client_Project) {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailsUnallocated()",
+                        {
+                            PersonName: $toODataString(PersonName, "String?"),
+                            Client_Project: $toODataString(Client_Project, "String?")
+                        });
+                }
+            },
+            {
                 name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
                     return new $DataServiceQuery({ _entitySet: this.Timesheets },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
@@ -2101,16 +2111,6 @@ window.myapp = msls.application;
                         {
                             ClientName: $toODataString(ClientName, "String?"),
                             PersonName: $toODataString(PersonName, "String?")
-                        });
-                }
-            },
-            {
-                name: "TimesheetDetailsUnallocated", value: function (PersonName, Client_Project) {
-                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailsUnallocated()",
-                        {
-                            PersonName: $toODataString(PersonName, "String?"),
-                            Client_Project: $toODataString(Client_Project, "String?")
                         });
                 }
             }

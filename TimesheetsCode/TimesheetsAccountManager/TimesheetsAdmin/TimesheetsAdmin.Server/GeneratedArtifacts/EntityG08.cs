@@ -363,6 +363,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public decimal InvoiceTotal
+        {
+            get
+            {
+                return global::LightSwitchApplication.Invoice.DetailsClass.GetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceTotal);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceTotal_Compute(ref decimal result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceTotal_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
@@ -724,6 +742,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceNumber) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal> InvoiceTotal
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoiceTotal) as global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal>;
                     }
                 }
                 
@@ -1263,6 +1289,28 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal>.Entry
+                    InvoiceTotal = new global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal>.Entry(
+                        "InvoiceTotal",
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceTotal_Stub,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceTotal_Validate,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoiceTotal_ComputeValue);
+                private static void _InvoiceTotal_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Invoice.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Invoice.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceTotal, sf);
+                }
+                private static void _InvoiceTotal_Validate(global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceTotal_Validate(r);
+                }
+                private static decimal _InvoiceTotal_ComputeValue(global::LightSwitchApplication.Invoice e)
+                {
+                    decimal value = default(decimal);
+                    e.InvoiceTotal_Compute(ref value);
+                    return value;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
                     ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
@@ -1648,6 +1696,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data _InvoiceNumber;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityComputedProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, decimal>.Data _InvoiceTotal;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;

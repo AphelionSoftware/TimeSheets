@@ -118,6 +118,23 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsUnallocated(string PersonName, string Client_Project)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.ThenBy(
+                    global::System.Linq.Queryable.ThenBy(
+                        global::System.Linq.Queryable.OrderBy(
+                            global::System.Linq.Queryable.Where(
+                                this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails"),
+                                (t) => ((((t.BillingStatus.BillingStatusID < 0) && ((PersonName == null) || t.Person.PersonName.Contains(PersonName))) && (((Client_Project == null) || t.Project.ProjectName.Contains(Client_Project)) || ((Client_Project == null) || t.Project.Client.ClientName.Contains(Client_Project)))) && (t.ActiveType.ID == 1))),
+                            (t) => t.Project.Client.ClientName),
+                        (t) => t.Project.ProjectName),
+                    (t) => t.DimDate.DateID),
+                (t) => t.Person.PersonName);
+            return query;
+        }
+    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> TimesheetsByDate(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
@@ -139,23 +156,6 @@ namespace LightSwitchApplication.Implementation
                         (u) => (((ClientName == null) || u.ClientName.Contains(ClientName)) && ((PersonName == null) || u.TimesheetDetail.Person.PersonName.Contains(PersonName)))),
                     (u) => u.TimesheetDetail.Project.ProjectName),
                 (u) => u.TimesheetDetail.DimDate.DateID);
-            return query;
-        }
-    
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsUnallocated(string PersonName, string Client_Project)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
-            query = global::System.Linq.Queryable.ThenBy(
-                global::System.Linq.Queryable.ThenBy(
-                    global::System.Linq.Queryable.ThenBy(
-                        global::System.Linq.Queryable.OrderBy(
-                            global::System.Linq.Queryable.Where(
-                                this.GetQuery<global::LightSwitchApplication.Implementation.TimesheetDetail>("TimesheetDetails"),
-                                (t) => ((((t.BillingStatus.BillingStatusID < 0) && ((PersonName == null) || t.Person.PersonName.Contains(PersonName))) && (((Client_Project == null) || t.Project.ProjectName.Contains(Client_Project)) || ((Client_Project == null) || t.Project.Client.ClientName.Contains(Client_Project)))) && (t.ActiveType.ID == 1))),
-                            (t) => t.Project.Client.ClientName),
-                        (t) => t.Project.ProjectName),
-                    (t) => t.DimDate.DateID),
-                (t) => t.Person.PersonName);
             return query;
         }
     

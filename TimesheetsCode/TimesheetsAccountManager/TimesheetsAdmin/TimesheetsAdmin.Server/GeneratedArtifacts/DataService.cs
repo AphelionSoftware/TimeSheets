@@ -795,6 +795,21 @@ namespace LightSwitchApplication
         partial void ProjectsSorted_ExecuteFailed(string ADUsername, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailsUnallocated_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailsUnallocated_Executing(string PersonName, string Client_Project);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetDetailsUnallocated_PreprocessQuery(string PersonName, string Client_Project, ref global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailsUnallocated_Executed(string PersonName, string Client_Project, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TimesheetDetailsUnallocated_ExecuteFailed(string PersonName, string Client_Project, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TimesheetsByDate_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -823,21 +838,6 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void UnallocatedTimesheetsSorted_ExecuteFailed(string ClientName, string PersonName, global::System.Exception exception);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetailsUnallocated_CanExecute(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailsUnallocated_Executing(string PersonName, string Client_Project);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetDetailsUnallocated_PreprocessQuery(string PersonName, string Client_Project, ref global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailsUnallocated_Executed(string PersonName, string Client_Project, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void TimesheetDetailsUnallocated_ExecuteFailed(string PersonName, string Client_Project, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2452,6 +2452,39 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
+                __TimesheetDetailsUnallocatedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
+                    "TimesheetDetailsUnallocated",
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_CanExecute,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Executing,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Executed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Failed,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_PreprocessQuery);
+            private static bool __TimesheetDetailsUnallocated_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
+            {
+                d.TimesheetDetailsUnallocated_CanExecute(ref r);
+                return r;
+            }
+            private static void __TimesheetDetailsUnallocated_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailsUnallocated_Executing((string)args[0], (string)args[1]);
+            }
+            private static void __TimesheetDetailsUnallocated_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                d.TimesheetDetailsUnallocated_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail>)args[2]);
+            }
+            private static void __TimesheetDetailsUnallocated_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
+            {
+                d.TimesheetDetailsUnallocated_ExecuteFailed((string)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __TimesheetDetailsUnallocated_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail>)args[2];
+                d.TimesheetDetailsUnallocated_PreprocessQuery((string)args[0], (string)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
                 __TimesheetsByDateEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
                     "TimesheetsByDate",
@@ -2514,39 +2547,6 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.UnallocatedTimesheet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.UnallocatedTimesheet>)args[2];
                 d.UnallocatedTimesheetsSorted_PreprocessQuery((string)args[0], (string)args[1], ref query);
-                return query;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>
-                __TimesheetDetailsUnallocatedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetDetail>(
-                    "TimesheetDetailsUnallocated",
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_CanExecute,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Executing,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Executed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_Failed,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetDetailsUnallocated_PreprocessQuery);
-            private static bool __TimesheetDetailsUnallocated_CanExecute(global::LightSwitchApplication.Timesheets_DataService d, bool r)
-            {
-                d.TimesheetDetailsUnallocated_CanExecute(ref r);
-                return r;
-            }
-            private static void __TimesheetDetailsUnallocated_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetDetailsUnallocated_Executing((string)args[0], (string)args[1]);
-            }
-            private static void __TimesheetDetailsUnallocated_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                d.TimesheetDetailsUnallocated_Executed((string)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail>)args[2]);
-            }
-            private static void __TimesheetDetailsUnallocated_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
-            {
-                d.TimesheetDetailsUnallocated_ExecuteFailed((string)args[0], (string)args[1], ex);
-            }
-            private static global::System.Linq.IQueryable __TimesheetDetailsUnallocated_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
-            {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TimesheetDetail>)args[2];
-                d.TimesheetDetailsUnallocated_PreprocessQuery((string)args[0], (string)args[1], ref query);
                 return query;
             }
     

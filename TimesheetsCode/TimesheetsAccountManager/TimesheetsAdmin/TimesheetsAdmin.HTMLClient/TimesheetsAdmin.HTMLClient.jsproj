@@ -116,6 +116,10 @@
     <Content Include="UserCode\BillingStatus.lsml.js" />
     <Content Include="UserCode\Client.lsml.js" />
     <Content Include="UserCode\ClientRole.lsml.js" />
+    <Content Include="UserCode\Invoice.lsml.js">
+      <DependentUpon>
+      </DependentUpon>
+    </Content>
     <Content Include="UserCode\Person.lsml.js" />
     <Content Include="UserCode\Project.lsml.js" />
     <Content Include="UserCode\RoleType.lsml.js" />

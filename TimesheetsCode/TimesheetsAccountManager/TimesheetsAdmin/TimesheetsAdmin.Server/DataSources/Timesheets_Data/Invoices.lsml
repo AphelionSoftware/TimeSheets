@@ -171,6 +171,16 @@
         Association="FK_Invoice_DimDate2"
         FromEnd="Invoice"
         ToEnd="DimDate" />
+      <EntityProperty
+        Name="InvoiceTotal"
+        IsReadOnly="True"
+        PropertyType="Microsoft.LightSwitch.Extensions:Money">
+        <EntityProperty.Attributes>
+          <Computed />
+          <NotSearchable />
+          <NotSortable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association

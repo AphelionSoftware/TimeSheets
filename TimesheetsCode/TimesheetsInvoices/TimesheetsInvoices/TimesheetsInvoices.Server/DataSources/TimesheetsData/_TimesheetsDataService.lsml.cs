@@ -99,7 +99,7 @@ namespace LightSwitchApplication
         partial void FilteredDates_PreprocessQuery(ref IQueryable<DimDate> query)
         {
             DateTime endDate = DateTime.Now.AddMonths(2).AddDays(-1);
-            DateTime startDate = new DateTime(  DateTime.Now.Year, 1, 1);
+            DateTime startDate = new DateTime(  DateTime.Now.Year, 1, 1).AddMonths(-4);
             query = (from dimDates in query
                      where dimDates.c_Date >= startDate
                      where dimDates.c_Date <= endDate

@@ -242,7 +242,7 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="Timesheets20130908DataDataService">
+    Name="TimesheetsDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>

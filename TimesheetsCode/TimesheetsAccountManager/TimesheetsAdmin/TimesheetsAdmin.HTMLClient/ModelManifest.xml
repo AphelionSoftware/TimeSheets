@@ -2,7 +2,7 @@
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Properties\Timesheets_Data\BillingDetails.lsml" Checksum="09D74CED209F76EFFB3BEB2431DFB2ADAF2D544C2D534A025A7C7CF38DC6F8F1" />
-    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Properties\Client.lsml" Checksum="809EA8DEA903A77DF03782A260E571498A3C0701B6F2B747B6CAE931A7706465" />
+    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Properties\Client.lsml" Checksum="A09A6B8975E0E9781A013070960003EC4E64474381697CC101FCC2F118CC8E4E" />
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Properties\Proxies.lsml" Checksum="1905E4E0A9F34F640F61E136355B82A691BC7C3FC1F2283474BEF85016F4BD2B" />
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\AddEditBillingDetail.lsml" Checksum="DD4F27BD5133666913DBB27A756311B93F5FD868618B415BA761C9D2EF001656" />
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\AddEditClient.lsml" Checksum="55CB617C42F5550E31C69472F1743E164DD47263E6EF89ADA06A1F6D1D3AA250" />
@@ -17,7 +17,7 @@
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\BrowseTimesheetDetails.lsml" Checksum="53FF143BEA50D170563D9D8D4802C6D47C529FCEE4B938516566AE7E583E9E70" />
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\BrowseTimesheets.lsml" Checksum="04487402A08127202EC0EADADC219E65B9952E28D423A3629E4567ED42B293CF" />
     <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\EditUnallocatedTimesheets.lsml" Checksum="446B62D1D69A69CAA8F1BD4D1E3DC814E8EC1EB6A641EBD8F4FDFAD5419CC2BA" />
-    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\HomeScreen.lsml" Checksum="C078E033A564350F72A17A37CA1C1F9ED44C51463F86A5229548C5D91438739A" />
-    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\AddEditTimesheet1.lsml" Checksum="BE9858E058B263EC724927A137BBD429D83BCE7844755DBE1EA46FF65198C8AD" />
+    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\HomeScreen.lsml" Checksum="42D2E5E041D8EA58B097B3691B4910D3298A5E85BB5E293E01F522B8B2C8AD15" />
+    <Document FullPath="D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAccountManager\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\Screens\UnallocatedTimesheets.lsml" Checksum="BD00D6CD749AD1A76CCAA73B7E48A80AFC7D10FC31654C9201170FACE5450C28" />
   </Documents>
 </ModelDocumentManifest>
