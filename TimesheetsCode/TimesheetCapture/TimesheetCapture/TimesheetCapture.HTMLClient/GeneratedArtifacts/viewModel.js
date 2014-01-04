@@ -74,9 +74,6 @@
         /// <field name="TimesheetID" type="Number">
         /// Gets or sets the timesheetID for this screen.
         /// </field>
-        /// <field name="TimesheetDetailDate" type="msls.VisualCollection" elementType="msls.application.DimDate">
-        /// Gets the timesheetDetailDate for this screen.
-        /// </field>
         /// <field name="WeekEnding" type="Date">
         /// Gets or sets the weekEnding for this screen.
         /// </field>
@@ -85,6 +82,9 @@
         /// </field>
         /// <field name="Instructions" type="String">
         /// Gets or sets the instructions for this screen.
+        /// </field>
+        /// <field name="TimesheetDetailDate" type="msls.VisualCollection" elementType="msls.application.DimDate">
+        /// Gets the timesheetDetailDate for this screen.
         /// </field>
         /// <field name="details" type="msls.application.EditTimesheetDetails.Details">
         /// Gets the details for this screen.
@@ -158,12 +158,6 @@
                 }
             },
             { name: "TimesheetID", kind: "local", type: Number },
-            {
-                name: "TimesheetDetailDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate();
-                }
-            },
             { name: "WeekEnding", kind: "local", type: Date },
             {
                 name: "ProjectSorted", kind: "collection", elementType: lightSwitchApplication.Project,
@@ -171,7 +165,13 @@
                     return this.dataWorkspace.TimesheetsData.ProjectSorted();
                 }
             },
-            { name: "Instructions", kind: "local", type: String }
+            { name: "Instructions", kind: "local", type: String },
+            {
+                name: "TimesheetDetailDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
+                createQuery: function (PeriodEnding) {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEnding);
+                }
+            }
         ], [
             { name: "AddNew" },
             { name: "DeleteSelected" },

@@ -445,9 +445,12 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.DimDate> TimesheetDetailDate()
+        /// <param name="PeriodEnding">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.DimDate> TimesheetDetailDate(global::System.Nullable<global::System.DateTime> PeriodEnding)
         {
-            return this.Details.Methods.TimesheetDetailDate.CreateInvocation().Execute();
+            return this.Details.Methods.TimesheetDetailDate.CreateInvocation(PeriodEnding).Execute();
         }
         
         /// <summary>

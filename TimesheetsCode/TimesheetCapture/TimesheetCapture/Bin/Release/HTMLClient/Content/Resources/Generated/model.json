@@ -2145,7 +2145,8 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
           "name": "EmailAddress",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
         },
         {
           "__isSemanticType": 1,
@@ -2163,13 +2164,15 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
           "name": "PhoneNumber",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
         },
         {
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:Percent",
           "name": "Percent",
           "underlyingType": { "__id": ":Decimal" },
+          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
           ":@DecimalConstraint":
           {
             "scale": 9
@@ -2179,7 +2182,8 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:WebAddress",
           "name": "WebAddress",
-          "underlyingType": { "__id": ":String" }
+          "underlyingType": { "__id": ":String" },
+          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
         }
       ]
     },
@@ -3768,15 +3772,15 @@
               "parameters":
               [
                 {
-                  "id": "TimesheetsData/Members[TimesheetDetailDate]/Parameters[PeriodEndDate]",
-                  "name": "PeriodEndDate",
+                  "id": "TimesheetsData/Members[TimesheetDetailDate]/Parameters[PeriodEnding]",
+                  "name": "PeriodEnding",
                   "parameterType": { "__id": ":Date?" }
                 }
               ],
               "sortCriteria":
               [
                 {
-                  "member": { "__id": "DimDate/Properties[c_Date]" }
+                  "member": { "__id": "DimDate/Properties[DateID]" }
                 }
               ]
             },
@@ -7952,43 +7956,6 @@
               ":@IsParameter": { }
             },
             {
-              "id": "EditTimesheetDetails/Properties[TimesheetDetailDate]",
-              "name": "TimesheetDetailDate",
-              "pageSize": 45,
-              "elementType": { "__id": "DimDate" },
-              "propertyType": { "__id": "CollectionView$DimDate" },
-              "query":
-              {
-                "id": "EditTimesheetDetails/Properties[TimesheetDetailDate]/Query",
-                "name": "TimesheetDetailDateQuery",
-                "elementType": { "__id": "DimDate" },
-                "returnType": { "__id": "DimDate*" },
-                "source":
-                {
-                  "member": { "__id": "TimesheetsData/Members[TimesheetDetailDate]" }
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailDate]/Query" },
-                "arguments":
-                [
-                  {
-                    "parameter": { "__id": "TimesheetsData/Members[TimesheetDetailDate]/Parameters[PeriodEndDate]" },
-                    "value":
-                    {
-                      "links":
-                      [
-                        {
-                          "member": { "__id": "EditTimesheetDetails/Properties[WeekEnding]" }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
               "id": "EditTimesheetDetails/Properties[WeekEnding]",
               "name": "WeekEnding",
               "elementType": { "__id": ":Date" },
@@ -8025,6 +7992,43 @@
               "propertyType": { "__id": ":String" },
               ":@Required": { },
               ":@IsParameter": { }
+            },
+            {
+              "id": "EditTimesheetDetails/Properties[TimesheetDetailDate]",
+              "name": "TimesheetDetailDate",
+              "pageSize": 45,
+              "elementType": { "__id": "DimDate" },
+              "propertyType": { "__id": "CollectionView$DimDate" },
+              "query":
+              {
+                "id": "EditTimesheetDetails/Properties[TimesheetDetailDate]/Query",
+                "name": "TimesheetDetailDateQuery",
+                "elementType": { "__id": "DimDate" },
+                "returnType": { "__id": "DimDate*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[TimesheetDetailDate]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "EditTimesheetDetails/Properties[TimesheetDetailDate]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "TimesheetsData/Members[TimesheetDetailDate]/Parameters[PeriodEnding]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "EditTimesheetDetails/Properties[WeekEnding]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         },

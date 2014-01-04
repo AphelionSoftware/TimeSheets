@@ -1253,10 +1253,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "TimesheetDetailDate", value: function () {
+                name: "TimesheetDetailDate", value: function (PeriodEnding) {
                     return new $DataServiceQuery({ _entitySet: this.DimDates },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetDetailDate()",
                         {
+                            PeriodEnding: $toODataString(PeriodEnding, "DateTime?")
                         });
                 }
             },
