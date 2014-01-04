@@ -151,9 +151,6 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Ti
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.PollingDuplex.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Spatial.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Wijmo.LightSwitch.Common.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Wijmo.LightSwitch.Server.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.WindowsAzure.ServiceRuntime.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.SharePoint.Client.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.SharePoint.Client.Runtime.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.IdentityModel.Tokens.Jwt.xml
@@ -163,3 +160,4 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Ti
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Hosting.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Hosting.OData.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Server.xml
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\TimesheetCapture.Server.csprojResolveAssemblyReference.cache

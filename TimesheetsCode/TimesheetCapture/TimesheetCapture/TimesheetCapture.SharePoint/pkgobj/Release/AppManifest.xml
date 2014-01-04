@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Published:2419CB28-FD8D-4120-A595-38D7FBABF263-->
 <!--Created:0f94c101-eca2-421b-9ee1-671ad586290e-->
-<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetCapture" ProductID="{598220a5-6540-440a-b2e2-638f5cbddc7d}" Version="2.2.29.0" SharePointMinVersion="15.0.0.0">
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="TimesheetCapture" ProductID="{598220a5-6540-440a-b2e2-638f5cbddc7d}" Version="2.2.30.0" SharePointMinVersion="15.0.0.0">
   <Properties>
     <Title>TimesheetCapture</Title>
-    <StartPage>https://localhost:44301/SharePointLaunch.aspx?{StandardTokens}</StartPage>
+    <StartPage>~remoteAppUrl/SharePointLaunch.aspx?{StandardTokens}</StartPage>
   </Properties>
   <AppPrincipal>
-    <AutoDeployedWebApplication>
-      <DebugInfo ClientSecret="hUXidjzXGGSF6/JM10SCI3OD4BIp778lV+ge3mVTLcs=" AppUrl="https://localhost:44301/" />
-    </AutoDeployedWebApplication>
+    <AutoDeployedWebApplication></AutoDeployedWebApplication>
   </AppPrincipal>
   <AppPrerequisites>
     <AppPrerequisite Type="AutoProvisioning" ID="RemoteWebHost" />

@@ -52,12 +52,13 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>
-    </RequireSecureConnection>
+    <RequireSecureConnection>True</RequireSecureConnection>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PublishLocation>Publish</PublishLocation>
     <DebugSharePointAuthenticationType>AccessControlService</DebugSharePointAuthenticationType>
     <PendingProjectUpgrade>false</PendingProjectUpgrade>
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
+    <LightSwitchPublishVersion>v2.2</LightSwitchPublishVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>Bin\Debug</OutputPath>
@@ -150,25 +151,6 @@
       <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
     </LightSwitchExtension>
-    <LightSwitchExtension Include="Extensions\Wijmo.LightSwitch.lspkg">
-      <Server>WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.SERVER</Server>
-      <ExtensionId>Wijmo.LightSwitch</ExtensionId>
-    </LightSwitchExtension>
-  </ItemGroup>
-  <ItemGroup>
-    <PublishParameter Include="TimesheetsData">
-      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
-    </PublishParameter>
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Install>True</Install>
-      <Name>.NETFramework,Version=v4.0</Name>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Install>True</Install>
-      <Name>Microsoft.Windows.Installer.4.5</Name>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <DiagnosticsConfiguration Include="diagnostics.wadcfg">
@@ -194,6 +176,21 @@
       <Private>True</Private>
       <Type>SharePoint</Type>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishParameter Include="TimesheetsData">
+      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
+    </PublishParameter>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Install>True</Install>
+      <Name>.NETFramework,Version=v4.0</Name>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Install>True</Install>
+      <Name>Microsoft.Windows.Installer.4.5</Name>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
 </Project>

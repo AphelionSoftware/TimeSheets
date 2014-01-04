@@ -26,20 +26,20 @@
         created: [lightSwitchApplication.BillingStatu]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ClientRole, {
-        /// <field>
-        /// Called when a new clientRole is created.
-        /// <br/>created(msls.application.ClientRole entity)
-        /// </field>
-        created: [lightSwitchApplication.ClientRole]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.Client, {
         /// <field>
         /// Called when a new client is created.
         /// <br/>created(msls.application.Client entity)
         /// </field>
         created: [lightSwitchApplication.Client]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ClientRole, {
+        /// <field>
+        /// Called when a new clientRole is created.
+        /// <br/>created(msls.application.ClientRole entity)
+        /// </field>
+        created: [lightSwitchApplication.ClientRole]
     });
 
     msls._addEntryPoints(lightSwitchApplication.DimDate, {
@@ -74,20 +74,20 @@
         created: [lightSwitchApplication.Project]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.TimesheetDetail, {
-        /// <field>
-        /// Called when a new timesheetDetail is created.
-        /// <br/>created(msls.application.TimesheetDetail entity)
-        /// </field>
-        created: [lightSwitchApplication.TimesheetDetail]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.Timesheet, {
         /// <field>
         /// Called when a new timesheet is created.
         /// <br/>created(msls.application.Timesheet entity)
         /// </field>
         created: [lightSwitchApplication.Timesheet]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.TimesheetDetail, {
+        /// <field>
+        /// Called when a new timesheetDetail is created.
+        /// <br/>created(msls.application.TimesheetDetail entity)
+        /// </field>
+        created: [lightSwitchApplication.TimesheetDetail]
     });
 
     msls._addEntryPoints(lightSwitchApplication.TypeOfWork, {
