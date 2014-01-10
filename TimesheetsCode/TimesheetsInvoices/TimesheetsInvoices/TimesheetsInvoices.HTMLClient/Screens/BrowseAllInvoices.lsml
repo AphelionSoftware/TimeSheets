@@ -439,6 +439,19 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
             </ContentItem>
+            <ContentItem
+              Name="InvoicePurchaseOrderNo"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="BrowseAllInvoices/Properties[InvoicePurchaseOrderNo]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
           </ContentItem>
         </ContentItem>
         <ContentItem.PropertySources>
@@ -524,6 +537,13 @@
                     Member="BrowseAllInvoices/Properties[InvoiceAM]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="InvoicePurchaseOrderNo">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="BrowseAllInvoices/Properties[InvoicePurchaseOrderNo]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -536,6 +556,9 @@
         PropertyType=":String?" />
       <ScreenProperty
         Name="InvoiceAM"
+        PropertyType=":String?" />
+      <ScreenProperty
+        Name="InvoicePurchaseOrderNo"
         PropertyType=":String?" />
     </Screen.Properties>
   </Screen>

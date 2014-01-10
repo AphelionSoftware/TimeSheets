@@ -14,6 +14,7 @@
     [InvoiceEmailAddress] VARCHAR (255)  NOT NULL,
     [InvoiceStatusID]     INT            NOT NULL,
     [InvoiceNumber]       VARCHAR (255)  NULL,
+    [InvoicePurchaseOrderNo]       VARCHAR (255)  NULL,
     [sys_CreatedOn]       DATETIME       CONSTRAINT [DF__Invoice__sys_Cre__7D0E9093] DEFAULT (getdate()) NOT NULL,
     [sys_CreatedBy]       NVARCHAR (255) CONSTRAINT [DF__Invoice__sys_Cre__7E02B4CC] DEFAULT ('Unknown') NOT NULL,
     [sys_ModifiedOn]      DATETIME       CONSTRAINT [DF__Invoice__sys_Mod__7EF6D905] DEFAULT (getdate()) NOT NULL,

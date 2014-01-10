@@ -192,6 +192,15 @@
         Association="FK_Commission_Invoice"
         FromEnd="Invoice"
         ToEnd="Commission" />
+      <EntityProperty
+        Name="InvoicePurchaseOrderNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -394,6 +403,12 @@
           Nullable="True"
           Type="varchar"
           Property="Invoice/Properties[InvoiceNumber]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoicePurchaseOrderNo"
+          Nullable="True"
+          Type="varchar"
+          Property="Invoice/Properties[InvoicePurchaseOrderNo]" />
         <SsdlProperty
           Name="sys_CreatedOn"
           Nullable="False"

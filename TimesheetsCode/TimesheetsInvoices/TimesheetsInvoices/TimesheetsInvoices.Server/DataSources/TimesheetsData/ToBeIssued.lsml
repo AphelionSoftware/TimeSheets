@@ -24,37 +24,59 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="And">
                         <BinaryExpression.Left>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="ActiveType" />
-                            <MemberExpression
-                              Member="ID" />
-                          </ChainExpression>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="ActiveType" />
+                                <MemberExpression
+                                  Member="ID" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ConstantExpression
+                                Value="1"
+                                ResultType=":Int32" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ConstantExpression
-                            Value="1"
-                            ResultType=":Int32" />
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="InvoiceStatu" />
+                                <MemberExpression
+                                  Member="InvoiceStatusCode" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ConstantExpression
+                                Value="TOINV"
+                                ResultType=":String" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="Contains">
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
-                              Member="InvoiceStatu" />
+                              Member="Client" />
                             <MemberExpression
-                              Member="InvoiceStatusCode" />
+                              Member="ClientName" />
                           </ChainExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ConstantExpression
-                            Value="TOINV"
-                            ResultType=":String" />
+                          <ParameterExpression
+                            Parameter="ClientName" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Right>
@@ -62,18 +84,45 @@
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
                   <BinaryExpression
-                    NodeType="Contains">
+                    NodeType="Or">
+                    <BinaryExpression.Attributes>
+                      <ExpressionGroup />
+                    </BinaryExpression.Attributes>
                     <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Client" />
-                        <MemberExpression
-                          Member="ClientName" />
-                      </ChainExpression>
+                      <BinaryExpression
+                        NodeType="Contains">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Person" />
+                            <MemberExpression
+                              Member="PersonName" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="AM" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="ClientName" />
+                      <BinaryExpression
+                        NodeType="Contains">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Client" />
+                            <MemberExpression
+                              Member="Person" />
+                            <MemberExpression
+                              Member="PersonName" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="ClientName" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Right>
@@ -81,45 +130,16 @@
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <BinaryExpression
-                NodeType="Or">
-                <BinaryExpression.Attributes>
-                  <ExpressionGroup />
-                </BinaryExpression.Attributes>
+                NodeType="Contains">
                 <BinaryExpression.Left>
-                  <BinaryExpression
-                    NodeType="Contains">
-                    <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Person" />
-                        <MemberExpression
-                          Member="PersonName" />
-                      </ChainExpression>
-                    </BinaryExpression.Left>
-                    <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="AM" />
-                    </BinaryExpression.Right>
-                  </BinaryExpression>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="InvoicePurchaseOrderNo" />
+                  </ChainExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
-                  <BinaryExpression
-                    NodeType="Contains">
-                    <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Client" />
-                        <MemberExpression
-                          Member="Person" />
-                        <MemberExpression
-                          Member="PersonName" />
-                      </ChainExpression>
-                    </BinaryExpression.Left>
-                    <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="ClientName" />
-                    </BinaryExpression.Right>
-                  </BinaryExpression>
+                  <ParameterExpression
+                    Parameter="InvoicePurchaseOrderNo" />
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -138,6 +158,10 @@
         ParameterType=":String?" />
       <QueryOperationParameter
         Name="AM"
+        IsOptional="True"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="InvoicePurchaseOrderNo"
         IsOptional="True"
         ParameterType=":String?" />
       <QueryOperation.SortCriteria>
