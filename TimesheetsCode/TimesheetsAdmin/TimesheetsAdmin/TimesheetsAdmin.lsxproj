@@ -54,10 +54,10 @@
     <AzureCredentials />
     <SharePointServerToServerCertificatePath />
     <SharePointServerToServerCertificateIssuerId />
-    <RequireSecureConnection>
-    </RequireSecureConnection>
+    <RequireSecureConnection>True</RequireSecureConnection>
     <AllowAllWindowsUsers>true</AllowAllWindowsUsers>
     <PendingProjectUpgrade>false</PendingProjectUpgrade>
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>Bin\Debug</OutputPath>
@@ -152,16 +152,6 @@
     </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
-      <Install>True</Install>
-      <Name>.NETFramework,Version=v4.0</Name>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Install>True</Install>
-      <Name>Microsoft.Windows.Installer.4.5</Name>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
     <DiagnosticsConfiguration Include="diagnostics.wadcfg">
       <Visible>false</Visible>
     </DiagnosticsConfiguration>
@@ -185,6 +175,16 @@
       <Private>True</Private>
       <Type>SharePoint</Type>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Install>True</Install>
+      <Name>.NETFramework,Version=v4.0</Name>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Install>True</Install>
+      <Name>Microsoft.Windows.Installer.4.5</Name>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
 </Project>

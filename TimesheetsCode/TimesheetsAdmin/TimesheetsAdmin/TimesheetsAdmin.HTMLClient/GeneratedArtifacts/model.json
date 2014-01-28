@@ -2224,6 +2224,59 @@
           ":@SharePointEnabled": { }
         },
         {
+          "id": "UnallocatedTimesheet*",
+          "name": "UnallocatedTimesheet*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "UnallocatedTimesheet" }
+        },
+        {
+          "id": "CollectionView$UnallocatedTimesheet",
+          "name": "CollectionView$UnallocatedTimesheet",
+          "kind": "CollectionView",
+          "elementType": { "__id": "UnallocatedTimesheet" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "UnallocatedTimesheet" }
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "UnallocatedTimesheet" }
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$UnallocatedTimesheet/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "UnallocatedTimesheet" }
+            }
+          ]
+        },
+        {
           "id": "ResourcePlanRange*",
           "name": "ResourcePlanRange*",
           "kind": "Enumerable",
@@ -3174,59 +3227,6 @@
               "id": "CollectionView$BillingDetail/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "BillingDetail" }
-            }
-          ]
-        },
-        {
-          "id": "UnallocatedTimesheet*",
-          "name": "UnallocatedTimesheet*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "UnallocatedTimesheet" }
-        },
-        {
-          "id": "CollectionView$UnallocatedTimesheet",
-          "name": "CollectionView$UnallocatedTimesheet",
-          "kind": "CollectionView",
-          "elementType": { "__id": "UnallocatedTimesheet" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "UnallocatedTimesheet" }
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "UnallocatedTimesheet" }
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$UnallocatedTimesheet/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "UnallocatedTimesheet" }
             }
           ]
         },
@@ -4857,6 +4857,50 @@
               ]
             },
             {
+              "id": "Timesheets_Data/Members[InvoiceLinesSorted]",
+              "name": "InvoiceLinesSorted",
+              "elementType": { "__id": "InvoiceLine" },
+              "query": { "__id": "Timesheets_Data/Members[InvoiceLinesSorted]" },
+              "returnType": { "__id": "InvoiceLine*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[InvoiceID]",
+                  "name": "InvoiceID",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":Int32?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[InvoiceLineDescription]",
+                  "name": "InvoiceLineDescription",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[ProjectName]",
+                  "name": "ProjectName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "InvoiceLine/Properties[InvoiceLineDescription]" }
+                }
+              ]
+            },
+            {
               "id": "Timesheets_Data/Members[Invoices_Single]",
               "name": "Invoices_Single",
               "elementType": { "__id": "Invoice" },
@@ -4891,6 +4935,46 @@
                   "id": "Timesheets_Data/Members[Invoices_SingleOrDefault]/Parameters[InvoiceID]",
                   "name": "InvoiceID",
                   "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[InvoicesSorted]",
+              "name": "InvoicesSorted",
+              "elementType": { "__id": "Invoice" },
+              "query": { "__id": "Timesheets_Data/Members[InvoicesSorted]" },
+              "returnType": { "__id": "Invoice*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[Invoices]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[InvoicesSorted]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[InvoicesSorted]/Parameters[InvoiceStatusName]",
+                  "name": "InvoiceStatusName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "Invoice/Properties[DimDate]" }
+                    },
+                    {
+                      "member": { "__id": "DimDate/Properties[DateID]" }
+                    }
+                  ]
                 }
               ]
             },
@@ -5158,6 +5242,23 @@
                     }
                   ]
                 },
+                {
+                  "member": { "__id": "Project/Properties[ProjectName]" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[ProjectsSorted]",
+              "name": "ProjectsSorted",
+              "elementType": { "__id": "Project" },
+              "query": { "__id": "Timesheets_Data/Members[ProjectsSorted]" },
+              "returnType": { "__id": "Project*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[Projects]" }
+              },
+              "sortCriteria":
+              [
                 {
                   "member": { "__id": "Project/Properties[ProjectName]" }
                 }
@@ -5465,6 +5566,77 @@
               ]
             },
             {
+              "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]",
+              "name": "TimesheetDetailsUnallocated",
+              "elementType": { "__id": "TimesheetDetail" },
+              "query": { "__id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]" },
+              "returnType": { "__id": "TimesheetDetail*" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[Project_Client]",
+                  "name": "Project_Client",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[PersonName]",
+                  "name": "PersonName",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[AM]",
+                  "name": "AM",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
+              "sortCriteria":
+              [
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                    },
+                    {
+                      "member": { "__id": "Project/Properties[ProjectName]" }
+                    }
+                  ]
+                },
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "TimesheetDetail/Properties[Person]" }
+                    },
+                    {
+                      "member": { "__id": "Person/Properties[PersonName]" }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "Timesheets_Data/Members[Timesheets_Single]",
               "name": "Timesheets_Single",
               "elementType": { "__id": "Timesheet" },
@@ -5569,107 +5741,6 @@
                   "id": "Timesheets_Data/Members[TypeOfWorks_SingleOrDefault]/Parameters[TypeOfWorkID]",
                   "name": "TypeOfWorkID",
                   "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[InvoiceLinesSorted]",
-              "name": "InvoiceLinesSorted",
-              "elementType": { "__id": "InvoiceLine" },
-              "query": { "__id": "Timesheets_Data/Members[InvoiceLinesSorted]" },
-              "returnType": { "__id": "InvoiceLine*" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[InvoiceLines]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[InvoiceID]",
-                  "name": "InvoiceID",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":Int32?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[PersonName]",
-                  "name": "PersonName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[InvoiceLineDescription]",
-                  "name": "InvoiceLineDescription",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[InvoiceLinesSorted]/Parameters[ProjectName]",
-                  "name": "ProjectName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                }
-              ],
-              "sortCriteria":
-              [
-                {
-                  "member": { "__id": "InvoiceLine/Properties[InvoiceLineDescription]" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[InvoicesSorted]",
-              "name": "InvoicesSorted",
-              "elementType": { "__id": "Invoice" },
-              "query": { "__id": "Timesheets_Data/Members[InvoicesSorted]" },
-              "returnType": { "__id": "Invoice*" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[Invoices]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[InvoicesSorted]/Parameters[PersonName]",
-                  "name": "PersonName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[InvoicesSorted]/Parameters[InvoiceStatusName]",
-                  "name": "InvoiceStatusName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                }
-              ],
-              "sortCriteria":
-              [
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "Invoice/Properties[DimDate]" }
-                    },
-                    {
-                      "member": { "__id": "DimDate/Properties[DateID]" }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[ProjectsSorted]",
-              "name": "ProjectsSorted",
-              "elementType": { "__id": "Project" },
-              "query": { "__id": "Timesheets_Data/Members[ProjectsSorted]" },
-              "returnType": { "__id": "Project*" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[Projects]" }
-              },
-              "sortCriteria":
-              [
-                {
-                  "member": { "__id": "Project/Properties[ProjectName]" }
                 }
               ]
             },
@@ -5868,77 +5939,6 @@
                   "id": "Timesheets_Data/Members[UnallocatedTimesheets_SingleOrDefault]/Parameters[SharePointUserName]",
                   "name": "SharePointUserName",
                   "parameterType": { "__id": ":String?" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]",
-              "name": "TimesheetDetailsUnallocated",
-              "elementType": { "__id": "TimesheetDetail" },
-              "query": { "__id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]" },
-              "returnType": { "__id": "TimesheetDetail*" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[Project_Client]",
-                  "name": "Project_Client",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[PersonName]",
-                  "name": "PersonName",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[TimesheetDetailsUnallocated]/Parameters[AM]",
-                  "name": "AM",
-                  "isOptional": true,
-                  "parameterType": { "__id": ":String?" }
-                }
-              ],
-              "sortCriteria":
-              [
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                    },
-                    {
-                      "member": { "__id": "Project/Properties[Client]" }
-                    },
-                    {
-                      "member": { "__id": "Client/Properties[ClientName]" }
-                    }
-                  ]
-                },
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                    },
-                    {
-                      "member": { "__id": "Project/Properties[ProjectName]" }
-                    }
-                  ]
-                },
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "TimesheetDetail/Properties[Person]" }
-                    },
-                    {
-                      "member": { "__id": "Person/Properties[PersonName]" }
-                    }
-                  ]
                 }
               ]
             }
@@ -10590,6 +10590,267 @@
           ]
         },
         {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "UnallocatedTimesheet/Properties[BillingStatusName]" } },
+          "id": "UnallocatedTimesheet",
+          "name": "UnallocatedTimesheet",
+          "methods":
+          [
+            {
+              "id": "UnallocatedTimesheet/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "UnallocatedTimesheet/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "UnallocatedTimesheet/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[BillingStatusID]",
+              "name": "BillingStatusID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[BillingStatusName]",
+              "name": "BillingStatusName",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[ClientName]",
+              "name": "ClientName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[ProjectName]",
+              "name": "ProjectName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[TimesheetDetailID]",
+              "name": "TimesheetDetailID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[TimesheetDetailSourceKey]",
+              "name": "TimesheetDetailSourceKey",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[LoadDate]",
+              "name": "LoadDate",
+              "propertyType": { "__id": ":DateTime" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[Active]",
+              "name": "Active",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[TimesheetDetailFileName]",
+              "name": "TimesheetDetailFileName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[TimesheetDetailDateID]",
+              "name": "TimesheetDetailDateID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[LoadDateID]",
+              "name": "LoadDateID",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[Hours]",
+              "name": "Hours",
+              "propertyType": { "__id": ":Decimal" },
+              ":@Required": { },
+              ":@DecimalConstraint":
+              {
+                "precision": 18,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[TimesheetID]",
+              "name": "TimesheetID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[Comments]",
+              "name": "Comments",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 500
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[ClientComments]",
+              "name": "ClientComments",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[AMComments]",
+              "name": "AMComments",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[Exclude]",
+              "name": "Exclude",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[TypeOfWorkName]",
+              "name": "TypeOfWorkName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[AccountManager]",
+              "name": "AccountManager",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[AMEmail]",
+              "name": "AMEmail",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "UnallocatedTimesheet/Properties[BillingPeriodText]",
+              "name": "BillingPeriodText",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 9
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[ADUserName]",
+              "name": "ADUserName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "UnallocatedTimesheet/Properties[SharePointUserName]",
+              "name": "SharePointUserName",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            }
+          ]
+        },
+        {
           "displayName": "Add Edit Billing Detail",
           "id": "AddEditBillingDetail",
           "name": "AddEditBillingDetail",
@@ -10685,6 +10946,31 @@
                                   {
                                     "displayName": "Person",
                                     "name": "RowTemplate1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Client Role",
+                                "name": "ClientRole",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "BillingDetail/Properties[ClientRole]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Client Role",
+                                    "name": "ClientRole1",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
                                     "dataSource":
@@ -18837,267 +19123,6 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "UnallocatedTimesheet/Properties[BillingStatusName]" } },
-          "id": "UnallocatedTimesheet",
-          "name": "UnallocatedTimesheet",
-          "methods":
-          [
-            {
-              "id": "UnallocatedTimesheet/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "UnallocatedTimesheet/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "UnallocatedTimesheet/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[BillingStatusID]",
-              "name": "BillingStatusID",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[BillingStatusName]",
-              "name": "BillingStatusName",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[ClientName]",
-              "name": "ClientName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[ProjectName]",
-              "name": "ProjectName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[TimesheetDetailID]",
-              "name": "TimesheetDetailID",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[TimesheetDetailSourceKey]",
-              "name": "TimesheetDetailSourceKey",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[LoadDate]",
-              "name": "LoadDate",
-              "propertyType": { "__id": ":DateTime" },
-              ":@Required": { },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[Active]",
-              "name": "Active",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[TimesheetDetailFileName]",
-              "name": "TimesheetDetailFileName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[TimesheetDetailDateID]",
-              "name": "TimesheetDetailDateID",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[LoadDateID]",
-              "name": "LoadDateID",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[Hours]",
-              "name": "Hours",
-              "propertyType": { "__id": ":Decimal" },
-              ":@Required": { },
-              ":@DecimalConstraint":
-              {
-                "precision": 18,
-                "scale": 2
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[TimesheetID]",
-              "name": "TimesheetID",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[Comments]",
-              "name": "Comments",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 500
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[ClientComments]",
-              "name": "ClientComments",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[AMComments]",
-              "name": "AMComments",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[Exclude]",
-              "name": "Exclude",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[TypeOfWorkName]",
-              "name": "TypeOfWorkName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[AccountManager]",
-              "name": "AccountManager",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[AMEmail]",
-              "name": "AMEmail",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "UnallocatedTimesheet/Properties[BillingPeriodText]",
-              "name": "BillingPeriodText",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 9
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[ADUserName]",
-              "name": "ADUserName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "UnallocatedTimesheet/Properties[SharePointUserName]",
-              "name": "SharePointUserName",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
             }
           ]
         },

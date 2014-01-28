@@ -1972,10 +1972,32 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "InvoiceLinesSorted", value: function (InvoiceID, PersonName, InvoiceLineDescription, ProjectName) {
+                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoiceLinesSorted()",
+                        {
+                            InvoiceID: $toODataString(InvoiceID, "Int32?"),
+                            PersonName: $toODataString(PersonName, "String?"),
+                            InvoiceLineDescription: $toODataString(InvoiceLineDescription, "String?"),
+                            ProjectName: $toODataString(ProjectName, "String?")
+                        });
+                }
+            },
+            {
                 name: "Invoices_SingleOrDefault", value: function (InvoiceID) {
                     return new $DataServiceQuery({ _entitySet: this.Invoices },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/Invoices(" + "InvoiceID=" + $toODataString(InvoiceID, "Int32?") + ")"
                     );
+                }
+            },
+            {
+                name: "InvoicesSorted", value: function (PersonName, InvoiceStatusName) {
+                    return new $DataServiceQuery({ _entitySet: this.Invoices },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoicesSorted()",
+                        {
+                            PersonName: $toODataString(PersonName, "String?"),
+                            InvoiceStatusName: $toODataString(InvoiceStatusName, "String?")
+                        });
                 }
             },
             {
@@ -2047,6 +2069,14 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "ProjectsSorted", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.Projects },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ProjectsSorted()",
+                        {
+                        });
+                }
+            },
+            {
                 name: "ResourcePlans_SingleOrDefault", value: function (ResourcePlanID) {
                     return new $DataServiceQuery({ _entitySet: this.ResourcePlans },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ResourcePlans(" + "ResourcePlanID=" + $toODataString(ResourcePlanID, "Int32?") + ")"
@@ -2100,6 +2130,17 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "TimesheetDetailsUnallocated", value: function (Project_Client, PersonName, AM) {
+                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
+                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailsUnallocated()",
+                        {
+                            Project_Client: $toODataString(Project_Client, "String?"),
+                            PersonName: $toODataString(PersonName, "String?"),
+                            AM: $toODataString(AM, "String?")
+                        });
+                }
+            },
+            {
                 name: "Timesheets_SingleOrDefault", value: function (TimesheetID) {
                     return new $DataServiceQuery({ _entitySet: this.Timesheets },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/Timesheets(" + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + ")"
@@ -2125,51 +2166,10 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "InvoiceLinesSorted", value: function (InvoiceID, PersonName, InvoiceLineDescription, ProjectName) {
-                    return new $DataServiceQuery({ _entitySet: this.InvoiceLines },
-                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoiceLinesSorted()",
-                        {
-                            InvoiceID: $toODataString(InvoiceID, "Int32?"),
-                            PersonName: $toODataString(PersonName, "String?"),
-                            InvoiceLineDescription: $toODataString(InvoiceLineDescription, "String?"),
-                            ProjectName: $toODataString(ProjectName, "String?")
-                        });
-                }
-            },
-            {
-                name: "InvoicesSorted", value: function (PersonName, InvoiceStatusName) {
-                    return new $DataServiceQuery({ _entitySet: this.Invoices },
-                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/InvoicesSorted()",
-                        {
-                            PersonName: $toODataString(PersonName, "String?"),
-                            InvoiceStatusName: $toODataString(InvoiceStatusName, "String?")
-                        });
-                }
-            },
-            {
-                name: "ProjectsSorted", value: function () {
-                    return new $DataServiceQuery({ _entitySet: this.Projects },
-                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ProjectsSorted()",
-                        {
-                        });
-                }
-            },
-            {
                 name: "UnallocatedTimesheets_SingleOrDefault", value: function (BillingStatusID, ClientName, ProjectName, TimesheetDetailID, LoadDate, Active, TimesheetDetailFileName, TimesheetDetailDateID, Hours, TimesheetID, Comments, Exclude, TypeOfWorkName, AccountManager, AMEmail, ADUserName, SharePointUserName) {
                     return new $DataServiceQuery({ _entitySet: this.UnallocatedTimesheets },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/UnallocatedTimesheets(" + "BillingStatusID=" + $toODataString(BillingStatusID, "Int32?") + "," + "ClientName=" + $toODataString(ClientName, "String?") + "," + "ProjectName=" + $toODataString(ProjectName, "String?") + "," + "TimesheetDetailID=" + $toODataString(TimesheetDetailID, "Int32?") + "," + "LoadDate=" + $toODataString(LoadDate, "DateTime?") + "," + "Active=" + $toODataString(Active, "Int32?") + "," + "TimesheetDetailFileName=" + $toODataString(TimesheetDetailFileName, "String?") + "," + "TimesheetDetailDateID=" + $toODataString(TimesheetDetailDateID, "Int32?") + "," + "Hours=" + $toODataString(Hours, "Decimal?") + "," + "TimesheetID=" + $toODataString(TimesheetID, "Int32?") + "," + "Comments=" + $toODataString(Comments, "String?") + "," + "Exclude=" + $toODataString(Exclude, "Int32?") + "," + "TypeOfWorkName=" + $toODataString(TypeOfWorkName, "String?") + "," + "AccountManager=" + $toODataString(AccountManager, "String?") + "," + "AMEmail=" + $toODataString(AMEmail, "String?") + "," + "ADUserName=" + $toODataString(ADUserName, "String?") + "," + "SharePointUserName=" + $toODataString(SharePointUserName, "String?") + ")"
                     );
-                }
-            },
-            {
-                name: "TimesheetDetailsUnallocated", value: function (Project_Client, PersonName, AM) {
-                    return new $DataServiceQuery({ _entitySet: this.TimesheetDetails },
-                        lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/TimesheetDetailsUnallocated()",
-                        {
-                            Project_Client: $toODataString(Project_Client, "String?"),
-                            PersonName: $toODataString(PersonName, "String?"),
-                            AM: $toODataString(AM, "String?")
-                        });
                 }
             }
         ]),
