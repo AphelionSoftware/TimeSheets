@@ -8,7 +8,8 @@
   <Application.Attributes>
     <ModuleNamespace
       Namespace="LightSwitchApplication" />
-    <HomeScreen />
+    <HomeScreen
+      Value="HomeScreen" />
     <Partial
       IsPrimary="True" />
   </Application.Attributes>
@@ -38,4 +39,15 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Application.NavigationItems>
+    <ApplicationNavigationMethodLink
+      Name="link"
+      Method="!module/Methods[showHomeScreen]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showBrowseBillingDetailNoRole]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseResourcePlanSorted]" />
+  </Application.NavigationItems>
 </Application>

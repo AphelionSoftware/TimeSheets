@@ -2188,7 +2188,7 @@
       ]
     },
     {
-      "homeScreen": { "__id": "BrowseBillingDetailNoRole" },
+      "homeScreen": { "__id": "HomeScreen" },
       "id": "!module",
       "name": "LightSwitchApplication.TimesheetsAdmin",
       "logo": "/Content/Images/logo.png",
@@ -2197,7 +2197,7 @@
       "shell": { "__id": ":HTMLShell" },
       "theme": { "__id": ":HTMLTheme" },
       ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
-      ":@HomeScreen": { },
+      ":@HomeScreen": { "value": { "__id": "HomeScreen" } },
       ":@Partial": { "isPrimary": true },
       "globalItems":
       [
@@ -19690,6 +19690,24 @@
           "id": "!module/Methods[showUnallocatedTimesheets]",
           "name": "showUnallocatedTimesheets",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "UnallocatedTimesheets" } }
+        }
+      ],
+      "navigationItems":
+      [
+        {
+          "id": "!module/NavigationItems[link]",
+          "name": "link",
+          "method": { "__id": "!module/Methods[showHomeScreen]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showBrowseBillingDetailNoRole]" }
+        },
+        {
+          "id": "!module/NavigationItems[link2]",
+          "name": "link2",
+          "method": { "__id": "!module/Methods[showBrowseResourcePlanSorted]" }
         }
       ]
     }
