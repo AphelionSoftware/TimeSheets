@@ -110,6 +110,29 @@
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
+                  Name="ClientRole"
+                  Kind="Details"
+                  DataType="ClientRole">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="BillingDetail/Properties[ClientRole]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="ClientRole1"
+                    Kind="Details"
+                    DataType="ClientRole">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
                   Name="DimDate"
                   Kind="Details"
                   DataType="DimDate">

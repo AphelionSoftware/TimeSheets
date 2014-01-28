@@ -214,6 +214,28 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> InvoiceLinesSorted(global::System.Nullable<int> InvoiceID, string PersonName, string InvoiceLineDescription, string ProjectName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.InvoiceLine>("InvoiceLines"),
+                    (i) => (((((InvoiceID.HasValue == false) || (InvoiceID.HasValue && (i.Invoice.InvoiceID == InvoiceID))) && ((PersonName == null) || i.Invoice.Person.PersonName.Contains(PersonName))) && ((InvoiceLineDescription == null) || i.InvoiceLineDescription.Contains(InvoiceLineDescription))) && ((ProjectName == null) || i.Project.ProjectName.Contains(ProjectName)))),
+                (i) => i.InvoiceLineDescription);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> InvoicesSorted(string PersonName, string InvoiceStatusName)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> query;
+            query = global::System.Linq.Queryable.OrderByDescending(
+                global::System.Linq.Queryable.Where(
+                    this.GetQuery<global::LightSwitchApplication.Implementation.Invoice>("Invoices"),
+                    (i) => ((((PersonName == null) || i.Person.PersonName.Contains(PersonName)) && ((InvoiceStatusName == null) || i.InvoiceStatu.InvoiceStatusName.Contains(InvoiceStatusName))) && (i.ActiveType.ID == 1))),
+                (i) => i.DimDate.DateID);
+            return query;
+        }
+    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceStatu> InvoiceStatusSorted()
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceStatu> query;
@@ -273,6 +295,15 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectsSorted()
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
+            query = global::System.Linq.Queryable.OrderBy(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                (p) => p.ProjectName);
+            return query;
+        }
+    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.ResourcePlan> ResourcePlanSorted(string PersonName, string ClientProject, global::System.Nullable<global::System.DateTime> EndDate, global::System.Nullable<global::System.DateTime> StartDate)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.ResourcePlan> query;
@@ -304,46 +335,6 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> TimesheetsByDate(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
-            query = global::System.Linq.Queryable.Where(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
-                (t) => ((((StartDate.HasValue == false) || (StartDate.HasValue && (t.DimDate.c_Date >= StartDate))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (t.DimDate.c_Date <= EndDate)))) && ((TimesheetPerson == null) || t.TimesheetPerson.Contains(TimesheetPerson))));
-            return query;
-        }
-    
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> InvoiceLinesSorted(global::System.Nullable<int> InvoiceID, string PersonName, string InvoiceLineDescription, string ProjectName)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.InvoiceLine> query;
-            query = global::System.Linq.Queryable.OrderBy(
-                global::System.Linq.Queryable.Where(
-                    this.GetQuery<global::LightSwitchApplication.Implementation.InvoiceLine>("InvoiceLines"),
-                    (i) => (((((InvoiceID.HasValue == false) || (InvoiceID.HasValue && (i.Invoice.InvoiceID == InvoiceID))) && ((PersonName == null) || i.Invoice.Person.PersonName.Contains(PersonName))) && ((InvoiceLineDescription == null) || i.InvoiceLineDescription.Contains(InvoiceLineDescription))) && ((ProjectName == null) || i.Project.ProjectName.Contains(ProjectName)))),
-                (i) => i.InvoiceLineDescription);
-            return query;
-        }
-    
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> InvoicesSorted(string PersonName, string InvoiceStatusName)
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Invoice> query;
-            query = global::System.Linq.Queryable.OrderByDescending(
-                global::System.Linq.Queryable.Where(
-                    this.GetQuery<global::LightSwitchApplication.Implementation.Invoice>("Invoices"),
-                    (i) => ((((PersonName == null) || i.Person.PersonName.Contains(PersonName)) && ((InvoiceStatusName == null) || i.InvoiceStatu.InvoiceStatusName.Contains(InvoiceStatusName))) && (i.ActiveType.ID == 1))),
-                (i) => i.DimDate.DateID);
-            return query;
-        }
-    
-        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectsSorted()
-        {
-            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
-            query = global::System.Linq.Queryable.OrderBy(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                (p) => p.ProjectName);
-            return query;
-        }
-    
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> TimesheetDetailsUnallocated(string Project_Client, string PersonName, string AM)
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.TimesheetDetail> query;
@@ -356,6 +347,15 @@ namespace LightSwitchApplication.Implementation
                         (t) => t.Project.Client.ClientName),
                     (t) => t.Project.ProjectName),
                 (t) => t.Person.PersonName);
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> TimesheetsByDate(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, string TimesheetPerson)
+        {
+            global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Timesheet> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::LightSwitchApplication.Implementation.Timesheet>("Timesheets"),
+                (t) => ((((StartDate.HasValue == false) || (StartDate.HasValue && (t.DimDate.c_Date >= StartDate))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (t.DimDate.c_Date <= EndDate)))) && ((TimesheetPerson == null) || t.TimesheetPerson.Contains(TimesheetPerson))));
             return query;
         }
     

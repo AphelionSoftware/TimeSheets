@@ -67,6 +67,22 @@
             data: lightSwitchApplication.Person,
             value: lightSwitchApplication.Person
         },
+        ClientRole: {
+            _$class: msls.ContentItem,
+            _$name: "ClientRole",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditBillingDetail,
+            data: lightSwitchApplication.BillingDetail,
+            value: lightSwitchApplication.ClientRole
+        },
+        ClientRole1: {
+            _$class: msls.ContentItem,
+            _$name: "ClientRole1",
+            _$parentName: "ClientRole",
+            screen: lightSwitchApplication.AddEditBillingDetail,
+            data: lightSwitchApplication.ClientRole,
+            value: lightSwitchApplication.ClientRole
+        },
         DimDate: {
             _$class: msls.ContentItem,
             _$name: "DimDate",
@@ -153,6 +169,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.AddEditBillingDetail().findContentItem("RowTemplate1"); }],
+        /// <field>
+        /// Called after the ClientRole content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientRole_postRender: [$element, function () { return new lightSwitchApplication.AddEditBillingDetail().findContentItem("ClientRole"); }],
+        /// <field>
+        /// Called after the ClientRole1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientRole1_postRender: [$element, function () { return new lightSwitchApplication.AddEditBillingDetail().findContentItem("ClientRole1"); }],
         /// <field>
         /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
