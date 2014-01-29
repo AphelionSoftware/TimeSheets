@@ -240,6 +240,11 @@
         Association="FK_Commission_Person"
         FromEnd="Person"
         ToEnd="Commission" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_Person"
+        FromEnd="Person"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -480,7 +485,32 @@
         Name="Commission"
         EntitySet="Commissions" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_TimesheetDetail_Person"
+      Association="FK_TimesheetDetail_Person">
+      <AssociationSetEnd
+        Name="Person"
+        EntitySet="People" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_Person">
+    <AssociationEnd
+      Name="Person"
+      Multiplicity="One"
+      EntityType="Person">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService">
     <DataService.Attributes>
@@ -736,6 +766,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="AccountManagerPersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_Person">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_Person" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[Person]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PersonID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_Person]/Members[TimesheetDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetDetailPersonID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

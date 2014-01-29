@@ -3911,7 +3911,18 @@
               "sortCriteria":
               [
                 {
-                  "member": { "__id": "Project/Properties[ProjectName]" }
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "Project/Properties[Client]" }
+                    },
+                    {
+                      "member": { "__id": "Client/Properties[ClientName]" }
+                    }
+                  ]
+                },
+                {
+                  "member": { "__id": "Project/Properties[ProjectSourceKey]" }
                 }
               ]
             },

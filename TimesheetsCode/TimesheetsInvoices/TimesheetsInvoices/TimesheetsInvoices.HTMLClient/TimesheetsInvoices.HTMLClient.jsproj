@@ -67,6 +67,9 @@
     <Content Include="Screens\AddEditInvoice.lsml.js">
       <DependentUpon>AddEditInvoice.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\AddEditInvoiceLine.lsml.js">
+      <DependentUpon>AddEditInvoiceLine.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\BrowseInvoicesInDraft.lsml.js">
       <DependentUpon>BrowseInvoicesInDraft.lsml</DependentUpon>
     </Content>

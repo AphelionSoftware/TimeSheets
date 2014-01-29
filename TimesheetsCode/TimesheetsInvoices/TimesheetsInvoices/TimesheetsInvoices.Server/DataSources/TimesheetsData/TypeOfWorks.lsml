@@ -118,6 +118,11 @@
         Association="FK_TypeOfWork_ActiveType"
         FromEnd="TypeOfWork"
         ToEnd="ActiveType" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_TypeOfWork"
+        FromEnd="TypeOfWork"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -211,7 +216,32 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_TimesheetDetail_TypeOfWork"
+      Association="FK_TimesheetDetail_TypeOfWork">
+      <AssociationSetEnd
+        Name="TypeOfWork"
+        EntitySet="TypeOfWorks" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_TypeOfWork">
+    <AssociationEnd
+      Name="TypeOfWork"
+      Multiplicity="One"
+      EntityType="TypeOfWork">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService">
     <DataService.Attributes>
@@ -287,5 +317,26 @@
           PropertyName="Active" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_TypeOfWork">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_TypeOfWork" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_TypeOfWork]/Members[TypeOfWork]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TypeOfWorkID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_TypeOfWork]/Members[TimesheetDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetTypeOfWorkID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

@@ -336,6 +336,11 @@
         Association="FK_Commission_DimDate"
         FromEnd="DimDate"
         ToEnd="Commission" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_DimDate"
+        FromEnd="DimDate"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -552,7 +557,32 @@
         Name="Commission"
         EntitySet="Commissions" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_TimesheetDetail_DimDate"
+      Association="FK_TimesheetDetail_DimDate">
+      <AssociationSetEnd
+        Name="DimDate"
+        EntitySet="DimDates" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_DimDate">
+    <AssociationEnd
+      Name="DimDate"
+      Multiplicity="One"
+      EntityType="DimDate">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService">
     <DataService.Attributes>
@@ -847,6 +877,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="InvoicePaidDateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_DimDate">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_DimDate" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_DimDate]/Members[DimDate]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DateID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_DimDate]/Members[TimesheetDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TimesheetDetailDateID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

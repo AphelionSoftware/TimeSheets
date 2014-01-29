@@ -11,29 +11,68 @@ namespace LightSwitchApplication
 {
     public partial class TimesheetsDataService
     {
+
+        private string strUser()
+        {
+            try
+            {
+                string strUser = "External User Fail";
+                if (Environment.UserName != null)
+                {
+                    strUser = Environment.UserName;
+                }
+                if (this.Application == null)
+                {
+                    return strUser;
+                }
+                if (this.Application.User == null)
+                {
+                    return strUser;
+                }
+                if (this.Application.User.PersonId == null)
+                {
+                    return strUser;
+                }
+                return this.Application.User.PersonId;
+            }
+            catch (Exception ex)
+            {
+                return "External user failed with error " + ex.InnerException.ToString();
+            }
+        }
+
+
         partial void Invoices_Inserting(Invoice entity)
         {
-            entity.sys_CreatedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            try { 
+            entity.sys_CreatedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_CreatedOn = System.DateTime.Now;
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
             entity.LoadDate = System.DateTime.Now; 
+        }
+            catch { };
 
         }
 
+        
         partial void Invoices_Updating(Invoice entity)
         {
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
-            entity.sys_ModifiedOn = System.DateTime.Now;
+            try
+            {
+                entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
+                entity.sys_ModifiedOn = System.DateTime.Now;
+            }
+            catch { };
 
         }
 
 
         partial void InvoiceLines_Inserting(InvoiceLine entity)
         {
-            entity.sys_CreatedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_CreatedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_CreatedOn = System.DateTime.Now;
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
             entity.LoadDate = System.DateTime.Now; 
 
@@ -41,7 +80,7 @@ namespace LightSwitchApplication
 
         partial void InvoiceLines_Updating(InvoiceLine entity)
         {
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
 
         }
@@ -54,9 +93,9 @@ namespace LightSwitchApplication
 
         partial void Clients_Inserting(Client entity)
         {
-            entity.sys_CreatedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_CreatedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_CreatedOn = System.DateTime.Now;
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
             entity.LoadDate = System.DateTime.Now; 
 
@@ -64,7 +103,7 @@ namespace LightSwitchApplication
 
         partial void Clients_Updating(Client entity)
         {
-            entity.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
 
         }
@@ -84,9 +123,9 @@ namespace LightSwitchApplication
         {
             Project p = this.DataWorkspace.TimesheetsData.Projects.AddNew();
             p.Client = entity;
-            p.sys_CreatedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            p.sys_CreatedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             p.sys_CreatedOn = System.DateTime.Now;
-            p.sys_ModifiedBy = Environment.UserName/*Application.User.FullName*/ /*"MarkGStacey"*/;
+            p.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             p.sys_ModifiedOn = System.DateTime.Now;
             p.LoadDate = System.DateTime.Now;
             p.ProjectName = entity.ClientName;

@@ -141,4 +141,7 @@
       <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
     </ArtifactReference>
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Aphelion.Timesheets.DB.refactorlog" />
+  </ItemGroup>
 </Project>

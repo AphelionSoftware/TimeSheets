@@ -36,4 +36,21 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Application.NavigationItems>
+    <ApplicationNavigationMethodLink
+      Name="link"
+      Method="!module/Methods[showBrowseAllInvoices]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showBrowseCommissionsToPay]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseIssuedButNotPaid]" />
+    <ApplicationNavigationMethodLink
+      Name="link3"
+      Method="!module/Methods[showBrowseInvoicesInDraft]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showInvoicesToBeIssued]" />
+  </Application.NavigationItems>
 </Application>

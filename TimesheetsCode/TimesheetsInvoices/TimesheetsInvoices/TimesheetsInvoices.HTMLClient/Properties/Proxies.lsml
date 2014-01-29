@@ -328,4 +328,52 @@
         Target="ServiceInterface:FK_CommissionStatus_ActiveType" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:TimesheetDetail" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_ActiveType" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_BillingStatus" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_DimDate" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_InvoiceLine" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_Person" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_Project" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_TypeOfWork" />
+    </Association.Attributes>
+  </Association>
 </Application>

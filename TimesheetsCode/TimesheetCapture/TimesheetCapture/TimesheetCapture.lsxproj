@@ -22,7 +22,7 @@
     <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
-    <AssemblyVersion>2.2.32.0</AssemblyVersion>
+    <AssemblyVersion>2.2.35.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -58,7 +58,9 @@
     <DebugSharePointAuthenticationType>AccessControlService</DebugSharePointAuthenticationType>
     <PendingProjectUpgrade>false</PendingProjectUpgrade>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
-    <LightSwitchPublishVersion>v2.2</LightSwitchPublishVersion>
+    <LightSwitchPublishVersion>v2.1</LightSwitchPublishVersion>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <DefaultDatabaseName>TimesheetCapture</DefaultDatabaseName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>Bin\Debug</OutputPath>
@@ -179,7 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <PublishParameter Include="TimesheetsData">
-      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets_Dev;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
+      <Value>Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011</Value>
     </PublishParameter>
   </ItemGroup>
   <ItemGroup>

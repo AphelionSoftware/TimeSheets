@@ -1,4 +1,5 @@
-﻿CREATE PROC [dbo].[invInsertInvoices] as
+﻿
+CREATE PROC [dbo].[invInsertInvoices] as
 
 
 INSERT INTO [dbo].[Invoice]
@@ -50,6 +51,9 @@ GROUP BY ddMonth.BillingYear, ddMonth.BillingPeriodText
 ,COALESCE(C.InvoiceEmailAddress, P.InvoiceEmailAddress, 'sales@aphelion.bi')
 ) Inv
 WHERE NOT EXISTS (SELECT 1 FROM dbo.Invoice 
-	WHERE InvoiceDateID = INV.DateID
+	WHERE InvoiceDueDateID = INV.DueDateID
 	and InvoiceClientID = INV.ClientID)
 ORDER BY DateID, SourceKey
+GO
+
+

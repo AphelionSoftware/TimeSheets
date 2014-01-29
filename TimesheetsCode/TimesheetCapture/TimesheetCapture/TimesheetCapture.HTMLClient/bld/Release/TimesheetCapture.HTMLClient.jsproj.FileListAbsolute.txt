@@ -6,3 +6,5 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetC
 C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs

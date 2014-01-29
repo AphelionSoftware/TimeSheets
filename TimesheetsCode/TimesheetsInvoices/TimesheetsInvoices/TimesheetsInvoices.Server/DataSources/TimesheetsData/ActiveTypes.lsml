@@ -160,6 +160,11 @@
         Association="FK_CommissionStatus_ActiveType"
         FromEnd="ActiveType"
         ToEnd="CommissionStatus" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_ActiveType"
+        FromEnd="ActiveType"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -603,7 +608,32 @@
         Name="CommissionStatus"
         EntitySet="CommissionStatus" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_TimesheetDetail_ActiveType"
+      Association="FK_TimesheetDetail_ActiveType">
+      <AssociationSetEnd
+        Name="ActiveType"
+        EntitySet="ActiveTypes" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_ActiveType">
+    <AssociationEnd
+      Name="ActiveType"
+      Multiplicity="One"
+      EntityType="ActiveType">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService">
     <DataService.Attributes>
@@ -927,6 +957,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="TimesheetsData/Members[FK_SystemRole_ActiveType]/Members[SystemRole]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Active" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_ActiveType">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_ActiveType" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_ActiveType]/Members[ActiveType]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_ActiveType]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />

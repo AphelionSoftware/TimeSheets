@@ -60,11 +60,13 @@ namespace LightSwitchApplication.Implementation
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectSorted()
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
-            query = global::System.Linq.Queryable.OrderBy(
-                global::System.Linq.Queryable.Where(
-                    this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                    (p) => ((p.ActiveType.ID == 1) && (p.AdminProject == 0))),
-                (p) => p.ProjectName);
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                        (p) => ((p.ActiveType.ID == 1) && (p.AdminProject == 0))),
+                    (p) => p.Client.ClientName),
+                (p) => p.ProjectSourceKey);
             return query;
         }
     

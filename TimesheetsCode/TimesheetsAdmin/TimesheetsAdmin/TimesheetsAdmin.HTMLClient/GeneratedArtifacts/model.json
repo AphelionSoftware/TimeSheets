@@ -18353,6 +18353,10 @@
                                 "targetParameter": { "__id": "!module/Methods[showAddEditTimesheet]/Parameters[Timesheet]" }
                               }
                             }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
                           }
                         ]
                       },
@@ -18369,6 +18373,10 @@
                             {
                               "target": { "__id": "!module/Methods[showHomeScreen]" }
                             }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-back"
                           }
                         ]
                       },
@@ -18544,7 +18552,13 @@
                 "source":
                 {
                   "member": { "__id": "Timesheets_Data/Members[TimesheetsByDate]" }
-                }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "member": { "__id": "Timesheet/Properties[TimesheetFromDateID]" }
+                  }
+                ]
               },
               "source":
               {
@@ -19158,36 +19172,6 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "Timesheet Detail Project Client",
-                        "name": "TimesheetDetailProject_Client",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailProject_Client]" }
-                        }
-                      },
-                      {
-                        "displayName": "Timesheet Detail Person Name",
-                        "name": "TimesheetDetailPersonName",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailPersonName]" }
-                        }
-                      },
-                      {
-                        "displayName": "Timesheet Detail AM",
-                        "name": "TimesheetDetailAM",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailAM]" }
-                        }
-                      },
-                      {
                         "displayName": "Timesheet Details Unallocated",
                         "name": "TimesheetDetail",
                         "kind": "Collection",
@@ -19325,6 +19309,35 @@
                           }
                         ]
                       }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Show Filter",
+                        "name": "ShowFilter",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "UnallocatedTimesheets/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "UnallocatedTimesheets/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "Filter"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     ]
                   }
                 ],
@@ -19340,7 +19353,49 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter",
+                    "name": "Filter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Timesheet Detail Project Client",
+                        "name": "TimesheetDetailProject_Client",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailProject_Client]" }
+                        }
+                      },
+                      {
+                        "displayName": "Timesheet Detail Person Name",
+                        "name": "TimesheetDetailPersonName",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailPersonName]" }
+                        }
+                      },
+                      {
+                        "displayName": "Timesheet Detail AM",
+                        "name": "TimesheetDetailAM",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "UnallocatedTimesheets/Properties[TimesheetDetailAM]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },

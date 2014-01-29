@@ -63,7 +63,15 @@
         <SortCriterion>
           <ChainExpression>
             <MemberExpression
-              Member="ProjectName" />
+              Member="Client" />
+            <MemberExpression
+              Member="ClientName" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion>
+          <ChainExpression>
+            <MemberExpression
+              Member="ProjectSourceKey" />
           </ChainExpression>
         </SortCriterion>
       </QueryOperation.SortCriteria>

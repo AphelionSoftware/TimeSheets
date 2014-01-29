@@ -1071,7 +1071,7 @@
             {
                 name: "Timesheets", kind: "collection", elementType: lightSwitchApplication.Timesheet,
                 createQuery: function (StartDate, EndDate, TimesheetPerson) {
-                    return this.dataWorkspace.Timesheets_Data.TimesheetsByDate(StartDate, EndDate, TimesheetPerson);
+                    return this.dataWorkspace.Timesheets_Data.TimesheetsByDate(StartDate, EndDate, TimesheetPerson).orderByDescending("TimesheetFromDateID");
                 }
             },
             { name: "TimesheetStartDate", kind: "local", type: Date },

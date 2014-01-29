@@ -4264,30 +4264,6 @@
             data: lightSwitchApplication.UnallocatedTimesheets,
             value: lightSwitchApplication.UnallocatedTimesheets
         },
-        TimesheetDetailProject_Client: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailProject_Client",
-            _$parentName: "TimesheetDetailList",
-            screen: lightSwitchApplication.UnallocatedTimesheets,
-            data: lightSwitchApplication.UnallocatedTimesheets,
-            value: String
-        },
-        TimesheetDetailPersonName: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailPersonName",
-            _$parentName: "TimesheetDetailList",
-            screen: lightSwitchApplication.UnallocatedTimesheets,
-            data: lightSwitchApplication.UnallocatedTimesheets,
-            value: String
-        },
-        TimesheetDetailAM: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailAM",
-            _$parentName: "TimesheetDetailList",
-            screen: lightSwitchApplication.UnallocatedTimesheets,
-            data: lightSwitchApplication.UnallocatedTimesheets,
-            value: String
-        },
         TimesheetDetail: {
             _$class: msls.ContentItem,
             _$name: "TimesheetDetail",
@@ -4403,6 +4379,38 @@
             _$name: "Popups",
             _$parentName: "RootContentItem",
             screen: lightSwitchApplication.UnallocatedTimesheets
+        },
+        Filter: {
+            _$class: msls.ContentItem,
+            _$name: "Filter",
+            _$parentName: "Popups",
+            screen: lightSwitchApplication.UnallocatedTimesheets,
+            data: lightSwitchApplication.UnallocatedTimesheets,
+            value: lightSwitchApplication.UnallocatedTimesheets
+        },
+        TimesheetDetailProject_Client: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetailProject_Client",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.UnallocatedTimesheets,
+            data: lightSwitchApplication.UnallocatedTimesheets,
+            value: String
+        },
+        TimesheetDetailPersonName: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetailPersonName",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.UnallocatedTimesheets,
+            data: lightSwitchApplication.UnallocatedTimesheets,
+            value: String
+        },
+        TimesheetDetailAM: {
+            _$class: msls.ContentItem,
+            _$name: "TimesheetDetailAM",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.UnallocatedTimesheets,
+            data: lightSwitchApplication.UnallocatedTimesheets,
+            value: String
         }
     };
 
@@ -4422,21 +4430,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TimesheetDetailList_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailList"); }],
-        /// <field>
-        /// Called after the TimesheetDetailProject_Client content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailProject_Client_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailProject_Client"); }],
-        /// <field>
-        /// Called after the TimesheetDetailPersonName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailPersonName_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailPersonName"); }],
-        /// <field>
-        /// Called after the TimesheetDetailAM content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailAM_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailAM"); }],
         /// <field>
         /// Called after the TimesheetDetail content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -4501,7 +4494,27 @@
         /// Called after the TimesheetDetailFileName content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TimesheetDetailFileName_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailFileName"); }]
+        TimesheetDetailFileName_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailFileName"); }],
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("Filter"); }],
+        /// <field>
+        /// Called after the TimesheetDetailProject_Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailProject_Client_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailProject_Client"); }],
+        /// <field>
+        /// Called after the TimesheetDetailPersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailPersonName_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailPersonName"); }],
+        /// <field>
+        /// Called after the TimesheetDetailAM content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TimesheetDetailAM_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailAM"); }]
     });
 
 }(msls.application));

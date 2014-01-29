@@ -123,6 +123,11 @@
         Association="FK_Project_BillingStatus"
         FromEnd="BillingStatus"
         ToEnd="Project" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_BillingStatus"
+        FromEnd="BillingStatus"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -241,7 +246,31 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_TimesheetDetail_BillingStatus"
+      Association="FK_TimesheetDetail_BillingStatus">
+      <AssociationSetEnd
+        Name="BillingStatus"
+        EntitySet="BillingStatus" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_BillingStatus">
+    <AssociationEnd
+      Name="BillingStatus"
+      EntityType="BillingStatu">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="TimesheetsDataDataService">
     <DataService.Attributes>
@@ -331,6 +360,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="TimesheetsData/Members[FK_Project_BillingStatus]/Members[Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Billable" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_BillingStatus">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_BillingStatus" />
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_BillingStatus]/Members[BillingStatus]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="BillingStatusID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="TimesheetsData/Members[FK_TimesheetDetail_BillingStatus]/Members[TimesheetDetail]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Billable" />

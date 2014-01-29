@@ -23,45 +23,6 @@
             Name="TimesheetDetailList"
             Kind="Group">
             <ContentItem
-              Name="TimesheetDetailProject_Client"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[TimesheetDetailProject_Client]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="TimesheetDetailPersonName"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[TimesheetDetailPersonName]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="TimesheetDetailAM"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="UnallocatedTimesheets/Properties[TimesheetDetailAM]" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
               Name="TimesheetDetail"
               Kind="Collection"
               DataType="CollectionView$TimesheetDetail"
@@ -280,6 +241,30 @@
                 </ContentItem>
               </ContentItem>
             </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="ShowFilter"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="UnallocatedTimesheets/Methods[showDialog]">
+                          <ArgumentExpression
+                            Parameter="dialogName">
+                            <ConstantExpression
+                              Value="Filter"
+                              ResultType=":String" />
+                          </ArgumentExpression>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem.CommandItems>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -297,7 +282,51 @@
         <ContentItem
           Name="Popups"
           Kind="Group"
-          View="Microsoft.LightSwitch.MobileWeb:DialogPages" />
+          View="Microsoft.LightSwitch.MobileWeb:DialogPages">
+          <ContentItem
+            Name="Filter"
+            Kind="Group">
+            <ContentItem
+              Name="TimesheetDetailProject_Client"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="UnallocatedTimesheets/Properties[TimesheetDetailProject_Client]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="TimesheetDetailPersonName"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="UnallocatedTimesheets/Properties[TimesheetDetailPersonName]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="TimesheetDetailAM"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="UnallocatedTimesheets/Properties[TimesheetDetailAM]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
       </ContentItem>
     </Screen.RootContentItem>
     <Screen.Methods>
