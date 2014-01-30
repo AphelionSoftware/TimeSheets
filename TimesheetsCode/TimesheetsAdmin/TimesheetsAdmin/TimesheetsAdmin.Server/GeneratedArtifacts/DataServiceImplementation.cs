@@ -298,8 +298,12 @@ namespace LightSwitchApplication.Implementation
         public global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> ProjectsSorted()
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.Project> query;
-            query = global::System.Linq.Queryable.OrderBy(
-                this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+            query = global::System.Linq.Queryable.ThenBy(
+                global::System.Linq.Queryable.OrderBy(
+                    global::System.Linq.Queryable.Where(
+                        this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
+                        (p) => (p.ActiveType.ID == 1)),
+                    (p) => p.Client.ClientName),
                 (p) => p.ProjectName);
             return query;
         }
@@ -308,13 +312,15 @@ namespace LightSwitchApplication.Implementation
         {
             global::System.Linq.IQueryable<global::LightSwitchApplication.Implementation.ResourcePlan> query;
             global::System.DateTime today1 = global::Microsoft.LightSwitch.RelativeDates.Today();
-            query = global::System.Linq.Queryable.ThenBy(
-                global::System.Linq.Queryable.OrderBy(
-                    global::System.Linq.Queryable.Where(
-                        this.GetQuery<global::LightSwitchApplication.Implementation.ResourcePlan>("ResourcePlans"),
-                        (r) => (((((PersonName == null) || r.Person.PersonName.Contains(PersonName)) && (((ClientProject == null) || r.Project.ProjectName.Contains(ClientProject)) || ((ClientProject == null) || r.Project.Client.ClientName.Contains(ClientProject)))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))) && ((r.WeekEndingDate >= today1) || ((EndDate.HasValue == false) || ((StartDate.HasValue == false) || ((StartDate.HasValue && (r.WeekEndingDate >= StartDate)) && (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))))))),
-                    (r) => r.WeekEndingDate),
-                (r) => r.Person.PersonName);
+            query = global::System.Linq.Queryable.ThenByDescending(
+                global::System.Linq.Queryable.ThenBy(
+                    global::System.Linq.Queryable.OrderBy(
+                        global::System.Linq.Queryable.Where(
+                            this.GetQuery<global::LightSwitchApplication.Implementation.ResourcePlan>("ResourcePlans"),
+                            (r) => (((((((PersonName == null) || r.Person.PersonName.Contains(PersonName)) && (((ClientProject == null) || r.Project.ProjectName.Contains(ClientProject)) || ((ClientProject == null) || r.Project.Client.ClientName.Contains(ClientProject)))) && ((EndDate.HasValue == false) || (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))) && ((EndDate.HasValue == false) || ((StartDate.HasValue == false) || ((StartDate.HasValue && (r.WeekEndingDate >= StartDate)) && (EndDate.HasValue && (r.WeekEndingDate <= EndDate)))))) && (r.Person.ActiveType.ID == 1)) && (r.WeekEndingDate >= today1))),
+                        (r) => r.WeekEndingDate),
+                    (r) => r.Person.PersonName),
+                (r) => r.Blocks);
             return query;
         }
     
@@ -1405,6 +1411,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.InvoiceLine.DetailsClass.IImplementation.TimesheetDetails
+        {
+            get
+            {
+                return this.TimesheetDetails;
+            }
+        }
+        
         partial void OnActiveChanged()
         {
             if (this.__host != null)
@@ -2365,6 +2379,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TimesheetDetail.DetailsClass.IImplementation.InvoiceLine
+        {
+            get
+            {
+                return this.InvoiceLine;
+            }
+            set
+            {
+                this.InvoiceLine = (global::LightSwitchApplication.Implementation.InvoiceLine)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("InvoiceLine");
+                }
+            }
+        }
+        
         partial void OnTimesheetDetailDateIDChanged()
         {
             if (this.__host != null)
@@ -2418,6 +2448,14 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("ActiveType");
+            }
+        }
+        
+        partial void OnInvoiceLineIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("InvoiceLine");
             }
         }
         

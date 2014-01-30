@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="BrowseResourcePlanSorted">
+    Name="ResourcePlanTable">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="Timesheets_Data" />
@@ -20,96 +20,48 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="ResourcePlanList"
-            Kind="Group">
+            Name="Details"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Details" />
+            </ContentItem.Attributes>
             <ContentItem
-              Name="ResourcePlan"
+              Name="ResourcePlanSorted"
               Kind="Collection"
               DataType="CollectionView$ResourcePlan"
-              View="Microsoft.LightSwitch.MobileWeb:List">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
+                      Member="ResourcePlanTable/Properties[ResourcePlanSorted]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="RowTemplate"
+                Name="ResourcePlanSortedTemplate"
                 Kind="Details"
-                DataType="ResourcePlan"
-                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                DataType="ResourcePlan">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="ResourcePlanComments"
-                  Kind="Value"
-                  DataType=":String"
-                  View="Microsoft.LightSwitch.MobileWeb:Text">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="ResourcePlan/Properties[ResourcePlanComments]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="WeekEndingDate"
-                  Kind="Value"
-                  DataType=":Date"
-                  View="Microsoft.LightSwitch.MobileWeb:Text">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="ResourcePlan/Properties[WeekEndingDate]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[TimePickerEnabled]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="False"
-                            ResultType=":Boolean" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MinimumYear]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="2014"
-                            ResultType=":Int32" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:DateTimePicker/Properties[MaximumYear]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="2020"
-                            ResultType=":Int32" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
                   Name="Person"
                   Kind="Details"
                   DataType="Person"
-                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ResourcePlanTable/Properties[PersonSorted]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -119,7 +71,7 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate1"
+                    Name="PersonTemplate"
                     Kind="Details"
                     DataType="Person">
                     <ContentItem.DataSource>
@@ -127,13 +79,31 @@
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Person1"
+                      Kind="Details"
+                      DataType="Person">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
                   Name="Project"
                   Kind="Details"
                   DataType="Project"
-                  View="Microsoft.LightSwitch.MobileWeb:Summary">
+                  View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
+                  <ContentItem.ChoicesSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ResourcePlanTable/Properties[ProjectsSorted]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.ChoicesSource>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -143,21 +113,76 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate2"
+                    Name="ProjectTemplate"
                     Kind="Details"
-                    DataType="Project">
+                    DataType="Project"
+                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Client"
+                      Kind="Details"
+                      DataType="Client"
+                      View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Project/Properties[Client]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem
+                        Name="ClientName"
+                        Kind="Value"
+                        DataType=":String">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Client/Properties[ClientName]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                      </ContentItem>
+                    </ContentItem>
+                    <ContentItem
+                      Name="ProjectName"
+                      Kind="Value"
+                      DataType=":String">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Project/Properties[ProjectName]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
                   </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="WeekEndingDate"
+                  Kind="Value"
+                  DataType=":Date"
+                  View="Microsoft.LightSwitch.MobileWeb:DatePicker">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ResourcePlan/Properties[WeekEndingDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
                   Name="Blocks"
                   Kind="Value"
                   DataType=":Int32"
-                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  View="Microsoft.LightSwitch.MobileWeb:TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -166,92 +191,24 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <CallExpression
-                            Target="!module/Methods[showAddEditResourcePlan]">
-                            <CallExpression.Attributes>
-                              <AssociatedCollection
-                                Collection="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
-                            </CallExpression.Attributes>
-                            <ArgumentExpression
-                              Parameter="ResourcePlan">
-                              <ChainExpression>
-                                <MemberExpression
-                                  Member="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
-                                <MemberExpression
-                                  Member="selectedItem" />
-                              </ChainExpression>
-                            </ArgumentExpression>
-                          </CallExpression>
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="ResourcePlanComments"
+                  Kind="Value"
+                  DataType=":String"
+                  View="Microsoft.LightSwitch.MobileWeb:TextBox">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ResourcePlan/Properties[ResourcePlanComments]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
               </ContentItem>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <CallExpression
-                        Target="!module/Methods[showAddEditResourcePlan]">
-                        <CallExpression.Attributes>
-                          <AssociatedCollection
-                            Collection="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
-                        </CallExpression.Attributes>
-                        <ArgumentExpression
-                          Parameter="ResourcePlan">
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
-                            <MemberExpression
-                              Member="selectedItem" />
-                          </ChainExpression>
-                        </ArgumentExpression>
-                      </CallExpression>
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem.CommandItems>
-              <ContentItem
-                Name="AddResourcePlan"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAddEditResourcePlan]">
-                          <CallExpression.Attributes>
-                            <AssociatedCollection
-                              Collection="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]" />
-                            <CreateNewEntity
-                              TargetParameter="!module/Methods[showAddEditResourcePlan]/Parameters[ResourcePlan]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="msls-add"
-                          ResultType=":String" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
               <ContentItem
                 Name="ShowFilter"
                 Kind="Command">
@@ -261,7 +218,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="BrowseResourcePlanSorted/Methods[showDialog]">
+                          Target="ResourcePlanTable/Methods[showDialog]">
                           <ArgumentExpression
                             Parameter="dialogName">
                             <ConstantExpression
@@ -284,20 +241,40 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
+              <ContentItem
+                Name="AddResourcePlan"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showAddEditResourcePlan]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="ResourcePlanTable/Properties[ResourcePlanSorted]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showAddEditResourcePlan]/Parameters[ResourcePlan]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-add"
+                          ResultType=":String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
             </ContentItem.CommandItems>
           </ContentItem>
-          <ContentItem.PropertySources>
-            <ControlPropertySource
-              Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[BrowseOnly]">
-              <ScreenExpressionTree>
-                <ChainExpression>
-                  <ConstantExpression
-                    Value="True"
-                    ResultType=":Boolean" />
-                </ChainExpression>
-              </ScreenExpressionTree>
-            </ControlPropertySource>
-          </ContentItem.PropertySources>
         </ContentItem>
         <ContentItem
           Name="Popups"
@@ -307,35 +284,27 @@
             Name="Filter"
             Kind="Group">
             <ContentItem
-              Name="ResourcePlanPersonName"
+              Name="PersonName"
               Kind="Value"
               DataType=":String?">
-              <ContentItem.Attributes>
-                <DisplayName
-                  Value="Person" />
-              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourcePlanSorted/Properties[ResourcePlanPersonName]" />
+                      Member="ResourcePlanTable/Properties[PersonName]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
             </ContentItem>
             <ContentItem
-              Name="ResourcePlanClientProject"
+              Name="ClientProject"
               Kind="Value"
               DataType=":String?">
-              <ContentItem.Attributes>
-                <DisplayName
-                  Value="Client or Project" />
-              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourcePlanSorted/Properties[ResourcePlanClientProject]" />
+                      Member="ResourcePlanTable/Properties[ClientProject]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -348,7 +317,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourcePlanSorted/Properties[StartDate]" />
+                      Member="ResourcePlanTable/Properties[StartDate]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -368,7 +337,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <ConstantExpression
-                        Value="2013"
+                        Value="2014"
                         ResultType=":Int32" />
                     </ChainExpression>
                   </ScreenExpressionTree>
@@ -393,7 +362,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourcePlanSorted/Properties[EndDate]" />
+                      Member="ResourcePlanTable/Properties[EndDate]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -413,7 +382,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <ConstantExpression
-                        Value="2013"
+                        Value="2014"
                         ResultType=":Int32" />
                     </ChainExpression>
                   </ScreenExpressionTree>
@@ -438,7 +407,7 @@
             <ScreenExpressionTree>
               <ChainExpression>
                 <ConstantExpression
-                  Value="Browse"
+                  Value="Edit"
                   ResultType=":String" />
               </ChainExpression>
             </ScreenExpressionTree>
@@ -493,33 +462,33 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseResourcePlanSorted/Properties[ResourcePlanSorted]/Query">
+              Target="ResourcePlanTable/Properties[ResourcePlanSorted]/Query">
               <ArgumentExpression
                 Parameter="PersonName">
                 <ChainExpression>
                   <MemberExpression
-                    Member="BrowseResourcePlanSorted/Properties[ResourcePlanPersonName]" />
+                    Member="ResourcePlanTable/Properties[PersonName]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="ClientProject">
                 <ChainExpression>
                   <MemberExpression
-                    Member="BrowseResourcePlanSorted/Properties[ResourcePlanClientProject]" />
-                </ChainExpression>
-              </ArgumentExpression>
-              <ArgumentExpression
-                Parameter="StartDate">
-                <ChainExpression>
-                  <MemberExpression
-                    Member="BrowseResourcePlanSorted/Properties[StartDate]" />
+                    Member="ResourcePlanTable/Properties[ClientProject]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="EndDate">
                 <ChainExpression>
                   <MemberExpression
-                    Member="BrowseResourcePlanSorted/Properties[EndDate]" />
+                    Member="ResourcePlanTable/Properties[EndDate]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="StartDate">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ResourcePlanTable/Properties[StartDate]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -527,25 +496,94 @@
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
       <ScreenProperty
-        Name="ResourcePlanPersonName"
+        Name="PersonName"
         PropertyType=":String?" />
       <ScreenProperty
-        Name="ResourcePlanClientProject"
+        Name="ClientProject"
         PropertyType=":String?" />
-      <ScreenProperty
-        Name="StartDate"
-        PropertyType=":DateTime?" />
       <ScreenProperty
         Name="EndDate"
         PropertyType=":DateTime?" />
+      <ScreenProperty
+        Name="StartDate"
+        PropertyType=":DateTime?" />
+      <ScreenCollectionProperty
+        Name="PersonSorted"
+        PageSize="45"
+        PropertyType="CollectionView$Person">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PersonSortedQuery"
+            ReturnType="Person*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[PersonSorted]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ResourcePlanTable/Properties[PersonSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="ProjectsSorted"
+        PageSize="45"
+        PropertyType="CollectionView$Project">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="ProjectsSortedQuery"
+            ReturnType="Project*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[ActiveType]" />
+                      <MemberExpression
+                        Member="Active" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ConstantExpression
+                      Value="1"
+                      ResultType=":Int32" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[ProjectsSorted]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ResourcePlanTable/Properties[ProjectsSorted]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showBrowseResourcePlanSorted">
+      Name="showResourcePlanTable">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="BrowseResourcePlanSorted" />
+          TargetScreen="ResourcePlanTable" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

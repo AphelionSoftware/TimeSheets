@@ -7,4 +7,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="InvoiceLineID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="6e699750-bcbb-4d7b-b276-2eebb5febbdf" ChangeDateTime="01/29/2014 20:04:12">
+    <Property Name="ElementName" Value="[dbo].[ResourcePlan].[Block1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResourcePlan]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Block1_ClientID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9afbe502-4bd8-4082-90b8-f05fc3d26f1f" ChangeDateTime="01/29/2014 20:18:57">
+    <Property Name="ElementName" Value="[dbo].[ResourcePlan].[ResourcePlan_ProjectID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ResourcePlan]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ResourcePlanProjectID" />
+  </Operation>
 </Operations>

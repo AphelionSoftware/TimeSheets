@@ -159,6 +159,11 @@
         Association="FK_InvoiceLine_Project"
         FromEnd="InvoiceLine"
         ToEnd="Project" />
+      <NavigationProperty
+        Name="TimesheetDetails"
+        Association="FK_TimesheetDetail_InvoiceLine"
+        FromEnd="InvoiceLine"
+        ToEnd="TimesheetDetail" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -252,7 +257,31 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="FK_TimesheetDetail_InvoiceLine"
+      Association="FK_TimesheetDetail_InvoiceLine">
+      <AssociationSetEnd
+        Name="InvoiceLine"
+        EntitySet="InvoiceLines" />
+      <AssociationSetEnd
+        Name="TimesheetDetail"
+        EntitySet="TimesheetDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_TimesheetDetail_InvoiceLine">
+    <AssociationEnd
+      Name="InvoiceLine"
+      EntityType="InvoiceLine">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TimesheetDetail"
+      Multiplicity="Many"
+      EntityType="TimesheetDetail" />
+  </Association>
   <DataService
     Name="Timesheets_DataDataService">
     <DataService.Attributes>
@@ -357,5 +386,26 @@
           PropertyName="InvoiceLineProjectID" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TimesheetDetail_InvoiceLine">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TimesheetDetail_InvoiceLine" />
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_TimesheetDetail_InvoiceLine]/Members[InvoiceLine]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="InvoiceLineID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_TimesheetDetail_InvoiceLine]/Members[TimesheetDetail]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="InvoiceLineID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

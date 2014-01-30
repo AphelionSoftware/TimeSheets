@@ -478,6 +478,29 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Project_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+        {
+            get
+            {
+                return global::LightSwitchApplication.InvoiceLine.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.TimesheetDetails);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TimesheetDetail> TimesheetDetailsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.InvoiceLine.DetailsClass.GetQuery(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.TimesheetDetails);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -696,6 +719,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail> TimesheetDetails
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.TimesheetDetails) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -719,6 +750,7 @@ namespace LightSwitchApplication
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ClientRole { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Project { get; set; }
+                new global::System.Collections.IEnumerable TimesheetDetails { get; }
             }
             #pragma warning restore 109
     
@@ -1399,6 +1431,26 @@ namespace LightSwitchApplication
                     e.Project_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry
+                    TimesheetDetails = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Entry(
+                        "TimesheetDetails",
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._TimesheetDetails_Stub,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._TimesheetDetails_GetReferencedEntities,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._TimesheetDetails_GetEntityCollection);
+                private static void _TimesheetDetails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceLine.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data> c, global::LightSwitchApplication.InvoiceLine.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TimesheetDetails, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TimesheetDetail> _TimesheetDetails_GetReferencedEntities(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass>(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.TimesheetDetails, ref d._TimesheetDetails);
+                }
+                private static global::System.Collections.IEnumerable _TimesheetDetails_GetEntityCollection(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
+                {
+                    return d.ImplementationEntity.TimesheetDetails;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1451,6 +1503,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.Project>.Data _Project;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
             
         }
     

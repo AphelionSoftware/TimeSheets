@@ -171,6 +171,15 @@
         Association="FK_InvoiceLine_Invoice"
         FromEnd="Invoice"
         ToEnd="InvoiceLine" />
+      <EntityProperty
+        Name="InvoicePurchaseOrderNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -370,6 +379,12 @@
           Nullable="False"
           Type="nvarchar"
           Property="Invoice/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoicePurchaseOrderNo"
+          Nullable="True"
+          Type="varchar"
+          Property="Invoice/Properties[InvoicePurchaseOrderNo]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

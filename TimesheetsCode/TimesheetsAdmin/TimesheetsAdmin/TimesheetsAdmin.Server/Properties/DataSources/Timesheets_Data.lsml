@@ -33,7 +33,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="d5dfceaa-5372-426a-a0a3-cd7f7d0398f6" />
+        Value="e417ff50-dc12-4d79-b0ae-4315b9364722" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />

@@ -228,6 +228,11 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="InvoiceLine"
+        Association="FK_TimesheetDetail_InvoiceLine"
+        FromEnd="TimesheetDetail"
+        ToEnd="InvoiceLine" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -441,7 +446,7 @@
           PropertyName="Active" />
         <SsdlForeignKeyProperty
           Name="Billable"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="Billable" />
         <SsdlForeignKeyProperty
@@ -449,6 +454,11 @@
           Nullable="False"
           Type="int"
           PropertyName="TimesheetDetailDateID" />
+        <SsdlForeignKeyProperty
+          Name="InvoiceLineID"
+          Nullable="True"
+          Type="int"
+          PropertyName="InvoiceLineID" />
         <SsdlForeignKeyProperty
           Name="TimesheetDetailPersonID"
           Nullable="False"

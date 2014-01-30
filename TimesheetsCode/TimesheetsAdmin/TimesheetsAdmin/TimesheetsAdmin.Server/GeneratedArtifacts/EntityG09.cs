@@ -363,6 +363,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string InvoicePurchaseOrderNo
+        {
+            get
+            {
+                return global::LightSwitchApplication.Invoice.DetailsClass.GetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoicePurchaseOrderNo);
+            }
+            set
+            {
+                global::LightSwitchApplication.Invoice.DetailsClass.SetValue(this, global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoicePurchaseOrderNo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoicePurchaseOrderNo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoicePurchaseOrderNo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoicePurchaseOrderNo_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
@@ -727,6 +751,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string> InvoicePurchaseOrderNo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties.InvoicePurchaseOrderNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
                 {
                     get
@@ -809,6 +841,7 @@ namespace LightSwitchApplication
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
+                new string InvoicePurchaseOrderNo { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Client { get; set; }
@@ -1263,6 +1296,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Entry
+                    InvoicePurchaseOrderNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Entry(
+                        "InvoicePurchaseOrderNo",
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_Stub,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_Validate,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_GetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_SetImplementationValue,
+                        global::LightSwitchApplication.Invoice.DetailsClass.PropertySetProperties._InvoicePurchaseOrderNo_OnValueChanged);
+                private static void _InvoicePurchaseOrderNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Invoice.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data> c, global::LightSwitchApplication.Invoice.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoicePurchaseOrderNo, sf);
+                }
+                private static bool _InvoicePurchaseOrderNo_ComputeIsReadOnly(global::LightSwitchApplication.Invoice e)
+                {
+                    bool result = false;
+                    e.InvoicePurchaseOrderNo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoicePurchaseOrderNo_Validate(global::LightSwitchApplication.Invoice e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoicePurchaseOrderNo_Validate(r);
+                }
+                private static string _InvoicePurchaseOrderNo_GetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoicePurchaseOrderNo;
+                }
+                private static void _InvoicePurchaseOrderNo_SetImplementationValue(global::LightSwitchApplication.Invoice.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.InvoicePurchaseOrderNo = v;
+                }
+                private static void _InvoicePurchaseOrderNo_OnValueChanged(global::LightSwitchApplication.Invoice e)
+                {
+                    e.InvoicePurchaseOrderNo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
                     ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
@@ -1648,6 +1718,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data _sys_ModifiedBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, string>.Data _InvoicePurchaseOrderNo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Invoice, global::LightSwitchApplication.Invoice.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;

@@ -2,15 +2,24 @@
     [ResourcePlanID]        INT            IDENTITY (1, 1) NOT NULL,
     [ResourcePlanComments]  NVARCHAR (255) NOT NULL,
     [WeekEndingDate]        DATETIME       NOT NULL,
-    [Blocks]                INT            NOT NULL,
     [sys_CreatedOn]         DATETIME       DEFAULT (getdate()) NOT NULL,
     [sys_CreatedBy]         NVARCHAR (255) DEFAULT ('Unknown') NOT NULL,
     [sys_ModifiedOn]        DATETIME       DEFAULT (getdate()) NOT NULL,
     [sys_ModifiedBy]        NVARCHAR (255) DEFAULT ('Unknown') NOT NULL,
     [ResourcePlanPersonID]  INT            NOT NULL,
-    [ResourcePlanProjectID] INT            NOT NULL,
+    [Block1_ClientID] INT NULL, 
+    [Block2_ClientID] INT NULL, 
+    [Block3_ClientID] INT NULL, 
+    [Block4_ClientID] INT NULL, 
+    [Block5_ClientID] INT NULL, 
+    [Blocks] INT NULL, 
+    [ResourcePlanProjectID] INT NULL, 
     PRIMARY KEY CLUSTERED ([ResourcePlanID] ASC),
     CONSTRAINT [FK_ResourcePlan_Person] FOREIGN KEY ([ResourcePlanPersonID]) REFERENCES [dbo].[Person] ([PersonID]),
-    CONSTRAINT [FK_ResourcePlan_Project] FOREIGN KEY ([ResourcePlanProjectID]) REFERENCES [dbo].[Project] ([ProjectID])
+    CONSTRAINT [FK_ResourcePlan_Client_Block1] FOREIGN KEY ([Block1_ClientID]) REFERENCES dbo.[Client]([ClientID]), 
+    CONSTRAINT [FK_ResourcePlan_Client_Block2] FOREIGN KEY ([Block1_ClientID]) REFERENCES dbo.[Client]([ClientID]), 
+    CONSTRAINT [FK_ResourcePlan_Client_Block3] FOREIGN KEY ([Block1_ClientID]) REFERENCES dbo.[Client]([ClientID]), 
+    CONSTRAINT [FK_ResourcePlan_Client_Block4] FOREIGN KEY ([Block1_ClientID]) REFERENCES dbo.[Client]([ClientID]), 
+    CONSTRAINT [FK_ResourcePlan_Client_Block5] FOREIGN KEY ([Block1_ClientID]) REFERENCES dbo.[Client]([ClientID])
 );
 

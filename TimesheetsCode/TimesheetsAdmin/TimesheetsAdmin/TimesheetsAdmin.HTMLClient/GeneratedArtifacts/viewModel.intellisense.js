@@ -4148,6 +4148,12 @@
             _$parentName: "Resourcing",
             screen: lightSwitchApplication.HomeScreen
         },
+        ShowResourcePlanTable: {
+            _$class: msls.ContentItem,
+            _$name: "ShowResourcePlanTable",
+            _$parentName: "Resourcing",
+            screen: lightSwitchApplication.HomeScreen
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -4246,7 +4252,12 @@
         /// Called after the ShowAddEditResourcePlanRange content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowAddEditResourcePlanRange_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowAddEditResourcePlanRange"); }]
+        ShowAddEditResourcePlanRange_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowAddEditResourcePlanRange"); }],
+        /// <field>
+        /// Called after the ShowResourcePlanTable content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowResourcePlanTable_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowResourcePlanTable"); }]
     });
 
     lightSwitchApplication.UnallocatedTimesheets.prototype._$contentItems = {
@@ -4515,6 +4526,274 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TimesheetDetailAM_postRender: [$element, function () { return new lightSwitchApplication.UnallocatedTimesheets().findContentItem("TimesheetDetailAM"); }]
+    });
+
+    lightSwitchApplication.ResourcePlanTable.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ResourcePlanTable
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: lightSwitchApplication.ResourcePlanTable
+        },
+        ResourcePlanSorted: {
+            _$class: msls.ContentItem,
+            _$name: "ResourcePlanSorted",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ResourcePlanTable,
+                _$entry: {
+                    elementType: lightSwitchApplication.ResourcePlan
+                }
+            }
+        },
+        ResourcePlanSortedTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "ResourcePlanSortedTemplate",
+            _$parentName: "ResourcePlanSorted",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: lightSwitchApplication.ResourcePlan
+        },
+        Person: {
+            _$class: msls.ContentItem,
+            _$name: "Person",
+            _$parentName: "ResourcePlanSortedTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: lightSwitchApplication.Person
+        },
+        PersonTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "PersonTemplate",
+            _$parentName: "Person",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.Person,
+            value: lightSwitchApplication.Person
+        },
+        Project: {
+            _$class: msls.ContentItem,
+            _$name: "Project",
+            _$parentName: "ResourcePlanSortedTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: lightSwitchApplication.Project
+        },
+        ProjectTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectTemplate",
+            _$parentName: "Project",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Project
+        },
+        Client: {
+            _$class: msls.ContentItem,
+            _$name: "Client",
+            _$parentName: "ProjectTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Client
+        },
+        ClientName: {
+            _$class: msls.ContentItem,
+            _$name: "ClientName",
+            _$parentName: "Client",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.Client,
+            value: String
+        },
+        ProjectName: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectName",
+            _$parentName: "ProjectTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.Project,
+            value: String
+        },
+        WeekEndingDate: {
+            _$class: msls.ContentItem,
+            _$name: "WeekEndingDate",
+            _$parentName: "ResourcePlanSortedTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: Date
+        },
+        Blocks: {
+            _$class: msls.ContentItem,
+            _$name: "Blocks",
+            _$parentName: "ResourcePlanSortedTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: Number
+        },
+        ResourcePlanComments: {
+            _$class: msls.ContentItem,
+            _$name: "ResourcePlanComments",
+            _$parentName: "ResourcePlanSortedTemplate",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlan,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ResourcePlanTable
+        },
+        Filter: {
+            _$class: msls.ContentItem,
+            _$name: "Filter",
+            _$parentName: "Popups",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: lightSwitchApplication.ResourcePlanTable
+        },
+        PersonName: {
+            _$class: msls.ContentItem,
+            _$name: "PersonName",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: String
+        },
+        ClientProject: {
+            _$class: msls.ContentItem,
+            _$name: "ClientProject",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: String
+        },
+        StartDate: {
+            _$class: msls.ContentItem,
+            _$name: "StartDate",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: Date
+        },
+        EndDate: {
+            _$class: msls.ContentItem,
+            _$name: "EndDate",
+            _$parentName: "Filter",
+            screen: lightSwitchApplication.ResourcePlanTable,
+            data: lightSwitchApplication.ResourcePlanTable,
+            value: Date
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ResourcePlanTable, {
+        /// <field>
+        /// Called when a new ResourcePlanTable screen is created.
+        /// <br/>created(msls.application.ResourcePlanTable screen)
+        /// </field>
+        created: [lightSwitchApplication.ResourcePlanTable],
+        /// <field>
+        /// Called before changes on an active ResourcePlanTable screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ResourcePlanTable screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ResourcePlanTable],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the ResourcePlanSorted content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanSorted_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ResourcePlanSorted"); }],
+        /// <field>
+        /// Called after the ResourcePlanSortedTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanSortedTemplate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ResourcePlanSortedTemplate"); }],
+        /// <field>
+        /// Called after the Person content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Person_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Person"); }],
+        /// <field>
+        /// Called after the PersonTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonTemplate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("PersonTemplate"); }],
+        /// <field>
+        /// Called after the Project content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Project"); }],
+        /// <field>
+        /// Called after the ProjectTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectTemplate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ProjectTemplate"); }],
+        /// <field>
+        /// Called after the Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Client"); }],
+        /// <field>
+        /// Called after the ClientName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientName_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ClientName"); }],
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ProjectName"); }],
+        /// <field>
+        /// Called after the WeekEndingDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WeekEndingDate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("WeekEndingDate"); }],
+        /// <field>
+        /// Called after the Blocks content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Blocks_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Blocks"); }],
+        /// <field>
+        /// Called after the ResourcePlanComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ResourcePlanComments_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ResourcePlanComments"); }],
+        /// <field>
+        /// Called after the Filter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Filter_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("Filter"); }],
+        /// <field>
+        /// Called after the PersonName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonName_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("PersonName"); }],
+        /// <field>
+        /// Called after the ClientProject content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ClientProject_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("ClientProject"); }],
+        /// <field>
+        /// Called after the StartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        StartDate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("StartDate"); }],
+        /// <field>
+        /// Called after the EndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndDate_postRender: [$element, function () { return new lightSwitchApplication.ResourcePlanTable().findContentItem("EndDate"); }]
     });
 
 }(msls.application));

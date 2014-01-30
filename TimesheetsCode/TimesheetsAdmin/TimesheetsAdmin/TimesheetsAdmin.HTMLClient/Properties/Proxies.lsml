@@ -406,4 +406,10 @@
         Target="ServiceInterface:UnallocatedTimesheet" />
     </EntityType.Attributes>
   </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_TimesheetDetail_InvoiceLine" />
+    </Association.Attributes>
+  </Association>
 </Application>

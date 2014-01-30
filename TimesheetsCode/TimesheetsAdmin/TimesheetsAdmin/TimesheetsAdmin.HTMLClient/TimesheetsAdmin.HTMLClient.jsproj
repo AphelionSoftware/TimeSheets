@@ -127,6 +127,7 @@
     <LightSwitchModel Include="Screens\BrowseTimesheets.lsml" />
     <LightSwitchModel Include="Screens\BrowseTypesOfWork.lsml" />
     <LightSwitchModel Include="Screens\HomeScreen.lsml" />
+    <LightSwitchModel Include="Screens\ResourcePlanTable.lsml" />
     <LightSwitchModel Include="Screens\UnallocatedTimesheets.lsml" />
   </ItemGroup>
   <ItemGroup>

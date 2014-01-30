@@ -8,7 +8,7 @@ CREATE PROC dbo.InsertResourcing
 , @ProjectID int
 ) 
 as
-SET NOCOUNT ON;
+SET NOCOUNT ON;/*
 INSERT INTO [dbo].[ResourcePlan]
            ([ResourcePlanComments]
            ,[WeekEndingDate]
@@ -31,3 +31,4 @@ from (select
  where column_id <= 52 /*For the next 12 months*/
 ) weeks
 where weeks.weekending BETWEEN @StartDate and @EndDate
+*/

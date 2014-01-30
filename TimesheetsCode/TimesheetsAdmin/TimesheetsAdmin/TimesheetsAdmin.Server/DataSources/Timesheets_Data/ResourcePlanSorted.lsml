@@ -24,79 +24,131 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Contains">
+                        NodeType="And">
                         <BinaryExpression.Left>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="Person" />
-                            <MemberExpression
-                              Member="PersonName" />
-                          </ChainExpression>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="Contains">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="Person" />
+                                    <MemberExpression
+                                      Member="PersonName" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="PersonName" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Or">
+                                <BinaryExpression.Attributes>
+                                  <ExpressionGroup />
+                                </BinaryExpression.Attributes>
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="Contains">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Project" />
+                                        <MemberExpression
+                                          Member="ProjectName" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="ClientProject" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Contains">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Project" />
+                                        <MemberExpression
+                                          Member="Client" />
+                                        <MemberExpression
+                                          Member="ClientName" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="ClientProject" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ParameterExpression
-                            Parameter="PersonName" />
+                          <BinaryExpression
+                            NodeType="LessThanOrEqual">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="WeekEndingDate" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="EndDate" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
-                      <BinaryExpression
-                        NodeType="Or">
-                        <BinaryExpression.Attributes>
+                      <TernaryExpression
+                        NodeType="Between">
+                        <TernaryExpression.Attributes>
                           <ExpressionGroup />
-                        </BinaryExpression.Attributes>
-                        <BinaryExpression.Left>
-                          <BinaryExpression
-                            NodeType="Contains">
-                            <BinaryExpression.Left>
-                              <ChainExpression>
-                                <MemberExpression
-                                  Member="Project" />
-                                <MemberExpression
-                                  Member="ProjectName" />
-                              </ChainExpression>
-                            </BinaryExpression.Left>
-                            <BinaryExpression.Right>
-                              <ParameterExpression
-                                Parameter="ClientProject" />
-                            </BinaryExpression.Right>
-                          </BinaryExpression>
-                        </BinaryExpression.Left>
-                        <BinaryExpression.Right>
-                          <BinaryExpression
-                            NodeType="Contains">
-                            <BinaryExpression.Left>
-                              <ChainExpression>
-                                <MemberExpression
-                                  Member="Project" />
-                                <MemberExpression
-                                  Member="Client" />
-                                <MemberExpression
-                                  Member="ClientName" />
-                              </ChainExpression>
-                            </BinaryExpression.Left>
-                            <BinaryExpression.Right>
-                              <ParameterExpression
-                                Parameter="ClientProject" />
-                            </BinaryExpression.Right>
-                          </BinaryExpression>
-                        </BinaryExpression.Right>
-                      </BinaryExpression>
+                        </TernaryExpression.Attributes>
+                        <TernaryExpression.First>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="WeekEndingDate" />
+                          </ChainExpression>
+                        </TernaryExpression.First>
+                        <TernaryExpression.Second>
+                          <ParameterExpression
+                            Parameter="StartDate" />
+                        </TernaryExpression.Second>
+                        <TernaryExpression.Third>
+                          <ParameterExpression
+                            Parameter="EndDate" />
+                        </TernaryExpression.Third>
+                      </TernaryExpression>
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
                   <BinaryExpression
-                    NodeType="LessThanOrEqual">
+                    NodeType="Equal">
                     <BinaryExpression.Left>
                       <ChainExpression>
                         <MemberExpression
-                          Member="WeekEndingDate" />
+                          Member="Person" />
+                        <MemberExpression
+                          Member="ActiveType" />
+                        <MemberExpression
+                          Member="ID" />
                       </ChainExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
-                      <ParameterExpression
-                        Parameter="EndDate" />
+                      <ConstantExpression
+                        Value="1"
+                        ResultType=":Int32" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Right>
@@ -104,43 +156,16 @@
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <BinaryExpression
-                NodeType="Or">
-                <BinaryExpression.Attributes>
-                  <ExpressionGroup />
-                </BinaryExpression.Attributes>
+                NodeType="GreaterThanOrEqual">
                 <BinaryExpression.Left>
-                  <BinaryExpression
-                    NodeType="GreaterThanOrEqual">
-                    <BinaryExpression.Left>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="WeekEndingDate" />
-                      </ChainExpression>
-                    </BinaryExpression.Left>
-                    <BinaryExpression.Right>
-                      <CallExpression
-                        Target=":RelativeDates/GlobalValues[Today]" />
-                    </BinaryExpression.Right>
-                  </BinaryExpression>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="WeekEndingDate" />
+                  </ChainExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
-                  <TernaryExpression
-                    NodeType="Between">
-                    <TernaryExpression.First>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="WeekEndingDate" />
-                      </ChainExpression>
-                    </TernaryExpression.First>
-                    <TernaryExpression.Second>
-                      <ParameterExpression
-                        Parameter="StartDate" />
-                    </TernaryExpression.Second>
-                    <TernaryExpression.Third>
-                      <ParameterExpression
-                        Parameter="EndDate" />
-                    </TernaryExpression.Third>
-                  </TernaryExpression>
+                  <CallExpression
+                    Target=":RelativeDates/GlobalValues[Today]" />
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -182,6 +207,13 @@
               Member="Person" />
             <MemberExpression
               Member="PersonName" />
+          </ChainExpression>
+        </SortCriterion>
+        <SortCriterion
+          Direction="Descending">
+          <ChainExpression>
+            <MemberExpression
+              Member="Blocks" />
           </ChainExpression>
         </SortCriterion>
       </QueryOperation.SortCriteria>
