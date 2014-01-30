@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
-using System.Data.Sql;
+using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace LightSwitchApplication
 {
@@ -74,7 +75,12 @@ namespace LightSwitchApplication
             entity.sys_CreatedOn = System.DateTime.Now;
             entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
-            entity.LoadDate = System.DateTime.Now; 
+            entity.LoadDate = System.DateTime.Now;
+            if (entity.InvoiceLineAmount == null)
+            {
+                entity.InvoiceLineAmount = entity.InvoiceLineCalcedAmount;
+            }
+
 
         }
 
@@ -82,6 +88,10 @@ namespace LightSwitchApplication
         {
             entity.sys_ModifiedBy = strUser()/*Application.User.FullName*/ /*"MarkGStacey"*/;
             entity.sys_ModifiedOn = System.DateTime.Now;
+            if (entity.InvoiceLineAmount == null)
+            {
+                entity.InvoiceLineAmount = entity.InvoiceLineCalcedAmount;
+            }
 
         }
 
@@ -145,6 +155,55 @@ namespace LightSwitchApplication
                      orderby dimDates.DateID descending
                      select dimDates);
         
+        }
+
+        partial void TimesheetDetails_Updated(TimesheetDetail entity)
+        {
+            //RecalcInvoiceAmounts();
+
+        }
+
+        private void RecalcInvoiceAmounts()
+        {
+            using (SqlConnection connection = new SqlConnection())
+            {
+                string connectionStringName = this.DataWorkspace.TimesheetsData.Details.Name;
+                connection.ConnectionString = ConfigurationManager.ConnectionStrings[connectionStringName].ConnectionString;
+
+                string procedure = "dbo.invInsertInvoiceLines";
+                using (SqlCommand command = new SqlCommand(procedure, connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+
+            this.Details.DiscardChanges();
+        }
+
+        partial void InvoiceLines_Updated(InvoiceLine entity)
+        {
+            RecalcInvoiceAmounts();
+        }
+
+        partial void InvoiceLines_Inserted(InvoiceLine entity)
+        {
+            RecalcInvoiceAmounts();
+        }
+
+        partial void Invoices_Updated(Invoice entity)
+        {
+
+        }
+
+        partial void SaveChanges_Executed()
+        {
+
+            RecalcInvoiceAmounts();
         }
 
     }

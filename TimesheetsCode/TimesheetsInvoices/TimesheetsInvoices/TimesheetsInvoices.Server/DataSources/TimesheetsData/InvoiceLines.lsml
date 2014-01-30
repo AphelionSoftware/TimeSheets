@@ -85,9 +85,8 @@
       </EntityProperty>
       <EntityProperty
         Name="InvoiceLineAmount"
-        PropertyType=":Decimal">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
-          <Required />
           <DecimalConstraint
             Precision="19"
             Scale="4" />
@@ -164,6 +163,17 @@
         Association="FK_TimesheetDetail_InvoiceLine"
         FromEnd="InvoiceLine"
         ToEnd="TimesheetDetail" />
+      <EntityProperty
+        Name="InvoiceLineCalcedAmount"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Required />
+          <DecimalConstraint
+            Precision="19"
+            Scale="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -334,7 +344,7 @@
           Property="InvoiceLine/Properties[InvoiceLineQty]" />
         <SsdlProperty
           Name="InvoiceLineAmount"
-          Nullable="False"
+          Nullable="True"
           Type="money"
           Property="InvoiceLine/Properties[InvoiceLineAmount]" />
         <SsdlProperty
@@ -359,6 +369,11 @@
           Nullable="False"
           Type="nvarchar"
           Property="InvoiceLine/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          Name="InvoiceLineCalcedAmount"
+          Nullable="False"
+          Type="money"
+          Property="InvoiceLine/Properties[InvoiceLineCalcedAmount]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

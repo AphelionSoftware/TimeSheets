@@ -47,3 +47,45 @@ function Totalinvoices(InvoiceLines) {
 
 }
 
+
+myapp.AddEditInvoice.InvoiceLines_ItemTap_execute = function (screen) {
+    // Write code here.
+    myapp.showAddEditInvoiceLine(screen.InvoiceLines.selectedItem
+        , {
+            beforeShown: function ()
+            {
+            }
+            ,
+            afterClosed: function (addEditScreen, navigationAction) {
+                // If the user commits the change,
+                // update the selected Invoice on the Main screen
+                if (navigationAction === msls.NavigateBackAction.commit) {
+                    // The .refresh() method refreshes the Invoice
+                    screen.InvoiceLines.selectedItem.details.refresh();
+                    screen.Invoice.details.refresh();
+                    
+                }
+
+            }
+        }
+        );
+
+
+};
+myapp.AddEditInvoice.created = function (screen) {
+    // Write code here.
+
+    // Write code here.
+    if (screen.Invoice.entityState !== msls.EntityState.unchanged){
+        screen.Invoice.details.refresh();
+    }
+    for ( i = 0; i < screen.Invoice.InvoiceLines.count; i++){
+        if (screen.Invoice.InvoiceLines[i].entityState !== msls.EntityState.unchanged) {
+            screen.Invoice.InvoiceLines[i].refresh();
+        }
+    }
+
+
+
+
+};

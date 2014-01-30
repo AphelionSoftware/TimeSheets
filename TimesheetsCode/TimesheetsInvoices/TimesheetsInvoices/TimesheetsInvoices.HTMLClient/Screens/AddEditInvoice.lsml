@@ -568,50 +568,17 @@
                     </ContentItem.PropertySources>
                   </ContentItem>
                   <ContentItem
-                    Name="ClientRole"
-                    Kind="Details"
-                    DataType="ClientRole"
-                    View="Microsoft.LightSwitch.MobileWeb:DetailsModalPicker">
-                    <ContentItem.Attributes>
-                      <DisplayName
-                        Value="ClientRole" />
-                    </ContentItem.Attributes>
-                    <ContentItem.ChoicesSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="AddEditInvoice/Properties[ClientRoleSorted]" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.ChoicesSource>
+                    Name="InvoiceLineCalcedAmount"
+                    Kind="Value"
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
                           <MemberExpression
-                            Member="InvoiceLine/Properties[ClientRole]" />
+                            Member="InvoiceLine/Properties[InvoiceLineCalcedAmount]" />
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
-                    <ContentItem
-                      Name="ClientRoleTemplate"
-                      Kind="Details"
-                      DataType="ClientRole">
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression />
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                      <ContentItem
-                        Name="RowTemplate8"
-                        Kind="Details"
-                        DataType="ClientRole">
-                        <ContentItem.DataSource>
-                          <ScreenExpressionTree>
-                            <ChainExpression />
-                          </ScreenExpressionTree>
-                        </ContentItem.DataSource>
-                      </ContentItem>
-                    </ContentItem>
                     <ContentItem.PropertySources>
                       <ControlPropertySource
                         Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
@@ -692,7 +659,7 @@
                   <ContentItem
                     Name="InvoiceLineAmount"
                     Kind="Value"
-                    DataType=":Decimal"
+                    DataType=":Decimal?"
                     View="Microsoft.LightSwitch.MobileWeb:TextBox">
                     <ContentItem.Attributes>
                       <DisplayName
@@ -727,21 +694,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showAddEditInvoiceLine]">
-                        <CallExpression.Attributes>
-                          <AssociatedCollection
-                            Collection="AddEditInvoice/Properties[InvoiceLines]" />
-                        </CallExpression.Attributes>
-                        <ArgumentExpression
-                          Parameter="InvoiceLine">
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="AddEditInvoice/Properties[InvoiceLines]" />
-                            <MemberExpression
-                              Member="selectedItem" />
-                          </ChainExpression>
-                        </ArgumentExpression>
-                      </CallExpression>
+                        Target="AddEditInvoice/Methods[InvoiceLines_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -958,6 +911,8 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
+      <ScreenMethod
+        Name="InvoiceLines_ItemTap" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

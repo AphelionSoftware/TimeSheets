@@ -454,7 +454,7 @@
           PropertyName="Active" />
         <SsdlForeignKeyProperty
           Name="Billable"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="Billable" />
         <SsdlForeignKeyProperty

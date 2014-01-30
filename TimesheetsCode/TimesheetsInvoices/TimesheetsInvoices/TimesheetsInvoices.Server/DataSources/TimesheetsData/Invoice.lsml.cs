@@ -21,7 +21,7 @@ namespace LightSwitchApplication
 
             foreach (var InvoiceLine in colInvoiceLines)
             {
-                dInvoiceTotal = dInvoiceTotal + (InvoiceLine.InvoiceLineAmount);
+                dInvoiceTotal = dInvoiceTotal + System.Convert.ToDecimal((InvoiceLine.InvoiceLineAmount));
 
             }
 

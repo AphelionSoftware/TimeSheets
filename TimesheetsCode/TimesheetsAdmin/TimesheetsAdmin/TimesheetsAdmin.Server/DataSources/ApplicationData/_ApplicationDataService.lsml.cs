@@ -5,8 +5,8 @@ using System.Text;
 using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
 using System.Data;
-using System.Data.SqlClient;
-using System.Configuration;
+    using System.Data.SqlClient;
+    using System.Configuration;
 namespace LightSwitchApplication
 {
     public partial class ApplicationDataService

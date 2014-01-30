@@ -1,17 +1,18 @@
 ﻿/// <reference path="../GeneratedArtifacts/viewModel.js" />
 
-myapp.BrowseInvoicesInDraft.InvoiceDraft_ItemTap_execute = function (screen) {
+myapp.BrowseAllInvoices.Invoice_ItemTap_execute = function (screen) {
     // Write code here.
-    //myapp.showAddEditInvoice(null);
-    myapp.showAddEditInvoice(screen.InvoicesInDraft.selectedItem
-        , {
-
+    myapp.showAddEditInvoice(null,
+        {
+            beforeShown: function (addEditInvoiceScreen) {
+                addEditInvoiceScreen.Invoice = screen.Invoices.selectedItem;
+            },
             afterClosed: function (addEditScreen, navigationAction) {
                 // If the user commits the change,
                 // update the selected Invoice on the Main screen
                 if (navigationAction === msls.NavigateBackAction.commit) {
                     // The .refresh() method refreshes the Invoice
-                    screen.InvoicesInDraft.selectedItem.details.refresh();
+                    screen.Invoices.selectedItem.details.refresh();
                 }
 
             }
@@ -19,4 +20,5 @@ myapp.BrowseInvoicesInDraft.InvoiceDraft_ItemTap_execute = function (screen) {
         );
 
 
+        
 };

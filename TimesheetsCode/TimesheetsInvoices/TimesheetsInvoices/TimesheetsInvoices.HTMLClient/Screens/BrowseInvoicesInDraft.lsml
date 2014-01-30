@@ -165,21 +165,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showAddEditInvoice]">
-                        <CallExpression.Attributes>
-                          <AssociatedCollection
-                            Collection="BrowseInvoicesInDraft/Properties[InvoicesInDraft]" />
-                        </CallExpression.Attributes>
-                        <ArgumentExpression
-                          Parameter="Invoice">
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="BrowseInvoicesInDraft/Properties[InvoicesInDraft]" />
-                            <MemberExpression
-                              Member="selectedItem" />
-                          </ChainExpression>
-                        </ArgumentExpression>
-                      </CallExpression>
+                        Target="BrowseInvoicesInDraft/Methods[InvoiceDraft_ItemTap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -343,6 +329,8 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
+      <ScreenMethod
+        Name="InvoiceDraft_ItemTap" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty

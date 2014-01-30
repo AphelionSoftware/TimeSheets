@@ -12,7 +12,7 @@ myapp.InvoiceLine.created = function (entity) {
         entity.ActiveType = ActiveTypesQuery.results[0];
     });
 
-
+    
 
   
 };

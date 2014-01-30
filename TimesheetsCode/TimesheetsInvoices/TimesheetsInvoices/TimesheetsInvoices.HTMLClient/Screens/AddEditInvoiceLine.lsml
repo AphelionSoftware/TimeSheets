@@ -100,9 +100,23 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
+                  Name="InvoiceLineCalcedAmount"
+                  Kind="Value"
+                  DataType=":Decimal"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="InvoiceLine/Properties[InvoiceLineCalcedAmount]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="InvoiceLineAmount"
                   Kind="Value"
-                  DataType=":Decimal">
+                  DataType=":Decimal?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -137,7 +151,8 @@
               </ContentItem>
               <ContentItem
                 Name="right"
-                Kind="Group">
+                Kind="Group"
+                View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem
                   Name="ClientRole"
                   Kind="Details"
@@ -429,6 +444,31 @@
                   </ContentItem.DataSource>
                 </ContentItem>
               </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="!module/Methods[showAddEditTimesheetDetail]">
+                        <CallExpression.Attributes>
+                          <AssociatedCollection
+                            Collection="AddEditInvoiceLine/Properties[TimesheetDetails]" />
+                        </CallExpression.Attributes>
+                        <ArgumentExpression
+                          Parameter="TimesheetDetail">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="AddEditInvoiceLine/Properties[TimesheetDetails]" />
+                            <MemberExpression
+                              Member="selectedItem" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
           </ContentItem>
         </ContentItem>
@@ -444,16 +484,6 @@
                 <ConstantExpression
                   Value="Edit"
                   ResultType=":String" />
-              </ChainExpression>
-            </ScreenExpressionTree>
-          </ControlPropertySource>
-          <ControlPropertySource
-            Property="Microsoft.LightSwitch.MobileWeb:Screen/Properties[ShowAsDialog]">
-            <ScreenExpressionTree>
-              <ChainExpression>
-                <ConstantExpression
-                  Value="True"
-                  ResultType=":Boolean" />
               </ChainExpression>
             </ScreenExpressionTree>
           </ControlPropertySource>

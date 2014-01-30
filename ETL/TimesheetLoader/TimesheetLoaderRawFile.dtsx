@@ -14,8 +14,8 @@
   DTS:ObjectName="TimesheetLoaderRawFile"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="714"
-  DTS:VersionGUID="{F0691324-29C9-4009-8EF2-0505CDE4DA78}">
+  DTS:VersionBuild="715"
+  DTS:VersionGUID="{F28AD814-ECFC-4907-81C2-37A1E69DC9EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -520,7 +520,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DateInt">
       <DTS:VariableValue
-        DTS:DataType="3">20140128</DTS:VariableValue>
+        DTS:DataType="3">20140130</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -20283,7 +20283,7 @@ where [refTable].[TypeOfWorkSourceKey] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-85.05638671875,40.5,111.6127734375,11.609375"
+              BoundingBox="-93.9250390625,40.5,129.350078125,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

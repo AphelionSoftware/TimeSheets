@@ -70,6 +70,9 @@
     <Content Include="Screens\AddEditInvoiceLine.lsml.js">
       <DependentUpon>AddEditInvoiceLine.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\BrowseAllInvoices.lsml.js">
+      <DependentUpon>BrowseAllInvoices.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\BrowseInvoicesInDraft.lsml.js">
       <DependentUpon>BrowseInvoicesInDraft.lsml</DependentUpon>
     </Content>
@@ -107,6 +110,7 @@
     <LightSwitchModel Include="Screens\AddEditCommission.lsml" />
     <LightSwitchModel Include="Screens\AddEditInvoice.lsml" />
     <LightSwitchModel Include="Screens\AddEditInvoiceLine.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTimesheetDetail.lsml" />
     <LightSwitchModel Include="Screens\BrowseAllInvoices.lsml" />
     <LightSwitchModel Include="Screens\BrowseClientsSorted.lsml" />
     <LightSwitchModel Include="Screens\BrowseCommissionsSorted.lsml" />
