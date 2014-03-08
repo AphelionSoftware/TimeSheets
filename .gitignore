@@ -5,7 +5,8 @@
 *.suo
 *.user
 *.sln.docstates
-
+*.dropbox
+Thumbs.db
 # Build results
 
 [Dd]ebug/
