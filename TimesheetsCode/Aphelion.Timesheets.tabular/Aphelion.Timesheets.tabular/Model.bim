@@ -10552,280 +10552,6 @@
               <Commands>
                 <Command>
                   <Text>CALCULATE; 
-CREATE MEMBER CURRENTCUBE.Measures.[__No measures defined] AS 1; 
-ALTER CUBE CURRENTCUBE UPDATE DIMENSION Measures, Default_Member = [__No measures defined]; 
-CREATE MEASURE 'FactTimesheetDetail'[Hours] =  ([Measures].[Raw Hours] , [Fact Timesheet Detail].[Exclude].[0]);
-CREATE MEASURE 'FactTimesheetDetail'[Work Days] =  CASE WHEN 
-[Measures].[Hours] = NULL
-THEN NULL ELSE
-
-[Measures].[Work Day]
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Work Hours] =  [Measures].[Work Days] * 8;
-CREATE MEASURE 'FactTimesheetDetail'[Hours Delta] =  [Measures].[Hours] - [Measures].[Work Hours];
-CREATE MEASURE 'FactTimesheetDetail'[Invoice Amount] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[B]) = NULL 
-THEN NULL ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
- OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
- THEN 333
-WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
-WHEN [Measures].[Hours] IS NULL THEN NULL
-else
- [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[B]))
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Project Dev Amount] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]) = NULL 
-THEN NULL ELSE
-
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN measures.[product hours] is null then null 
- else
- [Measures].[Billing Rate]
- END
-  *[Measures].[Product Hours]   
- )
- END;
-CREATE MEASURE 'FactTimesheetDetail'[Cap Contribution All Time] =  [Measures].[Invoice All Time] + [Measures].[Project Dev All Time];
-CREATE MEASURE 'FactTimesheetDetail'[Unfiltered Invoice All Time] =  SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-  * [Date].[BillingPeriod].[All]
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN 
-[Measures].[Hours] IS NULL THEN NULL
-else
- [Measures].[Billing Rate] END * 
-  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[B] 
- )
-  );
-CREATE MEASURE 'FactTimesheetDetail'[Invoice All Time] =  CASE WHEN ([Measures].[Hours] = NULL 
-AND
- ([Measures].[Project Cap] &gt; [Measures].[Unfiltered Invoice All Time] OR
-[Measures].[Project Cap] = 0
-) )
-OR 
-  NOT ([Project].[Status].Level IS [Project].[Status].[Project]
- OR [Project].[Name].Level is [Project].[Name].[Project Name]
- )  
-THEN NULL ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-  * [Date].[BillingPeriod].[All]
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN 
-[Measures].[Hours] IS NULL THEN NULL
-else
- [Measures].[Billing Rate] END * 
-  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[B] 
- )
-  )
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Project Dev All Time] =  CASE WHEN ([Measures].[Hours]) = NULL 
-OR 
-    NOT ([Project].[Status].Level IS [Project].[Status].[Project]
- OR [Project].[Name].Level is [Project].[Name].[Project Name]
- )
-THEN NULL ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers  
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-  * [Date].[BillingPeriod].[All]
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN 
-[Measures].[Hours] IS NULL THEN NULL
-else
- [Measures].[Billing Rate] END * 
-  ( [Measures].[Hours]    ,  [Billing Status].[Billing Status Code].&amp;[PROD] 
- )
-  )
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Cap Contribution Amount] =  [Measures].[Invoice Amount] + [Measures].[Project Dev Amount];
-CREATE MEASURE 'FactTimesheetDetail'[Unbillable Amount] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL 
- 
-THEN NULL ELSE
-SUM( 
- {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
- OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
- 
-
- THEN 333
-WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
-else
- [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Unbillable Amount All Time] =  CASE WHEN ([Measures].[Hours] ) = NULL 
- OR 
-  NOT [Project].[Status].Level IS [Project].[Status].[Project]
-THEN NULL ELSE
-SUM( 
- {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-  * [Date].[BillingPeriod].[All]
-} , 
- 
- [Measures].[Billing Rate]  * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Unallocated Amount] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]) = NULL 
- 
-THEN NULL ELSE
-SUM( 
- {
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-
-} , 
- 
- [Measures].[Billing Rate]  * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]))
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Unbillable Amount - Billable Project] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL 
- 
-THEN NULL ELSE
-SUM( 
- {
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].Members
-
-} ,
-[Measures].[Billing Rate] ) END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]
-,[Project].[Project Billing Status].&amp;[Billable]);
-CREATE MEASURE 'FactTimesheetDetail'[Billable Hours] =  CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[B]) = NULL 
-/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
-THEN NULL
- ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
-} , 
- ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[B]))
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Unbillable Hours] =  CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]) = NULL THEN NULL ELSE
-
-SUM( 
- {--EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
-  EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
-} , 
-
- ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNB]))
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Product Hours] =  CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]) = NULL 
-/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
-THEN NULL
- ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
-} , 
- ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[PROD]))
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Unallocated Hours] =  CASE WHEN ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]) = NULL 
-/*OR NOT [Fact Timesheet Detail].[Exclude].[1] = NULL  */
-THEN NULL
- ELSE
-SUM( 
- {
- --EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers   
- EXISTING [Fact Timesheet Detail].[Name Comments].[Comments].AllMembers
-} , 
- ([Measures].[Raw Hours] ,[Billing Status].[Billing Status Code].&amp;[UNAC]))
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Non Billing Amount] =  CASE WHEN ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[NB]) = NULL THEN NULL ELSE
-SUM( 
- {EXISTING [Fact Timesheet Detail].[Name Comments].[Person Name].Allmembers 
-/**  NONEMPTY( [Project].[Source Key].[Client Source Key].&amp;[DPME].Children , [Measures].[Rate] )
-*/} , 
- CASE WHEN [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Data Quality Maintenance]
- OR [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Preventative Maintenance]
- 
-
- THEN 333
-WHEN  [Project].[Source Key] IS [Project].[Source Key].[Project Source Key].&amp;[8]&amp;[DPME - Routine Maintenance] THEN 500
-else
- [Measures].[Billing Rate] END * ([Measures].[Hours] ,[Billing Status].[Billing Status Code].&amp;[NB]))
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Project Cap - logged projects] =  CASE WHEN ([Measures].[Hours] = NULL AND
- ([Measures].[Project Cap] &gt; [Measures].[Invoice All Time] OR
-[Measures].[Project Cap] = 0
-) )
-OR 
-    NOT ([Project].[Status].Level IS [Project].[Status].[Project]
- OR [Project].[Name].Level is [Project].[Name].[Project Name]
- )
-
-THEN NULL ELSE [Measures].[Project Cap]
-END;
-CREATE MEASURE 'FactTimesheetDetail'[InvoiceX] =  SUM( 
- {EXISTING  [Project].[Source Key].[Client Source Key].&amp;[DPME].Children}  
- , 
- 
- [Measures].[Invoice Amount] );
-CREATE MEASURE 'FactTimesheetDetail'[CountX] =  COUNT(FILTER(EXISTING  [Project].[Source Key].[Client Source Key].&amp;[DPME].Children, Measures.Rate &gt; 0) );
-CREATE MEASURE 'FactTimesheetDetail'[Invoice Amount incl VAT] =  [Measures].[Invoice Amount] * 1.14;
-CREATE MEASURE 'FactTimesheetDetail'[Billability] =  ([Measures].[Billable Hours]  + [Measures].[Product Hours])/ ([Measures].[Work Hours] 
-* COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
-);
-CREATE MEASURE 'FactTimesheetDetail'[Billability Target] =  CASE WHEN [Measures].[Billability] = nuLL THEN NULL
-ELSE [Measures].[Billing Percent Target] / 100 
-/  COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Billability Minimum] =  CASE WHEN [Measures].[Billability] = nuLL THEN NULL
-ELSE [Measures].[Billing Percent Minimum] / 100
-/  COUNT(EXISTING [Fact Timesheet Detail].[Person Comments].[Person].Members)
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Person Period Cost ROOT] =  CASE WHEN measures.[Is Contractor] = 1
-THEN [Hourly Cost] * [Measures].[Raw Hours]
-ELSE /*[Monthly Cost] * [Billing Periods Count]
-*/SUM(
-NONEMPTYCROSSJOIN(
-{EXISTING DESCENDANTS([Date].[BillingPeriod].[All],
-[Date].[BillingPeriod].[Billing Period]
-)* [Raw hours]}
-),
-Measures.[Monthly Cost] )
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Person Period Cost] =  CASE WHEN measures.[Is Contractor] = 1
-AND [Measures].[Raw Hours] &gt; 0
-THEN [Hourly Cost] * [Measures].[Raw Hours]
-WHEN [Measures].[Raw Hours] &gt; 0 THEN /*[Monthly Cost] * [Billing Periods Count]
-*/[Billing Periods Count] *
-Measures.[Monthly Cost] 
-
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Person Avg Hourly Cost] =  CASE WHEN Measures.[Person Period Cost] &gt; 0 THEN 
-
-Measures.[Person Period Cost] 
-/ Measures.[Billable Hours]
-END;
-CREATE MEASURE 'FactTimesheetDetail'[Base Hourly Cost] =  CASE WHEN [Hourly Cost] &gt; 0 
-THEN [Hourly Cost] 
-END;
 
 </Text>
                 </Command>
@@ -10835,43 +10561,113 @@ END;
 -- PowerPivot measures command (do not modify manually) --
 ----------------------------------------------------------
 
-CREATE MEASURE 'FactTimesheetDetail'[Raw Hours] = Sum('FactTimesheetDetail'[RawHours_src]);
-
-CREATE MEASURE 'FactTimesheetDetail'[FactTimesheetDetailCount]=Count('FactTimesheetDetail'[TimesheetDetailID]);
-CREATE MEASURE 'FactTimesheetDetail'[Billing Rate] = Max('FactTimesheetDetail'[BillingRate_src]);
-
-CREATE MEASURE 'FactBillingRates'[Rate] = Max('FactBillingRates'[Rate_src]);
-
-CREATE MEASURE 'FactBillingRates'[FactBillingRatesCount]=Count('FactBillingRates'[BillingDetailID]);
-CREATE MEASURE 'Date'[Work Day] = Sum('Date'[WorkDay]);
-
-CREATE MEASURE 'Person'[Billing Percent Target] = Sum('Person'[BillingPercentTarget_src]);
-
-CREATE MEASURE 'Person'[Billing Percent Minimum] = Sum('Person'[BillingPercentMinimum_src]);
-
-CREATE MEASURE 'Person'[PersonCount]=Count('Person'[PersonID]);
-CREATE MEASURE 'Person'[Hourly Cost] = Max('Person'[HourlyCost_src]);
-
-CREATE MEASURE 'Person'[Monthly Cost] = Max('Person'[MonthlyCost_src]);
-
-CREATE MEASURE 'Person'[Is Contractor] = Sum('Person'[IsContractor]);
-
-CREATE MEASURE 'FactProjectBilling'[Consulting Estimate] = Sum('FactProjectBilling'[ConsultingEstimate_src]);
-
-CREATE MEASURE 'FactProjectBilling'[Software Estimate] = Sum('FactProjectBilling'[SoftwareEstimate_src]);
-
-CREATE MEASURE 'FactProjectBilling'[VM Estimate] = Sum('FactProjectBilling'[VMEstimate_src]);
-
-CREATE MEASURE 'FactProjectBilling'[Project Cap] = Sum('FactProjectBilling'[ProjectCap_src]);
-
-CREATE MEASURE 'FactProjectBilling'[ProjectBillingCount]=Count('FactProjectBilling'[]);
-CREATE MEASURE 'Date'[Billing Periods Count] = DistinctCount('Date'[BillingPeriodText]);
-
-
 
 </Text>
                 </Command>
+                <Command>
+                  <Text>----------------------------------------------------------
+-- PowerPivot measures command (do not modify manually) --
+----------------------------------------------------------
+
+
+CREATE MEASURE 'FactTimesheetDetail'[Hours]=CALCULATE(SUM(FactTimesheetDetail[RawHours_src]	), FactTimeSheetdetail[EXCLUDE]=0);
+CREATE MEASURE 'FactTimesheetDetail'[Work Days]=IF([Hours]=0,0,'Date'[Work Day]);
+CREATE MEASURE 'Date'[Work Day]=SUM('Date'[WorkDay]);
+CREATE MEASURE 'FactTimesheetDetail'[Work Hours]=[Work Day]*8;
+</Text>
+                </Command>
               </Commands>
+              <CalculationProperties>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Hours]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Work Days]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Work Day]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Work Hours]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <CalculationReference>Measures.[__No measures defined]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+              </CalculationProperties>
             </MdxScript>
           </MdxScripts>
           <StorageMode valuens="ddl200_200">InMemory</StorageMode>
