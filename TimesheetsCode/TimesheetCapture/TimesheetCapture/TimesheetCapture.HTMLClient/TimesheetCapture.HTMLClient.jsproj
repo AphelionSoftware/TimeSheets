@@ -121,7 +121,9 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddEditTimesheetDetail.lsml" />
     <LightSwitchModel Include="Screens\AddNewTimesheet.lsml" />
+    <LightSwitchModel Include="Screens\BrowseTimesheets.lsml" />
     <LightSwitchModel Include="Screens\EditTimesheet.lsml" />
     <LightSwitchModel Include="Screens\EditTimesheetDetails.lsml" />
     <LightSwitchModel Include="Screens\ManageTimesheets.lsml" />

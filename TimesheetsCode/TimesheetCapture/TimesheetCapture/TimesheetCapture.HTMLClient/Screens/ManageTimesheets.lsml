@@ -25,7 +25,7 @@
             Name="TimesheetList"
             Kind="Group">
             <ContentItem
-              Name="Timesheet"
+              Name="TimesheetsUser"
               Kind="Collection"
               DataType="CollectionView$Timesheet"
               View="Microsoft.LightSwitch.MobileWeb:TileList">
@@ -38,37 +38,101 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
-                Name="RowTemplate"
+                Name="TimesheetsUserTemplate"
                 Kind="Details"
-                DataType="Timesheet"
-                View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                DataType="Timesheet">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="DimDate"
+                  Name="Person"
                   Kind="Details"
-                  DataType="DimDate">
+                  DataType="PersonItem">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Timesheet/Properties[DimDate]" />
+                          Member="Timesheet/Properties[Person]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
-                    Name="RowTemplate2"
+                    Name="PersonItem"
                     Kind="Details"
-                    DataType="DimDate">
+                    DataType="PersonItem">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
                   </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="TimesheetDate"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[TimesheetDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="LoadDate"
+                  Kind="Value"
+                  DataType=":DateTime">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[LoadDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="TimesheetName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[TimesheetName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="TimesheetCode"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[TimesheetCode]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="TimesheetFileName"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Timesheet/Properties[TimesheetFileName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
                 </ContentItem>
               </ContentItem>
               <ContentItem.PropertySources>
@@ -77,7 +141,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="ManageTimesheets/Methods[Timesheet_ItemTap]" />
+                        Target="ManageTimesheets/Methods[EditTimesheet_Tap]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -86,6 +150,7 @@
             <ContentItem.CommandItems>
               <ContentItem
                 Name="ShowTimesheetDetails_Tap"
+                IsHidden="True"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -174,7 +239,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Edit Billing Period" />
+                    Value="Edit Timesheet" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource

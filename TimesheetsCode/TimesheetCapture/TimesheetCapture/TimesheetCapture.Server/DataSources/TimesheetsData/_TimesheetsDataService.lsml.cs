@@ -51,6 +51,11 @@ namespace LightSwitchApplication
                         case "":
                             strUser = Environment.UserName;
                             break;
+                        case null:
+                            strUser = Environment.UserName;
+                            break;
+                            
+
                         default:
                             strUser = Application.User.Name.Split('|')[2];
                             break;
@@ -94,6 +99,7 @@ namespace LightSwitchApplication
                     string strUserName = UserName;
                     int_tsPersonID = (from p in DataWorkspace.TimesheetsData.People
                                       where p.ADUsername == strUserName || p.SharepointUserName == strUserName
+                                      || p.ADUsername.StartsWith(strUserName) || p.SharepointUserName.StartsWith(strUserName)
                                       select p.PersonID).FirstOrDefault();
 
 

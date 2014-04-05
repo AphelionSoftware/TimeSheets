@@ -8,11 +8,11 @@
   <Application.Attributes>
     <ModuleNamespace
       Namespace="LightSwitchApplication" />
-    <HomeScreen />
+    <HomeScreen
+      Value="ManageTimesheets" />
     <Partial
       IsPrimary="True" />
   </Application.Attributes>
-  <Application.Methods></Application.Methods>
   <EntityContainerGroup
     Name="DataWorkspace">
     <EntityContainerGroupProperty
@@ -36,4 +36,12 @@
         Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
     </GlobalAttributeGroup.Attributes>
   </GlobalAttributeGroup>
+  <Application.NavigationItems>
+    <ApplicationNavigationMethodLink
+      Name="link"
+      Method="!module/Methods[showManageTimesheets]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showManageTimesheets]" />
+  </Application.NavigationItems>
 </Application>

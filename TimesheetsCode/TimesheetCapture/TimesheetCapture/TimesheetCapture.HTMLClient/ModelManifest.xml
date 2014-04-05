@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Properties\Client.lsml" Checksum="03F4A39CC03F11890CF391A0506D91B939DDD82AE1C3E055854460932443B7AA" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Properties\Proxies.lsml" Checksum="F0D144C27853B75E8940FCF2164B978F2D6B3821E2C37BD507B9E0DFDFD778CB" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\AddNewTimesheet.lsml" Checksum="C04213EDABA2C0B0A911048F8EE82F45253AB3E9F0A151F717ACAC2C7EFF046F" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\EditTimesheet.lsml" Checksum="27FF2BDB285E0C4D24D71E7FCDFA2CC24CB21EA856710CE661AE9E1D6DAE22C6" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\EditTimesheetDetails.lsml" Checksum="DB0389A88AFA260ED2551A320CF68A22E9EBAC0B1E52AA5B190ACDC83950AE2A" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\ManageTimesheets.lsml" Checksum="99DBF4BB6556F7F0A55FF7A88ADCED29A10BD0A2C0B9F4E536AA54FEAF5AD845" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Properties\Client.lsml" Checksum="A80FDC434F492027BCAC7508A15A52B8CFE4929D8F4241E854E344B7C1D81FFE" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Properties\Proxies.lsml" Checksum="F0D144C27853B75E8940FCF2164B978F2D6B3821E2C37BD507B9E0DFDFD778CB" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\AddEditTimesheetDetail.lsml" Checksum="56032E0CDADB2CFE91E0BA0C9D3FAF9829BE408943B5EF4CE3AB2F9974C30E74" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\AddNewTimesheet.lsml" Checksum="C04213EDABA2C0B0A911048F8EE82F45253AB3E9F0A151F717ACAC2C7EFF046F" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\BrowseTimesheets.lsml" Checksum="B5762B8355D664FADFD3FCEB33A91547DF4428E98BC47E010A6CE00FDA34BA3F" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\EditTimesheet.lsml" Checksum="28CCDA6A9CA1CED62091DE9FA78E8FE40FABF446B7559ABF7E102CB7E016379D" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\EditTimesheetDetails.lsml" Checksum="DB0389A88AFA260ED2551A320CF68A22E9EBAC0B1E52AA5B190ACDC83950AE2A" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\Screens\ManageTimesheets.lsml" Checksum="7F3EAC9596BF4519F50D12379DEBE36509D439D261C754733921F6BC65FCC8C1" />
   </Documents>
 </ModelDocumentManifest>
