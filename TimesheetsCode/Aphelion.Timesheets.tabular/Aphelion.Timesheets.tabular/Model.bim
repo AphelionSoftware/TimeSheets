@@ -236,6 +236,16 @@
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>BillingRate_src</Name>
                 </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Billable hours</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Billable Time</Name>
+                </AttributeRelationship>
+                <AttributeRelationship>
+                  <AttributeID>Product Time</AttributeID>
+                  <OverrideBehavior>None</OverrideBehavior>
+                  <Name>Product Time</Name>
+                </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1316,6 +1326,60 @@
               </NameColumn>
               <OrderBy>Key</OrderBy>
             </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Billable hours</ID>
+              <Name>Billable Time</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>IF(FactTimesheetDetail[Billable]=1,FactTimesheetDetail[RawHours_src])</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>IF(FactTimesheetDetail[Billable]=1,FactTimesheetDetail[RawHours_src])</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
+            <Attribute>
+              <Annotations>
+                <Annotation>
+                  <Name>Format</Name>
+                  <Value>
+                    <Format Format="General" xmlns="" />
+                  </Value>
+                </Annotation>
+              </Annotations>
+              <ID>Product Time</ID>
+              <Name>Product Time</Name>
+              <KeyColumns>
+                <KeyColumn>
+                  <DataType>Empty</DataType>
+                  <Source xsi:type="ddl200_200:ExpressionBinding">
+                    <Expression>IF(FactTimesheetDetail[Billable]=3,FactTimesheetDetail[RawHours_src])</Expression>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <NameColumn>
+                <DataType>WChar</DataType>
+                <Source xsi:type="ddl200_200:ExpressionBinding">
+                  <Expression>IF(FactTimesheetDetail[Billable]=3,FactTimesheetDetail[RawHours_src])</Expression>
+                </Source>
+              </NameColumn>
+              <OrderBy>Key</OrderBy>
+            </Attribute>
           </Attributes>
           <Hierarchies>
             <Hierarchy>
@@ -1513,29 +1577,6 @@
               </ddl300_300:ToRelationshipEnd>
             </ddl300_300:Relationship>
             <ddl300_300:Relationship>
-              <ID>FactTimesheetDetail-DimTimesheet</ID>
-              <ddl300_300:FromRelationshipEnd>
-                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
-                <ddl300:VisualizationProperties />
-                <DimensionID>FactTimesheetDetail</DimensionID>
-                <Attributes>
-                  <Attribute>
-                    <AttributeID>TimesheetID</AttributeID>
-                  </Attribute>
-                </Attributes>
-              </ddl300_300:FromRelationshipEnd>
-              <ddl300_300:ToRelationshipEnd>
-                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
-                <ddl300:VisualizationProperties />
-                <DimensionID>Timesheet</DimensionID>
-                <Attributes>
-                  <Attribute>
-                    <AttributeID>TimesheetID</AttributeID>
-                  </Attribute>
-                </Attributes>
-              </ddl300_300:ToRelationshipEnd>
-            </ddl300_300:Relationship>
-            <ddl300_300:Relationship>
               <ID>FactTimesheetDetail-DimTypeOfWork</ID>
               <ddl300_300:FromRelationshipEnd>
                 <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
@@ -1600,6 +1641,29 @@
                 <Attributes>
                   <Attribute>
                     <AttributeID>BillingStatusID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:ToRelationshipEnd>
+            </ddl300_300:Relationship>
+            <ddl300_300:Relationship>
+              <ID>0dcf5828-d045-46ae-bc84-8b9ce69056b6</ID>
+              <ddl300_300:FromRelationshipEnd>
+                <ddl300_300:Multiplicity>Many</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>FactTimesheetDetail</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>TimesheetID</AttributeID>
+                  </Attribute>
+                </Attributes>
+              </ddl300_300:FromRelationshipEnd>
+              <ddl300_300:ToRelationshipEnd>
+                <ddl300_300:Multiplicity>One</ddl300_300:Multiplicity>
+                <ddl300:VisualizationProperties />
+                <DimensionID>Timesheet</DimensionID>
+                <Attributes>
+                  <Attribute>
+                    <AttributeID>TimesheetID</AttributeID>
                   </Attribute>
                 </Attributes>
               </ddl300_300:ToRelationshipEnd>
@@ -2249,11 +2313,6 @@
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>ActiveClient</Name>
                 </AttributeRelationship>
-                <AttributeRelationship>
-                  <AttributeID>Billable</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>Billable</Name>
-                </AttributeRelationship>
               </AttributeRelationships>
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -2888,33 +2947,6 @@
                 <DataType>WChar</DataType>
                 <Source xsi:type="ddl200_200:ExpressionBinding">
                   <Expression>RELATED('DimClient'[ClientName])</Expression>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>Billable</ID>
-              <Name>Billable</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>Empty</DataType>
-                  <Source xsi:type="ddl200_200:ExpressionBinding">
-                    <Expression>RELATED('DimClient'[Billable])</Expression>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <Source xsi:type="ddl200_200:ExpressionBinding">
-                  <Expression>RELATED('DimClient'[Billable])</Expression>
                 </Source>
               </NameColumn>
               <OrderBy>Key</OrderBy>
@@ -5283,11 +5315,6 @@
                   <Name>ActiveClient</Name>
                 </AttributeRelationship>
                 <AttributeRelationship>
-                  <AttributeID>TimesheetDetailID</AttributeID>
-                  <OverrideBehavior>None</OverrideBehavior>
-                  <Name>TimesheetDetailID</Name>
-                </AttributeRelationship>
-                <AttributeRelationship>
                   <AttributeID>ClientSourceKey</AttributeID>
                   <OverrideBehavior>None</OverrideBehavior>
                   <Name>ClientSourceKey</Name>
@@ -5470,33 +5497,6 @@
               </NameColumn>
               <OrderBy>Key</OrderBy>
               <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-            </Attribute>
-            <Attribute>
-              <Annotations>
-                <Annotation>
-                  <Name>Format</Name>
-                  <Value>
-                    <Format Format="Text" xmlns="" />
-                  </Value>
-                </Annotation>
-              </Annotations>
-              <ID>TimesheetDetailID</ID>
-              <Name>TimesheetDetailID</Name>
-              <KeyColumns>
-                <KeyColumn>
-                  <DataType>Empty</DataType>
-                  <Source xsi:type="ddl200_200:ExpressionBinding">
-                    <Expression>RELATED('FactTimesheetDetail'[TimesheetDetailID])</Expression>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <NameColumn>
-                <DataType>WChar</DataType>
-                <Source xsi:type="ddl200_200:ExpressionBinding">
-                  <Expression>RELATED('FactTimesheetDetail'[TimesheetDetailID])</Expression>
-                </Source>
-              </NameColumn>
-              <OrderBy>Key</OrderBy>
             </Attribute>
             <Attribute>
               <Annotations>
@@ -6001,6 +6001,12 @@
                 <Attribute>
                   <AttributeID>BillingRate_src</AttributeID>
                 </Attribute>
+                <Attribute>
+                  <AttributeID>Billable hours</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Product Time</AttributeID>
+                </Attribute>
               </Attributes>
               <Hierarchies>
                 <Hierarchy>
@@ -6130,10 +6136,6 @@
                 </Attribute>
                 <Attribute>
                   <AttributeID>ActiveClient</AttributeID>
-                  <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>Billable</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
                 </Attribute>
               </Attributes>
@@ -6377,9 +6379,6 @@
                 <Attribute>
                   <AttributeID>ActiveClient</AttributeID>
                   <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-                </Attribute>
-                <Attribute>
-                  <AttributeID>TimesheetDetailID</AttributeID>
                 </Attribute>
                 <Attribute>
                   <AttributeID>ClientSourceKey</AttributeID>
@@ -6910,6 +6909,28 @@
                         </KeyColumn>
                       </KeyColumns>
                     </Attribute>
+                    <Attribute>
+                      <AttributeID>Billable hours</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression></Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Product Time</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Empty</DataType>
+                          <Source xsi:type="ddl200_200:ExpressionBinding">
+                            <Expression>IF(FactTimesheetDetail[Billable]=3,FactTimesheetDetail[RawHours_src])</Expression>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
                   </Attributes>
                   <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
                 </Dimension>
@@ -6998,17 +7019,6 @@
                           <Source xsi:type="ColumnBinding">
                             <TableID>DimClient</TableID>
                             <ColumnID>_x005B_ActiveClient_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetDetailID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>RELATED('FactTimesheetDetail'[TimesheetDetailID])</Expression>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -7513,205 +7523,11 @@
                         </KeyColumn>
                       </KeyColumns>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>Billable</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>RELATED('DimClient'[Billable])</Expression>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
                   </Attributes>
                   <IntermediateCubeDimensionID>FactTimesheetDetail</IntermediateCubeDimensionID>
                   <IntermediateGranularityAttributeID>TimesheetDetailProjectID</IntermediateGranularityAttributeID>
                   <Materialization>Regular</Materialization>
                   <ddl300:RelationshipID>FactTimesheetDetail-DimProject</ddl300:RelationshipID>
-                </Dimension>
-                <Dimension xsi:type="ReferenceMeasureGroupDimension">
-                  <CubeDimensionID>Timesheet</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>RowNumber</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Integer</DataType>
-                          <DataSize>4</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <Source xsi:type="ddl200_200:RowNumberBinding" />
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Integer</DataType>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>TimesheetID</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                      <Type>Granularity</Type>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetName</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetName_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetCode</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetCode_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetFileName</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetFileName_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetFromDateID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Integer</DataType>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetFromDateID_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetToDateID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Integer</DataType>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetToDateID_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetPerson</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetPerson_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetDate</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_TimesheetDate_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>OverallStatusName</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_OverallStatusName_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>OverallStatusCode</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_OverallStatusCode_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>OverallStatusSourceKey</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>WChar</DataType>
-                          <DataSize>255</DataSize>
-                          <NullProcessing>Error</NullProcessing>
-                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
-                          <Source xsi:type="ColumnBinding">
-                            <TableID>Timesheet</TableID>
-                            <ColumnID>_x005B_OverallStatusSourceKey_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                  </Attributes>
-                  <IntermediateCubeDimensionID>FactTimesheetDetail</IntermediateCubeDimensionID>
-                  <IntermediateGranularityAttributeID>TimesheetID</IntermediateGranularityAttributeID>
-                  <Materialization>Regular</Materialization>
-                  <ddl300:RelationshipID>FactTimesheetDetail-DimTimesheet</ddl300:RelationshipID>
                 </Dimension>
                 <Dimension xsi:type="ReferenceMeasureGroupDimension">
                   <CubeDimensionID>TypeOfWork</CubeDimensionID>
@@ -8269,6 +8085,189 @@
                   <IntermediateGranularityAttributeID>Billable</IntermediateGranularityAttributeID>
                   <Materialization>Regular</Materialization>
                   <ddl300:RelationshipID>FactTimesheetDetail-DimBillingStatus</ddl300:RelationshipID>
+                </Dimension>
+                <Dimension xsi:type="ReferenceMeasureGroupDimension">
+                  <CubeDimensionID>Timesheet</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>RowNumber</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <DataSize>4</DataSize>
+                          <NullProcessing>Error</NullProcessing>
+                          <Source xsi:type="ddl200_200:RowNumberBinding" />
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <NullProcessing>Error</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetID_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                      <Type>Granularity</Type>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetName_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetCode</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetCode_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetFileName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetFileName_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetFromDateID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetFromDateID_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetToDateID</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>Integer</DataType>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetToDateID_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetPerson</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetPerson_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TimesheetDate</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_TimesheetDate_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>OverallStatusName</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_OverallStatusName_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>OverallStatusCode</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_OverallStatusCode_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>OverallStatusSourceKey</AttributeID>
+                      <KeyColumns>
+                        <KeyColumn>
+                          <DataType>WChar</DataType>
+                          <DataSize>255</DataSize>
+                          <NullProcessing>Preserve</NullProcessing>
+                          <InvalidXmlCharacters>Remove</InvalidXmlCharacters>
+                          <Source xsi:type="ColumnBinding">
+                            <TableID>Timesheet</TableID>
+                            <ColumnID>_x005B_OverallStatusSourceKey_x005D_</ColumnID>
+                          </Source>
+                        </KeyColumn>
+                      </KeyColumns>
+                    </Attribute>
+                  </Attributes>
+                  <IntermediateCubeDimensionID>FactTimesheetDetail</IntermediateCubeDimensionID>
+                  <IntermediateGranularityAttributeID>TimesheetID</IntermediateGranularityAttributeID>
+                  <Materialization>Regular</Materialization>
+                  <ddl300:RelationshipID>0dcf5828-d045-46ae-bc84-8b9ce69056b6</ddl300:RelationshipID>
                 </Dimension>
               </Dimensions>
               <Partitions>
@@ -8877,17 +8876,6 @@
                         </KeyColumn>
                       </KeyColumns>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>Billable</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>RELATED('DimClient'[Billable])</Expression>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
                   </Attributes>
                   <ddl200_200:ShareDimensionStorage>Shared</ddl200_200:ShareDimensionStorage>
                 </Dimension>
@@ -8976,17 +8964,6 @@
                           <Source xsi:type="ColumnBinding">
                             <TableID>DimClient</TableID>
                             <ColumnID>_x005B_ActiveClient_x005D_</ColumnID>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>TimesheetDetailID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>RELATED('FactTimesheetDetail'[TimesheetDetailID])</Expression>
                           </Source>
                         </KeyColumn>
                       </KeyColumns>
@@ -10211,17 +10188,6 @@
                       </KeyColumns>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>TimesheetDetailID</AttributeID>
-                      <KeyColumns>
-                        <KeyColumn>
-                          <DataType>Empty</DataType>
-                          <Source xsi:type="ddl200_200:ExpressionBinding">
-                            <Expression>RELATED('FactTimesheetDetail'[TimesheetDetailID])</Expression>
-                          </Source>
-                        </KeyColumn>
-                      </KeyColumns>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>ClientSourceKey</AttributeID>
                       <KeyColumns>
                         <KeyColumn>
@@ -10574,6 +10540,20 @@ CREATE MEASURE 'FactTimesheetDetail'[Hours]=CALCULATE(SUM(FactTimesheetDetail[Ra
 CREATE MEASURE 'FactTimesheetDetail'[Work Days]=IF([Hours]=0,0,'Date'[Work Day]);
 CREATE MEASURE 'Date'[Work Day]=SUM('Date'[WorkDay]);
 CREATE MEASURE 'FactTimesheetDetail'[Work Hours]=[Work Day]*8;
+CREATE MEASURE 'Date'[Hours Delta]=([Hours] - [Work Hours]);
+CREATE MEASURE 'Date'[Billing Period Count]=COUNTROWS(DISTINCT('Date'[BillingPeriodText]));
+CREATE MEASURE 'FactBillingRates'[Billing Rate Count]=COUNT(FactBillingRates[Rate_src]);
+CREATE MEASURE 'FactTimesheetDetail'[Billable Hours]=SUM(FactTimesheetDetail[Billable time]);
+CREATE MEASURE 'FactTimesheetDetail'[Product Hours]=SUM(FactTimesheetDetail[Product time]);
+CREATE MEASURE 'Person'[BillingPercentTarget]=SUM([BillingPercentTarget_src]);
+CREATE MEASURE 'Person'[BillingPercentMinimum]=SUM([BillingPercentMinimum_src]);
+CREATE MEASURE 'FactTimesheetDetail'[Billability]=CALCULATE(([Billable Hours]  + [Product Hours])/ ([Work Hours]*countrows(distinct(FactTimesheetDetail[Person]))));
+CREATE MEMBER CURRENTCUBE.Measures.[_Billability Goal] AS 'Measures.[BillingPercentTarget]', ASSOCIATED_MEASURE_GROUP = 'FactTimesheetDetail';
+CREATE MEMBER CURRENTCUBE.Measures.[_Billability Status] AS 'Case When IsEmpty(KpiValue("Billability")) Then Null When KpiValue("Billability") * 100 / KpiGoal("Billability") &lt; 40 Then -1 When KpiValue("Billability") * 100 / KpiGoal("Billability") &gt;= 40 And KpiValue("Billability") * 100 / KpiGoal("Billability") &lt; 80 Then 0 Else 1 End', ASSOCIATED_MEASURE_GROUP = 'FactTimesheetDetail';
+CREATE MEMBER CURRENTCUBE.Measures.[_Billability Trend] AS '0', ASSOCIATED_MEASURE_GROUP = 'FactTimesheetDetail';
+CREATE KPI CURRENTCUBE.[Billability] AS Measures.[Billability], ASSOCIATED_MEASURE_GROUP = 'FactTimesheetDetail', GOAL = Measures.[_Billability Goal], STATUS = Measures.[_Billability Status], TREND = Measures.[_Billability Trend], STATUS_GRAPHIC = 'Three Circles Colored', TREND_GRAPHIC = 'Three Circles Colored';
+CREATE MEASURE 'FactTimesheetDetail'[EmployeeCount]=distinctcount('facttimesheetDetail'[Person]);
+CREATE MEASURE 'FactBillingRates'[Billingrate]=sum([Rate_src]);
 </Text>
                 </Command>
               </Commands>
@@ -10659,6 +10639,339 @@ CREATE MEASURE 'FactTimesheetDetail'[Work Hours]=[Work Day]*8;
                     </Annotation>
                   </Annotations>
                   <CalculationReference>[Work Hours]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Hours Delta]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Billing Period Count]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Billing Rate Count]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Billable Hours]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Product Hours]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[BillingPercentTarget]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[BillingPercentMinimum]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>Kpi</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="Percentage" Accuracy="2" xmlns="" />
+                      </Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiStatusType</Name>
+                      <Value>Linear</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdType</Name>
+                      <Value>Percentage</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdOrdering</Name>
+                      <Value>Ascending</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThresholdCount</Name>
+                      <Value>2</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThreshold_0</Name>
+                      <Value>40</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>KpiThreshold_1</Name>
+                      <Value>80</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>ValueDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>StatusDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>TrendDescription</Name>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalMeasure</Name>
+                      <Value>BillingPercentTarget</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>GoalMeasureTableName</Name>
+                      <Value>Person</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Billability]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>'0.00 %;-0.00 %;0.00 %'</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>Billability</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_Billability Goal]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>Billability</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_Billability Status]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportMdx</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>Billability</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>Measures.[_Billability Trend]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <Visible>false</Visible>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>SupportKpi</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectType</Name>
+                      <Value>Measure</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>MainObjectName</Name>
+                      <Value>Billability</Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>KPIs.[Billability]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[EmployeeCount]</CalculationReference>
+                  <CalculationType>Member</CalculationType>
+                  <FormatString>''</FormatString>
+                </CalculationProperty>
+                <CalculationProperty>
+                  <Annotations>
+                    <Annotation>
+                      <Name>Type</Name>
+                      <Value>User</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>IsPrivate</Name>
+                      <Value>False</Value>
+                    </Annotation>
+                    <Annotation>
+                      <Name>Format</Name>
+                      <Value>
+                        <Format Format="General" xmlns="" />
+                      </Value>
+                    </Annotation>
+                  </Annotations>
+                  <CalculationReference>[Billingrate]</CalculationReference>
                   <CalculationType>Member</CalculationType>
                   <FormatString>''</FormatString>
                 </CalculationProperty>

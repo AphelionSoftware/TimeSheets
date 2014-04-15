@@ -3,9 +3,9 @@
     <DataSources>
       <DataSource>
         <ID>PW Timesheets</ID>
-        <ConnectionString>Provider=SQLNCLI11.1;Data Source=r51q8t78uk.database.windows.net;Password=;User ID=;Initial Catalog=Timesheets</ConnectionString>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=MATT-LAPTOP\SQL2012TABULAR;Integrated Security=SSPI;Initial Catalog=Timesheets</ConnectionString>
         <ImpersonationInfo>
-          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
+          <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
@@ -18,6 +18,9 @@
         <ID>Date</ID>
       </Dimension>
       <Dimension>
+        <ID>Fact Timesheet Detail</ID>
+      </Dimension>
+      <Dimension>
         <ID>Person</ID>
       </Dimension>
       <Dimension>
@@ -28,9 +31,6 @@
       </Dimension>
       <Dimension>
         <ID>Type Of Work</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Fact Timesheet Detail</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

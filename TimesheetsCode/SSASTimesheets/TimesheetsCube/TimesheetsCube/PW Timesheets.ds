@@ -3,10 +3,10 @@
   <Name>PW Timesheets</Name>
   <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
-  <ConnectionString>Provider=SQLNCLI11.1;Data Source=r51q8t78uk.database.windows.net;Password=;User ID=;Initial Catalog=Timesheets</ConnectionString>
-  <ConnectionStringSecurity>PasswordRemoved</ConnectionStringSecurity>
+  <ConnectionString>Provider=SQLNCLI11.1;Data Source=MATT-LAPTOP\SQL2012TABULAR;Integrated Security=SSPI;Initial Catalog=Timesheets</ConnectionString>
+  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
   <ImpersonationInfo>
-    <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+    <ImpersonationMode>Default</ImpersonationMode>
     <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
   </ImpersonationInfo>
   <Timeout>PT0S</Timeout>

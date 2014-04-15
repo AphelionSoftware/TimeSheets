@@ -3,8 +3,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>.\sql2012</TargetServer>
-        <TargetDatabase>TimesheetsCube</TargetDatabase>
+        <TargetServer>.\sql2012MDM</TargetServer>
+        <TargetDatabase>TimesheetsCube2</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
