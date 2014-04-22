@@ -1,4 +1,6 @@
-﻿CREATE VIEW [dbo].[vw_ResourcePlan]
+﻿
+
+CREATE VIEW [dbo].[vw_ResourcePlan]
 as
 SELECT TOP 2147483648
 			
@@ -13,20 +15,25 @@ SELECT TOP 2147483648
 						AND RPInner.ResourcePlanPersonID = P.PersonID
 						and RPInner.ResourcePlanID > RP.ResourcePlanID 
 						), 0
-						)
+						) 
 	
 	as varchar(2)) , 2) as PNID
 	, P.PersonID 
-	, Number  
-	+ ISNULL(  (
+	, Number  + ISNULL(  (
 			SELECT MAX(Blocks) 
 				FROM dbo.ResourcePlan RPInner
 					WHERE RPInner.WeekEndingDate = Weeks.WeekEnding
 						AND RPInner.ResourcePlanPersonID = P.PersonID
 						and RPInner.ResourcePlanID > RP.ResourcePlanID 
-						), 0
-						) AS Number
+						
+						
+						) , 0
+						) 
+						AS Number
+	,  PR.ProjectName
+	 
 	, ColorScale = CASE WHEN PR.ProjectID IS NULL THEN 0
+	
 	WHEN PR.ProjectID < 0 THEN -1-- PR.ProjectID
 		ELSE 
 			DENSE_RANK() over (partition by
@@ -37,6 +44,7 @@ SELECT TOP 2147483648
 			C.ClientCode, PR.ProjectCode) 
 			END 
 	,  PR.ProjectID ProjectID
+	, P.PersonName
 from 
 dbo.Person P
 join (select distinct column_id Number from sys.all_columns
@@ -54,19 +62,20 @@ JOIN (select
 ) weeks
 on column_id <= 52
 
-LEFT join (dbo.ResourcePlan RP
-join dbo.Project PR
-ON RP.ResourcePlanProjectID = PR.ProjectID
-and PR.Active = 1
-join dbo.Client C
-on PR.ClientID = C.ClientID
-and C.Active = 1
-) on p.PersonID = RP.ResourcePlanPersonID
+ left join 
+	(dbo.ResourcePlan RP
+		join dbo.Project PR
+		ON RP.ResourcePlanProjectID = PR.ProjectID
+		and PR.Active = 1
+		join dbo.Client C
+		on PR.ClientID = C.ClientID
+		and C.Active = 1
+	) 
+	on p.PersonID = RP.ResourcePlanPersonID
 and  Rp.Blocks >= Numbers.Number
 and rp.WeekEndingDate =weeks.WeekEnding
---Where P.Active = 1
+Where P.Active = 1
 
 
 
-
-ORDER BY P.PersonName,WeekEnding,  Number
+ORDER BY P.PersonName,WeekEnding,  Number, ProjectName desc

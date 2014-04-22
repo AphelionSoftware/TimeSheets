@@ -1,5 +1,5 @@
 ﻿
-CREATE PROC dbo.InsertResourcing
+CREATE PROC [dbo].[InsertResourcing]
 (@Comments varchar(255)
 , @StartDate Date
 , @EndDate Date
@@ -8,7 +8,7 @@ CREATE PROC dbo.InsertResourcing
 , @ProjectID int
 ) 
 as
-SET NOCOUNT ON;/*
+SET NOCOUNT ON;
 INSERT INTO [dbo].[ResourcePlan]
            ([ResourcePlanComments]
            ,[WeekEndingDate]
@@ -18,7 +18,7 @@ INSERT INTO [dbo].[ResourcePlan]
 
 SELECT @Comments as comments
 	,WeekEnding
-	,@blocks
+	,@blocks 
 	,@PersonID
 	,@ProjectID
 from (select
@@ -31,4 +31,3 @@ from (select
  where column_id <= 52 /*For the next 12 months*/
 ) weeks
 where weeks.weekending BETWEEN @StartDate and @EndDate
-*/

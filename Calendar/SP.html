@@ -1,0 +1,262 @@
+<style>
+
+body {
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-11{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}
+
+</style>
+<body>
+<script src="https://aphelion-testodata.azurewebsites.net/HTMLClient/Scripts/d3.v3.min.js"></script>
+<script src="https://aphelion-testodata.azurewebsites.net/HTMLClient/Scripts/colorbrewer.Extended.js"></script>
+<script src="https://aphelion-testodata.azurewebsites.net/HTMLClient/Scripts/Polyfill.ArrayFind.js"></script>
+<script 
+    type="text/javascript" 
+    src="../_layouts/15/SP.Runtime.js">
+</script>
+<script 
+    type="text/javascript" 
+    src="../_layouts/15/SP.js">
+</script>
+
+<script>
+
+function cmpDate(from, to)
+{	
+	var dtFrom = new Date(from);
+	var dtTo = new Date( to );
+	if( dtFrom.getDate() == dtTo.getDate()  &&  dtFrom.getMonth() == dtTo.getMonth()  &&  dtFrom.getFullYear() == dtTo.getFullYear() )
+		return true;
+	
+}
+
+function getDOY(date) {
+ var onejan = new Date(date.getFullYear(),0,1);
+ return Math.ceil((date - onejan) / 86400000);
+ } 
+
+var width = 960,
+    height = 136,
+    cellSize = 17; // cell size
+
+var day = d3.time.format("%w"),
+    week = d3.time.format("%U"),
+    percent = d3.format(".1%"),
+    format = d3.time.format("%Y-%m-%d");
+
+/*var color = d3.scale.quantize()
+    .domain([-.05, .05])
+    .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+*/
+//var color = d3.scale.category20b();
+//var color = (function (d) { return "q0-11"; } );
+/*d3.csv("dji.csv", function(error, csv) {
+  var data = d3.nest()
+    .key(function(d) { return d.Date; })
+    .rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+    .map(csv);
+*/
+
+/*https://c81352b0-6af8-4e0c-8ddf-ff93360e75d1.o365apps.net/Timesheets_Data.svc/ResourcePlans?$format=json*/
+//d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json", function(error, jsonData) {
+//d3.json("http://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json", //function(error, jsonData) {
+//d3.json("https://aphelionws.sharepoint.com/sites/SA//Lib/ResourcePlans.json", //function(error, jsonData) {
+//d3.json("http://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get( 
+//d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get( 
+var context = SP.ClientContext.get_current();
+    var request = new SP.WebRequestInfo();
+    request.set_url(
+        "http://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json"
+        );
+    request.set_method("GET");
+
+    // We need the response formatted as JSON.
+    request.set_headers({ "Accept": "application/json;odata=verbose" });
+    var response = SP.WebProxy.invoke(context, request);
+ // Set the event handlers and invoke the request.
+    context.executeQueryAsync(successHandler, errorHandler);
+
+
+
+
+
+function successHandler() {
+ if (response.get_statusCode() == 200) {
+
+	var jsonData = JSON.parse(response.get_body());
+
+  var data = d3.nest()
+    .key(function(d) { return d.c_Date; 
+					//var dt = new Date(d.Date);
+					//return  dt.getFullYear() + " - " + d.Name ; 
+					 })
+    .map(jsonData/*.value*/);
+	
+var domain = d3.nest()
+    .key(function(d) { return d.Client; })
+    .map(jsonData/*.value*/);
+var people = 
+				d3.nest()
+				.key(function(d) { 
+					var dt = new Date(d.c_Date);
+					return  dt.getFullYear() + " - " + d.Name ; 
+					
+					})
+				/*.key(function(d) { 
+					var dt = new Date(d.Date);
+					return dt.getFullYear(); 
+					} )*/
+				.map(jsonData/*.value*/)
+			;
+
+/*Setting up colors*/	
+var color2 = d3.scale.ordinal()
+    .domain(domain)
+    .range(colorbrewer.Paired[12]);
+	
+	/*Creating the base blocks*/
+var svg = d3.select("body").selectAll("svg")
+    .data(d3.keys( people )/*d3.range(2013, 2016)*/)
+  .enter().append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("class", "RdYlGn")
+  .append("g")
+    .attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+
+svg.append("text")
+    .attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+    .style("text-anchor", "middle")
+    .text(function(d) { return d; });
+
+	//Setting up a rectangle per year/person combo
+	//using substring as we have a year/person in the key
+	
+	
+var rect = svg.selectAll(".day")
+    .data(
+	function(d) { 
+	var days = d3.time.days(new Date(parseInt(d.substring(0,4)), 0, 1), new Date(parseInt(d.substring(0,4)) + 1, 0, 1)); 
+	//days.selectAll().enter().append("Name", d);
+	var newDays = days.map( function(item) 
+			{
+				return item + " " + d;
+			}
+			)
+	return newDays;
+	}
+	)
+  .enter().append("rect")
+    .attr("class", "day")
+    .attr("width", cellSize)
+    .attr("height", cellSize)
+    .attr("x", function (d) { if (d.length > 62) return week(new Date(d.substring(0, 62))) * cellWidth; else if (d.length >= 33) return week(new Date(d.substring(0, 33))) * cellWidth; else return 0; })
+    .attr("y", function (d) { if (d.length > 62) return day(new Date(d.substring(0, 62))) * cellHeight; else if (d.length > 3) return day(new Date(d.substring(0, 33))) * cellHeight; else return 0; })
+
+   // .datum(format);
+   ;
+
+rect.append("title")
+    .text(function(d) { return d; });
+
+svg.selectAll(".month")
+    .data(function(d) { return d3.time.months(new Date(parseInt(d.substring(0,4)), 0, 1), new Date(parseInt(d.substring(0,4)) + 1, 0, 1)); })
+  .enter().append("path")
+    .attr("class", "month")
+    .attr("d", monthPath);
+
+
+
+  rect.filter(function(d) { if (d3.keys(people).indexOf(d.substring(63,d.length)) > -1)
+							{
+								//return d3.
+								var vals = d3.values(people)[d3.keys(people).indexOf(d.substring(63,d.length))];
+								if(  vals.find( 
+									function (element, index, array) 
+									{
+										if( d.length > 62) 
+										
+											return cmpDate(element.c_Date, d.substring(0,62));								
+										else 
+											return cmpDate(element.c_Date, d.substring(0,33));								
+										
+									}
+									)
+								)
+								
+								
+									return true;
+								
+							}
+							})
+      .attr('style', function(d){return "fill:"+ color2(people[d.substring(63,d.length)].find( 
+									function (element, index, array) 
+									{
+										if( d.length > 62) 
+											return cmpDate(element.c_Date, d.substring(0,62));								
+										else
+											return cmpDate(element.c_Date, d.substring(0,33));								
+										
+									}
+									).Client) + ";" ;})
+    .select("title")
+      .text(function(d) { return d + ": " + people[d.substring(63,d.length)].find( 
+									function (element, index, array) 
+									{
+										if( d.length > 62) 
+											return cmpDate(element.c_Date, d.substring(0,62));								
+										else
+											return cmpDate(element.c_Date, d.substring(0,33));								
+										
+									}
+									).Name});
+
+									}
+									}
+//);//D3
+//.attr('style', function(d){return "fill:"+ color2(data[d][0].Client) + ";" ;})
+    
+// Event handler for the error event.
+    // Render the response body in the placeholder.
+    // The body includes the error message.
+    function errorHandler() {
+	alert("Erro");
+     }
+function monthPath(t0) {
+  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+      d0 = +day(t0), w0 = +week(t0),
+      d1 = +day(t1), w1 = +week(t1);
+  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+      + "H" + w0 * cellSize + "V" + 7 * cellSize
+      + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+      + "H" + (w1 + 1) * cellSize + "V" + 0
+      + "H" + (w0 + 1) * cellSize + "Z";
+}
+
+//d3.select(self.frameElement).style("height", "2910px");
+
+</script>
+</body>

@@ -1,4 +1,6 @@
-﻿CREATE PROC [dbo].[invInsertInvoiceLines] as
+﻿
+
+CREATE PROC [dbo].[invInsertInvoiceLines] as
 
 
 INSERT INTO [dbo].[InvoiceLine]
@@ -8,7 +10,7 @@ INSERT INTO [dbo].[InvoiceLine]
            ,[InvoiceLineCode]
            ,[InvoiceLineRate]
            ,[InvoiceLineQty]
-           ,[InvoiceLineAmount]
+           ,[InvoiceLineCalcedAmount]
            ,[InvoiceLineClientRoleID]
            ,[InvoiceLineProjectID]
            )
@@ -21,7 +23,7 @@ select  I.InvoiceID
 ,cast(Invl.TimesheetDetailPersonID as varchar(10))+ ' working on ' + CAST(Invl.ProjectID  as varchar(10)) as InvoiceLineCode
 , bd.Rate 
 , sum (tdOuter.Hours) as hours
-,bd.Rate  *  sum (tdOuter.Hours)  as Amount
+,bd.Rate  *  sum (CASE WHEN tdOuter.Billable = 1 THEN tdOuter.Hours ELSE 0 END)  as CalcedAmount
 , bd.BillingDetailClientRoleID
 , invl.ProjectID
  from (		   
@@ -59,7 +61,7 @@ select  I.InvoiceID
 		--and ddMonth.Date = cast(getdate() as date)
 		
 
-		WHERE td.Billable = 1
+		--WHERE td.Billable = 1
 		GROUP BY ddMonth.BillingYear, ddMonth.BillingPeriodText
 		,c.ClientName
 		,c.ClientID
@@ -82,6 +84,10 @@ inner join TimesheetDetail TDOuter
 on TDOuter.TimesheetDetailDateID between INVL.StartDateID and INVL.DueDateID 
 and INVL.ProjectID = TDOuter.TimesheetDetailProjectID
 and INVL.TimesheetDetailPersonID = TDOuter.TimesheetDetailPersonID
+
+and TDOuter.Billable > 0
+
+
 inner join (SELECT [BillingDetailClientID]
       ,[BillingDetailPersonID]
 	  ,Rate
@@ -115,12 +121,20 @@ GROUP by I.InvoiceID
  
  order by 4
 
- UPDATE dbo.InvoiceLine
+ ------------------------------------------------
+ --Updating calculated amounts
+ ------------------------------------------------
+
+ 	UPDATE dbo.InvoiceLine
 set InvoiceLineQty = src.hours
 ,InvoiceLineRate = src.Rate
-,InvoiceLineAmount = src.Amount
+,InvoiceLineCalcedAmount = src.Amount
 
---select * 
+/*select InvoiceLineQty = src.hours
+,InvoiceLineRate = src.Rate
+,InvoiceLineCalcedAmount = src.Amount
+,*
+*/ 
  --
  from dbo.InvoiceLine IL
  
@@ -139,10 +153,11 @@ inner join dbo.DimDate dd
 	,Invl.PersonName + ' working on ' + Invl.ProjectName + ' in ' + invl.BillingPeriodText as InvoiceLineDescription
 	,cast(Invl.TimesheetDetailPersonID as varchar(10))+ ' working on ' + CAST(Invl.ProjectID  as varchar(10)) as InvoiceLineCode
 	, bd.Rate 
-	, sum (tdOuter.Hours) as hours
-	,bd.Rate  *  sum (tdOuter.Hours)  as Amount
+	, sum (tdOuter.Hours ) as hours
+	,bd.Rate  *  sum (CASE WHEN tdOuter.Billable = 1 THEN tdOuter.Hours ELSE 0 END)  as Amount
 	, bd.BillingDetailClientRoleID
 	, invl.ProjectID
+	, tdOuter.InvoiceLineID
 	 from (		   
 		SELECT  
 			max(dd.DateID) as DateID
@@ -178,7 +193,7 @@ inner join dbo.DimDate dd
 			--and ddMonth.Date = cast(getdate() as date)
 		
 
-			WHERE td.Billable = 1
+			--WHERE td.Billable = 1
 			GROUP BY ddMonth.BillingYear, ddMonth.BillingPeriodText
 			,c.ClientName
 			,c.ClientID
@@ -201,6 +216,7 @@ inner join dbo.DimDate dd
 	on TDOuter.TimesheetDetailDateID between INVL.StartDateID and INVL.DueDateID 
 	and INVL.ProjectID = TDOuter.TimesheetDetailProjectID
 	and INVL.TimesheetDetailPersonID = TDOuter.TimesheetDetailPersonID
+	/*and tdouter.billable = 1*/
 	inner join 
 			(SELECT [BillingDetailClientID]
 			  ,[BillingDetailPersonID]
@@ -224,12 +240,16 @@ inner join dbo.DimDate dd
 	, bd.Rate 
 	, bd.BillingDetailClientRoleID
 	, invl.ProjectID
+	, tdOuter.InvoiceLineID
  ) src 
  on IL.InvoiceID = src.InvoiceID
  and il.InvoiceLineProjectID = src.ProjectID
  and il.InvoiceLinePersonID = src.TimesheetDetailPersonID
-
-
+ and (IL.invoicelineid = src.invoicelineid
+	or src.invoicelineid is null)
+	
+	
+	
 ------------------------------
 -- Backtrack changes to Timesheet detail for tracking
 ------------------------------
