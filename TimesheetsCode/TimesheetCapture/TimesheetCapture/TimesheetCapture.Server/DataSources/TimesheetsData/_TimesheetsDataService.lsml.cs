@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Security.Server;
+using System.Linq.Expressions;
+
 namespace LightSwitchApplication
 {
 
@@ -151,7 +153,7 @@ namespace LightSwitchApplication
                      select dimDates);
         }
 
-       
+
 
         partial void TimesheetsUser_PreprocessQuery(DateTime? StartDate, DateTime? EndDate, ref IQueryable<Timesheet> query)
         {
@@ -235,6 +237,14 @@ namespace LightSwitchApplication
                                         where d.WeekEnding == entity.DimDate.WeekEnding
                                         orderby d.DateID descending
                                         select d.DateID).FirstOrDefault();
+        }
+
+
+        partial void TimesheetHours_Filter(ref Expression<Func<TimesheetHour, bool>> filter)
+        {
+            // filter = e => e.IntegerProperty == 0;
+            string Person = tsPerson;
+            filter = e => e.Name == Person;
         }
     }
 }

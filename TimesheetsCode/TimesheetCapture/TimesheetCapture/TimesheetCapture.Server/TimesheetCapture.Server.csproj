@@ -206,6 +206,9 @@
     <Compile Include="DataSources\TimesheetsData\TimesheetDetail.lsml.cs">
       <DependentUpon>TimesheetDetails.lsml</DependentUpon>
     </Compile>
+    <Compile Include="DataSources\TimesheetsData\TimesheetHour.lsml.cs">
+      <DependentUpon>TimesheetHours.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\TimesheetsData\TypeOfWork.lsml.cs">
       <DependentUpon>TypeOfWorks.lsml</DependentUpon>
     </Compile>
@@ -267,6 +270,7 @@
     <LightSwitchModel Include="DataSources\TimesheetsData\GetTimesheet.lsml">
       <DependentUpon>Timesheets.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\TimesheetsData\TimesheetHours.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

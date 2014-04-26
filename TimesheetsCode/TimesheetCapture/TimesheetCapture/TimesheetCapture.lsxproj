@@ -22,7 +22,7 @@
     <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
-    <AssemblyVersion>2.2.35.0</AssemblyVersion>
+    <AssemblyVersion>2.2.36.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
@@ -58,7 +58,7 @@
     <DebugSharePointAuthenticationType>AccessControlService</DebugSharePointAuthenticationType>
     <PendingProjectUpgrade>false</PendingProjectUpgrade>
     <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
-    <LightSwitchPublishVersion>v2.1</LightSwitchPublishVersion>
+    <LightSwitchPublishVersion>v2.2</LightSwitchPublishVersion>
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <DefaultDatabaseName>TimesheetCapture</DefaultDatabaseName>
   </PropertyGroup>

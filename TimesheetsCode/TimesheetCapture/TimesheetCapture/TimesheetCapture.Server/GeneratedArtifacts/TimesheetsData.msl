@@ -84,6 +84,15 @@
           <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
           <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="AccountManagerPersonID" ColumnName="AccountManagerPersonID" />
+          <ScalarProperty Name="InvoiceEmailAddress" ColumnName="InvoiceEmailAddress" />
+          <ScalarProperty Name="InvoiceBank" ColumnName="InvoiceBank" />
+          <ScalarProperty Name="InvoiceBankBranch" ColumnName="InvoiceBankBranch" />
+          <ScalarProperty Name="InvoiceBankAccount" ColumnName="InvoiceBankAccount" />
+          <ScalarProperty Name="InvoiceVATNumber" ColumnName="InvoiceVATNumber" />
+          <ScalarProperty Name="InvoiceCompanyReg" ColumnName="InvoiceCompanyReg" />
+          <ScalarProperty Name="InvoiceTelNo" ColumnName="InvoiceTelNo" />
+          <ScalarProperty Name="InvoiceContactPerson" ColumnName="InvoiceContactPerson" />
+          <ScalarProperty Name="InvoiceAddress" ColumnName="InvoiceAddress" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -198,6 +207,8 @@
           <ScalarProperty Name="MonthlyCap" ColumnName="MonthlyCap" />
           <ScalarProperty Name="MonthlyCapWarning" ColumnName="MonthlyCapWarning" />
           <ScalarProperty Name="ProjectCapWarning" ColumnName="ProjectCapWarning" />
+          <ScalarProperty Name="CommPercent" ColumnName="CommPercent" />
+          <ScalarProperty Name="InvoiceEmailAddress" ColumnName="InvoiceEmailAddress" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -229,6 +240,7 @@
           <ScalarProperty Name="TimesheetID" ColumnName="TimesheetID" />
           <ScalarProperty Name="TimesheetTypeOfWorkID" ColumnName="TimesheetTypeOfWorkID" />
           <ScalarProperty Name="VerCol" ColumnName="VerCol" />
+          <ScalarProperty Name="InvoiceLineID" ColumnName="InvoiceLineID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -273,6 +285,15 @@
           <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
           <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
           <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimesheetHours">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TimesheetHour)">
+        <MappingFragment StoreEntitySet="TimesheetHours">
+          <ScalarProperty Name="c_Date" ColumnName="c_Date" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -244,4 +244,10 @@
         Target="ServiceInterface:fk_TimesheetPersonID" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:TimesheetHour" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

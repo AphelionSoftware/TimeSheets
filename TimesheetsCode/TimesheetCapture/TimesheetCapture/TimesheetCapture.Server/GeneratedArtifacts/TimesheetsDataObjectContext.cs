@@ -30,8 +30,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TypeOfWork_ActiveType", "ActiveType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ActiveType), "TypeOfWork", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TypeOfWork), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.BillingStatu), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.BillingStatu), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Role", "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ClientRole), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TimesheetDetail_BillingStatus", "BillingStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.BillingStatu), "TimesheetDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TimesheetDetail), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Role", "ClientRole", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.ClientRole), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_BillingDetail_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "BillingDetail", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.BillingDetail), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Client", "Client", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Client), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Timesheet_DimDate", "DimDate", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.DimDate), "Timesheet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Timesheet), true)]
@@ -285,6 +285,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TypeOfWork> _TypeOfWorks;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<TimesheetHour> TimesheetHours
+        {
+            get
+            {
+                if ((_TimesheetHours == null))
+                {
+                    _TimesheetHours = base.CreateObjectSet<TimesheetHour>("TimesheetHours");
+                }
+                return _TimesheetHours;
+            }
+        }
+        private ObjectSet<TimesheetHour> _TimesheetHours;
 
         #endregion
 
@@ -384,6 +400,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToTypeOfWorks(TypeOfWork typeOfWork)
         {
             base.AddObject("TypeOfWorks", typeOfWork);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the TimesheetHours EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTimesheetHours(TimesheetHour timesheetHour)
+        {
+            base.AddObject("TimesheetHours", timesheetHour);
         }
 
         #endregion
@@ -880,8 +904,9 @@ namespace LightSwitchApplication.Implementation
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="billingDetailClientID">Initial value of the BillingDetailClientID property.</param>
         /// <param name="billingDetailPersonID">Initial value of the BillingDetailPersonID property.</param>
+        /// <param name="billingDetailClientRoleID">Initial value of the BillingDetailClientRoleID property.</param>
         /// <param name="billingDetailDateID">Initial value of the BillingDetailDateID property.</param>
-        public static BillingDetail CreateBillingDetail(global::System.Int32 billingDetailID, global::System.DateTime loadDate, global::System.Decimal rate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 billingDetailClientID, global::System.Int32 billingDetailPersonID, global::System.Int32 billingDetailDateID)
+        public static BillingDetail CreateBillingDetail(global::System.Int32 billingDetailID, global::System.DateTime loadDate, global::System.Decimal rate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 billingDetailClientID, global::System.Int32 billingDetailPersonID, global::System.Int32 billingDetailClientRoleID, global::System.Int32 billingDetailDateID)
         {
             BillingDetail billingDetail = new BillingDetail();
             billingDetail.BillingDetailID = billingDetailID;
@@ -894,6 +919,7 @@ namespace LightSwitchApplication.Implementation
             billingDetail.Active = active;
             billingDetail.BillingDetailClientID = billingDetailClientID;
             billingDetail.BillingDetailPersonID = billingDetailPersonID;
+            billingDetail.BillingDetailClientRoleID = billingDetailClientRoleID;
             billingDetail.BillingDetailDateID = billingDetailDateID;
             return billingDetail;
         }
@@ -1196,9 +1222,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> BillingDetailClientRoleID
+        public global::System.Int32 BillingDetailClientRoleID
         {
             get
             {
@@ -1213,8 +1239,8 @@ namespace LightSwitchApplication.Implementation
                 OnBillingDetailClientRoleIDChanged();
             }
         }
-        private Nullable<global::System.Int32> _BillingDetailClientRoleID;
-        partial void OnBillingDetailClientRoleIDChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _BillingDetailClientRoleID;
+        partial void OnBillingDetailClientRoleIDChanging(global::System.Int32 value);
         partial void OnBillingDetailClientRoleIDChanged();
     
         /// <summary>
@@ -2172,6 +2198,222 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int32 _AccountManagerPersonID;
         partial void OnAccountManagerPersonIDChanging(global::System.Int32 value);
         partial void OnAccountManagerPersonIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceEmailAddress
+        {
+            get
+            {
+                return _InvoiceEmailAddress;
+            }
+            set
+            {
+                OnInvoiceEmailAddressChanging(value);
+                ReportPropertyChanging("InvoiceEmailAddress");
+                _InvoiceEmailAddress = value;
+                ReportPropertyChanged("InvoiceEmailAddress");
+                OnInvoiceEmailAddressChanged();
+            }
+        }
+        private global::System.String _InvoiceEmailAddress;
+        partial void OnInvoiceEmailAddressChanging(global::System.String value);
+        partial void OnInvoiceEmailAddressChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceBank
+        {
+            get
+            {
+                return _InvoiceBank;
+            }
+            set
+            {
+                OnInvoiceBankChanging(value);
+                ReportPropertyChanging("InvoiceBank");
+                _InvoiceBank = value;
+                ReportPropertyChanged("InvoiceBank");
+                OnInvoiceBankChanged();
+            }
+        }
+        private global::System.String _InvoiceBank;
+        partial void OnInvoiceBankChanging(global::System.String value);
+        partial void OnInvoiceBankChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceBankBranch
+        {
+            get
+            {
+                return _InvoiceBankBranch;
+            }
+            set
+            {
+                OnInvoiceBankBranchChanging(value);
+                ReportPropertyChanging("InvoiceBankBranch");
+                _InvoiceBankBranch = value;
+                ReportPropertyChanged("InvoiceBankBranch");
+                OnInvoiceBankBranchChanged();
+            }
+        }
+        private global::System.String _InvoiceBankBranch;
+        partial void OnInvoiceBankBranchChanging(global::System.String value);
+        partial void OnInvoiceBankBranchChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceBankAccount
+        {
+            get
+            {
+                return _InvoiceBankAccount;
+            }
+            set
+            {
+                OnInvoiceBankAccountChanging(value);
+                ReportPropertyChanging("InvoiceBankAccount");
+                _InvoiceBankAccount = value;
+                ReportPropertyChanged("InvoiceBankAccount");
+                OnInvoiceBankAccountChanged();
+            }
+        }
+        private global::System.String _InvoiceBankAccount;
+        partial void OnInvoiceBankAccountChanging(global::System.String value);
+        partial void OnInvoiceBankAccountChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceVATNumber
+        {
+            get
+            {
+                return _InvoiceVATNumber;
+            }
+            set
+            {
+                OnInvoiceVATNumberChanging(value);
+                ReportPropertyChanging("InvoiceVATNumber");
+                _InvoiceVATNumber = value;
+                ReportPropertyChanged("InvoiceVATNumber");
+                OnInvoiceVATNumberChanged();
+            }
+        }
+        private global::System.String _InvoiceVATNumber;
+        partial void OnInvoiceVATNumberChanging(global::System.String value);
+        partial void OnInvoiceVATNumberChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceCompanyReg
+        {
+            get
+            {
+                return _InvoiceCompanyReg;
+            }
+            set
+            {
+                OnInvoiceCompanyRegChanging(value);
+                ReportPropertyChanging("InvoiceCompanyReg");
+                _InvoiceCompanyReg = value;
+                ReportPropertyChanged("InvoiceCompanyReg");
+                OnInvoiceCompanyRegChanged();
+            }
+        }
+        private global::System.String _InvoiceCompanyReg;
+        partial void OnInvoiceCompanyRegChanging(global::System.String value);
+        partial void OnInvoiceCompanyRegChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceTelNo
+        {
+            get
+            {
+                return _InvoiceTelNo;
+            }
+            set
+            {
+                OnInvoiceTelNoChanging(value);
+                ReportPropertyChanging("InvoiceTelNo");
+                _InvoiceTelNo = value;
+                ReportPropertyChanged("InvoiceTelNo");
+                OnInvoiceTelNoChanged();
+            }
+        }
+        private global::System.String _InvoiceTelNo;
+        partial void OnInvoiceTelNoChanging(global::System.String value);
+        partial void OnInvoiceTelNoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceContactPerson
+        {
+            get
+            {
+                return _InvoiceContactPerson;
+            }
+            set
+            {
+                OnInvoiceContactPersonChanging(value);
+                ReportPropertyChanging("InvoiceContactPerson");
+                _InvoiceContactPerson = value;
+                ReportPropertyChanged("InvoiceContactPerson");
+                OnInvoiceContactPersonChanged();
+            }
+        }
+        private global::System.String _InvoiceContactPerson;
+        partial void OnInvoiceContactPersonChanging(global::System.String value);
+        partial void OnInvoiceContactPersonChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceAddress
+        {
+            get
+            {
+                return _InvoiceAddress;
+            }
+            set
+            {
+                OnInvoiceAddressChanging(value);
+                ReportPropertyChanging("InvoiceAddress");
+                _InvoiceAddress = value;
+                ReportPropertyChanged("InvoiceAddress");
+                OnInvoiceAddressChanged();
+            }
+        }
+        private global::System.String _InvoiceAddress;
+        partial void OnInvoiceAddressChanging(global::System.String value);
+        partial void OnInvoiceAddressChanged();
 
         #endregion
 
@@ -4757,7 +4999,8 @@ namespace LightSwitchApplication.Implementation
         /// <param name="active">Initial value of the Active property.</param>
         /// <param name="billable">Initial value of the Billable property.</param>
         /// <param name="clientID">Initial value of the ClientID property.</param>
-        public static Project CreateProject(global::System.Int32 projectID, global::System.DateTime loadDate, global::System.String projectName, global::System.String projectCode, global::System.Int32 adminProject, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 billable, global::System.Int32 clientID)
+        /// <param name="commPercent">Initial value of the CommPercent property.</param>
+        public static Project CreateProject(global::System.Int32 projectID, global::System.DateTime loadDate, global::System.String projectName, global::System.String projectCode, global::System.Int32 adminProject, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 billable, global::System.Int32 clientID, global::System.Decimal commPercent)
         {
             Project project = new Project();
             project.ProjectID = projectID;
@@ -4772,6 +5015,7 @@ namespace LightSwitchApplication.Implementation
             project.Active = active;
             project.Billable = billable;
             project.ClientID = clientID;
+            project.CommPercent = commPercent;
             return project;
         }
 
@@ -5357,6 +5601,54 @@ namespace LightSwitchApplication.Implementation
         private Nullable<global::System.Decimal> _ProjectCapWarning;
         partial void OnProjectCapWarningChanging(Nullable<global::System.Decimal> value);
         partial void OnProjectCapWarningChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal CommPercent
+        {
+            get
+            {
+                return _CommPercent;
+            }
+            set
+            {
+                OnCommPercentChanging(value);
+                ReportPropertyChanging("CommPercent");
+                _CommPercent = value;
+                ReportPropertyChanged("CommPercent");
+                OnCommPercentChanged();
+            }
+        }
+        private global::System.Decimal _CommPercent;
+        partial void OnCommPercentChanging(global::System.Decimal value);
+        partial void OnCommPercentChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String InvoiceEmailAddress
+        {
+            get
+            {
+                return _InvoiceEmailAddress;
+            }
+            set
+            {
+                OnInvoiceEmailAddressChanging(value);
+                ReportPropertyChanging("InvoiceEmailAddress");
+                _InvoiceEmailAddress = value;
+                ReportPropertyChanged("InvoiceEmailAddress");
+                OnInvoiceEmailAddressChanged();
+            }
+        }
+        private global::System.String _InvoiceEmailAddress;
+        partial void OnInvoiceEmailAddressChanging(global::System.String value);
+        partial void OnInvoiceEmailAddressChanged();
 
         #endregion
 
@@ -6315,13 +6607,14 @@ namespace LightSwitchApplication.Implementation
         /// <param name="sys_ModifiedOn">Initial value of the sys_ModifiedOn property.</param>
         /// <param name="sys_ModifiedBy">Initial value of the sys_ModifiedBy property.</param>
         /// <param name="active">Initial value of the Active property.</param>
+        /// <param name="billable">Initial value of the Billable property.</param>
         /// <param name="timesheetDetailDateID">Initial value of the TimesheetDetailDateID property.</param>
         /// <param name="timesheetDetailPersonID">Initial value of the TimesheetDetailPersonID property.</param>
         /// <param name="timesheetDetailProjectID">Initial value of the TimesheetDetailProjectID property.</param>
         /// <param name="timesheetID">Initial value of the TimesheetID property.</param>
         /// <param name="timesheetTypeOfWorkID">Initial value of the TimesheetTypeOfWorkID property.</param>
         /// <param name="verCol">Initial value of the VerCol property.</param>
-        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID, global::System.Byte[] verCol)
+        public static TimesheetDetail CreateTimesheetDetail(global::System.Int32 timesheetDetailID, global::System.DateTime loadDate, global::System.String timesheetDetailName, global::System.String timesheetDetailCode, global::System.String timesheetDetailFileName, global::System.Decimal hours, global::System.String comments, global::System.Int32 exclude, global::System.DateTime lastUpdateDate, global::System.DateTime sys_CreatedOn, global::System.String sys_CreatedBy, global::System.DateTime sys_ModifiedOn, global::System.String sys_ModifiedBy, global::System.Int32 active, global::System.Int32 billable, global::System.Int32 timesheetDetailDateID, global::System.Int32 timesheetDetailPersonID, global::System.Int32 timesheetDetailProjectID, global::System.Int32 timesheetID, global::System.Int32 timesheetTypeOfWorkID, global::System.Byte[] verCol)
         {
             TimesheetDetail timesheetDetail = new TimesheetDetail();
             timesheetDetail.TimesheetDetailID = timesheetDetailID;
@@ -6338,6 +6631,7 @@ namespace LightSwitchApplication.Implementation
             timesheetDetail.sys_ModifiedOn = sys_ModifiedOn;
             timesheetDetail.sys_ModifiedBy = sys_ModifiedBy;
             timesheetDetail.Active = active;
+            timesheetDetail.Billable = billable;
             timesheetDetail.TimesheetDetailDateID = timesheetDetailDateID;
             timesheetDetail.TimesheetDetailPersonID = timesheetDetailPersonID;
             timesheetDetail.TimesheetDetailProjectID = timesheetDetailProjectID;
@@ -6789,9 +7083,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Billable
+        public global::System.Int32 Billable
         {
             get
             {
@@ -6806,8 +7100,8 @@ namespace LightSwitchApplication.Implementation
                 OnBillableChanged();
             }
         }
-        private Nullable<global::System.Int32> _Billable;
-        partial void OnBillableChanging(Nullable<global::System.Int32> value);
+        private global::System.Int32 _Billable;
+        partial void OnBillableChanging(global::System.Int32 value);
         partial void OnBillableChanged();
     
         /// <summary>
@@ -6953,6 +7247,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Byte[] _VerCol;
         partial void OnVerColChanging(global::System.Byte[] value);
         partial void OnVerColChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> InvoiceLineID
+        {
+            get
+            {
+                return _InvoiceLineID;
+            }
+            set
+            {
+                OnInvoiceLineIDChanging(value);
+                ReportPropertyChanging("InvoiceLineID");
+                _InvoiceLineID = value;
+                ReportPropertyChanged("InvoiceLineID");
+                OnInvoiceLineIDChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _InvoiceLineID;
+        partial void OnInvoiceLineIDChanging(Nullable<global::System.Int32> value);
+        partial void OnInvoiceLineIDChanged();
 
         #endregion
 
@@ -7227,6 +7545,116 @@ namespace LightSwitchApplication.Implementation
 
         #endregion
 
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="TimesheetHour")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TimesheetHour : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new TimesheetHour object.
+        /// </summary>
+        /// <param name="c_Date">Initial value of the c_Date property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        public static TimesheetHour CreateTimesheetHour(global::System.DateTime c_Date, global::System.String name)
+        {
+            TimesheetHour timesheetHour = new TimesheetHour();
+            timesheetHour.c_Date = c_Date;
+            timesheetHour.Name = name;
+            return timesheetHour;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime c_Date
+        {
+            get
+            {
+                return _c_Date;
+            }
+            set
+            {
+                if (_c_Date != value)
+                {
+                    Onc_DateChanging(value);
+                    ReportPropertyChanging("c_Date");
+                    _c_Date = value;
+                    ReportPropertyChanged("c_Date");
+                    Onc_DateChanged();
+                }
+            }
+        }
+        private global::System.DateTime _c_Date;
+        partial void Onc_DateChanging(global::System.DateTime value);
+        partial void Onc_DateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                if (_Name != value)
+                {
+                    OnNameChanging(value);
+                    ReportPropertyChanging("Name");
+                    _Name = value;
+                    ReportPropertyChanged("Name");
+                    OnNameChanged();
+                }
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> Value
+        {
+            get
+            {
+                return _Value;
+            }
+            set
+            {
+                OnValueChanging(value);
+                ReportPropertyChanging("Value");
+                _Value = value;
+                ReportPropertyChanged("Value");
+                OnValueChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _Value;
+        partial void OnValueChanging(Nullable<global::System.Decimal> value);
+        partial void OnValueChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>

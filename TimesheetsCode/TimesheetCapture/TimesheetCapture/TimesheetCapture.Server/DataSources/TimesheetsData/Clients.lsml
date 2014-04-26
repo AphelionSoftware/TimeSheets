@@ -133,6 +133,86 @@
         Association="FK_Project_Client"
         FromEnd="Client"
         ToEnd="Project" />
+      <EntityProperty
+        Name="InvoiceEmailAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceBank"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceBankBranch"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceBankAccount"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceVATNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceCompanyReg"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceTelNo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceContactPerson"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InvoiceAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -345,6 +425,59 @@
           Nullable="False"
           Type="nvarchar"
           Property="Client/Properties[sys_ModifiedBy]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceEmailAddress"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceEmailAddress]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBank"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBank]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBankBranch"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBankBranch]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceBankAccount"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceBankAccount]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceVATNumber"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceVATNumber]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceCompanyReg"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceCompanyReg]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceTelNo"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceTelNo]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="InvoiceContactPerson"
+          Nullable="True"
+          Type="varchar"
+          Property="Client/Properties[InvoiceContactPerson]" />
+        <SsdlProperty
+          Name="InvoiceAddress"
+          Nullable="True"
+          Type="varchar(max)"
+          Property="Client/Properties[InvoiceAddress]" />
         <SsdlForeignKeyProperty
           Name="Active"
           Nullable="False"

@@ -129,6 +129,7 @@
     Name="FK_BillingDetail_Role">
     <AssociationEnd
       Name="ClientRole"
+      Multiplicity="One"
       EntityType="ClientRole">
       <AssociationEnd.Attributes>
         <DeleteRule />
@@ -320,7 +321,7 @@
       AssociationSet="FK_BillingDetail_Role">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
-          Name="FK_BillingDetail_Role" />
+          Name="FK_BillingDetail_ClientRole" />
         <SsdlAssociationSetEnd
           End="TimesheetsData/Members[FK_BillingDetail_Role]/Members[ClientRole]">
           <SsdlAssociationSetEnd.Attributes>

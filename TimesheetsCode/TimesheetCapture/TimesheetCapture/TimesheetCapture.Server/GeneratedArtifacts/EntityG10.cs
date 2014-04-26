@@ -503,6 +503,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> InvoiceLineID
+        {
+            get
+            {
+                return global::LightSwitchApplication.TimesheetDetail.DetailsClass.GetValue(this, global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties.InvoiceLineID);
+            }
+            set
+            {
+                global::LightSwitchApplication.TimesheetDetail.DetailsClass.SetValue(this, global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties.InvoiceLineID, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineID_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineID_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ActiveType ActiveType
         {
             get
@@ -892,6 +916,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>> InvoiceLineID
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties.InvoiceLineID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
                 {
                     get
@@ -972,6 +1004,7 @@ namespace LightSwitchApplication
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
                 new byte[] VerCol { get; }
+                new global::System.Nullable<int> InvoiceLineID { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation BillingStatu { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation DimDate { get; set; }
@@ -1643,6 +1676,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>>.Entry
+                    InvoiceLineID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "InvoiceLineID",
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_Stub,
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_Validate,
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_GetImplementationValue,
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_SetImplementationValue,
+                        global::LightSwitchApplication.TimesheetDetail.DetailsClass.PropertySetProperties._InvoiceLineID_OnValueChanged);
+                private static void _InvoiceLineID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.TimesheetDetail.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceLineID, sf);
+                }
+                private static bool _InvoiceLineID_ComputeIsReadOnly(global::LightSwitchApplication.TimesheetDetail e)
+                {
+                    bool result = false;
+                    e.InvoiceLineID_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceLineID_Validate(global::LightSwitchApplication.TimesheetDetail e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceLineID_Validate(r);
+                }
+                private static global::System.Nullable<int> _InvoiceLineID_GetImplementationValue(global::LightSwitchApplication.TimesheetDetail.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceLineID;
+                }
+                private static void _InvoiceLineID_SetImplementationValue(global::LightSwitchApplication.TimesheetDetail.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.InvoiceLineID = v;
+                }
+                private static void _InvoiceLineID_OnValueChanged(global::LightSwitchApplication.TimesheetDetail e)
+                {
+                    e.InvoiceLineID_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
                     ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
                         "ActiveType",
@@ -2026,6 +2096,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, byte[]>.Data _VerCol;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::System.Nullable<int>>.Data _InvoiceLineID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TimesheetDetail, global::LightSwitchApplication.TimesheetDetail.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;

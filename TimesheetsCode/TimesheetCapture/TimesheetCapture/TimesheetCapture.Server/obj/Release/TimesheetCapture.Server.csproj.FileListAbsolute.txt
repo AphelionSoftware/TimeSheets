@@ -190,7 +190,6 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Ti
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.PollingDuplex.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Spatial.dll
-C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.WindowsAzure.ServiceRuntime.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.IdentityModel.Tokens.Jwt.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.LightSwitch.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Microsoft.LightSwitch.Server.xml
@@ -200,3 +199,4 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\Ti
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Server.xml
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\Application.Server.dll
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\Application.Server.pdb
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\TimesheetCapture.Server.csprojResolveAssemblyReference.cache

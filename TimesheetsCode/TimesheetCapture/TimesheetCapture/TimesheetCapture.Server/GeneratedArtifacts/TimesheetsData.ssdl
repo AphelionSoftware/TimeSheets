@@ -13,6 +13,7 @@
     <EntitySet Name="TimesheetDetails" EntityType="TimesheetsDataStore.TimesheetDetail" store:Type="Tables" Schema="dbo" Table="TimesheetDetail" />
     <EntitySet Name="Timesheets" EntityType="TimesheetsDataStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
     <EntitySet Name="TypeOfWorks" EntityType="TimesheetsDataStore.TypeOfWork" store:Type="Tables" Schema="dbo" Table="TypeOfWork" />
+    <EntitySet Name="TimesheetHours" EntityType="TimesheetsDataStore.TimesheetHour" store:Type="Tables" Schema="D3" Table="TimesheetHours" />
     <AssociationSet Name="FK_BillingDetail_ActiveType" Association="TimesheetsDataStore.FK_BillingDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
@@ -149,7 +150,7 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
-    <Property Name="BillingDetailClientRoleID" Type="int" />
+    <Property Name="BillingDetailClientRoleID" Type="int" Nullable="false" />
     <Property Name="BillingDetailClientID" Type="int" Nullable="false" />
     <Property Name="BillingDetailDateID" Type="int" Nullable="false" />
     <Property Name="BillingDetailPersonID" Type="int" Nullable="false" />
@@ -200,6 +201,15 @@
     <Property Name="sys_CreatedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="InvoiceEmailAddress" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceBank" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceBankBranch" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceBankAccount" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceVATNumber" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceCompanyReg" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceTelNo" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceContactPerson" Type="varchar" MaxLength="255" />
+    <Property Name="InvoiceAddress" Type="varchar(max)" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="AccountManagerPersonID" Type="int" Nullable="false" />
   </EntityType>
@@ -308,6 +318,8 @@
     <Property Name="MonthlyCap" Type="decimal" Scale="2" />
     <Property Name="MonthlyCapWarning" Type="decimal" Scale="2" />
     <Property Name="ProjectCapWarning" Type="decimal" Scale="2" />
+    <Property Name="CommPercent" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="InvoiceEmailAddress" Type="varchar" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
     <Property Name="Billable" Type="int" Nullable="false" />
     <Property Name="ClientID" Type="int" Nullable="false" />
@@ -335,8 +347,9 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="VerCol" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="InvoiceLineID" Type="int" />
     <Property Name="Active" Type="int" Nullable="false" />
-    <Property Name="Billable" Type="int" />
+    <Property Name="Billable" Type="int" Nullable="false" />
     <Property Name="TimesheetDetailDateID" Type="int" Nullable="false" />
     <Property Name="TimesheetDetailPersonID" Type="int" Nullable="false" />
     <Property Name="TimesheetDetailProjectID" Type="int" Nullable="false" />
@@ -384,6 +397,15 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimesheetHour">
+    <Key>
+      <PropertyRef Name="c_Date" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="c_Date" Type="date" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Value" Type="decimal" Precision="38" Scale="2" />
   </EntityType>
   <Association Name="FK_BillingDetail_ActiveType">
     <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
@@ -540,7 +562,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_TimesheetDetail_BillingStatus">
-    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="0..1">
+    <End Role="BillingStatus" Type="TimesheetsDataStore.BillingStatu" Multiplicity="1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="TimesheetDetail" Type="TimesheetsDataStore.TimesheetDetail" Multiplicity="*" />
@@ -554,7 +576,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_BillingDetail_Role">
-    <End Role="ClientRole" Type="TimesheetsDataStore.ClientRole" Multiplicity="0..1">
+    <End Role="ClientRole" Type="TimesheetsDataStore.ClientRole" Multiplicity="1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="BillingDetail" Type="TimesheetsDataStore.BillingDetail" Multiplicity="*" />

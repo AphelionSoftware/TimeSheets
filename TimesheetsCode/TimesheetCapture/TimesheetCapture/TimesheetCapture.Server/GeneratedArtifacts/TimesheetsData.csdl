@@ -39,7 +39,7 @@
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="BillingDetailClientID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="BillingDetailPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="BillingDetailClientRoleID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="BillingDetailClientRoleID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="BillingDetailDateID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_BillingDetail_ActiveType" ToRole="ActiveType" FromRole="BillingDetail" />
     <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="Client" FromRole="BillingDetail" />
@@ -100,6 +100,15 @@
     <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" ConcurrencyMode="Fixed" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="AccountManagerPersonID" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceEmailAddress" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceBank" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceBankBranch" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceBankAccount" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceVATNumber" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceCompanyReg" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceTelNo" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceContactPerson" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceAddress" Type="Edm.String" MaxLength="Max" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="BillingDetails" Relationship="LightSwitchApplication.FK_BillingDetail_Client" ToRole="BillingDetail" FromRole="Client" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Client_ActiveType" ToRole="ActiveType" FromRole="Client" />
     <NavigationProperty Name="PersonItem" Relationship="LightSwitchApplication.PersonItem_Client" ToRole="PersonItem" FromRole="Client" />
@@ -225,6 +234,8 @@
     <Property Name="MonthlyCap" Type="Edm.Decimal" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
     <Property Name="MonthlyCapWarning" Type="Edm.Decimal" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
     <Property Name="ProjectCapWarning" Type="Edm.Decimal" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
+    <Property Name="CommPercent" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
+    <Property Name="InvoiceEmailAddress" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_Project_ActiveType" ToRole="ActiveType" FromRole="Project" />
     <NavigationProperty Name="BillingStatu" Relationship="LightSwitchApplication.FK_Project_BillingStatus" ToRole="BillingStatus" FromRole="Project" />
     <NavigationProperty Name="Client" Relationship="LightSwitchApplication.FK_Project_Client" ToRole="Client" FromRole="Project" />
@@ -253,13 +264,14 @@
     <Property Name="sys_ModifiedOn" Type="Edm.DateTime" Nullable="false" Precision="3" />
     <Property Name="sys_ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Billable" Type="Edm.Int32" />
+    <Property Name="Billable" Type="Edm.Int32" Nullable="false" />
     <Property Name="TimesheetDetailDateID" Type="Edm.Int32" Nullable="false" />
     <Property Name="TimesheetDetailPersonID" Type="Edm.Int32" Nullable="false" />
     <Property Name="TimesheetDetailProjectID" Type="Edm.Int32" Nullable="false" />
     <Property Name="TimesheetID" Type="Edm.Int32" Nullable="false" />
     <Property Name="TimesheetTypeOfWorkID" Type="Edm.Int32" Nullable="false" />
     <Property Name="VerCol" Type="Edm.Binary" Nullable="false" MaxLength="8" FixedLength="true" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="InvoiceLineID" Type="Edm.Int32" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TimesheetDetail_ActiveType" ToRole="ActiveType" FromRole="TimesheetDetail" />
     <NavigationProperty Name="BillingStatu" Relationship="LightSwitchApplication.FK_TimesheetDetail_BillingStatus" ToRole="BillingStatus" FromRole="TimesheetDetail" />
     <NavigationProperty Name="DimDate" Relationship="LightSwitchApplication.FK_TimesheetDetail_DimDate" ToRole="DimDate" FromRole="TimesheetDetail" />
@@ -316,6 +328,15 @@
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TimesheetDetail" FromRole="TypeOfWork" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TypeOfWork_ActiveType" ToRole="ActiveType" FromRole="TypeOfWork" />
+  </EntityType>
+  <EntityType Name="TimesheetHour">
+    <Key>
+      <PropertyRef Name="c_Date" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="c_Date" Type="Edm.DateTime" Nullable="false" Precision="0" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="Value" Type="Edm.Decimal" Precision="38" Scale="2" ConcurrencyMode="Fixed" />
   </EntityType>
   <Association Name="FK_BillingDetail_ActiveType">
     <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
@@ -450,7 +471,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_TimesheetDetail_BillingStatus">
-    <End Role="BillingStatus" Type="LightSwitchApplication.BillingStatu" Multiplicity="0..1" />
+    <End Role="BillingStatus" Type="LightSwitchApplication.BillingStatu" Multiplicity="1" />
     <End Role="TimesheetDetail" Type="LightSwitchApplication.TimesheetDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="BillingStatus">
@@ -462,7 +483,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_BillingDetail_Role">
-    <End Role="ClientRole" Type="LightSwitchApplication.ClientRole" Multiplicity="0..1" />
+    <End Role="ClientRole" Type="LightSwitchApplication.ClientRole" Multiplicity="1" />
     <End Role="BillingDetail" Type="LightSwitchApplication.BillingDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ClientRole">
@@ -654,6 +675,7 @@
     <EntitySet Name="TimesheetDetails" EntityType="LightSwitchApplication.TimesheetDetail" />
     <EntitySet Name="Timesheets" EntityType="LightSwitchApplication.Timesheet" />
     <EntitySet Name="TypeOfWorks" EntityType="LightSwitchApplication.TypeOfWork" />
+    <EntitySet Name="TimesheetHours" EntityType="LightSwitchApplication.TimesheetHour" />
     <AssociationSet Name="FK_BillingDetail_ActiveType" Association="LightSwitchApplication.FK_BillingDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />

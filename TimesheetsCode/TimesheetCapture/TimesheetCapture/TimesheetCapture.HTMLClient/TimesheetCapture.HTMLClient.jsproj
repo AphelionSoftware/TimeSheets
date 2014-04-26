@@ -38,6 +38,7 @@
     <Content Include="Content\c1ls-dark-3.0.20132.20.css" />
     <Content Include="Content\c1ls-light-3.0.20132.17.css" />
     <Content Include="Content\c1ls-light-3.0.20132.20.css" />
+    <Content Include="Content\D3.Calendar.css" />
     <Content Include="Content\dark-theme-2.0.0.css" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\icons-18-black.png" />
@@ -78,6 +79,9 @@
     <Content Include="Content\Web.config" />
     <Content Include="default.htm" />
     <Content Include="packages.config" />
+    <Content Include="Screens\BrowseTimesheets.lsml.js">
+      <DependentUpon>BrowseTimesheets.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\EditTimesheetDetails.lsml.js">
       <DependentUpon>EditTimesheetDetails.lsml</DependentUpon>
     </Content>
@@ -89,6 +93,9 @@
     <Content Include="Scripts\amplify.min.js" />
     <Content Include="Scripts\c1ls-3.0.20132.17.js" />
     <Content Include="Scripts\c1ls-3.0.20132.20.js" />
+    <Content Include="Scripts\colorbrewer.Extended.js" />
+    <Content Include="Scripts\d3.Calendar.js" />
+    <Content Include="Scripts\d3.v3.min.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -105,6 +112,7 @@
     <Content Include="Scripts\msls-2.0.0-vsdoc.js" />
     <Content Include="Scripts\msls-2.0.0.js" />
     <Content Include="Scripts\msls-2.0.0.min.js" />
+    <Content Include="Scripts\Polyfill.ArrayFind.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
     <Content Include="UserCode\Timesheet.lsml.js" />

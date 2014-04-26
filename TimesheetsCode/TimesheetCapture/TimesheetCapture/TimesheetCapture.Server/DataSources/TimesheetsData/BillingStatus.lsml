@@ -149,6 +149,7 @@
     Name="FK_TimesheetDetail_BillingStatus">
     <AssociationEnd
       Name="BillingStatus"
+      Multiplicity="One"
       EntityType="BillingStatu">
       <AssociationEnd.Attributes>
         <DeleteRule />
