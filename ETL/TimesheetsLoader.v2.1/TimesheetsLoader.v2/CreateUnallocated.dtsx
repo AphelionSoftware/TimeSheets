@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/9/2012 6:51:31 PM"
@@ -13,8 +13,8 @@
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="CreateUnallocated"
   DTS:PackageType="5"
-  DTS:VersionBuild="609"
-  DTS:VersionGUID="{0B1A6720-7EC5-4081-A85B-4A507E2F55D5}">
+  DTS:VersionBuild="614"
+  DTS:VersionGUID="{25894309-3825-48BE-A9F8-5E55AA74A92A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,7 +28,7 @@
         DTS:Name="ExcelFilePath">@[User::ClientPath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Dropbox\Timesheets\BillabilityExports\2013 - 03\AEL.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\2013 - 03\AEL.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -41,7 +41,7 @@
         DTS:Name="ExcelFilePath">@[User::AM_ClientExportPathPeriod_Client]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Dropbox\Timesheets\ClientExports\2013 - 03\Aphelion_Meerkat_2013 - 03.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Dropbox (PW South Africa)\Timesheets\ClientExports\2013 - 03\Aphelion_Meerkat_2013 - 03.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -54,7 +54,7 @@
         DTS:Name="ExcelFilePath">@[User::AM_ExportFilenamePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Dropbox\Timesheets\BillabilityExports\ProjectCaps.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\ProjectCaps.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -95,16 +95,18 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_BillingPeriodPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\2013 - 03</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\2013 - 03</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{6BB6AC13-0430-40B6-8D50-7527E1B2467A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[$Project::BasePath] + &quot;\\&quot;, &quot;\\\\&quot;, &quot;\\&quot;) + &quot;ClientExports&quot;"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="AM_ClientExportPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\ClientExports</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\ClientExports</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -115,7 +117,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ClientExportPathPeriod">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\ClientExports\2013 - 03</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\ClientExports\2013 - 03</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -126,7 +128,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ClientExportPathPeriod_Client">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\ClientExports\2013 - 03\Aphelion_Meerkat_2013 - 03.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\ClientExports\2013 - 03\Aphelion_Meerkat_2013 - 03.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -137,7 +139,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ClientExportTemplateFilename">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\Temp\ClientSheet.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\Temp\ClientSheet.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -202,7 +204,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ExportFilenamePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\ProjectCaps.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\ProjectCaps.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -222,7 +224,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ImportFilenamePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\MixTelematics.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\MixTelematics.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -233,7 +235,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ImportFilenamePath_Unmatched">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\Unmatched\Unmatched.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\Unmatched\Unmatched.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -262,7 +264,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="AM_ImportProcessedPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -413,7 +415,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="AM_TemplateFilename">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\Temp\ProjectCaps.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\Temp\ProjectCaps.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -424,7 +426,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="BillableExportPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -435,7 +437,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="BillableImportPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -446,7 +448,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="BillableImportPathProcessed">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\SSISProcessed\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -561,7 +563,7 @@ ORDER BY ClientName, ProjectName, TimesheetDetailSourceKey, TimesheetDetailDateI
       DTS:Namespace="User"
       DTS:ObjectName="ClientPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\BillabilityExports\2013 - 03\AEL.xlsx</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\2013 - 03\AEL.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -690,7 +692,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DeletionFileName">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\ToDelete\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\ToDelete\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -701,7 +703,7 @@ AND [BillingPeriodText]
       DTS:Namespace="User"
       DTS:ObjectName="DeletionPath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\ToDelete\</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets\ToDelete\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -731,15 +733,6 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{7DA5C0B6-3670-440E-9F23-A6C1AF0414DF}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="ErrorPath">
-      <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\Errors</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
       DTS:DTSID="{E0620518-54A0-4135-990E-0D090A6A3E5B}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
@@ -766,24 +759,6 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
       DTS:ObjectName="FileName">
       <DTS:VariableValue
         DTS:DataType="8">zConsultantName_20000101_TemplateTS</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{7D501140-648A-4603-8CFE-B29FCBED3BFB}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="FinishedPath">
-      <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\SSISProcessed</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{D5627755-6EAB-4EEF-940C-72B21EB65441}"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="InProcessPath">
-      <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\InProcess\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -849,22 +824,13 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{32320D25-0F75-45CC-8884-7A90458DB371}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Project::BasePath]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="Path">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\</DTS:VariableValue>
-    </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{BC7D71CC-E76F-415C-BFDB-D9CFE192E9F9}"
-      DTS:EvaluateAsExpression="True"
-      DTS:Expression="@[User::InProcessPath] +  @[User::FileName]"
-      DTS:IncludeInDebugDump="2345"
-      DTS:Namespace="User"
-      DTS:ObjectName="SourceInProcessPath">
-      <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\InProcess\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\Timesheets</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -875,7 +841,7 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
       DTS:Namespace="User"
       DTS:ObjectName="SourcePath">
       <DTS:VariableValue
-        DTS:DataType="8">D:\Dropbox\Timesheets\zConsultantName_20000101_TemplateTS</DTS:VariableValue>
+        DTS:DataType="8">C:\Dropbox (PW South Africa)\TimesheetszConsultantName_20000101_TemplateTS</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1740,6 +1706,7 @@ from [Timesheets]
               DTS:DTSID="{daf76e72-a762-461c-82dd-8ad1382e63ee}"
               DTS:ExecutableType="SSIS.Pipeline.3"
               DTS:LocaleID="-1"
+              DTS:MaxErrorCount="1000"
               DTS:ObjectName="DFT_CapsFromCube"
               DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
               <DTS:Variables />
@@ -4015,7 +3982,7 @@ from [Timesheets]
             <DTS:ObjectData>
               <ForEachFileEnumeratorProperties>
                 <FEFEProperty
-                  Folder="D:\Dropbox\Timesheets\BillabilityExports\" />
+                  Folder="C:\Dropbox (PW South Africa)\Timesheets\BillabilityExports\" />
                 <FEFEProperty
                   FileSpec="*.xlsx" />
                 <FEFEProperty
@@ -6611,7 +6578,7 @@ from [Timesheets]
     design-time-name="Package\SEQ_CreateUnallocatedSheets\FLC_AMs\DFT_Caps">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="141,42"
           Id="Package\SEQ_CreateUnallocatedSheets\FLC_AMs\DFT_Caps\ProjectBilling"
@@ -6651,7 +6618,9 @@ from [Timesheets]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6881,7 +6850,7 @@ from [Timesheets]
     design-time-name="Package\SEQ_CreateUnallocatedSheets\SEQ_ClientBilling\FLC_Clients\DFT_CreateExcelClient">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42"
           Id="Package\SEQ_CreateUnallocatedSheets\SEQ_ClientBilling\FLC_Clients\DFT_CreateExcelClient\Client_Source"
@@ -6921,7 +6890,9 @@ from [Timesheets]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

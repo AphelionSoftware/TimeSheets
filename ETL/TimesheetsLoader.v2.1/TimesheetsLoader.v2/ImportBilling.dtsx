@@ -13,8 +13,8 @@
   DTS:MaxErrorCount="10000"
   DTS:ObjectName="ImportBilling"
   DTS:PackageType="5"
-  DTS:VersionBuild="586"
-  DTS:VersionGUID="{2D734D15-3CAE-4F9E-84F3-32B61CB15DD7}">
+  DTS:VersionBuild="587"
+  DTS:VersionGUID="{8C39B1E4-BD54-4A5E-B119-A6C99E9013DB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -798,10 +798,12 @@ where TimesheetFileName = replace('zConsultantName_20000101_TemplateTS','.xlsx',
                 DTS:CreationName="DTS.ForEachFileEnumerator.3"
                 DTS:DTSID="{52EA122F-41C4-424D-A728-A5DFAAD474EE}"
                 DTS:ObjectName="{52EA122F-41C4-424D-A728-A5DFAAD474EE}">
+                <DTS:PropertyExpression
+                  DTS:Name="Directory">@[User::BillableImportPath]</DTS:PropertyExpression>
                 <DTS:ObjectData>
                   <ForEachFileEnumeratorProperties>
                     <FEFEProperty
-                      Folder="D:\Dropbox\Timesheets\BillabilityImports\" />
+                      Folder="C:\Dropbox (PW South Africa)\Timesheets\BillabilityImports\" />
                     <FEFEProperty
                       FileSpec="*.xlsx" />
                     <FEFEProperty
@@ -2346,14 +2348,14 @@ where [refTable].[intTimesheetDetailID] = ?</property>
                           startId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\XL_BillingImport.Outputs[Excel Source Output]" />
                         <path
                           refId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output1]"
-                          endId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_TimesheetDetailID.Inputs[Lookup Input]"
-                          name="Lookup Match Output"
-                          startId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_BillingStatus.Outputs[Lookup Match Output]" />
-                        <path
-                          refId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output]"
                           endId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\OLEDest_Update.Inputs[OLE DB Destination Input]"
                           name="Lookup Match Output"
                           startId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_TimesheetDetailID.Outputs[Lookup Match Output]" />
+                        <path
+                          refId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output]"
+                          endId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_TimesheetDetailID.Inputs[Lookup Input]"
+                          name="Lookup Match Output"
+                          startId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\LKP_BillingStatus.Outputs[Lookup Match Output]" />
                         <path
                           refId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup No Match Output]"
                           endId="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability\XLS_Unmatched.Inputs[Excel Destination Input]"
@@ -2400,8 +2402,8 @@ where [refTable].[intTimesheetDetailID] = ?</property>
               <DTS:ForEachVariableMappings>
                 <DTS:ForEachVariableMapping
                   DTS:CreationName=""
-                  DTS:DTSID="{B4BCFEAD-33BE-4AFE-AAF2-2C3199553FB9}"
-                  DTS:ObjectName="{B4BCFEAD-33BE-4AFE-AAF2-2C3199553FB9}"
+                  DTS:DTSID="{3D3942F6-B5DF-495A-93CD-6DD62EA294FD}"
+                  DTS:ObjectName="{3D3942F6-B5DF-495A-93CD-6DD62EA294FD}"
                   DTS:ValueIndex="0"
                   DTS:VariableName="User::AM_ImportFilename" />
               </DTS:ForEachVariableMappings>
@@ -2631,7 +2633,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output1]"
+          Id="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output]"
           TopLeft="580.5,358">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2667,7 +2669,7 @@ where [refTable].[intTimesheetDetailID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output]"
+          Id="Package\Sequence Container\SEQ_ImportBilling\FLC_BillabilityFiles\DFT_Billability.Paths[Lookup Match Output1]"
           TopLeft="757.666666666667,432">
           <EdgeLayout.Curve>
             <mssgle:Curve
