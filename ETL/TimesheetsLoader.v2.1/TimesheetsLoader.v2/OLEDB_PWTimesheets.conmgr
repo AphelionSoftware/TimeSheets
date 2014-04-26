@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="OLEDB_PWTimesheets"
+  DTS:DTSID="{D5838353-9B04-47AF-B89F-E8C1DBBB6093}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=r51q8t78uk.database.windows.net;User ID=LOrealTest;Initial Catalog=Timesheets;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArrjJRaDSFEKjvWA/mftkWgAAAAACAAAAAAAQZgAAAAEAACAAAABbvs/xld7qibZuOeyl5UU5pJcexj1fklgrpXiaZRV/YgAAAAAOgAAAAAIAACAAAAAFNGsEcuY0+rLWnSHi+zGJN3ow896mGAjGDa3LSx8SYYAAAACIL+7EtZpW5uSrkYtJ9Y31u4TTzZ5z1RIgpZq3WL+dv1vLJy1xIduOtGbp6ouEciIRsJ4br4EQG2qMAEkWQ8aMccxX82aJ3qI1F4d+wlzAl2FqWX52Zs/PV+yN0nOUHdzUc+Lj06a/vJ/Ze9+7LpwRqdW1Z8KeTH/zzyItk7CP6EAAAADCaEt0JwJi+BlRP7ACtTHNRUKcjqpY/3ZIbkz82rTLE1CsyLrR79owTkK7fpJ0Pc0xaIvXsrX+fvz931+HBzF0</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
