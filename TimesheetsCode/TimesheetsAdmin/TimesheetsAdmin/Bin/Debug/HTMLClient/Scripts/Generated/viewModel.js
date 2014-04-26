@@ -693,6 +693,9 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
+        /// <field name="TimesheetHours" type="msls.VisualCollection" elementType="msls.application.TimesheetHour">
+        /// Gets the timesheetHours for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.HomeScreen.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -700,37 +703,6 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "HomeScreen", parameters);
-    }
-
-    function UnallocatedTimesheets(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the UnallocatedTimesheets screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="TimesheetDetailsUnallocated" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
-        /// Gets the timesheetDetailsUnallocated for this screen.
-        /// </field>
-        /// <field name="TimesheetDetailProject_Client" type="String">
-        /// Gets or sets the timesheetDetailProject_Client for this screen.
-        /// </field>
-        /// <field name="TimesheetDetailPersonName" type="String">
-        /// Gets or sets the timesheetDetailPersonName for this screen.
-        /// </field>
-        /// <field name="TimesheetDetailAM" type="String">
-        /// Gets or sets the timesheetDetailAM for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.UnallocatedTimesheets.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "UnallocatedTimesheets", parameters);
     }
 
     function ResourcePlanTable(parameters, dataWorkspace) {
@@ -771,6 +743,37 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "ResourcePlanTable", parameters);
+    }
+
+    function UnallocatedTimesheets(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the UnallocatedTimesheets screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="TimesheetDetailsUnallocated" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
+        /// Gets the timesheetDetailsUnallocated for this screen.
+        /// </field>
+        /// <field name="TimesheetDetailProject_Client" type="String">
+        /// Gets or sets the timesheetDetailProject_Client for this screen.
+        /// </field>
+        /// <field name="TimesheetDetailPersonName" type="String">
+        /// Gets or sets the timesheetDetailPersonName for this screen.
+        /// </field>
+        /// <field name="TimesheetDetailAM" type="String">
+        /// Gets or sets the timesheetDetailAM for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.UnallocatedTimesheets.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "UnallocatedTimesheets", parameters);
     }
 
     msls._addToNamespace("msls.application", {
@@ -1131,19 +1134,12 @@
         ]),
 
         HomeScreen: $defineScreen(HomeScreen, [
-        ], [
-        ]),
-
-        UnallocatedTimesheets: $defineScreen(UnallocatedTimesheets, [
             {
-                name: "TimesheetDetailsUnallocated", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
-                createQuery: function (Project_Client, PersonName, AM) {
-                    return this.dataWorkspace.Timesheets_Data.TimesheetDetailsUnallocated(Project_Client, PersonName, AM).expand("Project").expand("Person").expand("TypeOfWork").expand("DimDate").expand("BillingStatus");
+                name: "TimesheetHours", kind: "collection", elementType: lightSwitchApplication.TimesheetHour,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.TimesheetHours;
                 }
-            },
-            { name: "TimesheetDetailProject_Client", kind: "local", type: String },
-            { name: "TimesheetDetailPersonName", kind: "local", type: String },
-            { name: "TimesheetDetailAM", kind: "local", type: String }
+            }
         ], [
         ]),
 
@@ -1170,6 +1166,19 @@
                     return this.dataWorkspace.Timesheets_Data.ProjectsSorted().filter("ActiveType/Active eq 1").expand("Client");
                 }
             }
+        ], [
+        ]),
+
+        UnallocatedTimesheets: $defineScreen(UnallocatedTimesheets, [
+            {
+                name: "TimesheetDetailsUnallocated", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
+                createQuery: function (Project_Client, PersonName, AM) {
+                    return this.dataWorkspace.Timesheets_Data.TimesheetDetailsUnallocated(Project_Client, PersonName, AM).expand("Project").expand("Person").expand("TypeOfWork").expand("DimDate").expand("BillingStatus");
+                }
+            },
+            { name: "TimesheetDetailProject_Client", kind: "local", type: String },
+            { name: "TimesheetDetailPersonName", kind: "local", type: String },
+            { name: "TimesheetDetailAM", kind: "local", type: String }
         ], [
         ]),
 
@@ -1473,18 +1482,6 @@
             return lightSwitchApplication.showScreen("HomeScreen", parameters, options);
         }),
 
-        showUnallocatedTimesheets: $defineShowScreen(function showUnallocatedTimesheets(options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the UnallocatedTimesheets screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("UnallocatedTimesheets", parameters, options);
-        }),
-
         showResourcePlanTable: $defineShowScreen(function showResourcePlanTable(options) {
             /// <summary>
             /// Asynchronously navigates forward to the ResourcePlanTable screen.
@@ -1495,6 +1492,18 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("ResourcePlanTable", parameters, options);
+        }),
+
+        showUnallocatedTimesheets: $defineShowScreen(function showUnallocatedTimesheets(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the UnallocatedTimesheets screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("UnallocatedTimesheets", parameters, options);
         })
 
     });

@@ -160,6 +160,13 @@
         Association="FK_InvoiceStatus_ActiveType"
         FromEnd="ActiveType"
         ToEnd="InvoiceStatus" />
+      <EntityProperty
+        Name="Property1"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Computed />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association

@@ -146,6 +146,14 @@
         created: [lightSwitchApplication.UnallocatedTimesheet]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.TimesheetHour, {
+        /// <field>
+        /// Called when a new timesheetHour is created.
+        /// <br/>created(msls.application.TimesheetHour entity)
+        /// </field>
+        created: [lightSwitchApplication.TimesheetHour]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.ResourcePlanRange, {
         /// <field>
         /// Called when a new resourcePlanRange is created.

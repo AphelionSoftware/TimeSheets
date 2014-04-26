@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <setParameter name="TimesheetsAdmin_IisWebApplication" value="Default Web Site/TimesheetsAdmin" />
-  <setParameter name="Timesheets_Data" value="Data Source=r51q8t78uk.database.windows.net;Initial Catalog=Timesheets;Persist Security Info=True;User ID=LOrealTest;Password=Denali@2011" />
+  <setParameter name="Timesheets_Data" value="data source=r51q8t78uk.database.windows.net;initial catalog=Timesheets;persist security info=True;user id=LOrealTest;password=Denali@2011" />
 </parameters>

@@ -243,7 +243,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public decimal InvoiceLineAmount
+        public global::System.Nullable<decimal> InvoiceLineAmount
         {
             get
             {
@@ -357,6 +357,30 @@ namespace LightSwitchApplication
         partial void sys_ModifiedBy_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void sys_ModifiedBy_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public decimal InvoiceLineCalcedAmount
+        {
+            get
+            {
+                return global::LightSwitchApplication.InvoiceLine.DetailsClass.GetValue(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.InvoiceLineCalcedAmount);
+            }
+            set
+            {
+                global::LightSwitchApplication.InvoiceLine.DetailsClass.SetValue(this, global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.InvoiceLineCalcedAmount, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineCalcedAmount_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineCalcedAmount_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void InvoiceLineCalcedAmount_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -639,11 +663,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal> InvoiceLineAmount
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>> InvoiceLineAmount
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.InvoiceLineAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>;
+                        return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.InvoiceLineAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>>;
                     }
                 }
                 
@@ -676,6 +700,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.sys_ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal> InvoiceLineCalcedAmount
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties.InvoiceLineCalcedAmount) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>;
                     }
                 }
                 
@@ -740,11 +772,12 @@ namespace LightSwitchApplication
                 new string InvoiceLineCode { get; set; }
                 new decimal InvoiceLineRate { get; set; }
                 new int InvoiceLineQty { get; set; }
-                new decimal InvoiceLineAmount { get; set; }
+                new global::System.Nullable<decimal> InvoiceLineAmount { get; set; }
                 new global::System.DateTime sys_CreatedOn { get; set; }
                 new string sys_CreatedBy { get; set; }
                 new global::System.DateTime sys_ModifiedOn { get; set; }
                 new string sys_ModifiedBy { get; set; }
+                new decimal InvoiceLineCalcedAmount { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Invoice { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ClientRole { get; set; }
@@ -1012,8 +1045,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Entry
-                    InvoiceLineAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>>.Entry
+                    InvoiceLineAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>>.Entry(
                         "InvoiceLineAmount",
                         global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineAmount_Stub,
                         global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineAmount_ComputeIsReadOnly,
@@ -1021,7 +1054,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineAmount_GetImplementationValue,
                         global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineAmount_SetImplementationValue,
                         global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineAmount_OnValueChanged);
-                private static void _InvoiceLineAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceLine.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.InvoiceLine.DetailsClass d, object sf)
+                private static void _InvoiceLineAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceLine.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>>.Data> c, global::LightSwitchApplication.InvoiceLine.DetailsClass d, object sf)
                 {
                     c(d, ref d._InvoiceLineAmount, sf);
                 }
@@ -1035,11 +1068,11 @@ namespace LightSwitchApplication
                 {
                     e.InvoiceLineAmount_Validate(r);
                 }
-                private static decimal _InvoiceLineAmount_GetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
+                private static global::System.Nullable<decimal> _InvoiceLineAmount_GetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
                 {
                     return d.ImplementationEntity.InvoiceLineAmount;
                 }
-                private static void _InvoiceLineAmount_SetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d, decimal v)
+                private static void _InvoiceLineAmount_SetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d, global::System.Nullable<decimal> v)
                 {
                     d.ImplementationEntity.InvoiceLineAmount = v;
                 }
@@ -1194,6 +1227,43 @@ namespace LightSwitchApplication
                 private static void _sys_ModifiedBy_OnValueChanged(global::LightSwitchApplication.InvoiceLine e)
                 {
                     e.sys_ModifiedBy_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Entry
+                    InvoiceLineCalcedAmount = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Entry(
+                        "InvoiceLineCalcedAmount",
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_Stub,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_ComputeIsReadOnly,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_Validate,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_GetImplementationValue,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_SetImplementationValue,
+                        global::LightSwitchApplication.InvoiceLine.DetailsClass.PropertySetProperties._InvoiceLineCalcedAmount_OnValueChanged);
+                private static void _InvoiceLineCalcedAmount_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.InvoiceLine.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.InvoiceLine.DetailsClass d, object sf)
+                {
+                    c(d, ref d._InvoiceLineCalcedAmount, sf);
+                }
+                private static bool _InvoiceLineCalcedAmount_ComputeIsReadOnly(global::LightSwitchApplication.InvoiceLine e)
+                {
+                    bool result = false;
+                    e.InvoiceLineCalcedAmount_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _InvoiceLineCalcedAmount_Validate(global::LightSwitchApplication.InvoiceLine e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.InvoiceLineCalcedAmount_Validate(r);
+                }
+                private static decimal _InvoiceLineCalcedAmount_GetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d)
+                {
+                    return d.ImplementationEntity.InvoiceLineCalcedAmount;
+                }
+                private static void _InvoiceLineCalcedAmount_SetImplementationValue(global::LightSwitchApplication.InvoiceLine.DetailsClass d, decimal v)
+                {
+                    d.ImplementationEntity.InvoiceLineCalcedAmount = v;
+                }
+                private static void _InvoiceLineCalcedAmount_OnValueChanged(global::LightSwitchApplication.InvoiceLine e)
+                {
+                    e.InvoiceLineCalcedAmount_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1475,7 +1545,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, int>.Data _InvoiceLineQty;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Data _InvoiceLineAmount;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.Nullable<decimal>>.Data _InvoiceLineAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::System.DateTime>.Data _sys_CreatedOn;
@@ -1488,6 +1558,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, string>.Data _sys_ModifiedBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, decimal>.Data _InvoiceLineCalcedAmount;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.InvoiceLine, global::LightSwitchApplication.InvoiceLine.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;

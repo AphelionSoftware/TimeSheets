@@ -83,9 +83,11 @@
 
         var width = 960,
             height = 96,
+			keyOffset = 100;
             cellSize = 15, // cell size
             cellWidth = cellSize,
             cellHeight = cellSize / 4 * 3;
+			
 
         var day = d3.time.format("%w"),
             week = d3.time.format("%U"),
@@ -107,14 +109,14 @@
 
         /*https://c81352b0-6af8-4e0c-8ddf-ff93360e75d1.o365apps.net/Timesheets_Data.svc/ResourcePlans?$format=json*/
         //d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json", function(error, jsonData) {
-        d3.json("https://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json", //function(error, jsonData) {
+        //d3.json("https://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json", //function(error, jsonData) {
         //d3.json("https://aphelionws.sharepoint.com/sites/SA//Lib/ResourcePlans.json", //function(error, jsonData) {
-        //d3.json("ResourcePlans.json", //function(error, jsonData) {
+        d3.json("ResourcePlans.json", //function(error, jsonData) {
         //d3.json("http://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get(
         //d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get(
         function(error, jsonData) {
 
-            var data = d3.nest()
+			var data = d3.nest()
               .key(function(d) { return d.c_Date;
                   //var dt = new Date(d.Date);
                   //return  dt.getFullYear() + " - " + d.Name ;
@@ -152,6 +154,8 @@
                 .domain(domain)
                 .range(colorbrewer.Paired[20]);
 
+				
+				
             /*Creating the base blocks*/
             var svg = d3.select("body").selectAll("svg")
                 .data(d3.keys( people )/*d3.range(2013, 2016)*/)
@@ -188,8 +192,8 @@
                 .attr("class", "day")
                 .attr("width", cellWidth)
                 .attr("height", cellHeight )
-                .attr("x", function (d) { if (d.length > 62) return week(new Date(d.substring(0, 62))) * cellWidth; else if (d.length >= 33) return week(new Date(d.substring(0, 33))) * cellWidth; else return 0; })
-                .attr("y", function (d) { if (d.length > 62) return day(new Date(d.substring(0, 62))) * cellHeight; else if (d.length > 3) return day(new Date(d.substring(0, 33))) * cellHeight; else return 0; })
+                .attr("x", function (d) { if (d.length > 62) return week(new Date(d.substring(0, 62))) * cellWidth; else if (d.length >= 33) return week(new Date(d.substring(0, 33))) * cellWidth ; else return 0; })
+                .attr("y", function (d) { if (d.length > 62) return day(new Date(d.substring(0, 62))) * cellHeight ; else if (d.length > 3) return day(new Date(d.substring(0, 33))) * cellHeight ; else return 0; })
 
 
             // .datum(format);
@@ -310,6 +314,70 @@
 
                 });
 				
+			//Key
+			
+				//Creating the key
+				
+				
+				var bottom = d3.keys(people).length * height;
+			
+			//d3.select("body").append("p")
+			
+			var svgKey = d3.select("body").append("svg")
+				.attr("width", 960/*cellWidth * 20*/)
+                .attr("height", (d3.keys( domain).length + 1) * cellHeight * 2/*((cellHeight * d3.keys(domain).length)) + bottom*/)
+                .attr("class", "RdYlGn")
+				/*.attr("x",0)
+				.attr("y", 0 bottom * 2)*/
+				.append("g")
+              
+				;
+
+				
+				
+            var rectKey = svgKey.selectAll(".client")
+                .data( d3.keys(domain)  )
+              .enter().append("rect") 
+			  .attr("class", "Client")
+                .attr("width", cellWidth * 20)
+                .attr("height", cellHeight * 2 )
+				.attr("x",80)
+				.attr("y",
+					function(d) {
+					return ((d3.keys( domain).indexOf(d) + 1) * cellHeight * 2)  ;
+					}
+				)
+				.attr('style', function(d){return "fill:"+ 
+								color2( d ) }
+								)
+			  ;
+  
+            var text = svgKey.selectAll(".txt")
+                .data( d3.keys(domain)  )
+              .enter().append("text") 
+                .attr("width", cellWidth * 20)
+                .attr("height", cellHeight )
+				.attr("x",0)
+				.attr("y",
+					function(d) {
+					return (((d3.keys( domain).indexOf(d) + 1) * cellHeight * 2) + (cellHeight/4*3))  ;
+					}
+				)			
+				.text(
+					function(d) {
+					return d;
+					}
+				)
+			  ;
+				
+			rect.append("title")
+			.text(function(d) { return d; });
+            
+				
+				
+				
+				
+				
         });
         //.attr('style', function(d){return "fill:"+ color2(data[d][0].Client) + ";" ;})
 
@@ -319,8 +387,8 @@
                 d0 = +day(t0), w0 = +week(t0),
                 d1 = +day(t1), w1 = +week(t1);
             return "M" + (w0 + 1) * cellWidth + "," + d0 * cellHeight
-                + "H" + w0 * cellWidth + "V" + 7 * cellHeight
-                + "H" + w1 * cellWidth + "V" + (d1 + 1) * cellHeight
+                + "H" + w0 * cellWidth + "V" + (7 * cellHeight) 
+                + "H" + w1 * cellWidth + "V" + (d1 + 1) * cellHeight 
                 + "H" + (w1 + 1) * cellWidth + "V" + 0
                 + "H" + (w0 + 1) * cellWidth + "Z";
         }

@@ -442,6 +442,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.TimesheetHour))
+            {
+                return new global::LightSwitchApplication.Implementation.TimesheetHour();
+            }
     
             return base.CreateObject(type);
         }
@@ -529,6 +533,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.UnallocatedTimesheet))
             {
                 return new global::LightSwitchApplication.Implementation.UnallocatedTimesheet();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.TimesheetHour))
+            {
+                return new global::LightSwitchApplication.Implementation.TimesheetHour();
             }
             return null;
         }
@@ -658,6 +666,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.UnallocatedTimesheet) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.UnallocatedTimesheet);
+            }
+            if (typeof(global::LightSwitchApplication.TimesheetHour) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.TimesheetHour);
             }
             return null;
         }
@@ -2668,6 +2680,39 @@ namespace LightSwitchApplication.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class UnallocatedTimesheet :
         global::LightSwitchApplication.UnallocatedTimesheet.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class TimesheetHour :
+        global::LightSwitchApplication.TimesheetHour.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

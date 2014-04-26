@@ -693,6 +693,9 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
+        /// <field name="TimesheetHours" type="msls.VisualCollection" elementType="msls.application.TimesheetHour">
+        /// Gets the timesheetHours for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.HomeScreen.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -1131,6 +1134,12 @@
         ]),
 
         HomeScreen: $defineScreen(HomeScreen, [
+            {
+                name: "TimesheetHours", kind: "collection", elementType: lightSwitchApplication.TimesheetHour,
+                createQuery: function () {
+                    return this.dataWorkspace.Timesheets_Data.TimesheetHours;
+                }
+            }
         ], [
         ]),
 

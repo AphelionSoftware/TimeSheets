@@ -11,3 +11,4 @@ document.writeln("<script type=\"text/javascript\" src=\"UserCode/RoleType.lsml.
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/Timesheet.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/TimesheetDetail.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/TypeOfWork.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"Screens/HomeScreen.lsml.js\"></script>");

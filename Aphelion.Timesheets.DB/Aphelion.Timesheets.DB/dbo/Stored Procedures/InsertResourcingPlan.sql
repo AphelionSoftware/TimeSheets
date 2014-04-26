@@ -1,6 +1,7 @@
 ﻿
 
 
+
 CREATE PROC [dbo].[InsertResourcingPlan]
 (
   @PersonID int
@@ -22,13 +23,14 @@ UPDATE [dbo].[ResourcePlanByDay]
 		   =  'Automatically inserted in range ' + convert(varchar(10),@Startdate) + ' to ' + convert(varchar(10),@Enddate) 
 	       ,[ResourcePlanByDayProjectID] =@ProjectID
 		where ResourceDate BETWEEN @StartDate and @EndDate
+		AND ResourcePlanByDayPersonID = @PersonID
 
 
 ;with dateCTE as (
 select
  dateid, [date] from dbo.dimdate
 
- where date >= Getdate()
+ where date >= dateadd(year, -1, getdate())
  and date <= dateadd(year, 1, getdate())
  and (
   (@Monday = 1 and [DayOfWeek] = 'Monday')

@@ -310,6 +310,7 @@
     <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetDetailsUnallocated.lsml">
       <DependentUpon>TimesheetDetails.lsml</DependentUpon>
     </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\Timesheets_Data\TimesheetHours.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -412,4 +412,10 @@
         Target="ServiceInterface:FK_TimesheetDetail_InvoiceLine" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:TimesheetHour" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

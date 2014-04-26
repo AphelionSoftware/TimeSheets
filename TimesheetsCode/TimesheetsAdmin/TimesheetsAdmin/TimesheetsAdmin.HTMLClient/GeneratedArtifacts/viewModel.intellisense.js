@@ -4136,23 +4136,51 @@
             data: lightSwitchApplication.HomeScreen,
             value: lightSwitchApplication.HomeScreen
         },
-        ShowBrowseResourcePlan: {
+        Table: {
             _$class: msls.ContentItem,
-            _$name: "ShowBrowseResourcePlan",
-            _$parentName: "Resourcing",
-            screen: lightSwitchApplication.HomeScreen
+            _$name: "Table",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.HomeScreen,
+            data: lightSwitchApplication.HomeScreen,
+            value: lightSwitchApplication.HomeScreen
         },
-        ShowAddEditResourcePlanRange: {
+        TimesheetHours: {
             _$class: msls.ContentItem,
-            _$name: "ShowAddEditResourcePlanRange",
-            _$parentName: "Resourcing",
-            screen: lightSwitchApplication.HomeScreen
+            _$name: "TimesheetHours",
+            _$parentName: "Table",
+            screen: lightSwitchApplication.HomeScreen,
+            data: lightSwitchApplication.HomeScreen,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.HomeScreen,
+                _$entry: {
+                    elementType: lightSwitchApplication.TimesheetHour
+                }
+            }
         },
-        ShowResourcePlanTable: {
+        TimesheetHoursTemplate: {
             _$class: msls.ContentItem,
-            _$name: "ShowResourcePlanTable",
-            _$parentName: "Resourcing",
-            screen: lightSwitchApplication.HomeScreen
+            _$name: "TimesheetHoursTemplate",
+            _$parentName: "TimesheetHours",
+            screen: lightSwitchApplication.HomeScreen,
+            data: lightSwitchApplication.TimesheetHour,
+            value: lightSwitchApplication.TimesheetHour
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "TimesheetHoursTemplate",
+            screen: lightSwitchApplication.HomeScreen,
+            data: lightSwitchApplication.TimesheetHour,
+            value: String
+        },
+        Value: {
+            _$class: msls.ContentItem,
+            _$name: "Value",
+            _$parentName: "TimesheetHoursTemplate",
+            screen: lightSwitchApplication.HomeScreen,
+            data: lightSwitchApplication.TimesheetHour,
+            value: String
         },
         Popups: {
             _$class: msls.ContentItem,
@@ -4244,20 +4272,30 @@
         /// </field>
         Resourcing_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("Resourcing"); }],
         /// <field>
-        /// Called after the ShowBrowseResourcePlan content item has been rendered.
+        /// Called after the Table content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowBrowseResourcePlan_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowBrowseResourcePlan"); }],
+        Table_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("Table"); }],
         /// <field>
-        /// Called after the ShowAddEditResourcePlanRange content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// Called to render the TimesheetHours content item.
+        /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowAddEditResourcePlanRange_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowAddEditResourcePlanRange"); }],
+        TimesheetHours_render: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("TimesheetHours"); }],
         /// <field>
-        /// Called after the ShowResourcePlanTable content item has been rendered.
+        /// Called after the TimesheetHoursTemplate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ShowResourcePlanTable_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("ShowResourcePlanTable"); }]
+        TimesheetHoursTemplate_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("TimesheetHoursTemplate"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Value content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Value_postRender: [$element, function () { return new lightSwitchApplication.HomeScreen().findContentItem("Value"); }]
     });
 
     lightSwitchApplication.ResourcePlanTable.prototype._$contentItems = {

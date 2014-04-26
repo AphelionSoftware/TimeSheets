@@ -9,6 +9,8 @@
     <Screen.Attributes>
       <DisplayName
         Value="Home Screen v 2.2.39" />
+      <SaveChangesTo
+        EntityContainer="Timesheets_Data" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -198,57 +200,59 @@
           </ContentItem>
           <ContentItem
             Name="Resourcing"
+            Kind="Group" />
+          <ContentItem
+            Name="Table"
             Kind="Group">
             <ContentItem
-              Name="ShowBrowseResourcePlan"
-              Kind="Command">
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+              Name="TimesheetHours"
+              Kind="Collection"
+              DataType="CollectionView$TimesheetHour"
+              View="Microsoft.LightSwitch.MobileWeb:CollectionCustomControl">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="HomeScreen/Properties[TimesheetHours]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="TimesheetHoursTemplate"
+                Kind="Details"
+                DataType="TimesheetHour">
+                <ContentItem.DataSource>
                   <ScreenExpressionTree>
-                    <ChainExpression>
-                      <CallExpression
-                        Target="!module/Methods[showBrowseResourcePlanSorted]" />
-                    </ChainExpression>
+                    <ChainExpression />
                   </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
-            </ContentItem>
-            <ContentItem
-              Name="ShowAddEditResourcePlanRange"
-              Kind="Command">
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <CallExpression
-                        Target="!module/Methods[showAddEditResourcePlanRange]">
-                        <CallExpression.Attributes>
-                          <CreateNewEntity
-                            EntityType="ResourcePlanRange"
-                            TargetParameter="!module/Methods[showAddEditResourcePlanRange]/Parameters[ResourcePlanRange]" />
-                        </CallExpression.Attributes>
-                      </CallExpression>
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
-            </ContentItem>
-            <ContentItem
-              Name="ShowResourcePlanTable"
-              Kind="Command">
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <CallExpression
-                        Target="!module/Methods[showResourcePlanTable]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Name"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetHour/Properties[Name]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Value"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="TimesheetHour/Properties[Value]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
             </ContentItem>
           </ContentItem>
           <ContentItem.PropertySources>
@@ -306,6 +310,34 @@
           ParameterType=":String" />
       </ScreenMethod>
     </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="TimesheetHours"
+        PageSize="45"
+        PropertyType="CollectionView$TimesheetHour">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="TimesheetHoursQuery"
+            ReturnType="TimesheetHour*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="Timesheets_Data/Members[TimesheetHours]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="HomeScreen/Properties[TimesheetHours]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
   </Screen>
   <Application.Methods>
     <ApplicationMethod
