@@ -273,6 +273,19 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
+        /// Gets the TimesheetHours entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TimesheetHour> TimesheetHours
+        {
+            get
+            {
+                return global::LightSwitchApplication.TimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TimesheetHours);
+            }
+        }
+        
+        /// <summary>
         /// Gets the Timesheets entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
@@ -295,19 +308,6 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.TimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TypeOfWorks);
-            }
-        }
-        
-        /// <summary>
-        /// Gets the TimesheetHours entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TimesheetHour> TimesheetHours
-        {
-            get
-            {
-                return global::LightSwitchApplication.TimesheetsData.DetailsClass.GetValue(this, global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TimesheetHours);
             }
         }
         
@@ -535,9 +535,12 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectSorted()
+        /// <param name="Name">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectSorted(string Name)
         {
-            return this.Details.Methods.ProjectSorted.CreateInvocation().Execute();
+            return this.Details.Methods.ProjectSorted.CreateInvocation(Name).Execute();
         }
         
         /// <summary>
@@ -568,6 +571,34 @@ namespace LightSwitchApplication
         public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TimesheetDetail> TimesheetDetailsQuery()
         {
             return this.Details.Methods.TimesheetDetailsQuery.CreateInvocation().Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="c_Date">
+        /// The value of the 'c_Date' key property of the entity to retrieve.
+        /// </param>
+        /// <param name="Name">
+        /// The value of the 'Name' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.TimesheetHour TimesheetHours_Single(global::System.Nullable<global::System.DateTime> c_Date, string Name)
+        {
+            return this.Details.Methods.TimesheetHours_Single.CreateInvocation(c_Date, Name).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="c_Date">
+        /// The value of the 'c_Date' key property of the entity to retrieve.
+        /// </param>
+        /// <param name="Name">
+        /// The value of the 'Name' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.TimesheetHour TimesheetHours_SingleOrDefault(global::System.Nullable<global::System.DateTime> c_Date, string Name)
+        {
+            return this.Details.Methods.TimesheetHours_SingleOrDefault.CreateInvocation(c_Date, Name).Execute();
         }
         
         /// <summary>
@@ -640,31 +671,11 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
+        /// No Modeled Description Available
         /// </summary>
-        /// <param name="c_Date">
-        /// The value of the 'c_Date' key property of the entity to retrieve.
-        /// </param>
-        /// <param name="Name">
-        /// The value of the 'Name' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.TimesheetHour TimesheetHours_Single(global::System.Nullable<global::System.DateTime> c_Date, string Name)
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.TypeOfWork> TypeOfWorkSorted()
         {
-            return this.Details.Methods.TimesheetHours_Single.CreateInvocation(c_Date, Name).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="c_Date">
-        /// The value of the 'c_Date' key property of the entity to retrieve.
-        /// </param>
-        /// <param name="Name">
-        /// The value of the 'Name' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.TimesheetHour TimesheetHours_SingleOrDefault(global::System.Nullable<global::System.DateTime> c_Date, string Name)
-        {
-            return this.Details.Methods.TimesheetHours_SingleOrDefault.CreateInvocation(c_Date, Name).Execute();
+            return this.Details.Methods.TypeOfWorkSorted.CreateInvocation().Execute();
         }
         
         #endregion
@@ -907,6 +918,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TimesheetHours_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TimesheetHours_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets_Single
                 {
                     get
@@ -955,19 +982,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork> TypeOfWorkSorted
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TimesheetHours_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TimesheetHours_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties.TypeOfWorkSorted) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
                     }
                 }
                 
@@ -1064,6 +1083,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TimesheetHours) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet> Timesheets
                 {
                     get
@@ -1077,14 +1104,6 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TypeOfWorks) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour> TimesheetHours
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties.TimesheetHours) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>;
                     }
                 }
                 
@@ -1337,6 +1356,26 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
+                    TimesheetHours_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
+                        "TimesheetHours_Single",
+                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._TimesheetHours_Single_Stub);
+                private static void _TimesheetHours_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TimesheetHours_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
+                    TimesheetHours_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
+                        "TimesheetHours_SingleOrDefault",
+                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._TimesheetHours_SingleOrDefault_Stub);
+                private static void _TimesheetHours_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TimesheetHours_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
                     Timesheets_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "Timesheets_Single",
@@ -1397,23 +1436,13 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
-                    TimesheetHours_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
-                        "TimesheetHours_Single",
-                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._TimesheetHours_Single_Stub);
-                private static void _TimesheetHours_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry
+                    TypeOfWorkSorted = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Entry(
+                        "TypeOfWorkSorted",
+                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._TypeOfWorkSorted_Stub);
+                private static void _TypeOfWorkSorted_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._TimesheetHours_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
-                    TimesheetHours_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
-                        "TimesheetHours_SingleOrDefault",
-                        global::LightSwitchApplication.TimesheetsData.DetailsClass.MethodSetProperties._TimesheetHours_SingleOrDefault_Stub);
-                private static void _TimesheetHours_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._TimesheetHours_SingleOrDefault, sf);
+                    c(d, ref d._TypeOfWorkSorted, sf);
                 }
     
             }
@@ -1525,6 +1554,16 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
+                    TimesheetHours = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
+                        "TimesheetHours",
+                        global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties._TimesheetHours_Stub);
+                private static void _TimesheetHours_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TimesheetHours, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry
                     Timesheets = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Entry(
                         "Timesheets",
@@ -1542,16 +1581,6 @@ namespace LightSwitchApplication
                 private static void _TypeOfWorks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
                 {
                     c(d, ref d._TypeOfWorks, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry
-                    TimesheetHours = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Entry(
-                        "TimesheetHours",
-                        global::LightSwitchApplication.TimesheetsData.DetailsClass.PropertySetProperties._TimesheetHours_Stub);
-                private static void _TimesheetHours_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TimesheetsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data> c, global::LightSwitchApplication.TimesheetsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._TimesheetHours, sf);
                 }
      
             }
@@ -1587,13 +1616,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetails;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveTypes_Single;
@@ -1668,6 +1697,12 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetDetail>.Data _TimesheetDetailsQuery;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.Timesheet>.Data _Timesheets_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1686,10 +1721,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorks_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TimesheetHour>.Data _TimesheetHours_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.TimesheetsData, global::LightSwitchApplication.TimesheetsData.DetailsClass, global::LightSwitchApplication.TypeOfWork>.Data _TypeOfWorkSorted;
             
         }
     

@@ -244,6 +244,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TimesheetHours">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TimesheetHour)">
+        <MappingFragment StoreEntitySet="TimesheetHours">
+          <ScalarProperty Name="c_Date" ColumnName="c_Date" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Timesheets">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Timesheet)">
         <MappingFragment StoreEntitySet="Timesheets">
@@ -285,15 +294,6 @@
           <ScalarProperty Name="sys_ModifiedOn" ColumnName="sys_ModifiedOn" />
           <ScalarProperty Name="sys_ModifiedBy" ColumnName="sys_ModifiedBy" />
           <ScalarProperty Name="Active" ColumnName="Active" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TimesheetHours">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TimesheetHour)">
-        <MappingFragment StoreEntitySet="TimesheetHours">
-          <ScalarProperty Name="c_Date" ColumnName="c_Date" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Value" ColumnName="Value" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -1394,10 +1394,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "ProjectSorted", value: function () {
+                name: "ProjectSorted", value: function (Name) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/ProjectSorted()",
                         {
+                            Name: $toODataString(Name, "String?")
                         });
                 }
             },
@@ -1423,6 +1424,14 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.TimesheetHours },
                         lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TimesheetHours(" + "c_Date=" + $toODataString(c_Date, "DateTime?") + "," + "Name=" + $toODataString(Name, "String?") + ")"
                     );
+                }
+            },
+            {
+                name: "TypeOfWorkSorted", value: function () {
+                    return new $DataServiceQuery({ _entitySet: this.TypeOfWorks },
+                        lightSwitchApplication.rootUri + "/TimesheetsData.svc" + "/TypeOfWorkSorted()",
+                        {
+                        });
                 }
             }
         ]),

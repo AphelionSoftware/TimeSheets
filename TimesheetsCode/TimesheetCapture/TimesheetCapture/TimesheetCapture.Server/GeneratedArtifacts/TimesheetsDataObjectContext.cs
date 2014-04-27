@@ -257,6 +257,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<TimesheetHour> TimesheetHours
+        {
+            get
+            {
+                if ((_TimesheetHours == null))
+                {
+                    _TimesheetHours = base.CreateObjectSet<TimesheetHour>("TimesheetHours");
+                }
+                return _TimesheetHours;
+            }
+        }
+        private ObjectSet<TimesheetHour> _TimesheetHours;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<Timesheet> Timesheets
         {
             get
@@ -285,22 +301,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TypeOfWork> _TypeOfWorks;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<TimesheetHour> TimesheetHours
-        {
-            get
-            {
-                if ((_TimesheetHours == null))
-                {
-                    _TimesheetHours = base.CreateObjectSet<TimesheetHour>("TimesheetHours");
-                }
-                return _TimesheetHours;
-            }
-        }
-        private ObjectSet<TimesheetHour> _TimesheetHours;
 
         #endregion
 
@@ -387,6 +387,14 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the TimesheetHours EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTimesheetHours(TimesheetHour timesheetHour)
+        {
+            base.AddObject("TimesheetHours", timesheetHour);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the Timesheets EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToTimesheets(Timesheet timesheet)
@@ -400,14 +408,6 @@ namespace LightSwitchApplication.Implementation
         public void AddToTypeOfWorks(TypeOfWork typeOfWork)
         {
             base.AddObject("TypeOfWorks", typeOfWork);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the TimesheetHours EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTimesheetHours(TimesheetHour timesheetHour)
-        {
-            base.AddObject("TimesheetHours", timesheetHour);
         }
 
         #endregion

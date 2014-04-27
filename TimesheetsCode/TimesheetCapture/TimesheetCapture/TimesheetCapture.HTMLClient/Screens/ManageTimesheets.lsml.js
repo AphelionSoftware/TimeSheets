@@ -13,6 +13,9 @@ myapp.ManageTimesheets.ShowTimesheetDetails_Tap_canExecute = function (screen) {
 myapp.ManageTimesheets.created = function (screen) {
     // Write code here.
     screen.ShowDetails = false;
+
+    //screen.TimesheetHours.details.refresh();
+
 };
 myapp.ManageTimesheets.Timesheet_ItemTap_execute = function (screen) {
     // Write code here.
@@ -20,6 +23,8 @@ myapp.ManageTimesheets.Timesheet_ItemTap_execute = function (screen) {
 }
 myapp.ManageTimesheets.TimesheetHours_render = function (element, contentItem) {
     // Write code here.
+
+
     div = $("<div class='calendarDiv' id='calendarDiv' ></div>");
     $(div).appendTo($(element));
 

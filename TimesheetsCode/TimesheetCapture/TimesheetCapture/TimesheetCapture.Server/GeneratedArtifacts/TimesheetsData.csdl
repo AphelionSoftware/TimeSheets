@@ -280,6 +280,15 @@
     <NavigationProperty Name="Timesheet" Relationship="LightSwitchApplication.FK_TimesheetDetail_Timesheet" ToRole="Timesheet" FromRole="TimesheetDetail" />
     <NavigationProperty Name="TypeOfWork" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TypeOfWork" FromRole="TimesheetDetail" />
   </EntityType>
+  <EntityType Name="TimesheetHour">
+    <Key>
+      <PropertyRef Name="c_Date" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="c_Date" Type="Edm.DateTime" Nullable="false" Precision="0" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
+    <Property Name="Value" Type="Edm.Decimal" Precision="38" Scale="2" ConcurrencyMode="Fixed" />
+  </EntityType>
   <EntityType Name="Timesheet">
     <Key>
       <PropertyRef Name="TimesheetID" />
@@ -328,15 +337,6 @@
     <Property Name="Active" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="TimesheetDetails" Relationship="LightSwitchApplication.FK_TimesheetDetail_TypeOfWork" ToRole="TimesheetDetail" FromRole="TypeOfWork" />
     <NavigationProperty Name="ActiveType" Relationship="LightSwitchApplication.FK_TypeOfWork_ActiveType" ToRole="ActiveType" FromRole="TypeOfWork" />
-  </EntityType>
-  <EntityType Name="TimesheetHour">
-    <Key>
-      <PropertyRef Name="c_Date" />
-      <PropertyRef Name="Name" />
-    </Key>
-    <Property Name="c_Date" Type="Edm.DateTime" Nullable="false" Precision="0" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="255" Unicode="false" />
-    <Property Name="Value" Type="Edm.Decimal" Precision="38" Scale="2" ConcurrencyMode="Fixed" />
   </EntityType>
   <Association Name="FK_BillingDetail_ActiveType">
     <End Role="ActiveType" Type="LightSwitchApplication.ActiveType" Multiplicity="1" />
@@ -673,9 +673,9 @@
     <EntitySet Name="People" EntityType="LightSwitchApplication.PersonItem" />
     <EntitySet Name="Projects" EntityType="LightSwitchApplication.Project" />
     <EntitySet Name="TimesheetDetails" EntityType="LightSwitchApplication.TimesheetDetail" />
+    <EntitySet Name="TimesheetHours" EntityType="LightSwitchApplication.TimesheetHour" />
     <EntitySet Name="Timesheets" EntityType="LightSwitchApplication.Timesheet" />
     <EntitySet Name="TypeOfWorks" EntityType="LightSwitchApplication.TypeOfWork" />
-    <EntitySet Name="TimesheetHours" EntityType="LightSwitchApplication.TimesheetHour" />
     <AssociationSet Name="FK_BillingDetail_ActiveType" Association="LightSwitchApplication.FK_BillingDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />

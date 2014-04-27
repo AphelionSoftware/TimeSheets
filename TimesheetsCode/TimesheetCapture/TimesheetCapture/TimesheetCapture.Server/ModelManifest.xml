@@ -12,7 +12,7 @@
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\OverallStatus.lsml" Checksum="AF08C705248078F4D21C1A6F560EEAC971B50132F0E70B51E585E1A369D68B6E" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\People.lsml" Checksum="F240268521EBDFD0F2E9059716337C5353F1ED6C2307F359FF86A5447A999DDC" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\Projects.lsml" Checksum="70EBFED1A0C5C3C975A383516EC1087BE9CC6A01ED74F65E390D4D20B40B19FA" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\ProjectSorted.lsml" Checksum="B57C616C5AA35C6EF189DE5CF13561BE194858358B18CF3856C866E2DE9C4CB3" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\ProjectSorted.lsml" Checksum="E6412120D00708057C49A9F39F863E6BDB83E311C13881F0B7C634C6AB49BC72" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\TimesheetDetails.lsml" Checksum="A86E2D80875B1C1DCF6B9B7E852384D45A5EF69ADA228CB716D1392B21134861" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\TimesheetDetailsQuery.lsml" Checksum="3071E9FE46F5CC2BEAC7A6BC17BA90DD2E39E6EC14516201F5A28CA3AF466D9B" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\TimesheetHours.lsml" Checksum="8D334D1083DAE6A9C8E3FCC2AFF4EBAD4E8180D334BBDEB4CB132834E354BCAC" />
@@ -22,5 +22,6 @@
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\TypeOfWorks.lsml" Checksum="6BEF1861A533489AE297322DAA7E9AFE0696741C88B0CDD36CA3552FAEF7FD0D" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\Properties\DataSources\TimesheetsData.lsml" Checksum="D9A23F021EAC47D034EAE4C9E2CE58B90900310817B2EEC201CCE360F2E52A83" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\Properties\Service.lsml" Checksum="D314581A339DA3A824C81A5E9235F103359F318485BB31DE025C8F52BDDD5970" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\DataSources\TimesheetsData\TypeOfWorkSorted.lsml" Checksum="1131BB09A98C62F5CD5BE2979231739C53B7EE94C16649C12C0164C43EB79561" />
   </Documents>
 </ModelDocumentManifest>

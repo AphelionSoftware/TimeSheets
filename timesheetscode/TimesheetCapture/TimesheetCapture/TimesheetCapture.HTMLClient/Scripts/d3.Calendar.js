@@ -59,6 +59,11 @@ function calendarbyUrl(contentItem, url) {
     d3.json(url, 
     function (error, jsonData) {
 
+        if (!jsonData) {
+            alert(error);
+            return;
+        }
+
         var data = d3.nest()
           .key(function (d) {
 

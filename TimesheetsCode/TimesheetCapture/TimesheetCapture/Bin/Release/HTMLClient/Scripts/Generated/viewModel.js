@@ -21,6 +21,18 @@
         /// <field name="TimesheetDetail" type="msls.application.TimesheetDetail">
         /// Gets or sets the timesheetDetail for this screen.
         /// </field>
+        /// <field name="TimesheetDetailDate" type="msls.VisualCollection" elementType="msls.application.DimDate">
+        /// Gets the timesheetDetailDate for this screen.
+        /// </field>
+        /// <field name="ProjectSorted" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectSorted for this screen.
+        /// </field>
+        /// <field name="TypeOfWorkSorted" type="msls.VisualCollection" elementType="msls.application.TypeOfWork">
+        /// Gets the typeOfWorkSorted for this screen.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheetDetail.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -188,7 +200,26 @@
     msls._addToNamespace("msls.application", {
 
         AddEditTimesheetDetail: $defineScreen(AddEditTimesheetDetail, [
-            { name: "TimesheetDetail", kind: "local", type: lightSwitchApplication.TimesheetDetail }
+            { name: "TimesheetDetail", kind: "local", type: lightSwitchApplication.TimesheetDetail },
+            {
+                name: "TimesheetDetailDate", kind: "collection", elementType: lightSwitchApplication.DimDate,
+                createQuery: function (PeriodEnding) {
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailDate(PeriodEnding);
+                }
+            },
+            {
+                name: "ProjectSorted", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (Name) {
+                    return this.dataWorkspace.TimesheetsData.ProjectSorted(Name).expand("Client");
+                }
+            },
+            {
+                name: "TypeOfWorkSorted", kind: "collection", elementType: lightSwitchApplication.TypeOfWork,
+                createQuery: function () {
+                    return this.dataWorkspace.TimesheetsData.TypeOfWorkSorted();
+                }
+            },
+            { name: "Name", kind: "local", type: String }
         ], [
         ]),
 
@@ -255,8 +286,8 @@
             { name: "WeekEnding", kind: "local", type: Date },
             {
                 name: "ProjectSorted", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function () {
-                    return this.dataWorkspace.TimesheetsData.ProjectSorted();
+                createQuery: function (Name) {
+                    return this.dataWorkspace.TimesheetsData.ProjectSorted(Name);
                 }
             },
             { name: "Instructions", kind: "local", type: String },

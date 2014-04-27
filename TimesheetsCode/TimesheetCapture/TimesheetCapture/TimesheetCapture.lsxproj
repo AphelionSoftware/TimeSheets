@@ -22,7 +22,7 @@
     <ApplicationServerType>SharePointAutoHost</ApplicationServerType>
     <AuthenticationType>SharePoint</AuthenticationType>
     <ApplicationName>TimesheetCapture</ApplicationName>
-    <AssemblyVersion>2.3.37.0</AssemblyVersion>
+    <AssemblyVersion>2.3.38.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>

@@ -420,6 +420,15 @@ namespace LightSwitchApplication
         partial void TimesheetDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_Validate(global::LightSwitchApplication.TimesheetHour entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Timesheets_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -492,15 +501,6 @@ namespace LightSwitchApplication
         partial void TypeOfWorks_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TypeOfWork, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_Validate(global::LightSwitchApplication.TimesheetHour entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -546,16 +546,16 @@ namespace LightSwitchApplication
         partial void ProjectSorted_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectSorted_Executing();
+        partial void ProjectSorted_Executing(string Name);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProjectSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+        partial void ProjectSorted_PreprocessQuery(string Name, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+        partial void ProjectSorted_Executed(string Name, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectSorted_ExecuteFailed(global::System.Exception exception);
+        partial void ProjectSorted_ExecuteFailed(string Name, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TimesheetDetailsQuery_CanExecute(ref bool result);
@@ -601,6 +601,21 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void TimesheetsUser_ExecuteFailed(global::System.Nullable<global::System.DateTime> StartDate, global::System.Nullable<global::System.DateTime> EndDate, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorkSorted_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TypeOfWorkSorted_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TypeOfWorkSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.TypeOfWork> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TypeOfWorkSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TypeOfWork> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void TypeOfWorkSorted_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -1376,6 +1391,39 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TimesheetHour>
+                __TimesheetHoursEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TimesheetHour>(
+                    "TimesheetHours",
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_CanRead,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_Validate,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_Filter);
+            private static bool __TimesheetHours_CanRead(global::LightSwitchApplication.TimesheetsDataService d)
+            {
+                bool result = true;
+                d.TimesheetHours_CanRead(ref result);
+                return result;
+            }
+            private static void __TimesheetHours_Validate(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.TimesheetHour e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TimesheetHours_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> __TimesheetHours_Filter(global::LightSwitchApplication.TimesheetsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter = null;
+                d.TimesheetHours_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.Timesheet>
                 __TimesheetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.Timesheet>(
                     "Timesheets",
@@ -1526,39 +1574,6 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TimesheetHour>
-                __TimesheetHoursEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TimesheetHour>(
-                    "TimesheetHours",
-                    null,
-                    null,
-                    null,
-                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_CanRead,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_Validate,
-                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TimesheetHours_Filter);
-            private static bool __TimesheetHours_CanRead(global::LightSwitchApplication.TimesheetsDataService d)
-            {
-                bool result = true;
-                d.TimesheetHours_CanRead(ref result);
-                return result;
-            }
-            private static void __TimesheetHours_Validate(global::LightSwitchApplication.TimesheetsDataService d, global::LightSwitchApplication.TimesheetHour e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.TimesheetHours_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> __TimesheetHours_Filter(global::LightSwitchApplication.TimesheetsDataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter = null;
-                d.TimesheetHours_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.TimesheetsDataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.TimesheetsDataService>(
                     "SaveChanges",
@@ -1666,20 +1681,20 @@ namespace LightSwitchApplication
             }
             private static void __ProjectSorted_Executing(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                d.ProjectSorted_Executing();
+                d.ProjectSorted_Executing((string)args[0]);
             }
             private static void __ProjectSorted_Executed(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                d.ProjectSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[0]);
+                d.ProjectSorted_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[1]);
             }
             private static void __ProjectSorted_Failed(global::LightSwitchApplication.TimesheetsDataService d, object[] args, global::System.Exception ex)
             {
-                d.ProjectSorted_ExecuteFailed(ex);
+                d.ProjectSorted_ExecuteFailed((string)args[0], ex);
             }
             private static global::System.Linq.IQueryable __ProjectSorted_PreprocessQuery(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[0];
-                d.ProjectSorted_PreprocessQuery(ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[1];
+                d.ProjectSorted_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
             
@@ -1779,6 +1794,39 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Timesheet>)args[2];
                 d.TimesheetsUser_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TypeOfWork>
+                __TypeOfWorkSortedEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.TimesheetsDataService, global::LightSwitchApplication.TypeOfWork>(
+                    "TypeOfWorkSorted",
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TypeOfWorkSorted_CanExecute,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TypeOfWorkSorted_Executing,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TypeOfWorkSorted_Executed,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TypeOfWorkSorted_Failed,
+                    global::LightSwitchApplication.TimesheetsDataService.DetailsClass.__TypeOfWorkSorted_PreprocessQuery);
+            private static bool __TypeOfWorkSorted_CanExecute(global::LightSwitchApplication.TimesheetsDataService d, bool r)
+            {
+                d.TypeOfWorkSorted_CanExecute(ref r);
+                return r;
+            }
+            private static void __TypeOfWorkSorted_Executing(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
+            {
+                d.TypeOfWorkSorted_Executing();
+            }
+            private static void __TypeOfWorkSorted_Executed(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
+            {
+                d.TypeOfWorkSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.TypeOfWork>)args[0]);
+            }
+            private static void __TypeOfWorkSorted_Failed(global::LightSwitchApplication.TimesheetsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.TypeOfWorkSorted_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __TypeOfWorkSorted_PreprocessQuery(global::LightSwitchApplication.TimesheetsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.TypeOfWork> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.TypeOfWork>)args[0];
+                d.TypeOfWorkSorted_PreprocessQuery(ref query);
                 return query;
             }
     

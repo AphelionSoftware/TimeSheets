@@ -35,21 +35,67 @@
             data: lightSwitchApplication.TimesheetDetail,
             value: lightSwitchApplication.TimesheetDetail
         },
-        PersonItem: {
+        DimDate: {
             _$class: msls.ContentItem,
-            _$name: "PersonItem",
+            _$name: "DimDate",
             _$parentName: "left",
             screen: lightSwitchApplication.AddEditTimesheetDetail,
             data: lightSwitchApplication.TimesheetDetail,
-            value: lightSwitchApplication.PersonItem
+            value: lightSwitchApplication.DimDate
         },
-        RowTemplate3: {
+        RowTemplate2: {
             _$class: msls.ContentItem,
-            _$name: "RowTemplate3",
-            _$parentName: "PersonItem",
+            _$name: "RowTemplate2",
+            _$parentName: "DimDate",
             screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.PersonItem,
-            value: lightSwitchApplication.PersonItem
+            data: lightSwitchApplication.DimDate,
+            value: lightSwitchApplication.DimDate
+        },
+        Group: {
+            _$class: msls.ContentItem,
+            _$name: "Group",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.TimesheetDetail
+        },
+        Project1: {
+            _$class: msls.ContentItem,
+            _$name: "Project1",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.Project
+        },
+        Project2: {
+            _$class: msls.ContentItem,
+            _$name: "Project2",
+            _$parentName: "Project1",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Project
+        },
+        Client: {
+            _$class: msls.ContentItem,
+            _$name: "Client",
+            _$parentName: "Project2",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Client
+        },
+        ProjectName: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectName",
+            _$parentName: "Project2",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.Project,
+            value: String
+        },
+        Search: {
+            _$class: msls.ContentItem,
+            _$name: "Search",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.AddEditTimesheetDetail
         },
         TypeOfWork: {
             _$class: msls.ContentItem,
@@ -66,54 +112,6 @@
             screen: lightSwitchApplication.AddEditTimesheetDetail,
             data: lightSwitchApplication.TypeOfWork,
             value: lightSwitchApplication.TypeOfWork
-        },
-        Project: {
-            _$class: msls.ContentItem,
-            _$name: "Project",
-            _$parentName: "left",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.TimesheetDetail,
-            value: lightSwitchApplication.Project
-        },
-        ProjectName: {
-            _$class: msls.ContentItem,
-            _$name: "ProjectName",
-            _$parentName: "Project",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.Project,
-            value: String
-        },
-        Client: {
-            _$class: msls.ContentItem,
-            _$name: "Client",
-            _$parentName: "Project",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.Project,
-            value: lightSwitchApplication.Client
-        },
-        Client1: {
-            _$class: msls.ContentItem,
-            _$name: "Client1",
-            _$parentName: "Client",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.Client,
-            value: lightSwitchApplication.Client
-        },
-        DimDate: {
-            _$class: msls.ContentItem,
-            _$name: "DimDate",
-            _$parentName: "left",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.TimesheetDetail,
-            value: lightSwitchApplication.DimDate
-        },
-        RowTemplate2: {
-            _$class: msls.ContentItem,
-            _$name: "RowTemplate2",
-            _$parentName: "DimDate",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.DimDate,
-            value: lightSwitchApplication.DimDate
         },
         Hours: {
             _$class: msls.ContentItem,
@@ -147,38 +145,6 @@
             data: lightSwitchApplication.TimesheetDetail,
             value: lightSwitchApplication.Timesheet
         },
-        RowTemplate5: {
-            _$class: msls.ContentItem,
-            _$name: "RowTemplate5",
-            _$parentName: "Timesheet",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.Timesheet,
-            value: lightSwitchApplication.Timesheet
-        },
-        TimesheetDetailName: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailName",
-            _$parentName: "right",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.TimesheetDetail,
-            value: String
-        },
-        TimesheetDetailCode: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailCode",
-            _$parentName: "right",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.TimesheetDetail,
-            value: String
-        },
-        TimesheetDetailFileName: {
-            _$class: msls.ContentItem,
-            _$name: "TimesheetDetailFileName",
-            _$parentName: "right",
-            screen: lightSwitchApplication.AddEditTimesheetDetail,
-            data: lightSwitchApplication.TimesheetDetail,
-            value: String
-        },
         ClientComments: {
             _$class: msls.ContentItem,
             _$name: "ClientComments",
@@ -195,19 +161,43 @@
             data: lightSwitchApplication.TimesheetDetail,
             value: String
         },
-        LastUpdateDate: {
+        sys_ModifiedOn: {
             _$class: msls.ContentItem,
-            _$name: "LastUpdateDate",
+            _$name: "sys_ModifiedOn",
             _$parentName: "right",
             screen: lightSwitchApplication.AddEditTimesheetDetail,
             data: lightSwitchApplication.TimesheetDetail,
             value: Date
+        },
+        BillingStatu: {
+            _$class: msls.ContentItem,
+            _$name: "BillingStatu",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.BillingStatu
         },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
             _$parentName: "RootContentItem",
             screen: lightSwitchApplication.AddEditTimesheetDetail
+        },
+        ProjectFilter: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectFilter",
+            _$parentName: "Popups",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.AddEditTimesheetDetail,
+            value: lightSwitchApplication.AddEditTimesheetDetail
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "ProjectFilter",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.AddEditTimesheetDetail,
+            value: String
         }
     };
 
@@ -238,15 +228,45 @@
         /// </field>
         left_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("left"); }],
         /// <field>
-        /// Called after the PersonItem content item has been rendered.
+        /// Called after the DimDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        PersonItem_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("PersonItem"); }],
+        DimDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("DimDate"); }],
         /// <field>
-        /// Called after the RowTemplate3 content item has been rendered.
+        /// Called after the RowTemplate2 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        RowTemplate3_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate3"); }],
+        RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate2"); }],
+        /// <field>
+        /// Called after the Group content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Group"); }],
+        /// <field>
+        /// Called after the Project1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Project1"); }],
+        /// <field>
+        /// Called after the Project2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Project2_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Project2"); }],
+        /// <field>
+        /// Called after the Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Client"); }],
+        /// <field>
+        /// Called after the ProjectName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ProjectName"); }],
+        /// <field>
+        /// Called after the Search content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Search_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Search"); }],
         /// <field>
         /// Called after the TypeOfWork content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -257,36 +277,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate6_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate6"); }],
-        /// <field>
-        /// Called after the Project content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Project_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Project"); }],
-        /// <field>
-        /// Called after the ProjectName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ProjectName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ProjectName"); }],
-        /// <field>
-        /// Called after the Client content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Client_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Client"); }],
-        /// <field>
-        /// Called after the Client1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Client1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Client1"); }],
-        /// <field>
-        /// Called after the DimDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        DimDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("DimDate"); }],
-        /// <field>
-        /// Called after the RowTemplate2 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate2"); }],
         /// <field>
         /// Called after the Hours content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -308,26 +298,6 @@
         /// </field>
         Timesheet_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Timesheet"); }],
         /// <field>
-        /// Called after the RowTemplate5 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        RowTemplate5_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate5"); }],
-        /// <field>
-        /// Called after the TimesheetDetailName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("TimesheetDetailName"); }],
-        /// <field>
-        /// Called after the TimesheetDetailCode content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailCode_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("TimesheetDetailCode"); }],
-        /// <field>
-        /// Called after the TimesheetDetailFileName content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TimesheetDetailFileName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("TimesheetDetailFileName"); }],
-        /// <field>
         /// Called after the ClientComments content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -338,10 +308,25 @@
         /// </field>
         AMComments_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("AMComments"); }],
         /// <field>
-        /// Called after the LastUpdateDate content item has been rendered.
+        /// Called after the sys_ModifiedOn content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        LastUpdateDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("LastUpdateDate"); }]
+        sys_ModifiedOn_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("sys_ModifiedOn"); }],
+        /// <field>
+        /// Called after the BillingStatu content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatu_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("BillingStatu"); }],
+        /// <field>
+        /// Called after the ProjectFilter content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectFilter_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ProjectFilter"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Name"); }]
     });
 
     lightSwitchApplication.AddNewTimesheet.prototype._$contentItems = {

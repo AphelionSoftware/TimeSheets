@@ -2219,6 +2219,59 @@
           ":@SharePointEnabled": { }
         },
         {
+          "id": "TimesheetHour*",
+          "name": "TimesheetHour*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "TimesheetHour" }
+        },
+        {
+          "id": "CollectionView$TimesheetHour",
+          "name": "CollectionView$TimesheetHour",
+          "kind": "CollectionView",
+          "elementType": { "__id": "TimesheetHour" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$TimesheetHour/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "TimesheetHour" }
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "TimesheetHour" }
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$TimesheetHour/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "TimesheetHour" }
+            }
+          ]
+        },
+        {
           "id": "TypeOfWork*",
           "name": "TypeOfWork*",
           "kind": "Enumerable",
@@ -2851,59 +2904,6 @@
               "id": "CollectionView$ActiveType/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "ActiveType" }
-            }
-          ]
-        },
-        {
-          "id": "TimesheetHour*",
-          "name": "TimesheetHour*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "TimesheetHour" }
-        },
-        {
-          "id": "CollectionView$TimesheetHour",
-          "name": "CollectionView$TimesheetHour",
-          "kind": "CollectionView",
-          "elementType": { "__id": "TimesheetHour" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$TimesheetHour/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "TimesheetHour" }
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "TimesheetHour" }
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$TimesheetHour/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "TimesheetHour" }
             }
           ]
         },
@@ -3547,6 +3547,12 @@
               "entityType": { "__id": "TimesheetDetail" }
             },
             {
+              "id": "TimesheetsData/Members[TimesheetHours]",
+              "name": "TimesheetHours",
+              "elementType": { "__id": "TimesheetHour" },
+              "entityType": { "__id": "TimesheetHour" }
+            },
+            {
               "id": "TimesheetsData/Members[Timesheets]",
               "name": "Timesheets",
               "canDelete": true,
@@ -3563,12 +3569,6 @@
               "canUpdate": true,
               "elementType": { "__id": "TypeOfWork" },
               "entityType": { "__id": "TypeOfWork" }
-            },
-            {
-              "id": "TimesheetsData/Members[TimesheetHours]",
-              "name": "TimesheetHours",
-              "elementType": { "__id": "TimesheetHour" },
-              "entityType": { "__id": "TimesheetHour" }
             }
           ],
           "queryOperations":
@@ -3967,6 +3967,15 @@
               {
                 "member": { "__id": "TimesheetsData/Members[Projects]" }
               },
+              "parameters":
+              [
+                {
+                  "id": "TimesheetsData/Members[ProjectSorted]/Parameters[Name]",
+                  "name": "Name",
+                  "isOptional": true,
+                  "parameterType": { "__id": ":String?" }
+                }
+              ],
               "sortCriteria":
               [
                 {
@@ -4033,6 +4042,54 @@
               {
                 "member": { "__id": "TimesheetsData/Members[TimesheetDetails]" }
               }
+            },
+            {
+              "id": "TimesheetsData/Members[TimesheetHours_Single]",
+              "name": "TimesheetHours_Single",
+              "elementType": { "__id": "TimesheetHour" },
+              "query": { "__id": "TimesheetsData/Members[TimesheetHours_Single]" },
+              "returnType": { "__id": "TimesheetHour" },
+              "source":
+              {
+                "member": { "__id": "TimesheetsData/Members[TimesheetHours]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TimesheetsData/Members[TimesheetHours_Single]/Parameters[c_Date]",
+                  "name": "c_Date",
+                  "parameterType": { "__id": ":Date?" }
+                },
+                {
+                  "id": "TimesheetsData/Members[TimesheetHours_Single]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
+            },
+            {
+              "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]",
+              "name": "TimesheetHours_SingleOrDefault",
+              "elementType": { "__id": "TimesheetHour" },
+              "query": { "__id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]" },
+              "returnType": { "__id": "TimesheetHour" },
+              "source":
+              {
+                "member": { "__id": "TimesheetsData/Members[TimesheetHours]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]/Parameters[c_Date]",
+                  "name": "c_Date",
+                  "parameterType": { "__id": ":Date?" }
+                },
+                {
+                  "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                }
+              ]
             },
             {
               "id": "TimesheetsData/Members[Timesheets_Single]",
@@ -4170,50 +4227,19 @@
               ]
             },
             {
-              "id": "TimesheetsData/Members[TimesheetHours_Single]",
-              "name": "TimesheetHours_Single",
-              "elementType": { "__id": "TimesheetHour" },
-              "query": { "__id": "TimesheetsData/Members[TimesheetHours_Single]" },
-              "returnType": { "__id": "TimesheetHour" },
+              "id": "TimesheetsData/Members[TypeOfWorkSorted]",
+              "name": "TypeOfWorkSorted",
+              "elementType": { "__id": "TypeOfWork" },
+              "query": { "__id": "TimesheetsData/Members[TypeOfWorkSorted]" },
+              "returnType": { "__id": "TypeOfWork*" },
               "source":
               {
-                "member": { "__id": "TimesheetsData/Members[TimesheetHours]" }
+                "member": { "__id": "TimesheetsData/Members[TypeOfWorks]" }
               },
-              "parameters":
+              "sortCriteria":
               [
                 {
-                  "id": "TimesheetsData/Members[TimesheetHours_Single]/Parameters[c_Date]",
-                  "name": "c_Date",
-                  "parameterType": { "__id": ":Date?" }
-                },
-                {
-                  "id": "TimesheetsData/Members[TimesheetHours_Single]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                }
-              ]
-            },
-            {
-              "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]",
-              "name": "TimesheetHours_SingleOrDefault",
-              "elementType": { "__id": "TimesheetHour" },
-              "query": { "__id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]" },
-              "returnType": { "__id": "TimesheetHour" },
-              "source":
-              {
-                "member": { "__id": "TimesheetsData/Members[TimesheetHours]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]/Parameters[c_Date]",
-                  "name": "c_Date",
-                  "parameterType": { "__id": ":Date?" }
-                },
-                {
-                  "id": "TimesheetsData/Members[TimesheetHours_SingleOrDefault]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
+                  "member": { "__id": "TypeOfWork/Properties[TypeOfWorkName]" }
                 }
               ]
             }
@@ -7464,6 +7490,67 @@
           ]
         },
         {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "TimesheetHour/Properties[Name]" } },
+          "id": "TimesheetHour",
+          "name": "TimesheetHour",
+          "methods":
+          [
+            {
+              "id": "TimesheetHour/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "TimesheetHour/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "TimesheetHour/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "TimesheetHour/Properties[c_Date]",
+              "name": "c_Date",
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 0,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "TimesheetHour/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "TimesheetHour/Properties[Value]",
+              "name": "Value",
+              "propertyType": { "__id": ":Decimal?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 38,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
           "displayName": "Add Edit Timesheet Detail",
           "id": "AddEditTimesheetDetail",
           "name": "AddEditTimesheetDetail",
@@ -7513,108 +7600,14 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Person Item",
-                                "name": "PersonItem",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[PersonItem]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Person Item",
-                                    "name": "RowTemplate3",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Type Of Work",
-                                "name": "TypeOfWork",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[TypeOfWork]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Type Of Work",
-                                    "name": "RowTemplate6",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Project",
-                                "name": "Project",
-                                "kind": "Details",
-                                "view": { "__id": ":ColumnsLayout" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[Project]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Project Name",
-                                    "name": "ProjectName",
-                                    "kind": "Value",
-                                    "view": { "__id": ":TextBox" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "Project/Properties[ProjectName]" }
-                                    }
-                                  },
-                                  {
-                                    "displayName": "Client",
-                                    "name": "Client",
-                                    "kind": "Details",
-                                    "view": { "__id": ":DetailsModalPicker" },
-                                    "dataSource":
-                                    {
-                                      "member": { "__id": "Project/Properties[Client]" }
-                                    },
-                                    "childContentItems":
-                                    [
-                                      {
-                                        "displayName": "Client",
-                                        "name": "Client1",
-                                        "kind": "Details",
-                                        "view": { "__id": ":Summary" },
-                                        "dataSource":
-                                        {
-                                          "links":
-                                          [
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
                                 "displayName": "Dim Date",
                                 "name": "DimDate",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditTimesheetDetail/Properties[TimesheetDetailDate]" }
+                                },
                                 "dataSource":
                                 {
                                   "member": { "__id": "TimesheetDetail/Properties[DimDate]" }
@@ -7624,6 +7617,140 @@
                                   {
                                     "displayName": "Dim Date",
                                     "name": "RowTemplate2",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Group",
+                                "name": "Group",
+                                "kind": "Group",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Project",
+                                    "name": "Project1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":DetailsModalPicker" },
+                                    "choicesSource":
+                                    {
+                                      "member": { "__id": "AddEditTimesheetDetail/Properties[ProjectSorted]" }
+                                    },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Project",
+                                        "name": "Project2",
+                                        "kind": "Details",
+                                        "view": { "__id": ":ColumnsLayout" },
+                                        "dataSource":
+                                        {
+                                          "links":
+                                          [
+                                          ]
+                                        },
+                                        "childContentItems":
+                                        [
+                                          {
+                                            "displayName": "Client",
+                                            "name": "Client",
+                                            "kind": "Details",
+                                            "view": { "__id": ":Summary" },
+                                            "dataSource":
+                                            {
+                                              "member": { "__id": "Project/Properties[Client]" }
+                                            }
+                                          },
+                                          {
+                                            "displayName": "Project Name",
+                                            "name": "ProjectName",
+                                            "kind": "Value",
+                                            "view": { "__id": ":Text" },
+                                            "dataSource":
+                                            {
+                                              "member": { "__id": "Project/Properties[ProjectName]" }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                        "value": 140
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "Search",
+                                    "name": "Search",
+                                    "kind": "Command",
+                                    "view": { "__id": ":Button" },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Tap]" },
+                                        "source":
+                                        {
+                                          "target": { "__id": "AddEditTimesheetDetail/Methods[showDialog]" },
+                                          "arguments":
+                                          [
+                                            {
+                                              "parameter": { "__id": "AddEditTimesheetDetail/Methods[showDialog]/Parameters[dialogName]" },
+                                              "value":
+                                              {
+                                                "value": "ProjectFilter"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                        "value": 40
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                    "value": 200
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Type Of Work",
+                                "name": "TypeOfWork",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "choicesSource":
+                                {
+                                  "member": { "__id": "AddEditTimesheetDetail/Properties[TypeOfWorkSorted]" }
+                                },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[TypeOfWork]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Type Of Work",
+                                    "name": "RowTemplate6",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
                                     "dataSource":
@@ -7664,7 +7791,7 @@
                               },
                               {
                                 "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
+                                "value": 280
                               }
                             ]
                           },
@@ -7679,55 +7806,10 @@
                                 "displayName": "Timesheet",
                                 "name": "Timesheet",
                                 "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
+                                "view": { "__id": ":Summary" },
                                 "dataSource":
                                 {
                                   "member": { "__id": "TimesheetDetail/Properties[Timesheet]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Timesheet",
-                                    "name": "RowTemplate5",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Timesheet Detail Name",
-                                "name": "TimesheetDetailName",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[TimesheetDetailName]" }
-                                }
-                              },
-                              {
-                                "displayName": "Timesheet Detail Code",
-                                "name": "TimesheetDetailCode",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[TimesheetDetailCode]" }
-                                }
-                              },
-                              {
-                                "displayName": "Timesheet Detail File Name",
-                                "name": "TimesheetDetailFileName",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "TimesheetDetail/Properties[TimesheetDetailFileName]" }
                                 }
                               },
                               {
@@ -7751,13 +7833,23 @@
                                 }
                               },
                               {
-                                "displayName": "Last Update Date",
-                                "name": "LastUpdateDate",
+                                "displayName": "Modified On",
+                                "name": "sys_ModifiedOn",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "TimesheetDetail/Properties[LastUpdateDate]" }
+                                  "member": { "__id": "TimesheetDetail/Properties[sys_ModifiedOn]" }
+                                }
+                              },
+                              {
+                                "displayName": "Billing Statu",
+                                "name": "BillingStatu",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[BillingStatu]" }
                                 }
                               }
                             ],
@@ -7769,11 +7861,33 @@
                               },
                               {
                                 "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
+                                "value": 200
                               }
                             ]
                           }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                            "value": 400
+                          },
+                          {
+                            "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                            "value": 480
+                          }
                         ]
+                      }
+                    ],
+                    "propertySources":
+                    [
+                      {
+                        "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                        "value": 400
+                      },
+                      {
+                        "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                        "value": 480
                       }
                     ]
                   }
@@ -7783,7 +7897,29 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Project Filter",
+                    "name": "ProjectFilter",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditTimesheetDetail/Properties[Name]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -7833,6 +7969,117 @@
               "elementType": { "__id": "TimesheetDetail" },
               "propertyType": { "__id": "TimesheetDetail" },
               ":@IsParameter": { }
+            },
+            {
+              "id": "AddEditTimesheetDetail/Properties[TimesheetDetailDate]",
+              "name": "TimesheetDetailDate",
+              "pageSize": 45,
+              "elementType": { "__id": "DimDate" },
+              "propertyType": { "__id": "CollectionView$DimDate" },
+              "query":
+              {
+                "id": "AddEditTimesheetDetail/Properties[TimesheetDetailDate]/Query",
+                "name": "TimesheetDetailDateQuery",
+                "elementType": { "__id": "DimDate" },
+                "returnType": { "__id": "DimDate*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[TimesheetDetailDate]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditTimesheetDetail/Properties[TimesheetDetailDate]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "TimesheetsData/Members[TimesheetDetailDate]/Parameters[PeriodEnding]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditTimesheetDetail/Properties[TimesheetDetail]" }
+                        },
+                        {
+                          "member": { "__id": "TimesheetDetail/Properties[Timesheet]" }
+                        },
+                        {
+                          "member": { "__id": "Timesheet/Properties[DimDate]" }
+                        },
+                        {
+                          "member": { "__id": "DimDate/Properties[WeekEnding]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AddEditTimesheetDetail/Properties[ProjectSorted]",
+              "name": "ProjectSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "AddEditTimesheetDetail/Properties[ProjectSorted]/Query",
+                "name": "ProjectSortedQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[ProjectSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditTimesheetDetail/Properties[ProjectSorted]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "TimesheetsData/Members[ProjectSorted]/Parameters[Name]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditTimesheetDetail/Properties[Name]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AddEditTimesheetDetail/Properties[TypeOfWorkSorted]",
+              "name": "TypeOfWorkSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "TypeOfWork" },
+              "propertyType": { "__id": "CollectionView$TypeOfWork" },
+              "query":
+              {
+                "id": "AddEditTimesheetDetail/Properties[TypeOfWorkSorted]/Query",
+                "name": "TypeOfWorkSortedQuery",
+                "elementType": { "__id": "TypeOfWork" },
+                "returnType": { "__id": "TypeOfWork*" },
+                "source":
+                {
+                  "member": { "__id": "TimesheetsData/Members[TypeOfWorkSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditTimesheetDetail/Properties[TypeOfWorkSorted]/Query" }
+              }
+            },
+            {
+              "id": "AddEditTimesheetDetail/Properties[Name]",
+              "name": "Name",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
             }
           ]
         },
@@ -9376,7 +9623,25 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "ManageTimesheets/Methods[EditTimesheet_Tap]" }
+                              "target": { "__id": "!module/Methods[showEditTimesheet]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showEditTimesheet]/Parameters[Timesheet]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ManageTimesheets/Properties[TimesheetsUser]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Timesheet/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           }
                         ]
@@ -9446,6 +9711,7 @@
                       {
                         "displayName": "Edit Timesheet",
                         "name": "ShowEditTimesheet",
+                        "isHidden": true,
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -9716,67 +9982,6 @@
               {
                 "target": { "__id": "ManageTimesheets/Properties[TimesheetHours]/Query" }
               }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "TimesheetHour/Properties[Name]" } },
-          "id": "TimesheetHour",
-          "name": "TimesheetHour",
-          "methods":
-          [
-            {
-              "id": "TimesheetHour/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "TimesheetHour/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "TimesheetHour/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "TimesheetHour/Properties[c_Date]",
-              "name": "c_Date",
-              "propertyType": { "__id": ":Date" },
-              ":@Required": { },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 0,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "TimesheetHour/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "TimesheetHour/Properties[Value]",
-              "name": "Value",
-              "propertyType": { "__id": ":Decimal?" },
-              ":@DecimalConstraint":
-              {
-                "precision": 38,
-                "scale": 2
-              },
-              ":@NotSearchable": { }
             }
           ]
         }

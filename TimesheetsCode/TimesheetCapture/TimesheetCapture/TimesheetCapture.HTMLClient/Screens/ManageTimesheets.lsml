@@ -183,7 +183,17 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="ManageTimesheets/Methods[EditTimesheet_Tap]" />
+                        Target="!module/Methods[showEditTimesheet]">
+                        <ArgumentExpression
+                          Parameter="Timesheet">
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="ManageTimesheets/Properties[TimesheetsUser]" />
+                            <MemberExpression
+                              Member="selectedItem" />
+                          </ChainExpression>
+                        </ArgumentExpression>
+                      </CallExpression>
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
@@ -278,6 +288,7 @@
               </ContentItem>
               <ContentItem
                 Name="ShowEditTimesheet"
+                IsHidden="True"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName

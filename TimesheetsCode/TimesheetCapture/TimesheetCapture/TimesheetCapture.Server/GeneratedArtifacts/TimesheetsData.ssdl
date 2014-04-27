@@ -11,9 +11,9 @@
     <EntitySet Name="People" EntityType="TimesheetsDataStore.PersonItem" store:Type="Tables" Schema="dbo" Table="Person" />
     <EntitySet Name="Projects" EntityType="TimesheetsDataStore.Project" store:Type="Tables" Schema="dbo" Table="Project" />
     <EntitySet Name="TimesheetDetails" EntityType="TimesheetsDataStore.TimesheetDetail" store:Type="Tables" Schema="dbo" Table="TimesheetDetail" />
+    <EntitySet Name="TimesheetHours" EntityType="TimesheetsDataStore.TimesheetHour" store:Type="Tables" Schema="D3" Table="TimesheetHours" />
     <EntitySet Name="Timesheets" EntityType="TimesheetsDataStore.Timesheet" store:Type="Tables" Schema="dbo" Table="Timesheet" />
     <EntitySet Name="TypeOfWorks" EntityType="TimesheetsDataStore.TypeOfWork" store:Type="Tables" Schema="dbo" Table="TypeOfWork" />
-    <EntitySet Name="TimesheetHours" EntityType="TimesheetsDataStore.TimesheetHour" store:Type="Tables" Schema="D3" Table="TimesheetHours" />
     <AssociationSet Name="FK_BillingDetail_ActiveType" Association="TimesheetsDataStore.FK_BillingDetail_ActiveType">
       <End Role="ActiveType" EntitySet="ActiveTypes" />
       <End Role="BillingDetail" EntitySet="BillingDetails" />
@@ -356,6 +356,15 @@
     <Property Name="TimesheetID" Type="int" Nullable="false" />
     <Property Name="TimesheetTypeOfWorkID" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="TimesheetHour">
+    <Key>
+      <PropertyRef Name="c_Date" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="c_Date" Type="date" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Value" Type="decimal" Precision="38" Scale="2" />
+  </EntityType>
   <EntityType Name="Timesheet">
     <Key>
       <PropertyRef Name="TimesheetID" />
@@ -397,15 +406,6 @@
     <Property Name="sys_ModifiedOn" Type="datetime" Nullable="false" />
     <Property Name="sys_ModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
     <Property Name="Active" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TimesheetHour">
-    <Key>
-      <PropertyRef Name="c_Date" />
-      <PropertyRef Name="Name" />
-    </Key>
-    <Property Name="c_Date" Type="date" Nullable="false" />
-    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="Value" Type="decimal" Precision="38" Scale="2" />
   </EntityType>
   <Association Name="FK_BillingDetail_ActiveType">
     <End Role="ActiveType" Type="TimesheetsDataStore.ActiveType" Multiplicity="1">
