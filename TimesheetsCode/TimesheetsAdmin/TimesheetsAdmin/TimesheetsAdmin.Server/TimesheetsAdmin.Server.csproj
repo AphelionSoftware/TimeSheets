@@ -211,6 +211,9 @@
     <Compile Include="DataSources\Timesheets_Data\ResourcePlan.lsml.cs">
       <DependentUpon>ResourcePlans.lsml</DependentUpon>
     </Compile>
+    <Compile Include="DataSources\Timesheets_Data\Timesheet.lsml.cs">
+      <DependentUpon>Timesheets.lsml</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\Timesheets_Data\_Timesheets_DataService.lsml.cs" />
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

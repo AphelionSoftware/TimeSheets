@@ -59,15 +59,20 @@ namespace LightSwitchApplication
                             
 
                         default:
-                            strUser = Application.User.Name.Split('|')[2];
+                            strUser = Application.User.Name;
                             break;
                     }
 
-                    if (strUser == "")
+                    if (strUser == "" || strUser == null )
                     {
                         strUser = Application.User.PersonId;
                     }
 
+                }
+
+                if (strUser.Contains("|"))
+                {
+                    strUser = strUser.Split('|')[2];
                 }
                 return strUser;
             }
@@ -100,8 +105,10 @@ namespace LightSwitchApplication
                 {
                     string strUserName = UserName;
                     int_tsPersonID = (from p in DataWorkspace.TimesheetsData.People
-                                      where p.ADUsername == strUserName || p.SharepointUserName == strUserName
-                                      || p.ADUsername.StartsWith(strUserName) || p.SharepointUserName.StartsWith(strUserName)
+                                      where p.ADUsername.ToLower() == strUserName.ToLower() || p.SharepointUserName.ToLower() == strUserName.ToLower()
+                                      //|| p.ADUsername.StartsWith(strUserName) || p.SharepointUserName.StartsWith(strUserName)
+                                      || p.ADUsername.ToLower().StartsWith(strUserName.ToLower()) || p.SharepointUserName.ToLower().StartsWith(strUserName.ToLower())
+                                      || p.ADUsername.ToLower().Contains(strUserName.ToLower()) || p.SharepointUserName.ToLower().Contains(strUserName.ToLower())
                                       select p.PersonID).FirstOrDefault();
 
 

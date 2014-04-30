@@ -2224,6 +2224,59 @@
           ":@SharePointEnabled": { }
         },
         {
+          "id": "TimesheetHour*",
+          "name": "TimesheetHour*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "TimesheetHour" }
+        },
+        {
+          "id": "CollectionView$TimesheetHour",
+          "name": "CollectionView$TimesheetHour",
+          "kind": "CollectionView",
+          "elementType": { "__id": "TimesheetHour" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$TimesheetHour/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "TimesheetHour" }
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "TimesheetHour" }
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$TimesheetHour/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$TimesheetHour/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "TimesheetHour" }
+            }
+          ]
+        },
+        {
           "id": "UnallocatedTimesheet*",
           "name": "UnallocatedTimesheet*",
           "kind": "Enumerable",
@@ -3227,59 +3280,6 @@
               "id": "CollectionView$BillingDetail/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "BillingDetail" }
-            }
-          ]
-        },
-        {
-          "id": "TimesheetHour*",
-          "name": "TimesheetHour*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "TimesheetHour" }
-        },
-        {
-          "id": "CollectionView$TimesheetHour",
-          "name": "CollectionView$TimesheetHour",
-          "kind": "CollectionView",
-          "elementType": { "__id": "TimesheetHour" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$TimesheetHour/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "TimesheetHour" }
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "TimesheetHour" }
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$TimesheetHour/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$TimesheetHour/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "TimesheetHour" }
             }
           ]
         },
@@ -4475,6 +4475,12 @@
               "entityType": { "__id": "TimesheetDetail" }
             },
             {
+              "id": "Timesheets_Data/Members[TimesheetHours]",
+              "name": "TimesheetHours",
+              "elementType": { "__id": "TimesheetHour" },
+              "entityType": { "__id": "TimesheetHour" }
+            },
+            {
               "id": "Timesheets_Data/Members[Timesheets]",
               "name": "Timesheets",
               "canDelete": true,
@@ -4497,12 +4503,6 @@
               "name": "UnallocatedTimesheets",
               "elementType": { "__id": "UnallocatedTimesheet" },
               "entityType": { "__id": "UnallocatedTimesheet" }
-            },
-            {
-              "id": "Timesheets_Data/Members[TimesheetHours]",
-              "name": "TimesheetHours",
-              "elementType": { "__id": "TimesheetHour" },
-              "entityType": { "__id": "TimesheetHour" }
             }
           ],
           "queryOperations":
@@ -5730,6 +5730,54 @@
               ]
             },
             {
+              "id": "Timesheets_Data/Members[TimesheetHours_Single]",
+              "name": "TimesheetHours_Single",
+              "elementType": { "__id": "TimesheetHour" },
+              "query": { "__id": "Timesheets_Data/Members[TimesheetHours_Single]" },
+              "returnType": { "__id": "TimesheetHour" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[TimesheetHours]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[TimesheetHours_Single]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetHours_Single]/Parameters[c_Date]",
+                  "name": "c_Date",
+                  "parameterType": { "__id": ":Date?" }
+                }
+              ]
+            },
+            {
+              "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]",
+              "name": "TimesheetHours_SingleOrDefault",
+              "elementType": { "__id": "TimesheetHour" },
+              "query": { "__id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]" },
+              "returnType": { "__id": "TimesheetHour" },
+              "source":
+              {
+                "member": { "__id": "Timesheets_Data/Members[TimesheetHours]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]/Parameters[Name]",
+                  "name": "Name",
+                  "parameterType": { "__id": ":String?" }
+                },
+                {
+                  "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]/Parameters[c_Date]",
+                  "name": "c_Date",
+                  "parameterType": { "__id": ":Date?" }
+                }
+              ]
+            },
+            {
               "id": "Timesheets_Data/Members[Timesheets_Single]",
               "name": "Timesheets_Single",
               "elementType": { "__id": "Timesheet" },
@@ -6032,54 +6080,6 @@
                   "id": "Timesheets_Data/Members[UnallocatedTimesheets_SingleOrDefault]/Parameters[SharePointUserName]",
                   "name": "SharePointUserName",
                   "parameterType": { "__id": ":String?" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[TimesheetHours_Single]",
-              "name": "TimesheetHours_Single",
-              "elementType": { "__id": "TimesheetHour" },
-              "query": { "__id": "Timesheets_Data/Members[TimesheetHours_Single]" },
-              "returnType": { "__id": "TimesheetHour" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[TimesheetHours]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[TimesheetHours_Single]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[TimesheetHours_Single]/Parameters[c_Date]",
-                  "name": "c_Date",
-                  "parameterType": { "__id": ":Date?" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]",
-              "name": "TimesheetHours_SingleOrDefault",
-              "elementType": { "__id": "TimesheetHour" },
-              "query": { "__id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]" },
-              "returnType": { "__id": "TimesheetHour" },
-              "source":
-              {
-                "member": { "__id": "Timesheets_Data/Members[TimesheetHours]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]/Parameters[Name]",
-                  "name": "Name",
-                  "parameterType": { "__id": ":String?" }
-                },
-                {
-                  "id": "Timesheets_Data/Members[TimesheetHours_SingleOrDefault]/Parameters[c_Date]",
-                  "name": "c_Date",
-                  "parameterType": { "__id": ":Date?" }
                 }
               ]
             }
@@ -11051,6 +11051,67 @@
           ]
         },
         {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "TimesheetHour/Properties[Name]" } },
+          "id": "TimesheetHour",
+          "name": "TimesheetHour",
+          "methods":
+          [
+            {
+              "id": "TimesheetHour/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "TimesheetHour/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "TimesheetHour/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "TimesheetHour/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "TimesheetHour/Properties[Value]",
+              "name": "Value",
+              "propertyType": { "__id": ":Decimal?" },
+              ":@DecimalConstraint":
+              {
+                "precision": 38,
+                "scale": 2
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "TimesheetHour/Properties[c_Date]",
+              "name": "c_Date",
+              "propertyType": { "__id": ":Date" },
+              ":@Required": { },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 0,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
           "displayName": "Add Edit Billing Detail",
           "id": "AddEditBillingDetail",
           "name": "AddEditBillingDetail",
@@ -12573,6 +12634,16 @@
                                 }
                               },
                               {
+                                "displayName": "Sharepoint User Name",
+                                "name": "SharepointUserName",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Person/Properties[SharepointUserName]" }
+                                }
+                              },
+                              {
                                 "displayName": "System Role",
                                 "name": "SystemRole",
                                 "kind": "Details",
@@ -12586,31 +12657,6 @@
                                   {
                                     "displayName": "System Role",
                                     "name": "SystemRole1",
-                                    "kind": "Details",
-                                    "view": { "__id": ":Summary" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Active Type",
-                                "name": "ActiveType",
-                                "kind": "Details",
-                                "view": { "__id": ":DetailsModalPicker" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Person/Properties[ActiveType]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "Active Type",
-                                    "name": "ActiveType1",
                                     "kind": "Details",
                                     "view": { "__id": ":Summary" },
                                     "dataSource":
@@ -12642,6 +12688,31 @@
                             "view": { "__id": ":RowsLayout" },
                             "childContentItems":
                             [
+                              {
+                                "displayName": "Active Type",
+                                "name": "ActiveType",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Person/Properties[ActiveType]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Active Type",
+                                    "name": "ActiveType1",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
                               {
                                 "displayName": "Billing Percent Target",
                                 "name": "BillingPercentTarget",
@@ -20315,67 +20386,6 @@
               "name": "TimesheetDetailAM",
               "elementType": { "__id": ":String?" },
               "propertyType": { "__id": ":String?" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "TimesheetHour/Properties[Name]" } },
-          "id": "TimesheetHour",
-          "name": "TimesheetHour",
-          "methods":
-          [
-            {
-              "id": "TimesheetHour/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "TimesheetHour/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "TimesheetHour/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "TimesheetHour/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "TimesheetHour/Properties[Value]",
-              "name": "Value",
-              "propertyType": { "__id": ":Decimal?" },
-              ":@DecimalConstraint":
-              {
-                "precision": 38,
-                "scale": 2
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "TimesheetHour/Properties[c_Date]",
-              "name": "c_Date",
-              "propertyType": { "__id": ":Date" },
-              ":@Required": { },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 0,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
             }
           ]
         }

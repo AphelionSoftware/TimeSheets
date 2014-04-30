@@ -16,3 +16,5 @@ D:\TimesheetCapture_Backup\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture
 D:\TimesheetCapture_Backup\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 C:\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 C:\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

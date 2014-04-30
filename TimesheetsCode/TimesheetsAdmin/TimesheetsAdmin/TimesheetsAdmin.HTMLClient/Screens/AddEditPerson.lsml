@@ -126,6 +126,19 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
+                  Name="SharepointUserName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Person/Properties[SharepointUserName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="SystemRole"
                   Kind="Details"
                   DataType="SystemRole">
@@ -141,29 +154,6 @@
                     Name="SystemRole1"
                     Kind="Details"
                     DataType="SystemRole">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="ActiveType"
-                  Kind="Details"
-                  DataType="ActiveType">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Person/Properties[ActiveType]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="ActiveType1"
-                    Kind="Details"
-                    DataType="ActiveType">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
@@ -197,6 +187,29 @@
               <ContentItem
                 Name="PersonBilling"
                 Kind="Group">
+                <ContentItem
+                  Name="ActiveType"
+                  Kind="Details"
+                  DataType="ActiveType">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Person/Properties[ActiveType]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="ActiveType1"
+                    Kind="Details"
+                    DataType="ActiveType">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
                 <ContentItem
                   Name="BillingPercentTarget"
                   Kind="Value"

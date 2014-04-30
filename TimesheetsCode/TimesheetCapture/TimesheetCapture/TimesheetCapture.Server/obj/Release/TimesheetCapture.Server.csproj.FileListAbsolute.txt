@@ -199,3 +199,12 @@ C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\Ti
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.ServiceModel.DomainServices.Server.xml
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\Application.Server.dll
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\Application.Server.pdb
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Newtonsoft.Json.dll
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Net.Http.Formatting.dll
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Web.Http.dll
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Web.Http.WebHost.dll
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\Newtonsoft.Json.xml
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Net.Http.Formatting.xml
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Web.Http.xml
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\bin\Release\System.Web.Http.WebHost.xml
+C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.Server\obj\Release\TimesheetCapture.Server.csprojResolveAssemblyReference.cache

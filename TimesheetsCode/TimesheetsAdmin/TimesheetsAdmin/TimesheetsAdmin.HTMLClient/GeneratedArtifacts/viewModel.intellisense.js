@@ -859,6 +859,14 @@
             data: lightSwitchApplication.Person,
             value: String
         },
+        SharepointUserName: {
+            _$class: msls.ContentItem,
+            _$name: "SharepointUserName",
+            _$parentName: "PersonDetails",
+            screen: lightSwitchApplication.AddEditPerson,
+            data: lightSwitchApplication.Person,
+            value: String
+        },
         SystemRole: {
             _$class: msls.ContentItem,
             _$name: "SystemRole",
@@ -875,10 +883,18 @@
             data: lightSwitchApplication.SystemRole,
             value: lightSwitchApplication.SystemRole
         },
+        PersonBilling: {
+            _$class: msls.ContentItem,
+            _$name: "PersonBilling",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditPerson,
+            data: lightSwitchApplication.Person,
+            value: lightSwitchApplication.Person
+        },
         ActiveType: {
             _$class: msls.ContentItem,
             _$name: "ActiveType",
-            _$parentName: "PersonDetails",
+            _$parentName: "PersonBilling",
             screen: lightSwitchApplication.AddEditPerson,
             data: lightSwitchApplication.Person,
             value: lightSwitchApplication.ActiveType
@@ -890,14 +906,6 @@
             screen: lightSwitchApplication.AddEditPerson,
             data: lightSwitchApplication.ActiveType,
             value: lightSwitchApplication.ActiveType
-        },
-        PersonBilling: {
-            _$class: msls.ContentItem,
-            _$name: "PersonBilling",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.AddEditPerson,
-            data: lightSwitchApplication.Person,
-            value: lightSwitchApplication.Person
         },
         BillingPercentTarget: {
             _$class: msls.ContentItem,
@@ -1012,6 +1020,11 @@
         /// </field>
         ADUsername_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("ADUsername"); }],
         /// <field>
+        /// Called after the SharepointUserName content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        SharepointUserName_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("SharepointUserName"); }],
+        /// <field>
         /// Called after the SystemRole content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -1022,6 +1035,11 @@
         /// </field>
         SystemRole1_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("SystemRole1"); }],
         /// <field>
+        /// Called after the PersonBilling content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PersonBilling_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("PersonBilling"); }],
+        /// <field>
         /// Called after the ActiveType content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -1031,11 +1049,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ActiveType1_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("ActiveType1"); }],
-        /// <field>
-        /// Called after the PersonBilling content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        PersonBilling_postRender: [$element, function () { return new lightSwitchApplication.AddEditPerson().findContentItem("PersonBilling"); }],
         /// <field>
         /// Called after the BillingPercentTarget content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2196,6 +2209,46 @@
             data: lightSwitchApplication.TimesheetDetail,
             value: String
         },
+        Comments: {
+            _$class: msls.ContentItem,
+            _$name: "Comments",
+            _$parentName: "RowTemplate",
+            screen: lightSwitchApplication.AddEditTimesheet,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: String
+        },
+        Hours: {
+            _$class: msls.ContentItem,
+            _$name: "Hours",
+            _$parentName: "RowTemplate",
+            screen: lightSwitchApplication.AddEditTimesheet,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: String
+        },
+        AMComments: {
+            _$class: msls.ContentItem,
+            _$name: "AMComments",
+            _$parentName: "RowTemplate",
+            screen: lightSwitchApplication.AddEditTimesheet,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: String
+        },
+        BillingStatus: {
+            _$class: msls.ContentItem,
+            _$name: "BillingStatus",
+            _$parentName: "RowTemplate",
+            screen: lightSwitchApplication.AddEditTimesheet,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.BillingStatus
+        },
+        BillingStatusTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "BillingStatusTemplate",
+            _$parentName: "BillingStatus",
+            screen: lightSwitchApplication.AddEditTimesheet,
+            data: lightSwitchApplication.BillingStatus,
+            value: lightSwitchApplication.BillingStatus
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -2274,7 +2327,32 @@
         /// Called after the TimesheetDetailName content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TimesheetDetailName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("TimesheetDetailName"); }]
+        TimesheetDetailName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("TimesheetDetailName"); }],
+        /// <field>
+        /// Called after the Comments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Comments_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("Comments"); }],
+        /// <field>
+        /// Called after the Hours content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Hours_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("Hours"); }],
+        /// <field>
+        /// Called after the AMComments content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AMComments_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("AMComments"); }],
+        /// <field>
+        /// Called after the BillingStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatus_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("BillingStatus"); }],
+        /// <field>
+        /// Called after the BillingStatusTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        BillingStatusTemplate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheet().findContentItem("BillingStatusTemplate"); }]
     });
 
     lightSwitchApplication.AddEditTimesheetDetail.prototype._$contentItems = {

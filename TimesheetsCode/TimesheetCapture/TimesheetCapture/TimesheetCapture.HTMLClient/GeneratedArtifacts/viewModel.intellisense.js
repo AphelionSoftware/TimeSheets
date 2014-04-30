@@ -1207,6 +1207,22 @@
             data: lightSwitchApplication.ManageTimesheets,
             value: lightSwitchApplication.ManageTimesheets
         },
+        Group1: {
+            _$class: msls.ContentItem,
+            _$name: "Group1",
+            _$parentName: "TimesheetList",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: lightSwitchApplication.ManageTimesheets
+        },
+        CurrentUser: {
+            _$class: msls.ContentItem,
+            _$name: "CurrentUser",
+            _$parentName: "Group1",
+            screen: lightSwitchApplication.ManageTimesheets,
+            data: lightSwitchApplication.ManageTimesheets,
+            value: lightSwitchApplication.ManageTimesheets
+        },
         TimesheetHours: {
             _$class: msls.ContentItem,
             _$name: "TimesheetHours",
@@ -1393,6 +1409,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         TimesheetList_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("TimesheetList"); }],
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("Group1"); }],
+        /// <field>
+        /// Called to render the CurrentUser content item.
+        /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CurrentUser_render: [$element, function () { return new lightSwitchApplication.ManageTimesheets().findContentItem("CurrentUser"); }],
         /// <field>
         /// Called to render the TimesheetHours content item.
         /// <br/>render(HTMLElement element, msls.ContentItem contentItem)
