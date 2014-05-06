@@ -68,8 +68,8 @@
     <Content Include="Screens\BrowseResourcePlans.lsml.js">
       <DependentUpon>BrowseResourcePlans.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\Home.lsml.js">
-      <DependentUpon>Home.lsml</DependentUpon>
+    <Content Include="Screens\Aphelion_D3_Resourcing.lsml.js">
+      <DependentUpon>Aphelion_D3_Resourcing.lsml</DependentUpon>
     </Content>
     <Content Include="Scripts\d3.Calendar.js" />
     <Content Include="Vis.html" />
@@ -109,7 +109,7 @@
     <LightSwitchModel Include="Screens\AddEditResourcePlanByDay.lsml" />
     <LightSwitchModel Include="Screens\AddEditResourcePlanRange.lsml" />
     <LightSwitchModel Include="Screens\BrowseResourcePlans.lsml" />
-    <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\Aphelion_D3_Resourcing.lsml" />
     <LightSwitchModel Include="Screens\EditResourcePlanByDays.lsml" />
   </ItemGroup>
   <ItemGroup>

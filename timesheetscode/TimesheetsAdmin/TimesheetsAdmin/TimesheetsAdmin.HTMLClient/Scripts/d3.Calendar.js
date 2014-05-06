@@ -67,7 +67,7 @@ function calendarbyUrl(contentItem, url) {
           .map(jsonData.value);
 
         var domain = d3.nest()
-            .key(function (d) { if (d.Value > 8) return 9; else return Math.round(d.Value); })
+            .key(function (d) { if (d.Value > 15) return 16; else return Math.round(d.Value); })
             .sortValues(function (a, b) { return parseFloat(a.Value) - parseFloat(b.Value) })
             .map(jsonData.value)
         ;
@@ -87,8 +87,8 @@ function calendarbyUrl(contentItem, url) {
             .range(colorbrewer.Paired[20]);
 
         var colorScalar = d3.scale.quantize()
-        .domain([0, 9])
-        .range(colorbrewer.WtYlGn[10]);
+        .domain([0, 25])
+        .range(/*colorbrewer.WtYlGn[10]*/ cubeHelix.GrnBlu[26]);
 
 
         /*Creating the base blocks*/
@@ -183,7 +183,7 @@ function calendarbyUrl(contentItem, url) {
                 return "fill:" +
                    colorScalar(people[d.substring(13, d.length).trim()].find(
                                            function (element, index, array) {
-                                               return cmpDate(element.c_Date, d.substring(0, 10).trim());
+                                               return element.c_Date.substring(0,10).trim() == d.substring(0, 10).trim();
                                            }
                                            ).Value
                            ) + ";";

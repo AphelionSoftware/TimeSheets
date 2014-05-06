@@ -138,6 +138,7 @@
     <Build Include="dbo\Stored Procedures\InsertResourcingPlan.sql" />
     <Build Include="Security\D3_1.sql" />
     <Build Include="D3\Views\TimesheetHours.sql" />
+    <Build Include="dbo\Stored Procedures\mntTypeofWorkUpdate.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

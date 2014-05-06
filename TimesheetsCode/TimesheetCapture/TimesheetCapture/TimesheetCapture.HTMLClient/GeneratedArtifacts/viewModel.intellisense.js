@@ -1034,6 +1034,22 @@
             data: lightSwitchApplication.Project,
             value: lightSwitchApplication.Project
         },
+        Client: {
+            _$class: msls.ContentItem,
+            _$name: "Client",
+            _$parentName: "ProjectTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.Project,
+            value: lightSwitchApplication.Client
+        },
+        ProjectSourceKey: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectSourceKey",
+            _$parentName: "ProjectTemplate",
+            screen: lightSwitchApplication.EditTimesheetDetails,
+            data: lightSwitchApplication.Project,
+            value: String
+        },
         TypeOfWork: {
             _$class: msls.ContentItem,
             _$name: "TypeOfWork",
@@ -1170,6 +1186,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ProjectTemplate_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("ProjectTemplate"); }],
+        /// <field>
+        /// Called after the Client content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Client_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("Client"); }],
+        /// <field>
+        /// Called after the ProjectSourceKey content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectSourceKey_postRender: [$element, function () { return new lightSwitchApplication.EditTimesheetDetails().findContentItem("ProjectSourceKey"); }],
         /// <field>
         /// Called after the TypeOfWork content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

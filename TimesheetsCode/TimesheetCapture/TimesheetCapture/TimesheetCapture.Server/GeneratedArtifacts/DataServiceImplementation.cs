@@ -64,7 +64,7 @@ namespace LightSwitchApplication.Implementation
                 global::System.Linq.Queryable.OrderBy(
                     global::System.Linq.Queryable.Where(
                         this.GetQuery<global::LightSwitchApplication.Implementation.Project>("Projects"),
-                        (p) => (((p.ActiveType.ID == 1) && (p.AdminProject == 0)) && (((Name == null) || p.Client.ClientName.Contains(Name)) || ((Name == null) || p.ProjectName.Contains(Name))))),
+                        (p) => ((((p.ActiveType.ID == 1) && (p.AdminProject == 0)) && (((Name == null) || p.Client.ClientName.Contains(Name)) || ((Name == null) || p.ProjectName.Contains(Name)))) && (p.Client.ActiveType.ID == 1))),
                     (p) => p.Client.ClientName),
                 (p) => p.ProjectSourceKey);
             return query;

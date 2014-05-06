@@ -145,19 +145,46 @@
                   <ContentItem
                     Name="ProjectTemplate"
                     Kind="Details"
-                    DataType="Project">
+                    DataType="Project"
+                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
                     <ContentItem
-                      Name="Project1"
+                      Name="Client"
                       Kind="Details"
-                      DataType="Project">
+                      DataType="Client">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
-                          <ChainExpression />
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Project/Properties[Client]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem
+                        Name="Client1"
+                        Kind="Details"
+                        DataType="Client">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression />
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                      </ContentItem>
+                    </ContentItem>
+                    <ContentItem
+                      Name="ProjectSourceKey"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Project/Properties[ProjectSourceKey]" />
+                          </ChainExpression>
                         </ScreenExpressionTree>
                       </ContentItem.DataSource>
                     </ContentItem>

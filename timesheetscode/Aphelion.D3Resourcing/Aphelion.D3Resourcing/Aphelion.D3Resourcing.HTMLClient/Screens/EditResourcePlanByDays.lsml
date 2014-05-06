@@ -174,6 +174,22 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showAddEditResourcePlanByDay]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="EditResourcePlanByDays/Properties[ResourcePlanByDaySorted]" />
+                            <CreateNewEntity
+                              TargetParameter="!module/Methods[showAddEditResourcePlanByDay]/Parameters[ResourcePlanByDay]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem

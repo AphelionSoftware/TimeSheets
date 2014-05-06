@@ -72,7 +72,7 @@ function calendarbyUrl(contentItem, url) {
           .map(jsonData.value);
 
         var domain = d3.nest()
-            .key(function (d) { if (d.Value > 15) return 16; else return Math.round(d.Value); })
+            .key(function (d) { if (d.Value > 150) return 16; else return Math.round(d.Value); })
             .sortValues(function (a, b) { return parseFloat(a.Value) - parseFloat(b.Value) })
             .map(jsonData.value)
         ;
@@ -92,8 +92,8 @@ function calendarbyUrl(contentItem, url) {
             .range(colorbrewer.Paired[20]);
 
         var colorScalar = d3.scale.quantize()
-        .domain([0,16])
-        .range(colorbrewer.WtYlGnBl[17]);
+        .domain([0, 25])
+            .range(/*colorbrewer.WtYlGn[10]*/ cubeHelix.GrnBlu[26]);
 
 
         /*Creating the base blocks*/

@@ -9,10 +9,14 @@
     [sys_ModifiedBy]        NVARCHAR (255) DEFAULT ('Unknown') NOT NULL,
     [ResourcePlanPersonID]  INT            NOT NULL,
     [ResourcePlanProjectID] INT            NOT NULL,
+    [Active]                INT            CONSTRAINT [DF_ResourcePlan_Active] DEFAULT ((1)) NOT NULL,
     PRIMARY KEY CLUSTERED ([ResourcePlanID] ASC),
+    CONSTRAINT [FK_ResourcePlan_ActiveType] FOREIGN KEY ([Active]) REFERENCES [dbo].[ActiveType] ([ID]),
     CONSTRAINT [FK_ResourcePlan_Person] FOREIGN KEY ([ResourcePlanPersonID]) REFERENCES [dbo].[Person] ([PersonID]),
     CONSTRAINT [FK_ResourcePlan_Project] FOREIGN KEY ([ResourcePlanProjectID]) REFERENCES [dbo].[Project] ([ProjectID])
 );
+
+
 
 
 

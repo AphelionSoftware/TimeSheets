@@ -963,7 +963,7 @@
                     return null;
                 },
                 appendQuery: function () {
-                    return this;
+                    return this.expand("BillingStatus");
                 }
             }
         ], [

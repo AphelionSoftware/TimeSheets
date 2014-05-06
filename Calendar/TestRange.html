@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body {
+        font: 8px sans-serif;
+        shape-rendering: crispEdges;
+    }
+
+    .day {
+        fill: #fff;
+        stroke: #ccc;
+    }
+
+    .month {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+    }
+
+    
+</style>
+<body>
+    <script src="Scripts/d3.v3.min.js"></script>
+    <script src="Scripts/colorbrewer.Extended.js"></script>
+    <script src="Scripts/Polyfill.ArrayFind.js"></script>
+    <script>
+	
+	var cubeHelix = {
+			WhtBlk :{
+			16: ["#ffffff","#ffdff1","#ffc6cb","#ffb896","#e6b661","#b2bb3a","#75c02b","#3abf34","#0eb350"/*For top Green use this*/,"#009b73","#00798d","#0a5394","#1e2f82","#29145b","#20052a","#000000"	]
+			}
+			,WhtBlk :{
+			45: ["#ffffff","#fff4fd","#ffe9f9","#ffdff1","#ffd5e6","#ffcdd8","#ffc5c9","#ffc0b8","#ffbba5","#ffb892","#fcb680","#f0b66e","#e2b65d","#d2b74e","#bfb941","#acbb37","#97bd30","#82bf2c","#6cc02b","#58c12c","#44c031","#32be38","#22bb41","#14b64b","#09b057","#00a862","#009f6e","#009579","#008a83","#007d8b","#007190","#016394","#085694","#0f4991","#163d8c","#1d3184","#222779","#261d6c","#29155d","#280e4d","#26093c","#20052b","#18021b","#0d010d","#000000"]			
+			}
+			,GrnBlu :{
+			26: ["#ffffff","#ffdff1","#ffc6cb","#ffb896","#e6b661","#b2bb3a","#75c02b","#3abf34","#0eb350"/*For top Green use this*/,"#009579","#008a83","#007d8b","#007190","#016394","#085694","#0f4991","#163d8c","#1d3184","#222779","#261d6c","#29155d","#280e4d","#26093c","#20052b","#18021b","#0d010d","#000000"]
+			}
+			};
+
+
+
+        function cmpDate(from, to)
+        {
+            var dtFrom = new Date(from);
+            var dtTo = new Date( to );
+            if( dtFrom.getDate() == dtTo.getDate()  &&  dtFrom.getMonth() == dtTo.getMonth()  &&  dtFrom.getFullYear() == dtTo.getFullYear() )
+                return true;
+
+        }
+
+        function getDOY(date) {
+            var onejan = new Date(date.getFullYear(),0,1);
+            return Math.ceil((date - onejan) / 86400000);
+        }
+
+        var width = 960,
+            height = 96,
+			keyOffset = 100;
+            cellSize = 15, // cell size
+            cellWidth = cellSize,
+            cellHeight = cellSize / 4 * 3;
+			
+
+        var day = d3.time.format("%w"),
+            week = d3.time.format("%U"),
+            percent = d3.format(".1%"),
+            format = d3.time.format("%Y-%m-%d");
+
+        /*var color = d3.scale.quantize()
+            .domain([-.05, .05])
+            .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+        */
+        //var color = d3.scale.category20b();
+        //var color = (function (d) { return "q0-11"; } );
+        /*d3.csv("dji.csv", function(error, csv) {
+          var data = d3.nest()
+            .key(function(d) { return d.Date; })
+            .rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+            .map(csv);
+        */
+
+        /*https://c81352b0-6af8-4e0c-8ddf-ff93360e75d1.o365apps.net/Timesheets_Data.svc/ResourcePlans?$format=json*/
+        //d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json", function(error, jsonData) {
+        //d3.json("https://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json", //function(error, jsonData) {
+        //d3.json("https://aphelionws.sharepoint.com/sites/SA//Lib/ResourcePlans.json", //function(error, jsonData) {
+        d3.json("ResourcePlans.json", //function(error, jsonData) {
+        //d3.json("http://aphelion-testodata.azurewebsites.net/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get(
+        //d3.json("http://localhost:6983/TimesheetsData.svc/ResourcePlans?$format=json").header("X-Requested-With", "XMLHttpRequest").get(
+        function(error, jsonData) {
+
+			var data = d3.nest()
+              .key(function(d) { return d.c_Date;
+                  //var dt = new Date(d.Date);
+                  //return  dt.getFullYear() + " - " + d.Name ;
+              })
+              .map(jsonData.value);
+
+            var dataKey = d3.nest()
+                        .key(function(d) {
+                            var dt = new Date(d.c_Date);
+                            return  dt + " - " + dt.getFullYear() + " - " + d.Name  ;
+
+                        })
+                        .map(jsonData.value)
+            ;
+
+            var domain = d3.nest()
+                .key(function(d) { return d.Client; })
+                .map(jsonData.value);
+            var people =
+                            d3.nest()
+                            .key(function(d) {
+                                var dt = new Date(d.c_Date);
+                                return  dt.getFullYear() + " - " + d.Name ;
+
+                            })
+                            /*.key(function(d) {
+                                var dt = new Date(d.Date);
+                                return dt.getFullYear();
+                                } )*/
+                            .map(jsonData.value)
+            ;
+
+            /*Setting up colors*/
+            var color2 = d3.scale.ordinal()
+                .domain(domain)
+                .range(colorbrewer.Paired[20]);
+
+				
+				
+            /*Creating the base blocks*/
+            var svg = d3.select("body").selectAll("svg")
+                .data(d3.keys( people )/*d3.range(2013, 2016)*/)
+              .enter().append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .attr("class", "RdYlGn")
+              .append("g")
+                .attr("transform", "translate(" + ((width - cellWidth * 53) / 2) + "," + (height - cellHeight * 7 - 1) + ")");
+
+            svg.append("text")
+                .attr("transform", "translate(-6," + cellHeight * 3.5 + ")rotate(-90)")
+                .style("text-anchor", "middle")
+                .text(function(d) { return d; });
+
+            //Setting up a rectangle per year/person combo
+            //using substring as we have a year/person in the key
+
+
+            var rect = svg.selectAll(".day")
+                .data(
+                function(d) {
+                    var days = d3.time.days(new Date(parseInt(d.substring(0,4)), 0, 1), new Date(parseInt(d.substring(0,4)) + 1, 0, 1));
+                    //days.selectAll().enter().append("Name", d);
+                    var newDays = days.map( function(item)
+                    {
+                        return item + " " + d;
+                    }
+                            )
+                    return newDays;
+                }
+                )
+              .enter().append("rect")
+                .attr("class", "day")
+                .attr("width", cellWidth)
+                .attr("height", cellHeight )
+                .attr("x", function (d) { if (d.length > 62) return week(new Date(d.substring(0, 62))) * cellWidth; else if (d.length >= 33) return week(new Date(d.substring(0, 33))) * cellWidth ; else return 0; })
+                .attr("y", function (d) { if (d.length > 62) return day(new Date(d.substring(0, 62))) * cellHeight ; else if (d.length > 3) return day(new Date(d.substring(0, 33))) * cellHeight ; else return 0; })
+
+
+            // .datum(format);
+            ;
+
+            rect.append("title")
+                .text(function(d) {
+                    //return "Some title";
+                    var val
+                    if( d.length > 62)
+                        val = people[d.substring(63, d.length).trim()].find (
+                                function (element, index, array)
+                                {
+                                    return cmpDate(element.c_Date, d.substring(0,62).trim());
+                                }
+                                );
+                    else
+                        val = people[d.substring(33, d.length).trim()].find (
+                                function (element, index, array)
+                                {
+                                    return cmpDate(element.c_Date, d.substring(0,33).trim());
+                                }
+                                );
+                    if (val && val.Client && val.c_Date)
+                        return val.Client + " on " + val.c_Date;
+                    else return d;
+
+                    //return d;
+
+                })
+            ;
+
+            svg.selectAll(".month")
+                .data(function(d) { return d3.time.months(new Date(parseInt(d.substring(0,4)), 0, 1), new Date(parseInt(d.substring(0,4)) + 1, 0, 1)); })
+              .enter().append("path")
+                .attr("class", "month")
+                .attr("d", monthPath);
+
+
+
+            rect.filter(function(d) { return true;})
+            .attr('style', function(d){
+								return "fill:"+ 
+								//color2( d )							
+								cubeHelix.GrnBlu[26][new Date(d.substring(0,62)).getDate() ]
+									 + ";" ;
+										
+                  } )
+			.select("title")
+                .text(function(d) {
+                    var val ;
+                    if ( d.length > 62)
+					{
+                        val = people[d.substring(63, d.length).trim()].find (
+                                      function (element, index, array)
+                                      {
+
+                                          return cmpDate(element.c_Date, d.substring(0,62).trim());
+                                      }
+                                      );
+					}
+                    else
+					{
+                        val = people[d.substring(33, d.length).trim()].find (
+                                    function (element, index, array)
+                                    {
+                                        return cmpDate(element.c_Date, d.substring(0,33).trim());
+                                    }
+                                    );
+					}
+
+                    if (val && val.Client && val.c_Date)
+                        return val.Client + " on " + val.c_Date.substring(0,10);
+                    else return d;
+
+                });
+				
+			//Key
+			
+				//Creating the key
+				
+				
+				var bottom = d3.keys(people).length * height;
+			
+			//d3.select("body").append("p")
+			
+			var svgKey = d3.select("body").append("svg")
+				.attr("width", 960/*cellWidth * 20*/)
+                .attr("height", (d3.keys( domain).length + 1) * cellHeight * 2/*((cellHeight * d3.keys(domain).length)) + bottom*/)
+                .attr("class", "RdYlGn")
+				/*.attr("x",0)
+				.attr("y", 0 bottom * 2)*/
+				.append("g")
+              
+				;
+
+				
+				
+            var rectKey = svgKey.selectAll(".client")
+                .data( d3.keys(domain)  )
+              .enter().append("rect") 
+			  .attr("class", "Client")
+                .attr("width", cellWidth * 20)
+                .attr("height", cellHeight * 2 )
+				.attr("x",80)
+				.attr("y",
+					function(d) {
+					return ((d3.keys( domain).indexOf(d) + 1) * cellHeight * 2)  ;
+					}
+				)
+				.attr('style', function(d){return "fill:"+ 
+								color2( d ) }
+								)
+			  ;
+  
+            var text = svgKey.selectAll(".txt")
+                .data( d3.keys(domain)  )
+              .enter().append("text") 
+                .attr("width", cellWidth * 20)
+                .attr("height", cellHeight )
+				.attr("x",0)
+				.attr("y",
+					function(d) {
+					return (((d3.keys( domain).indexOf(d) + 1) * cellHeight * 2) + (cellHeight/4*3))  ;
+					}
+				)			
+				.text(
+					function(d) {
+					return d;
+					}
+				)
+			  ;
+				
+			rect.append("title")
+			.text(function(d) { return d; });
+            
+				
+				
+				
+				
+				
+        });
+        //.attr('style', function(d){return "fill:"+ color2(data[d][0].Client) + ";" ;})
+
+
+        function monthPath(t0) {
+            var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+                d0 = +day(t0), w0 = +week(t0),
+                d1 = +day(t1), w1 = +week(t1);
+            return "M" + (w0 + 1) * cellWidth + "," + d0 * cellHeight
+                + "H" + w0 * cellWidth + "V" + (7 * cellHeight) 
+                + "H" + w1 * cellWidth + "V" + (d1 + 1) * cellHeight 
+                + "H" + (w1 + 1) * cellWidth + "V" + 0
+                + "H" + (w0 + 1) * cellWidth + "Z";
+        }
+
+        //d3.select(self.frameElement).style("height", "2910px");
+
+    </script>
+</body>

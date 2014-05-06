@@ -279,7 +279,7 @@
             {
                 name: "TimesheetDetailsQuery", kind: "collection", elementType: lightSwitchApplication.TimesheetDetail,
                 createQuery: function (TimesheetID) {
-                    return this.dataWorkspace.TimesheetsData.TimesheetDetailsQuery().filter("" + ((TimesheetID === undefined || TimesheetID === null) ? "false" : "(Timesheet/TimesheetID eq " + $toODataString(TimesheetID, "Int32?") + ")") + "").expand("DimDate").expand("Project").expand("TypeOfWork");
+                    return this.dataWorkspace.TimesheetsData.TimesheetDetailsQuery().filter("" + ((TimesheetID === undefined || TimesheetID === null) ? "false" : "(Timesheet/TimesheetID eq " + $toODataString(TimesheetID, "Int32?") + ")") + "").expand("DimDate").expand("Project").expand("Project.Client").expand("TypeOfWork");
                 }
             },
             { name: "TimesheetID", kind: "local", type: Number },

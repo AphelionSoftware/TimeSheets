@@ -9128,13 +9128,36 @@
                                     "displayName": "Project",
                                     "name": "ProjectTemplate",
                                     "kind": "Details",
-                                    "view": { "__id": ":Summary" },
+                                    "view": { "__id": ":ColumnsLayout" },
                                     "dataSource":
                                     {
                                       "links":
                                       [
                                       ]
-                                    }
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Client",
+                                        "name": "Client",
+                                        "kind": "Details",
+                                        "view": { "__id": ":Summary" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Project/Properties[Client]" }
+                                        }
+                                      },
+                                      {
+                                        "displayName": "Project Source Key",
+                                        "name": "ProjectSourceKey",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "Project/Properties[ProjectSourceKey]" }
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               },
