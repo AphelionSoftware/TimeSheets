@@ -56,6 +56,15 @@
           <AnsiConstraint />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <KeyProperty
+        Name="Comments"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -86,16 +95,36 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="And">
                         <BinaryExpression.Left>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="ProjectName" />
-                          </ChainExpression>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Comments" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Comments" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ParameterExpression
-                            Parameter="ProjectName" />
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="ProjectName" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="ProjectName" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Left>
@@ -187,6 +216,14 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'ProjectName' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Comments"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Comments' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -210,16 +247,36 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="And">
                         <BinaryExpression.Left>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="ProjectName" />
-                          </ChainExpression>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Comments" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Comments" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ParameterExpression
-                            Parameter="ProjectName" />
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="ProjectName" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="ProjectName" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Left>
@@ -311,6 +368,14 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'ProjectName' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Comments"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Comments' key property of the entity to retrieve." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -349,6 +414,12 @@
           Nullable="False"
           Type="varchar"
           Property="ResourcePlan/Properties[ProjectName]" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="Comments"
+          Nullable="False"
+          Type="nvarchar"
+          Property="ResourcePlan/Properties[Comments]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

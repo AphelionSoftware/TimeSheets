@@ -1,6 +1,7 @@
 ﻿
 
 
+
 CREATE VIEW [D3].[ResourcePlan]
 
 as
@@ -10,6 +11,7 @@ R.[ResourceDate] As [Date],
 P.PersonName Name, 
 C.ClientName As Client,
 Proj.ProjectName
+, R.ResourcePlanByDayComments Comments
 FROM [dbo].[ResourcePlanByDay] R
 INNER JOIN dbo.Person as P
 ON R.[ResourcePlanByDayPersonID] = P.PersonID

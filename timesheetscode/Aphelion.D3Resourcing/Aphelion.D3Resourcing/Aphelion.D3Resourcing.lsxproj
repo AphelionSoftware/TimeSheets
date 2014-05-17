@@ -22,7 +22,7 @@
     <ApplicationServerType>Azure</ApplicationServerType>
     <AuthenticationType>None</AuthenticationType>
     <ApplicationName>Aphelion.D3Resourcing</ApplicationName>
-    <AssemblyVersion>1.0.24.0</AssemblyVersion>
+    <AssemblyVersion>1.0.25.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>

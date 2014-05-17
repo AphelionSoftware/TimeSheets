@@ -147,15 +147,20 @@ function calendarbyUrl(contentItem, url) {
         rect.append("title")
             .text(function (d) {
                 //return "Some title";
-                var val
+                var val;
+                var ret;
                     val = people[d.substring(13, d.length).trim()].find(
                             function (element, index, array) {
                                 return cmpDate(element.c_Date, d.substring(0, 10).trim());
                             }
                             );
-                if (val && val.Client && val.c_Date)
-                    return val.Client + " on " + val.c_Date;
-                else return d;
+                    if (val && val.Client && val.c_Date)
+                        ret = val.Client + " on " + val.c_Date;
+                    else ret = d;
+                    if (val && val.Comments )
+                        ret = ret + " for " + val.Comments;
+                    return ret;
+
 
                 //return d;
 
@@ -166,7 +171,9 @@ function calendarbyUrl(contentItem, url) {
             .data(function (d) { return d3.time.months(new Date(parseInt(d.substring(0, 4)), 0, 1), new Date(parseInt(d.substring(0, 4)) + 1, 0, 1)); })
           .enter().append("path")
             .attr("class", "month")
-            .attr("d", monthPath);
+            .attr("d", monthPath)
+            .attr("onclick", "alert('here')");
+
 
 
 
@@ -202,16 +209,18 @@ function calendarbyUrl(contentItem, url) {
         .select("title")
             .text(function (d) {
                 var val;
+                var ret;
                 val = people[d.substring(13, d.length).trim()].find(
-                            function (element, index, array) {
-                                return cmpDate(element.c_Date, d.substring(0, 10).trim());
-                            }
-                            );
-                
-
+                        function (element, index, array) {
+                            return cmpDate(element.c_Date, d.substring(0, 10).trim());
+                        }
+                        );
                 if (val && val.Client && val.c_Date)
-                    return val.Client + " on " + val.c_Date.substring(0, 10);
-                else return d;
+                    ret = val.Client + " on " + val.c_Date;
+                else ret = d;
+                if (val && val.Comments)
+                    ret = ret + " for " + val.Comments;
+                return ret;
 
             });
 

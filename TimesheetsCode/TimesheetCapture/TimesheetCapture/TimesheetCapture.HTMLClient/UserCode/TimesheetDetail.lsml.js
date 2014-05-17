@@ -13,7 +13,7 @@ myapp.TimesheetDetail.created = function (entity) {
     });
 
     myapp.activeDataWorkspace.TimesheetsData.BillingStatus_SingleOrDefault(-1).execute().then(function (BillingStatusQuery) {
-        entity.BillingStatus = BillingStatusQuery.results[0];
+        entity.BillingStatus = BillingStatusQuery.results[-1];
     });
 
     entity.TimesheetDetailName = "N/A";
