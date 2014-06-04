@@ -103,6 +103,11 @@
         Association="FK_ResourcePlan_Project"
         FromEnd="ResourcePlan"
         ToEnd="Project" />
+      <NavigationProperty
+        Name="ActiveType"
+        Association="FK_ResourcePlan_ActiveType"
+        FromEnd="ResourcePlan"
+        ToEnd="ActiveType" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -252,6 +257,11 @@
           Nullable="False"
           Type="nvarchar"
           Property="ResourcePlan/Properties[sys_ModifiedBy]" />
+        <SsdlForeignKeyProperty
+          Name="Active"
+          Nullable="False"
+          Type="int"
+          PropertyName="Active" />
         <SsdlForeignKeyProperty
           Name="ResourcePlanPersonID"
           Nullable="False"

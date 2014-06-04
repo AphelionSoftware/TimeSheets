@@ -12,3 +12,5 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

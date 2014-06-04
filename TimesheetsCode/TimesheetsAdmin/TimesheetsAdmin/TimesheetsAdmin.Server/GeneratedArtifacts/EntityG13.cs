@@ -314,6 +314,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Project_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.ActiveType ActiveType
+        {
+            get
+            {
+                return global::LightSwitchApplication.ResourcePlan.DetailsClass.GetValue(this, global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType);
+            }
+            set
+            {
+                global::LightSwitchApplication.ResourcePlan.DetailsClass.SetValue(this, global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveType_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ActiveType_Changed();
+
         #endregion
     
         #region Details Class
@@ -476,6 +500,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType> ActiveType
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -492,6 +524,7 @@ namespace LightSwitchApplication
                 new string sys_ModifiedBy { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Person { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Project { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation ActiveType { get; set; }
             }
             #pragma warning restore 109
     
@@ -887,6 +920,53 @@ namespace LightSwitchApplication
                     e.Project_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry
+                    ActiveType = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType>.Entry(
+                        "ActiveType",
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_Stub,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_Validate,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_GetCoreImplementationValue,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_GetImplementationValue,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_SetImplementationValue,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_Refresh,
+                        global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties._ActiveType_OnValueChanged);
+                private static void _ActiveType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ResourcePlan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType>.Data> c, global::LightSwitchApplication.ResourcePlan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ActiveType, sf);
+                }
+                private static bool _ActiveType_ComputeIsReadOnly(global::LightSwitchApplication.ResourcePlan e)
+                {
+                    bool result = false;
+                    e.ActiveType_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ActiveType_Validate(global::LightSwitchApplication.ResourcePlan e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ActiveType_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _ActiveType_GetCoreImplementationValue(global::LightSwitchApplication.ResourcePlan.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ActiveType;
+                }
+                private static global::LightSwitchApplication.ActiveType _ActiveType_GetImplementationValue(global::LightSwitchApplication.ResourcePlan.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass>(global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
+                }
+                private static void _ActiveType_SetImplementationValue(global::LightSwitchApplication.ResourcePlan.DetailsClass d, global::LightSwitchApplication.ActiveType v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType, (i, ev) => i.ActiveType = ev, v);
+                }
+                private static void _ActiveType_Refresh(global::LightSwitchApplication.ResourcePlan.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.ResourcePlan.DetailsClass.PropertySetProperties.ActiveType, ref d._ActiveType);
+                }
+                private static void _ActiveType_OnValueChanged(global::LightSwitchApplication.ResourcePlan e)
+                {
+                    e.ActiveType_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -918,6 +998,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.Project>.Data _Project;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass, global::LightSwitchApplication.ActiveType>.Data _ActiveType;
             
         }
     

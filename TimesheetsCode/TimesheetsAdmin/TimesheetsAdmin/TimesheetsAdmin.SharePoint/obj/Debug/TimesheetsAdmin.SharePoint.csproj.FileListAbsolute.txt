@@ -20,3 +20,6 @@ C:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\bin\Debug\TimesheetsAdmin.SharePoint.pdb
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.dll
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.SharePoint\obj\Debug\TimesheetsAdmin.SharePoint.pdb
