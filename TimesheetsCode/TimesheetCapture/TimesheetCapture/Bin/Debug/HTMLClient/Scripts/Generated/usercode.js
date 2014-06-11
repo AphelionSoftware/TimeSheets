@@ -3,6 +3,7 @@ document.writeln("<script type=\"text/javascript\" src=\"UserCode/Timesheet.lsml
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/TimesheetDetail.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"UserCode/ViewTimesheets.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/AddEditTimesheetDetail.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"Screens/AddNewTimesheet.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/BrowseTimesheets.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/EditTimesheetDetails.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/ManageTimesheets.lsml.js\"></script>");

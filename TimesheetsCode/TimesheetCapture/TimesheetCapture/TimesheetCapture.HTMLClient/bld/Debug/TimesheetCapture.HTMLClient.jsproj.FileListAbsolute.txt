@@ -18,3 +18,5 @@ C:\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LS
 C:\TimesheetCapture_v2\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs

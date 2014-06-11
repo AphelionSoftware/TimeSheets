@@ -9,3 +9,6 @@ C:\GitHub\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetC
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Debug\TimesheetCapture.SharePoint.pdb
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.dll
 C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.pdb
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\bin\Debug\TimesheetCapture.SharePoint.pdb
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.dll
+C:\Users\matth\Documents\GitHub\timesheets2\TimeSheets\TimesheetsCode\TimesheetCapture\TimesheetCapture\TimesheetCapture.SharePoint\obj\Debug\TimesheetCapture.SharePoint.pdb

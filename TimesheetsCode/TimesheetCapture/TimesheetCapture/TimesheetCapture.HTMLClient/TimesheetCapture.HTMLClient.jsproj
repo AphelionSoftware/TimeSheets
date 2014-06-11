@@ -68,6 +68,9 @@
     <Content Include="Screens\AddEditTimesheetDetail.lsml.js">
       <DependentUpon>AddEditTimesheetDetail.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\AddNewTimesheet.lsml.js">
+      <DependentUpon>AddNewTimesheet.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\BrowseTimesheets.lsml.js">
       <DependentUpon>BrowseTimesheets.lsml</DependentUpon>
     </Content>

@@ -3737,6 +3737,26 @@
               ]
             },
             {
+              "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]",
+              "name": "FK_ResourcePlan_ActiveType",
+              "association": { "__id": "FK_ResourcePlan_ActiveType" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ActiveType]",
+                  "name": "ActiveType",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ActiveTypes]" }
+                },
+                {
+                  "properties": [ "Active" ],
+                  "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ResourcePlan]",
+                  "name": "ResourcePlan",
+                  "entitySet": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
+                }
+              ]
+            },
+            {
               "id": "Timesheets_Data/Members[FK_Project_BillingStatus]",
               "name": "FK_Project_BillingStatus",
               "association": { "__id": "BillingStatus_Project" },
@@ -4333,26 +4353,6 @@
                   "id": "Timesheets_Data/Members[FK_TimesheetDetail_TypeOfWork]/Members[TimesheetDetail]",
                   "name": "TimesheetDetail",
                   "entitySet": { "__id": "Timesheets_Data/Members[TimesheetDetails]" }
-                }
-              ]
-            },
-            {
-              "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]",
-              "name": "FK_ResourcePlan_ActiveType",
-              "association": { "__id": "FK_ResourcePlan_ActiveType" },
-              "ends":
-              [
-                {
-                  "properties": [ "ID" ],
-                  "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ActiveType]",
-                  "name": "ActiveType",
-                  "entitySet": { "__id": "Timesheets_Data/Members[ActiveTypes]" }
-                },
-                {
-                  "properties": [ "Active" ],
-                  "id": "Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ResourcePlan]",
-                  "name": "ResourcePlan",
-                  "entitySet": { "__id": "Timesheets_Data/Members[ResourcePlans]" }
                 }
               ]
             }
@@ -11146,6 +11146,26 @@
                 "preserveSeconds": true
               },
               ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "FK_ResourcePlan_ActiveType",
+          "name": "FK_ResourcePlan_ActiveType",
+          "ends":
+          [
+            {
+              "id": "FK_ResourcePlan_ActiveType/Ends[ActiveType]",
+              "name": "ActiveType",
+              "multiplicity": "One",
+              "entityType": { "__id": "ActiveType" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ResourcePlan_ActiveType/Ends[ResourcePlan]",
+              "name": "ResourcePlan",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ResourcePlan" }
             }
           ]
         },
@@ -20475,26 +20495,6 @@
               "name": "TimesheetDetailAM",
               "elementType": { "__id": ":String?" },
               "propertyType": { "__id": ":String?" }
-            }
-          ]
-        },
-        {
-          "id": "FK_ResourcePlan_ActiveType",
-          "name": "FK_ResourcePlan_ActiveType",
-          "ends":
-          [
-            {
-              "id": "FK_ResourcePlan_ActiveType/Ends[ActiveType]",
-              "name": "ActiveType",
-              "multiplicity": "One",
-              "entityType": { "__id": "ActiveType" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_ResourcePlan_ActiveType/Ends[ResourcePlan]",
-              "name": "ResourcePlan",
-              "multiplicity": "Many",
-              "entityType": { "__id": "ResourcePlan" }
             }
           ]
         }
