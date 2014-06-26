@@ -167,6 +167,11 @@
           <Computed />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="ResourcePlans"
+        Association="FK_ResourcePlan_ActiveType"
+        FromEnd="ActiveType"
+        ToEnd="ResourcePlan" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -610,7 +615,32 @@
         Name="InvoiceStatus"
         EntitySet="InvoiceStatus" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_ResourcePlan_ActiveType"
+      Association="FK_ResourcePlan_ActiveType">
+      <AssociationSetEnd
+        Name="ActiveType"
+        EntitySet="ActiveTypes" />
+      <AssociationSetEnd
+        Name="ResourcePlan"
+        EntitySet="ResourcePlans" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="FK_ResourcePlan_ActiveType">
+    <AssociationEnd
+      Name="ActiveType"
+      Multiplicity="One"
+      EntityType="ActiveType">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ResourcePlan"
+      Multiplicity="Many"
+      EntityType="ResourcePlan" />
+  </Association>
   <DataService
     Name="Timesheets_DataDataService">
     <DataService.Attributes>
@@ -850,6 +880,27 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="Timesheets_Data/Members[FK_Project_ActiveType]/Members[Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Active" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_ResourcePlan_ActiveType">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_ResourcePlan_ActiveType" />
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ActiveType]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="Timesheets_Data/Members[FK_ResourcePlan_ActiveType]/Members[ResourcePlan]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Active" />

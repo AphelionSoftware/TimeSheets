@@ -568,29 +568,49 @@
                     </ContentItem.PropertySources>
                   </ContentItem>
                   <ContentItem
-                    Name="InvoiceLineCalcedAmount"
-                    Kind="Value"
-                    DataType=":Decimal">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="InvoiceLine/Properties[InvoiceLineCalcedAmount]" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                    <ContentItem.PropertySources>
-                      <ControlPropertySource
-                        Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                    Name="Group2"
+                    Kind="Group"
+                    View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+                    <ContentItem
+                      Name="InvoiceLineCalcedAmount"
+                      Kind="Value"
+                      DataType=":Decimal">
+                      <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
-                            <ConstantExpression
-                              Value="LeftAligned"
-                              ResultType=":String" />
+                            <MemberExpression
+                              Member="InvoiceLine/Properties[InvoiceLineCalcedAmount]" />
                           </ChainExpression>
                         </ScreenExpressionTree>
-                      </ControlPropertySource>
-                    </ContentItem.PropertySources>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[AttachedLabelPosition]">
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <ConstantExpression
+                                Value="LeftAligned"
+                                ResultType=":String" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                    <ContentItem
+                      Name="UseCalcedAmount"
+                      Kind="Command">
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <CallExpression
+                                Target="AddEditInvoice/Methods[UseCalcedAmount]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
@@ -913,6 +933,8 @@
       </ScreenMethod>
       <ScreenMethod
         Name="InvoiceLines_ItemTap" />
+      <ScreenMethod
+        Name="UseCalcedAmount" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

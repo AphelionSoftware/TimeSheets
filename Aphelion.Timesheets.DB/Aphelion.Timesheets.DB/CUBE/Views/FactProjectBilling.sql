@@ -26,3 +26,4 @@ SELECT  P.[ProjectID]
 	AND C.Active = 1
   where exists (select * from dbo.TimesheetDetail TD where td.TimesheetDetailProjectID = p.ProjectID AND TD.Active = 1 )
   AND p.Active = 1
+  and P.ProjectID >= 0

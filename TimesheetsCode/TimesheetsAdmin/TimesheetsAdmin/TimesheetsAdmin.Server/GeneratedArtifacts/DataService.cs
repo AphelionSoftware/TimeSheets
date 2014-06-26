@@ -843,6 +843,15 @@ namespace LightSwitchApplication
         partial void TimesheetDetails_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetDetail, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_Validate(global::LightSwitchApplication.TimesheetHour entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TimesheetHours_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Timesheets_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -922,15 +931,6 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void UnallocatedTimesheets_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.UnallocatedTimesheet, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_Validate(global::LightSwitchApplication.TimesheetHour entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TimesheetHours_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -2348,6 +2348,39 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetHour>
+                __TimesheetHoursEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetHour>(
+                    "TimesheetHours",
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_CanRead,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_Validate,
+                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_Filter);
+            private static bool __TimesheetHours_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                bool result = true;
+                d.TimesheetHours_CanRead(ref result);
+                return result;
+            }
+            private static void __TimesheetHours_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetHour e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TimesheetHours_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> __TimesheetHours_Filter(global::LightSwitchApplication.Timesheets_DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter = null;
+                d.TimesheetHours_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>
                 __TimesheetsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.Timesheet>(
                     "Timesheets",
@@ -2527,39 +2560,6 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.UnallocatedTimesheet, bool>> filter = null;
                 d.UnallocatedTimesheets_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetHour>
-                __TimesheetHoursEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Timesheets_DataService, global::LightSwitchApplication.TimesheetHour>(
-                    "TimesheetHours",
-                    null,
-                    null,
-                    null,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_CanRead,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_Validate,
-                    global::LightSwitchApplication.Timesheets_DataService.DetailsClass.__TimesheetHours_Filter);
-            private static bool __TimesheetHours_CanRead(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                bool result = true;
-                d.TimesheetHours_CanRead(ref result);
-                return result;
-            }
-            private static void __TimesheetHours_Validate(global::LightSwitchApplication.Timesheets_DataService d, global::LightSwitchApplication.TimesheetHour e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.TimesheetHours_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> __TimesheetHours_Filter(global::LightSwitchApplication.Timesheets_DataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TimesheetHour, bool>> filter = null;
-                d.TimesheetHours_Filter(ref filter);
                 return filter;
             }
             

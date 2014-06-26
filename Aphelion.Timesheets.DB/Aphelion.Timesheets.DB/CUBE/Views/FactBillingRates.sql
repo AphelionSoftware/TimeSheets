@@ -1,7 +1,4 @@
 ﻿
-
-
-
 CREATE VIEW [CUBE].[FactBillingRates] 
 as
 
@@ -20,6 +17,7 @@ SELECT [BillingDetailID]
   INNER JOIN dbo.Project 
   ON bd.[BillingDetailClientID] = Project.ClientID 
   and Project.Active = 1
+  and Project.ProjectID >= 0
   INNER JOIN dbo.DimDate DD
   on DD.Day = 1
   AND DD.DateID > bd.[BillingDetailDateID]
@@ -57,4 +55,3 @@ SELECT [BillingDetailID]
 	)
 
 	and EXISTS (SELECT * from [CUBE].[FactTimesheetDetail] TD where TD.TimesheetDetailPersonID = bd.[BillingDetailPersonID])
-

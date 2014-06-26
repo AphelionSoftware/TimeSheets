@@ -2,7 +2,7 @@
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\ApplicationData\ResourcePlanRanges.lsml" Checksum="E6FD4C73569956B807B758FF7359DE4D5885375BB506FD702FFD734DF6D1CD49" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ActiveTypes.lsml" Checksum="9EE6FBE09E1B5A26741C7B21F61635E2E9D46E7E191EE709A45F0CB8F07356D5" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ActiveTypes.lsml" Checksum="C7B02951F8F007E8B80CB90DC1FE1BF536B64EDEFEE6CF617626420EFE47746B" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\BillingDetails.lsml" Checksum="0EC8DF7E0588F1D285F539A3D56F900BC92422DD643F879B2B25CCD05ECF0200" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\BillingDetailNoRole.lsml" Checksum="B23766BA8B9C991A8B81980F556742E41192E60DAAF094BFDA0AF0F27812F914" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\BillingDetailsSorted.lsml" Checksum="FB166EEC83D6EA0A61B5CAEF972B997366050B5BFEA09D3CC4CC2B649ABEB05F" />
@@ -26,7 +26,7 @@
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\BillableProjects.lsml" Checksum="50D73072E52DB5142314380842A8B96D488B83A34692FED19138F803965524CA" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ProjectsFilter.lsml" Checksum="69A7D10C379519747442F79EA6A0BC1C35EC1DA94522C1F428CFBDC645DBCDC0" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ProjectsSorted.lsml" Checksum="5512993506EACDB337A99983D4BFDE410A6E5D5851DBBC2174657A101AD91169" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ResourcePlans.lsml" Checksum="1F68DC240E83A22BB3B3CA67498613E54FB035468F78C525C3D392A0945515BC" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ResourcePlans.lsml" Checksum="75471681DFE0D6E0D2744B42918D76FEA9DB8847546A10694643111EF6CDBE2E" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\ResourcePlanSorted.lsml" Checksum="C4C59BC3C144469F9CB4ADB9B7C4ACE65557952F74BD6A4B0869E00027D32873" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\RoleTypes.lsml" Checksum="95052E474BD39704ADB9C8944E5551309538479E01952B0C5DCE7005408B3752" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\SystemRoles.lsml" Checksum="48DE293E5F25FA2B899A228CC57ED18DD17E26F54030C46EE36AF9C6EC6517F6" />
@@ -39,7 +39,7 @@
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\TypeOfWorks.lsml" Checksum="737E9ABB683714FDD67818BA3DBD9102EE899F33C0B4162A900B7FDAD4595640" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\DataSources\Timesheets_Data\UnallocatedTimesheets.lsml" Checksum="1EE0AA6509A95B1406EDC040D40193515DEC3AF2BE1BD92AE13FCC80A5E0EDE6" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\Properties\DataSources\ApplicationData.lsml" Checksum="C9007E90610BDB16B02BFA701E17F70EAA51ACD70D7BB658DBA4901EFBFA0129" />
-    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\Properties\DataSources\Timesheets_Data.lsml" Checksum="89DE2F1EE7A1B84CE7EA0EB469D9A65AFD3475BD2FD8FA382B6F9895CED70191" />
+    <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\Properties\DataSources\Timesheets_Data.lsml" Checksum="6DF4EF4A817F38CF7937E336ECFC9F4F8C1A19645817B4FCB1205546A9790E04" />
     <Document FullPath="C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\Properties\Service.lsml" Checksum="7A7422B6CAF7B023C350BD45B07BFBE3BC6744415BAE10E5B6AD082447769C47" />
   </Documents>
 </ModelDocumentManifest>

@@ -89,3 +89,10 @@ myapp.AddEditInvoice.created = function (screen) {
 
 
 };
+myapp.AddEditInvoice.UseCalcedAmount_execute = function (screen) {
+    // Write code here.
+    screen.InvoiceLines.selectedItem.InvoiceLineAmount = screen.InvoiceLines.selectedItem.InvoiceLineCalcedAmount;
+    screen.InvoiceLines.selectedItem.details.refresh();
+    screen.Invoice.details.refresh();
+
+};

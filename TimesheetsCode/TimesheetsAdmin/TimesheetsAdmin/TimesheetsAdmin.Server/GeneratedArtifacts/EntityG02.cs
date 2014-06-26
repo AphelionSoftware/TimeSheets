@@ -610,6 +610,29 @@ namespace LightSwitchApplication
             }
         }
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ResourcePlan> ResourcePlans
+        {
+            get
+            {
+                return global::LightSwitchApplication.ActiveType.DetailsClass.GetValue(this, global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties.ResourcePlans);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ResourcePlan> ResourcePlansQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.ActiveType.DetailsClass.GetQuery(this, global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties.ResourcePlans);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -876,6 +899,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan> ResourcePlans
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties.ResourcePlans) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -904,6 +935,7 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable Invoices { get; }
                 new global::System.Collections.IEnumerable InvoiceLines { get; }
                 new global::System.Collections.IEnumerable InvoiceStatus { get; }
+                new global::System.Collections.IEnumerable ResourcePlans { get; }
             }
             #pragma warning restore 109
     
@@ -1511,6 +1543,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.InvoiceStatus;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Entry
+                    ResourcePlans = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Entry(
+                        "ResourcePlans",
+                        global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties._ResourcePlans_Stub,
+                        global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties._ResourcePlans_GetReferencedEntities,
+                        global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties._ResourcePlans_GetEntityCollection);
+                private static void _ResourcePlans_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ActiveType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Data> c, global::LightSwitchApplication.ActiveType.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ResourcePlans, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ResourcePlan> _ResourcePlans_GetReferencedEntities(global::LightSwitchApplication.ActiveType.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.ResourcePlan, global::LightSwitchApplication.ResourcePlan.DetailsClass>(global::LightSwitchApplication.ActiveType.DetailsClass.PropertySetProperties.ResourcePlans, ref d._ResourcePlans);
+                }
+                private static global::System.Collections.IEnumerable _ResourcePlans_GetEntityCollection(global::LightSwitchApplication.ActiveType.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ResourcePlans;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1581,6 +1633,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.InvoiceStatu>.Data _InvoiceStatus;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ActiveType, global::LightSwitchApplication.ActiveType.DetailsClass, global::LightSwitchApplication.ResourcePlan>.Data _ResourcePlans;
             
         }
     

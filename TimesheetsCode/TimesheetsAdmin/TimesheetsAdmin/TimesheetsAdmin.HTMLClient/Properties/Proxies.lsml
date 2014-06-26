@@ -418,4 +418,10 @@
         Target="ServiceInterface:TimesheetHour" />
     </EntityType.Attributes>
   </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ResourcePlan_ActiveType" />
+    </Association.Attributes>
+  </Association>
 </Application>
