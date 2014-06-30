@@ -2125,10 +2125,11 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "ProjectsSorted", value: function () {
+                name: "ProjectsSorted", value: function (Name) {
                     return new $DataServiceQuery({ _entitySet: this.Projects },
                         lightSwitchApplication.rootUri + "/Timesheets_Data.svc" + "/ProjectsSorted()",
                         {
+                            Name: $toODataString(Name, "String?")
                         });
                 }
             },

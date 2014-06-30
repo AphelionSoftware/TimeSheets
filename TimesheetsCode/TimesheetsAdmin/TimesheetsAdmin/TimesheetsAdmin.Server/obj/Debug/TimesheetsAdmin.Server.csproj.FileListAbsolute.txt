@@ -266,7 +266,6 @@ D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\Time
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.DomainServices.Server.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.ServiceModel.PollingDuplex.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\System.Spatial.dll
-D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.WindowsAzure.ServiceRuntime.dll
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.SharePoint.Client.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
 D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\TimesheetsAdmin.Server\bin\Debug\Microsoft.LightSwitch.xml

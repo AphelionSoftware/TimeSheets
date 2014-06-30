@@ -331,6 +331,12 @@
         /// <field name="TimesheetDetail" type="msls.application.TimesheetDetail">
         /// Gets or sets the timesheetDetail for this screen.
         /// </field>
+        /// <field name="ProjectsSorted" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectsSorted for this screen.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheetDetail.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -970,7 +976,14 @@
         ]),
 
         AddEditTimesheetDetail: $defineScreen(AddEditTimesheetDetail, [
-            { name: "TimesheetDetail", kind: "local", type: lightSwitchApplication.TimesheetDetail }
+            { name: "TimesheetDetail", kind: "local", type: lightSwitchApplication.TimesheetDetail },
+            {
+                name: "ProjectsSorted", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (Name) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted(Name);
+                }
+            },
+            { name: "Name", kind: "local", type: String }
         ], [
         ]),
 
@@ -1162,8 +1175,8 @@
             },
             {
                 name: "ProjectsSorted", kind: "collection", elementType: lightSwitchApplication.Project,
-                createQuery: function () {
-                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted().filter("ActiveType/Active eq 1").expand("Client");
+                createQuery: function (Name) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted(Name).filter("ActiveType/Active eq 1").expand("Client");
                 }
             }
         ], [

@@ -6,7 +6,7 @@ C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSw
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Client\Microsoft.LightSwitch.CodeMarker.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Client\Microsoft.LightSwitch.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Client\Microsoft.LightSwitch.ExportProvider.dll
-C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\TimesheetsAdmin\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\TimesheetsAdmin\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSwitch.ManifestService.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSwitch.Model.Xaml.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSwitch.Server.dll
@@ -14,14 +14,16 @@ C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSw
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\Microsoft.LightSwitch.Server.SharePoint.dll
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll
-C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\System.ServiceModel.PollingDuplex.dll
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\\Server\System.Spatial.dll
-C:\Dropbox\GitHub\TimeSheets\timesheetscode\TimesheetsAdmin\Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.xml
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.xml
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.xml
+D:\Dropbox\GitHub\TimeSheets\TimesheetsCode\TimesheetsAdmin\Packages\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.xml
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\Client\Microsoft.LightSwitch.xml
 C:\Program Files (x86)\Microsoft SDKs\LightSwitch\v4.0\Server\Microsoft.LightSwitch.Server.xml
 C:\Program Files (x86)\Microsoft SDKs\RIA Services\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.xml

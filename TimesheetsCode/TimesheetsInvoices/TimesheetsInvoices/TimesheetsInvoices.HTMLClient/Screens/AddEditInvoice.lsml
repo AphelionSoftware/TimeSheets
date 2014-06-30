@@ -210,6 +210,20 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
+                <ContentItem
+                  Name="InvoiceCalcedTotal"
+                  Kind="Value"
+                  DataType="Microsoft.LightSwitch.Extensions:Money"
+                  View="Microsoft.LightSwitch.MobileWeb:Text">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="AddEditInvoice/Properties[InvoiceCalcedTotal]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -1142,6 +1156,13 @@
       <ScreenProperty
         Name="InvoiceTotal"
         PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="InvoiceCalcedTotal"
+        PropertyType="Microsoft.LightSwitch.Extensions:Money">
         <ScreenProperty.Attributes>
           <Required />
         </ScreenProperty.Attributes>

@@ -1128,16 +1128,16 @@ namespace LightSwitchApplication
         partial void ProjectsSorted_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsSorted_Executing();
+        partial void ProjectsSorted_Executing(string Name);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProjectsSorted_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
+        partial void ProjectsSorted_PreprocessQuery(string Name, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsSorted_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
+        partial void ProjectsSorted_Executed(string Name, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void ProjectsSorted_ExecuteFailed(global::System.Exception exception);
+        partial void ProjectsSorted_ExecuteFailed(string Name, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ResourcePlanSorted_CanExecute(ref bool result);
@@ -3001,20 +3001,20 @@ namespace LightSwitchApplication
             }
             private static void __ProjectsSorted_Executing(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.ProjectsSorted_Executing();
+                d.ProjectsSorted_Executing((string)args[0]);
             }
             private static void __ProjectsSorted_Executed(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                d.ProjectsSorted_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[0]);
+                d.ProjectsSorted_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project>)args[1]);
             }
             private static void __ProjectsSorted_Failed(global::LightSwitchApplication.Timesheets_DataService d, object[] args, global::System.Exception ex)
             {
-                d.ProjectsSorted_ExecuteFailed(ex);
+                d.ProjectsSorted_ExecuteFailed((string)args[0], ex);
             }
             private static global::System.Linq.IQueryable __ProjectsSorted_PreprocessQuery(global::LightSwitchApplication.Timesheets_DataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[0];
-                d.ProjectsSorted_PreprocessQuery(ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Project> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Project>)args[1];
+                d.ProjectsSorted_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
             

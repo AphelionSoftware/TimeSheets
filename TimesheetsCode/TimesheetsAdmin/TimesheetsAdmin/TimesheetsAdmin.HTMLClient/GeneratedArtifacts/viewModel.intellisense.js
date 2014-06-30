@@ -2386,10 +2386,18 @@
             data: lightSwitchApplication.TimesheetDetail,
             value: lightSwitchApplication.TimesheetDetail
         },
+        ProjectList: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectList",
+            _$parentName: "Info",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.TimesheetDetail,
+            value: lightSwitchApplication.TimesheetDetail
+        },
         Project: {
             _$class: msls.ContentItem,
             _$name: "Project",
-            _$parentName: "Info",
+            _$parentName: "ProjectList",
             screen: lightSwitchApplication.AddEditTimesheetDetail,
             data: lightSwitchApplication.TimesheetDetail,
             value: lightSwitchApplication.Project
@@ -2401,6 +2409,12 @@
             screen: lightSwitchApplication.AddEditTimesheetDetail,
             data: lightSwitchApplication.Project,
             value: lightSwitchApplication.Project
+        },
+        ShowProjectPopup: {
+            _$class: msls.ContentItem,
+            _$name: "ShowProjectPopup",
+            _$parentName: "ProjectList",
+            screen: lightSwitchApplication.AddEditTimesheetDetail
         },
         Person: {
             _$class: msls.ContentItem,
@@ -2575,6 +2589,22 @@
             _$name: "Popups",
             _$parentName: "RootContentItem",
             screen: lightSwitchApplication.AddEditTimesheetDetail
+        },
+        ProjectPopup: {
+            _$class: msls.ContentItem,
+            _$name: "ProjectPopup",
+            _$parentName: "Popups",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.AddEditTimesheetDetail,
+            value: lightSwitchApplication.AddEditTimesheetDetail
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "ProjectPopup",
+            screen: lightSwitchApplication.AddEditTimesheetDetail,
+            data: lightSwitchApplication.AddEditTimesheetDetail,
+            value: String
         }
     };
 
@@ -2605,6 +2635,11 @@
         /// </field>
         Info_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Info"); }],
         /// <field>
+        /// Called after the ProjectList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectList_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ProjectList"); }],
+        /// <field>
         /// Called after the Project content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -2614,6 +2649,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("RowTemplate2"); }],
+        /// <field>
+        /// Called after the ShowProjectPopup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowProjectPopup_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ShowProjectPopup"); }],
         /// <field>
         /// Called after the Person content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2718,7 +2758,17 @@
         /// Called after the TimesheetDetailFileName content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TimesheetDetailFileName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("TimesheetDetailFileName"); }]
+        TimesheetDetailFileName_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("TimesheetDetailFileName"); }],
+        /// <field>
+        /// Called after the ProjectPopup content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ProjectPopup_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("ProjectPopup"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditTimesheetDetail().findContentItem("Name"); }]
     });
 
     lightSwitchApplication.AddEditTypeOfWork.prototype._$contentItems = {

@@ -1029,9 +1029,12 @@ namespace LightSwitchApplication
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectsSorted()
+        /// <param name="Name">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectsSorted(string Name)
         {
-            return this.Details.Methods.ProjectsSorted.CreateInvocation().Execute();
+            return this.Details.Methods.ProjectsSorted.CreateInvocation(Name).Execute();
         }
         
         /// <summary>
