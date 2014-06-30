@@ -6383,7 +6383,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[LoadDate]",
@@ -6396,7 +6397,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[ClientCode]",
@@ -6407,14 +6409,16 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[LoadDateID]",
               "name": "LoadDateID",
               "isReadOnly": true,
               "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[BillingDetails]",
@@ -6423,7 +6427,8 @@
               "elementType": { "__id": "BillingDetail" },
               "fromEnd": { "__id": "FK_BillingDetail_Client/Ends[Client]" },
               "propertyType": { "__id": "BillingDetail*" },
-              "toEnd": { "__id": "FK_BillingDetail_Client/Ends[BillingDetail]" }
+              "toEnd": { "__id": "FK_BillingDetail_Client/Ends[BillingDetail]" },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[Projects]",
@@ -6432,7 +6437,8 @@
               "elementType": { "__id": "Project" },
               "fromEnd": { "__id": "FK_Project_Client/Ends[Client]" },
               "propertyType": { "__id": "Project*" },
-              "toEnd": { "__id": "FK_Project_Client/Ends[Project]" }
+              "toEnd": { "__id": "FK_Project_Client/Ends[Project]" },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[sys_CreatedOn]",
@@ -6445,7 +6451,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[sys_CreatedBy]",
@@ -6455,7 +6462,8 @@
               ":@MaxLength":
               {
                 "value": 255
-              }
+              },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[sys_ModifiedOn]",
@@ -6468,7 +6476,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[sys_ModifiedBy]",
@@ -6478,7 +6487,8 @@
               ":@MaxLength":
               {
                 "value": 255
-              }
+              },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[Person]",
@@ -6487,7 +6497,8 @@
               "elementType": { "__id": "Person" },
               "fromEnd": { "__id": "FK_Client_Person/Ends[Client]" },
               "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_Client_Person/Ends[Person]" }
+              "toEnd": { "__id": "FK_Client_Person/Ends[Person]" },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[ActiveType]",
@@ -6496,7 +6507,8 @@
               "elementType": { "__id": "ActiveType" },
               "fromEnd": { "__id": "FK_Client_ActiveType/Ends[Client]" },
               "propertyType": { "__id": "ActiveType" },
-              "toEnd": { "__id": "FK_Client_ActiveType/Ends[ActiveType]" }
+              "toEnd": { "__id": "FK_Client_ActiveType/Ends[ActiveType]" },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceEmailAddress]",
@@ -6506,7 +6518,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceBank]",
@@ -6516,7 +6529,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceBankBranch]",
@@ -6526,7 +6540,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceBankAccount]",
@@ -6536,7 +6551,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceVATNumber]",
@@ -6546,7 +6562,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceCompanyReg]",
@@ -6556,7 +6573,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceTelNo]",
@@ -6566,7 +6584,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceContactPerson]",
@@ -6576,7 +6595,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[InvoiceAddress]",
@@ -6585,7 +6605,8 @@
               ":@MaxLength":
               {
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Client/Properties[Invoices]",
@@ -6594,7 +6615,8 @@
               "elementType": { "__id": "Invoice" },
               "fromEnd": { "__id": "FK_Invoice_Client/Ends[Client]" },
               "propertyType": { "__id": "Invoice*" },
-              "toEnd": { "__id": "FK_Invoice_Client/Ends[Invoice]" }
+              "toEnd": { "__id": "FK_Invoice_Client/Ends[Invoice]" },
+              ":@Hidden": { }
             }
           ]
         },
@@ -7331,6 +7353,15 @@
               ":@NotSearchable": { }
             },
             {
+              "id": "Project/Properties[Client]",
+              "name": "Client",
+              "association": { "__id": "FK_Project_Client" },
+              "elementType": { "__id": "Client" },
+              "fromEnd": { "__id": "FK_Project_Client/Ends[Project]" },
+              "propertyType": { "__id": "Client" },
+              "toEnd": { "__id": "FK_Project_Client/Ends[Client]" }
+            },
+            {
               "id": "Project/Properties[ProjectName]",
               "name": "ProjectName",
               "propertyType": { "__id": ":String" },
@@ -7349,7 +7380,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[LoadDate]",
@@ -7362,7 +7394,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ProjectCode]",
@@ -7373,14 +7406,16 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[LoadDateID]",
               "name": "LoadDateID",
               "isReadOnly": true,
               "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ProjectFirstPersonName]",
@@ -7390,7 +7425,8 @@
               {
                 "value": 50
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ProjectFirstFilename]",
@@ -7400,7 +7436,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ConsultingEstimate]",
@@ -7411,7 +7448,8 @@
                 "precision": 19,
                 "scale": 4
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[SoftwareEstimate]",
@@ -7422,7 +7460,8 @@
                 "precision": 19,
                 "scale": 4
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[VMEstimate]",
@@ -7433,7 +7472,8 @@
                 "precision": 19,
                 "scale": 4
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ProjectCap]",
@@ -7444,14 +7484,16 @@
                 "precision": 19,
                 "scale": 4
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[AdminProject]",
               "name": "AdminProject",
               "propertyType": { "__id": ":Int32" },
               ":@Required": { },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[BillingStatus]",
@@ -7460,16 +7502,8 @@
               "elementType": { "__id": "BillingStatus" },
               "fromEnd": { "__id": "BillingStatus_Project/Ends[Project]" },
               "propertyType": { "__id": "BillingStatus" },
-              "toEnd": { "__id": "BillingStatus_Project/Ends[BillingStatus]" }
-            },
-            {
-              "id": "Project/Properties[Client]",
-              "name": "Client",
-              "association": { "__id": "FK_Project_Client" },
-              "elementType": { "__id": "Client" },
-              "fromEnd": { "__id": "FK_Project_Client/Ends[Project]" },
-              "propertyType": { "__id": "Client" },
-              "toEnd": { "__id": "FK_Project_Client/Ends[Client]" }
+              "toEnd": { "__id": "BillingStatus_Project/Ends[BillingStatus]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[Person]",
@@ -7478,7 +7512,8 @@
               "elementType": { "__id": "Person" },
               "fromEnd": { "__id": "FK_Project_Person/Ends[Project]" },
               "propertyType": { "__id": "Person" },
-              "toEnd": { "__id": "FK_Project_Person/Ends[Person]" }
+              "toEnd": { "__id": "FK_Project_Person/Ends[Person]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[TimesheetDetails]",
@@ -7487,7 +7522,8 @@
               "elementType": { "__id": "TimesheetDetail" },
               "fromEnd": { "__id": "FK_TimesheetDetail_Project/Ends[Project]" },
               "propertyType": { "__id": "TimesheetDetail*" },
-              "toEnd": { "__id": "FK_TimesheetDetail_Project/Ends[TimesheetDetail]" }
+              "toEnd": { "__id": "FK_TimesheetDetail_Project/Ends[TimesheetDetail]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[sys_CreatedOn]",
@@ -7500,7 +7536,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[sys_CreatedBy]",
@@ -7510,7 +7547,8 @@
               ":@MaxLength":
               {
                 "value": 255
-              }
+              },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[sys_ModifiedOn]",
@@ -7523,7 +7561,8 @@
                 "precision": 3,
                 "preserveSeconds": true
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[sys_ModifiedBy]",
@@ -7533,7 +7572,8 @@
               ":@MaxLength":
               {
                 "value": 255
-              }
+              },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ActiveType]",
@@ -7542,7 +7582,8 @@
               "elementType": { "__id": "ActiveType" },
               "fromEnd": { "__id": "FK_Project_ActiveType/Ends[Project]" },
               "propertyType": { "__id": "ActiveType" },
-              "toEnd": { "__id": "FK_Project_ActiveType/Ends[ActiveType]" }
+              "toEnd": { "__id": "FK_Project_ActiveType/Ends[ActiveType]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[MonthlyCap]",
@@ -7553,7 +7594,8 @@
                 "precision": 18,
                 "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[MonthlyCapWarning]",
@@ -7564,7 +7606,8 @@
                 "precision": 18,
                 "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ProjectCapWarning]",
@@ -7575,7 +7618,8 @@
                 "precision": 18,
                 "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[InvoiceEmailAddress]",
@@ -7585,7 +7629,8 @@
               {
                 "value": 255
               },
-              ":@AnsiConstraint": { }
+              ":@AnsiConstraint": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[InvoiceLines]",
@@ -7594,7 +7639,8 @@
               "elementType": { "__id": "InvoiceLine" },
               "fromEnd": { "__id": "FK_InvoiceLine_Project/Ends[Project]" },
               "propertyType": { "__id": "InvoiceLine*" },
-              "toEnd": { "__id": "FK_InvoiceLine_Project/Ends[InvoiceLine]" }
+              "toEnd": { "__id": "FK_InvoiceLine_Project/Ends[InvoiceLine]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[CommPercent]",
@@ -7606,7 +7652,8 @@
                 "precision": 18,
                 "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ResourcePlans]",
@@ -7615,7 +7662,8 @@
               "elementType": { "__id": "ResourcePlan" },
               "fromEnd": { "__id": "FK_ResourcePlan_Project/Ends[Project]" },
               "propertyType": { "__id": "ResourcePlan*" },
-              "toEnd": { "__id": "FK_ResourcePlan_Project/Ends[ResourcePlan]" }
+              "toEnd": { "__id": "FK_ResourcePlan_Project/Ends[ResourcePlan]" },
+              ":@Hidden": { }
             },
             {
               "id": "Project/Properties[ResourcePlanRanges]",
@@ -7625,7 +7673,8 @@
               "fromEnd": { "__id": "ResourcePlanRange_Project/Ends[Project]" },
               "propertyType": { "__id": "ResourcePlanRange*" },
               "toEnd": { "__id": "ResourcePlanRange_Project/Ends[ResourcePlanRange]" },
-              "virtualAssociation": { "__id": "ResourcePlanRange_Project" }
+              "virtualAssociation": { "__id": "ResourcePlanRange_Project" },
+              ":@Hidden": { }
             }
           ]
         },
@@ -14836,6 +14885,39 @@
                             "childContentItems":
                             [
                               {
+                                "displayName": "Project",
+                                "name": "Project",
+                                "kind": "Details",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TimesheetDetail/Properties[Project]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Client",
+                                    "name": "Client",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Project/Properties[Client]" }
+                                    }
+                                  },
+                                  {
+                                    "displayName": "Project Name",
+                                    "name": "ProjectName",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "Project/Properties[ProjectName]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
                                 "displayName": "Timesheet Detail Name",
                                 "name": "TimesheetDetailName",
                                 "kind": "Value",
@@ -14983,6 +15065,36 @@
                             }
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Filter Projects",
+                        "name": "ShowFilterProjects",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "AddEditTimesheet/Methods[showDialog]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "AddEditTimesheet/Methods[showDialog]/Parameters[dialogName]" },
+                                  "value":
+                                  {
+                                    "value": "FilterProjects"
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-filter"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -14992,7 +15104,29 @@
                 "displayName": "Popups",
                 "name": "Popups",
                 "kind": "Group",
-                "view": { "__id": ":DialogPages" }
+                "view": { "__id": ":DialogPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Filter Projects",
+                    "name": "FilterProjects",
+                    "kind": "Popup",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditTimesheet/Properties[Name]" }
+                        }
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             "propertySources":
@@ -15068,6 +15202,49 @@
               {
                 "target": { "__id": "AddEditTimesheet/Properties[TimesheetDetails]/Query" }
               }
+            },
+            {
+              "id": "AddEditTimesheet/Properties[ProjectsSorted]",
+              "name": "ProjectsSorted",
+              "pageSize": 45,
+              "elementType": { "__id": "Project" },
+              "propertyType": { "__id": "CollectionView$Project" },
+              "query":
+              {
+                "id": "AddEditTimesheet/Properties[ProjectsSorted]/Query",
+                "name": "ProjectsSortedQuery",
+                "elementType": { "__id": "Project" },
+                "returnType": { "__id": "Project*" },
+                "source":
+                {
+                  "member": { "__id": "Timesheets_Data/Members[ProjectsSorted]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "AddEditTimesheet/Properties[ProjectsSorted]/Query" },
+                "arguments":
+                [
+                  {
+                    "parameter": { "__id": "Timesheets_Data/Members[ProjectsSorted]/Parameters[Name]" },
+                    "value":
+                    {
+                      "links":
+                      [
+                        {
+                          "member": { "__id": "AddEditTimesheet/Properties[Name]" }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AddEditTimesheet/Properties[Name]",
+              "name": "Name",
+              "elementType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String?" }
             }
           ]
         },
@@ -15146,13 +15323,36 @@
                                         "displayName": "Project",
                                         "name": "RowTemplate2",
                                         "kind": "Details",
-                                        "view": { "__id": ":Summary" },
+                                        "view": { "__id": ":ColumnsLayout" },
                                         "dataSource":
                                         {
                                           "links":
                                           [
                                           ]
-                                        }
+                                        },
+                                        "childContentItems":
+                                        [
+                                          {
+                                            "displayName": "Client",
+                                            "name": "Client",
+                                            "kind": "Details",
+                                            "view": { "__id": ":Summary" },
+                                            "dataSource":
+                                            {
+                                              "member": { "__id": "Project/Properties[Client]" }
+                                            }
+                                          },
+                                          {
+                                            "displayName": "Project Name",
+                                            "name": "ProjectName",
+                                            "kind": "Value",
+                                            "view": { "__id": ":Text" },
+                                            "dataSource":
+                                            {
+                                              "member": { "__id": "Project/Properties[ProjectName]" }
+                                            }
+                                          }
+                                        ]
                                       }
                                     ]
                                   },

@@ -780,6 +780,9 @@ window.myapp = msls.application;
         /// <field name="ProjectID" type="Number">
         /// Gets or sets the projectID for this project.
         /// </field>
+        /// <field name="Client" type="msls.application.Client">
+        /// Gets or sets the client for this project.
+        /// </field>
         /// <field name="ProjectName" type="String">
         /// Gets or sets the projectName for this project.
         /// </field>
@@ -818,9 +821,6 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="BillingStatus" type="msls.application.BillingStatus">
         /// Gets or sets the billingStatus for this project.
-        /// </field>
-        /// <field name="Client" type="msls.application.Client">
-        /// Gets or sets the client for this project.
         /// </field>
         /// <field name="Person" type="msls.application.Person">
         /// Gets or sets the person for this project.
@@ -1724,6 +1724,7 @@ window.myapp = msls.application;
 
         Project: $defineEntity(Project, [
             { name: "ProjectID", type: Number, isReadOnly: true },
+            { name: "Client", kind: "reference", type: Client },
             { name: "ProjectName", type: String },
             { name: "ProjectSourceKey", type: String },
             { name: "LoadDate", type: Date },
@@ -1737,7 +1738,6 @@ window.myapp = msls.application;
             { name: "ProjectCap", type: String },
             { name: "AdminProject", type: Number },
             { name: "BillingStatus", kind: "reference", type: BillingStatus },
-            { name: "Client", kind: "reference", type: Client },
             { name: "Person", kind: "reference", type: Person },
             { name: "TimesheetDetails", kind: "collection", elementType: TimesheetDetail },
             { name: "sys_CreatedOn", type: Date },

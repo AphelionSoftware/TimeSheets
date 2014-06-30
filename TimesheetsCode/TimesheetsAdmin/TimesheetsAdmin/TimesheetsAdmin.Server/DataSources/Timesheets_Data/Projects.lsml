@@ -25,6 +25,11 @@
           <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <NavigationProperty
+        Name="Client"
+        Association="FK_Project_Client"
+        FromEnd="Project"
+        ToEnd="Client" />
       <EntityProperty
         Name="ProjectName"
         PropertyType=":String">
@@ -42,6 +47,7 @@
           <MaxLength
             Value="255" />
           <AnsiConstraint />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -53,6 +59,7 @@
             Precision="3"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -63,6 +70,7 @@
           <MaxLength
             Value="255" />
           <AnsiConstraint />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -71,6 +79,7 @@
         PropertyType=":Int32?">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -80,6 +89,7 @@
           <MaxLength
             Value="50" />
           <AnsiConstraint />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -89,6 +99,7 @@
           <MaxLength
             Value="255" />
           <AnsiConstraint />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -99,6 +110,7 @@
             Precision="19"
             Scale="4" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -109,6 +121,7 @@
             Precision="19"
             Scale="4" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -119,6 +132,7 @@
             Precision="19"
             Scale="4" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -129,6 +143,7 @@
             Precision="19"
             Scale="4" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -137,28 +152,36 @@
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
         Name="BillingStatus"
         Association="BillingStatus_Project"
         FromEnd="Project"
-        ToEnd="BillingStatus" />
-      <NavigationProperty
-        Name="Client"
-        Association="FK_Project_Client"
-        FromEnd="Project"
-        ToEnd="Client" />
+        ToEnd="BillingStatus">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="Person"
         Association="FK_Project_Person"
         FromEnd="Project"
-        ToEnd="Person" />
+        ToEnd="Person">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="TimesheetDetails"
         Association="FK_TimesheetDetail_Project"
         FromEnd="Project"
-        ToEnd="TimesheetDetail" />
+        ToEnd="TimesheetDetail">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <EntityProperty
         Name="sys_CreatedOn"
         PropertyType=":DateTime">
@@ -168,6 +191,7 @@
             Precision="3"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -177,6 +201,7 @@
           <Required />
           <MaxLength
             Value="255" />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -188,6 +213,7 @@
             Precision="3"
             PreserveSeconds="True" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -197,13 +223,18 @@
           <Required />
           <MaxLength
             Value="255" />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
         Name="ActiveType"
         Association="FK_Project_ActiveType"
         FromEnd="Project"
-        ToEnd="ActiveType" />
+        ToEnd="ActiveType">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <EntityProperty
         Name="MonthlyCap"
         PropertyType=":Decimal?">
@@ -212,6 +243,7 @@
             Precision="18"
             Scale="2" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -222,6 +254,7 @@
             Precision="18"
             Scale="2" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -232,6 +265,7 @@
             Precision="18"
             Scale="2" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -241,13 +275,18 @@
           <MaxLength
             Value="255" />
           <AnsiConstraint />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
         Name="InvoiceLines"
         Association="FK_InvoiceLine_Project"
         FromEnd="Project"
-        ToEnd="InvoiceLine" />
+        ToEnd="InvoiceLine">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <EntityProperty
         Name="CommPercent"
         PropertyType=":Decimal">
@@ -257,18 +296,27 @@
             Precision="18"
             Scale="2" />
           <NotSearchable />
+          <Hidden />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
         Name="ResourcePlans"
         Association="FK_ResourcePlan_Project"
         FromEnd="Project"
-        ToEnd="ResourcePlan" />
+        ToEnd="ResourcePlan">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <VirtualNavigationProperty
         Name="ResourcePlanRanges"
         FromEnd="Project"
         ToEnd="ResourcePlanRange"
-        VirtualAssociation="ResourcePlanRange_Project" />
+        VirtualAssociation="ResourcePlanRange_Project">
+        <VirtualNavigationProperty.Attributes>
+          <Hidden />
+        </VirtualNavigationProperty.Attributes>
+      </VirtualNavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <Association

@@ -1931,22 +1931,6 @@ namespace LightSwitchApplication.Implementation
         global::LightSwitchApplication.Project.DetailsClass.IImplementation
     {
     
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.BillingStatus
-        {
-            get
-            {
-                return this.BillingStatus;
-            }
-            set
-            {
-                this.BillingStatus = (global::LightSwitchApplication.Implementation.BillingStatus)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("BillingStatus");
-                }
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Client
         {
             get
@@ -1959,6 +1943,22 @@ namespace LightSwitchApplication.Implementation
                 if (this.__host != null)
                 {
                     this.__host.RaisePropertyChanged("Client");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.BillingStatus
+        {
+            get
+            {
+                return this.BillingStatus;
+            }
+            set
+            {
+                this.BillingStatus = (global::LightSwitchApplication.Implementation.BillingStatus)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("BillingStatus");
                 }
             }
         }
@@ -2019,19 +2019,19 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        partial void OnBillableChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("BillingStatus");
-            }
-        }
-        
         partial void OnClientIDChanged()
         {
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("Client");
+            }
+        }
+        
+        partial void OnBillableChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("BillingStatus");
             }
         }
         

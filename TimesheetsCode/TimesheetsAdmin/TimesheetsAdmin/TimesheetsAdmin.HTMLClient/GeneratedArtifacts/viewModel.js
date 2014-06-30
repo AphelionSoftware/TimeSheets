@@ -309,6 +309,12 @@
         /// <field name="TimesheetDetails" type="msls.VisualCollection" elementType="msls.application.TimesheetDetail">
         /// Gets the timesheetDetails for this screen.
         /// </field>
+        /// <field name="ProjectsSorted" type="msls.VisualCollection" elementType="msls.application.Project">
+        /// Gets the projectsSorted for this screen.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this screen.
+        /// </field>
         /// <field name="details" type="msls.application.AddEditTimesheet.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -969,9 +975,16 @@
                     return null;
                 },
                 appendQuery: function () {
-                    return this.expand("BillingStatus");
+                    return this.expand("Project").expand("Project.Client").expand("BillingStatus");
                 }
-            }
+            },
+            {
+                name: "ProjectsSorted", kind: "collection", elementType: lightSwitchApplication.Project,
+                createQuery: function (Name) {
+                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted(Name);
+                }
+            },
+            { name: "Name", kind: "local", type: String }
         ], [
         ]),
 
@@ -980,7 +993,7 @@
             {
                 name: "ProjectsSorted", kind: "collection", elementType: lightSwitchApplication.Project,
                 createQuery: function (Name) {
-                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted(Name);
+                    return this.dataWorkspace.Timesheets_Data.ProjectsSorted(Name).expand("Client");
                 }
             },
             { name: "Name", kind: "local", type: String }
